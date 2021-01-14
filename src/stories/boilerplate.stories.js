@@ -2,7 +2,7 @@ import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
 import Boilerplate from "../_layouts/boilerplate/boilerplate.vue";
-import Card from "../components/card.vue";
+import Card from "../_templates/card.vue";
 
 export default {
   title: "Layouts/Boilerplate",

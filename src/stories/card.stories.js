@@ -50,9 +50,9 @@ Vue.component('font-awesome-layers-text', FontAwesomeLayersText);
 
 library.add(faExclamationTriangle);
 
-import Card from "../components/card.vue";
-import CardStatus from "../components/card-status.vue";
-import LinkButton from "../components/link-button.vue";
+import Card from "../_templates/card.vue";
+import CardStatus from "../_templates/card-status.vue";
+import LinkButton from "../_templates/link-button.vue";
 
 export default {
   title: "Components/Card",

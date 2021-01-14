@@ -1,7 +1,7 @@
 import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
-import LinkButton from "../components/link-button.vue";
+import LinkButton from "../_templates/link-button.vue";
 
 export default {
   title: "Components/LinkButton",

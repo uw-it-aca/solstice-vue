@@ -2,14 +2,14 @@ import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
 import Boilerplate from "../_layouts/boilerplate/boilerplate.vue";
-import Card from "../_templates/card.vue";
+import Card from "../_base/card.vue";
 
 export default {
   title: "Layouts/Boilerplate",
 };
 
 export const Default = () => ({
-  components: { 
+  components: {
     'uw-boilerplate': Boilerplate,
    },
   template: `

@@ -1,6 +1,5 @@
 # axdd-components
 AXDD VueJS Component Library
-# axdd-components
 
 ## Project setup
 ```

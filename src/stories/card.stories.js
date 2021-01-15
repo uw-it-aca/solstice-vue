@@ -55,7 +55,7 @@ import CardStatus from "../_base/card-status.vue";
 import LinkButton from "../_base/link-button.vue";
 
 export default {
-  title: "Components/Card",
+  title: "Base/Card",
 };
 
 export const Default = () => ({

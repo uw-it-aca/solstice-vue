@@ -4,7 +4,7 @@ import { linkTo } from "@storybook/addon-links";
 import LinkButton from "../_base/link-button.vue";
 
 export default {
-  title: "Components/LinkButton",
+  title: "Base/LinkButton",
 };
 
 export const Default = () => ({

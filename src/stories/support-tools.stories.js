@@ -13,7 +13,14 @@ export const Default = () => ({
    },
   template: `
   <uw-support-tools>
-   lorem ipsum
+   <template>
+    <h2>Section title</h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa?
+        Error earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam
+        distinctio atque explicabo voluptatum nemo.
+      </p>
+    </template>
   </uw-support-tools>
   `,
 });

@@ -227,6 +227,12 @@
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Unde dolorum voluptatem ipsa? Error earum hic nihil itaque ullam corporis eum, modi,
             quaerat placeat velit numquam distinctio atque explicabo voluptatum nemo.</p>
+
+           <h2>Section title</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Unde dolorum voluptatem ipsa? Error earum hic nihil itaque ullam corporis eum, modi,
+            quaerat placeat velit numquam distinctio atque explicabo voluptatum nemo.</p>
+
         </main>
       </div>
     </div>
@@ -259,7 +265,7 @@ body {
 
 @media (min-width: 767.98px) {
   .sidebar {
-  position: fixed;
+  //position: fixed;
   top: 0;
   bottom: 0;
   left: 0;

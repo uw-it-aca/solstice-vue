@@ -5,5 +5,5 @@ import '../src/assets/css/global.scss';
 to remove padding for layout stories ONLY */
 export const parameters = {
   layout: 'fullscreen',
-  docs: { inlineStories: false },
+  //docs: { inlineStories: false },
 };

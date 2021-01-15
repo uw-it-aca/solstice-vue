@@ -1,86 +1,61 @@
 <template>
   <div class="support-tools">
     <div class="d-md-flex align-self-stretch">
-      <nav class="p-4 bg-light">
-        <div class="p-0 mb-3 h3 text-center text-uppercase">
-          <span class="text-primary font-weight-bold">RTTL</span>
-          <span class="text-muted font-weight-light">Support</span>
+      <nav class="p-4 bg-light d-md-flex flex-md-column justify-content-md-between">
+        <div class="">
+          <div class="p-0 mb-3 h3 text-center text-uppercase">
+            <div class="d-inline text-purple font-weight-bold">RTTL</div>
+            <div class="d-inline text-muted font-weight-light">Support</div>
+          </div>
+          <div class="text-center mb-4">
+            <div class="d-inline">javerage</div>
+            <div class="d-inline ml-2">
+              <a href="#" class="badge badge-danger text-uppercase font-weight-light">Logout</a>
+            </div>
+          </div>
         </div>
-        <div class="text-center mb-3">javerage logout</div>
+        <div class="h-100">
+          <div class="small mb-1 font-weight-bold text-secondary text-uppercase">Heading</div>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">Page Link</a>
+            </li>
+            <li>
+              <a href="#">Page Link</a>
+            </li>
+            <li>
+              <a href="#">Page Link</a>
+            </li>
+            <li>
+              <a href="#">Page Link</a>
+            </li>
+          </ul>
 
-        <div class="h6 text-dark text-uppercase">Heading</div>
-        <ul class="list-unstyled">
-          <li>
-            <a href="#">
-              <span data-feather="home"></span>
-              Dashboard <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span data-feather="file"></span>
-              Orders
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <span data-feather="shopping-cart"></span>
-              Products
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#">
-              <span data-feather="users"></span>
-              Customers
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#">
-              <span data-feather="bar-chart-2"></span>
-              Reports
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#">
-              <span data-feather="layers"></span>
-              Integrations
-            </a>
-          </li>
-        </ul>
-
-        <div class="h6 text-dark text-uppercase">Heading</div>
-        <ul class="nav flex-column mb-2">
-          <li class="nav-item">
-            <a href="#">
-              <span data-feather="file-text"></span>
-              Current month
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#">
-              <span data-feather="file-text"></span>
-              Last quarter
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#">
-              <span data-feather="file-text"></span>
-              Social engagement
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#">
-              <span data-feather="file-text"></span>
-              Year-end sale
-            </a>
-          </li>
-        </ul>
+          <div class="small mb-1 font-weight-bold text-secondary text-uppercase">Heading</div>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#">Page Link</a>
+            </li>
+            <li>
+              <a href="#">Page Link</a>
+            </li>
+            <li>
+              <a href="#">Page Link</a>
+            </li>
+            <li>
+              <a href="#">Page Link</a>
+            </li>
+          </ul>
+        </div>
+        <div class="">
+          <div class="small">Copyright &copy; 2012-2021 UW Information Technology - AXDD</div>
+        </div>
       </nav>
 
       <main class="p-4">
-        <h1 class="h2 p-0 mb-3">Page Title</h1>
+        <h1 class="h3 p-0 mb-4 text-uppercase">Page Title</h1>
 
-        <h2>Section title</h2>
+        <h2 class="h4">Section title</h2>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa?
           Error earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam

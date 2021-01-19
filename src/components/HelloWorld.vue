@@ -25,7 +25,7 @@
         >
       </li>
     </ul>
-    <h3>Dev Ecosystem</h3>
+    <h3>Development Ecosystem</h3>
     <ul>
       <li>
         <a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a>
@@ -33,22 +33,11 @@
       <li>
         <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
       </li>
-      <li>
-        <a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a>
-      </li>
       <li><a href="https://bootstrap-vue.org/" target="_blank" rel="noopener"
           >bootstrap-vue</a>
       </li>
       <li><a href="https://github.com/FortAwesome/vue-fontawesome" target="_blank" rel="noopener"
           >vue-fontawesome</a></li>
-    </ul>
-    <h3>Design Ecosystem</h3>
-    <ul>
-      <li><a href="https://getbootstrap.com/" target="_blank" rel="noopener"
-          >bootstrap</a>
-      </li>
-      <li><a href="https://fontawesome.com/" target="_blank" rel="noopener"
-          >fontawesome</a></li>
     </ul>
     <h3>Component Library</h3>
     <p><a href="http://localhost:6006/" target="_blank" rel="noopener"

@@ -4,11 +4,14 @@
       <div class="p-4 bg-light d-md-flex flex-md-column justify-content-md-between support-sidebar">
         <div class="support-header">
           <div class="p-0 mb-3 h3 text-center text-uppercase">
-            <div class="d-inline text-purple font-weight-bold mr-1">APP</div>
+            <div class="d-inline text-purple font-weight-bold mr-1">
+              <span v-if=appName>{{ appName }}</span>
+              <span v-else>APP</span>
+            </div>
             <div class="d-inline text-muted font-weight-light">Support</div>
           </div>
-          <div class="text-center mb-4">
-            <div class="d-inline">javerage</div>
+          <div v-if=userID class="text-center mb-4">
+            <div class="d-inline">{{ userID }}</div>
             <div class="d-inline ml-2">
               <a href="#" class="btn btn-sm btn-outline-danger
               text-uppercase font-weight-light">Logout</a>
@@ -16,46 +19,16 @@
           </div>
         </div>
         <nav class="h-100 support-navigation" role="navigation">
-          <div class="small mb-1 font-weight-bold text-secondary text-uppercase">Heading</div>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#">Page Link</a>
-            </li>
-            <li>
-              <a href="#">Page Link</a>
-            </li>
-            <li>
-              <a href="#">Page Link</a>
-            </li>
-            <li>
-              <a href="#">Page Link</a>
-            </li>
-          </ul>
-
-          <div class="small mb-1 font-weight-bold text-secondary text-uppercase">Heading</div>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#">Page Link</a>
-            </li>
-            <li>
-              <a href="#">Page Link</a>
-            </li>
-            <li>
-              <a href="#">Page Link</a>
-            </li>
-            <li>
-              <a href="#">Page Link</a>
-            </li>
-          </ul>
+          <slot name="navigation"></slot>
         </nav>
         <div class="border-top pt-2 text-secondary support-footer">
-          <div class="small">Copyright &copy; 2012-2021 UW Information Technology - AXDD</div>
+          <div class="small">Copyright &copy; 2012-{{currentYear}}
+            UW Information Technology - AXDD</div>
         </div>
       </div>
-
       <main class="p-4">
-        <h1 class="h3 p-0 mb-4 text-uppercase">Page Title</h1>
-        <slot></slot>
+        <h1 class="h3 p-0 mb-4 text-uppercase">{{ pageTitle }}</h1>
+        <slot name="content"></slot>
       </main>
     </div>
   </div>
@@ -63,8 +36,32 @@
 
 <script>
 export default {
+  props: {
+    appName: {
+      type: String,
+      required: true,
+    },
+    userID: {
+      type: String,
+      required: true,
+    },
+    logoutURL: {
+      type: String,
+      required: true,
+    },
+    pageTitle: {
+      type: String,
+      required: true,
+    },
+  },
   data: function () {
-    return {};
+    return {
+      currentYear: new Date().getFullYear(),
+    };
+  },
+  created: function() {
+    // constructs page title in the following format "Page Title - AppName"
+    document.title = this.pageTitle + ' - ' + this.appName;
   },
 };
 </script>
@@ -84,7 +81,7 @@ export default {
   }
 
   main {
-    min-height: 600px;
+    min-height: 400px;
   }
 }
 </style>

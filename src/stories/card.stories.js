@@ -113,33 +113,7 @@ export const Error = () => ({
   `,
 });
 
-export const withCardStatus = () => ({
-  components: {
-    'uw-card': Card,
-    'uw-card-status': CardStatus,
-    'uw-link-button': LinkButton,
-   },
-  template: `
-  <uw-card>
-    <h3 class="h4 mb-3 text-dark-beige myuw-font-encode-sans">Card Heading</h3>
-      <uw-card-status>
-        <template #status-label>Student Husky Account</template>
-        <template #status-value>$123</template>
-      </uw-card-status>
-      <uw-card-status>
-        <template #status-label>Employee Husky Account</template>
-        <template #status-value>
-          <span class="text-danger">-$3</span>
-        </template>
-      </uw-card-status>
-      <uw-link-button>
-        Button
-      </uw-link-button>
-    </uw-card>
-  `,
-});
-
-export const withFooterDisclosure = () => ({
+export const Disclosure = () => ({
   components: {
     'uw-card': Card,
   },

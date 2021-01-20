@@ -5,9 +5,9 @@
         <div class="support-header">
           <div class="p-0 mb-3 h3 text-center text-uppercase">
             <span v-if=appName class="text-purple
-            font-weight-bold mr-1">{{ appName }}</span>
+            font-weight-bold">{{ appName }}</span>
             <span v-else>APP</span>
-            <span class="text-muted font-weight-light">Support</span>
+            <span class="ml-2 text-muted font-weight-light">Support</span>
           </div>
           <div v-if=userId class="text-center mb-4">
             <div class="d-inline">{{ userId }}</div>
@@ -75,6 +75,10 @@ export default {
   main {
     height: 500px;
   }
+}
+// support tools global
+.support-tools {
+  min-width: 320px;
 }
 // main responsive tablet and desktop
 @media (min-width: 768px) {

@@ -7,7 +7,7 @@
             <span v-if=appName class="text-purple
             font-weight-bold">{{ appName }}</span>
             <span v-else>APP</span>
-            <span class="ml-2 text-muted font-weight-light">Support</span>
+            <span class="ml-1 text-muted font-weight-light">Support</span>
           </div>
           <div v-if=userId class="text-center mb-4">
             <div class="d-inline">{{ userId }}</div>

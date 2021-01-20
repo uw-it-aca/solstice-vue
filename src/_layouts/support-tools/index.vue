@@ -1,27 +1,26 @@
 <template>
   <div class="support-tools">
     <div class="d-md-flex align-self-stretch">
-      <div class="p-4 bg-light d-md-flex flex-md-column justify-content-md-between support-sidebar">
+      <div class="p-4 bg-light d-md-flex flex-md-column align-items-start support-sidebar">
         <div class="support-header">
           <div class="p-0 mb-3 h3 text-center text-uppercase">
-            <div class="d-inline text-purple font-weight-bold mr-1">
-              <span v-if=appName>{{ appName }}</span>
-              <span v-else>APP</span>
-            </div>
-            <div class="d-inline text-muted font-weight-light">Support</div>
+            <span v-if=appName class="text-purple
+            font-weight-bold mr-1">{{ appName }}</span>
+            <span v-else>APP</span>
+            <span class="text-muted font-weight-light">Support</span>
           </div>
-          <div v-if=userID class="text-center mb-4">
-            <div class="d-inline">{{ userID }}</div>
+          <div v-if=userId class="text-center mb-4">
+            <div class="d-inline">{{ userId }}</div>
             <div class="d-inline ml-2">
-              <a href="#" class="btn btn-sm btn-outline-danger
+              <a :href=logoutUrl class="btn btn-sm btn-outline-danger
               text-uppercase font-weight-light">Logout</a>
             </div>
           </div>
         </div>
-        <nav class="h-100 support-navigation" role="navigation">
+        <nav class="support-navigation" role="navigation">
           <slot name="navigation"></slot>
         </nav>
-        <div class="border-top pt-2 text-secondary support-footer">
+        <div class="mt-auto border-top pt-2 text-secondary support-footer">
           <div class="small">Copyright &copy; 2012-{{currentYear}}
             UW Information Technology - AXDD</div>
         </div>
@@ -41,11 +40,11 @@ export default {
       type: String,
       required: true,
     },
-    userID: {
+    userId: {
       type: String,
       required: true,
     },
-    logoutURL: {
+    logoutUrl: {
       type: String,
       required: true,
     },
@@ -67,21 +66,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// storybook only
 .sb-show-main {
   .support-tools {
     padding: 0 !important;
     border: dashed 1px lightgrey;
   }
+  main {
+    height: 500px;
+  }
 }
-
+// main responsive tablet and desktop
 @media (min-width: 768px) {
   .support-sidebar {
     min-width: 260px;
     max-width: 260px;
   }
-
   main {
-    min-height: 400px;
+    height:100vh;
   }
 }
 </style>

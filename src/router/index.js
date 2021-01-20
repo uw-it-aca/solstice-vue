@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import Boilerplate from "../views/Boilerplate.vue";
+import Support from "../views/Support.vue";
 
 Vue.use(VueRouter);
 
@@ -19,7 +21,17 @@ const routes = [
     component: function() {
       return import(/* webpackChunkName: "about" */ "../views/About.vue");
     }
-  }
+  },
+  {
+    path: "/support",
+    name: "Support",
+    component: Support
+  },
+  {
+    path: "/boilerplate",
+    name: "Boilerplate",
+    component: Boilerplate
+  },
 ];
 
 const router = new VueRouter({

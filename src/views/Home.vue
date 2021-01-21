@@ -4,8 +4,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/boilerplate">Boilerplate</router-link> |
-      <router-link to="/support">Support Tools</router-link> |
-      <router-link to="/alert">Alert Banner</router-link>
+      <router-link to="/support">Support Tools</router-link>
     </div>
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js App" />

@@ -3,7 +3,6 @@ import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Boilerplate from "../views/Boilerplate.vue";
 import Support from "../views/Support.vue";
-import Alert from "../views/Alert.vue";
 
 Vue.use(VueRouter);
 
@@ -32,11 +31,6 @@ const routes = [
     path: "/boilerplate",
     name: "Boilerplate",
     component: Boilerplate
-  },
-  {
-    path: "/alert",
-    name: "Alert",
-    component: Alert
   },
 ];
 

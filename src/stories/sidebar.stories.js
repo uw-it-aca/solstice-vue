@@ -1,34 +1,51 @@
 import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
-import SupportTools from "../_layouts/support-tools/index.vue";
+import SideBar from "../_layouts/sidebar/index.vue";
 
 export default {
-  title: "Layouts/Support Tools",
+  title: "Layouts/Sidebar",
 };
 
 export const Default = () => ({
   components: {
-    'uw-support-tools': SupportTools,
+    'uw-sidebar': SideBar,
   },
   template: `
-  <uw-support-tools
-    app-name="MyApp"
-    user-id="mynetid"
-    logout-url="https://uw.edu"
-  >
-  </uw-support-tools>
+  <uw-sidebar>
+  </uw-sidebar>
   `,
+});
+
+export const Header = () => ({
+  components: {
+    'uw-sidebar': SideBar,
+  },
+  template: `
+  <uw-sidebar
+    :app-name="appName"
+  >
+    <template #header>
+      <div class="p-0 mb-3 h2 text-center text-uppercase sidebar-heading">
+        <span class="text-purple font-weight-bold">{{ appName }}</span>
+      </div>
+      <div class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas rerum dolor laudantium</div>
+    </template>
+  </uw-sidebar>
+  `,
+  data: function () {
+    return {
+      appName: "MyApp",
+    };
+  },
 });
 
 export const Navigation = () => ({
   components: {
-    'uw-support-tools': SupportTools,
+    'uw-sidebar': SideBar,
   },
   template: `
-  <uw-support-tools
-    app-name="MyApp"
-  >
+  <uw-sidebar>
     <template #navigation>
       <div class="small mb-1 font-weight-bold text-secondary text-uppercase">Heading</div>
       <ul class="list-unstyled">
@@ -61,20 +78,38 @@ export const Navigation = () => ({
         </li>
       </ul>
     </template>
-  </uw-support-tools>
+  </uw-sidebar>
   `,
+});
+
+export const Footer = () => ({
+  components: {
+    'uw-sidebar': SideBar,
+  },
+  template: `
+  <uw-sidebar>
+    <template #footer>
+      Copyright &copy; 2012-{{currentYear}} UW Information Technology - AXDD
+    </template>
+  </uw-sidebar>
+  `,
+  data: function () {
+    return {
+      currentYear: new Date().getFullYear(),
+    };
+  },
 });
 
 export const Content = () => ({
   components: {
-    'uw-support-tools': SupportTools,
+    'uw-sidebar': SideBar,
   },
   template: `
-  <uw-support-tools
-    app-name="MyApp"
-    page-title="My Page Title"
+  <uw-sidebar
+    :page-title="pageTitle"
   >
     <template #content>
+      <h1 class="text-uppercase">{{ pageTitle }}</h1>
       <h2>Section title</h2>
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa?
@@ -82,6 +117,11 @@ export const Content = () => ({
         distinctio atque explicabo voluptatum nemo.
       </p>
     </template>
-  </uw-support-tools>
+  </uw-sidebar>
   `,
+  data: function () {
+    return {
+      pageTitle: "My New Page Title",
+    };
+  },
 });

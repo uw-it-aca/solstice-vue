@@ -12,7 +12,6 @@
         <div class="d-inline">mynetid</div>
         <div class="d-inline ml-2">
           <a
-            :href="logoutUrl"
             class="btn btn-sm btn-outline-danger text-uppercase font-weight-light"
             >Logout</a
           >
@@ -23,10 +22,10 @@
       <div class="mb-1 text-secondary text-uppercase font-weight-bold sidebar-heading">Heading</div>
       <ul class="list-unstyled">
         <li>
-          <a href="#">Page Link</a>
+          <a href="/support">Home</a>
         </li>
         <li>
-          <a href="#">Page Link</a>
+          <a href="/support/pulse">Social Pulse</a>
         </li>
         <li>
           <a href="#">Page Link</a>
@@ -97,53 +96,8 @@
       </ul>
     </template>
     <template #content>
-
       <h1 class="text-uppercase sidebar-heading">{{ pageTitle }}</h1>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa?
-        Error earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam
-        distinctio atque explicabo voluptatum nemo.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa?
-        Error earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam
-        distinctio atque explicabo voluptatum nemo.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa?
-        Error earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam
-        distinctio atque explicabo voluptatum nemo.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa?
-        Error earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam
-        distinctio atque explicabo voluptatum nemo.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa?
-        Error earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam
-        distinctio atque explicabo voluptatum nemo.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa?
-        Error earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam
-        distinctio atque explicabo voluptatum nemo.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa?
-        Error earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam
-        distinctio atque explicabo voluptatum nemo.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa?
-        Error earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam
-        distinctio atque explicabo voluptatum nemo.
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa?
-        Error earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam
-        distinctio atque explicabo voluptatum nemo.
-      </p>
+      <slot></slot>
     </template>
     <template #footer>
       Copyright &copy; 2012-{{ currentYear }} UW Information Technology - AXDD
@@ -159,10 +113,15 @@ export default {
   components: {
     'uw-sidebar': SideBar,
   },
+  props: {
+    pageTitle: {
+      type: String,
+      required: true
+    },
+  },
   data: function () {
     return {
       appName: "AXDD",
-      pageTitle: "Home",
       currentYear: new Date().getFullYear(),
     };
   },

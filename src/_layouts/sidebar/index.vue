@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar">
-    <div class="d-md-flex align-self-stretch">
-      <div class="py-4 px-3 bg-light d-md-flex flex-md-column sidebar-container">
+    <div class="d-sm-flex align-self-stretch">
+      <div class="py-4 px-3 bg-light d-sm-flex flex-sm-column sidebar-container">
         <header class="sidebar-header">
           <slot name="header">
             <div class="h1 mb-3 text-uppercase text-muted">{{ appName }}</div>
@@ -77,7 +77,7 @@ export default {
   min-height: 20px;
 }
 // main responsive tablet and desktop
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .sidebar-container {
     min-width: 260px;
     max-width: 260px;

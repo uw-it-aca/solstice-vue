@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Boilerplate from "../views/Boilerplate.vue";
-import Support from "../views/Support.vue";
+import Support from "../views/support-tools/index.vue";
 
 Vue.use(VueRouter);
 

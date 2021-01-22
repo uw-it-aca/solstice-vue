@@ -152,7 +152,7 @@
 </template>
 
 <script>
-import SideBar from '../_layouts/sidebar/index.vue';
+import SideBar from '../../_layouts/sidebar/index.vue';
 
 export default {
   name: 'Support',
@@ -161,7 +161,7 @@ export default {
   },
   data: function () {
     return {
-      appName: "MYUW",
+      appName: "AXDD",
       pageTitle: "Home",
       currentYear: new Date().getFullYear(),
     };

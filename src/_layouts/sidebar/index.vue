@@ -2,11 +2,11 @@
   <div class="sidebar">
     <div class="d-md-flex align-self-stretch">
       <div class="py-4 px-3 bg-light d-md-flex flex-md-column sidebar-container">
-        <div class="sidebar-header">
+        <header class="sidebar-header">
           <slot name="header">
             <div class="h1 mb-3 text-uppercase text-muted">{{ appName }}</div>
           </slot>
-        </div>
+        </header>
         <nav class="sidebar-navigation" role="navigation">
           <slot name="navigation">
             <div class="text-uppercase">Nav Heading</div>
@@ -18,11 +18,11 @@
             </ul>
           </slot>
         </nav>
-        <div class="mt-auto border-top pt-2 text-muted small sidebar-footer">
+        <footer class="mt-auto border-top pt-2 text-muted small sidebar-footer">
           <slot name="footer">
             Copyright &copy; 2021
           </slot>
-        </div>
+        </footer>
       </div>
       <main class="p-4 sidebar-main">
         <slot name="content">

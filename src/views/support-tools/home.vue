@@ -49,12 +49,12 @@
 </template>
 
 <script>
-import Layout from './layout.vue';
+import SupportLayout from './layout.vue';
 
 export default {
-  name: 'Support',
+  name: 'SupportHome',
   components: {
-    'axdd-layout': Layout,
+    'axdd-layout': SupportLayout,
   },
 };
 </script>

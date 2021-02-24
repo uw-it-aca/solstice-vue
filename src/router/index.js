@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Boilerplate from "../views/Boilerplate.vue";
+import Boilerplate from "../views/boilerplate/home.vue";
 import SupportHome from "../views/support-tools/home.vue";
 import SupportPulse from "../views/support-tools/pulse.vue";
 

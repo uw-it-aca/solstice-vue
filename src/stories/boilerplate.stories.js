@@ -1,7 +1,7 @@
 import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
-import Boilerplate from "../_layouts/boilerplate/boilerplate.vue";
+import Boilerplate from "../_layouts/boilerplate/index.vue";
 import Card from "../_base/card.vue";
 
 export default {

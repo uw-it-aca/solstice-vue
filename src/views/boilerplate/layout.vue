@@ -3,26 +3,8 @@
     :app-name="appName"
     :page-title="pageTitle"
   >
-    <template #header>
-
-    </template>
-    <template #navigation>
-      <div class="mb-1 text-secondary text-uppercase font-weight-bold sidebar-heading">Heading</div>
-      <ul class="list-unstyled">
-        <li>
-          <a href="/support">Home</a>
-        </li>
-        <li>
-          <a href="/support/pulse">Social Pulse</a>
-        </li>
-        <li>
-          <a href="#">Page Link</a>
-        </li>
-        <li>
-          <a href="#">Page Link</a>
-        </li>
-      </ul>
-    </template>
+    <template #header></template>
+    <template #navigation></template>
     <template #content>
       <h1 class="">{{ pageTitle }}</h1>
       <slot></slot>
@@ -34,7 +16,7 @@
 </template>
 
 <script>
-import BoilerPlate from '../../_layouts/boilerplate/index.vue';
+import BoilerPlate from '../../_layouts/topbar.vue';
 
 export default {
   name: 'MyApp',

@@ -49,12 +49,12 @@
 </template>
 
 <script>
-import SupportLayout from './layout.vue';
+import BoilerPlateLayout from './layout.vue';
 
 export default {
-  name: 'SupportHome',
+  name: 'BoilerplateHome',
   components: {
-    'axdd-layout': SupportLayout,
+    'axdd-layout': BoilerPlateLayout,
   },
 };
 </script>

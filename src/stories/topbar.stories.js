@@ -1,7 +1,8 @@
-import Vue from "vue";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
+import { action } from "@storybook/addon-actions";
+import { linkTo } from "@storybook/addon-links";
+
+import TopBar from "../_layouts/topbar.vue";
+import Card from "../_base/card.vue";
 
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {
@@ -10,10 +11,8 @@ import {
   FontAwesomeLayersText,
 } from '@fortawesome/vue-fontawesome';
 
+import Vue from 'vue'
 import VueMq from 'vue-mq';
-
-import '../src/assets/css/custom.scss';
-import '../src/assets/css/global.scss';
 
 // fontaweome
 import {
@@ -149,11 +148,39 @@ Vue.use(VueMq, {
   },
 });
 
+export default {
+  title: "Layouts/Topbar",
+};
 
-new Vue({
-  router,
-  store,
-  render: function(h) {
-    return h(App);
-  }
-}).$mount("#app");
+export const Default = () => ({
+  components: {
+    'uw-boilerplate': TopBar,
+   },
+  template: `
+  <uw-boilerplate>
+   lorem ipsum
+  </uw-boilerplate>
+  `,
+});
+
+export const Navigation = () => ({
+  components: {
+    'uw-card': Card,
+  },
+  template: `
+  <uw-card>
+    lorem ipsum
+  </uw-card>
+  `,
+});
+
+export const Messaging = () => ({
+  components: {
+    'uw-card': Card,
+  },
+  template: `
+  <uw-card>
+    lorem ipsum
+  </uw-card>
+  `,
+});

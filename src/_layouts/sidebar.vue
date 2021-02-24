@@ -1,13 +1,13 @@
 <template>
-  <div class="sidebar">
+  <div class="axdd-sidebar">
     <div class="d-sm-flex align-self-stretch">
-      <div class="py-4 px-3 bg-light d-sm-flex flex-sm-column sidebar-container">
+      <div class="py-4 px-3 bg-light d-sm-flex flex-sm-column axdd-sidebar-container">
         <header class="sidebar-header">
           <slot name="header">
             <div class="h1 mb-3 text-uppercase text-muted">{{ appName }}</div>
           </slot>
         </header>
-        <nav class="sidebar-navigation" role="navigation">
+        <nav class="axdd-sidebar-navigation" role="navigation">
           <slot name="navigation">
             <div class="text-uppercase">Nav Heading</div>
             <ul class="list-unstyled">
@@ -18,13 +18,13 @@
             </ul>
           </slot>
         </nav>
-        <footer class="mt-auto border-top pt-2 text-muted small sidebar-footer">
+        <footer class="mt-auto border-top pt-2 text-muted small axdd-sidebar-footer">
           <slot name="footer">
             Copyright &copy; 2021
           </slot>
         </footer>
       </div>
-      <main class="p-4 sidebar-main">
+      <main class="p-4 axdd-sidebar-main">
         <slot name="content">
           <h1 class="text-uppercase text-muted">{{ pageTitle }}</h1>
           <p class="text-muted">
@@ -69,20 +69,20 @@ export default {
   }
 }
 // sidebar global
-.sidebar {
+.axdd-sidebar {
   min-width: 280px;
 }
 
-.sidebar-footer {
+.axdd-sidebar-footer {
   min-height: 20px;
 }
 // main responsive tablet and desktop
 @media (min-width: 576px) {
-  .sidebar-container {
+  .axdd-sidebar-container {
     min-width: 260px;
     max-width: 260px;
   }
-  .sidebar-main {
+  .axdd-sidebar-main {
     height: 100vh;
     overflow: scroll;
   }

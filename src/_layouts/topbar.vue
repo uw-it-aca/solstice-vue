@@ -1,12 +1,8 @@
 <template>
-  <div class="bg-light d-flex align-items-end flex-column boilerplate" style="min-height: 100vh">
+  <div class="bg-light d-flex align-items-end flex-column axdd-topbar" style="min-height: 100vh">
     <header class="w-100">
-      <div class="bg-purple">
-        <b-container
-          fluid="xl"
-          class="px-3 myuw-brand-logo"
-          :style="`background-image: url(${staticUrl}images/w-logo-white.png);`"
-        >
+      <div class="bg-purple axdd-topbar-brand">
+        <b-container fluid="xl" class="px-3 axdd-topbar-logo">
           <b-button
             v-b-toggle.nav-collapse
             variant="link"
@@ -24,20 +20,24 @@
             </font-awesome-layers>
           </b-button>
           <slot name="header">
-            <div class="d-inline align-middle text-white h3">{{ appName }}</div>
+            <div class="d-inline align-middle text-white" :class="[$mq == 'desktop' ? 'h3' : 'h5']">
+              {{ appName }}
+            </div>
           </slot>
         </b-container>
       </div>
     </header>
     <nav role="navigation">
       <slot name="navigation">
-        <div class="text-uppercase">Nav Heading</div>
-        <ul class="list-unstyled">
-          <li><a href="#">link</a></li>
-          <li><a href="#">link</a></li>
-          <li><a href="#">link</a></li>
-          <li><a href="#">link</a></li>
-        </ul>
+        <b-collapse id="nav-collapse" class="mt-2" visible>
+          <div class="text-uppercase">Nav Heading</div>
+          <ul class="list-unstyled">
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+          </ul>
+        </b-collapse>
       </slot>
     </nav>
 
@@ -52,7 +52,7 @@
       </slot>
     </main>
 
-    <footer class="">
+    <footer class="bg-secondary text-white">
       <slot name="footer"> Copyright &copy; 2021 </slot>
     </footer>
   </div>
@@ -63,7 +63,7 @@ export default {
   props: {
     appName: {
       type: String,
-      default: 'App',
+      default: 'MyApp',
     },
     pageTitle: {
       type: String,
@@ -78,4 +78,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.axdd-topbar-brand {
+  line-height: 65px;
+}
+
+.axdd-topbar-logo {
+  background-image: url('../assets/images/w-logo-white.png');
+  background-repeat: no-repeat;
+  background-size: 45px;
+  background-position: right 20px bottom;
+}
 </style>

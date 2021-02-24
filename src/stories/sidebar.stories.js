@@ -1,7 +1,7 @@
 import { action } from "@storybook/addon-actions";
 import { linkTo } from "@storybook/addon-links";
 
-import SideBar from "../_layouts/sidebar/index.vue";
+import SideBar from "../_layouts/sidebar.vue";
 
 export default {
   title: "Layouts/Sidebar",

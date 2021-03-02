@@ -1,37 +1,51 @@
 <template>
-  <uw-boilerplate
-    :app-name="appName"
-    :page-title="pageTitle"
-  >
-    <template #header></template>
-    <template #navigation></template>
-    <template #content>
-      <h1 class="">{{ pageTitle }}</h1>
-      <slot></slot>
+  <!-- layout.vue: this is where you override the layout -->
+  <layout :app-name="appName" :page-title="pageTitle">
+    <template #header>
+    </template>
+    <template #navigation>
+      <!-- navigation menu
+      <ul class="list-unstyled">
+        <li><a href="#">link</a></li>
+        <li><a href="#">link</a></li>
+        <li><a href="#">link</a></li>
+        <li><a href="#">link</a></li>
+      </ul> -->
+    </template>
+    <template #main>
+      <!-- main content
+      <h1>{{ pageTitle }}</h1>
+      <div>askjdflkasjfd</div>
+      <slot name="content"></slot>
+      -->
     </template>
     <template #footer>
-      Copyright &copy; 2012-{{ currentYear }} UW Information Technology - AXDD
+      <!-- footer
+      <div class="text-white font-weight-light">
+        this is my footer<br/>
+        Copyright &copy; {{ new Date().getFullYear() }} University of Washington
+      </div> -->
     </template>
-  </uw-boilerplate>
+  </layout>
 </template>
 
 <script>
-import BoilerPlate from '../../_layouts/topbar.vue';
+import TopBar from '../../_layouts/topbar.vue';
 
 export default {
   name: 'MyApp',
   components: {
-    'uw-boilerplate': BoilerPlate,
+    layout: TopBar,
   },
   props: {
     pageTitle: {
       type: String,
-      required: true
+      required: true,
     },
   },
   data: function () {
     return {
-      appName: "MyApp",
+      appName: 'PrereqMap',
       currentYear: new Date().getFullYear(),
     };
   },
@@ -44,5 +58,4 @@ export default {
 .sidebar-heading {
   font-family: 'Open Sans Condensed', sans-serif;
 }
-
 </style>

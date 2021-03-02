@@ -17,6 +17,7 @@ import VueMq from 'vue-mq';
 // fontaweome
 import {
   faUser,
+  faLink,
   faEnvelope,
   faSearch,
   faSignOutAlt,
@@ -52,6 +53,7 @@ import {
 } from '@fortawesome/free-regular-svg-icons';
 
 library.add(faUser);
+library.add(faLink);
 library.add(faEnvelope);
 library.add(faSearch);
 library.add(faSignOutAlt);
@@ -154,33 +156,22 @@ export default {
 
 export const Default = () => ({
   components: {
-    'uw-boilerplate': TopBar,
+    'layout': TopBar,
    },
+   props: {
+    pageTitle: {
+      type: String,
+      required: true,
+    },
+  },
+  data: function () {
+    return {
+      appName: 'MyTestApp',
+      currentYear: new Date().getFullYear(),
+    };
+  },
   template: `
-  <uw-boilerplate>
-   lorem ipsum
-  </uw-boilerplate>
+  <layout :app-name="appName" :page-title="pageTitle">
   `,
 });
 
-export const Navigation = () => ({
-  components: {
-    'uw-card': Card,
-  },
-  template: `
-  <uw-card>
-    lorem ipsum
-  </uw-card>
-  `,
-});
-
-export const Messaging = () => ({
-  components: {
-    'uw-card': Card,
-  },
-  template: `
-  <uw-card>
-    lorem ipsum
-  </uw-card>
-  `,
-});

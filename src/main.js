@@ -18,6 +18,7 @@ import '../src/assets/css/global.scss';
 // fontaweome
 import {
   faUser,
+  faLink,
   faEnvelope,
   faSearch,
   faSignOutAlt,
@@ -53,6 +54,7 @@ import {
 } from '@fortawesome/free-regular-svg-icons';
 
 library.add(faUser);
+library.add(faLink);
 library.add(faEnvelope);
 library.add(faSearch);
 library.add(faSignOutAlt);
@@ -87,7 +89,6 @@ library.add(faChevronUp);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.component('font-awesome-layers', FontAwesomeLayers);
 Vue.component('font-awesome-layers-text', FontAwesomeLayersText);
-
 
 // bootstrap vue plugins
 import {
@@ -148,7 +149,6 @@ Vue.use(VueMq, {
     desktop: Infinity,
   },
 });
-
 
 new Vue({
   router,

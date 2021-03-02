@@ -9,20 +9,19 @@ export default {
 
 export const Default = () => ({
   components: {
-    'uw-sidebar': SideBar,
+    'layout': SideBar,
   },
   template: `
-  <uw-sidebar>
-  </uw-sidebar>
+  <layout></layout>
   `,
 });
 
 export const Header = () => ({
   components: {
-    'uw-sidebar': SideBar,
+    'layout': SideBar,
   },
   template: `
-  <uw-sidebar
+  <layout
     :app-name="appName"
   >
     <template #header>
@@ -31,7 +30,7 @@ export const Header = () => ({
       </div>
       <div class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas rerum dolor laudantium</div>
     </template>
-  </uw-sidebar>
+  </layout>
   `,
   data: function () {
     return {
@@ -42,10 +41,10 @@ export const Header = () => ({
 
 export const Navigation = () => ({
   components: {
-    'uw-sidebar': SideBar,
+    'layout': SideBar,
   },
   template: `
-  <uw-sidebar>
+  <layoutebar>
     <template #navigation>
       <div class="small mb-1 font-weight-bold text-secondary text-uppercase">Heading</div>
       <ul class="list-unstyled">
@@ -78,20 +77,20 @@ export const Navigation = () => ({
         </li>
       </ul>
     </template>
-  </uw-sidebar>
+  </layout>
   `,
 });
 
 export const Footer = () => ({
   components: {
-    'uw-sidebar': SideBar,
+    'layout': SideBar,
   },
   template: `
-  <uw-sidebar>
+  <layout>
     <template #footer>
       Copyright &copy; 2012-{{currentYear}} UW Information Technology - AXDD
     </template>
-  </uw-sidebar>
+  </layout>
   `,
   data: function () {
     return {
@@ -102,10 +101,10 @@ export const Footer = () => ({
 
 export const Content = () => ({
   components: {
-    'uw-sidebar': SideBar,
+    'layout': SideBar,
   },
   template: `
-  <uw-sidebar
+  <layout
     :page-title="pageTitle"
   >
     <template #content>
@@ -117,7 +116,7 @@ export const Content = () => ({
         distinctio atque explicabo voluptatum nemo.
       </p>
     </template>
-  </uw-sidebar>
+  </layout>
   `,
   data: function () {
     return {

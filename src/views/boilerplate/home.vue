@@ -1,64 +1,41 @@
 <template>
-  <axdd-layout page-title="Home">
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa? Error
-      earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam distinctio
-      atque explicabo voluptatum nemo.
-    </p>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa? Error
-      earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam distinctio
-      atque explicabo voluptatum nemo.
-    </p>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa? Error
-      earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam distinctio
-      atque explicabo voluptatum nemo.
-    </p>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa? Error
-      earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam distinctio
-      atque explicabo voluptatum nemo.
-    </p>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa? Error
-      earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam distinctio
-      atque explicabo voluptatum nemo.
-    </p>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa? Error
-      earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam distinctio
-      atque explicabo voluptatum nemo.
-    </p>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa? Error
-      earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam distinctio
-      atque explicabo voluptatum nemo.
-    </p>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa? Error
-      earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam distinctio
-      atque explicabo voluptatum nemo.
-    </p>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum voluptatem ipsa? Error
-      earum hic nihil itaque ullam corporis eum, modi, quaerat placeat velit numquam distinctio
-      atque explicabo voluptatum nemo.
-    </p>
-  </axdd-layout>
+  <axdd-boilerplate page-title="My new page title">
+    <!-- page content -->
+    <template #content>
+      <div class="card mb-3">
+        <div class="card-body">asldkjfas</div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">asldkjfas</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">asldkjfas</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-3">
+            <div class="card-body">asldkjfas</div>
+          </div>
+        </div>
+      </div>
+    </template>
+  </axdd-boilerplate>
 </template>
 
 <script>
-import BoilerPlateLayout from './layout.vue';
+import Boilerplate from './layout.vue';
 
 export default {
-  name: 'BoilerplateHome',
+  name: 'Boilerplate',
   components: {
-    'axdd-layout': BoilerPlateLayout,
+    'axdd-boilerplate': Boilerplate,
   },
 };
 </script>
 
 <style lang="scss" scoped>
-
 </style>

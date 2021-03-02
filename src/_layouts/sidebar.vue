@@ -20,7 +20,7 @@
         </nav>
         <footer class="mt-auto border-top pt-2 text-muted small axdd-sidebar-footer">
           <slot name="footer">
-            Copyright &copy; 2021
+            Copyright &copy; {{ new Date().getFullYear() }} University of Washington
           </slot>
         </footer>
       </div>
@@ -60,7 +60,7 @@ export default {
 <style lang="scss" scoped>
 // storybook only
 .sb-show-main {
-  .sidebar {
+  .axdd-sidebar {
     padding: 0 !important;
     border: dashed 1px lightgrey;
   }

@@ -1,6 +1,6 @@
 <template>
   <!-- layout.vue: this is where you override the layout -->
-  <layout :app-name="appName" :page-title="pageTitle">
+  <layout :app-name="appName" :page-title="pageTitle" :user-name="userName">
     <template #header></template>
     <template #navigation>
       <!-- navigation menu override -->
@@ -51,8 +51,12 @@ export default {
   },
   data() {
     return {
+      // minimum application setup overrides
       appName: 'PrereqMap v3',
+      userName: 'javerage',
+      // automatically set year
       currentYear: new Date().getFullYear(),
+      // example: dynamic navigation menu
       navItems: [
         {
           title: 'Home',
@@ -77,9 +81,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
 
-.sidebar-heading {
-  font-family: 'Open Sans Condensed', sans-serif;
-}
 </style>

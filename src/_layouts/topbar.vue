@@ -4,7 +4,7 @@
       <slot name="header">
         <div class="bg-dark-purple text-right text-white p-1 small">
           <b-container fluid="xl">
-          user
+          {{ userName }}
           </b-container>
         </div>
         <div class="bg-purple axdd-topbar-brand">
@@ -89,6 +89,10 @@ export default {
     pageTitle: {
       type: String,
       default: "pageTitle"
+    },
+    userName: {
+      type: String,
+      default: "userName"
     }
   },
   data() {

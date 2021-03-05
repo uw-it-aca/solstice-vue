@@ -1,6 +1,11 @@
 <template>
   <!-- layout.vue: this is where you override the layout -->
-  <layout :app-name="appName" :page-title="pageTitle" :user-name="userName">
+  <layout
+    :app-name="appName"
+    :page-title="pageTitle"
+    :user-name="userName"
+    :sign-out-url="signOutUrl"
+  >
     <template #header></template>
     <template #navigation>
       <!-- navigation menu override -->
@@ -28,7 +33,7 @@
     <template #footer>
       <!-- footer section overrixe -->
       <div class="text-white font-weight-light">
-        this is my custom footer<br/>
+        this is my custom footer<br />
         Copyright &copy; {{ new Date().getFullYear() }} University of Washington
       </div>
     </template>
@@ -41,7 +46,7 @@ import TopBar from '../../_layouts/topbar.vue';
 export default {
   name: 'MyApp',
   components: {
-    'layout': TopBar,
+    layout: TopBar,
   },
   props: {
     pageTitle: {
@@ -54,8 +59,11 @@ export default {
       // minimum application setup overrides
       appName: 'PrereqMap v3',
       userName: 'javerage',
+      signOutUrl: '/signout',
+
       // automatically set year
       currentYear: new Date().getFullYear(),
+
       // example: dynamic navigation menu
       navItems: [
         {
@@ -81,5 +89,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 </style>

@@ -2,9 +2,14 @@
   <div class="bg-light d-flex align-items-end flex-column axdd-topbar" style="min-height: 100vh">
     <header class="w-100">
       <slot name="header">
-        <div class="bg-dark-purple text-right text-white p-1 small">
+        <div class="bg-dark-purple text-white p-1 small">
           <b-container fluid="xl">
-          {{ userName }}
+            <div class="d-flex">
+              <div class="flex-fill">{{ userName }}</div>
+              <div class="flex-fill text-right">
+                <a :href="signOutUrl" class="text-white">Sign out</a>
+              </div>
+            </div>
           </b-container>
         </div>
         <div class="bg-purple axdd-topbar-brand">
@@ -88,12 +93,16 @@ export default {
     },
     pageTitle: {
       type: String,
-      default: "pageTitle"
+      default: 'pageTitle',
     },
     userName: {
       type: String,
-      default: "userName"
-    }
+      default: 'userName',
+    },
+    signOutUrl: {
+      type: String,
+      default: '#',
+    },
   },
   data() {
     return {};

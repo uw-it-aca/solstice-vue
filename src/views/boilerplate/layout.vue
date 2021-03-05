@@ -1,30 +1,36 @@
 <template>
   <!-- layout.vue: this is where you override the layout -->
   <layout :app-name="appName" :page-title="pageTitle">
-    <template #header>
-    </template>
+    <template #header></template>
     <template #navigation>
-      <!-- navigation menu
-      <ul class="list-unstyled">
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-      </ul> -->
+      <!-- navigation menu override -->
+      <b-nav vertical>
+        <b-nav-item
+          v-for="item in navItems"
+          :key="item.title"
+          class="mb-2"
+          :href="item.href"
+          :link-classes="'d-block px-2 py-1'"
+        >
+          {{ item.title }}
+        </b-nav-item>
+      </b-nav>
     </template>
     <template #main>
-      <!-- main content
-      <h1>{{ pageTitle }}</h1>
-      <div>askjdflkasjfd</div>
+      <!-- main section override -->
+      <h1>
+        <slot name="title">
+          {{ pageTitle }}
+        </slot>
+      </h1>
       <slot name="content"></slot>
-      -->
     </template>
     <template #footer>
-      <!-- footer
+      <!-- footer section overrixe -->
       <div class="text-white font-weight-light">
-        this is my footer<br/>
+        this is my custom footer<br/>
         Copyright &copy; {{ new Date().getFullYear() }} University of Washington
-      </div> -->
+      </div>
     </template>
   </layout>
 </template>
@@ -35,7 +41,7 @@ import TopBar from '../../_layouts/topbar.vue';
 export default {
   name: 'MyApp',
   components: {
-    layout: TopBar,
+    'layout': TopBar,
   },
   props: {
     pageTitle: {
@@ -43,10 +49,28 @@ export default {
       required: true,
     },
   },
-  data: function () {
+  data() {
     return {
-      appName: 'PrereqMap',
+      appName: 'PrereqMap v3',
       currentYear: new Date().getFullYear(),
+      navItems: [
+        {
+          title: 'Home',
+          href: '#',
+        },
+        {
+          title: 'First',
+          href: '#',
+        },
+        {
+          title: 'Second',
+          href: '#',
+        },
+        {
+          title: 'Third',
+          href: '#',
+        },
+      ],
     };
   },
 };

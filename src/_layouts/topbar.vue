@@ -2,6 +2,11 @@
   <div class="bg-light d-flex align-items-end flex-column axdd-topbar" style="min-height: 100vh">
     <header class="w-100">
       <slot name="header">
+        <div class="bg-dark-purple text-right text-white p-1 small">
+          <b-container fluid="xl">
+          user
+          </b-container>
+        </div>
         <div class="bg-purple axdd-topbar-brand">
           <b-container fluid="xl" class="axdd-topbar-logo">
             <b-button
@@ -35,17 +40,11 @@
             <nav role="navigation">
               <b-collapse id="nav-collapse" class="" :visible="$mq == 'desktop'">
                 <slot name="navigation">
-                  <b-nav vertical>
-                    <b-nav-item
-                      v-for="item in navItems"
-                      :key="item.title"
-                      class="mb-2"
-                      :href="item.href"
-                      :link-classes="'d-block px-2 py-1'"
-                    >
-                      {{ item.title }}
-                    </b-nav-item>
-                  </b-nav>
+                  <div style="outline: dashed 1px lightgray">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis
+                    repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto
+                    reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa.
+                  </div>
                 </slot>
               </b-collapse>
             </nav>
@@ -53,51 +52,14 @@
           <b-col lg="10">
             <main>
               <slot name="main">
-                <!-- main content -->
-                <h1>{{ pageTitle }}</h1>
-                <p class="bg-white p-3">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas rerum dolor
-                  laudantium cum consectetur nihil, cumque ipsam accusantium asperiores ut delectus
-                  quae, dolores saepe sunt doloribus iusto dolore, doloremque aperiam.
-                </p>
-                <div class="row">
-                  <div class="col-md-4">
-                    <p class="bg-white p-3">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas rerum dolor
-                      laudantium cum consectetur nihil, cumque ipsam accusantium asperiores ut
-                      delectus quae, dolores saepe sunt doloribus iusto dolore, doloremque aperiam.
-                    </p>
-                  </div>
-                  <div class="col-md-4">
-                    <p class="bg-white p-3">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas rerum dolor
-                      laudantium cum consectetur nihil, cumque ipsam accusantium asperiores ut
-                      delectus quae, dolores saepe sunt doloribus iusto dolore, doloremque aperiam.
-                    </p>
-                  </div>
-                  <div class="col-md-4">
-                    <p class="bg-white p-3">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas rerum dolor
-                      laudantium cum consectetur nihil, cumque ipsam accusantium asperiores ut
-                      delectus quae, dolores saepe sunt doloribus iusto dolore, doloremque aperiam.
-                    </p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <p class="bg-white p-3">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas rerum dolor
-                      laudantium cum consectetur nihil, cumque ipsam accusantium asperiores ut
-                      delectus quae, dolores saepe sunt doloribus iusto dolore, doloremque aperiam.
-                    </p>
-                  </div>
-                  <div class="col-md-6">
-                    <p class="bg-white p-3">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas rerum dolor
-                      laudantium cum consectetur nihil, cumque ipsam accusantium asperiores ut
-                      delectus quae, dolores saepe sunt doloribus iusto dolore, doloremque aperiam.
-                    </p>
-                  </div>
+                <div style="outline: dashed 1px lightgray">
+                  <!-- main content -->
+                  <h1>Hello world...</h1>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis
+                    repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto
+                    reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa.
+                  </p>
                 </div>
               </slot>
             </main>
@@ -105,7 +67,7 @@
         </b-row>
       </b-container>
     </div>
-    <footer class="w-100 mt-auto bg-dark pt-3 pb-3 myuw-text-xs">
+    <footer class="w-100 mt-auto bg-dark pt-3 pb-3 small">
       <b-container fluid="xl" class="px-3">
         <slot name="footer">
           <div class="text-white font-weight-light">
@@ -126,30 +88,11 @@ export default {
     },
     pageTitle: {
       type: String,
-      default: 'Hello world...',
-    },
+      default: "pageTitle"
+    }
   },
   data() {
-    return {
-      navItems: [
-        {
-          title: 'Home',
-          href: '#',
-        },
-        {
-          title: 'First',
-          href: '#',
-        },
-        {
-          title: 'Second',
-          href: '#',
-        },
-        {
-          title: 'Third',
-          href: '#',
-        },
-      ],
-    };
+    return {};
   },
   created: function () {
     // constructs page title in the following format "Page Title - AppName"

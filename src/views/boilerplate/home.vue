@@ -1,13 +1,14 @@
 <template>
-  <axdd-boilerplate page-title="My new page title">
+  <axdd-boilerplate :page-title="pageTitle">
     <!-- page content -->
+    <template #title>{{ pageTitle }}</template>
     <template #content>
-      <div class="card mb-3">
+      <div class="card mb-3 bg-dark">
         <div class="card-body">asldkjfas</div>
       </div>
       <div class="row">
         <div class="col-md-4">
-          <div class="card mb-3">
+          <div class="card mb-3 bg-dark">
             <div class="card-body">asldkjfas</div>
           </div>
         </div>
@@ -33,6 +34,11 @@ export default {
   name: 'Boilerplate',
   components: {
     'axdd-boilerplate': Boilerplate,
+  },
+  data() {
+    return {
+      pageTitle: 'My Home title',
+    };
   },
 };
 </script>

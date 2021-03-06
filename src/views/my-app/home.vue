@@ -1,5 +1,5 @@
 <template>
-  <axdd-boilerplate :page-title="pageTitle">
+  <boilerplate :page-title="pageTitle">
     <!-- page content -->
     <template #title>{{ pageTitle }}</template>
     <template #content>
@@ -24,16 +24,15 @@
         </div>
       </div>
     </template>
-  </axdd-boilerplate>
+  </boilerplate>
 </template>
 
 <script>
 import Boilerplate from './layout.vue';
 
 export default {
-  name: 'Boilerplate',
   components: {
-    'axdd-boilerplate': Boilerplate,
+    'boilerplate': Boilerplate,
   },
   data() {
     return {

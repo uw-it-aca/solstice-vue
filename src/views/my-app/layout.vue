@@ -41,12 +41,12 @@
 </template>
 
 <script>
-import TopBar from '../../_layouts/topbar.vue';
+import Layout from '../../_layouts/topbar.vue';
 
 export default {
   name: 'MyApp',
   components: {
-    layout: TopBar,
+    'layout': Layout,
   },
   props: {
     pageTitle: {
@@ -57,7 +57,7 @@ export default {
   data() {
     return {
       // minimum application setup overrides
-      appName: 'PrereqMap v3',
+      appName: 'MyApp',
       userName: 'javerage',
       signOutUrl: '/signout',
 

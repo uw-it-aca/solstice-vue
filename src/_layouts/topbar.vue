@@ -2,7 +2,7 @@
   <div class="bg-light d-flex align-items-end flex-column axdd-topbar" style="min-height: 100vh">
     <header class="w-100">
       <slot name="header">
-        <div class="bg-dark-purple text-white p-1 small">
+        <div class="bg-dark-purple text-white py-2 small">
           <b-container fluid="xl">
             <div class="d-flex">
               <div class="flex-fill">{{ userName }}</div>

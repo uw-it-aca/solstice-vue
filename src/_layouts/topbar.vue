@@ -15,6 +15,7 @@
         <div class="bg-purple axdd-topbar-brand">
           <b-container fluid="xl" class="axdd-topbar-logo">
             <b-button
+              v-if="$slots['navigation']"
               v-b-toggle.nav-collapse
               variant="link"
               size="sm"
@@ -40,21 +41,15 @@
     <div class="w-100 mt-3">
       <b-container fluid="xl">
         <b-row>
-          <b-col lg="2" class="">
+          <b-col v-if="$slots['navigation']" lg="2" class="">
             <!-- main sidebar navigation -->
             <nav role="navigation">
               <b-collapse id="nav-collapse" class="" :visible="$mq == 'desktop'">
-                <slot name="navigation">
-                  <div style="outline: dashed 1px lightgray">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis
-                    repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto
-                    reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa.
-                  </div>
-                </slot>
+                <slot name="navigation"></slot>
               </b-collapse>
             </nav>
           </b-col>
-          <b-col lg="10">
+          <b-col :lg="$slots['navigation'] ? 10 : 12">
             <main>
               <slot name="main">
                 <div style="outline: dashed 1px lightgray">

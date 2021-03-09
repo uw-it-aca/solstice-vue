@@ -8,7 +8,7 @@
   >
     <template #header></template>
     <template #navigation>
-      <!-- navigation menu override -->
+      <!-- navigation menu override
       <b-nav vertical>
         <b-nav-item
           v-for="item in navItems"
@@ -19,7 +19,7 @@
         >
           {{ item.title }}
         </b-nav-item>
-      </b-nav>
+      </b-nav>  -->
     </template>
     <template #main>
       <!-- main section override -->

@@ -1,18 +1,67 @@
-import { action } from "@storybook/addon-actions";
-import { linkTo } from "@storybook/addon-links";
+import { action } from '@storybook/addon-actions';
+import { linkTo } from '@storybook/addon-links';
 
-import TopBar from "../_layouts/topbar.vue";
-import Card from "../_base/card.vue";
+import TopBar from '../_layouts/topbar.vue';
+import Card from '../_base/card.vue';
 
-import {library} from '@fortawesome/fontawesome-svg-core';
+import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   FontAwesomeIcon,
   FontAwesomeLayers,
   FontAwesomeLayersText,
 } from '@fortawesome/vue-fontawesome';
 
-import Vue from 'vue'
+import Vue from 'vue';
 import VueMq from 'vue-mq';
+
+// bootstrap vue plugins
+import {
+  AlertPlugin,
+  BadgePlugin,
+  ButtonPlugin,
+  CardPlugin,
+  CollapsePlugin,
+  FormPlugin,
+  FormGroupPlugin,
+  FormInputPlugin,
+  FormSelectPlugin,
+  FormCheckboxPlugin ,
+  InputGroupPlugin,
+  ModalPlugin,
+  LayoutPlugin,
+  LinkPlugin,
+  NavPlugin,
+  PopoverPlugin ,
+  SpinnerPlugin,
+  TablePlugin ,
+  TabsPlugin,
+  VBTogglePlugin,
+  TooltipPlugin,
+} from 'bootstrap-vue';
+
+// bootstrap-vue components as plugins
+Vue.use(AlertPlugin);
+Vue.use(BadgePlugin);
+Vue.use(ButtonPlugin);
+Vue.use(CardPlugin);
+Vue.use(CollapsePlugin);
+Vue.use(FormCheckboxPlugin );
+Vue.use(FormPlugin);
+Vue.use(FormGroupPlugin);
+Vue.use(FormInputPlugin);
+Vue.use(FormSelectPlugin);
+Vue.use(InputGroupPlugin);
+Vue.use(LayoutPlugin);
+Vue.use(LinkPlugin);
+Vue.use(NavPlugin);
+Vue.use(PopoverPlugin)
+Vue.use(SpinnerPlugin);
+Vue.use(TabsPlugin);
+Vue.use(VBTogglePlugin);
+Vue.use(ModalPlugin);
+Vue.use(TablePlugin);
+Vue.use(TooltipPlugin);
+
 
 // fontaweome
 import {
@@ -89,55 +138,6 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.component('font-awesome-layers', FontAwesomeLayers);
 Vue.component('font-awesome-layers-text', FontAwesomeLayersText);
 
-
-// bootstrap vue plugins
-import {
-  AlertPlugin,
-  BadgePlugin,
-  ButtonPlugin,
-  CardPlugin,
-  CollapsePlugin,
-  FormPlugin,
-  FormGroupPlugin,
-  FormInputPlugin,
-  FormSelectPlugin,
-  FormCheckboxPlugin ,
-  InputGroupPlugin,
-  ModalPlugin,
-  LayoutPlugin,
-  LinkPlugin,
-  NavPlugin,
-  PopoverPlugin ,
-  SpinnerPlugin,
-  TablePlugin ,
-  TabsPlugin,
-  VBTogglePlugin,
-  TooltipPlugin,
-} from 'bootstrap-vue';
-
-// bootstrap-vue components as plugins
-Vue.use(AlertPlugin);
-Vue.use(BadgePlugin);
-Vue.use(ButtonPlugin);
-Vue.use(CardPlugin);
-Vue.use(CollapsePlugin);
-Vue.use(FormCheckboxPlugin );
-Vue.use(FormPlugin);
-Vue.use(FormGroupPlugin);
-Vue.use(FormInputPlugin);
-Vue.use(FormSelectPlugin);
-Vue.use(InputGroupPlugin);
-Vue.use(LayoutPlugin);
-Vue.use(LinkPlugin);
-Vue.use(NavPlugin);
-Vue.use(PopoverPlugin)
-Vue.use(SpinnerPlugin);
-Vue.use(TabsPlugin);
-Vue.use(VBTogglePlugin);
-Vue.use(ModalPlugin);
-Vue.use(TablePlugin);
-Vue.use(TooltipPlugin);
-
 Vue.config.productionTip = false;
 
 // vue-mq (media queries)
@@ -151,20 +151,20 @@ Vue.use(VueMq, {
 });
 
 export default {
-  title: "Layouts/Topbar",
+  title: 'Layouts/Topbar',
 };
 
 export const Default = () => ({
   components: {
-    'layout': TopBar,
-   },
-   props: {
+    layout: TopBar,
+  },
+  props: {
     pageTitle: {
       type: String,
       required: true,
     },
   },
-  data: function () {
+  data: function() {
     return {
       appName: 'MyTestApp',
       currentYear: new Date().getFullYear(),
@@ -172,6 +172,66 @@ export const Default = () => ({
   },
   template: `
   <layout :app-name="appName" :page-title="pageTitle">
+  </layout>
   `,
 });
 
+export const Navigation = () => ({
+  components: {
+    layout: TopBar,
+  },
+  props: {
+    pageTitle: {
+      type: String,
+      required: true,
+    },
+  },
+  data: function() {
+    return {
+      appName: 'MyTestApp',
+      currentYear: new Date().getFullYear(),
+       // example: dynamic navigation menu
+       navItems: [
+        {
+          title: 'Home',
+          href: '#',
+        },
+        {
+          title: 'First',
+          href: '#',
+        },
+        {
+          title: 'Second',
+          href: '#',
+        },
+        {
+          title: 'Third',
+          href: '#',
+        },
+      ],
+    };
+  },
+  template: `
+  <layout
+    :app-name="appName"
+    :page-title="pageTitle"
+    :user-name="userName"
+    :sign-out-url="signOutUrl">
+
+    <template #navigation>
+      <b-nav vertical>
+        <b-nav-item
+          v-for="item in navItems"
+          :key="item.title"
+          class="mb-2"
+          :href="item.href"
+          :link-classes="'d-block px-2 py-1'"
+        >
+          {{ item.title }}
+        </b-nav-item>
+      </b-nav>
+    </template>
+
+  </layout>
+  `,
+});

@@ -115,7 +115,7 @@ export default {
   .axdd-topbar {
     padding: 0 !important;
     border: dashed 1px lightgrey;
-    //height: 500px;
+    min-height: 500px !important;
   }
 }
 

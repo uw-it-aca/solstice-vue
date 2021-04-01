@@ -32,7 +32,7 @@
               </font-awesome-layers>
             </b-button>
             <div class="d-inline align-middle text-white" :class="[$mq == 'desktop' ? 'h3' : 'h5']">
-              {{ appName }}
+              <a href="/" class="text-white text-decoration-none">{{ appName }}</a>
             </div>
           </b-container>
         </div>

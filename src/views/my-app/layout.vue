@@ -1,6 +1,6 @@
 <template>
   <!-- layout.vue: this is where you override the layout -->
-  <layout
+  <topbar
     :app-name="appName"
     :page-title="pageTitle"
     :user-name="userName"
@@ -8,7 +8,7 @@
   >
     <template #header></template>
     <template #navigation>
-      <!-- navigation menu override
+      <!-- navigation menu override -->
       <b-nav vertical>
         <b-nav-item
           v-for="item in navItems"
@@ -19,7 +19,7 @@
         >
           {{ item.title }}
         </b-nav-item>
-      </b-nav>  -->
+      </b-nav>
     </template>
     <template #main>
       <!-- main section override -->
@@ -37,16 +37,16 @@
         Copyright &copy; {{ new Date().getFullYear() }} University of Washington
       </div>
     </template>
-  </layout>
+  </topbar>
 </template>
 
 <script>
-import Layout from '../../_layouts/topbar.vue';
+import Topbar from '../../_layouts/topbar.vue';
 
 export default {
   name: 'MyApp',
   components: {
-    'layout': Layout,
+    'topbar': Topbar,
   },
   props: {
     pageTitle: {

@@ -1,5 +1,5 @@
 <template>
-  <boilerplate :page-title="pageTitle">
+  <layout :page-title="pageTitle">
     <!-- page content -->
     <template #title>{{ pageTitle }}</template>
     <template #content>
@@ -24,15 +24,15 @@
         </div>
       </div>
     </template>
-  </boilerplate>
+  </layout>
 </template>
 
 <script>
-import Boilerplate from './layout.vue';
+import Layout from './layout.vue';
 
 export default {
   components: {
-    'boilerplate': Boilerplate,
+    'layout': Layout,
   },
   data() {
     return {

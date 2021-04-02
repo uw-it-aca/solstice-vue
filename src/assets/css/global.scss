@@ -76,3 +76,8 @@ PX   REM     |  PX   REM     |  PX   REM     |  PX   REM     |  PX   REM     |  
 .myuw-border-bottom {
   border-bottom: 0.3125rem solid #ddd; // 5px
 }
+
+// hover utilities
+.hover\:bg-purple:hover {
+  background: purple !important;
+}

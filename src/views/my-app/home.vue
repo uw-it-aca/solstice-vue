@@ -3,7 +3,7 @@
     <!-- page content -->
     <template #title>{{ pageTitle }}</template>
     <template #content>
-      <div class="card mb-3 bg-dark">
+      <div class="card mb-3 bg-dark hover:bg-purple">
         <div class="card-body">asldkjfas</div>
       </div>
       <div class="row">

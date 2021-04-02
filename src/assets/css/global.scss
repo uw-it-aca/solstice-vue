@@ -77,7 +77,15 @@ PX   REM     |  PX   REM     |  PX   REM     |  PX   REM     |  PX   REM     |  
   border-bottom: 0.3125rem solid #ddd; // 5px
 }
 
-// hover utilities
-.hover\:bg-purple:hover {
-  background: purple !important;
+
+// hover utility
+
+// background colors
+.hover\:bg-danger:hover {
+  background-color: $danger !important;
+}
+
+// border
+.hover\:border:hover {
+  border: 1px solid #dee2e6 !important;
 }

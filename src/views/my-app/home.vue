@@ -3,7 +3,7 @@
     <!-- page content -->
     <template #title>{{ pageTitle }}</template>
     <template #content>
-      <div class="card mb-3 bg-dark hover:bg-purple">
+      <div class="card mb-3 bg-dark hover:bg-danger">
         <div class="card-body">asldkjfas</div>
       </div>
       <div class="row">
@@ -18,7 +18,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card mb-3">
+          <div class="card mb-3 border-white hover:border">
             <div class="card-body">asldkjfas</div>
           </div>
         </div>

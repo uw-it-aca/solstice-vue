@@ -8,11 +8,11 @@ import LinkButton from './src/_base/link-button.vue';
 import Boilerplate from './src/_layouts/boilerplate/boilerplate.vue';
 import Sidebar from './src/_layouts/sidebar/index.vue';
 
-export default {
-    CardProperty,
-    CardStatus,
-    Card,
-    LinkButton,
-    Boilerplate,
-    Sidebar,
-}
+export {
+  CardProperty,
+  CardStatus,
+  Card,
+  LinkButton,
+  Boilerplate,
+  Sidebar,
+};

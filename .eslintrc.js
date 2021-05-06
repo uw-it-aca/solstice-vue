@@ -35,4 +35,3 @@ module.exports = {
       'vue/max-attributes-per-line': 'off',
     },
   };
-  

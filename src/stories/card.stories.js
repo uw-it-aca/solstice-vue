@@ -56,6 +56,17 @@ import LinkButton from "../_base/link-button.vue";
 
 export default {
   title: "Base/Card",
+  component: Card,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+  parameters: {
+    docs: {
+      source: {
+        type: 'code'
+      }
+    }
+  }
 };
 
 export const Default = () => ({

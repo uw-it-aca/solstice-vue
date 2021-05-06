@@ -1,8 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Boilerplate from "../views/Boilerplate.vue";
-import Support from "../views/Support.vue";
+import MyApp from "../views/my-app/home.vue";
+import SupportHome from "../views/support-tools/home.vue";
+import SupportPulse from "../views/support-tools/pulse.vue";
 
 Vue.use(VueRouter);
 
@@ -23,14 +24,19 @@ const routes = [
     }
   },
   {
-    path: "/support",
+    path: "/support/",
     name: "Support",
-    component: Support
+    component: SupportHome,
   },
   {
-    path: "/boilerplate",
-    name: "Boilerplate",
-    component: Boilerplate
+    path: "/support/pulse",
+    name: "Social Pulse",
+    component: SupportPulse,
+  },
+  {
+    path: "/myapp",
+    name: "MyApp",
+    component: MyApp
   },
 ];
 

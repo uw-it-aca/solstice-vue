@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <div class="col-lg-8 mx-auto p-3 py-md-5">
       <header class="d-flex align-items-center pb-3 mb-5 h4 border-bottom">
         <b-icon-front class="mr-2 text-purple"></b-icon-front>
@@ -74,7 +73,8 @@
         <div class="col-md-6">
           <h2>Storybook</h2>
           <p>Run the following command to start the Storybook server.</p>
-          <p>URL:
+          <p>
+            URL:
             <a href="http://localhost:6006/" target="_blank" rel="noopener"
               >http://localhost:6006</a
             >
@@ -90,8 +90,7 @@
 </template>
 
 <script>
-export default { };
+export default {};
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

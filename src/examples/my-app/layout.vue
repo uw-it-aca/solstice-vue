@@ -46,7 +46,7 @@ import Topbar from '../../_layouts/topbar.vue';
 export default {
   name: 'MyApp',
   components: {
-    'topbar': Topbar,
+    topbar: Topbar,
   },
   props: {
     pageTitle: {
@@ -88,5 +88,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

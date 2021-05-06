@@ -1,9 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-import MyApp from "../views/my-app/home.vue";
-import SupportHome from "../views/support-tools/home.vue";
-import SupportPulse from "../views/support-tools/pulse.vue";
+import Home from "../pages/home.vue";
+import MyApp from "../examples/my-app/home.vue";
+import SupportTools from "../examples/support-tools/home.vue";
 
 Vue.use(VueRouter);
 
@@ -14,27 +13,12 @@ const routes = [
     component: Home
   },
   {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: function() {
-      return import(/* webpackChunkName: "about" */ "../views/About.vue");
-    }
-  },
-  {
     path: "/support/",
     name: "Support",
-    component: SupportHome,
+    component: SupportTools,
   },
   {
-    path: "/support/pulse",
-    name: "Social Pulse",
-    component: SupportPulse,
-  },
-  {
-    path: "/myapp",
+    path: "/myapp/",
     name: "MyApp",
     component: MyApp
   },

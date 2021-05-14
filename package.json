@@ -21,9 +21,9 @@
     "vue": "^2.6.12"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^6.1.14",
-    "@storybook/addon-links": "^6.1.14",
-    "@storybook/vue": "^6.1.14",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/vue": "^6.2.9",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-e2e-cypress": "^4.5.10",
     "@vue/cli-plugin-eslint": "~4.5.0",

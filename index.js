@@ -5,8 +5,8 @@ import Card from './src/_base/card.vue';
 import LinkButton from './src/_base/link-button.vue';
 
 // Layout Components
-import Sidebar from './src/_layouts/sidebar/index.vue';
-import Topbar from './src/_layouts/topbar/index.vue';
+import Sidebar from './src/_layouts/sidebar.vue';
+import Topbar from './src/_layouts/topbar.vue';
 
 export {
   CardProperty,

@@ -5,14 +5,14 @@ import Card from './src/_base/card.vue';
 import LinkButton from './src/_base/link-button.vue';
 
 // Layout Components
-import Boilerplate from './src/_layouts/boilerplate/boilerplate.vue';
 import Sidebar from './src/_layouts/sidebar/index.vue';
+import Topbar from './src/_layouts/topbar/index.vue';
 
 export {
   CardProperty,
   CardStatus,
   Card,
   LinkButton,
-  Boilerplate,
   Sidebar,
+  Topbar,
 };

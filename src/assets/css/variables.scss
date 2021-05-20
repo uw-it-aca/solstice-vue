@@ -1,6 +1,6 @@
 @use "sass:map";
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
 
 // override max width of containers
 //$container-max-widths: map.merge($container-max-widths, (xl: 1400px));

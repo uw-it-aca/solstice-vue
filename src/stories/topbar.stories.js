@@ -14,55 +14,6 @@ import {
 import Vue from 'vue';
 import VueMq from 'vue-mq';
 
-// bootstrap vue plugins
-import {
-  AlertPlugin,
-  BadgePlugin,
-  ButtonPlugin,
-  CardPlugin,
-  CollapsePlugin,
-  FormPlugin,
-  FormGroupPlugin,
-  FormInputPlugin,
-  FormSelectPlugin,
-  FormCheckboxPlugin ,
-  InputGroupPlugin,
-  ModalPlugin,
-  LayoutPlugin,
-  LinkPlugin,
-  NavPlugin,
-  PopoverPlugin ,
-  SpinnerPlugin,
-  TablePlugin ,
-  TabsPlugin,
-  VBTogglePlugin,
-  TooltipPlugin,
-} from 'bootstrap-vue';
-
-// bootstrap-vue components as plugins
-Vue.use(AlertPlugin);
-Vue.use(BadgePlugin);
-Vue.use(ButtonPlugin);
-Vue.use(CardPlugin);
-Vue.use(CollapsePlugin);
-Vue.use(FormCheckboxPlugin );
-Vue.use(FormPlugin);
-Vue.use(FormGroupPlugin);
-Vue.use(FormInputPlugin);
-Vue.use(FormSelectPlugin);
-Vue.use(InputGroupPlugin);
-Vue.use(LayoutPlugin);
-Vue.use(LinkPlugin);
-Vue.use(NavPlugin);
-Vue.use(PopoverPlugin)
-Vue.use(SpinnerPlugin);
-Vue.use(TabsPlugin);
-Vue.use(VBTogglePlugin);
-Vue.use(ModalPlugin);
-Vue.use(TablePlugin);
-Vue.use(TooltipPlugin);
-
-
 // fontaweome
 import {
   faUser,

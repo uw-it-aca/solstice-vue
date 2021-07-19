@@ -14,55 +14,6 @@ import {
 import Vue from 'vue';
 import VueMq from 'vue-mq';
 
-// bootstrap vue plugins
-import {
-  AlertPlugin,
-  BadgePlugin,
-  ButtonPlugin,
-  CardPlugin,
-  CollapsePlugin,
-  FormPlugin,
-  FormGroupPlugin,
-  FormInputPlugin,
-  FormSelectPlugin,
-  FormCheckboxPlugin ,
-  InputGroupPlugin,
-  ModalPlugin,
-  LayoutPlugin,
-  LinkPlugin,
-  NavPlugin,
-  PopoverPlugin ,
-  SpinnerPlugin,
-  TablePlugin ,
-  TabsPlugin,
-  VBTogglePlugin,
-  TooltipPlugin,
-} from 'bootstrap-vue';
-
-// bootstrap-vue components as plugins
-Vue.use(AlertPlugin);
-Vue.use(BadgePlugin);
-Vue.use(ButtonPlugin);
-Vue.use(CardPlugin);
-Vue.use(CollapsePlugin);
-Vue.use(FormCheckboxPlugin );
-Vue.use(FormPlugin);
-Vue.use(FormGroupPlugin);
-Vue.use(FormInputPlugin);
-Vue.use(FormSelectPlugin);
-Vue.use(InputGroupPlugin);
-Vue.use(LayoutPlugin);
-Vue.use(LinkPlugin);
-Vue.use(NavPlugin);
-Vue.use(PopoverPlugin)
-Vue.use(SpinnerPlugin);
-Vue.use(TabsPlugin);
-Vue.use(VBTogglePlugin);
-Vue.use(ModalPlugin);
-Vue.use(TablePlugin);
-Vue.use(TooltipPlugin);
-
-
 // fontaweome
 import {
   faUser,
@@ -219,17 +170,11 @@ export const Navigation = () => ({
     :sign-out-url="signOutUrl">
 
     <template #navigation>
-      <b-nav vertical>
-        <b-nav-item
-          v-for="item in navItems"
-          :key="item.title"
-          class="mb-2"
-          :href="item.href"
-          :link-classes="'d-block px-2 py-1'"
-        >
-          {{ item.title }}
-        </b-nav-item>
-      </b-nav>
+      <ul class="nav flex-column">
+        <li v-for="item in navItems" :key="item.title" class="nav-item mb-2">
+          <a class="nav-link d-block px-2 py-1" :href="item.href">{{ item.title }}</a>
+        </li>
+      </ul>
     </template>
 
   </layout>

@@ -12,6 +12,10 @@ import {
 
 import VueMq from 'vue-mq';
 
+// bootstrap js
+import 'bootstrap';
+
+// custom bootstrap theme
 import '../src/assets/css/custom.scss';
 import '../src/assets/css/global.scss';
 
@@ -29,6 +33,7 @@ import {
   faGraduationCap,
   faBars,
   faLocationArrow,
+  faClone,
   faSquareFull,
   faCaretRight,
   faCaretDown,
@@ -55,6 +60,7 @@ import {
 
 library.add(faUser);
 library.add(faLink);
+library.add(faClone);
 library.add(faEnvelope);
 library.add(faSearch);
 library.add(faSignOutAlt);
@@ -89,12 +95,6 @@ library.add(faChevronUp);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.component('font-awesome-layers', FontAwesomeLayers);
 Vue.component('font-awesome-layers-text', FontAwesomeLayersText);
-
-// bootstrap vue
-import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
-
-Vue.use(BootstrapVue)
-Vue.use(BootstrapVueIcons)
 
 Vue.config.productionTip = false;
 

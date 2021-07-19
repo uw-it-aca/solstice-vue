@@ -1,14 +1,14 @@
 <template>
-  <b-card class="card rounded-0 shadow-sm mb-3 blah">
-    <slot></slot>
-  </b-card>
+  <div class="card rounded-0 shadow-sm mb-3 blah">
+    <div class="card-body">
+      <slot></slot>
+    </div>
+  </div>
 </template>
 
 <script>
-import { BCard } from 'bootstrap-vue';
 
 export default {
-  components: { BCard },
   data: function () {
     return {};
   },

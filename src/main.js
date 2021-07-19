@@ -12,6 +12,9 @@ import {
 
 import VueMq from 'vue-mq';
 
+// bootstrap js
+import 'bootstrap';
+
 // custom bootstrap theme
 import '../src/assets/css/custom.scss';
 import '../src/assets/css/global.scss';

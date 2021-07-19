@@ -96,12 +96,6 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.component('font-awesome-layers', FontAwesomeLayers);
 Vue.component('font-awesome-layers-text', FontAwesomeLayersText);
 
-// bootstrap vue
-import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
-
-Vue.use(BootstrapVue)
-Vue.use(BootstrapVueIcons)
-
 Vue.config.productionTip = false;
 
 // vue-mq (media queries)

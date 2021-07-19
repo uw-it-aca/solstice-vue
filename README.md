@@ -1,32 +1,30 @@
 # axdd-components
 AXDD VueJS Component Library
 
-## Project setup
-```
-npm install
-```
+* Vue 2
+* Vite 2
+* Bootstrap 4
 
+
+## Getting Started
+
+> Note to Vue users: Vite currently only works with Vue 3.x. This project uses vite-plugin-vue2 as a work around.
+
+```
+$ git clone git@github.com:uw-it-aca/axdd-components.git
+$ cd axdd-components
+$ npm install
+
+```
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+$ npm run dev
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+$ npm run build
 ```
-
-### Cypress E2E testing
-```
-npm run test:e2e
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Using Storybook
 

@@ -9,10 +9,11 @@
       <h1>Getting started</h1>
 
       <p class="p-0 col-md-8 lead">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget pulvinar est. Sed
-        gravida neque justo, pellentesque finibus velit scelerisque eu. Curabitur et dolor luctus,
-        convallis magna at, mollis purus. Nunc tincidunt risus quis nisl bibendum volutpat. Praesent
-        ut tincidunt ex.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget
+        pulvinar est. Sed gravida neque justo, pellentesque finibus velit
+        scelerisque eu. Curabitur et dolor luctus, convallis magna at, mollis
+        purus. Nunc tincidunt risus quis nisl bibendum volutpat. Praesent ut
+        tincidunt ex.
       </p>
 
       <hr class="mb-5 w-25 d-inline-block" />
@@ -22,13 +23,22 @@
           <h2>Development</h2>
           <ul>
             <li>
-              <a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a>
+              <a href="https://router.vuejs.org" target="_blank" rel="noopener"
+                >vue-router</a
+              >
             </li>
             <li>
-              <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
+              <a href="https://vuex.vuejs.org" target="_blank" rel="noopener"
+                >vuex</a
+              >
             </li>
             <li>
-              <a href="https://bootstrap-vue.org/" target="_blank" rel="noopener">bootstrap-vue</a>
+              <a
+                href="https://bootstrap-vue.org/"
+                target="_blank"
+                rel="noopener"
+                >bootstrap-vue</a
+              >
             </li>
             <li>
               <a
@@ -36,27 +46,6 @@
                 target="_blank"
                 rel="noopener"
                 >vue-fontawesome</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <h2>Installed CLI Plugins</h2>
-          <ul>
-            <li>
-              <a
-                href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
-                target="_blank"
-                rel="noopener"
-                >babel</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
-                target="_blank"
-                rel="noopener"
-                >eslint</a
               >
             </li>
           </ul>

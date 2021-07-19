@@ -2,5 +2,5 @@
 @import "variables.scss";
 
 // bootstrap + bootstrap-vue
-@import '~bootstrap';
-@import '~bootstrap-vue';
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';

@@ -12,6 +12,7 @@ import {
 
 import VueMq from 'vue-mq';
 
+// custom bootstrap theme
 import '../src/assets/css/custom.scss';
 import '../src/assets/css/global.scss';
 
@@ -29,6 +30,7 @@ import {
   faGraduationCap,
   faBars,
   faLocationArrow,
+  faClone,
   faSquareFull,
   faCaretRight,
   faCaretDown,
@@ -55,6 +57,7 @@ import {
 
 library.add(faUser);
 library.add(faLink);
+library.add(faClone);
 library.add(faEnvelope);
 library.add(faSearch);
 library.add(faSignOutAlt);

@@ -2,7 +2,7 @@
   <div>
     <div class="col-lg-8 mx-auto p-3 py-md-5">
       <header class="d-flex align-items-center pb-3 mb-5 h4 border-bottom">
-        <b-icon-front class="mr-2 text-purple"></b-icon-front>
+        <font-awesome-icon :icon="['fas', 'clone']" class="mr-2 text-purple" />
         <a href="/" class="text-reset text-decoration-none">AXDD Components</a>
       </header>
 
@@ -23,6 +23,11 @@
           <h2>Development</h2>
           <ul>
             <li>
+              <a href="https://vuejs.org/" target="_blank" rel="noopener"
+                >vue 2</a
+              >
+            </li>
+            <li>
               <a href="https://router.vuejs.org" target="_blank" rel="noopener"
                 >vue-router</a
               >
@@ -32,12 +37,15 @@
                 >vuex</a
               >
             </li>
+          </ul>
+          <h2>Design</h2>
+          <ul>
             <li>
               <a
-                href="https://bootstrap-vue.org/"
+                href="https://getbootstrap.com/docs/4.6/getting-started/introduction/"
                 target="_blank"
                 rel="noopener"
-                >bootstrap-vue</a
+                >bootstrap 4.6</a
               >
             </li>
             <li>

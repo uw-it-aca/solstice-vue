@@ -40,6 +40,7 @@
                 />
               </font-awesome-layers>
             </a>
+
             <div
               class="d-inline align-middle text-white"
               :class="[$mq == 'desktop' ? 'h3' : 'h5']"

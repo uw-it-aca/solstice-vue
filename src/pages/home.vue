@@ -69,7 +69,15 @@
         </div>
         <div class="col-md-6">
           <h2>Storybook</h2>
-          <p>TBD</p>
+          <p>Run the following command to start the Storybook server:
+          <code>npm run storybook</code></p>
+
+          <p>
+            URL:
+            <a href="http://localhost:6006/" target="_blank" rel="noopener"
+              >http://localhost:6006</a
+            >
+          </p>
         </div>
       </div>
 

@@ -29,12 +29,12 @@
             >
               <font-awesome-layers class="fa-2x">
                 <font-awesome-icon
-                  :icon="['far', 'square']"
+                  :icon="faSquare"
                   transform="right-1"
                   class="m-0"
                 />
                 <font-awesome-icon
-                  :icon="['fas', 'bars']"
+                  :icon="faBars"
                   transform="shrink-8 right-1 "
                   class="m-0"
                 />
@@ -100,6 +100,14 @@
 </template>
 
 <script>
+import {
+  FontAwesomeIcon,
+  FontAwesomeLayers,
+  FontAwesomeLayersText,
+} from '@fortawesome/vue-fontawesome';
+import { faSquare } from '@fortawesome/free-regular-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
 export default {
   props: {
     appName: {
@@ -118,6 +126,17 @@ export default {
       type: String,
       default: "#"
     }
+  },
+  components: {
+    'font-awesome-icon': FontAwesomeIcon,
+    'font-awesome-layers': FontAwesomeLayers,
+    'font-awesome-layers-text': FontAwesomeLayersText,
+  },
+  data() {
+    return {
+      faSquare,
+      faBars
+    };
   },
   created: function() {
     // constructs page title in the following format "Page Title - AppName"

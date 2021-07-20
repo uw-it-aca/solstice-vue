@@ -2,7 +2,7 @@
   <div>
     <div class="col-lg-8 mx-auto p-3 py-md-5">
       <header class="d-flex align-items-center pb-3 mb-5 h4 border-bottom">
-        <font-awesome-icon :icon="['fas', 'clone']" class="me-2 text-purple" />
+        <font-awesome-icon :icon="faClone" class="me-2 text-purple" />
         <a href="/" class="text-reset text-decoration-none">AXDD Components</a>
       </header>
 
@@ -89,7 +89,19 @@
 </template>
 
 <script>
-export default {};
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faClone } from '@fortawesome/free-solid-svg-icons';
+
+export default {
+  components: {
+    'font-awesome-icon': FontAwesomeIcon,
+  },
+  data() {
+    return {
+      faClone,
+    };
+  }
+};
 </script>
 
 <style lang="scss" scoped></style>

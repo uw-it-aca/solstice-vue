@@ -9,7 +9,7 @@
           <div class="container-xl">
             <div class="d-flex">
               <div class="flex-fill">{{ userName }}</div>
-              <div class="flex-fill text-right">
+              <div class="flex-fill text-end">
                 <a :href="signOutUrl" class="text-white">Sign out</a>
               </div>
             </div>

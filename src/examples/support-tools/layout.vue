@@ -6,11 +6,11 @@
     <template #header>
       <div class="p-0 mb-3 h1 text-center text-uppercase sidebar-heading">
         <span class="text-purple font-weight-bold">{{ appName }}</span>
-        <span class="ml-1 text-muted font-weight-light">Support</span>
+        <span class="ms-1 text-muted font-weight-light">Support</span>
       </div>
       <div class="text-center mb-4">
         <div class="d-inline">mynetid</div>
-        <div class="d-inline ml-2">
+        <div class="d-inline ms-2">
           <a
             class="btn btn-sm btn-outline-danger text-uppercase font-weight-light"
             >Logout</a

@@ -2,7 +2,7 @@
   <div>
     <div class="col-lg-8 mx-auto p-3 py-md-5">
       <header class="d-flex align-items-center pb-3 mb-5 h4 border-bottom">
-        <font-awesome-icon :icon="['fas', 'clone']" class="mr-2 text-purple" />
+        <font-awesome-icon :icon="['fas', 'clone']" class="me-2 text-purple" />
         <a href="/" class="text-reset text-decoration-none">AXDD Components</a>
       </header>
 
@@ -69,7 +69,9 @@
         </div>
         <div class="col-md-6">
           <h2>Storybook</h2>
-          <p>Run the following command to start the Storybook server.</p>
+          <p>Run the following command to start the Storybook server:
+          <code>npm run storybook:serve</code></p>
+
           <p>
             URL:
             <a href="http://localhost:6006/" target="_blank" rel="noopener"

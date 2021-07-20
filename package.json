@@ -5,9 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview",
-    "storybook:build": "vue-cli-service storybook:build -c .storybook",
-    "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c .storybook"
+    "serve": "vite preview"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -22,16 +20,13 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^6.3.4",
-    "@storybook/addon-links": "^6.3.4",
-    "@storybook/vue3": "^6.3.4",
+    "@babel/core": "^7.14.6",
     "@vitejs/plugin-vue": "^1.2.2",
-    "@vue/cli-service": "~4.5.13",
     "@vue/compiler-sfc": "^3.1.4",
+    "babel-loader": "^8.2.2",
     "sass": "^1.35.2",
-    "sass-loader": "^8.0.2",
     "vite": "^2.3.3",
-    "vue-cli-plugin-storybook": "~2.1.0",
+    "vue-loader": "^16.3.1",
     "vue3-mq": "^2.3.3"
   }
 }

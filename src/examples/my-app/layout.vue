@@ -2,6 +2,7 @@
   <!-- layout.vue: this is where you override the layout -->
   <topbar
     :app-name="appName"
+    :app-root-url="appRootUrl"
     :page-title="pageTitle"
     :user-name="userName"
     :sign-out-url="signOutUrl"
@@ -52,6 +53,7 @@ export default {
     return {
       // minimum application setup overrides
       appName: "MyApp",
+      appRootUrl: "/myapp",
       userName: "javerage",
       signOutUrl: "/signout",
 

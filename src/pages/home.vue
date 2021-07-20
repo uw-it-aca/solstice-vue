@@ -2,7 +2,7 @@
   <div>
     <div class="col-lg-8 mx-auto p-3 py-md-5">
       <header class="d-flex align-items-center pb-3 mb-5 h4 border-bottom">
-        <font-awesome-icon :icon="['fas', 'clone']" class="mr-2 text-purple" />
+        <font-awesome-icon :icon="faClone" class="me-2 text-purple" />
         <a href="/" class="text-reset text-decoration-none">AXDD Components</a>
       </header>
 
@@ -23,18 +23,18 @@
           <h2>Development</h2>
           <ul>
             <li>
-              <a href="https://vuejs.org/" target="_blank" rel="noopener"
-                >vue 2</a
+              <a href="hhttps://v3.vuejs.org/" target="_blank" rel="noopener"
+                >vue 3</a
               >
             </li>
             <li>
               <a href="https://router.vuejs.org" target="_blank" rel="noopener"
-                >vue-router</a
+                >vue-router 4</a
               >
             </li>
             <li>
               <a href="https://vuex.vuejs.org" target="_blank" rel="noopener"
-                >vuex</a
+                >vuex 4</a
               >
             </li>
           </ul>
@@ -42,10 +42,10 @@
           <ul>
             <li>
               <a
-                href="https://getbootstrap.com/docs/4.6/getting-started/introduction/"
+                href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"
                 target="_blank"
                 rel="noopener"
-                >bootstrap 4.6</a
+                >bootstrap 5</a
               >
             </li>
             <li>
@@ -53,7 +53,7 @@
                 href="https://github.com/FortAwesome/vue-fontawesome"
                 target="_blank"
                 rel="noopener"
-                >vue-fontawesome</a
+                >vue-fontawesome 3 (pre-release)</a
               >
             </li>
           </ul>
@@ -69,7 +69,9 @@
         </div>
         <div class="col-md-6">
           <h2>Storybook</h2>
-          <p>Run the following command to start the Storybook server.</p>
+          <p>Run the following command to start the Storybook server:
+          <code>npm run storybook</code></p>
+
           <p>
             URL:
             <a href="http://localhost:6006/" target="_blank" rel="noopener"
@@ -87,7 +89,19 @@
 </template>
 
 <script>
-export default {};
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faClone } from '@fortawesome/free-solid-svg-icons';
+
+export default {
+  components: {
+    'font-awesome-icon': FontAwesomeIcon,
+  },
+  data() {
+    return {
+      faClone,
+    };
+  }
+};
 </script>
 
 <style lang="scss" scoped></style>

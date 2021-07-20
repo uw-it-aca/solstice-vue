@@ -3,7 +3,7 @@ AXDD VueJS Component Library
 
 * Vue 2
 * Vite 2
-* Bootstrap 4
+* Bootstrap 5
 
 
 ## Getting Started

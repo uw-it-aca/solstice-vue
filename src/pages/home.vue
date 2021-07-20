@@ -42,10 +42,10 @@
           <ul>
             <li>
               <a
-                href="https://getbootstrap.com/docs/4.6/getting-started/introduction/"
+                href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"
                 target="_blank"
                 rel="noopener"
-                >bootstrap 4.6</a
+                >bootstrap 5</a
               >
             </li>
             <li>

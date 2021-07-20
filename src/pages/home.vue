@@ -23,18 +23,18 @@
           <h2>Development</h2>
           <ul>
             <li>
-              <a href="https://vuejs.org/" target="_blank" rel="noopener"
-                >vue 2</a
+              <a href="hhttps://v3.vuejs.org/" target="_blank" rel="noopener"
+                >vue 3</a
               >
             </li>
             <li>
               <a href="https://router.vuejs.org" target="_blank" rel="noopener"
-                >vue-router</a
+                >vue-router 4</a
               >
             </li>
             <li>
               <a href="https://vuex.vuejs.org" target="_blank" rel="noopener"
-                >vuex</a
+                >vuex 4</a
               >
             </li>
           </ul>
@@ -53,7 +53,7 @@
                 href="https://github.com/FortAwesome/vue-fontawesome"
                 target="_blank"
                 rel="noopener"
-                >vue-fontawesome</a
+                >vue-fontawesome 3 (pre-release)</a
               >
             </li>
           </ul>

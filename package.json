@@ -15,6 +15,8 @@
     "@fortawesome/vue-fontawesome": "^2.0.2",
     "@popperjs/core": "^2.9.2",
     "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1",
     "vue": "^2.6.12"
   },
   "devDependencies": {
@@ -31,6 +33,7 @@
     "vue-cli-plugin-storybook": "~2.1.0",
     "vue-mq": "^1.0.1",
     "vue-router": "^3.4.9",
+    "vue-template-compiler": "^2.6.11",
     "vuex": "^3.6.0"
   }
 }

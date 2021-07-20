@@ -20,8 +20,8 @@
             <a
               v-if="$slots['navigation']"
               class="btn btn-link btn-sm d-lg-none p-0 border-0 text-white"
-              data-toggle="collapse"
-              data-target="#nav-collapse"
+              data-bs-toggle="collapse"
+              data-bs-target="#nav-collapse"
               role="button"
               aria-expanded="false"
               aria-controls="collapseExample"

@@ -1,5 +1,42 @@
-// myuw theme variables
-@import "variables.scss";
+@use "sass:map";
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
 
-// bootstrap
-@import 'node_modules/bootstrap/scss/bootstrap.scss';
+// override max width of containers
+//$container-max-widths: map.merge($container-max-widths, (xl: 1400px));
+
+// enable responsive font sizing
+// $enable-responsive-font-sizes: true;
+
+// override the boostrap gutter from 30px to 20px
+$grid-gutter-width: 20px;
+
+// override theme colors
+$custom-colors: (
+  // override bootstrap colors
+  'danger': #a94442,
+  'warning': #f5d300,
+
+  // myuw custom colors
+  'purple': #4d307f, // uw purple
+  'dark-purple': #452a78, // thin bar
+  'beige': #e8e3d3, // tan
+  'dark-beige': #85754d, // headers
+  'gold': #ffbc24, //uw gold
+  'teal': #4c7286, // uw teal
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// override all links
+$link-color: #4d66ca; //a11y blue
+
+// background colors
+.hover\:bg-danger:hover {
+  background-color: $danger !important;
+}
+
+// border
+.hover\:border:hover {
+  border: 1px solid #dee2e6 !important;
+}

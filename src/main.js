@@ -9,8 +9,7 @@ import VueMq from 'vue3-mq';
 import 'bootstrap';
 
 // custom bootstrap theme
-import '../src/assets/css/custom.scss';
-import '../src/assets/css/global.scss';
+import '../src/assets/css/custom_bootstrap.scss';
 
 const app = createApp(App);
 

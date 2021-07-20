@@ -1,9 +1,9 @@
-import Vue from "vue";
+import { createApp } from 'vue'
 import App from "./app.vue";
 import router from "./router";
-import store from "./store";
+//import store from "./store";
 
-import VueMq from 'vue-mq';
+import VueMq from 'vue3-mq';
 
 // bootstrap js
 import 'bootstrap';
@@ -12,10 +12,12 @@ import 'bootstrap';
 import '../src/assets/css/custom.scss';
 import '../src/assets/css/global.scss';
 
-Vue.config.productionTip = false;
+const app = createApp(App);
+
+app.config.productionTip = false;
 
 // vue-mq (media queries)
-Vue.use(VueMq, {
+app.use(VueMq, {
   breakpoints: {
     // breakpoints == min-widths of next size
     mobile: 768, // tablet begins 768px
@@ -23,11 +25,7 @@ Vue.use(VueMq, {
     desktop: Infinity,
   },
 });
+app.use(router);
+//app.use(store);
 
-new Vue({
-  router,
-  store,
-  render: function(h) {
-    return h(App);
-  }
-}).$mount("#app");
+app.mount("#app");

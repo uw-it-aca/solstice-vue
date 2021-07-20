@@ -12,7 +12,7 @@ import {
 } from '@fortawesome/vue-fontawesome';
 
 import Vue from 'vue';
-import VueMq from 'vue-mq';
+import VueMq from 'vue3-mq';
 
 Vue.config.productionTip = false;
 

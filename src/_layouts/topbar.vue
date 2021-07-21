@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-light d-flex align-items-end flex-column axdd-topbar"
+    class="d-flex align-items-end flex-column axdd-topbar"
     style="min-height: 100vh"
   >
     <header class="w-100">

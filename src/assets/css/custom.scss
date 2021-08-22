@@ -28,6 +28,7 @@ $link-color: #4d66ca !default; //a11y blue
 @use "sass:map";
 @import 'node_modules/bootstrap/scss/functions';
 @import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
 
 // override max width of containers
 //$container-max-widths: map.merge($container-max-widths, (xl: 1400px));

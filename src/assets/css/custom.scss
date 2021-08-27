@@ -45,3 +45,6 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 .hover\:border:hover {
   border: 1px solid #dee2e6 !important;
 }
+
+// set font family globally
+body { font-family: "Open Sans", sans-serif !important; }

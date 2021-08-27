@@ -53,12 +53,21 @@
         </div>
       </slot>
     </header>
-    <div class="w-100 mt-3">
+    <div v-if="$slots['bar'] && $mq == 'desktop'" class="w-100">
+      <slot name="bar">
+        <div class="bg-gray">
+          <div class="container-xl px-0 py-2">
+            <div class="col text-center">This is the default gray bar</div>
+          </div>
+        </div>
+      </slot>
+    </div>
+    <div class="w-100">
       <div class="container-xl">
         <div class="row">
           <div v-if="$slots['navigation']" class="col-lg-2">
             <!-- main sidebar navigation -->
-            <nav role="navigation">
+            <nav role="navigation" :class="[$mq == 'desktop' ? 'mt-3' : '']">
               <div
                 id="nav-collapse"
                 :class="[$mq == 'desktop' ? 'collapse.show' : 'collapse']"
@@ -67,8 +76,19 @@
               </div>
             </nav>
           </div>
+          <div v-if="$slots['bar'] && $mq != 'desktop'" class="w-100 p-0 m-0">
+            <slot name="bar">
+              <div class="bg-gray">
+                <div class="container-xl px-0 py-2">
+                  <div class="col text-center">
+                    This is the default gray bar
+                  </div>
+                </div>
+              </div>
+            </slot>
+          </div>
           <div :class="$slots['navigation'] ? 'col-lg-10' : 'col-lg-12'">
-            <main>
+            <main class="mt-3">
               <slot name="main">
                 <div style="outline: dashed 1px lightgray">
                   <!-- main content -->
@@ -86,15 +106,17 @@
         </div>
       </div>
     </div>
-    <footer class="w-100 mt-auto bg-dark pt-3 pb-3 small">
-      <div class="container-xl px-3">
-        <slot name="footer">
-          <div class="text-white font-weight-light">
-            Copyright &copy; {{ new Date().getFullYear() }} University of
-            Washington
+    <footer class="w-100 mt-auto">
+      <slot name="footer">
+        <div class="bg-dark">
+          <div class="container-xl py-3 small">
+            <div class="text-white font-weight-light">
+              Copyright &copy; {{ new Date().getFullYear() }} University of
+              Washington
+            </div>
           </div>
-        </slot>
-      </div>
+        </div>
+      </slot>
     </footer>
   </div>
 </template>
@@ -104,48 +126,48 @@ import {
   FontAwesomeIcon,
   FontAwesomeLayers,
   FontAwesomeLayersText,
-} from '@fortawesome/vue-fontawesome';
-import { faSquare } from '@fortawesome/free-regular-svg-icons';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+} from "@fortawesome/vue-fontawesome";
+import { faSquare } from "@fortawesome/free-regular-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default {
   props: {
     appName: {
       type: String,
-      default: "appName"
+      default: "appName",
     },
     pageTitle: {
       type: String,
-      default: "pageTitle"
+      default: "pageTitle",
     },
     userName: {
       type: String,
-      default: "userName"
+      default: "userName",
     },
     appRootUrl: {
       type: String,
-      default: "#"
+      default: "#",
     },
     signOutUrl: {
       type: String,
-      default: "#"
-    }
+      default: "#",
+    },
   },
   components: {
-    'font-awesome-icon': FontAwesomeIcon,
-    'font-awesome-layers': FontAwesomeLayers,
-    'font-awesome-layers-text': FontAwesomeLayersText,
+    "font-awesome-icon": FontAwesomeIcon,
+    "font-awesome-layers": FontAwesomeLayers,
+    "font-awesome-layers-text": FontAwesomeLayersText,
   },
   data() {
     return {
       faSquare,
-      faBars
+      faBars,
     };
   },
-  created: function() {
+  created: function () {
     // constructs page title in the following format "Page Title - AppName"
     document.title = this.pageTitle + " - " + this.appName;
-  }
+  },
 };
 </script>
 

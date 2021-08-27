@@ -3,9 +3,9 @@
 
 // enable responsive font sizing
 // $enable-responsive-font-sizes: true;
-
 // override the boostrap gutter from 30px to 20px
 $grid-gutter-width: 20px !default;
+$enable-negative-margins: true;
 
 // override theme colors
 $custom-colors: (
@@ -20,6 +20,7 @@ $custom-colors: (
   'dark-beige': #85754d, // headers
   'gold': #ffbc24, //uw gold
   'teal': #4c7286, // uw teal
+  'gray': #e9ecef,
 ) !default;
 
 // override all links

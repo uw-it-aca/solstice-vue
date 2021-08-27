@@ -7,31 +7,28 @@
     :user-name="userName"
     :sign-out-url="signOutUrl"
   >
+
     <template #header></template>
+    <template #bar></template>
     <template #navigation>
       <!-- navigation menu override -->
       <ul class="nav flex-column">
         <li v-for="item in navItems" :key="item.title" class="nav-item mb-2">
-          <a class="nav-link d-block px-2 py-1" :href="item.href">{{ item.title }}</a>
+          <a class="nav-link d-block px-2 py-1" :href="item.href">{{
+            item.title
+          }}</a>
         </li>
       </ul>
     </template>
     <template #main>
       <!-- main section override -->
       <h1>
-        <slot name="title">
-          {{ pageTitle }}
-        </slot>
+        <slot name="title">{{ pageTitle }}</slot>
       </h1>
       <slot name="content"></slot>
     </template>
-    <template #footer>
-      <!-- footer section overrixe -->
-      <div class="text-white font-weight-light">
-        this is my custom footer<br />
-        Copyright &copy; {{ new Date().getFullYear() }} University of Washington
-      </div>
-    </template>
+    <template #footer></template>
+
   </topbar>
 </template>
 
@@ -41,13 +38,13 @@ import Topbar from "../../_layouts/topbar.vue";
 export default {
   name: "MyApp",
   components: {
-    topbar: Topbar
+    topbar: Topbar,
   },
   props: {
     pageTitle: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
@@ -64,23 +61,23 @@ export default {
       navItems: [
         {
           title: "Home",
-          href: "#"
+          href: "#",
         },
         {
           title: "First",
-          href: "#"
+          href: "#",
         },
         {
           title: "Second",
-          href: "#"
+          href: "#",
         },
         {
           title: "Third",
-          href: "#"
-        }
-      ]
+          href: "#",
+        },
+      ],
     };
-  }
+  },
 };
 </script>
 

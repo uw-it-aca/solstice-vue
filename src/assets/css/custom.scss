@@ -1,18 +1,34 @@
 // IMPORTANT: The import order is intentional and might break if changed
 // SEE: https://sass-lang.com/documentation/variables#default-values
 
+@use "sass:map";
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+
 // enable responsive font sizing
 // $enable-responsive-font-sizes: true;
 // override the boostrap gutter from 30px to 20px
 $grid-gutter-width: 20px !default;
 $enable-negative-margins: true;
 
+// override bootstrap default colors
+$danger: #a94442;
+$warning: #f5d300;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light, 
+  "dark":       $dark
+);
+
 // override theme colors
 $custom-colors: (
-  // override bootstrap colors
-  'danger': #a94442,
-  'warning': #f5d300,
-
   // myuw custom colors
   'purple': #4d307f, // uw purple
   'dark-purple': #452a78, // thin bar
@@ -26,15 +42,14 @@ $custom-colors: (
 // override all links
 $link-color: #4d66ca !default; //a11y blue
 
-@use "sass:map";
-@import 'node_modules/bootstrap/scss/functions';
-@import 'node_modules/bootstrap/scss/variables';
-@import 'node_modules/bootstrap/scss/mixins';
-
 // override max width of containers
 //$container-max-widths: map.merge($container-max-widths, (xl: 1400px));
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
+$utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
+$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 // background colors
 .hover\:bg-danger:hover {

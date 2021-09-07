@@ -5,6 +5,7 @@
 @import 'node_modules/bootstrap/scss/functions';
 @import 'node_modules/bootstrap/scss/variables';
 @import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/root';
 
 // enable responsive font sizing
 // $enable-responsive-font-sizes: true;
@@ -37,7 +38,7 @@ $custom-colors: (
   'gold': #ffbc24, //uw gold
   'teal': #4c7286, // uw teal
   'gray': #e9ecef,
-) !default;
+);
 
 // override all links
 $link-color: #4d66ca !default; //a11y blue

@@ -106,7 +106,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 // storybook only
 .sb-show-main {
   .axdd-topbar {

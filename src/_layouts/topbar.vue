@@ -1,107 +1,177 @@
 <template>
-  <div class="bg-light d-flex align-items-end flex-column axdd-topbar" style="min-height: 100vh">
+  <div
+    class="d-flex align-items-end flex-column axdd-topbar"
+    style="min-height: 100vh"
+  >
     <header class="w-100">
       <slot name="header">
         <div class="bg-dark-purple text-white py-2 small">
-          <b-container fluid="xl">
+          <div class="container-xl">
             <div class="d-flex">
               <div class="flex-fill">{{ userName }}</div>
-              <div class="flex-fill text-right">
+              <div class="flex-fill text-end">
                 <a :href="signOutUrl" class="text-white">Sign out</a>
               </div>
             </div>
-          </b-container>
+          </div>
         </div>
         <div class="bg-purple axdd-topbar-brand">
-          <b-container fluid="xl" class="axdd-topbar-logo">
-            <b-button
+          <div class="container-xl axdd-topbar-logo">
+            <a
               v-if="$slots['navigation']"
-              v-b-toggle.nav-collapse
-              variant="link"
-              size="sm"
-              class="d-lg-none p-0 border-0 text-white"
+              class="btn btn-link btn-sm d-lg-none p-0 border-0 text-white"
+              data-bs-toggle="collapse"
+              data-bs-target="#nav-collapse"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
               aria-label="Toggle Navigation Menu"
             >
               <font-awesome-layers class="fa-2x">
-                <font-awesome-icon :icon="['far', 'square']" transform="right-1" class="m-0" />
                 <font-awesome-icon
-                  :icon="['fas', 'bars']"
+                  :icon="faSquare"
+                  transform="right-1"
+                  class="m-0"
+                />
+                <font-awesome-icon
+                  :icon="faBars"
                   transform="shrink-8 right-1 "
                   class="m-0"
                 />
               </font-awesome-layers>
-            </b-button>
-            <div class="d-inline align-middle text-white" :class="[$mq == 'desktop' ? 'h3' : 'h5']">
-              <a href="#" class="text-white text-decoration-none">{{ appName }}</a>
+            </a>
+
+            <div
+              class="d-inline align-middle text-white"
+              :class="[$mq == 'desktop' ? 'h3' : 'h5']"
+            >
+              <a :href="appRootUrl" class="text-white text-decoration-none">{{
+                appName
+              }}</a>
             </div>
-          </b-container>
+          </div>
         </div>
       </slot>
     </header>
-    <div class="w-100 mt-3">
-      <b-container fluid="xl">
-        <b-row>
-          <b-col v-if="$slots['navigation']" lg="2" class="">
+    <div v-if="$slots['bar'] && $mq == 'desktop'" class="w-100">
+      <slot name="bar">
+        <div class="bg-gray">
+          <div class="container-xl px-0 py-2">
+            <div class="col text-center">This is the default gray bar</div>
+          </div>
+        </div>
+      </slot>
+    </div>
+    <div class="w-100">
+      <div class="container-xl">
+        <div class="row">
+          <div v-if="$slots['navigation']" class="col-lg-2">
             <!-- main sidebar navigation -->
-            <nav role="navigation">
-              <b-collapse id="nav-collapse" class="" :visible="$mq == 'desktop'">
+            <nav role="navigation" :class="[$mq == 'desktop' ? 'mt-3' : '']">
+              <div
+                id="nav-collapse"
+                :class="[$mq == 'desktop' ? 'collapse.show' : 'collapse']"
+              >
                 <slot name="navigation"></slot>
-              </b-collapse>
+              </div>
             </nav>
-          </b-col>
-          <b-col :lg="$slots['navigation'] ? 10 : 12">
-            <main>
+          </div>
+          <div v-if="$slots['bar'] && $mq != 'desktop'" class="w-100 p-0 m-0">
+            <slot name="bar">
+              <div class="bg-gray">
+                <div class="container-xl px-0 py-2">
+                  <div class="col text-center">
+                    This is the default gray bar
+                  </div>
+                </div>
+              </div>
+            </slot>
+          </div>
+          <div :class="$slots['navigation'] ? 'col-lg-10' : 'col-lg-12'">
+            <main class="mt-3">
               <slot name="main">
                 <div style="outline: dashed 1px lightgray">
                   <!-- main content -->
                   <h1>Hello world...</h1>
                   <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis
-                    repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto
-                    reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Nam, soluta omnis repudiandae aliquam nesciunt nisi nulla,
+                    ducimus eligendi natus voluptatum iusto reiciendis deserunt
+                    tempora praesentium laboriosam ullam facilis velit culpa.
                   </p>
                 </div>
               </slot>
             </main>
-          </b-col>
-        </b-row>
-      </b-container>
-    </div>
-    <footer class="w-100 mt-auto bg-dark pt-3 pb-3 small">
-      <b-container fluid="xl" class="px-3">
-        <slot name="footer">
-          <div class="text-white font-weight-light">
-            Copyright &copy; {{ new Date().getFullYear() }} University of Washington
           </div>
-        </slot>
-      </b-container>
+        </div>
+      </div>
+    </div>
+    <footer class="w-100 mt-auto">
+      <slot name="footer">
+        <div class="bg-dark">
+          <div class="container-xl py-3 small">
+            <div class="text-white font-weight-light">
+              Copyright &copy; {{ new Date().getFullYear() }} University of
+              Washington
+            </div>
+          </div>
+        </div>
+      </slot>
     </footer>
   </div>
 </template>
 
 <script>
+import {
+  FontAwesomeIcon,
+  FontAwesomeLayers,
+  FontAwesomeLayersText,
+} from "@fortawesome/vue-fontawesome";
+import { faSquare } from "@fortawesome/free-regular-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+
 export default {
   props: {
     appName: {
       type: String,
-      default: 'appName',
+      default: "appName",
     },
     pageTitle: {
       type: String,
-      default: 'pageTitle',
+      default: "pageTitle",
     },
     userName: {
       type: String,
-      default: 'userName',
+      default: "userName",
+    },
+    appRootUrl: {
+      type: String,
+      default: "#",
     },
     signOutUrl: {
       type: String,
-      default: '#',
+      default: "#",
     },
+  },
+  components: {
+    "font-awesome-icon": FontAwesomeIcon,
+    "font-awesome-layers": FontAwesomeLayers,
+    "font-awesome-layers-text": FontAwesomeLayersText,
+  },
+  data() {
+    return {
+      faSquare,
+      faBars,
+    };
   },
   created: function () {
     // constructs page title in the following format "Page Title - AppName"
-    document.title = this.pageTitle + ' - ' + this.appName;
+    document.title = this.pageTitle + " - " + this.appName;
+  },
+  watch: {
+    pageTitle: function (newPageTitle, oldPageTitle) {
+      document.title = newPageTitle + ' - ' + this.appName;
+    }
   },
 };
 </script>
@@ -124,7 +194,7 @@ export default {
 }
 
 .axdd-topbar-logo {
-  background-image: url('../assets/images/w-logo-white.png');
+  background-image: url("../assets/images/w-logo-white.png");
   background-repeat: no-repeat;
   background-size: 45px;
   background-position: right 20px bottom;

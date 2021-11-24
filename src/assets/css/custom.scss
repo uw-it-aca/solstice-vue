@@ -1,6 +1,67 @@
-// myuw theme variables
-@import "variables.scss";
+// IMPORTANT: The import order is intentional and might break if changed
+// SEE: https://sass-lang.com/documentation/variables#default-values
 
-// bootstrap + bootstrap-vue
-@import '~bootstrap';
-@import '~bootstrap-vue';
+@use "sass:map";
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/root';
+
+// enable responsive font sizing
+// $enable-responsive-font-sizes: true;
+// override the boostrap gutter from 30px to 20px
+$grid-gutter-width: 20px !default;
+$enable-negative-margins: true;
+
+// override bootstrap default colors
+$danger: #a94442;
+$warning: #f5d300;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light, 
+  "dark":       $dark,
+  "white":      $white
+);
+
+// override theme colors
+$custom-colors: (
+  // myuw custom colors
+  'purple': #4d307f, // uw purple
+  'dark-purple': #452a78, // thin bar
+  'beige': #e8e3d3, // tan
+  'dark-beige': #85754d, // headers
+  'gold': #ffbc24, //uw gold
+  'teal': #4c7286, // uw teal
+  'gray': #e9ecef,
+) !default;
+
+// override all links
+$link-color: #4d66ca !default; //a11y blue
+
+// override max width of containers
+//$container-max-widths: map.merge($container-max-widths, (xl: 1400px));
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
+$utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
+$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
+
+// background colors
+.hover\:bg-danger:hover {
+  background-color: $danger !important;
+}
+
+// border
+.hover\:border:hover {
+  border: 1px solid #dee2e6 !important;
+}
+
+// set font family globally
+body { font-family: "Open Sans", sans-serif !important; }

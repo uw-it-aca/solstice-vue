@@ -1,8 +1,8 @@
 <template>
   <div>
-    <b-button variant="success">
+    <button type="button" class="btn btn-success">
       <slot></slot>
-    </b-button>
+    </button>
 
     <button class="d-block btn btn-primary button is-primary" @click="onClick">
       <!-- @slot default inner button content -->
@@ -12,10 +12,8 @@
 </template>
 
 <script>
-import { BButton } from 'bootstrap-vue';
 
 export default {
-  components: { BButton },
   methods: {
     onClick() {
       /**

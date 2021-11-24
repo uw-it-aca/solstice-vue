@@ -1,6 +1,6 @@
 <template>
   <div class="d-md-flex mb-3 myuw-text-md">
-    <div class="flex-md-fill mr-3 bd-highlight font-weight-bold property-label">
+    <div class="flex-md-fill me-3 bd-highlight font-weight-bold property-label">
       {{ title }}
     </div>
     <div class="flex-md-fill">

@@ -167,12 +167,7 @@ export default {
   created: function () {
     // constructs page title in the following format "Page Title - AppName"
     document.title = this.pageTitle + " - " + this.appName;
-  },
-  watch: {
-    pageTitle: function (newPageTitle, oldPageTitle) {
-      document.title = newPageTitle + ' - ' + this.appName;
-    }
-  },
+  }
 };
 </script>
 

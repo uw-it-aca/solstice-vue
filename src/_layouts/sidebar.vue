@@ -58,16 +58,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// storybook only
-.sb-show-main {
-  .axdd-sidebar {
-    padding: 0 !important;
-    border: dashed 1px lightgrey;
-  }
-  main {
-    height: 500px;
-  }
-}
 // sidebar global
 .axdd-sidebar {
   min-width: 280px;

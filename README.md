@@ -24,10 +24,3 @@ $ npm run dev
 ```bash
 $ npm run build
 ```
-
-## Using Storybook
-
-### Run Storybook server
-```bash
-npm run storybook:serve
-```

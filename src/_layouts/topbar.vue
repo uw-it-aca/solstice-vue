@@ -19,7 +19,7 @@
           <div class="container-xl axdd-topbar-logo">
             <a
               v-if="$slots['navigation']"
-              class="btn btn-link btn-sm d-lg-none p-0 border-0 text-white"
+              class="btn btn-link btn-sm d-lg-none border border-2 py-0 px-1 text-white me-2"
               data-bs-toggle="collapse"
               data-bs-target="#nav-collapse"
               role="button"
@@ -27,20 +27,8 @@
               aria-controls="collapseExample"
               aria-label="Toggle Navigation Menu"
             >
-              <font-awesome-layers class="fa-2x">
-                <font-awesome-icon
-                  :icon="faSquare"
-                  transform="right-1"
-                  class="m-0"
-                />
-                <font-awesome-icon
-                  :icon="faBars"
-                  transform="shrink-8 right-1 "
-                  class="m-0"
-                />
-              </font-awesome-layers>
+             <i class="bi bi-list fw-bold text-white fs-6"></i>
             </a>
-
             <div
               class="d-inline align-middle text-white"
               :class="[$mq == 'desktop' ? 'h3' : 'h5']"
@@ -122,14 +110,6 @@
 </template>
 
 <script>
-import {
-  FontAwesomeIcon,
-  FontAwesomeLayers,
-  FontAwesomeLayersText,
-} from "@fortawesome/vue-fontawesome";
-import { faSquare } from "@fortawesome/free-regular-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-
 export default {
   props: {
     appName: {
@@ -153,16 +133,9 @@ export default {
       default: "#",
     },
   },
-  components: {
-    "font-awesome-icon": FontAwesomeIcon,
-    "font-awesome-layers": FontAwesomeLayers,
-    "font-awesome-layers-text": FontAwesomeLayersText,
-  },
+  components: {},
   data() {
-    return {
-      faSquare,
-      faBars,
-    };
+    return {};
   },
   created: function () {
     // constructs page title in the following format "Page Title - AppName"
@@ -172,15 +145,6 @@ export default {
 </script>
 
 <style lang="scss">
-// storybook only
-.sb-show-main {
-  .axdd-topbar {
-    padding: 0 !important;
-    border: dashed 1px lightgrey;
-    min-height: 500px !important;
-  }
-}
-
 .axdd-topbar {
   min-width: 320px;
 }

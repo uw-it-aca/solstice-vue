@@ -1,7 +1,7 @@
 <template>
   <div
     class="d-flex align-items-end flex-column axdd-topbar"
-    style="min-height: 100vh"
+    style="min-height: 300px"
   >
     <header class="w-100">
       <slot name="header">

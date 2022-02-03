@@ -1,26 +1,38 @@
 # axdd-components
 AXDD VueJS Component Library
 
-* Vue 2
+* Vue 3
 * Vite 2
 * Bootstrap 5
 
+## Recommended IDE Setup
 
-## Getting Started
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
 
-> Note to Vue users: Vite currently only works with Vue 3.x. This project uses vite-plugin-vue2 as a work around.
+## Customize configuration
 
-```bash
-$ git clone git@github.com:uw-it-aca/axdd-components.git
-$ cd axdd-components
-$ npm install
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+## Project Setup
+
+```sh
+npm install
 ```
-### Compiles and hot-reloads for development
-```bash
-$ npm run dev
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
 ```
 
-### Compiles and minifies for production
-```bash
-$ npm run build
+### Compile and Minify for Production
+
+```sh
+npm run build
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+npm run lint
 ```

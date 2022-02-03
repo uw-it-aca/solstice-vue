@@ -20,44 +20,20 @@
 
       <div class="row">
         <div class="col-md-6">
-          <h2>Design</h2>
+          <h2>Development</h2>
           <ul>
-            <li>
-              <a
-                href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"
-                target="_blank"
-                rel="noopener"
-                >bootstrap 5</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://icons.getbootstrap.com/"
-                target="_blank"
-                rel="noopener"
-                >bootstrap icons</a
-              >
-            </li>
+            <li>Vue 3 (Options API)</li>
+            <li>Vuex (state management)</li>
           </ul>
         </div>
         <div class="col-md-6">
-          <h2>Examples</h2>
+          <h2>Sandbox</h2>
           <ul>
             <li>
               <router-link to="/myapp">MyApp</router-link>
             </li>
             <li><router-link to="/support">Support Tools</router-link></li>
           </ul>
-        </div>
-
-        <div class="row">
-          <div class="col">
-            <h2>Styleguides</h2>
-            <ul>
-              <li>Global Components</li>
-              <li>MyUW Components</li>
-            </ul>
-          </div>
         </div>
       </div>
 

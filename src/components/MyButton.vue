@@ -12,7 +12,6 @@
 </template>
 
 <script>
-
 export default {
   methods: {
     onClick() {
@@ -21,7 +20,7 @@ export default {
        *
        * @event click
        */
-      this.$emit('click');
+      this.$emit("click");
     },
   },
 };

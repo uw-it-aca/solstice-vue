@@ -1,15 +1,15 @@
-import { createApp } from 'vue'
+import { createApp } from "vue";
 import App from "./app.vue";
 import router from "./router";
 import store from "./store";
 
-import VueMq from 'vue3-mq';
+import VueMq from "vue3-mq";
 
 // bootstrap js
-import 'bootstrap';
+import "bootstrap";
 
 // custom bootstrap theme
-import '../src/assets/css/custom_bootstrap.scss';
+import "../src/assets/css/custom_bootstrap.scss";
 
 const app = createApp(App);
 

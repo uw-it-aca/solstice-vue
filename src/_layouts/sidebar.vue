@@ -1,7 +1,9 @@
 <template>
   <div class="axdd-sidebar">
     <div class="d-sm-flex align-self-stretch">
-      <div class="py-4 px-3 bg-light d-sm-flex flex-sm-column axdd-sidebar-container">
+      <div
+        class="py-4 px-3 bg-light d-sm-flex flex-sm-column axdd-sidebar-container"
+      >
         <header class="sidebar-header">
           <slot name="header">
             <div class="h1 mb-3 text-uppercase text-muted">{{ appName }}</div>
@@ -18,9 +20,12 @@
             </ul>
           </slot>
         </nav>
-        <footer class="mt-auto border-top pt-2 text-muted small axdd-sidebar-footer">
+        <footer
+          class="mt-auto border-top pt-2 text-muted small axdd-sidebar-footer"
+        >
           <slot name="footer">
-            Copyright &copy; {{ new Date().getFullYear() }} University of Washington
+            Copyright &copy; {{ new Date().getFullYear() }} University of
+            Washington
           </slot>
         </footer>
       </div>
@@ -28,9 +33,10 @@
         <slot name="content">
           <h1 class="text-uppercase text-muted">{{ pageTitle }}</h1>
           <p class="text-muted">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas rerum dolor
-            laudantium cum consectetur nihil, cumque ipsam accusantium asperiores ut delectus quae,
-            dolores saepe sunt doloribus iusto dolore, doloremque aperiam.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas
+            rerum dolor laudantium cum consectetur nihil, cumque ipsam
+            accusantium asperiores ut delectus quae, dolores saepe sunt
+            doloribus iusto dolore, doloremque aperiam.
           </p>
         </slot>
       </main>
@@ -43,16 +49,16 @@ export default {
   props: {
     appName: {
       type: String,
-      default: "App"
+      default: "App",
     },
     pageTitle: {
       type: String,
-      default: "Page Title"
+      default: "Page Title",
     },
   },
   created: function () {
     // constructs page title in the following format "Page Title - AppName"
-    document.title = this.pageTitle + ' - ' + this.appName;
+    document.title = this.pageTitle + " - " + this.appName;
   },
 };
 </script>

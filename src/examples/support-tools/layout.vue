@@ -1,8 +1,5 @@
 <template>
-  <uw-sidebar
-    :app-name="appName"
-    :page-title="pageTitle"
-  >
+  <uw-sidebar :app-name="appName" :page-title="pageTitle">
     <template #header>
       <div class="p-0 mb-3 h1 text-center text-uppercase sidebar-heading">
         <span class="text-purple font-weight-bold">{{ appName }}</span>
@@ -19,7 +16,11 @@
       </div>
     </template>
     <template #navigation>
-      <div class="mb-1 text-secondary text-uppercase font-weight-bold sidebar-heading">Heading</div>
+      <div
+        class="mb-1 text-secondary text-uppercase font-weight-bold sidebar-heading"
+      >
+        Heading
+      </div>
       <ul class="list-unstyled">
         <li>
           <a href="/support">Home</a>
@@ -34,7 +35,11 @@
           <a href="#">Page Link</a>
         </li>
       </ul>
-      <div class="mb-1 text-secondary text-uppercase font-weight-bold sidebar-heading">Heading</div>
+      <div
+        class="mb-1 text-secondary text-uppercase font-weight-bold sidebar-heading"
+      >
+        Heading
+      </div>
       <ul class="list-unstyled">
         <li>
           <a href="#">Page Link</a>
@@ -49,7 +54,11 @@
           <a href="#">Page Link</a>
         </li>
       </ul>
-      <div class="mb-1 text-secondary text-uppercase font-weight-bold sidebar-heading">Heading</div>
+      <div
+        class="mb-1 text-secondary text-uppercase font-weight-bold sidebar-heading"
+      >
+        Heading
+      </div>
       <ul class="list-unstyled">
         <li>
           <a href="#">Page Link</a>
@@ -64,7 +73,11 @@
           <a href="#">Page Link</a>
         </li>
       </ul>
-      <div class="mb-1 text-secondary text-uppercase font-weight-bold sidebar-heading">Heading</div>
+      <div
+        class="mb-1 text-secondary text-uppercase font-weight-bold sidebar-heading"
+      >
+        Heading
+      </div>
       <ul class="list-unstyled">
         <li>
           <a href="#">Page Link</a>
@@ -79,7 +92,11 @@
           <a href="#">Page Link</a>
         </li>
       </ul>
-      <div class="mb-1 text-secondary text-uppercase font-weight-bold sidebar-heading">Heading</div>
+      <div
+        class="mb-1 text-secondary text-uppercase font-weight-bold sidebar-heading"
+      >
+        Heading
+      </div>
       <ul class="list-unstyled">
         <li>
           <a href="#">Page Link</a>
@@ -106,17 +123,17 @@
 </template>
 
 <script>
-import SideBar from '../../_layouts/sidebar.vue';
+import SideBar from "../../_layouts/sidebar.vue";
 
 export default {
-  name: 'Support',
+  name: "Support",
   components: {
-    'uw-sidebar': SideBar,
+    "uw-sidebar": SideBar,
   },
   props: {
     pageTitle: {
       type: String,
-      required: true
+      required: true,
     },
   },
   data: function () {
@@ -129,10 +146,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap");
 
 .sidebar-heading {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
 }
-
 </style>

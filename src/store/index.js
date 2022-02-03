@@ -1,9 +1,9 @@
-import { createStore } from 'vuex'
+import { createStore } from "vuex";
 
 const store = createStore({
   state: {
-     name: "Vue"
-  }
-})
+    name: "Vue",
+  },
+});
 
-export default store
+export default store;

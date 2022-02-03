@@ -27,7 +27,7 @@
               aria-controls="collapseExample"
               aria-label="Toggle Navigation Menu"
             >
-             <i class="bi bi-list fw-bold text-white fs-6"></i>
+              <i class="bi bi-list fw-bold text-white fs-6"></i>
             </a>
             <div
               class="d-inline align-middle text-white"
@@ -140,7 +140,7 @@ export default {
   created: function () {
     // constructs page title in the following format "Page Title - AppName"
     document.title = this.pageTitle + " - " + this.appName;
-  }
+  },
 };
 </script>
 

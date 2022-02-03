@@ -28,19 +28,18 @@
 </template>
 
 <script>
-import Layout from './layout.vue';
+import Layout from "./layout.vue";
 
 export default {
   components: {
-    'layout': Layout,
+    layout: Layout,
   },
   data() {
     return {
-      pageTitle: 'My Home title',
+      pageTitle: "My Home title",
     };
   },
 };
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

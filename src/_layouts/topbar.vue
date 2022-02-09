@@ -1,6 +1,6 @@
 <template>
   <div
-    class="d-flex align-items-end flex-column axdd-topbar"
+    class="d-flex fle align-items-end flex-column axdd-topbar vh-100"
     style="min-height: 300px"
   >
     <header class="w-100">
@@ -50,12 +50,12 @@
         </div>
       </slot>
     </div>
-    <div class="w-100">
+    <div class="w-100 flex-grow-1">
       <div class="container-xl">
         <div class="row">
           <div v-if="$slots['navigation']" class="col-lg-2">
             <!-- main sidebar navigation -->
-            <nav role="navigation" :class="[$mq == 'desktop' ? 'mt-3' : '']">
+            <nav role="navigation">
               <div
                 id="nav-collapse"
                 :class="[$mq == 'desktop' ? 'collapse.show' : 'collapse']"
@@ -76,7 +76,7 @@
             </slot>
           </div>
           <div :class="$slots['navigation'] ? 'col-lg-10' : 'col-lg-12'">
-            <main class="mt-3">
+            <main>
               <slot name="main">
                 <div style="outline: dashed 1px lightgray">
                   <!-- main content -->

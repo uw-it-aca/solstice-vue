@@ -1,6 +1,6 @@
 <template>
   <div
-    class="d-flex fle align-items-end flex-column axdd-topbar vh-100"
+    class="d-flex fle align-items-end flex-column axdd-topbar"
     style="min-height: 300px"
   >
     <header class="w-100">
@@ -50,7 +50,7 @@
         </div>
       </slot>
     </div>
-    <div class="w-100 flex-grow-1">
+    <div class="w-100">
       <div class="container-xl">
         <div class="row">
           <div v-if="$slots['navigation']" class="col-lg-2">

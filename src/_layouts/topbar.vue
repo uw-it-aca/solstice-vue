@@ -139,7 +139,7 @@ export default {
   },
   created: function () {
     // constructs page title in the following format "Page Title - AppName"
-    document.title = this.pageTitle + " - " + this.appName;
+    //document.title = this.pageTitle + " - " + this.appName;
   },
 };
 </script>

@@ -45,7 +45,7 @@
       <slot name="bar">
         <div class="bg-gray">
           <div class="container-xl px-0 py-2">
-            <div class="col text-center">This is the default gray bar</div>
+            <div class="col text-center">default gray bar (desktop)</div>
           </div>
         </div>
       </slot>
@@ -69,7 +69,7 @@
               <div class="bg-gray">
                 <div class="container-xl px-0 py-2">
                   <div class="col text-center">
-                    This is the default gray bar
+                    default gray bar (mobile)
                   </div>
                 </div>
               </div>

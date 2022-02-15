@@ -1,35 +1,28 @@
 <template>
-  <div class="axdd-sidebar">
-    <div class="d-sm-flex align-self-stretch">
-      <div
-        class="py-4 px-3 bg-light d-sm-flex flex-sm-column axdd-sidebar-container"
-      >
-        <header class="sidebar-header">
-          <slot name="header">
-            <div class="h1 mb-3 text-uppercase text-muted">{{ appName }}</div>
-          </slot>
-        </header>
-        <nav class="axdd-sidebar-navigation" role="navigation">
-          <slot name="navigation">
-            <div class="text-uppercase">Nav Heading</div>
-            <ul class="list-unstyled">
-              <li><a href="#">link</a></li>
-              <li><a href="#">link</a></li>
-              <li><a href="#">link</a></li>
-              <li><a href="#">link</a></li>
-            </ul>
-          </slot>
-        </nav>
-        <footer
-          class="mt-auto border-top pt-2 text-muted small axdd-sidebar-footer"
-        >
-          <slot name="footer">
-            Copyright &copy; {{ new Date().getFullYear() }} University of
-            Washington
-          </slot>
-        </footer>
-      </div>
-      <main class="p-4 axdd-sidebar-main">
+  <div class="d-sm-flex align-self-stretch">
+    <div
+      class="bg-purple d-sm-flex flex-sm-column overflow-auto"
+      style="width: 200px; min-height: 100vh"
+    >
+      <header class="bg-dark-purple">
+        <slot name="header">
+          <div class="h1 mb-3 text-uppercase text-white">{{ appName }}</div>
+        </slot>
+      </header>
+      <nav class="" role="navigation">
+        <slot name="navigation">
+          <div class="text-uppercase">Nav Heading</div>
+          <ul class="list-unstyled">
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+          </ul>
+        </slot>
+      </nav>
+    </div>
+    <div>
+      <main class="p-4">
         <slot name="content">
           <h1 class="text-uppercase text-muted">{{ pageTitle }}</h1>
           <p class="text-muted">
@@ -40,6 +33,12 @@
           </p>
         </slot>
       </main>
+      <footer class="mt-auto border-top my-2 mx-4 py-3 text-muted small">
+        <slot name="footer">
+          Copyright &copy; {{ new Date().getFullYear() }} University of
+          Washington
+        </slot>
+      </footer>
     </div>
   </div>
 </template>
@@ -65,22 +64,4 @@ export default {
 
 <style lang="scss" scoped>
 // sidebar global
-.axdd-sidebar {
-  min-width: 280px;
-}
-
-.axdd-sidebar-footer {
-  min-height: 20px;
-}
-// main responsive tablet and desktop
-@media (min-width: 576px) {
-  .axdd-sidebar-container {
-    min-width: 260px;
-    max-width: 260px;
-  }
-  .axdd-sidebar-main {
-    height: 100vh;
-    overflow: scroll;
-  }
-}
 </style>

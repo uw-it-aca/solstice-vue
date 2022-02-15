@@ -10,7 +10,7 @@
 // enable responsive font sizing
 // $enable-responsive-font-sizes: true;
 // override the boostrap gutter from 30px to 20px
-$grid-gutter-width: 20px !default;
+//$grid-gutter-width: 20px !default;
 $enable-negative-margins: true;
 
 // override bootstrap default colors
@@ -24,7 +24,7 @@ $theme-colors: (
   "info":       $info,
   "warning":    $warning,
   "danger":     $danger,
-  "light":      $light, 
+  "light":      $light,
   "dark":       $dark,
   "white":      $white
 );

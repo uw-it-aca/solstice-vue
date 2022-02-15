@@ -44,8 +44,10 @@
     <div v-if="$slots['bar'] && $mq == 'desktop'" class="w-100">
       <slot name="bar">
         <div class="bg-gray">
-          <div class="container-xl px-0 py-2">
-            <div class="col text-center">default gray bar (desktop)</div>
+          <div class="container-xl">
+            <div class="col-12 py-2 text-center">
+              default gray bar (desktop)
+            </div>
           </div>
         </div>
       </slot>
@@ -67,8 +69,8 @@
           <div v-if="$slots['bar'] && $mq != 'desktop'" class="w-100 p-0 m-0">
             <slot name="bar">
               <div class="bg-gray">
-                <div class="container-xl px-0 py-2">
-                  <div class="col text-center">
+                <div class="container-xl">
+                  <div class="col-12 py-2 text-center">
                     default gray bar (mobile)
                   </div>
                 </div>
@@ -97,8 +99,8 @@
     <footer class="w-100 mt-auto">
       <slot name="footer">
         <div class="bg-dark">
-          <div class="container-xl py-3 small">
-            <div class="text-white font-weight-light">
+          <div class="container-xl">
+            <div class="text-white font-weight-light py-3 small">
               Copyright &copy; {{ new Date().getFullYear() }} University of
               Washington
             </div>

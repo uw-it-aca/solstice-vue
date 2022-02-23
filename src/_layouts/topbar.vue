@@ -96,7 +96,7 @@
         </div>
       </div>
     </div>
-    <footer class="w-100 mt-auto">
+    <footer v-if="$slots['footer']" class="w-100 mt-auto">
       <slot name="footer">
         <div class="bg-dark">
           <div class="container-xl">

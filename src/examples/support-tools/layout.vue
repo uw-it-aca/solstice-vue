@@ -56,6 +56,7 @@
         </div>
       </div>
     </template>
+    <template #footer></template>
   </uw-sidebar>
 </template>
 

@@ -62,14 +62,11 @@
 
     <div :class="[$mq != 'mobile' ? 'flex-fill overflow-auto' : '']">
       <div class="container-xl">
-
-        <div v-if="$slots['bar']">
+        <div v-if="$slots['bar']" class="row">
           <slot name="bar">
-            <div class="row">
-              <div class="col">
-                <div class="mt-3 bg-teal rounded text-white px-3 py-2 small">
-                  hello world banner message default
-                </div>
+            <div class="col my-3">
+              <div class="bg-gray py-2 text-center">
+                default gray bar (default)
               </div>
             </div>
           </slot>
@@ -79,7 +76,7 @@
           <slot name="main"></slot>
         </main>
 
-        <footer class="mt-auto">
+        <footer v-if="$slots['footer']" class="mt-auto">
           <slot name="footer">
             <div class="font-weight-light py-3 small">
               Copyright &copy; {{ new Date().getFullYear() }} University of

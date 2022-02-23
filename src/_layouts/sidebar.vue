@@ -20,10 +20,10 @@
               v-if="$slots['navigation']"
               class="btn btn-link btn-sm d-md-none border border-2 py-0 px-1 text-white me-2"
               data-bs-toggle="collapse"
-              data-bs-target="#nav-collapse"
+              data-bs-target="#sidebar-nav-collapse"
               role="button"
               aria-expanded="false"
-              aria-controls="collapseExample"
+              aria-controls="sidebar-nav-collapse"
               aria-label="Toggle Navigation Menu"
             >
               <i class="bi bi-list fw-bold text-white fs-6"></i>
@@ -43,7 +43,7 @@
         <!-- main sidebar navigation -->
         <nav role="navigation">
           <div
-            id="nav-collapse"
+            id="sidebar-nav-collapse"
             class="px-3"
             :class="[$mq != 'mobile' ? 'collapse.show' : 'collapse']"
           >

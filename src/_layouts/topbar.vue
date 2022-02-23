@@ -55,7 +55,7 @@
     <div class="w-100">
       <div class="container-xl">
         <div class="row">
-          <div v-if="$slots['navigation']" class="col-lg-2">
+          <div v-if="$slots['navigation']" class="col-lg-3">
             <!-- main sidebar navigation -->
             <nav role="navigation">
               <div
@@ -77,7 +77,7 @@
               </div>
             </slot>
           </div>
-          <div :class="$slots['navigation'] ? 'col-lg-10' : 'col-lg-12'">
+          <div :class="$slots['navigation'] ? 'col-lg-9' : 'col-lg-12'">
             <main>
               <slot name="main">
                 <div style="outline: dashed 1px lightgray">

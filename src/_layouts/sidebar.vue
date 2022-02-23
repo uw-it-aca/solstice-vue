@@ -2,8 +2,8 @@
   <div :class="[$mq != 'mobile' ? 'd-flex vh-100' : '']">
     <div
       :class="[$mq != 'mobile' ? '' : '']"
-      class="bg-purple axdd-sidebar axdd-sidebar-logo"
-      :style="[$mq != 'mobile' ? 'min-width:210px;' : '']"
+      class="bg-purple axdd-sidebar axdd-sidebar-logo col-md-3"
+      :style="[$mq != 'mobile' ? 'min-width:0px;' : '']"
     >
       <header>
         <slot name="header">
@@ -118,7 +118,7 @@ export default {
   },
   created: function () {
     // constructs page title in the following format "Page Title - AppName"
-    document.title = this.pageTitle + " - " + this.appName;
+    //document.title = this.pageTitle + " - " + this.appName;
   },
 };
 </script>

@@ -1,24 +1,7 @@
 <template>
   <uw-sidebar :app-name="appName" :page-title="pageTitle">
-    <template #header>
-      <div class="p-0 mb-3 h1 text-center text-uppercase sidebar-heading">
-        <span class="text-purple font-weight-bold">{{ appName }}</span>
-        <span class="ms-1 text-muted font-weight-light">Support</span>
-      </div>
-      <div class="text-center mb-4">
-        <div class="d-inline">mynetid</div>
-        <div class="d-inline ms-2">
-          <a
-            class="btn btn-sm btn-outline-danger text-uppercase font-weight-light"
-            >Logout</a
-          >
-        </div>
-      </div>
-    </template>
     <template #navigation>
-      <div
-        class="mb-1 text-secondary text-uppercase font-weight-bold sidebar-heading"
-      >
+      <div class="mb-1 text-secondary text-uppercase font-weight-bold">
         Heading
       </div>
       <ul class="list-unstyled">
@@ -35,9 +18,7 @@
           <a href="#">Page Link</a>
         </li>
       </ul>
-      <div
-        class="mb-1 text-secondary text-uppercase font-weight-bold sidebar-heading"
-      >
+      <div class="mb-1 text-secondary text-uppercase font-weight-bold">
         Heading
       </div>
       <ul class="list-unstyled">
@@ -54,9 +35,7 @@
           <a href="#">Page Link</a>
         </li>
       </ul>
-      <div
-        class="mb-1 text-secondary text-uppercase font-weight-bold sidebar-heading"
-      >
+      <div class="mb-1 text-secondary text-uppercase font-weight-bold">
         Heading
       </div>
       <ul class="list-unstyled">
@@ -73,9 +52,7 @@
           <a href="#">Page Link</a>
         </li>
       </ul>
-      <div
-        class="mb-1 text-secondary text-uppercase font-weight-bold sidebar-heading"
-      >
+      <div class="mb-1 text-secondary text-uppercase font-weight-bold">
         Heading
       </div>
       <ul class="list-unstyled">
@@ -92,12 +69,27 @@
           <a href="#">Page Link</a>
         </li>
       </ul>
-      <div
-        class="mb-1 text-secondary text-uppercase font-weight-bold sidebar-heading"
-      >
+      <div class="mb-1 text-secondary text-uppercase font-weight-bold">
         Heading
       </div>
       <ul class="list-unstyled">
+        <li>
+          <a href="#">Page Link</a>
+        </li>
+        <li>
+          <a href="#">Page Link</a>
+        </li>
+        <li>
+          <a href="#">Page Link</a>
+        </li>
+        <li>
+          <a href="#">Page Link</a>
+        </li>
+      </ul>
+      <div class="mb-1 text-secondary text-uppercase font-weight-bold">
+        Heading
+      </div>
+      <ul class="list-unstyled mb-5">
         <li>
           <a href="#">Page Link</a>
         </li>
@@ -112,9 +104,13 @@
         </li>
       </ul>
     </template>
-    <template #content>
-      <h1 class="text-uppercase sidebar-heading">{{ pageTitle }}</h1>
-      <slot></slot>
+    <template #main>
+      <div class="row justify-content-center pt-4">
+        <div class="col-sm-12 col-lg-9">
+          <h1 class="text-uppercase sidebar-heading">{{ pageTitle }}</h1>
+          <slot></slot>
+        </div>
+      </div>
     </template>
     <template #footer>
       Copyright &copy; 2012-{{ currentYear }} UW Information Technology - AXDD
@@ -138,17 +134,11 @@ export default {
   },
   data: function () {
     return {
-      appName: "AXDD",
+      appName: "MyApp",
       currentYear: new Date().getFullYear(),
     };
   },
 };
 </script>
 
-<style lang="scss" scoped>
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap");
-
-.sidebar-heading {
-  font-family: "Open Sans Condensed", sans-serif;
-}
-</style>
+<style lang="scss" scoped></style>

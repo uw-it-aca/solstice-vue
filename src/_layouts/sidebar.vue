@@ -1,15 +1,102 @@
 <template>
-  <div class="d-sm-flex align-self-stretch">
+  <div class="d-md-flex">
     <div
-      class="bg-purple d-sm-flex flex-sm-column overflow-auto"
-      style="width: 200px; min-height: 100vh"
+      class="bg-purple d-flex flex-column justify-content-between"
+      style="min-width: 250px"
     >
-      <header class="bg-dark-purple">
+      <header>
         <slot name="header">
-          <div class="h1 mb-3 text-uppercase text-white">{{ appName }}</div>
+          <div class="bg-dark-purple text-white py-2 px-3 small">
+            <div class="d-flex">
+              <div class="flex-fill">{{ userName }}</div>
+              <div class="flex-fill text-end">
+                <a :href="signOutUrl" class="text-white">Sign out</a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-purple axdd-topbar-brand px-3">
+            <a
+              v-if="$slots['navigation']"
+              class="btn btn-link btn-sm d-md-none border border-2 py-0 px-1 text-white me-2"
+              data-bs-toggle="collapse"
+              data-bs-target="#nav-collapse"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+              aria-label="Toggle Navigation Menu"
+            >
+              <i class="bi bi-list fw-bold text-white fs-6"></i>
+            </a>
+            <div
+              class="d-inline align-middle text-white"
+              :class="[$mq == 'desktop' ? 'h3' : 'h5']"
+            >
+              <a :href="appRootUrl" class="text-white text-decoration-none">{{
+                appName
+              }}</a>
+            </div>
+          </div>
         </slot>
       </header>
-      <nav class="" role="navigation">
+      <div v-if="$slots['navigation']" class="flex-fill axdd-topbar-logo">
+        <!-- main sidebar navigation -->
+        <nav role="navigation">
+          <div
+            id="nav-collapse"
+            class="px-3"
+            :class="[$mq != 'mobile' ? 'collapse.show' : 'collapse']"
+          >
+            <slot name="navigation">
+              <ul class="text-white">
+                <li>nav 1</li>
+                <li>nav 2</li>
+                <li>nav 3</li>
+                <li>nav 4</li>
+              </ul>
+            </slot>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div
+      :class="[$mq != 'mobile' ? 'overflow-auto vh-100' : '']"
+      class="flex-fill container-xl bg-light"
+    >
+      <main>
+        <slot name="main"></slot>
+      </main>
+    </div>
+  </div>
+
+  <!--
+  <div class="d-md-flex align-self-stretch">
+    <div
+      class="bg-purple d-sm-flex flex-sm-column overflow-auto col-md-3 axdd-topbar-logo"
+      style="height: 100vh"
+    >
+      <header>
+        <slot name="header">
+          <div class="bg-dark-purple text-white py-2 px-3 small">
+            <div class="d-flex">
+              <div class="flex-fill">{{ userName }}</div>
+              <div class="flex-fill text-end">
+                <a :href="signOutUrl" class="text-white">Sign out</a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-purple axdd-topbar-brand px-3">
+            <div
+              class="d-inline align-middle text-white"
+              :class="[$mq == 'desktop' ? 'h3' : 'h5']"
+            >
+              <a :href="appRootUrl" class="text-white text-decoration-none">{{
+                appName
+              }}</a>
+            </div>
+          </div>
+        </slot>
+      </header>
+      <nav class="p-3" role="navigation">
         <slot name="navigation">
           <div class="text-uppercase">Nav Heading</div>
           <ul class="list-unstyled">
@@ -21,8 +108,8 @@
         </slot>
       </nav>
     </div>
-    <div>
-      <main class="p-4">
+    <div class="overflow-auto">
+      <main class="">
         <slot name="content">
           <h1 class="text-uppercase text-muted">{{ pageTitle }}</h1>
           <p class="text-muted">
@@ -40,7 +127,7 @@
         </slot>
       </footer>
     </div>
-  </div>
+  </div>-->
 </template>
 
 <script>
@@ -48,11 +135,23 @@ export default {
   props: {
     appName: {
       type: String,
-      default: "App",
+      default: "appName",
     },
     pageTitle: {
       type: String,
-      default: "Page Title",
+      default: "pageTitle",
+    },
+    userName: {
+      type: String,
+      default: "userName",
+    },
+    appRootUrl: {
+      type: String,
+      default: "#",
+    },
+    signOutUrl: {
+      type: String,
+      default: "#",
     },
   },
   created: function () {
@@ -62,6 +161,15 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-// sidebar global
+<style lang="scss">
+.axdd-topbar-brand {
+  line-height: 65px;
+}
+
+.axdd-topbar-logo {
+  background-image: url("../assets/images/w-logo-white.png");
+  background-repeat: no-repeat;
+  background-size: 45px;
+  background-position: right 20px bottom;
+}
 </style>

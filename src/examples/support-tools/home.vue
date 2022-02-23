@@ -1,5 +1,25 @@
 <template>
   <axdd-layout page-title="Home">
+    <p class="card p-3">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum
+      voluptatem ipsa? Error earum hic nihil itaque ullam corporis eum, modi,
+      quaerat placeat velit numquam distinctio atque explicabo voluptatum nemo.
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum
+      voluptatem ipsa? Error earum hic nihil itaque ullam corporis eum, modi,
+      quaerat placeat velit numquam distinctio atque explicabo voluptatum nemo.
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum
+      voluptatem ipsa? Error earum hic nihil itaque ullam corporis eum, modi,
+      quaerat placeat velit numquam distinctio atque explicabo voluptatum nemo.
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum
+      voluptatem ipsa? Error earum hic nihil itaque ullam corporis eum, modi,
+      quaerat placeat velit numquam distinctio atque explicabo voluptatum nemo.
+    </p>
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum
       voluptatem ipsa? Error earum hic nihil itaque ullam corporis eum, modi,

@@ -1,8 +1,9 @@
 <template>
-  <div class="d-md-flex">
+  <div class="">
     <div
-      class="bg-purple d-flex flex-column justify-content-between"
-      style="min-width: 250px"
+      :class="[$mq != 'mobile' ? 'fixed-top fixed-bottom' : '']"
+      class="bg-purple axdd-sidebar axdd-sidebar-logo"
+      :style="[$mq != 'mobile' ? 'width:250px;' : '']"
     >
       <header>
         <slot name="header">
@@ -14,7 +15,7 @@
               </div>
             </div>
           </div>
-          <div class="bg-purple axdd-topbar-brand px-3">
+          <div class="bg-purple axdd-sidebar-brand px-3">
             <a
               v-if="$slots['navigation']"
               class="btn btn-link btn-sm d-md-none border border-2 py-0 px-1 text-white me-2"
@@ -38,7 +39,7 @@
           </div>
         </slot>
       </header>
-      <div v-if="$slots['navigation']" class="flex-fill axdd-topbar-logo">
+      <div v-if="$slots['navigation']" class="flex-fill">
         <!-- main sidebar navigation -->
         <nav role="navigation">
           <div
@@ -58,97 +59,36 @@
         </nav>
       </div>
     </div>
-    <div
-      :class="[$mq != 'mobile' ? 'overflow-auto vh-100' : '']"
-      class="flex-fill container-xl"
-    >
-      <div v-if="$slots['bar']">
-        <slot name="bar">
-          <div class="row justify-content-center pt-4">
-            <div class="col-sm-12 col-lg-9">
-              <div class="bg-teal rounded text-white px-3 py-2 small">
-                hello world banner message default
+
+    <div :style="[$mq != 'mobile' ? 'margin-left:250px;' : '']">
+      <div class="container-fluid">
+        <div v-if="$slots['bar']">
+          <slot name="bar">
+            <div class="row">
+              <div class="col">
+                <div class="mt-3 bg-teal rounded text-white px-3 py-2 small">
+                  hello world banner message default
+                </div>
               </div>
             </div>
-          </div>
-        </slot>
+          </slot>
+        </div>
+
+        <main>
+          <slot name="main"></slot>
+        </main>
+
+        <footer class="mt-auto">
+          <slot name="footer">
+            <div class="font-weight-light py-3 small">
+              Copyright &copy; {{ new Date().getFullYear() }} University of
+              Washington
+            </div>
+          </slot>
+        </footer>
       </div>
-
-      <main>
-        <slot name="main"></slot>
-      </main>
-
-      <footer class="mt-auto">
-        <slot name="footer">
-          <div class="font-weight-light py-3 small">
-            Copyright &copy; {{ new Date().getFullYear() }} University of
-            Washington
-          </div>
-        </slot>
-      </footer>
     </div>
   </div>
-
-  <!--
-  <div class="d-md-flex align-self-stretch">
-    <div
-      class="bg-purple d-sm-flex flex-sm-column overflow-auto col-md-3 axdd-topbar-logo"
-      style="height: 100vh"
-    >
-      <header>
-        <slot name="header">
-          <div class="bg-dark-purple text-white py-2 px-3 small">
-            <div class="d-flex">
-              <div class="flex-fill">{{ userName }}</div>
-              <div class="flex-fill text-end">
-                <a :href="signOutUrl" class="text-white">Sign out</a>
-              </div>
-            </div>
-          </div>
-          <div class="bg-purple axdd-topbar-brand px-3">
-            <div
-              class="d-inline align-middle text-white"
-              :class="[$mq == 'desktop' ? 'h3' : 'h5']"
-            >
-              <a :href="appRootUrl" class="text-white text-decoration-none">{{
-                appName
-              }}</a>
-            </div>
-          </div>
-        </slot>
-      </header>
-      <nav class="p-3" role="navigation">
-        <slot name="navigation">
-          <div class="text-uppercase">Nav Heading</div>
-          <ul class="list-unstyled">
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-          </ul>
-        </slot>
-      </nav>
-    </div>
-    <div class="overflow-auto">
-      <main class="">
-        <slot name="content">
-          <h1 class="text-uppercase text-muted">{{ pageTitle }}</h1>
-          <p class="text-muted">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas
-            rerum dolor laudantium cum consectetur nihil, cumque ipsam
-            accusantium asperiores ut delectus quae, dolores saepe sunt
-            doloribus iusto dolore, doloremque aperiam.
-          </p>
-        </slot>
-      </main>
-      <footer class="mt-auto border-top my-2 mx-4 py-3 text-muted small">
-        <slot name="footer">
-          Copyright &copy; {{ new Date().getFullYear() }} University of
-          Washington
-        </slot>
-      </footer>
-    </div>
-  </div>-->
 </template>
 
 <script>
@@ -183,11 +123,11 @@ export default {
 </script>
 
 <style lang="scss">
-.axdd-topbar-brand {
+.axdd-sidebar-brand {
   line-height: 65px;
 }
 
-.axdd-topbar-logo {
+.axdd-sidebar-logo {
   background-image: url("../assets/images/w-logo-white.png");
   background-repeat: no-repeat;
   background-size: 45px;

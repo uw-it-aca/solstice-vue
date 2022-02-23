@@ -49,8 +49,8 @@
     </template>
     <template #bar></template>
     <template #main>
-      <div class="row justify-content-center pt-4">
-        <div class="col-sm-12 col-lg-9">
+      <div class="row">
+        <div class="col">
           <h1 class="text-uppercase sidebar-heading">{{ pageTitle }}</h1>
           <slot></slot>
         </div>

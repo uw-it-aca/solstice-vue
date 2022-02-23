@@ -62,6 +62,18 @@
       :class="[$mq != 'mobile' ? 'overflow-auto vh-100' : '']"
       class="flex-fill container-xl"
     >
+      <div v-if="$slots['bar']">
+        <slot name="bar">
+          <div class="row justify-content-center pt-4">
+            <div class="col-sm-12 col-lg-9">
+              <div class="bg-teal rounded text-white px-3 py-2 small">
+                hello world banner message default
+              </div>
+            </div>
+          </div>
+        </slot>
+      </div>
+
       <main>
         <slot name="main"></slot>
       </main>

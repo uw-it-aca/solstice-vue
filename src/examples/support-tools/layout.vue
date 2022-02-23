@@ -47,6 +47,7 @@
         </li>
       </ul>
     </template>
+    <template #bar></template>
     <template #main>
       <div class="row justify-content-center pt-4">
         <div class="col-sm-12 col-lg-9">

@@ -1,9 +1,9 @@
 <template>
-  <div class="">
+  <div :class="[$mq != 'mobile' ? 'd-flex vh-100' : '']">
     <div
-      :class="[$mq != 'mobile' ? 'fixed-top fixed-bottom' : '']"
+      :class="[$mq != 'mobile' ? '' : '']"
       class="bg-purple axdd-sidebar axdd-sidebar-logo"
-      :style="[$mq != 'mobile' ? 'width:250px;' : '']"
+      :style="[$mq != 'mobile' ? 'min-width:250px;' : '']"
     >
       <header>
         <slot name="header">
@@ -60,7 +60,7 @@
       </div>
     </div>
 
-    <div :style="[$mq != 'mobile' ? 'margin-left:250px;' : '']">
+    <div :class="[$mq != 'mobile' ? 'overflow-auto' : '']">
       <div class="container-xl">
         <div v-if="$slots['bar']">
           <slot name="bar">

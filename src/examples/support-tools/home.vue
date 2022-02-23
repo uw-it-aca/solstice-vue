@@ -39,6 +39,24 @@
           </div>
         </div>
       </div>
+      <div class="col">
+        <div class="card mb-3 bg-dark hover:bg-danger">
+          <div class="card-body text-white">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+            nemo error quia vitae sequi tempore quidem commodi amet eveniet est
+            corporis, dignissimos repudiandae consequatur architecto in? A
+            deleniti pariatur voluptate.
+          </div>
+        </div>
+        <div class="card mb-3 bg-dark hover:bg-danger">
+          <div class="card-body text-white">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+            nemo error quia vitae sequi tempore quidem commodi amet eveniet est
+            corporis, dignissimos repudiandae consequatur architecto in? A
+            deleniti pariatur voluptate.
+          </div>
+        </div>
+      </div>
     </div>
   </axdd-layout>
 </template>

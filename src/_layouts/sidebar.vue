@@ -60,8 +60,9 @@
       </div>
     </div>
 
-    <div :class="[$mq != 'mobile' ? 'overflow-auto' : '']">
+    <div :class="[$mq != 'mobile' ? 'flex-fill overflow-auto' : '']">
       <div class="container-xl">
+
         <div v-if="$slots['bar']">
           <slot name="bar">
             <div class="row">

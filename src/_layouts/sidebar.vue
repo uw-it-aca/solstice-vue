@@ -2,8 +2,8 @@
   <div :class="[$mq != 'mobile' ? 'd-flex vh-100' : '']">
     <div
       :class="[$mq != 'mobile' ? 'overflow-auto' : '']"
-      class="bg-purple axdd-sidebar axdd-sidebar-logo col-md-3"
-      :style="[$mq != 'mobile' ? 'min-width:0px;' : '']"
+      class="bg-purple axdd-sidebar axdd-sidebar-logo"
+      :style="[$mq != 'mobile' ? 'min-width:230px;' : '']"
     >
       <header>
         <slot name="header">

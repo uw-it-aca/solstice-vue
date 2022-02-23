@@ -61,7 +61,7 @@
     </div>
 
     <div :style="[$mq != 'mobile' ? 'margin-left:250px;' : '']">
-      <div class="container-fluid">
+      <div class="container-xl">
         <div v-if="$slots['bar']">
           <slot name="bar">
             <div class="row">

@@ -1,106 +1,49 @@
 <template>
   <uw-sidebar :app-name="appName" :page-title="pageTitle">
     <template #navigation>
-      <div class="mb-1 text-secondary text-uppercase font-weight-bold">
-        Heading
-      </div>
-      <ul class="list-unstyled">
-        <li>
-          <a href="/support">Home</a>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2 bg-dark-purple rounded">
+          <a href="#" class="nav-link text-gray d-block px-2 py-1"
+            ><i class="bi bi-house-door-fill me-2"></i>Home</a
+          >
         </li>
-        <li>
-          <a href="/support/pulse">Social Pulse</a>
+        <li class="nav-item mb-2">
+          <a href="#" class="nav-link text-gray d-block px-2 py-1"
+            ><i class="bi bi-mortarboard-fill me-2"></i>Academics</a
+          >
         </li>
-        <li>
-          <a href="#">Page Link</a>
+        <li class="nav-item mb-2">
+          <a href="#" class="nav-link text-gray d-block px-2 py-1"
+            ><i class="bi bi-pencil-square me-2"></i>Teaching</a
+          >
         </li>
-        <li>
-          <a href="#">Page Link</a>
+        <li class="nav-item mb-2">
+          <a href="#" class="nav-link text-gray d-block px-2 py-1"
+            ><i class="bi bi-credit-card me-2"></i>Accounts</a
+          >
         </li>
-      </ul>
-      <div class="mb-1 text-secondary text-uppercase font-weight-bold">
-        Heading
-      </div>
-      <ul class="list-unstyled">
-        <li>
-          <a href="#">Page Link</a>
+        <li class="nav-item mb-2">
+          <a href="#" class="nav-link text-gray d-block px-2 py-1"
+            ><i class="bi bi-person-fill me-2"></i>Profile</a
+          >
         </li>
-        <li>
-          <a href="#">Page Link</a>
+        <li aria-hidden="true" class="nav-item mb-2">
+          <a
+            href="#"
+            class="nav-link disabled text-gray d-block p-0 internal-link"
+            ><hr class="m-0 bg-gray" />
+            <span class="visually-hidden"> Navigation separator</span></a
+          >
         </li>
-        <li>
-          <a href="#">Page Link</a>
+        <li class="nav-item mb-2">
+          <a href="#" class="nav-link text-gray d-block px-2 py-1"
+            ><i class="bi bi-calendar-check me-2"></i>Calendar</a
+          >
         </li>
-        <li>
-          <a href="#">Page Link</a>
-        </li>
-      </ul>
-      <div class="mb-1 text-secondary text-uppercase font-weight-bold">
-        Heading
-      </div>
-      <ul class="list-unstyled">
-        <li>
-          <a href="#">Page Link</a>
-        </li>
-        <li>
-          <a href="#">Page Link</a>
-        </li>
-        <li>
-          <a href="#">Page Link</a>
-        </li>
-        <li>
-          <a href="#">Page Link</a>
-        </li>
-      </ul>
-      <div class="mb-1 text-secondary text-uppercase font-weight-bold">
-        Heading
-      </div>
-      <ul class="list-unstyled">
-        <li>
-          <a href="#">Page Link</a>
-        </li>
-        <li>
-          <a href="#">Page Link</a>
-        </li>
-        <li>
-          <a href="#">Page Link</a>
-        </li>
-        <li>
-          <a href="#">Page Link</a>
-        </li>
-      </ul>
-      <div class="mb-1 text-secondary text-uppercase font-weight-bold">
-        Heading
-      </div>
-      <ul class="list-unstyled">
-        <li>
-          <a href="#">Page Link</a>
-        </li>
-        <li>
-          <a href="#">Page Link</a>
-        </li>
-        <li>
-          <a href="#">Page Link</a>
-        </li>
-        <li>
-          <a href="#">Page Link</a>
-        </li>
-      </ul>
-      <div class="mb-1 text-secondary text-uppercase font-weight-bold">
-        Heading
-      </div>
-      <ul class="list-unstyled mb-5">
-        <li>
-          <a href="#">Page Link</a>
-        </li>
-        <li>
-          <a href="#">Page Link</a>
-        </li>
-        <li>
-          <a href="#">Page Link</a>
-        </li>
-        <li>
-          <a href="#">Page Link</a>
+        <li class="nav-item mb-4">
+          <a href="#" class="nav-link text-gray d-block px-2 py-1"
+            ><i class="bi bi-bookmark-fill me-2"></i>UW Resources</a
+          >
         </li>
       </ul>
     </template>
@@ -111,9 +54,6 @@
           <slot></slot>
         </div>
       </div>
-    </template>
-    <template #footer>
-      Copyright &copy; 2012-{{ currentYear }} UW Information Technology - AXDD
     </template>
   </uw-sidebar>
 </template>

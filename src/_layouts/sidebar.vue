@@ -60,11 +60,20 @@
     </div>
     <div
       :class="[$mq != 'mobile' ? 'overflow-auto vh-100' : '']"
-      class="flex-fill container-xl bg-light"
+      class="flex-fill container-xl"
     >
       <main>
         <slot name="main"></slot>
       </main>
+
+      <footer class="mt-auto">
+        <slot name="footer">
+          <div class="font-weight-light py-3 small">
+            Copyright &copy; {{ new Date().getFullYear() }} University of
+            Washington
+          </div>
+        </slot>
+      </footer>
     </div>
   </div>
 

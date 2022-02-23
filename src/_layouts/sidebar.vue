@@ -3,7 +3,7 @@
     <div
       :class="[$mq != 'mobile' ? 'overflow-auto' : '']"
       class="bg-purple axdd-sidebar axdd-sidebar-logo"
-      :style="[$mq != 'mobile' ? 'max-width:240px;' : '']"
+      :style="[$mq != 'mobile' ? 'min-widthj: 240px; max-width:240px;' : '']"
     >
       <header>
         <slot name="header">

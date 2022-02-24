@@ -50,13 +50,12 @@ $link-color: #4d66ca !default; //a11y blue
 // override max width of containers
 //$container-max-widths: map.merge($container-max-widths, (xl: 1400px));
 
+// bootstrap 5 map merging
+
 $theme-colors: map-merge($theme-colors, $custom-colors);
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
-$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
-$utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
-$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
-// hover utility class
+// bootstrap: add bg hover utility class
 $utilities: (
   "background-color": (
       property: background-color,
@@ -72,6 +71,10 @@ $utilities: (
       )
   )
 );
+
+$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
+$utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
+$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 // global axdd-component styles
 .axdd-font-open-sans {

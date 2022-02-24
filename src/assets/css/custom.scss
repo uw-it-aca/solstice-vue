@@ -41,7 +41,7 @@ $custom-colors: (
   'teal': #4c7286, // uw teal
   'light-gray': #e8e8e8,
   'gray': #e9ecef,
-) !default;
+);
 
 // override all links
 $link-color: #4d66ca !default; //a11y blue
@@ -55,9 +55,7 @@ $utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
 $utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
 $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
-
 // hover utility class
-/*
 $utilities: (
   "background-color": (
       property: background-color,
@@ -73,7 +71,7 @@ $utilities: (
       )
   )
 );
-*/
+
 
 // global axdd-component styles
 .axdd-font-open-sans {

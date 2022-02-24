@@ -41,7 +41,7 @@ $custom-colors: (
   'teal': #4c7286, // uw teal
   'light-gray': #e8e8e8,
   'gray': #e9ecef,
-);
+) !default;
 
 // override all links
 $link-color: #4d66ca !default; //a11y blue
@@ -80,6 +80,3 @@ $utilities: (
 .axdd-font-encode-sans {
   font-family: 'Encode Sans', sans-serif !important;
 }
-
-@import "bootstrap/scss/bootstrap";
-@import "bootstrap-icons/font/bootstrap-icons.css";

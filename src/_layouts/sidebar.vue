@@ -1,5 +1,8 @@
 <template>
-  <div :class="[$mq != 'mobile' ? 'd-flex vh-100' : '']">
+  <div
+    :class="[$mq != 'mobile' ? 'd-flex vh-100' : '']"
+    class="axdd-font-open-sans"
+  >
     <div
       :class="[$mq != 'mobile' ? 'overflow-auto' : '']"
       class="bg-purple axdd-sidebar axdd-sidebar-logo"
@@ -32,9 +35,9 @@
               class="d-inline align-middle text-white"
               :class="[$mq == 'desktop' ? 'h3' : 'h5']"
             >
-              <a :href="appRootUrl" class="text-white text-decoration-none">{{
-                appName
-              }}</a>
+              <a :href="appRootUrl" class="text-white text-decoration-none">
+                {{ appName }}
+              </a>
             </div>
           </div>
         </slot>

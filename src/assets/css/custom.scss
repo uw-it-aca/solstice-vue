@@ -53,15 +53,29 @@ $utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
 $utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
 $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
-// background colors
-.hover\:bg-danger:hover {
-  background-color: $danger !important;
-}
 
-// border
-.hover\:border:hover {
-  border: 1px solid #dee2e6 !important;
-}
+// hover utility class
+$utilities: (
+  "background-color": (
+      property: background-color,
+      class: bg,
+      state: hover focus,
+      values: map-merge(
+        $theme-colors,
+        (
+          "body": $body-bg,
+          "white": $white,
+          "transparent": transparent
+        )
+      )
+  )
+);
 
-// set font family globally
-body { font-family: "Open Sans", sans-serif !important; }
+
+// global axdd-component styles
+.axdd-font-open-sans {
+  font-family: 'Open Sans', sans-serif !important;
+}
+.axdd-font-encode-sans {
+  font-family: 'Encode Sans', sans-serif !important;
+}

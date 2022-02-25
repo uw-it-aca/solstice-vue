@@ -1,4 +1,7 @@
-@import './custom.scss';
+// import custom + map-utils (specific order)
+@import "./custom.scss";
+@import "./map-utils.scss";
 
+// import bootstrap + bootstrap-icons
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons/font/bootstrap-icons.css";

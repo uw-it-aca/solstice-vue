@@ -2,7 +2,7 @@
   <div>
     <div class="col-lg-8 mx-auto p-3 py-md-5">
       <header class="d-flex align-items-center pb-3 mb-5 h4 border-bottom">
-        <font-awesome-icon :icon="faClone" class="me-2 text-purple" />
+        <i class="bi bi-back me-2 text-purple"></i>
         <a href="/" class="text-reset text-decoration-none">AXDD Components</a>
       </header>
 
@@ -22,62 +22,18 @@
         <div class="col-md-6">
           <h2>Development</h2>
           <ul>
-            <li>
-              <a href="hhttps://v3.vuejs.org/" target="_blank" rel="noopener"
-                >vue 3</a
-              >
-            </li>
-            <li>
-              <a href="https://router.vuejs.org" target="_blank" rel="noopener"
-                >vue-router 4</a
-              >
-            </li>
-            <li>
-              <a href="https://vuex.vuejs.org" target="_blank" rel="noopener"
-                >vuex 4</a
-              >
-            </li>
-          </ul>
-          <h2>Design</h2>
-          <ul>
-            <li>
-              <a
-                href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"
-                target="_blank"
-                rel="noopener"
-                >bootstrap 5</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://github.com/FortAwesome/vue-fontawesome"
-                target="_blank"
-                rel="noopener"
-                >vue-fontawesome 3 (pre-release)</a
-              >
-            </li>
+            <li>Vue 3 (Options API)</li>
+            <li>Vuex (state management)</li>
           </ul>
         </div>
         <div class="col-md-6">
-          <h2>Examples</h2>
+          <h2>Sandbox</h2>
           <ul>
             <li>
               <router-link to="/myapp">MyApp</router-link>
             </li>
             <li><router-link to="/support">Support Tools</router-link></li>
           </ul>
-        </div>
-        <div class="col-md-6">
-          <h2>Storybook</h2>
-          <p>Run the following command to start the Storybook server:
-          <code>npm run storybook</code></p>
-
-          <p>
-            URL:
-            <a href="http://localhost:6006/" target="_blank" rel="noopener"
-              >http://localhost:6006</a
-            >
-          </p>
         </div>
       </div>
 
@@ -89,18 +45,11 @@
 </template>
 
 <script>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faClone } from '@fortawesome/free-solid-svg-icons';
-
 export default {
-  components: {
-    'font-awesome-icon': FontAwesomeIcon,
-  },
+  components: {},
   data() {
-    return {
-      faClone,
-    };
-  }
+    return {};
+  },
 };
 </script>
 

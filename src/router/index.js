@@ -8,19 +8,19 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    component: Home,
   },
   {
     path: "/support",
     name: "Support",
     component: SupportTools,
-    pathToRegexpOptions: { strict: true }
+    pathToRegexpOptions: { strict: true },
   },
   {
     path: "/myapp",
     name: "MyApp",
     component: MyApp,
-    pathToRegexpOptions: { strict: true }
+    pathToRegexpOptions: { strict: true },
   },
 ];
 

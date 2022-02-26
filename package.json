@@ -1,19 +1,13 @@
 {
   "name": "axdd-components",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "serve": "vite preview"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-regular-svg-icons": "^5.15.1",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/vue-fontawesome": "^3.0.0-4",
     "@popperjs/core": "^2.9.2",
     "bootstrap": "^5.1.0",
     "bootstrap-icons": "^1.5.0",
@@ -24,16 +18,13 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.6",
-    "@storybook/addon-actions": "^6.4.0-alpha.18",
-    "@storybook/addon-essentials": "^6.4.0-alpha.18",
-    "@storybook/addon-links": "^6.4.0-alpha.18",
-    "@storybook/vue3": "^6.4.0-alpha.18",
-    "@vitejs/plugin-vue": "^1.2.2",
-    "@vue/compiler-sfc": "^3.1.4",
-    "babel-loader": "^8.2.2",
+    "@rushstack/eslint-patch": "^1.1.0",
+    "@vitejs/plugin-vue": "^2.0.1",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "eslint": "^8.5.0",
+    "eslint-plugin-vue": "^8.2.0",
+    "prettier": "^2.5.1",
     "sass": "^1.35.2",
-    "storybook-builder-vite": "^0.0.12",
-    "vite": "^2.3.3"
+    "vite": "^2.7.13"
   }
 }

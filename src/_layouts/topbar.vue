@@ -1,7 +1,7 @@
 <template>
   <div
-    class="d-flex align-items-end flex-column axdd-topbar"
-    style="min-height: 100vh"
+    class="d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"
+    style="min-height: 300px"
   >
     <header class="w-100">
       <slot name="header">
@@ -19,28 +19,16 @@
           <div class="container-xl axdd-topbar-logo">
             <a
               v-if="$slots['navigation']"
-              class="btn btn-link btn-sm d-lg-none p-0 border-0 text-white"
+              class="btn btn-link btn-sm d-lg-none border border-2 py-0 px-1 text-white me-2"
               data-bs-toggle="collapse"
-              data-bs-target="#nav-collapse"
+              data-bs-target="#topbar-nav-collapse"
               role="button"
               aria-expanded="false"
-              aria-controls="collapseExample"
+              aria-controls="topbar-nav-collapse"
               aria-label="Toggle Navigation Menu"
             >
-              <font-awesome-layers class="fa-2x">
-                <font-awesome-icon
-                  :icon="faSquare"
-                  transform="right-1"
-                  class="m-0"
-                />
-                <font-awesome-icon
-                  :icon="faBars"
-                  transform="shrink-8 right-1 "
-                  class="m-0"
-                />
-              </font-awesome-layers>
+              <i class="bi bi-list fw-bold text-white fs-6"></i>
             </a>
-
             <div
               class="d-inline align-middle text-white"
               :class="[$mq == 'desktop' ? 'h3' : 'h5']"
@@ -56,8 +44,10 @@
     <div v-if="$slots['bar'] && $mq == 'desktop'" class="w-100">
       <slot name="bar">
         <div class="bg-gray">
-          <div class="container-xl px-0 py-2">
-            <div class="col text-center">This is the default gray bar</div>
+          <div class="container-xl">
+            <div class="col-12 py-2 text-center">
+              default gray bar (desktop)
+            </div>
           </div>
         </div>
       </slot>
@@ -65,11 +55,11 @@
     <div class="w-100">
       <div class="container-xl">
         <div class="row">
-          <div v-if="$slots['navigation']" class="col-lg-2">
+          <div v-if="$slots['navigation']" class="col-lg-3">
             <!-- main sidebar navigation -->
-            <nav role="navigation" :class="[$mq == 'desktop' ? 'mt-3' : '']">
+            <nav role="navigation">
               <div
-                id="nav-collapse"
+                id="topbar-nav-collapse"
                 :class="[$mq == 'desktop' ? 'collapse.show' : 'collapse']"
               >
                 <slot name="navigation"></slot>
@@ -79,16 +69,16 @@
           <div v-if="$slots['bar'] && $mq != 'desktop'" class="w-100 p-0 m-0">
             <slot name="bar">
               <div class="bg-gray">
-                <div class="container-xl px-0 py-2">
-                  <div class="col text-center">
-                    This is the default gray bar
+                <div class="container-xl">
+                  <div class="col-12 py-2 text-center">
+                    default gray bar (mobile)
                   </div>
                 </div>
               </div>
             </slot>
           </div>
-          <div :class="$slots['navigation'] ? 'col-lg-10' : 'col-lg-12'">
-            <main class="mt-3">
+          <div :class="$slots['navigation'] ? 'col-lg-9' : 'col-lg-12'">
+            <main>
               <slot name="main">
                 <div style="outline: dashed 1px lightgray">
                   <!-- main content -->
@@ -106,11 +96,11 @@
         </div>
       </div>
     </div>
-    <footer class="w-100 mt-auto">
+    <footer v-if="$slots['footer']" class="w-100 mt-auto">
       <slot name="footer">
         <div class="bg-dark">
-          <div class="container-xl py-3 small">
-            <div class="text-white font-weight-light">
+          <div class="container-xl">
+            <div class="text-white font-weight-light py-3 small">
               Copyright &copy; {{ new Date().getFullYear() }} University of
               Washington
             </div>
@@ -122,14 +112,6 @@
 </template>
 
 <script>
-import {
-  FontAwesomeIcon,
-  FontAwesomeLayers,
-  FontAwesomeLayersText,
-} from "@fortawesome/vue-fontawesome";
-import { faSquare } from "@fortawesome/free-regular-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-
 export default {
   props: {
     appName: {
@@ -153,39 +135,18 @@ export default {
       default: "#",
     },
   },
-  components: {
-    "font-awesome-icon": FontAwesomeIcon,
-    "font-awesome-layers": FontAwesomeLayers,
-    "font-awesome-layers-text": FontAwesomeLayersText,
-  },
+  components: {},
   data() {
-    return {
-      faSquare,
-      faBars,
-    };
+    return {};
   },
   created: function () {
     // constructs page title in the following format "Page Title - AppName"
-    document.title = this.pageTitle + " - " + this.appName;
-  },
-  watch: {
-    pageTitle: function (newPageTitle, oldPageTitle) {
-      document.title = newPageTitle + ' - ' + this.appName;
-    }
+    //document.title = this.pageTitle + " - " + this.appName;
   },
 };
 </script>
 
 <style lang="scss">
-// storybook only
-.sb-show-main {
-  .axdd-topbar {
-    padding: 0 !important;
-    border: dashed 1px lightgrey;
-    min-height: 500px !important;
-  }
-}
-
 .axdd-topbar {
   min-width: 320px;
 }

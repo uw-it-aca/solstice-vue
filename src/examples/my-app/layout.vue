@@ -7,7 +7,6 @@
     :user-name="userName"
     :sign-out-url="signOutUrl"
   >
-
     <template #header></template>
     <template #bar></template>
     <template #navigation>
@@ -28,7 +27,6 @@
       <slot name="content"></slot>
     </template>
     <template #footer></template>
-
   </topbar>
 </template>
 

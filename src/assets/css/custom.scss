@@ -41,13 +41,6 @@ $custom-colors: (
   'gray': #e9ecef,
 ) !default;
 
-// global axdd-component styles
-.axdd-font-open-sans {
-  font-family: 'Open Sans', sans-serif !important;
-}
-.axdd-font-encode-sans {
-  font-family: 'Encode Sans', sans-serif !important;
-}
 
 // bootstrap 5 map merging
 $theme-colors: map-merge($theme-colors, $custom-colors);
@@ -72,3 +65,12 @@ $utilities: (
       )
   )
 );
+
+
+// global axdd-component styles
+.axdd-font-open-sans {
+  font-family: 'Open Sans', sans-serif !important;
+}
+.axdd-font-encode-sans {
+  font-family: 'Encode Sans', sans-serif !important;
+}

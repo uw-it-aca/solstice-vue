@@ -49,3 +49,26 @@ $custom-colors: (
   font-family: 'Encode Sans', sans-serif !important;
 }
 
+// bootstrap 5 map merging
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
+$utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
+$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
+
+// bootstrap: add bg hover utility class
+$utilities: (
+  "background-color": (
+      property: background-color,
+      class: bg,
+      state: hover focus,
+      values: map-merge(
+        $theme-colors,
+        (
+          "body": $body-bg,
+          "white": $white,
+          "transparent": transparent
+        )
+      )
+  )
+);

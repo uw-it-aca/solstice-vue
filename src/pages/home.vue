@@ -9,11 +9,10 @@
       <h1>Getting started</h1>
 
       <p class="p-0 col-md-8 lead">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget
-        pulvinar est. Sed gravida neque justo, pellentesque finibus velit
-        scelerisque eu. Curabitur et dolor luctus, convallis magna at, mollis
-        purus. Nunc tincidunt risus quis nisl bibendum volutpat. Praesent ut
-        tincidunt ex.
+        AXDD Components is a resource for building and documenting UI components
+        with Bootstrap and Vue.js. It provides a set of organized tools,
+        patterns & practices that work as the foundation for application design
+        and development at AXDD.
       </p>
 
       <hr class="mb-5 w-25 d-inline-block" />
@@ -25,8 +24,29 @@
             <li>Vue 3 (Options API)</li>
             <li>Vuex (state management)</li>
           </ul>
+
+          <h2>Design</h2>
+          <ul>
+            <li>Bootstrap 5</li>
+            <li>Bootstrap Icons</li>
+          </ul>
+
+          <h2>Goals</h2>
+          <ul>
+            <li>Faster design and development workflow</li>
+            <li>Living documentation</li>
+          </ul>
         </div>
         <div class="col-md-6">
+
+          <h2>Docs</h2>
+          <ul>
+            <li>Overview</li>
+            <li>Design Principles</li>
+            <li>Layouts</li>
+            <li>Components</li>
+          </ul>
+
           <h2>Sandbox</h2>
           <ul>
             <li>

@@ -24,7 +24,7 @@ pnpm-debug.log*
 *.sw?
 
 # exclude majore of /src from npm
-/examples
-/pages
-/router
-/store
+/src/examples
+/src/pages
+/src/router
+/src/store

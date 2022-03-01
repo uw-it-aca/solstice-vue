@@ -1,10 +1,6 @@
 <template>
-  <div>
-    <div class="col-lg-8 mx-auto p-3 py-md-5">
-      <header class="d-flex align-items-center pb-3 mb-5 h4 border-bottom">
-        <i class="bi bi-back me-2 text-purple"></i>
-        <a href="/" class="text-reset text-decoration-none">AXDD Components</a>
-      </header>
+  <Layout>
+    <template #content>
 
       <h1>Design Principles</h1>
 
@@ -33,16 +29,15 @@
       <h2>Let content determine breakpoints</h2>
       <h2>Strive for universality</h2>
 
-      <footer class="pt-5 my-5 text-muted border-top">
-        Copyright &copy; {{ new Date().getFullYear() }} University of Washington
-      </footer>
-    </div>
-  </div>
+    </template>
+  </Layout>
 </template>
 
 <script>
+import Layout from "../layouts/home.vue";
+
 export default {
-  components: {},
+  components: { Layout },
   data() {
     return {};
   },

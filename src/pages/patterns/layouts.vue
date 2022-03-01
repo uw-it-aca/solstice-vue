@@ -1,18 +1,21 @@
 <template>
-  <div>
-    <div class="col-lg-8 mx-auto p-3 py-md-5">
-      <header class="d-flex align-items-center pb-3 mb-5 h4 border-bottom">
-        <i class="bi bi-back me-2 text-purple"></i>
-        <a href="/" class="text-reset text-decoration-none">AXDD Components</a>
-      </header>
+  <Layout>
+    <template #content>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/patterns/">Patterns</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Page Layouts
+          </li>
+        </ol>
+      </nav>
 
-      <h1>Templates</h1>
+      <h1>Page Layouts</h1>
 
       <p class="p-0 col-md-8 lead">
-        Templates exist to document the layout and structure of a section. These
-        are not called “pages” for a reason. While they can be pages, that’s not
-        their only functionality. Templates consist of design tokens, elements,
-        and patterns.
+        Patterns are UI Patterns that fall on the more complex side of the
+        spectrum. Date pickers, data tables, and visualizations are good
+        examples. Patterns utilize both elements and design tokens.
       </p>
 
       <hr class="mb-5 w-25 d-inline-block" />
@@ -193,21 +196,18 @@ export default {
           </template>
         </CodeBlock>
       </div>
-
-      <footer class="pt-5 my-5 text-muted border-top">
-        Copyright &copy; {{ new Date().getFullYear() }} University of Washington
-      </footer>
-    </div>
-  </div>
+    </template>
+  </Layout>
 </template>
 
 <script>
+import Layout from "../../layouts/home.vue";
 import Topbar from "../../_layouts/topbar.vue";
 import Sidebar from "../../_layouts/sidebar.vue";
 import CodeBlock from "../../components/CodeBlock.vue";
 
 export default {
-  components: { Topbar, Sidebar, CodeBlock },
+  components: { Layout, Topbar, Sidebar, CodeBlock },
   data() {
     return {};
   },

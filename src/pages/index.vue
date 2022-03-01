@@ -1,11 +1,6 @@
 <template>
-  <div>
-    <div class="col-lg-8 mx-auto p-3 py-md-5">
-      <header class="d-flex align-items-center pb-3 mb-5 h4 border-bottom">
-        <i class="bi bi-back me-2 text-purple"></i>
-        <a href="/" class="text-reset text-decoration-none">AXDD Components</a>
-      </header>
-
+  <Layout>
+    <template #content>
       <h1>Getting started</h1>
 
       <p class="p-0 col-md-8 lead">
@@ -27,16 +22,9 @@
         </div>
         <div class="col">
           <h2>Principles</h2>
-          <ul>
-            <li>
-              <router-link to="/docs/principles">Design Principles</router-link>
-            </li>
-            <li>
-              <router-link to="/docs/development"
-                >Development Principles</router-link
-              >
-            </li>
-          </ul>
+          <p>Get to know our foundational thinking and how we put it into action across our design system.</p>
+
+          <p><router-link to="/principles">Learn about our principles</router-link></p>
         </div>
       </div>
 
@@ -44,29 +32,45 @@
 
       <div class="row">
         <div class="col">
-          <h2>Style Guide</h2>
-          <ul>
-            <li>Bootstrap 5</li>
-            <li>Bootstrap Icons</li>
+          <h2>Guides</h2>
+          <p>
+            Check out these guides to help you understand how to
+            design applications using AXDD Components.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h3>Content</h3>
+          <p>
+            Learn how to use language to design a more thoughtful product
+            experience.
+          </p>
 
-            <li>
-              <router-link to="/docs/voice">Voice &amp; Tone</router-link>
-            </li>
-            <li>
-              <router-link to="/docs/tokens">Design Tokens</router-link>
-            </li>
-          </ul>
+          <p>
+            <router-link to="/content/">Read content guidelines</router-link>
+          </p>
         </div>
         <div class="col">
-          <h2>Component Guide</h2>
-          <ul>
-            <li>Vue 3 (Options API)</li>
-            <li>Vuex (state management)</li>
-
-            <li><router-link to="/docs/elements">Elements</router-link></li>
-            <li><router-link to="/docs/patterns">Patterns</router-link></li>
-            <li><router-link to="/docs/templates">Templates</router-link></li>
-          </ul>
+          <h3>Design</h3>
+          <p>
+            Find out how we approach the visual elements of our interface with
+            purpose.
+          </p>
+          <p><router-link to="/design/">Read design guidelines</router-link></p>
+        </div>
+        <div class="col">
+          <h3>Elements</h3>
+          <p>
+            Use elements as building blocks as you design and develop new
+            products and features.
+          </p>
+          <p><router-link to="/elements/">Browse elements</router-link></p>
+        </div>
+        <div class="col">
+          <h3>Patterns</h3>
+          <p>Patterns consist of design tokens, elements, and patterns.</p>
+          <p><router-link to="/patterns/">Browse patterns</router-link></p>
         </div>
       </div>
 
@@ -87,35 +91,37 @@
               elements/patterns/templates (this?)
             </li>
           </ol>
-
+          <p>
+            This is a place to document style guides for specific apps - that
+            may deviate from AXDD Components.
+          </p>
           <ul>
             <li>
-              <router-link to="/dev/topbar/">MyUW</router-link>
+              <router-link to="/guides/myuw/">MyUW</router-link>
             </li>
-            <li><router-link to="/dev/sidebar/">DawgPath</router-link></li>
+            <li><router-link to="/guides/dawgpath/">DawgPath</router-link></li>
           </ul>
         </div>
         <div class="col">
           <h3>Dev Sandbox</h3>
+          <p>Code sandbox for active development of any component.</p>
           <ul>
             <li>
-              <router-link to="/dev/topbar/">Topbar</router-link>
+              <router-link to="/sandbox/topbar/">Topbar</router-link>
             </li>
-            <li><router-link to="/dev/sidebar/">Sidebar</router-link></li>
+            <li><router-link to="/sandbox/sidebar/">Sidebar</router-link></li>
           </ul>
         </div>
       </div>
-
-      <footer class="pt-5 my-5 text-muted border-top">
-        Copyright &copy; {{ new Date().getFullYear() }} University of Washington
-      </footer>
-    </div>
-  </div>
+    </template>
+  </Layout>
 </template>
 
 <script>
+import Layout from "../layouts/home.vue";
+
 export default {
-  components: {},
+  components: { Layout },
   data() {
     return {};
   },

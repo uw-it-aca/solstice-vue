@@ -15,8 +15,14 @@
             <router-link
               class="nav-link bg-light-gray-hover rounded me-1"
               active-class="bg-light-gray text-purple"
-              to="/design/"
-              >Design</router-link
+              to="/content/"
+              >Content</router-link
+            >
+            <router-link
+              class="nav-link bg-light-gray-hover rounded me-1"
+              active-class="bg-light-gray text-purple"
+              to="/tokens/"
+              >Design Tokens</router-link
             >
             <router-link
               class="nav-link bg-light-gray-hover rounded me-1"
@@ -24,12 +30,7 @@
               to="/elements/"
               >Elements</router-link
             >
-            <router-link
-              class="nav-link bg-light-gray-hover rounded me-1"
-              active-class="bg-light-gray text-purple"
-              to="/content/"
-              >Content</router-link
-            >
+
             <router-link
               class="nav-link bg-light-gray-hover rounded"
               active-class="bg-light-gray text-purple"

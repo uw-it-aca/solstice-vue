@@ -22,9 +22,16 @@
         </div>
         <div class="col">
           <h2>Principles</h2>
-          <p>Get to know our foundational thinking and how we put it into action across our design system.</p>
+          <p>
+            Get to know our foundational thinking and how we put it into action
+            across our design system.
+          </p>
 
-          <p><router-link to="/principles">Learn about our principles</router-link></p>
+          <p>
+            <router-link to="/principles"
+              >Learn about our principles</router-link
+            >
+          </p>
         </div>
       </div>
 
@@ -34,8 +41,8 @@
         <div class="col">
           <h2>Guides</h2>
           <p>
-            Check out these guides to help you understand how to
-            design applications using AXDD Components.
+            Check out these guides to help you understand how to design
+            applications using AXDD Components.
           </p>
         </div>
       </div>
@@ -52,12 +59,9 @@
           </p>
         </div>
         <div class="col">
-          <h3>Design</h3>
-          <p>
-            Find out how we approach the visual elements of our interface with
-            purpose.
-          </p>
-          <p><router-link to="/design/">Read design guidelines</router-link></p>
+          <h3>Design Tokens</h3>
+          <p>Use design tokens to ensure consistency across the application.</p>
+          <p><router-link to="/tokens/">Browse tokens</router-link></p>
         </div>
         <div class="col">
           <h3>Elements</h3>

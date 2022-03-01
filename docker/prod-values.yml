@@ -7,17 +7,29 @@ ingress:
   enabled: true
   type: nginx
   tls:
-    zoom-static:
+    axdd-components:
       secretName: components.axdd.s.uw.edu-ingress-cert
       hosts:
         - components.axdd.s.uw.edu
+    axdd-styleguide:
+      secretName: styleguide.axdd.s.uw.edu-ingress-cert
+      hosts:
+        - styleguide.axdd.s.uw.edu
   hosts:
-    zoom-static:
+    axdd-components:
       host: components.axdd.s.uw.edu
+      paths:
+        - "/"
+    axdd-styleguide:
+      host: styleguide.axdd.s.uw.edu
       paths:
         - "/"
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      if ($host != 'components.axdd.s.uw.edu' ) {
+        return 301 $scheme://components.axdd.s.uw.edu;
+      }
 
 repo: axdd-components
 instance: prod

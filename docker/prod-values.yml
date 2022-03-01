@@ -19,7 +19,7 @@ ingress:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
 
-repo: axdd-styleguide
+repo: axdd-components
 instance: prod
 
 resources:

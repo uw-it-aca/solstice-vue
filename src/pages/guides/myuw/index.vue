@@ -1,23 +1,18 @@
 <template>
-  <div>
-    <div class="col-lg-8 mx-auto p-3 py-md-5">
-      <header class="d-flex align-items-center pb-3 mb-5 h4 border-bottom">
-        <i class="bi bi-back me-2 text-purple"></i>
-        <a href="/" class="text-reset text-decoration-none">AXDD Components</a>
-      </header>
-
+  <Layout>
+    <template #content>
       <h1>MyUW</h1>
 
       <p class="p-0 col-md-8 lead">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-        corporis pariatur possimus ipsam sit, veritatis nisi, ea aperiam
-        suscipit culpa, itaque natus ipsa et magni? Expedita officiis provident
-        veritatis vero.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+        atque incidunt est distinctio ex sint iusto accusantium dolorum expedita
+        deserunt, error vitae recusandae totam praesentium voluptate quae
+        inventore accusamus veritatis!
       </p>
 
       <hr class="mb-5 w-25 d-inline-block" />
 
-      <p>this is a fully composed rendering of myuw.</p>
+      <h2>Overview</h2>
 
       <div class="sg-render border p-0 mb-3 bg-light">
         <Topbar :app-name="'MyUW'" :user-name="'javerage'">
@@ -159,18 +154,16 @@
           <template #footer></template>
         </Topbar>
       </div>
-
-      <footer class="pt-5 my-5 text-muted border-top">
-        Copyright &copy; {{ new Date().getFullYear() }} University of Washington
-      </footer>
-    </div>
-  </div>
+    </template>
+  </Layout>
 </template>
 
 <script>
+import Layout from "../../../layouts/home.vue";
 import Topbar from "../../../_layouts/topbar.vue";
+
 export default {
-  components: { Topbar },
+  components: { Layout, Topbar },
   data() {
     return {};
   },

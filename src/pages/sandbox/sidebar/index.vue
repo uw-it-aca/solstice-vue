@@ -52,7 +52,7 @@
       <div class="row">
         <div class="col">
           <h1 class="text-uppercase sidebar-heading">{{ pageTitle }}</h1>
-          <slot></slot>
+          asdfasdasadsfsda
         </div>
       </div>
     </template>
@@ -61,10 +61,9 @@
 </template>
 
 <script>
-import SideBar from "../../_layouts/sidebar.vue";
+import SideBar from "../../../_layouts/sidebar.vue";
 
 export default {
-  name: "Support",
   components: {
     "uw-sidebar": SideBar,
   },

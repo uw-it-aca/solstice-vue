@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import Topbar from "../../_layouts/topbar.vue";
+import Topbar from "../../../_layouts/topbar.vue";
 
 export default {
   name: "MyApp",

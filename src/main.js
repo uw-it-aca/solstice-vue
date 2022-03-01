@@ -1,7 +1,6 @@
 import { createApp } from "vue";
 import App from "./app.vue";
 import router from "./router";
-import store from "./store";
 
 import VueMq from "vue3-mq";
 
@@ -25,6 +24,5 @@ app.use(VueMq, {
   },
 });
 app.use(router);
-app.use(store);
 
 app.mount("#app");

@@ -1,9 +1,11 @@
 import { createWebHistory, createRouter } from "vue-router";
 
-import Home from "../pages/home.vue";
-import MyApp from "../examples/my-app/home.vue";
-import SupportTools from "../examples/support-tools/home.vue";
+//import Home from "../pages/index.vue";
+//import MyApp from "../examples/my-app/home.vue";
+//import SupportTools from "../examples/support-tools/home.vue";
+import routes from "~pages";
 
+/*
 const routes = [
   {
     path: "/",
@@ -23,6 +25,7 @@ const routes = [
     pathToRegexpOptions: { strict: true },
   },
 ];
+*/
 
 const router = createRouter({
   history: createWebHistory(),

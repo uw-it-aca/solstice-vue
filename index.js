@@ -1,10 +1,10 @@
-// Base Components
-import CardProperty from "./src/_base/card-property.vue";
-import CardStatus from "./src/_base/card-status.vue";
-import Card from "./src/_base/card.vue";
-import LinkButton from "./src/_base/link-button.vue";
+// generic components
+import CardProperty from "./src/_components/card-property.vue";
+import CardStatus from "./src/_components/card-status.vue";
+import Card from "./src/_components/card.vue";
+import LinkButton from "./src/_components/link-button.vue";
 
-// Layout Components
+// layout components
 import Sidebar from "./src/_layouts/sidebar.vue";
 import Topbar from "./src/_layouts/topbar.vue";
 

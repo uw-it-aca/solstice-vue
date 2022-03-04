@@ -14,7 +14,7 @@
       <h2>Bootstrap</h2>
       <p>Bootstrap is the at the core of AXDD Components.</p>
 
-      <h2>Color Pallete</h2>
+      <h2>Color Palette</h2>
       <p>These are the default colors supported by AXDD Components.</p>
 
       <CodeBlock>

@@ -15,7 +15,7 @@
       <p>Bootstrap is the at the core of AXDD Components.</p>
 
       <h2>Color Palette</h2>
-      <p>These are the default colors supported by AXDD Components.</p>
+      <p>These are the default colors supported by AXDD Components. For each color, Bootstrap creates three classes: bg-xxxxx, text-xxxxx, and border-xxxxx</p>
 
       <CodeBlock>
         <template #preview>
@@ -27,13 +27,15 @@
               >
                 &nbsp;
               </div>
-              <small>dark-purple</small>
+              <small>dark-purple<br />
+              #452a78</small>
             </li>
             <li class="list-inline-item">
               <div class="bg-purple rounded" style="width: 85px; height: 60px">
                 &nbsp;
               </div>
-              <small>purple</small>
+              <small>purple<br />
+              #4d307f</small>
             </li>
             <li class="list-inline-item">
               <div
@@ -42,7 +44,8 @@
               >
                 &nbsp;
               </div>
-              <small>dark-beige</small>
+              <small>dark-beige<br />
+              #85754d</small>
             </li>
             <li class="list-inline-item">
               <div
@@ -51,13 +54,15 @@
               >
                 &nbsp;
               </div>
-              <small>mid-beige</small>
+              <small>mid-beige<br />
+              #ab9765</small>
             </li>
             <li class="list-inline-item">
               <div class="bg-beige rounded" style="width: 85px; height: 60px">
                 &nbsp;
               </div>
-              <small>beige</small>
+              <small>beige<br />
+              #e8e3d3</small>
             </li>
             <li class="list-inline-item">
               <div
@@ -66,19 +71,22 @@
               >
                 &nbsp;
               </div>
-              <small>light-beige</small>
+              <small>light-beige<br />
+              #faf8f4</small>
             </li>
             <li class="list-inline-item">
               <div class="bg-gold rounded" style="width: 85px; height: 60px">
                 &nbsp;
               </div>
-              <small>gold</small>
+              <small>gold<br />
+              #ffbc24</small>
             </li>
             <li class="list-inline-item">
               <div class="bg-teal rounded" style="width: 85px; height: 60px">
                 &nbsp;
               </div>
-              <small>teal</small>
+              <small>teal<br />
+              #4c7286</small>
             </li>
             <li class="list-inline-item">
               <div
@@ -87,7 +95,8 @@
               >
                 &nbsp;
               </div>
-              <small>light-gray</small>
+              <small>light-gray<br />
+              #e8e8e8</small>
             </li>
           </ul>
         </template>
@@ -104,7 +113,7 @@
       <CodeBlock>
         <template #preview>
           <div class="myuw-text-lg">Lorem ipsum dolor... 18px</div>
-          <div>Lorem ipsum dolor... 16px (BS5 default)</div>
+          <div>Lorem ipsum dolor... 16px (Bootstrap 5 default)</div>
           <div class="myuw-text-md">
             Lorem ipsum dolor... 14px (MyUW default)
           </div>

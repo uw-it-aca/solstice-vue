@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <template #content>
-      <h1>Content</h1>
+      <h1>Development Guide</h1>
 
       <p class="p-0 col-md-8 lead">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi
@@ -12,17 +12,15 @@
 
       <hr class="mb-5 w-25 d-inline-block" />
 
-      <h2>Voice and Tone</h2>
-      <h2>Grammar and mechanics</h2>
-      <h2>Language and inclusivity</h2>
-      <h2>Writing for errors</h2>
-      <h2>Writing for onboarding</h2>
+      <h2>Building components</h2>
+
+      <h2>AXDD Django Vue</h2>
     </template>
   </Layout>
 </template>
 
 <script>
-import Layout from "../../layouts/docs.vue";
+import Layout from "../layouts/docs.vue";
 
 export default {
   components: { Layout },

@@ -177,31 +177,12 @@ export default {
           <template #footer></template>
         </Sidebar>
       </div>
-
-      <h2>Card</h2>
-      <p>this is an empty card</p>
-
-      <div class="myuw-font-open-sans">
-        <CodeBlock>
-          <template #preview>
-            <div class="card rounded-0 shadow-sm" style="max-width: 400px">
-              <div class="card-body p-3">empty card</div>
-            </div>
-          </template>
-          <template #code>
-            <pre class="language-html rounded">
-<code>&lt;div class="card rounded-0 shadow-sm"&gt;
-  &lt;div class="card-body p-3"&gt;empty card&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-          </template>
-        </CodeBlock>
-      </div>
     </template>
   </Layout>
 </template>
 
 <script>
-import Layout from "../../layouts/home.vue";
+import Layout from "../../layouts/docs.vue";
 import Topbar from "../../_layouts/topbar.vue";
 import Sidebar from "../../_layouts/sidebar.vue";
 import CodeBlock from "../../components/CodeBlock.vue";

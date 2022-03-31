@@ -11,19 +11,21 @@
 
       <hr class="mb-5 w-25 d-inline-block" />
 
+      <h2>Bootstrap</h2>
+      <p>Bootstrap is the at the core of AXDD Components.</p>
+
       <h2>Button</h2>
 
       <h2>Heading</h2>
 
       <h2>Paragraph</h2>
 
-      <h2>Lists</h2>
     </template>
   </Layout>
 </template>
 
 <script>
-import Layout from "../../layouts/home.vue";
+import Layout from "../../layouts/docs.vue";
 
 export default {
   components: { Layout },

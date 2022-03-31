@@ -5,12 +5,12 @@
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/patterns/">Patterns</a></li>
           <li class="breadcrumb-item active" aria-current="page">
-            Page Layouts
+            Layouts
           </li>
         </ol>
       </nav>
 
-      <h1>Page Layouts</h1>
+      <h1>Layouts</h1>
 
       <p class="p-0 col-md-8 lead">
         Patterns are UI Patterns that fall on the more complex side of the
@@ -22,7 +22,7 @@
 
       <h2>Topbar</h2>
       <div class="sg-render border p-0 mb-5 bg-white">
-        <Topbar :app-name="'App Name'" :user-name="'javerage'">
+        <Topbar :app-name="'TopBar'" :user-name="'javerage'">
           <template #bar>
             <div class="bg-teal">
               <div class="container-xl">
@@ -114,7 +114,7 @@ export default {
       <h2>Sidebar</h2>
 
       <div class="sg-render border p-0 mb-5 bg-white">
-        <Sidebar :app-name="'App Name'" :user-name="'javerage'">
+        <Sidebar :app-name="'SideBar'" :user-name="'javerage'">
           <template #navigation>
             <ul class="nav flex-column">
               <li class="nav-item mb-1 bg-dark-purple rounded">
@@ -176,25 +176,6 @@ export default {
           </template>
           <template #footer></template>
         </Sidebar>
-      </div>
-
-      <h2>Card</h2>
-      <p>this is an empty card</p>
-
-      <div class="myuw-font-open-sans">
-        <CodeBlock>
-          <template #preview>
-            <div class="card rounded-0 shadow-sm" style="max-width: 400px">
-              <div class="card-body p-3">empty card</div>
-            </div>
-          </template>
-          <template #code>
-            <pre class="language-html rounded">
-<code>&lt;div class="card rounded-0 shadow-sm"&gt;
-  &lt;div class="card-body p-3"&gt;empty card&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-          </template>
-        </CodeBlock>
       </div>
     </template>
   </Layout>

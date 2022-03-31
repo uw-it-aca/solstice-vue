@@ -11,13 +11,13 @@
 
       <hr class="mb-5 w-25 d-inline-block" />
 
-      <h2>Button</h2>
-
       <h2>Heading</h2>
 
       <h2>Paragraph</h2>
 
       <h2>Lists</h2>
+
+      <h2>Button</h2>
     </template>
   </Layout>
 </template>

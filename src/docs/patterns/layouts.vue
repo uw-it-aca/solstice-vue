@@ -182,7 +182,7 @@ export default {
 </template>
 
 <script>
-import Layout from "../../layouts/home.vue";
+import Layout from "../../layouts/docs.vue";
 import Topbar from "../../_layouts/topbar.vue";
 import Sidebar from "../../_layouts/sidebar.vue";
 import CodeBlock from "../../components/CodeBlock.vue";

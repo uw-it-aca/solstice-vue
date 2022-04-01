@@ -61,7 +61,7 @@
 </template>
 
 <script>
-import SideBar from "../../../_layouts/sidebar.vue";
+import SideBar from "../../_layouts/sidebar.vue";
 
 export default {
   components: {

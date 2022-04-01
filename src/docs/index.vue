@@ -83,18 +83,6 @@
       <div class="row">
         <div class="col">
           <h3>Implementations</h3>
-          <p>There is 3 types of documentation...</p>
-
-          <ol>
-            <li>research - studies and rationale (gdocs, wiki)</li>
-            <li>
-              build - communicates what is being created (Figma,Jira,gdocs)
-            </li>
-            <li>
-              deploy - what was released(screenshot),
-              elements/patterns/templates (this?)
-            </li>
-          </ol>
           <p>
             This is a place to document style guides for specific apps - that
             may deviate from AXDD Components.
@@ -107,13 +95,19 @@
           </ul>
         </div>
         <div class="col">
-          <h3>Dev Sandbox</h3>
-          <p>Code sandbox for active development of any component.</p>
+          <h3>Development</h3>
+          <p>
+            Learn how to create global components that can be used by other
+            applications as well as creating brand new applications.
+          </p>
+          <p>
+            <router-link to="/dev/">Read development guidelines</router-link>
+          </p>
           <ul>
             <li>
-              <router-link to="/sandbox/topbar/">Topbar</router-link>
+              <router-link to="/dev/topbar/">Topbar</router-link>
             </li>
-            <li><router-link to="/sandbox/sidebar/">Sidebar</router-link></li>
+            <li><router-link to="/dev/sidebar/">Sidebar</router-link></li>
           </ul>
         </div>
       </div>
@@ -122,7 +116,7 @@
 </template>
 
 <script>
-import Layout from "../layouts/home.vue";
+import Layout from "../layouts/docs.vue";
 
 export default {
   components: { Layout },

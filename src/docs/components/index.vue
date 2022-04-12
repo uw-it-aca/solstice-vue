@@ -47,7 +47,7 @@
             <pre class="language-html rounded">
 <code>&lt;axdd-card>
   &lt;template #heading>
-    &lt;axdd-card-heading :level="3">asdflkj&lt;/axdd-card-heading>
+    &lt;axdd-card-heading :level="3">Heading&lt;/axdd-card-heading>
   &lt;/template>
   &lt;template #body>card body&lt;/template>
 &lt;/axdd-card></code></pre>
@@ -78,7 +78,7 @@
             <pre class="language-html rounded">
 <code>&lt;axdd-card>
   &lt;template #heading-action>
-    &lt;axdd-card-heading :level="3">asdflkj&lt;/axdd-card-heading>
+    &lt;axdd-card-heading :level="3">Heading&lt;/axdd-card-heading>
     &lt;axdd-card-action>
       &lt;a href="#" @click.prevent="greet">Card heading action&lt;/a>
     &lt;/axdd-card-action>
@@ -121,7 +121,7 @@
             <pre class="language-html rounded">
 <code>&lt;axdd-card>
   &lt;template #heading-action>
-    &lt;axdd-card-heading :level="3">asdflkj&lt;/axdd-card-heading>
+    &lt;axdd-card-heading :level="3">Heading&lt;/axdd-card-heading>
     &lt;axdd-card-action>
       &lt;div class="input-group">... html markup&lt;/div>
     &lt;/axdd-card-action>
@@ -138,7 +138,7 @@
           <template #preview>
             <axdd-card>
               <template #heading>
-                <axdd-card-heading :level="9">asdflkj</axdd-card-heading>
+                <axdd-card-heading :level="9">Heading</axdd-card-heading>
               </template>
               card body
               <template #footer> this is the footer </template>
@@ -148,7 +148,7 @@
             <pre class="language-html rounded">
 <code>&lt;axdd-card>
   &lt;template #heading>
-    &lt;axdd-card-heading :level="3">asdflkj&lt;/axdd-card-heading>
+    &lt;axdd-card-heading :level="3">Heading&lt;/axdd-card-heading>
   &lt;/template>
   &lt;template #body>card body&lt;/template>
   &lt;template #footer>this is the footer&lt;/template>

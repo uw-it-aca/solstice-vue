@@ -18,19 +18,39 @@
 
       <h2>Card (1.0.4)</h2>
       <p>this is an empty card</p>
+      <div class="axdd-font-open-sans" style="max-width: 75%">
+        <CodeBlock>
+          <template #preview>
+            <axdd-card>card body</axdd-card>
+          </template>
+          <template #code>
+            <pre class="language-html rounded">
+<code>&lt;axdd-card>
+  &lt;template #body>card body&lt;/template>
+&lt;/axdd-card></code></pre>
+          </template>
+        </CodeBlock>
+      </div>
 
+      <p>this is a card w/ header</p>
       <div class="axdd-font-open-sans" style="max-width: 75%">
         <CodeBlock>
           <template #preview>
             <axdd-card>
-              <template #header>card header</template>
-              <template #body>card body</template>
-              <template #footer>card footer</template>
+              <template #header>
+                <axdd-card-header>asdflkj</axdd-card-header>
+              </template>
+              card body
             </axdd-card>
           </template>
           <template #code>
             <pre class="language-html rounded">
-<code>&lt;axdd-card>empty card&lt;/axdd-card></code></pre>
+<code>&lt;axdd-card>
+  &lt;template #header>
+      &lt;axdd-card-header>asdflkj&lt;/axdd-card-header>
+  &lt;/template>
+  &lt;template #body>card body&lt;/template>
+&lt;/axdd-card></code></pre>
           </template>
         </CodeBlock>
       </div>
@@ -107,7 +127,9 @@
 import Layout from "../../layouts/docs.vue";
 import CodeBlock from "../../components/CodeBlock.vue";
 
-import Card from "../../_components/card.vue";
+import Card from "../../_components/card/card.vue";
+import CardHeader from "../../_components/card/header.vue";
+import CardFooter from "../../_components/card/footer.vue";
 
 import Tabs from "../../_components/tabs/tabs.vue";
 import TabItem from "../../_components/tabs/item.vue";
@@ -118,6 +140,8 @@ export default {
     Layout,
     CodeBlock,
     "axdd-card": Card,
+    "axdd-card-header": CardHeader,
+    "axdd-card-footer": CardFooter,
     "axdd-tabs": Tabs,
     "axdd-tab-item": TabItem,
     "axdd-tab-panel": TabPanel,

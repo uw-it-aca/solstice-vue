@@ -1,6 +1,6 @@
 <template>
   <div class="tabs">
-    <ul class="nav nav-lines mb-3" :id="tabsId" role="tablist">
+    <ul class="nav nav-lines mb-4" :id="tabsId" role="tablist">
       <slot name="items">
         <!-- axdd-tab-button and uw-tab-dropdown components with panelId-->
       </slot>

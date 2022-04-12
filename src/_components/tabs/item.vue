@@ -56,12 +56,16 @@ export default {
     },
     moveTab(index) {
       // focus and click on tab
-      this.elements[index].focus();
       this.elements[index].click();
+      this.elements[index].focus();
+
       // set tabindexes
       Array.from(this.elements).forEach((element, i) => {
-        if (i == index) element.tabIndex = 0;
-        else element.tabIndex = -1;
+        if (i == index) {
+          element.tabIndex = 0;
+        } else {
+          element.tabIndex = -1;
+        }
       });
     },
     moveNext(event) {

@@ -55,16 +55,21 @@
         </CodeBlock>
       </div>
 
-      <p>this is a card w/ a header action</p>
+      <p>this is a card w/ a button as header action</p>
       <div class="axdd-font-open-sans" style="max-width: 75%">
         <CodeBlock>
           <template #preview>
             <axdd-card>
               <template #heading-action>
-                <axdd-card-heading :level="3">asdflkj</axdd-card-heading>
-                <axdd-card-action @click.prevent="greet"
-                  >Card heading action</axdd-card-action
-                >
+                <axdd-card-heading :level="3">Heading</axdd-card-heading>
+                <axdd-card-action>
+                  <a
+                    href="#"
+                    class="btn btn-dark-beige btn-sm"
+                    @click.prevent="greet"
+                    >Card heading action</a
+                  >
+                </axdd-card-action>
               </template>
               card body
             </axdd-card>
@@ -74,7 +79,52 @@
 <code>&lt;axdd-card>
   &lt;template #heading-action>
     &lt;axdd-card-heading :level="3">asdflkj&lt;/axdd-card-heading>
-    &lt;axdd-card-action @click.prevent="greet">Card heading action&lt;/axdd-card-action>
+    &lt;axdd-card-action>
+      &lt;a href="#" @click.prevent="greet">Card heading action&lt;/a>
+    &lt;/axdd-card-action>
+  &lt;/template>
+  &lt;template #body>card body&lt;/template>
+&lt;/axdd-card></code></pre>
+          </template>
+        </CodeBlock>
+      </div>
+
+      <p>this is a card w/ html as header action</p>
+      <div class="axdd-font-open-sans" style="max-width: 75%">
+        <CodeBlock>
+          <template #preview>
+            <axdd-card>
+              <template #heading-action>
+                <axdd-card-heading :level="3">Heading</axdd-card-heading>
+                <axdd-card-action>
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control form-control-sm"
+                      placeholder="Search all students..."
+                      aria-label="Recipient's username"
+                      aria-describedby="button-addon2"
+                    /><button
+                      class="btn btn-sm btn-dark-beige"
+                      type="button"
+                      id="button-addon2"
+                    >
+                      Search
+                    </button>
+                  </div>
+                </axdd-card-action>
+              </template>
+              card body
+            </axdd-card>
+          </template>
+          <template #code>
+            <pre class="language-html rounded">
+<code>&lt;axdd-card>
+  &lt;template #heading-action>
+    &lt;axdd-card-heading :level="3">asdflkj&lt;/axdd-card-heading>
+    &lt;axdd-card-action>
+      &lt;div class="input-group">... html markup&lt;/div>
+    &lt;/axdd-card-action>
   &lt;/template>
   &lt;template #body>card body&lt;/template>
 &lt;/axdd-card></code></pre>

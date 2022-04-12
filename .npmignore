@@ -28,5 +28,4 @@ pnpm-debug.log*
 /src/dev
 /src/docs
 /src/layouts
-/src/pages
 /src/router

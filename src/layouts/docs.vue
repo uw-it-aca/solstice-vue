@@ -34,12 +34,12 @@
             <router-link
               class="nav-link bg-light-gray-hover rounded"
               active-class="bg-light-gray text-purple"
-              to="/patterns/"
-              >Patterns</router-link
+              to="/components/"
+              >Components</router-link
             >
           </nav>
         </div>
-        <div class="text-muted">V.1.0.3</div>
+        <div class="text-muted">V.1.0.4</div>
       </header>
 
       <main>

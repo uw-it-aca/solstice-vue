@@ -18,6 +18,7 @@
           <ul>
             <li>Faster design and development workflow</li>
             <li>Living documentation</li>
+            <li>Automated testing</li>
           </ul>
         </div>
         <div class="col">
@@ -72,9 +73,9 @@
           <p><router-link to="/elements/">Browse elements</router-link></p>
         </div>
         <div class="col">
-          <h3>Patterns</h3>
+          <h3>Components</h3>
           <p>Patterns consist of design tokens, elements, and patterns.</p>
-          <p><router-link to="/patterns/">Browse patterns</router-link></p>
+          <p><router-link to="/components/">Browse components</router-link></p>
         </div>
       </div>
 

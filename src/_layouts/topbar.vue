@@ -33,9 +33,11 @@
               class="d-inline align-middle text-white"
               :class="[$mq == 'desktop' ? 'h3' : 'h5']"
             >
-              <a :href="appRootUrl" class="text-white text-decoration-none">{{
-                appName
-              }}</a>
+              <a
+                :href="appRootUrl"
+                class="axdd-font-encode-sans text-white text-decoration-none"
+                >{{ appName }}</a
+              >
             </div>
           </div>
         </div>

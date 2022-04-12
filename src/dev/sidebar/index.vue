@@ -1,5 +1,5 @@
 <template>
-  <uw-sidebar :app-name="appName" :page-title="pageTitle">
+  <axdd-sidebar :app-name="appName" :page-title="pageTitle">
     <template #navigation>
       <ul class="nav flex-column">
         <li class="nav-item mb-2 bg-dark-purple rounded">
@@ -57,7 +57,7 @@
       </div>
     </template>
     <template #footer></template>
-  </uw-sidebar>
+  </axdd-sidebar>
 </template>
 
 <script>
@@ -65,7 +65,7 @@ import SideBar from "../../_layouts/sidebar.vue";
 
 export default {
   components: {
-    "uw-sidebar": SideBar,
+    "axdd-sidebar": SideBar,
   },
   props: {
     pageTitle: {

@@ -23,8 +23,9 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-# exclude majore of /src from npm
+# exclude majority of /src from npm package
 /src/components
+/src/dev
+/src/docs
 /src/layouts
-/src/pages
 /src/router

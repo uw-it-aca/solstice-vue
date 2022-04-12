@@ -37,8 +37,8 @@
         <CodeBlock>
           <template #preview>
             <axdd-card>
-              <template #header>
-                <axdd-card-header>asdflkj</axdd-card-header>
+              <template #heading>
+                <axdd-card-heading :level="3">Heading</axdd-card-heading>
               </template>
               card body
             </axdd-card>
@@ -46,10 +46,62 @@
           <template #code>
             <pre class="language-html rounded">
 <code>&lt;axdd-card>
-  &lt;template #header>
-      &lt;axdd-card-header>asdflkj&lt;/axdd-card-header>
+  &lt;template #heading>
+    &lt;axdd-card-heading :level="3">asdflkj&lt;/axdd-card-heading>
   &lt;/template>
   &lt;template #body>card body&lt;/template>
+&lt;/axdd-card></code></pre>
+          </template>
+        </CodeBlock>
+      </div>
+
+      <p>this is a card w/ a header action</p>
+      <div class="axdd-font-open-sans" style="max-width: 75%">
+        <CodeBlock>
+          <template #preview>
+            <axdd-card>
+              <template #heading-action>
+                <axdd-card-heading :level="3">asdflkj</axdd-card-heading>
+                <axdd-card-action @click.prevent="greet"
+                  >Card heading action</axdd-card-action
+                >
+              </template>
+              card body
+            </axdd-card>
+          </template>
+          <template #code>
+            <pre class="language-html rounded">
+<code>&lt;axdd-card>
+  &lt;template #heading-action>
+    &lt;axdd-card-heading :level="3">asdflkj&lt;/axdd-card-heading>
+    &lt;axdd-card-action @click.prevent="greet">Card heading action&lt;/axdd-card-action>
+  &lt;/template>
+  &lt;template #body>card body&lt;/template>
+&lt;/axdd-card></code></pre>
+          </template>
+        </CodeBlock>
+      </div>
+
+      <p>this is a card w/ footer</p>
+      <div class="axdd-font-open-sans" style="max-width: 75%">
+        <CodeBlock>
+          <template #preview>
+            <axdd-card>
+              <template #heading>
+                <axdd-card-heading :level="9">asdflkj</axdd-card-heading>
+              </template>
+              card body
+              <template #footer> this is the footer </template>
+            </axdd-card>
+          </template>
+          <template #code>
+            <pre class="language-html rounded">
+<code>&lt;axdd-card>
+  &lt;template #heading>
+    &lt;axdd-card-heading :level="3">asdflkj&lt;/axdd-card-heading>
+  &lt;/template>
+  &lt;template #body>card body&lt;/template>
+  &lt;template #footer>this is the footer&lt;/template>
 &lt;/axdd-card></code></pre>
           </template>
         </CodeBlock>
@@ -128,8 +180,8 @@ import Layout from "../../layouts/docs.vue";
 import CodeBlock from "../../components/CodeBlock.vue";
 
 import Card from "../../_components/card/card.vue";
-import CardHeader from "../../_components/card/header.vue";
-import CardFooter from "../../_components/card/footer.vue";
+import CardHeading from "../../_components/card/heading.vue";
+import CardAction from "../../_components/card/action.vue";
 
 import Tabs from "../../_components/tabs/tabs.vue";
 import TabItem from "../../_components/tabs/item.vue";
@@ -140,14 +192,19 @@ export default {
     Layout,
     CodeBlock,
     "axdd-card": Card,
-    "axdd-card-header": CardHeader,
-    "axdd-card-footer": CardFooter,
+    "axdd-card-heading": CardHeading,
+    "axdd-card-action": CardAction,
     "axdd-tabs": Tabs,
     "axdd-tab-item": TabItem,
     "axdd-tab-panel": TabPanel,
   },
   data() {
     return {};
+  },
+  methods: {
+    greet() {
+      alert("Hello...");
+    },
   },
 };
 </script>

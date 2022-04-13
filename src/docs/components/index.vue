@@ -21,7 +21,9 @@
       <div class="axdd-font-open-sans" style="max-width: 75%">
         <CodeBlock>
           <template #preview>
-            <axdd-card>card body</axdd-card>
+            <axdd-card>
+              <template #body>card body</template>
+            </axdd-card>
           </template>
           <template #code>
             <pre class="language-html rounded">
@@ -40,7 +42,7 @@
               <template #heading>
                 <axdd-card-heading :level="3">Heading</axdd-card-heading>
               </template>
-              card body
+              <template #body>card body</template>
             </axdd-card>
           </template>
           <template #code>
@@ -71,7 +73,7 @@
                   >
                 </axdd-card-action>
               </template>
-              card body
+              <template #body>card body</template>
             </axdd-card>
           </template>
           <template #code>
@@ -114,7 +116,7 @@
                   </div>
                 </axdd-card-action>
               </template>
-              card body
+              <template #body>card body</template>
             </axdd-card>
           </template>
           <template #code>
@@ -140,7 +142,7 @@
               <template #heading>
                 <axdd-card-heading :level="9">Heading</axdd-card-heading>
               </template>
-              card body
+              <template #body>card body</template>
               <template #footer> this is the footer </template>
             </axdd-card>
           </template>

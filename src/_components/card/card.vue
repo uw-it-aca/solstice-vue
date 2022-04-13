@@ -12,8 +12,8 @@
     >
       <slot name="heading-action"></slot>
     </div>
-    <div class="card-body p-4">
-      <slot></slot>
+    <div v-if="$slots['body']" class="card-body p-4">
+      <slot name="body"></slot>
     </div>
 
     <div v-if="$slots['footer']" class="card-footer bg-white px-4 py-3 small">

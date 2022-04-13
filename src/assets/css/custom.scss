@@ -85,3 +85,10 @@ $utilities: (
 .axdd-font-encode-sans {
   font-family: "Encode Sans Condensed", sans-serif !important;
 }
+
+$text-sizes: ("tiny": 10px, "xxs": 11px, "xs": 12px, "sm": 13px, "md": 14px, "lg": 18px);
+@each $name, $size in $text-sizes {
+  .axdd-text-#{$name} {
+    font-size: $size;
+  }
+}

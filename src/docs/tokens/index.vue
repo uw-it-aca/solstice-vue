@@ -159,12 +159,29 @@
 
       <h2>Typography</h2>
       <p>
-        Open Sans is the default font-family used by MyUW. It is typically set
+        Open Sans is the default font-family used by UW. It is typically set
         at the page body level.
       </p>
       <CodeBlock>
         <template #preview>
           <div class="axdd-font-open-sans">Lorem ipsum dolor... Open Sans</div>
+        </template>
+        <template #code>
+          <pre class="language-html rounded">
+<code>&lt;body class="axdd-font-open-sans">Lorem ipsum dolor... Open Sans&lt;/body>
+</code></pre>
+        </template>
+      </CodeBlock>
+
+      <p>
+        Encode Sans Condenses is the heading font-family used by UW. It is
+        typically set at the page body level.
+      </p>
+      <CodeBlock>
+        <template #preview>
+          <div class="axdd-font-encode-sans">
+            Lorem ipsum dolor... Encode Sans Condensed
+          </div>
         </template>
         <template #code>
           <pre class="language-html rounded">

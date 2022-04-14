@@ -174,7 +174,7 @@
       </CodeBlock>
 
       <p>
-        Encode Sans Condenses is the heading font-family used by UW. It is
+        Encode Sans Condensed is the heading font-family used by UW. It is
         typically set at the page body level.
       </p>
       <CodeBlock>

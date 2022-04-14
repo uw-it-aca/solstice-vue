@@ -86,9 +86,5 @@ $utilities: (
   font-family: "Encode Sans Condensed", sans-serif !important;
 }
 
-$text-sizes: ("tiny": 10px, "xxs": 11px, "xs": 12px, "sm": 13px, "md": 14px, "lg": 18px);
-@each $name, $size in $text-sizes {
-  .axdd-text-#{$name} {
-    font-size: $size;
-  }
-}
+$extra-font-sizes: (7: 0.875rem, 8: 0.8125rem, 9: 0.75rem, 10: 	0.6875rem, 11: 	0.625rem);
+$font-sizes: map-merge($font-sizes, $extra-font-sizes);

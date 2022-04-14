@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@popperjs/core": "^2.9.2",
@@ -26,6 +28,7 @@
     "prismjs": "^1.26.0",
     "sass": "^1.35.2",
     "vite": "^2.7.13",
-    "vite-plugin-pages": "^0.20.2"
+    "vite-plugin-pages": "^0.20.2",
+    "vitest": "^0.9.3"
   }
 }

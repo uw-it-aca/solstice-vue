@@ -128,16 +128,16 @@
         </template>
       </CodeBlock>
 
-      <h2>Font Sizes</h2>
+      <h2>Font Sizes (1.0.5)</h2>
       <CodeBlock>
         <template #preview>
           <h3>Bootstrap default</h3>
-          <p class="fs-1">.fs-1 text</p>
-          <p class="fs-2">.fs-2 text</p>
-          <p class="fs-3">.fs-3 text</p>
-          <p class="fs-4">.fs-4 text</p>
-          <p class="fs-5">.fs-5 text</p>
-          <p class="fs-6">.fs-6 text</p>
+          <p class="fs-1">.fs-1 text (40px)</p>
+          <p class="fs-2">.fs-2 text (32px)</p>
+          <p class="fs-3">.fs-3 text (28px)</p>
+          <p class="fs-4">.fs-4 text (24px)</p>
+          <p class="fs-5">.fs-5 text (20px)</p>
+          <p class="fs-6">.fs-6 text (16px)</p>
 
           <h3>AXDD-Components</h3>
           <p class="fs-7">.fs-7 text (14px)</p>

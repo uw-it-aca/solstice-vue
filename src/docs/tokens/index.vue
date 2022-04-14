@@ -131,25 +131,28 @@
       <h2>Font Sizes</h2>
       <CodeBlock>
         <template #preview>
-          <div class="axdd-text-lg">Lorem ipsum dolor... 18px</div>
-          <div>Lorem ipsum dolor... 16px (Bootstrap 5 default)</div>
-          <div class="axdd-text-md">
-            Lorem ipsum dolor... 14px (MyUW default)
-          </div>
-          <div class="axdd-text-sm">Lorem ipsum dolor... 13px</div>
-          <div class="axdd-text-xs">Lorem ipsum dolor... 12px</div>
-          <div class="axdd-text-xxs">Lorem ipsum dolor... 11px</div>
-          <div class="axdd-text-tiny">Lorem ipsum dolor... 10px</div>
+          <h3>Bootstrap default</h3>
+          <p class="fs-1">.fs-1 text</p>
+          <p class="fs-2">.fs-2 text</p>
+          <p class="fs-3">.fs-3 text</p>
+          <p class="fs-4">.fs-4 text</p>
+          <p class="fs-5">.fs-5 text</p>
+          <p class="fs-6">.fs-6 text</p>
+
+          <h3>AXDD-Components</h3>
+          <p class="fs-7">.fs-7 text (14px)</p>
+          <p class="fs-8">.fs-8 text (13px)</p>
+          <p class="fs-9">.fs-9 text (12px)</p>
+          <p class="fs-10">.fs-10 text (11px)</p>
+          <p class="fs-11">.fs-11 text (10px)</p>
         </template>
         <template #code>
           <pre class="language-html rounded">
-<code>&lt;div class="axdd-text-lg">Lorem ipsum dolor&lt;/div>
-&lt;div>Lorem ipsum dolor&lt;/div>
-&lt;div class="axdd-text-md">Lorem ipsum dolor&lt;/div>
-&lt;div class="axdd-text-sm">Lorem ipsum dolor&lt;/div>
-&lt;div class="axdd-text-xs">Lorem ipsum dolor&lt;/div>
-&lt;div class="axdd-text-xxs">Lorem ipsum dolor&lt;/div>
-&lt;div class="axdd-text-tiny">Lorem ipsum dolor&lt;/div>
+<code>&lt;div class="fs-7">Lorem ipsum dolor&lt;/div>
+&lt;div class="fs-8">Lorem ipsum dolor&lt;/div>
+&lt;div class="fs-9">Lorem ipsum dolor&lt;/div>
+&lt;div class="fs-10">Lorem ipsum dolor&lt;/div>
+&lt;div class="fs-11">Lorem ipsum dolor&lt;/div>
 </code></pre>
         </template>
       </CodeBlock>

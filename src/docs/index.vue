@@ -84,19 +84,14 @@
       <div class="row">
         <div class="col">
           <div class="bg-light-beige p-4 rounded-3">
-            <h3>Implementations</h3>
+            <h3>What's New? v1.0.5</h3>
             <p>
-              This is a place to document style guides for specific apps - that
-              may deviate from AXDD Components.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
+              nostrum beatae aperiam nesciunt voluptate. Placeat ipsum libero
+              similique enim labore corrupti porro iure commodi laborum iste
+              itaque, magnam voluptate esse.
             </p>
-            <ul>
-              <li>
-                <router-link to="/guides/myuw/">MyUW</router-link>
-              </li>
-              <li>
-                <router-link to="/guides/dawgpath/">DawgPath</router-link>
-              </li>
-            </ul>
+            <p>Read updates</p>
           </div>
         </div>
         <div class="col">
@@ -114,9 +109,11 @@
             <ul>
               <li>
                 <router-link to="/development/topbar/">Topbar</router-link>
+                (generic)
               </li>
               <li>
                 <router-link to="/development/sidebar/">Sidebar</router-link>
+                (generic)
               </li>
             </ul>
           </div>

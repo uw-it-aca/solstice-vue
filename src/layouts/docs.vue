@@ -39,7 +39,7 @@
             >
           </nav>
         </div>
-        <div class="text-muted">V.1.0.4</div>
+        <div class="text-muted">V.1.0.5</div>
       </header>
 
       <main>

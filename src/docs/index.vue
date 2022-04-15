@@ -83,33 +83,43 @@
 
       <div class="row">
         <div class="col">
-          <h3>Implementations</h3>
-          <p>
-            This is a place to document style guides for specific apps - that
-            may deviate from AXDD Components.
-          </p>
-          <ul>
-            <li>
-              <router-link to="/guides/myuw/">MyUW</router-link>
-            </li>
-            <li><router-link to="/guides/dawgpath/">DawgPath</router-link></li>
-          </ul>
+          <div class="bg-light-beige p-4 rounded-3">
+            <h3>Implementations</h3>
+            <p>
+              This is a place to document style guides for specific apps - that
+              may deviate from AXDD Components.
+            </p>
+            <ul>
+              <li>
+                <router-link to="/guides/myuw/">MyUW</router-link>
+              </li>
+              <li>
+                <router-link to="/guides/dawgpath/">DawgPath</router-link>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="col">
-          <h3>Development</h3>
-          <p>
-            Learn how to create global components that can be used by other
-            applications as well as creating brand new applications.
-          </p>
-          <p>
-            <router-link to="/dev/">Read development guidelines</router-link>
-          </p>
-          <ul>
-            <li>
-              <router-link to="/dev/topbar/">Topbar</router-link>
-            </li>
-            <li><router-link to="/dev/sidebar/">Sidebar</router-link></li>
-          </ul>
+          <div class="bg-light-beige p-4 rounded-3">
+            <h3>Development</h3>
+            <p>
+              Learn how to create global components that can be used by other
+              applications as well as creating brand new applications.
+            </p>
+            <p>
+              <router-link to="/development/"
+                >Read development guidelines</router-link
+              >
+            </p>
+            <ul>
+              <li>
+                <router-link to="/development/topbar/">Topbar</router-link>
+              </li>
+              <li>
+                <router-link to="/development/sidebar/">Sidebar</router-link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </template>

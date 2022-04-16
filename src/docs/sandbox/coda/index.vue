@@ -60,7 +60,7 @@
                   :active-tab="true"
                   >All Courses</axdd-tab-item
                 >
-                <axdd-tab-item :tabs-id="'courses'" :panel-id="'next'"
+                <axdd-tab-item :tabs-id="'courses'" :panel-id="'mine'"
                   >Only My Courses</axdd-tab-item
                 >
               </template>

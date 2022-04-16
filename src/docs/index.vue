@@ -108,11 +108,11 @@
             </p>
             <ul>
               <li>
-                <router-link to="/development/topbar/">Topbar</router-link>
+                <router-link to="/sandbox/topbar/">Topbar</router-link>
                 (generic)
               </li>
               <li>
-                <router-link to="/development/sidebar/">Sidebar</router-link>
+                <router-link to="/sandbox/sidebar/">Sidebar</router-link>
                 (generic)
               </li>
             </ul>

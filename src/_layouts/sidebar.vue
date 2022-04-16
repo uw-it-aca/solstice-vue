@@ -85,8 +85,15 @@
         <footer v-if="$slots['footer']" class="mt-auto">
           <slot name="footer">
             <div class="font-weight-light py-3 small">
-              Copyright &copy; {{ new Date().getFullYear() }} University of
-              Washington
+              <ul class="list-inline m-0">
+                <li class="list-inline-item"><a href="#">Contact</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+              </ul>
+              <div>
+                Copyright &copy; {{ new Date().getFullYear() }} University of
+                Washington
+              </div>
             </div>
           </slot>
         </footer>

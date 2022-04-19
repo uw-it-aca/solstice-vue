@@ -80,7 +80,7 @@ jobs:
       - name: Run Vitest coverage
         run: npm run coverage
 
-      - name: Coveralls
+      - name: Post coverage data to Coveralls
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}

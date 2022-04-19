@@ -83,8 +83,8 @@
 
       <div class="row">
         <div class="col">
-          <div class="bg-light-beige p-4 rounded-3">
-            <h3>What's New? v1.0.5</h3>
+          <div class="alert alert-beige border-0 p-4">
+            <h3 class="h5 mb-4">What's New? v.1.0.5</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
               nostrum beatae aperiam nesciunt voluptate. Placeat ipsum libero
@@ -95,8 +95,8 @@
           </div>
         </div>
         <div class="col">
-          <div class="bg-light-beige p-4 rounded-3">
-            <h3>Development</h3>
+          <div class="alert alert-beige border-0 p-4 mb-4">
+            <h3 class="h5 mb-4">Development</h3>
             <p>
               Learn how to create global components that can be used by other
               applications as well as creating brand new applications.

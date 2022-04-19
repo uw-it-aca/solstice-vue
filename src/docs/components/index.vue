@@ -11,12 +11,12 @@
 
       <hr class="mb-5 w-25 d-inline-block" />
 
-      <h2>Layouts (1.0.0)</h2>
+      <h2>Layouts <VersionBadge>1.0.0</VersionBadge></h2>
       <p><router-link to="/components/layouts">View Layouts</router-link></p>
 
       <h2>Navigation</h2>
 
-      <h2>Card (1.0.4)</h2>
+      <h2>Card <VersionBadge>1.0.4</VersionBadge></h2>
       <p>this is an empty card</p>
       <div class="axdd-font-open-sans" style="max-width: 75%">
         <CodeBlock>
@@ -159,7 +159,7 @@
         </CodeBlock>
       </div>
 
-      <h2>Tabs (1.0.4)</h2>
+      <h2>Tabs <VersionBadge>1.0.4</VersionBadge></h2>
       <div class="axdd-font-open-sans" style="max-width: 75%">
         <CodeBlock>
           <template #preview>
@@ -230,6 +230,7 @@
 <script>
 import Layout from "../../layouts/docs.vue";
 import CodeBlock from "../../components/CodeBlock.vue";
+import VersionBadge from "../../components/VersionBadge.vue";
 
 import Card from "../../_components/card/card.vue";
 import CardHeading from "../../_components/card/heading.vue";
@@ -243,6 +244,7 @@ export default {
   components: {
     Layout,
     CodeBlock,
+    VersionBadge,
     "axdd-card": Card,
     "axdd-card-heading": CardHeading,
     "axdd-card-action": CardAction,

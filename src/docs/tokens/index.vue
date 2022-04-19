@@ -158,7 +158,7 @@
         </template>
       </CodeBlock>
 
-      <h2>Font Sizes (1.0.5)</h2>
+      <h2>Font Sizes <VersionBadge>1.0.5</VersionBadge></h2>
       <p>The base font-size for our apps is 16px.</p>
       <p>
         <a
@@ -242,9 +242,14 @@
 <script>
 import Layout from "../../layouts/docs.vue";
 import CodeBlock from "../../components/CodeBlock.vue";
+import VersionBadge from "../../components/VersionBadge.vue";
 
 export default {
-  components: { Layout, CodeBlock },
+  components: {
+    Layout,
+    CodeBlock,
+    VersionBadge,
+  },
   data() {
     return {};
   },

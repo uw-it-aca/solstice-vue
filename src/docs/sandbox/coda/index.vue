@@ -23,7 +23,7 @@
           <div class="col">
             <h2 class="axdd-font-encode-sans">My data for TRAIN 100 A</h2>
 
-            <div class="alert alert-beige small" role="alert">
+            <div class="alert alert-dark-beige small" role="alert">
               <p>
                 The query you requested will not generate data for one of the
                 following reasons:
@@ -66,6 +66,26 @@
               </template>
               <template #panels>
                 <axdd-tab-panel :panel-id="'all'" :active-panel="true">
+                  <div class="d-flex mb-4">
+                    <select
+                      class="form-select form-select-sm me-2 w-25"
+                      aria-label=""
+                    >
+                      <option selected>All Quarters</option>
+                      <option value="1">Spring</option>
+                      <option value="2">Summer</option>
+                      <option value="3">Winter</option>
+                    </select>
+                    <select
+                      class="form-select form-select-sm w-25"
+                      aria-label=""
+                    >
+                      <option selected>All Years</option>
+                      <option value="1">2022</option>
+                      <option value="2">2021</option>
+                      <option value="3">2020</option>
+                    </select>
+                  </div>
                   <p>
                     <strong>all</strong> Lorem ipsum dolor sit amet consectetur
                     adipisicing elit. Id aperiam dolores harum doloribus libero
@@ -74,6 +94,17 @@
                   </p>
                 </axdd-tab-panel>
                 <axdd-tab-panel :panel-id="'mine'">
+                  <div class="d-flex mb-4">
+                    <select
+                      class="form-select form-select-sm me-2 w-50"
+                      aria-label=""
+                    >
+                      <option selected>All My Courses</option>
+                      <option value="1">2017 - Spring</option>
+                      <option value="2">2017 - Summer</option>
+                      <option value="3">2016 - Winter</option>
+                    </select>
+                  </div>
                   <p>
                     <strong>only mine</strong> Lorem ipsum dolor sit amet
                     consectetur adipisicing elit. Repellendus iste, expedita,

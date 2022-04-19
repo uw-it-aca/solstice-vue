@@ -11,12 +11,12 @@
 
       <hr class="mb-5 w-25 d-inline-block" />
 
-      <h2>Layouts (1.0.0)</h2>
+      <h2>Layouts <span class="badge bg-beige text-dark fs-7">1.0.0</span></h2>
       <p><router-link to="/components/layouts">View Layouts</router-link></p>
 
       <h2>Navigation</h2>
 
-      <h2>Card (1.0.4)</h2>
+      <h2>Card <span class="badge bg-beige text-dark fs-7">1.0.4</span></h2>
       <p>this is an empty card</p>
       <div class="axdd-font-open-sans" style="max-width: 75%">
         <CodeBlock>
@@ -159,7 +159,7 @@
         </CodeBlock>
       </div>
 
-      <h2>Tabs (1.0.4)</h2>
+      <h2>Tabs <span class="badge bg-beige text-dark fs-7">1.0.4</span></h2>
       <div class="axdd-font-open-sans" style="max-width: 75%">
         <CodeBlock>
           <template #preview>

@@ -75,7 +75,7 @@ jobs:
           node-version: '16'
 
       - name: Install packages
-        run: npm install .
+        run: npm install
 
       - name: Run Vitest coverage
         run: npm run coverage

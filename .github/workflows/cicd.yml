@@ -6,7 +6,7 @@ env:
 
 on:
   push:
-    branches: [main, develop, task/test-action]
+    branches: [main, develop]
   pull_request:
     branches: [main, develop]
     types: [opened, reopened, synchronize]

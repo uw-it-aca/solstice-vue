@@ -1,4 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/uw-it-aca/axdd-components/badge.svg?branch=task/test-action)](https://coveralls.io/github/uw-it-aca/axdd-components?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/uw-it-aca/axdd-components/badge.svg?branch=main)](https://coveralls.io/github/uw-it-aca/axdd-components?branch=main)
 
 # axdd-components
 AXDD VueJS Component Library

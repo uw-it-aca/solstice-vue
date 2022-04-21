@@ -237,8 +237,7 @@
       third ...
     &lt;/axdd-tabs-panel>
   &lt;/template>
-&lt;/axdd-tabs></code>
-            </pre>
+&lt;/axdd-tabs></code></pre>
           </template>
         </CodeBlock>
       </div>

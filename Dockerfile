@@ -1,4 +1,4 @@
-FROM gcr.io/uwit-mci-axdd/nginx-container:1.0.3 as app-container
+FROM gcr.io/uwit-mci-axdd/nginx-container:1.0.3 as pre-app-container
 
 USER root
 
@@ -6,6 +6,9 @@ RUN apt-get update && apt-get install git -y
 
 ADD docker/nginx.conf /etc/nginx/nginx.conf
 RUN chgrp acait /etc/nginx/nginx.conf && chmod g+w /etc/nginx/nginx.conf
+
+
+FROM gcr.io/uwit-mci-axdd/nginx-container:1.0.3 as node-bundler
 
 USER acait
 
@@ -16,3 +19,9 @@ COPY --chown=acait:acait public /app/public
 RUN . /app/bin/activate &&\
     npm install --production &&\
     npm run build
+
+
+FROM pre-app-container as app-container
+
+USER acait
+COPY --chown=acait:acait --from=node-bundler /app/dist /app/dist

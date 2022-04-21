@@ -152,6 +152,7 @@ export default {
 .axdd-topbar {
   min-width: 320px;
 }
+
 .axdd-topbar-brand {
   line-height: 65px;
 }

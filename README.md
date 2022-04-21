@@ -48,5 +48,11 @@ npm run coverage
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh
-npm run lint
+npm run eslint
+```
+
+### Lint with [Stylelint](https://stylelint.io/)
+
+```sh
+npm run stylelint
 ```

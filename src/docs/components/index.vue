@@ -11,12 +11,20 @@
 
       <hr class="mb-5 w-25 d-inline-block" />
 
-      <h2>Layouts <VersionBadge>1.0.0</VersionBadge></h2>
-      <p><router-link to="/components/layouts">View Layouts</router-link></p>
+      <h2>
+        Layouts
+        <VersionBadge>1.0.0</VersionBadge>
+      </h2>
+      <p>
+        <router-link to="/components/layouts">View Layouts</router-link>
+      </p>
 
       <h2>Navigation</h2>
 
-      <h2>Card <VersionBadge>1.0.4</VersionBadge></h2>
+      <h2>
+        Card
+        <VersionBadge>1.0.4</VersionBadge>
+      </h2>
       <p>this is an empty card</p>
       <div class="axdd-font-open-sans" style="max-width: 75%">
         <CodeBlock>
@@ -106,7 +114,8 @@
                       placeholder="Search all students..."
                       aria-label="Recipient's username"
                       aria-describedby="button-addon2"
-                    /><button
+                    />
+                    <button
                       class="btn btn-sm btn-dark-beige"
                       type="button"
                       id="button-addon2"
@@ -143,7 +152,7 @@
                 <axdd-card-heading :level="9">Heading</axdd-card-heading>
               </template>
               <template #body>card body</template>
-              <template #footer> this is the footer </template>
+              <template #footer>this is the footer</template>
             </axdd-card>
           </template>
           <template #code>
@@ -159,67 +168,77 @@
         </CodeBlock>
       </div>
 
-      <h2>Tabs <VersionBadge>1.0.4</VersionBadge></h2>
+      <h2>
+        Tabs
+        <VersionBadge>1.0.4</VersionBadge>
+      </h2>
       <div class="axdd-font-open-sans" style="max-width: 75%">
         <CodeBlock>
           <template #preview>
-            <axdd-tabs :tabs-id="'schedule'">
+            <axdd-tabs :tabs-id="'example'">
               <template #items>
-                <axdd-tab-item
-                  :tabs-id="'schedule'"
-                  :panel-id="'current'"
+                <axdd-tabs-item
+                  :tabs-id="'example'"
+                  :panel-id="'first'"
                   :active-tab="true"
-                  >Current</axdd-tab-item
+                  >First</axdd-tabs-item
                 >
-                <axdd-tab-item :tabs-id="'schedule'" :panel-id="'next'"
-                  >Next</axdd-tab-item
+                <axdd-tabs-item :tabs-id="'example'" :panel-id="'second'"
+                  >Second</axdd-tabs-item
                 >
-                <axdd-tab-item :tabs-id="'schedule'" :panel-id="'after'"
-                  >After</axdd-tab-item
-                >
-                <axdd-tab-item :tabs-id="'schedule'" :panel-id="'further'"
-                  >Further</axdd-tab-item
+                <axdd-tabs-item :tabs-id="'example'" :panel-id="'third'"
+                  >Third</axdd-tabs-item
                 >
               </template>
               <template #panels>
-                <axdd-tab-panel :panel-id="'current'" :active-panel="true">
+                <axdd-tabs-panel :panel-id="'first'" :active-panel="true">
                   <p>
-                    <strong>current</strong> Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Id aperiam dolores harum
-                    doloribus libero sapiente corrupti sint rerum incidunt. Qui
-                    quia hic ipsam culpa laudantium delectus sapiente tempore,
-                    eveniet modi.
+                    <strong>first</strong> Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit.
                   </p>
-                </axdd-tab-panel>
-                <axdd-tab-panel :panel-id="'next'">
+                </axdd-tabs-panel>
+                <axdd-tabs-panel :panel-id="'second'">
                   <p>
-                    <strong>next</strong> Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Repellendus iste, expedita, vitae
-                    voluptatibus nobis amet eligendi consectetur repudiandae aut
-                    ut vel? Amet nesciunt culpa non molestiae enim consequuntur
-                    provident sit.
+                    <strong>second</strong> Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit.
                   </p>
-                </axdd-tab-panel>
-                <axdd-tab-panel :panel-id="'after'">
+                </axdd-tabs-panel>
+                <axdd-tabs-panel :panel-id="'third'">
                   <p>
-                    <strong>after</strong>, ipsum dolor sit amet consectetur
-                    adipisicing elit. Doloremque est totam, ipsa corporis
-                    molestias, temporibus maiores ex enim error perferendis ad
-                    veritatis tenetur dicta laboriosam nam eaque eum minus
-                    distinctio.
+                    <strong>third</strong> Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit.
                   </p>
-                </axdd-tab-panel>
-                <axdd-tab-panel :panel-id="'further'">
-                  <p>
-                    <strong>further</strong>, ipsum dolor sit amet consectetur
-                    adipisicing elit. Doloremque est totam, ipsa corporis
-                    molestias, temporibus maiores ex enim error perferendis ad
-                    veritatis tenetur dicta laboriosam nam eaque eum minus
-                    distinctio.
-                  </p>
-                </axdd-tab-panel>
+                </axdd-tabs-panel>
               </template>
             </axdd-tabs>
+          </template>
+          <template #code>
+            <pre class="language-html rounded">
+<code>&lt;axdd-tabs :tabs-id="'example'">
+  &lt;template #items>
+    &lt;axdd-tabs-item :tabs-id="'example'" :panel-id="'first'" :active-tab="true">
+      First
+    &lt;/axdd-tabs-item>
+    &lt;axdd-tabs-item :tabs-id="'example'" :panel-id="'second'">
+    Second
+    &lt;/axdd-tabs-item>
+    &lt;axdd-tabs-item :tabs-id="'example'" :panel-id="'third'">
+    Third
+    &lt;/axdd-tabs-item>
+  &lt;/template>
+  &lt;template #panels>
+    &lt;axdd-tabs-panel :panel-id="'first'" :active-panel="true">
+      first ...
+    &lt;/axdd-tabs-panel>
+    &lt;axdd-tabs-panel :panel-id="'second'">
+      second ...
+    &lt;/axdd-tabs-panel>
+    &lt;axdd-tabs-panel :panel-id="'third'">
+      third ...
+    &lt;/axdd-tabs-panel>
+  &lt;/template>
+&lt;/axdd-tabs></code>
+            </pre>
           </template>
         </CodeBlock>
       </div>
@@ -237,8 +256,8 @@ import CardHeading from "../../_components/card/heading.vue";
 import CardAction from "../../_components/card/action.vue";
 
 import Tabs from "../../_components/tabs/tabs.vue";
-import TabItem from "../../_components/tabs/item.vue";
-import TabPanel from "../../_components/tabs/panel.vue";
+import TabsItem from "../../_components/tabs/item.vue";
+import TabsPanel from "../../_components/tabs/panel.vue";
 
 export default {
   name: "DocsComponentsIndex",
@@ -250,8 +269,8 @@ export default {
     "axdd-card-heading": CardHeading,
     "axdd-card-action": CardAction,
     "axdd-tabs": Tabs,
-    "axdd-tab-item": TabItem,
-    "axdd-tab-panel": TabPanel,
+    "axdd-tabs-item": TabsItem,
+    "axdd-tabs-panel": TabsPanel,
   },
   data() {
     return {};

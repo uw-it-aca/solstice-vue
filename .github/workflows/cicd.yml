@@ -85,8 +85,8 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      # - name: Lint with ESLint
-      #   run: npm run eslint
+      - name: Lint with ESLint
+        run: npm run eslint
 
       - name: Lint with StyleLint
         run: npm run stylelint

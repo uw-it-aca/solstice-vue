@@ -115,6 +115,7 @@
 
 <script>
 export default {
+  name: "TopbarLayout",
   props: {
     appName: {
       type: String,

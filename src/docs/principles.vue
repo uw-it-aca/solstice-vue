@@ -35,6 +35,7 @@
 import Layout from "../layouts/docs.vue";
 
 export default {
+  name: "DocsPrinciples",
   components: { Layout },
   data() {
     return {};

@@ -10,6 +10,7 @@
 
 <script>
 export default {
+  name: "CardHeading",
   props: {
     level: {
       type: Number,

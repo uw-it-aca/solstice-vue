@@ -241,6 +241,7 @@ import TabItem from "../../_components/tabs/item.vue";
 import TabPanel from "../../_components/tabs/panel.vue";
 
 export default {
+  name: "DocsComponentsIndex",
   components: {
     Layout,
     CodeBlock,

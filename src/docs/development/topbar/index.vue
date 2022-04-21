@@ -34,7 +34,7 @@
 import Topbar from "../../../_layouts/topbar.vue";
 
 export default {
-  name: "MyApp",
+  name: "DocsDevelopmentTopbarIndex",
   components: {
     topbar: Topbar,
   },

@@ -127,6 +127,7 @@
 import Layout from "../layouts/docs.vue";
 
 export default {
+  name: "DocsIndex",
   components: { Layout },
   data() {
     return {};

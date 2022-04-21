@@ -56,6 +56,7 @@
 import Layout from "../../layouts/docs.vue";
 
 export default {
+  name: "DocsDevelopmentIndex",
   components: { Layout },
   data() {
     return {};

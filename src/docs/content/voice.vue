@@ -30,6 +30,7 @@
 import Layout from "../../layouts/docs.vue";
 
 export default {
+  name: "DocsContentVoice",
   components: { Layout },
   data() {
     return {};

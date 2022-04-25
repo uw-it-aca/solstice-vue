@@ -19,7 +19,14 @@
       <hr class="mb-5 w-25 d-inline-block" />
 
       <h2>Topbar</h2>
-      <div class="sg-render border p-0 mb-5 bg-white">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex aut tempore
+        quidem molestiae dolore iusto dolorum voluptate architecto impedit
+        possimus velit voluptatum eaque veritatis praesentium, nemo saepe nisi
+        tempora corrupti.
+      </p>
+      <h3 class="h6">Preview</h3>
+      <PreviewBlock>
         <axdd-topbar :app-name="'TopBar'" :user-name="'javerage'">
           <template #bar>
             <div class="bg-teal">
@@ -44,34 +51,35 @@
           </template>
           <template #footer></template>
         </axdd-topbar>
-      </div>
+      </PreviewBlock>
 
-      <h3>Implementation</h3>
+      <h3 class="h6">Template</h3>
       <CodeBlock>
         <template #code>
           <pre class="language-html rounded">
 <code>&lt;axdd-topbar :app-name="'App Name'" :user-name="'javerage'">
-  asdf
+asdf
 &lt;/axdd-topbar>
 </code></pre>
         </template>
       </CodeBlock>
 
+      <h3 class="h6">Script</h3>
       <CodeBlock>
         <template #code>
           <pre class="language-js rounded">
-<code>import Topbar from "../component-location";
+<code>import { Topbar } from "axdd-components";
 
 export default {
-  components: { Topbar },
-};
-</code></pre>
+  components: {
+    "axdd-topbar": Topbar
+  },
+};</code></pre>
         </template>
       </CodeBlock>
 
-      <h2>Sidebar</h2>
-
-      <div class="sg-render border p-0 mb-5 bg-white">
+      <h2 class="mt-5">Sidebar</h2>
+      <PreviewBlock>
         <axdd-sidebar :app-name="'SideBar'" :user-name="'javerage'">
           <template #navigation>
             <ul class="nav flex-column">
@@ -134,7 +142,31 @@ export default {
           </template>
           <template #footer></template>
         </axdd-sidebar>
-      </div>
+      </PreviewBlock>
+
+      <CodeBlock>
+        <template #code>
+          <pre class="language-html rounded">
+<code>&lt;axdd-sidebar :app-name="'App Name'" :user-name="'javerage'">
+  asdf
+&lt;/axdd-sidebar>
+</code></pre>
+        </template>
+      </CodeBlock>
+
+      <CodeBlock>
+        <template #code>
+          <pre class="language-js rounded">
+<code>import { Sidebar } from "axdd-components";
+
+export default {
+  components: {
+    "axdd-sidebar": Sidebar
+  },
+};
+</code></pre>
+        </template>
+      </CodeBlock>
     </template>
   </Layout>
 </template>
@@ -144,12 +176,14 @@ import Layout from "../../layouts/docs.vue";
 import Topbar from "../../_layouts/topbar.vue";
 import Sidebar from "../../_layouts/sidebar.vue";
 import CodeBlock from "../../components/CodeBlock.vue";
+import PreviewBlock from "../../components/PreviewBlock.vue";
 
 export default {
   name: "DocsComponentsLayouts",
   components: {
     Layout,
     CodeBlock,
+    PreviewBlock,
     "axdd-topbar": Topbar,
     "axdd-sidebar": Sidebar,
   },

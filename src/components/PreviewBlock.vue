@@ -1,14 +1,6 @@
 <template>
-  <div class="mb-3">
-    <div
-      v-if="$slots['preview']"
-      class="border rounded p-4 mb-3 axdd-font-open-sans"
-    >
-      <slot name="preview"></slot>
-    </div>
-    <div class="p-0 small">
-      <slot name="code"></slot>
-    </div>
+  <div class="p-0 bg-white mb-3">
+    <slot></slot>
   </div>
 </template>
 

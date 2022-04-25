@@ -15,20 +15,37 @@
         Layouts
         <VersionBadge>1.0.0</VersionBadge>
       </h2>
+      <p class="p-0 col-md-8">
+        Layouts info. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Harum ullam dolore fugit exercitationem rem modi laudantium, accusantium
+        facere tenetur ipsam ratione impedit, odit dolores maxime quibusdam
+        eaque recusandae, eius tempora.
+      </p>
       <p>
         <router-link to="/components/layouts">View Layouts</router-link>
       </p>
 
       <h2>Navigation</h2>
+      <p class="p-0 col-md-8">
+        Navigation coming soon. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Harum ullam dolore fugit exercitationem rem modi laudantium, accusantium
+        facere tenetur ipsam ratione impedit, odit dolores maxime quibusdam
+        eaque recusandae, eius tempora.
+      </p>
 
       <h2>
         Card
         <VersionBadge>1.0.4</VersionBadge>
       </h2>
-      <p>
+      <p class="p-0 col-md-8">
         This is a card. Cards can contain any type of content and even other
-        components.
+        components. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Harum ullam dolore fugit exercitationem rem modi laudantium, accusantium
+        facere tenetur ipsam ratione impedit, odit dolores maxime quibusdam
+        eaque recusandae, eius tempora.
       </p>
+
+      <h3>Basic card container</h3>
       <CodeBlock>
         <template #preview>
           <axdd-card style="max-width: 600px">
@@ -53,7 +70,7 @@ export default {
         </template>
       </CodeBlock>
 
-      <p>this is a card w/ heading</p>
+      <h3>Card with heading</h3>
       <CodeBlock>
         <template #preview>
           <axdd-card style="max-width: 600px">
@@ -85,7 +102,7 @@ export default {
         </template>
       </CodeBlock>
 
-      <p>this is a card w/ a button as heading action</p>
+      <h3>Card with heading action</h3>
       <CodeBlock>
         <template #preview>
           <axdd-card style="max-width: 600px">
@@ -184,7 +201,7 @@ export default {
         </template>
       </CodeBlock>
 
-      <p>this is a card w/ footer</p>
+      <h3>Card with Footer</h3>
       <CodeBlock>
         <template #preview>
           <axdd-card style="max-width: 600px">
@@ -205,23 +222,19 @@ export default {
   &lt;template #footer>this is the footer&lt;/template>
 &lt;/axdd-card></code></pre>
         </template>
-        <template #script>
-          <pre class="language-js rounded">
-<code>import { Card, CardHeading } from "axdd-components";
-
-export default {
-  components: {
-    "axdd-card": Card,
-    "axdd-card-heading": CardHeadng,
-  },
-};</code></pre>
-        </template>
       </CodeBlock>
 
       <h2>
         Tabs
         <VersionBadge>1.0.4</VersionBadge>
       </h2>
+      <p class="p-0 col-md-8">
+        Tabs info. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Harum ullam dolore fugit exercitationem rem modi laudantium, accusantium
+        facere tenetur ipsam ratione impedit, odit dolores maxime quibusdam
+        eaque recusandae, eius tempora.
+      </p>
+
       <CodeBlock>
         <template #preview>
           <axdd-tabs :tabs-id="'example'" style="max-width: 600px">

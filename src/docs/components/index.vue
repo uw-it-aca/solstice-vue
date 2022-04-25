@@ -25,7 +25,10 @@
         Card
         <VersionBadge>1.0.4</VersionBadge>
       </h2>
-      <p>this is an empty card</p>
+      <p>
+        This is a card. Cards can contain any type of content and even other
+        components.
+      </p>
       <CodeBlock>
         <template #preview>
           <axdd-card>
@@ -38,7 +41,16 @@
   &lt;template #body>card body&lt;/template>
 &lt;/axdd-card></code></pre>
         </template>
-        <template #script>asdfads</template>
+        <template #script>
+          <pre class="language-js rounded">
+<code>import { Card } from "axdd-components";
+
+export default {
+  components: {
+    "axdd-card": Card,
+  },
+};</code></pre>
+        </template>
       </CodeBlock>
 
       <p>this is a card w/ heading</p>

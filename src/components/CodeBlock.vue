@@ -2,7 +2,7 @@
   <div class="mb-5">
     <div v-if="$slots['preview']">
       <p class="h6 text-secondary">Preview</p>
-      <div class="border rounded-3 p-4 mb-3 axdd-font-open-sans">
+      <div class="preview border rounded-3 p-4 mb-3 axdd-font-open-sans">
         <slot name="preview"></slot>
       </div>
     </div>
@@ -36,3 +36,21 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+// global styleguide
+
+.preview {
+  // reset container padding for render display
+  .container-xl {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  // reset vh-100 to something more manageable for display
+  .vh-100 {
+    min-height: 30vh !important;
+    max-height: 40vh !important;
+  }
+}
+</style>

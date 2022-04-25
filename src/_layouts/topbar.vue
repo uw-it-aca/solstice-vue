@@ -1,7 +1,6 @@
 <template>
   <div
     class="d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"
-    style="min-height: 300px"
   >
     <header class="w-100">
       <slot name="header">

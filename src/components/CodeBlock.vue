@@ -1,13 +1,22 @@
 <template>
-  <div class="mb-3">
+  <div class="mb-5">
+
+    <p v-if="$slots['preview']" class="h6 text-secondary">Preview</p>
     <div
       v-if="$slots['preview']"
-      class="border rounded p-4 mb-3 axdd-font-open-sans"
+      class="bg-light rounded p-4 mb-3 axdd-font-open-sans"
     >
       <slot name="preview"></slot>
     </div>
-    <div class="p-0 small">
-      <slot name="code"></slot>
+
+    <p v-if="$slots['markup']" class="h6 text-secondary">Markup</p>
+    <div v-if="$slots['markup']" class="p-0 small mb-3">
+      <slot name="markup"></slot>
+    </div>
+
+    <p v-if="$slots['script']" class="h6 text-secondary">Script</p>
+    <div v-if="$slots['script']" class="p-0 small mb-3">
+      <slot name="script"></slot>
     </div>
   </div>
 </template>

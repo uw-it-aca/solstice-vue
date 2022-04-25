@@ -25,48 +25,46 @@
         possimus velit voluptatum eaque veritatis praesentium, nemo saepe nisi
         tempora corrupti.
       </p>
-      <h3 class="h6">Preview</h3>
-      <PreviewBlock>
-        <axdd-topbar :app-name="'TopBar'" :user-name="'javerage'">
-          <template #bar>
-            <div class="bg-teal">
-              <div class="container-xl">
-                <div class="col-12 py-2 text-center">custom teal bar</div>
-              </div>
-            </div>
-          </template>
-          <template #navigation>
-            <div class="row mt-4">
-              <div class="col">
-                <div class="bg-gray p-4 text-center">nav</div>
-              </div>
-            </div>
-          </template>
-          <template #main>
-            <div class="row mt-4">
-              <div class="col">
-                <div class="bg-gray p-4 text-center">content</div>
-              </div>
-            </div>
-          </template>
-          <template #footer></template>
-        </axdd-topbar>
-      </PreviewBlock>
 
-      <h3 class="h6">Template</h3>
       <CodeBlock>
-        <template #code>
+        <template #preview>
+          <axdd-topbar
+            :app-name="'TopBar'"
+            :user-name="'javerage'"
+            class="bg-white"
+          >
+            <template #bar>
+              <div class="bg-teal">
+                <div class="container-xl">
+                  <div class="col-12 py-2 text-center">custom teal bar</div>
+                </div>
+              </div>
+            </template>
+            <template #navigation>
+              <div class="row mt-4">
+                <div class="col">
+                  <div class="bg-gray p-4 text-center">nav</div>
+                </div>
+              </div>
+            </template>
+            <template #main>
+              <div class="row mt-4">
+                <div class="col">
+                  <div class="bg-gray p-4 text-center">content</div>
+                </div>
+              </div>
+            </template>
+            <template #footer></template>
+          </axdd-topbar>
+        </template>
+        <template #markup>
           <pre class="language-html rounded">
 <code>&lt;axdd-topbar :app-name="'App Name'" :user-name="'javerage'">
 asdf
 &lt;/axdd-topbar>
 </code></pre>
         </template>
-      </CodeBlock>
-
-      <h3 class="h6">Script</h3>
-      <CodeBlock>
-        <template #code>
+        <template #script>
           <pre class="language-js rounded">
 <code>import { Topbar } from "axdd-components";
 
@@ -79,83 +77,92 @@ export default {
       </CodeBlock>
 
       <h2 class="mt-5">Sidebar</h2>
-      <PreviewBlock>
-        <axdd-sidebar :app-name="'SideBar'" :user-name="'javerage'">
-          <template #navigation>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-1 bg-dark-purple rounded">
-                <a href="#" class="nav-link text-gray d-block px-2 py-1"
-                  ><i class="bi bi-house-door-fill me-2"></i>Home</a
-                >
-              </li>
-              <li class="nav-item mb-1 bg-dark-purple-hover rounded">
-                <a href="#" class="nav-link text-gray d-block px-2 py-1"
-                  ><i class="bi bi-mortarboard-fill me-2"></i>Academics</a
-                >
-              </li>
-              <li class="nav-item mb-1 bg-dark-purple-hover rounded">
-                <a href="#" class="nav-link text-gray d-block px-2 py-1"
-                  ><i class="bi bi-pencil-square me-2"></i>Teaching</a
-                >
-              </li>
-              <li class="nav-item mb-1 bg-dark-purple-hover rounded">
-                <a href="#" class="nav-link text-gray d-block px-2 py-1"
-                  ><i class="bi bi-credit-card me-2"></i>Accounts</a
-                >
-              </li>
-              <li class="nav-item mb-1 bg-dark-purple-hover rounded">
-                <a href="#" class="nav-link text-gray d-block px-2 py-1"
-                  ><i class="bi bi-person-fill me-2"></i>Profile</a
-                >
-              </li>
-              <li aria-hidden="true" class="nav-item mb-1">
-                <a
-                  href="#"
-                  class="nav-link disabled text-gray d-block p-0 internal-link"
-                  ><hr class="m-0 bg-gray" />
-                  <span class="visually-hidden"> Navigation separator</span></a
-                >
-              </li>
-              <li class="nav-item mb-1 bg-dark-purple-hover rounded">
-                <a href="#" class="nav-link text-gray d-block px-2 py-1"
-                  ><i class="bi bi-calendar-check me-2"></i>Calendar</a
-                >
-              </li>
-              <li class="nav-item mb-4 bg-dark-purple-hover rounded">
-                <a href="#" class="nav-link text-gray d-block px-2 py-1"
-                  ><i class="bi bi-bookmark-fill me-2"></i>UW Resources</a
-                >
-              </li>
-            </ul>
-          </template>
-          <template #bar>
-            <div class="col mt-3">
-              <div class="bg-teal py-2 text-center">custom teal bar</div>
-            </div>
-          </template>
-          <template #main>
-            <div class="row">
-              <div class="col mt-3">
-                <div class="bg-gray p-4 text-center">content</div>
-              </div>
-            </div>
-          </template>
-          <template #footer></template>
-        </axdd-sidebar>
-      </PreviewBlock>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex aut tempore
+        quidem molestiae dolore iusto dolorum voluptate architecto impedit
+        possimus velit voluptatum eaque veritatis praesentium, nemo saepe nisi
+        tempora corrupti.
+      </p>
 
       <CodeBlock>
-        <template #code>
+        <template #preview>
+          <axdd-sidebar
+            :app-name="'SideBar'"
+            :user-name="'javerage'"
+            class="bg-white"
+          >
+            <template #navigation>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-1 bg-dark-purple rounded">
+                  <a href="#" class="nav-link text-gray d-block px-2 py-1"
+                    ><i class="bi bi-house-door-fill me-2"></i>Home</a
+                  >
+                </li>
+                <li class="nav-item mb-1 bg-dark-purple-hover rounded">
+                  <a href="#" class="nav-link text-gray d-block px-2 py-1"
+                    ><i class="bi bi-mortarboard-fill me-2"></i>Academics</a
+                  >
+                </li>
+                <li class="nav-item mb-1 bg-dark-purple-hover rounded">
+                  <a href="#" class="nav-link text-gray d-block px-2 py-1"
+                    ><i class="bi bi-pencil-square me-2"></i>Teaching</a
+                  >
+                </li>
+                <li class="nav-item mb-1 bg-dark-purple-hover rounded">
+                  <a href="#" class="nav-link text-gray d-block px-2 py-1"
+                    ><i class="bi bi-credit-card me-2"></i>Accounts</a
+                  >
+                </li>
+                <li class="nav-item mb-1 bg-dark-purple-hover rounded">
+                  <a href="#" class="nav-link text-gray d-block px-2 py-1"
+                    ><i class="bi bi-person-fill me-2"></i>Profile</a
+                  >
+                </li>
+                <li aria-hidden="true" class="nav-item mb-1">
+                  <a
+                    href="#"
+                    class="nav-link disabled text-gray d-block p-0 internal-link"
+                    ><hr class="m-0 bg-gray" />
+                    <span class="visually-hidden">
+                      Navigation separator</span
+                    ></a
+                  >
+                </li>
+                <li class="nav-item mb-1 bg-dark-purple-hover rounded">
+                  <a href="#" class="nav-link text-gray d-block px-2 py-1"
+                    ><i class="bi bi-calendar-check me-2"></i>Calendar</a
+                  >
+                </li>
+                <li class="nav-item mb-4 bg-dark-purple-hover rounded">
+                  <a href="#" class="nav-link text-gray d-block px-2 py-1"
+                    ><i class="bi bi-bookmark-fill me-2"></i>UW Resources</a
+                  >
+                </li>
+              </ul>
+            </template>
+            <template #bar>
+              <div class="col mt-3">
+                <div class="bg-teal py-2 text-center">custom teal bar</div>
+              </div>
+            </template>
+            <template #main>
+              <div class="row">
+                <div class="col mt-3">
+                  <div class="bg-gray p-4 text-center">content</div>
+                </div>
+              </div>
+            </template>
+            <template #footer></template>
+          </axdd-sidebar>
+        </template>
+        <template #markup>
           <pre class="language-html rounded">
 <code>&lt;axdd-sidebar :app-name="'App Name'" :user-name="'javerage'">
   asdf
 &lt;/axdd-sidebar>
 </code></pre>
         </template>
-      </CodeBlock>
-
-      <CodeBlock>
-        <template #code>
+        <template #script>
           <pre class="language-js rounded">
 <code>import { Sidebar } from "axdd-components";
 
@@ -176,14 +183,12 @@ import Layout from "../../layouts/docs.vue";
 import Topbar from "../../_layouts/topbar.vue";
 import Sidebar from "../../_layouts/sidebar.vue";
 import CodeBlock from "../../components/CodeBlock.vue";
-import PreviewBlock from "../../components/PreviewBlock.vue";
 
 export default {
   name: "DocsComponentsLayouts",
   components: {
     Layout,
     CodeBlock,
-    PreviewBlock,
     "axdd-topbar": Topbar,
     "axdd-sidebar": Sidebar,
   },

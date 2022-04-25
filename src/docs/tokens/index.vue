@@ -242,6 +242,7 @@
 <script>
 import Layout from "../../layouts/docs.vue";
 import CodeBlock from "../../components/CodeBlock.vue";
+import PreviewBlock from "../../components/PreviewBlock.vue";
 import VersionBadge from "../../components/VersionBadge.vue";
 
 export default {
@@ -249,6 +250,7 @@ export default {
   components: {
     Layout,
     CodeBlock,
+    PreviewBlock,
     VersionBadge,
   },
   data() {

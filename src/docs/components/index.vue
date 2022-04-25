@@ -26,66 +26,73 @@
         <VersionBadge>1.0.4</VersionBadge>
       </h2>
       <p>this is an empty card</p>
-      <div class="axdd-font-open-sans" style="max-width: 75%">
-        <CodeBlock>
-          <template #preview>
-            <axdd-card>
-              <template #body>card body</template>
-            </axdd-card>
-          </template>
-          <template #code>
-            <pre class="language-html rounded">
+      <CodeBlock>
+        <template #preview>
+          <axdd-card>
+            <template #body>card body</template>
+          </axdd-card>
+        </template>
+        <template #markup>
+          <pre class="language-html rounded">
 <code>&lt;axdd-card>
   &lt;template #body>card body&lt;/template>
 &lt;/axdd-card></code></pre>
-          </template>
-        </CodeBlock>
-      </div>
+        </template>
+        <template #script>asdfads</template>
+      </CodeBlock>
 
-      <p>this is a card w/ header</p>
-      <div class="axdd-font-open-sans" style="max-width: 75%">
-        <CodeBlock>
-          <template #preview>
-            <axdd-card>
-              <template #heading>
-                <axdd-card-heading :level="3">Heading</axdd-card-heading>
-              </template>
-              <template #body>card body</template>
-            </axdd-card>
-          </template>
-          <template #code>
-            <pre class="language-html rounded">
+      <p>this is a card w/ heading</p>
+      <CodeBlock>
+        <template #preview>
+          <axdd-card>
+            <template #heading>
+              <axdd-card-heading :level="3">Heading</axdd-card-heading>
+            </template>
+            <template #body>card body</template>
+          </axdd-card>
+        </template>
+        <template #markup>
+          <pre class="language-html rounded">
 <code>&lt;axdd-card>
   &lt;template #heading>
     &lt;axdd-card-heading :level="3">Heading&lt;/axdd-card-heading>
   &lt;/template>
   &lt;template #body>card body&lt;/template>
 &lt;/axdd-card></code></pre>
-          </template>
-        </CodeBlock>
-      </div>
+        </template>
+        <template #script>
+          <pre class="language-js rounded">
+<code>import { Card, CardHeading } from "axdd-components";
 
-      <p>this is a card w/ a button as header action</p>
-      <div class="axdd-font-open-sans" style="max-width: 75%">
-        <CodeBlock>
-          <template #preview>
-            <axdd-card>
-              <template #heading-action>
-                <axdd-card-heading :level="3">Heading</axdd-card-heading>
-                <axdd-card-action>
-                  <a
-                    href="#"
-                    class="btn btn-dark-beige btn-sm"
-                    @click.prevent="greet"
-                    >Card heading action</a
-                  >
-                </axdd-card-action>
-              </template>
-              <template #body>card body</template>
-            </axdd-card>
-          </template>
-          <template #code>
-            <pre class="language-html rounded">
+export default {
+  components: {
+    "axdd-card": Card,
+    "axdd-card-heading": CardHeadng,
+  },
+};</code></pre>
+        </template>
+      </CodeBlock>
+
+      <p>this is a card w/ a button as heading action</p>
+      <CodeBlock>
+        <template #preview>
+          <axdd-card>
+            <template #heading-action>
+              <axdd-card-heading :level="3">Heading</axdd-card-heading>
+              <axdd-card-action>
+                <a
+                  href="#"
+                  class="btn btn-dark-beige btn-sm"
+                  @click.prevent="greet"
+                  >Card heading action</a
+                >
+              </axdd-card-action>
+            </template>
+            <template #body>card body</template>
+          </axdd-card>
+        </template>
+        <template #markup>
+          <pre class="language-html rounded">
 <code>&lt;axdd-card>
   &lt;template #heading-action>
     &lt;axdd-card-heading :level="3">Heading&lt;/axdd-card-heading>
@@ -95,41 +102,52 @@
   &lt;/template>
   &lt;template #body>card body&lt;/template>
 &lt;/axdd-card></code></pre>
-          </template>
-        </CodeBlock>
-      </div>
+        </template>
+        <template #script>
+          <pre class="language-js rounded">
+<code>import { Card, CardHeading, CardAction } from "axdd-components";
 
-      <p>this is a card w/ html as header action</p>
-      <div class="axdd-font-open-sans" style="max-width: 75%">
-        <CodeBlock>
-          <template #preview>
-            <axdd-card>
-              <template #heading-action>
-                <axdd-card-heading :level="3">Heading</axdd-card-heading>
-                <axdd-card-action>
-                  <div class="input-group">
-                    <input
-                      type="text"
-                      class="form-control form-control-sm"
-                      placeholder="Search all students..."
-                      aria-label="Recipient's username"
-                      aria-describedby="button-addon2"
-                    />
-                    <button
-                      class="btn btn-sm btn-dark-beige"
-                      type="button"
-                      id="button-addon2"
-                    >
-                      Search
-                    </button>
-                  </div>
-                </axdd-card-action>
-              </template>
-              <template #body>card body</template>
-            </axdd-card>
-          </template>
-          <template #code>
-            <pre class="language-html rounded">
+export default {
+  components: {
+    "axdd-card": Card,
+    "axdd-card-heading": CardHeadng,
+    "axdd-card-action": CardAction,
+  },
+};</code></pre>
+        </template>
+      </CodeBlock>
+
+      <p>this is a card w/ html as heading action</p>
+
+      <CodeBlock>
+        <template #preview>
+          <axdd-card>
+            <template #heading-action>
+              <axdd-card-heading :level="3">Heading</axdd-card-heading>
+              <axdd-card-action>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    placeholder="Search all students..."
+                    aria-label="Recipient's username"
+                    aria-describedby="button-addon2"
+                  />
+                  <button
+                    class="btn btn-sm btn-dark-beige"
+                    type="button"
+                    id="button-addon2"
+                  >
+                    Search
+                  </button>
+                </div>
+              </axdd-card-action>
+            </template>
+            <template #body>card body</template>
+          </axdd-card>
+        </template>
+        <template #markup>
+          <pre class="language-html rounded">
 <code>&lt;axdd-card>
   &lt;template #heading-action>
     &lt;axdd-card-heading :level="3">Heading&lt;/axdd-card-heading>
@@ -139,24 +157,34 @@
   &lt;/template>
   &lt;template #body>card body&lt;/template>
 &lt;/axdd-card></code></pre>
-          </template>
-        </CodeBlock>
-      </div>
+        </template>
+        <template #script>
+          <pre class="language-js rounded">
+<code>import { Card, CardHeading, CardAction } from "axdd-components";
+
+export default {
+  components: {
+    "axdd-card": Card,
+    "axdd-card-heading": CardHeadng,
+    "axdd-card-action": CardAction,
+  },
+};</code></pre>
+        </template>
+      </CodeBlock>
 
       <p>this is a card w/ footer</p>
-      <div class="axdd-font-open-sans" style="max-width: 75%">
-        <CodeBlock>
-          <template #preview>
-            <axdd-card>
-              <template #heading>
-                <axdd-card-heading :level="9">Heading</axdd-card-heading>
-              </template>
-              <template #body>card body</template>
-              <template #footer>this is the footer</template>
-            </axdd-card>
-          </template>
-          <template #code>
-            <pre class="language-html rounded">
+      <CodeBlock>
+        <template #preview>
+          <axdd-card>
+            <template #heading>
+              <axdd-card-heading :level="9">Heading</axdd-card-heading>
+            </template>
+            <template #body>card body</template>
+            <template #footer>this is the footer</template>
+          </axdd-card>
+        </template>
+        <template #markup>
+          <pre class="language-html rounded">
 <code>&lt;axdd-card>
   &lt;template #heading>
     &lt;axdd-card-heading :level="3">Heading&lt;/axdd-card-heading>
@@ -164,56 +192,65 @@
   &lt;template #body>card body&lt;/template>
   &lt;template #footer>this is the footer&lt;/template>
 &lt;/axdd-card></code></pre>
-          </template>
-        </CodeBlock>
-      </div>
+        </template>
+        <template #script>
+          <pre class="language-js rounded">
+<code>import { Card, CardHeading } from "axdd-components";
+
+export default {
+  components: {
+    "axdd-card": Card,
+    "axdd-card-heading": CardHeadng,
+  },
+};</code></pre>
+        </template>
+      </CodeBlock>
 
       <h2>
         Tabs
         <VersionBadge>1.0.4</VersionBadge>
       </h2>
-      <div class="axdd-font-open-sans" style="max-width: 75%">
-        <CodeBlock>
-          <template #preview>
-            <axdd-tabs :tabs-id="'example'">
-              <template #items>
-                <axdd-tabs-item
-                  :tabs-id="'example'"
-                  :panel-id="'first'"
-                  :active-tab="true"
-                  >First</axdd-tabs-item
-                >
-                <axdd-tabs-item :tabs-id="'example'" :panel-id="'second'"
-                  >Second</axdd-tabs-item
-                >
-                <axdd-tabs-item :tabs-id="'example'" :panel-id="'third'"
-                  >Third</axdd-tabs-item
-                >
-              </template>
-              <template #panels>
-                <axdd-tabs-panel :panel-id="'first'" :active-panel="true">
-                  <p>
-                    <strong>first</strong> Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit.
-                  </p>
-                </axdd-tabs-panel>
-                <axdd-tabs-panel :panel-id="'second'">
-                  <p>
-                    <strong>second</strong> Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit.
-                  </p>
-                </axdd-tabs-panel>
-                <axdd-tabs-panel :panel-id="'third'">
-                  <p>
-                    <strong>third</strong> Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit.
-                  </p>
-                </axdd-tabs-panel>
-              </template>
-            </axdd-tabs>
-          </template>
-          <template #code>
-            <pre class="language-html rounded">
+      <CodeBlock>
+        <template #preview>
+          <axdd-tabs :tabs-id="'example'">
+            <template #items>
+              <axdd-tabs-item
+                :tabs-id="'example'"
+                :panel-id="'first'"
+                :active-tab="true"
+                >First</axdd-tabs-item
+              >
+              <axdd-tabs-item :tabs-id="'example'" :panel-id="'second'"
+                >Second</axdd-tabs-item
+              >
+              <axdd-tabs-item :tabs-id="'example'" :panel-id="'third'"
+                >Third</axdd-tabs-item
+              >
+            </template>
+            <template #panels>
+              <axdd-tabs-panel :panel-id="'first'" :active-panel="true">
+                <p>
+                  <strong>first</strong> Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit.
+                </p>
+              </axdd-tabs-panel>
+              <axdd-tabs-panel :panel-id="'second'">
+                <p>
+                  <strong>second</strong> Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit.
+                </p>
+              </axdd-tabs-panel>
+              <axdd-tabs-panel :panel-id="'third'">
+                <p>
+                  <strong>third</strong> Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit.
+                </p>
+              </axdd-tabs-panel>
+            </template>
+          </axdd-tabs>
+        </template>
+        <template #markup>
+          <pre class="language-html rounded">
 <code>&lt;axdd-tabs :tabs-id="'example'">
   &lt;template #items>
     &lt;axdd-tabs-item :tabs-id="'example'" :panel-id="'first'" :active-tab="true">
@@ -238,9 +275,20 @@
     &lt;/axdd-tabs-panel>
   &lt;/template>
 &lt;/axdd-tabs></code></pre>
-          </template>
-        </CodeBlock>
-      </div>
+        </template>
+        <template #script>
+          <pre class="language-js rounded">
+<code>import { Tabs, TabsItem, TabsPanel } from "axdd-components";
+
+export default {
+  components: {
+    "axdd-tabs": Tabs,
+    "axdd-tabs-item": TabsItem,
+    "axdd-tabs-panel": TabsPanel,
+  },
+};</code></pre>
+        </template>
+      </CodeBlock>
     </template>
   </Layout>
 </template>

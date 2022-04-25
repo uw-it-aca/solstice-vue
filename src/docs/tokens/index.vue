@@ -149,7 +149,7 @@
             </li>
           </ul>
         </template>
-        <template #code>
+        <template #markup>
           <pre class="language-html rounded">
 <code class="html rounded">&lt;div class="bg-dark-purple"&gt;
 &lt;div class="bg-purple"&gt;
@@ -182,7 +182,7 @@
           <p class="fs-10">.fs-10 text (11px)</p>
           <p class="fs-11">.fs-11 text (10px)</p>
         </template>
-        <template #code>
+        <template #markup>
           <pre class="language-html rounded">
 <code>&lt;div class="fs-7">Lorem ipsum dolor&lt;/div>
 &lt;div class="fs-8">Lorem ipsum dolor&lt;/div>
@@ -204,6 +204,7 @@
 
       <p>Typography is defined by the UW Brand guidelines.</p>
 
+      <h3>Open Sans</h3>
       <p>
         Open Sans is the default font-family used by UW. It is typically set at
         the page body level.
@@ -212,13 +213,14 @@
         <template #preview>
           <div class="axdd-font-open-sans">Lorem ipsum dolor... Open Sans</div>
         </template>
-        <template #code>
+        <template #markup>
           <pre class="language-html rounded">
 <code>&lt;body class="axdd-font-open-sans">Lorem ipsum dolor... Open Sans&lt;/body>
 </code></pre>
         </template>
       </CodeBlock>
 
+      <h3>Encode Sans Condensed</h3>
       <p>
         Encode Sans Condensed is the heading font-family used by UW. It is
         typically set at the page body level.
@@ -229,7 +231,7 @@
             Lorem ipsum dolor... Encode Sans Condensed
           </div>
         </template>
-        <template #code>
+        <template #markup>
           <pre class="language-html rounded">
 <code>&lt;body class="axdd-font-open-sans">Lorem ipsum dolor... Open Sans&lt;/body>
 </code></pre>
@@ -242,7 +244,6 @@
 <script>
 import Layout from "../../layouts/docs.vue";
 import CodeBlock from "../../components/CodeBlock.vue";
-import PreviewBlock from "../../components/PreviewBlock.vue";
 import VersionBadge from "../../components/VersionBadge.vue";
 
 export default {
@@ -250,7 +251,6 @@ export default {
   components: {
     Layout,
     CodeBlock,
-    PreviewBlock,
     VersionBadge,
   },
   data() {

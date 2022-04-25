@@ -31,7 +31,7 @@
       </p>
       <CodeBlock>
         <template #preview>
-          <axdd-card>
+          <axdd-card style="max-width: 600px">
             <template #body>card body</template>
           </axdd-card>
         </template>
@@ -56,7 +56,7 @@ export default {
       <p>this is a card w/ heading</p>
       <CodeBlock>
         <template #preview>
-          <axdd-card>
+          <axdd-card style="max-width: 600px">
             <template #heading>
               <axdd-card-heading :level="3">Heading</axdd-card-heading>
             </template>
@@ -88,7 +88,7 @@ export default {
       <p>this is a card w/ a button as heading action</p>
       <CodeBlock>
         <template #preview>
-          <axdd-card>
+          <axdd-card style="max-width: 600px">
             <template #heading-action>
               <axdd-card-heading :level="3">Heading</axdd-card-heading>
               <axdd-card-action>
@@ -133,7 +133,7 @@ export default {
 
       <CodeBlock>
         <template #preview>
-          <axdd-card>
+          <axdd-card style="max-width: 600px">
             <template #heading-action>
               <axdd-card-heading :level="3">Heading</axdd-card-heading>
               <axdd-card-action>
@@ -187,7 +187,7 @@ export default {
       <p>this is a card w/ footer</p>
       <CodeBlock>
         <template #preview>
-          <axdd-card>
+          <axdd-card style="max-width: 600px">
             <template #heading>
               <axdd-card-heading :level="9">Heading</axdd-card-heading>
             </template>
@@ -224,7 +224,7 @@ export default {
       </h2>
       <CodeBlock>
         <template #preview>
-          <axdd-tabs :tabs-id="'example'">
+          <axdd-tabs :tabs-id="'example'" style="max-width: 600px">
             <template #items>
               <axdd-tabs-item
                 :tabs-id="'example'"

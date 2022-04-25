@@ -27,10 +27,10 @@
 
       <h2>Navigation</h2>
       <p class="p-0 col-md-8">
-        Navigation coming soon. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        Harum ullam dolore fugit exercitationem rem modi laudantium, accusantium
-        facere tenetur ipsam ratione impedit, odit dolores maxime quibusdam
-        eaque recusandae, eius tempora.
+        Navigation coming soon. Lorem ipsum, dolor sit amet consectetur
+        adipisicing elit. Harum ullam dolore fugit exercitationem rem modi
+        laudantium, accusantium facere tenetur ipsam ratione impedit, odit
+        dolores maxime quibusdam eaque recusandae, eius tempora.
       </p>
 
       <h2>

@@ -20,7 +20,10 @@
         >
       </p>
 
-      <p>Color is automatically applied to the following utilities.</p>
+      <p>
+        Color is automatically applied to the following utilities and
+        components.
+      </p>
       <ul>
         <li>
           <a
@@ -42,6 +45,13 @@
             href="https://getbootstrap.com/docs/5.1/utilities/colors/"
             target="_blank"
             >https://getbootstrap.com/docs/5.1/utilities/colors/</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://getbootstrap.com/docs/5.1/components/alerts/"
+            target="_blank"
+            >https://getbootstrap.com/docs/5.1/components/alerts/</a
           >
         </li>
       </ul>

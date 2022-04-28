@@ -1,0 +1,58 @@
+<template>
+  <a
+    v-if="isLink"
+    class="me-1"
+    data-bs-toggle="collapse"
+    :href="'#' + disclosureId"
+    role="button"
+    aria-expanded="false"
+    :aria-controls="disclosureId"
+  >
+    <slot></slot>
+  </a>
+
+  <button
+    v-else
+    class="btn btn-dark-beige"
+    :class="[hasIndicator ? 'booger' : '']"
+    type="button"
+    data-bs-toggle="collapse"
+    :data-bs-target="'#' + disclosureId"
+    aria-expanded="false"
+    :aria-controls="disclosureId"
+  >
+    <i v-if="hasIndicator" class="bi bi-chevron-right text-dark" aria-hidden="true"></i>
+    <slot></slot>
+  </button>
+</template>
+
+<script>
+export default {
+  name: "DisclosureAction",
+  props: {
+    disclosureId: {
+      // must match tab panelId
+      type: [String, Number],
+      required: true,
+    },
+    isLink: {
+      type: Boolean,
+    },
+    hasIndicator: {
+      type: Boolean,
+    },
+  },
+};
+</script>
+
+<style lang="scss">
+.booger[aria-expanded="true"] i {
+  transform: rotate(90deg);
+}
+
+.booger i {
+  display: inline-block;
+  transition: transform 0.35s ease;
+  transform-origin: 0.5em 50%;
+}
+</style>

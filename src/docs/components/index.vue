@@ -235,6 +235,8 @@ export default {
         eaque recusandae, eius tempora.
       </p>
 
+      <p>WAI-ARIA: https://www.w3.org/TR/wai-aria-practices/#tabpanel</p>
+
       <CodeBlock>
         <template #preview>
           <axdd-tabs :tabs-id="'example'" style="max-width: 600px">
@@ -314,6 +316,73 @@ export default {
 };</code></pre>
         </template>
       </CodeBlock>
+
+      <h2>
+        Disclosure (Collapse)
+        <VersionBadge>1.0.5</VersionBadge>
+      </h2>
+      <p class="p-0 col-md-8">
+        Disclosure info. Lorem ipsum, dolor sit amet consectetur adipisicing
+        elit. Harum ullam dolore fugit exercitationem rem modi laudantium,
+        accusantium facere tenetur ipsam ratione impedit, odit dolores maxime
+        quibusdam eaque recusandae, eius tempora.
+      </p>
+
+      <p>
+        WAI-ARIA:
+        <a
+          href="https://www.w3.org/TR/wai-aria-practices/#disclosure"
+          target="_blank"
+          >https://www.w3.org/TR/wai-aria-practices/#disclosure</a
+        >
+      </p>
+
+      <h3>Link Disclosure (inline)</h3>
+      <CodeBlock>
+        <template #preview>
+          <p>
+            This is a paragraph with an inline
+            <axdd-disclosure-action :disclosure-id="'blahWah'" is-link>
+              link disclosure
+            </axdd-disclosure-action>
+            and more text.
+          </p>
+          <axdd-disclosure-panel :disclosure-id="'blahWah'">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium adipisci expedita tenetur officiis voluptate, laborum
+              error cum soluta. Beatae veniam commodi voluptas saepe facere a
+              reiciendis, explicabo minima nobis? Fugit.
+            </p>
+          </axdd-disclosure-panel>
+        </template>
+      </CodeBlock>
+
+      <h3>Button Disclosure</h3>
+      <CodeBlock>
+        <template #preview>
+          <axdd-disclosure-action class="me-2" :disclosure-id="'blahWoo'">
+            link button
+          </axdd-disclosure-action>
+          <axdd-disclosure-action
+            class="me-2 btn-sm"
+            :disclosure-id="'blahWoo'"
+          >
+            small link button
+          </axdd-disclosure-action>
+          <axdd-disclosure-action :disclosure-id="'blahWoo'" has-indicator>
+            link button w/ indicator
+          </axdd-disclosure-action>
+          <axdd-disclosure-panel :disclosure-id="'blahWoo'" class="mt-3">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium adipisci expedita tenetur officiis voluptate, laborum
+              error cum soluta. Beatae veniam commodi voluptas saepe facere a
+              reiciendis, explicabo minima nobis? Fugit.
+            </p>
+          </axdd-disclosure-panel>
+        </template>
+      </CodeBlock>
     </template>
   </Layout>
 </template>
@@ -331,6 +400,9 @@ import Tabs from "../../_components/tabs/tabs.vue";
 import TabsItem from "../../_components/tabs/item.vue";
 import TabsPanel from "../../_components/tabs/panel.vue";
 
+import DisclosureAction from "../../_components/disclosure-action.vue";
+import DisclosurePanel from "../../_components/disclosure-panel.vue";
+
 export default {
   name: "DocsComponentsIndex",
   components: {
@@ -343,6 +415,8 @@ export default {
     "axdd-tabs": Tabs,
     "axdd-tabs-item": TabsItem,
     "axdd-tabs-panel": TabsPanel,
+    "axdd-disclosure-action": DisclosureAction,
+    "axdd-disclosure-panel": DisclosurePanel,
   },
   data() {
     return {};

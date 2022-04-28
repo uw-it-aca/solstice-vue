@@ -64,6 +64,7 @@
 import SideBar from "../../../_layouts/sidebar.vue";
 
 export default {
+  name: "DocsDevelopmentSidebarIndex",
   components: {
     "axdd-sidebar": SideBar,
   },
@@ -81,5 +82,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

@@ -1,7 +1,6 @@
 <template>
   <Layout>
     <template #content>
-
       <h1>Design Principles</h1>
 
       <p class="p-0 col-md-8 lead">
@@ -28,7 +27,6 @@
       <h2>Fast is better than slow</h2>
       <h2>Let content determine breakpoints</h2>
       <h2>Strive for universality</h2>
-
     </template>
   </Layout>
 </template>
@@ -37,11 +35,10 @@
 import Layout from "../layouts/docs.vue";
 
 export default {
+  name: "DocsPrinciples",
   components: { Layout },
   data() {
     return {};
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

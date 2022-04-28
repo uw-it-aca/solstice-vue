@@ -1,7 +1,6 @@
 <template>
   <div
     class="d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"
-    style="min-height: 300px"
   >
     <header class="w-100">
       <slot name="header">
@@ -122,6 +121,7 @@
 
 <script>
 export default {
+  name: "TopbarLayout",
   props: {
     appName: {
       type: String,
@@ -159,6 +159,7 @@ export default {
 .axdd-topbar {
   min-width: 320px;
 }
+
 .axdd-topbar-brand {
   line-height: 65px;
 }

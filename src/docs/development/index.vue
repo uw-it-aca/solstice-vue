@@ -41,10 +41,26 @@
           >https://vuejs.org/style-guide/rules-strongly-recommended.html#single-file-component-filename-casing</a
         >
       </p>
-
       <p>
         Filenames of Single-File Components should either be always PascalCase
         or always kebab-case.
+      </p>
+
+      <h3>Semantic HTML markup</h3>
+      <h3>Utility-first CSS</h3>
+      <p>
+        Bootstrap and other CSS frameworks provide low-level utility classes
+        that let you build completely custom designs without ever leaving your
+        HTML.
+      </p>
+
+      <h2>Testing Components</h2>
+      <p>
+        <a
+          href="https://vuejs.org/guide/scaling-up/testing.html#component-testing"
+          target="_blank"
+          >https://vuejs.org/guide/scaling-up/testing.html#component-testing</a
+        >
       </p>
 
       <h2>AXDD Django Vue</h2>
@@ -56,11 +72,10 @@
 import Layout from "../../layouts/docs.vue";
 
 export default {
+  name: "DocsDevelopmentIndex",
   components: { Layout },
   data() {
     return {};
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

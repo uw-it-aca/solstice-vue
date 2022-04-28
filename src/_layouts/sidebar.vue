@@ -104,6 +104,7 @@
 
 <script>
 export default {
+  name: "SidebarLayout",
   props: {
     appName: {
       type: String,

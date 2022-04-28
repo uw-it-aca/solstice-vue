@@ -24,10 +24,9 @@
 
 <script>
 export default {
+  name: "CardComp",
   data: function () {
     return {};
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

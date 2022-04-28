@@ -1,13 +1,24 @@
 <template>
-  <div>
-    <div
-      v-if="$slots['preview']"
-      class="border rounded p-4 mb-3 axdd-font-open-sans"
-    >
-      <slot name="preview"></slot>
+  <div class="mb-5">
+    <div v-if="$slots['preview']">
+      <p class="h6 text-secondary">Preview</p>
+      <div class="preview border rounded-3 p-4 mb-3 axdd-font-open-sans">
+        <slot name="preview"></slot>
+      </div>
     </div>
-    <div class="p-0 small">
-      <slot name="code"></slot>
+
+    <div v-if="$slots['markup']">
+      <p class="h6 text-secondary">Markup</p>
+      <div class="p-0 small mb-3">
+        <slot name="markup"></slot>
+      </div>
+    </div>
+
+    <div v-if="$slots['script']">
+      <p class="h6 text-secondary">Script</p>
+      <div class="p-0 small mb-3">
+        <slot name="script"></slot>
+      </div>
     </div>
   </div>
 </template>
@@ -25,3 +36,21 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+// global styleguide
+
+.preview {
+  // reset container padding for render display
+  .container-xl {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  // reset vh-100 to something more manageable for display
+  .vh-100 {
+    min-height: 30vh !important;
+    max-height: 40vh !important;
+  }
+}
+</style>

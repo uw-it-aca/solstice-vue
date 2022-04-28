@@ -1,7 +1,7 @@
 <template>
-  <a class="btn btn-outline-beige text-dark myuw-text-md">
+  <span class="badge bg-light-beige text-dark fs-6">
     <slot></slot>
-  </a>
+  </span>
 </template>
 
 <script>

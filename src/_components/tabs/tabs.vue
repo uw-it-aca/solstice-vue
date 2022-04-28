@@ -15,6 +15,7 @@
 
 <script>
 export default {
+  name: "TabsComp",
   props: {
     tabsId: {
       // must match tab panelId

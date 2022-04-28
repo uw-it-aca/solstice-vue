@@ -13,7 +13,7 @@ on:
 
 jobs:
   context:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
 
     outputs:
       commit_hash: ${{ steps.context.outputs.commit_hash }}
@@ -28,7 +28,7 @@ jobs:
           release_name: ${{ env.RELEASE_NAME }}
 
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
 
     needs: context
 
@@ -62,12 +62,41 @@ jobs:
           image_tag: ${{ needs.context.outputs.image_tag }}
           gcp_json_key: ${{ secrets.GCP_JSON_KEY }}
 
+  test:
+    runs-on: ubuntu-20.04
+    needs: build
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install packages
+        run: npm install
+
+      - name: Run Vitest coverage
+        run: npm run coverage
+
+      - name: Post coverage data to Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Lint with ESLint
+        run: npm run eslint
+
+      - name: Lint with StyleLint
+        run: npm run stylelint
+
   deploy:
     if: github.event_name == 'push'
 
     needs: [context, build]
 
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
 
     outputs:
       context: ${{ steps.context.outputs.context }}
@@ -97,7 +126,7 @@ jobs:
 
     needs: [context, build, deploy]
 
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
 
     steps:
       - name: House Keeping

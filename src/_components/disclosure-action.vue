@@ -1,7 +1,6 @@
 <template>
   <a
     v-if="isLink"
-    class="me-1"
     data-bs-toggle="collapse"
     :href="'#' + disclosureId"
     role="button"

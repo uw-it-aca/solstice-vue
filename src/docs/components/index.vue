@@ -341,14 +341,20 @@ export default {
       <CodeBlock>
         <template #preview>
           <p>
-            This is a paragraph with an inline
-            <axdd-disclosure-action :disclosure-id="'blahWah'" is-link>
-              link disclosure
-            </axdd-disclosure-action>
-            and more text.
+            This is a sentence with an
+            <axdd-disclosure-action :disclosure-id="'blahWah'" is-link
+              >inline disclosure</axdd-disclosure-action
+            >
+            and some more text.
+          </p>
+          <p>
+            This is a sentence followed by an action.
+            <axdd-disclosure-action :disclosure-id="'blahWah'" is-link
+              >Show disclosure</axdd-disclosure-action
+            >
           </p>
           <axdd-disclosure-panel :disclosure-id="'blahWah'">
-            <p>
+            <p class="alert alert-beige p-4 mb-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Praesentium adipisci expedita tenetur officiis voluptate, laborum
               error cum soluta. Beatae veniam commodi voluptas saepe facere a

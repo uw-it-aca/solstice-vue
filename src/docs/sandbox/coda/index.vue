@@ -130,6 +130,7 @@ import TabItem from "../../../_components/tabs/item.vue";
 import TabPanel from "../../../_components/tabs/panel.vue";
 
 export default {
+  name: "DocsDevelopmentCodaIndex",
   components: {
     "axdd-topbar": Topbar,
     "axdd-tabs": Tabs,
@@ -140,7 +141,7 @@ export default {
     return {
       // minimum application setup overrides
       appName: "Course Dashboard",
-      appRootUrl: "/myapp",
+      appRootUrl: "/sandbox/coda/",
       userName: "javerage",
       signOutUrl: "/signout",
       pageTitle: "My Courses",

@@ -13,7 +13,7 @@
 
   <button
     v-else
-    class="btn btn-dark-beige"
+    class="btn btn-beige"
     :class="[hasIndicator ? 'booger' : '']"
     type="button"
     data-bs-toggle="collapse"
@@ -21,7 +21,11 @@
     aria-expanded="false"
     :aria-controls="disclosureId"
   >
-    <i v-if="hasIndicator" class="bi bi-chevron-right text-dark" aria-hidden="true"></i>
+    <i
+      v-if="hasIndicator"
+      class="bi bi-chevron-right text-dark-beige"
+      aria-hidden="true"
+    ></i>
     <slot></slot>
   </button>
 </template>
@@ -54,5 +58,10 @@ export default {
   display: inline-block;
   transition: transform 0.35s ease;
   transform-origin: 0.5em 50%;
+  font-weight: bolder;
+}
+
+.bi::before {
+  font-weight: bolder !important;
 }
 </style>

@@ -226,7 +226,7 @@ export default {
 
       <h2>
         Tabs
-        <VersionBadge>1.0.4</VersionBadge>
+        <VersionBadge>1.0.5</VersionBadge>
       </h2>
       <p class="p-0 col-md-8">
         Tabs info. Lorem ipsum, dolor sit amet consectetur adipisicing elit.

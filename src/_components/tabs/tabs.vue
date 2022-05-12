@@ -1,6 +1,10 @@
 <template>
   <div class="tabs">
-    <ul class="nav nav-lines mb-4" :id="tabsId" role="tablist">
+    <ul
+      class="nav nav-lines mb-4 border-light-gray border-bottom"
+      :id="tabsId"
+      role="tablist"
+    >
       <slot name="items">
         <!-- axdd-tab-button and uw-tab-dropdown components with panelId-->
       </slot>
@@ -29,13 +33,13 @@ export default {
 <style lang="scss">
 // creates a custom bootstrap tab style
 .nav-lines {
-  border-bottom: 4px solid #f8f9fa;
+  border-width: 1px;
 
   .nav-link {
     background: none;
     border: none;
     color: gray;
-    margin-bottom: -4px;
+    margin-bottom: -1px;
   }
 
   .nav-link.active {

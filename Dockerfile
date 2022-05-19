@@ -1,4 +1,4 @@
-FROM gcr.io/uwit-mci-axdd/nginx-container:1.0.3 as app-container
+FROM us-docker.pkg.dev/uwit-mci-axdd/containers/nginx-container:1.1.2 as app-container
 
 USER root
 

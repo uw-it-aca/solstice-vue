@@ -11,12 +11,42 @@
 
       <hr class="mb-5 w-25 d-inline-block" />
 
-      <h2>Color Palette</h2>
-      <p class="col-md-8">
-        These are the default colors supported by AXDD Components. For each
-        color, Bootstrap creates three classes: bg-xxxxx, text-xxxxx, and
-        border-xxxxx
+      <h2>Color</h2>
+      <p>
+        <a
+          href="https://getbootstrap.com/docs/5.1/customize/color/"
+          target="_blank"
+          >https://getbootstrap.com/docs/5.1/customize/color/</a
+        >
       </p>
+
+      <p>Color is automatically applied to the following utilities.</p>
+      <ul>
+        <li>
+          <a
+            href="https://getbootstrap.com/docs/5.1/utilities/background/"
+            target="_blank"
+            >https://getbootstrap.com/docs/5.1/utilities/background/</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://getbootstrap.com/docs/5.1/utilities/borders/#border-color"
+            target="_blank"
+          >
+            https://getbootstrap.com/docs/5.1/utilities/borders/#border-color</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://getbootstrap.com/docs/5.1/utilities/colors/"
+            target="_blank"
+            >https://getbootstrap.com/docs/5.1/utilities/colors/</a
+          >
+        </li>
+      </ul>
+
+      <p>Example: bg-xxxxx, border-xxxxx, and text-xxxxx</p>
 
       <CodeBlock>
         <template #preview>
@@ -128,40 +158,76 @@
         </template>
       </CodeBlock>
 
-      <h2>Font Sizes</h2>
+      <h2>Font Sizes (1.0.5)</h2>
+      <p>The base font-size for our apps is 16px.</p>
+      <p>
+        <a
+          href="https://getbootstrap.com/docs/5.1/utilities/text/#font-size"
+          target="_blank"
+          >https://getbootstrap.com/docs/5.1/utilities/text/#font-size</a
+        >
+      </p>
+
       <CodeBlock>
         <template #preview>
-          <div class="axdd-text-lg">Lorem ipsum dolor... 18px</div>
-          <div>Lorem ipsum dolor... 16px (Bootstrap 5 default)</div>
-          <div class="axdd-text-md">
-            Lorem ipsum dolor... 14px (MyUW default)
-          </div>
-          <div class="axdd-text-sm">Lorem ipsum dolor... 13px</div>
-          <div class="axdd-text-xs">Lorem ipsum dolor... 12px</div>
-          <div class="axdd-text-xxs">Lorem ipsum dolor... 11px</div>
-          <div class="axdd-text-tiny">Lorem ipsum dolor... 10px</div>
+          <p class="fs-1">.fs-1 text (40px)</p>
+          <p class="fs-2">.fs-2 text (32px)</p>
+          <p class="fs-3">.fs-3 text (28px)</p>
+          <p class="fs-4">.fs-4 text (24px)</p>
+          <p class="fs-5">.fs-5 text (20px)</p>
+          <p class="fs-6">.fs-6 text (16px)</p>
+          <p class="fs-7">.fs-7 text (14px)</p>
+          <p class="fs-8">.fs-8 text (13px)</p>
+          <p class="fs-9">.fs-9 text (12px)</p>
+          <p class="fs-10">.fs-10 text (11px)</p>
+          <p class="fs-11">.fs-11 text (10px)</p>
         </template>
         <template #code>
           <pre class="language-html rounded">
-<code>&lt;div class="axdd-text-lg">Lorem ipsum dolor&lt;/div>
-&lt;div>Lorem ipsum dolor&lt;/div>
-&lt;div class="axdd-text-md">Lorem ipsum dolor&lt;/div>
-&lt;div class="axdd-text-sm">Lorem ipsum dolor&lt;/div>
-&lt;div class="axdd-text-xs">Lorem ipsum dolor&lt;/div>
-&lt;div class="axdd-text-xxs">Lorem ipsum dolor&lt;/div>
-&lt;div class="axdd-text-tiny">Lorem ipsum dolor&lt;/div>
+<code>&lt;div class="fs-7">Lorem ipsum dolor&lt;/div>
+&lt;div class="fs-8">Lorem ipsum dolor&lt;/div>
+&lt;div class="fs-9">Lorem ipsum dolor&lt;/div>
+&lt;div class="fs-10">Lorem ipsum dolor&lt;/div>
+&lt;div class="fs-11">Lorem ipsum dolor&lt;/div>
 </code></pre>
         </template>
       </CodeBlock>
 
       <h2>Typography</h2>
       <p>
-        Open Sans is the default font-family used by MyUW. It is typically set
-        at the page body level.
+        <a
+          href="https://www.washington.edu/brand/graphic-elements/font-download/"
+          target="_blank"
+          >https://www.washington.edu/brand/graphic-elements/font-download/</a
+        >
+      </p>
+
+      <p>Typography is defined by the UW Brand guidelines.</p>
+
+      <p>
+        Open Sans is the default font-family used by UW. It is typically set at
+        the page body level.
       </p>
       <CodeBlock>
         <template #preview>
           <div class="axdd-font-open-sans">Lorem ipsum dolor... Open Sans</div>
+        </template>
+        <template #code>
+          <pre class="language-html rounded">
+<code>&lt;body class="axdd-font-open-sans">Lorem ipsum dolor... Open Sans&lt;/body>
+</code></pre>
+        </template>
+      </CodeBlock>
+
+      <p>
+        Encode Sans Condensed is the heading font-family used by UW. It is
+        typically set at the page body level.
+      </p>
+      <CodeBlock>
+        <template #preview>
+          <div class="axdd-font-encode-sans">
+            Lorem ipsum dolor... Encode Sans Condensed
+          </div>
         </template>
         <template #code>
           <pre class="language-html rounded">

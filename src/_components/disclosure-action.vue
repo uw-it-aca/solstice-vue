@@ -13,7 +13,7 @@
   <button
     v-else
     class="btn btn-beige"
-    :class="[hasIndicator ? 'booger' : '']"
+    :class="[hasIndicator ? 'chevron' : '']"
     type="button"
     data-bs-toggle="collapse"
     :data-bs-target="'#' + disclosureId"
@@ -49,11 +49,11 @@ export default {
 </script>
 
 <style lang="scss">
-.booger[aria-expanded="true"] i {
+.chevron[aria-expanded="true"] i {
   transform: rotate(90deg);
 }
 
-.booger i {
+.chevron i {
   display: inline-block;
   transition: transform 0.35s ease;
   transform-origin: 0.5em 50%;

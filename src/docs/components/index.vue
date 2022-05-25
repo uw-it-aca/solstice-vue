@@ -376,7 +376,11 @@ export default {
           >
             small link button
           </axdd-disclosure-action>
-          <axdd-disclosure-action :disclosure-id="'blahWoo'" has-indicator>
+          <axdd-disclosure-action
+            class="me-2 btn-sm"
+            :disclosure-id="'blahWoo'"
+            has-indicator
+          >
             link button w/ indicator
           </axdd-disclosure-action>
           <axdd-disclosure-panel :disclosure-id="'blahWoo'" class="mt-3">

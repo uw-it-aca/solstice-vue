@@ -63,6 +63,7 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
 // bootstrap: add bg hover utility class
 $utilities: (
+  // MARK: bg-color-hover (changes bg-color on hover)
   "background-color": (
     property: background-color,
     class: bg,
@@ -72,6 +73,20 @@ $utilities: (
         $theme-colors,
         (
           "body": $body-bg,
+          "white": $white,
+          "transparent": transparent,
+        )
+      ),
+  ),
+  // MARK: text-color-hover (changes text-color on hover)
+  "color": (
+    property: color,
+    class: text,
+    state: hover focus,
+    values:
+      map-merge(
+        $theme-colors,
+        (
           "white": $white,
           "transparent": transparent,
         )

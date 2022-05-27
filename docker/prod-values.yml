@@ -55,10 +55,6 @@ service:
 deploymentInitialization:
   enabled: false
 
-image:
-  repository: gcr.io/uwit-mci-axdd/axdd-components
-  tag: IMAGE_TAG
-
 daemon:
   enabled: false
 

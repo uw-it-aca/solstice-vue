@@ -10,6 +10,7 @@
 @import "node_modules/bootstrap/scss/utilities/api";
 
 // override bootstrap default theme colors
+
 /*
 $danger: #a94442;
 $warning: #f5d300;
@@ -41,7 +42,7 @@ $custom-colors: (
   // beige bg
   "mid-beige": #ab9765,
   "gold": #ffbc24,
-  //uw gold
+  // uw gold
   "teal": #4c7286,
   // uw teal
   "light-gray": #e8e8e8,
@@ -82,10 +83,17 @@ $utilities: (
 .axdd-font-open-sans {
   font-family: "Open Sans", sans-serif !important;
 }
+
 .axdd-font-encode-sans {
   font-family: "Encode Sans Condensed", sans-serif !important;
 }
 
 // adding extra font-sizes (fs-#)
-$extra-font-sizes: (7: 0.875rem, 8: 0.8125rem, 9: 0.75rem, 10: 	0.6875rem, 11: 	0.625rem);
+$extra-font-sizes: (
+  7: 0.875rem,
+  8: 0.8125rem,
+  9: 0.75rem,
+  10: 0.6875rem,
+  11: 0.625rem,
+);
 $font-sizes: map-merge($font-sizes, $extra-font-sizes);

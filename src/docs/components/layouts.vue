@@ -146,6 +146,7 @@ import Sidebar from "../../_layouts/sidebar.vue";
 import CodeBlock from "../../components/CodeBlock.vue";
 
 export default {
+  name: "DocsComponentsLayouts",
   components: {
     Layout,
     CodeBlock,

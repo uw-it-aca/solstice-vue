@@ -115,6 +115,7 @@
 
 <script>
 export default {
+  name: "TopbarLayout",
   props: {
     appName: {
       type: String,
@@ -152,6 +153,7 @@ export default {
 .axdd-topbar {
   min-width: 320px;
 }
+
 .axdd-topbar-brand {
   line-height: 65px;
 }

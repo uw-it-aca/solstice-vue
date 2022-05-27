@@ -25,7 +25,6 @@ pnpm-debug.log*
 
 # exclude majority of /src from npm package
 /src/components
-/src/dev
 /src/docs
 /src/layouts
 /src/router

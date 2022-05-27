@@ -1,7 +1,6 @@
 <template>
   <Layout>
     <template #content>
-
       <h1>Voice &amp; Tone</h1>
 
       <p class="p-0 col-md-8 lead">
@@ -23,22 +22,18 @@
           >UW-IT DEI approved words</a
         >. Also, optimized for a11y.
       </p>
-
-
     </template>
   </Layout>
 </template>
-
 
 <script>
 import Layout from "../../layouts/docs.vue";
 
 export default {
+  name: "DocsContentVoice",
   components: { Layout },
   data() {
     return {};
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

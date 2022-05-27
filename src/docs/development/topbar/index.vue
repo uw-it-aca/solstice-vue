@@ -31,10 +31,10 @@
 </template>
 
 <script>
-import Topbar from "../../_layouts/topbar.vue";
+import Topbar from "../../../_layouts/topbar.vue";
 
 export default {
-  name: "MyApp",
+  name: "DocsDevelopmentTopbarIndex",
   components: {
     topbar: Topbar,
   },
@@ -78,5 +78,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

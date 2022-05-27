@@ -22,6 +22,7 @@
 
 <script>
 export default {
+  name: "TabsItem",
   props: {
     panelId: {
       // must match tab panelId

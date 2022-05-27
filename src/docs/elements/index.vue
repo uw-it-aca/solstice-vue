@@ -26,11 +26,10 @@
 import Layout from "../../layouts/docs.vue";
 
 export default {
+  name: "DocsElementsIndex",
   components: { Layout },
   data() {
     return {};
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

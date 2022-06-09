@@ -12,7 +12,27 @@
         <slot name="header">
           <div class="bg-dark-purple text-white py-2 px-3 small">
             <div class="d-flex">
-              <div class="flex-fill">{{ userName }}</div>
+              <div class="flex-fill">
+
+                <div class="dropdown">
+                  <button
+                    class="btn btn-sm btn-link dropdown-toggle p-0"
+                    type="button"
+                    id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    {{ userName }}
+                  </button>
+                  <div
+                    class="dropdown-menu p-2"
+                    aria-labelledby="dropdownMenuButton1"
+                  >
+                    asdfasdfasdsaf
+                    <p>go to profile</p>
+                  </div>
+                </div>
+              </div>
               <div class="flex-fill text-end">
                 <a :href="signOutUrl" class="text-white">Sign out</a>
               </div>

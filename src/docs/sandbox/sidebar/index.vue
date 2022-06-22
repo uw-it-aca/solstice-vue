@@ -2,8 +2,10 @@
   <axdd-sidebar :app-name="appName" :page-title="pageTitle">
     <template #profile>
       <axdd-profile
+        :variant="'flyout'"
         :user-netid="userNetid"
-        :user-preferred="userPreferred"
+        :user-official-name="userOfficial"
+        :user-preferred-name="userPreferred"
         :profile-url="'https://identity.uw.edu'"
         :signout-url="'/out'"
       ></axdd-profile>
@@ -86,7 +88,8 @@ export default {
     return {
       appName: "MyApp",
       userNetid: "myusername",
-      userPreferred: "Mr. Preferred Name",
+      userOfficial: "MYOFFICAL NAME",
+      userPreferred: "Preferred Name",
       currentYear: new Date().getFullYear(),
       pageTitle: "Page Title",
     };

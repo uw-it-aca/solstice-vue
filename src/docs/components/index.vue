@@ -393,6 +393,45 @@ export default {
           </axdd-disclosure-panel>
         </template>
       </CodeBlock>
+
+      <h2>
+        Profile
+        <VersionBadge>1.0.5</VersionBadge>
+      </h2>
+      <p class="p-0 col-md-8">
+        Profile info. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Harum ullam dolore fugit exercitationem rem modi laudantium, accusantium
+        facere tenetur ipsam ratione impedit, odit dolores maxime quibusdam
+        eaque recusandae, eius tempora.
+      </p>
+      <h3>Standard</h3>
+      <CodeBlock>
+        <template #preview>
+          <div class="w-50 px-3 py-1 bg-dark-purple small">
+            <axdd-profile
+              :user-netid="'javerage'"
+              :profile-url="'/profile'"
+              :signout-url="'/signout'"
+            ></axdd-profile>
+          </div>
+        </template>
+      </CodeBlock>
+      <h3>Flyout</h3>
+      <CodeBlock>
+        <template #preview>
+          <div class="w-50 px-3 py-1 bg-dark-purple small">
+            <axdd-profile
+              :variant="'flyout'"
+              :user-netid="'javerage'"
+              :user-official-name="'John C. Average'"
+              :user-preferred-name="'John Average'"
+              :user-pronouns="'he/him'"
+              :profile-url="'/profile'"
+              :signout-url="'/signout'"
+            ></axdd-profile>
+          </div>
+        </template>
+      </CodeBlock>
     </template>
   </Layout>
 </template>
@@ -413,6 +452,8 @@ import TabsPanel from "../../_components/tabs/panel.vue";
 import DisclosureAction from "../../_components/disclosure-action.vue";
 import DisclosurePanel from "../../_components/disclosure-panel.vue";
 
+import Profile from "../../_components/profile.vue";
+
 export default {
   name: "DocsComponentsIndex",
   components: {
@@ -427,6 +468,7 @@ export default {
     "axdd-tabs-panel": TabsPanel,
     "axdd-disclosure-action": DisclosureAction,
     "axdd-disclosure-panel": DisclosurePanel,
+    "axdd-profile": Profile,
   },
   data() {
     return {};

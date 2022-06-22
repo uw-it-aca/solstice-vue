@@ -14,14 +14,14 @@
             v-if="$slots['profile']"
             class="bg-dark-purple text-white py-2 px-3 small"
           >
-            <div class="d-flex">
-              <slot name="profile">
+            <slot name="profile">
+              <div class="d-flex">
                 <div class="flex-fill">username</div>
                 <div class="flex-fill text-end">
                   <a :href="signOutUrl" class="text-white">Sign out</a>
                 </div>
-              </slot>
-            </div>
+              </div>
+            </slot>
           </div>
 
           <div class="bg-purple axdd-sidebar-brand px-3">

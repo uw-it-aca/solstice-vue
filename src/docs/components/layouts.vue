@@ -116,6 +116,7 @@ export default {
             :user-name="'javerage'"
             class="bg-white"
           >
+            <template #profile> profile here... </template>
             <template #navigation> nav here... </template>
             <template #main>
               <div class="row">
@@ -129,6 +130,7 @@ export default {
         <template #markup>
           <pre class="language-html rounded">
 <code>&lt;axdd-sidebar :app-name="'App Name'" :user-name="'javerage'">
+  &lt;template #profile> profile here... &lt;/template>
   &lt;template #navigation>
     nav here...
   &lt;/template>

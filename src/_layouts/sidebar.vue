@@ -6,38 +6,24 @@
     <div
       :class="[$mq != 'mobile' ? 'overflow-auto' : '']"
       class="bg-purple axdd-sidebar axdd-sidebar-logo"
-      :style="[$mq != 'mobile' ? 'min-width: 240px; max-width:240px;' : '']"
+      :style="[$mq != 'mobile' ? 'min-width: 280px; max-width:280px;' : '']"
     >
       <header>
         <slot name="header">
-          <div class="bg-dark-purple text-white py-2 px-3 small">
+          <div
+            v-if="$slots['profile']"
+            class="bg-dark-purple text-white py-2 px-3 small"
+          >
             <div class="d-flex">
-              <div class="flex-fill">
-
-                <div class="dropdown">
-                  <button
-                    class="btn btn-sm btn-link dropdown-toggle p-0"
-                    type="button"
-                    id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    {{ userName }}
-                  </button>
-                  <div
-                    class="dropdown-menu p-2"
-                    aria-labelledby="dropdownMenuButton1"
-                  >
-                    asdfasdfasdsaf
-                    <p>go to profile</p>
-                  </div>
+              <slot name="profile">
+                <div class="flex-fill">username</div>
+                <div class="flex-fill text-end">
+                  <a :href="signOutUrl" class="text-white">Sign out</a>
                 </div>
-              </div>
-              <div class="flex-fill text-end">
-                <a :href="signOutUrl" class="text-white">Sign out</a>
-              </div>
+              </slot>
             </div>
           </div>
+
           <div class="bg-purple axdd-sidebar-brand px-3">
             <a
               v-if="$slots['navigation']"
@@ -156,7 +142,7 @@ export default {
 
 <style lang="scss">
 .axdd-sidebar-brand {
-  line-height: 65px;
+  line-height: 105px;
 }
 
 .axdd-sidebar-logo {

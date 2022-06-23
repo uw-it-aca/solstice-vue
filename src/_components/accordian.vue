@@ -1,5 +1,5 @@
 <template>
-  <div class="accordion accordion-flush" :id="accordianId">
+  <div class="" :id="accordianId">
     <div class="accordion-item bg-gray border-0 rounded-3 mb-2">
       <h2 class="accordion-header" id="panelsStayOpen-headingOne">
         <button
@@ -88,19 +88,19 @@
         </div>
       </div>
     </div>
-    <div class="accordion-item bg-danger rounded-3 p-3">
+    <div class="bg-danger rounded-3 p-3">
       <div class="d-flex" id="panelsStayOpen-headingThree">
         <div class="w-25">
           <button
-            class="chevron btn btn-link p-0 text-white collapsed"
+            class="chevron btn py-1 ps-0 text-white collapsed"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#panelsStayOpen-collapseThree"
             aria-expanded="false"
             aria-controls="panelsStayOpen-collapseThree"
           >
-            <i class="bi bi-chevron-right" aria-hidden="true"></i>
-            <span class="fw-bold">Accordion Item #1</span>
+            <i class="bi bi-chevron-right me-2" aria-hidden="true"></i>
+            <span class="fw-bold">Accordion Item #3</span>
           </button>
         </div>
         <div class="flex-fill">

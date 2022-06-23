@@ -394,57 +394,7 @@ export default {
         </template>
       </CodeBlock>
 
-      <h3>Block Content Disclosure</h3>
-      <CodeBlock>
-        <template #preview>
-          <axdd-disclosure-block
-            :disclosure-id="'wow'"
-            class="bg-gray text-dark"
-          >
-            <template #action>
-              <span class="h5 ms-2">Lorem impsum dolor amet</span>
-            </template>
-            <template #heading>
-              <div class="row g-3">
-                <div class="col-7">
-                  <input
-                    type="text"
-                    class="form-control form-control-sm"
-                    placeholder="City"
-                    aria-label="City"
-                  />
-                </div>
-                <div class="col">
-                  <input
-                    type="text"
-                    class="form-control form-control-sm"
-                    placeholder="State"
-                    aria-label="State"
-                  />
-                </div>
-                <div class="col">
-                  <input
-                    type="text"
-                    class="form-control form-control-sm"
-                    placeholder="Zip"
-                    aria-label="Zip"
-                  />
-                </div>
-              </div>
-            </template>
-            <template #content>
-              <div class="mt-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Praesentium adipisci expedita tenetur officiis voluptate,
-                laborum error cum soluta. Beatae veniam commodi voluptas saepe
-                facere a reiciendis, explicabo minima nobis? Fugit.
-              </div>
-            </template>
-          </axdd-disclosure-block>
-        </template>
-      </CodeBlock>
-
-       <h3>Accordion</h3>
+      <h3>Stacked Disclosure (Accordion)</h3>
       <CodeBlock>
         <template #preview>
           <axdd-accordian :accordian-id="'wow2'"></axdd-accordian>

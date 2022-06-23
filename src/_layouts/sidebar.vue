@@ -24,7 +24,7 @@
             </slot>
           </div>
 
-          <div class="bg-purple axdd-sidebar-brand px-3">
+          <div class="axdd-sidebar-brand px-3">
             <a
               v-if="$slots['navigation']"
               class="btn btn-link btn-sm d-md-none border border-2 py-0 px-1 text-white me-2"

@@ -1,7 +1,7 @@
 <template>
   <div class="rounded-3 p-3 mb-2">
     <div class="d-flex">
-      <div style="width: 350px">
+      <div class="w-25">
         <button
           class="chevron btn text-reset py-1 ps-0 collapsed"
           type="button"
@@ -30,7 +30,7 @@
 
 <script>
 export default {
-  name: "DisclosureBlock",
+  name: "AccordianItem",
   props: {
     itemId: {
       type: [String, Number],

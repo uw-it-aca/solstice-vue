@@ -394,10 +394,81 @@ export default {
         </template>
       </CodeBlock>
 
-      <h3>Stacked Disclosure (Accordion)</h3>
+      <h3>Block Disclosure (stackable)</h3>
       <CodeBlock>
         <template #preview>
-          <axdd-accordian :accordian-id="'wow2'"></axdd-accordian>
+          <axdd-disclosure-block
+            :item-id="'blah1'"
+            :item-title="'Heading only'"
+            class="bg-beige text-purple"
+          >
+            <template #body>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Praesentium explicabo veritatis harum ab eum quos facilis nihil
+              libero ratione voluptate a magni voluptatem deleniti, consequatur
+              rerum minus. Dolore, reprehenderit dolor?
+            </template>
+          </axdd-disclosure-block>
+          <axdd-disclosure-block
+            :item-id="'blah2'"
+            :item-title="'Heading with content'"
+            class="bg-gray text-dark"
+          >
+            <template #header>this is heading content</template>
+            <template #body>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Necessitatibus sapiente reprehenderit, quos ex id magnam molestiae
+              veniam commodi. Laborum, eos! Voluptatem, deleniti velit
+              temporibus optio libero placeat quae architecto ipsam?
+            </template>
+          </axdd-disclosure-block>
+          <axdd-disclosure-block
+            :item-id="'blah3'"
+            :item-title="'Complete Example'"
+            class="bg-purple text-white"
+          >
+            <template #header>
+              <div class="row">
+                <div class="col-7">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    placeholder="City"
+                    aria-label="City"
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    placeholder="State"
+                    aria-label="State"
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    placeholder="Zip"
+                    aria-label="Zip"
+                  />
+                </div>
+              </div>
+            </template>
+            <template #body>
+              <div class="py-3 text-white">
+                <strong>This is the third item's accordion body.</strong> It is
+                hidden by default, until the collapse plugin adds the
+                appropriate classes that we use to style each element. These
+                classes control the overall appearance, as well as the showing
+                and hiding via CSS transitions. You can modify any of this with
+                custom CSS or overriding our default variables. It's also worth
+                noting that just about any HTML can go within the
+                <code>.accordion-body</code>, though the transition does limit
+                overflow.
+              </div>
+            </template>
+          </axdd-disclosure-block>
         </template>
       </CodeBlock>
 
@@ -456,11 +527,10 @@ import Tabs from "../../_components/tabs/tabs.vue";
 import TabsItem from "../../_components/tabs/item.vue";
 import TabsPanel from "../../_components/tabs/panel.vue";
 
-import DisclosureAction from "../../_components/disclosure-action.vue";
-import DisclosurePanel from "../../_components/disclosure-panel.vue";
+import DisclosureAction from "../../_components/disclosure/action.vue";
+import DisclosurePanel from "../../_components/disclosure/panel.vue";
 import DisclosureBlock from "../../_components/disclosure/block.vue";
 
-import Accordian from "../../_components/accordian.vue";
 import Profile from "../../_components/profile.vue";
 
 export default {
@@ -478,7 +548,6 @@ export default {
     "axdd-disclosure-action": DisclosureAction,
     "axdd-disclosure-panel": DisclosurePanel,
     "axdd-disclosure-block": DisclosureBlock,
-    "axdd-accordian": Accordian,
     "axdd-profile": Profile,
   },
   data() {

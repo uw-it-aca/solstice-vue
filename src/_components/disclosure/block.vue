@@ -6,12 +6,14 @@
           class="chevron btn text-reset py-1 ps-0 collapsed"
           type="button"
           data-bs-toggle="collapse"
-          :data-bs-target="'#' + itemId + '-panel'"
+          :data-bs-target="'#' + blockId + '-panel'"
           aria-expanded="false"
-          :aria-controls="itemId + '-panel'"
+          :aria-controls="blockId + '-panel'"
         >
           <i class="bi bi-chevron-right me-2" aria-hidden="true"></i>
-          <span class="fw-bold" :id="itemId + '-heading'">{{ itemTitle }}</span>
+          <span class="fw-bold" :id="blockId + '-heading'">
+            {{ blockTitle }}
+          </span>
         </button>
       </div>
       <div class="flex-fill">
@@ -19,9 +21,9 @@
       </div>
     </div>
     <div
-      :id="itemId + '-panel'"
+      :id="blockId + '-panel'"
       class="collapse"
-      :aria-labelledby="itemId + '-heading'"
+      :aria-labelledby="blockId + '-heading'"
     >
       <slot name="body"></slot>
     </div>
@@ -32,11 +34,11 @@
 export default {
   name: "DisclosureBlock",
   props: {
-    itemId: {
+    blockId: {
       type: [String, Number],
       required: true,
     },
-    itemTitle: {
+    blockTitle: {
       type: String,
       required: true,
     },

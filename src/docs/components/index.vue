@@ -398,8 +398,8 @@ export default {
       <CodeBlock>
         <template #preview>
           <axdd-disclosure-block
-            :item-id="'blah1'"
-            :item-title="'Heading only'"
+            :block-id="'blah1'"
+            :block-title="'Heading only'"
             class="bg-beige text-purple"
           >
             <template #body>
@@ -410,8 +410,8 @@ export default {
             </template>
           </axdd-disclosure-block>
           <axdd-disclosure-block
-            :item-id="'blah2'"
-            :item-title="'Heading with content'"
+            :block-id="'blah2'"
+            :block-title="'Heading with content'"
             class="bg-gray text-dark"
           >
             <template #header>this is heading content</template>
@@ -423,8 +423,8 @@ export default {
             </template>
           </axdd-disclosure-block>
           <axdd-disclosure-block
-            :item-id="'blah3'"
-            :item-title="'Complete Example'"
+            :block-id="'blah3'"
+            :block-title="'Complete Example'"
             class="bg-purple text-white"
           >
             <template #header>

@@ -403,10 +403,12 @@ export default {
             class="bg-beige text-purple"
           >
             <template #body>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Praesentium explicabo veritatis harum ab eum quos facilis nihil
-              libero ratione voluptate a magni voluptatem deleniti, consequatur
-              rerum minus. Dolore, reprehenderit dolor?
+              <div class="mt-3">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Praesentium explicabo veritatis harum ab eum quos facilis nihil
+                libero ratione voluptate a magni voluptatem deleniti,
+                consequatur rerum minus. Dolore, reprehenderit dolor?
+              </div>
             </template>
           </axdd-disclosure-block>
           <axdd-disclosure-block
@@ -416,10 +418,12 @@ export default {
           >
             <template #header>this is heading content</template>
             <template #body>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Necessitatibus sapiente reprehenderit, quos ex id magnam molestiae
-              veniam commodi. Laborum, eos! Voluptatem, deleniti velit
-              temporibus optio libero placeat quae architecto ipsam?
+              <div class="mt-3">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Necessitatibus sapiente reprehenderit, quos ex id magnam
+                molestiae veniam commodi. Laborum, eos! Voluptatem, deleniti
+                velit temporibus optio libero placeat quae architecto ipsam?
+              </div>
             </template>
           </axdd-disclosure-block>
           <axdd-disclosure-block
@@ -456,7 +460,7 @@ export default {
               </div>
             </template>
             <template #body>
-              <div class="py-3 text-white">
+              <div class="mt-3 text-white">
                 <strong>This is the third item's accordion body.</strong> It is
                 hidden by default, until the collapse plugin adds the
                 appropriate classes that we use to style each element. These

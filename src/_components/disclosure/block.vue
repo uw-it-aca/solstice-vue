@@ -1,9 +1,10 @@
 <template>
   <div class="rounded-3 p-3 mb-2">
     <div class="d-flex">
-      <div style="width: 350px">
-        <button
-          class="chevron btn text-reset py-1 ps-0 collapsed"
+      <div class="me-3" style="width: 330px">
+        <a
+          href="#"
+          class="chevron d-block text-start btn text-reset py-1 ps-0 collapsed"
           type="button"
           data-bs-toggle="collapse"
           :data-bs-target="'#' + blockId + '-panel'"
@@ -14,7 +15,7 @@
           <span class="fw-bold" :id="blockId + '-heading'">
             {{ blockTitle }}
           </span>
-        </button>
+        </a>
       </div>
       <div class="flex-fill">
         <slot name="header"></slot>

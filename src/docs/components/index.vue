@@ -394,6 +394,63 @@ export default {
         </template>
       </CodeBlock>
 
+      <h3>Block Content Disclosure</h3>
+      <CodeBlock>
+        <template #preview>
+          <axdd-disclosure-block
+            :disclosure-id="'wow'"
+            class="bg-gray text-dark"
+          >
+            <template #action>
+              <span class="h5 ms-2">Lorem impsum dolor amet</span>
+            </template>
+            <template #heading>
+              <div class="row g-3">
+                <div class="col-7">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    placeholder="City"
+                    aria-label="City"
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    placeholder="State"
+                    aria-label="State"
+                  />
+                </div>
+                <div class="col">
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    placeholder="Zip"
+                    aria-label="Zip"
+                  />
+                </div>
+              </div>
+            </template>
+            <template #content>
+              <div class="mt-3">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Praesentium adipisci expedita tenetur officiis voluptate,
+                laborum error cum soluta. Beatae veniam commodi voluptas saepe
+                facere a reiciendis, explicabo minima nobis? Fugit.
+              </div>
+            </template>
+          </axdd-disclosure-block>
+        </template>
+      </CodeBlock>
+
+       <h3>Accordion</h3>
+      <CodeBlock>
+        <template #preview>
+          <axdd-accordian :accordian-id="'wow2'"></axdd-accordian>
+        </template>
+      </CodeBlock>
+
       <h2>
         Profile
         <VersionBadge>1.0.5</VersionBadge>
@@ -451,7 +508,9 @@ import TabsPanel from "../../_components/tabs/panel.vue";
 
 import DisclosureAction from "../../_components/disclosure-action.vue";
 import DisclosurePanel from "../../_components/disclosure-panel.vue";
+import DisclosureBlock from "../../_components/disclosure/block.vue";
 
+import Accordian from "../../_components/accordian.vue";
 import Profile from "../../_components/profile.vue";
 
 export default {
@@ -468,6 +527,8 @@ export default {
     "axdd-tabs-panel": TabsPanel,
     "axdd-disclosure-action": DisclosureAction,
     "axdd-disclosure-panel": DisclosurePanel,
+    "axdd-disclosure-block": DisclosureBlock,
+    "axdd-accordian": Accordian,
     "axdd-profile": Profile,
   },
   data() {

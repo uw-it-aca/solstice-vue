@@ -235,7 +235,14 @@ export default {
         eaque recusandae, eius tempora.
       </p>
 
-      <p>WAI-ARIA: https://www.w3.org/TR/wai-aria-practices/#tabpanel</p>
+      <p>
+        APG:
+        <a
+          href="https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/"
+          target="_blank"
+          >https://www.w3.org/WAI/ARIA/apg/patterns/tabpanel/</a
+        >
+      </p>
 
       <CodeBlock>
         <template #preview>
@@ -329,11 +336,11 @@ export default {
       </p>
 
       <p>
-        WAI-ARIA:
+        APG:
         <a
-          href="https://www.w3.org/TR/wai-aria-practices/#disclosure"
+          href="https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/"
           target="_blank"
-          >https://www.w3.org/TR/wai-aria-practices/#disclosure</a
+          >https://www.w3.org/WAI/ARIA/apg/patterns/disclosure/</a
         >
       </p>
 
@@ -394,7 +401,16 @@ export default {
         </template>
       </CodeBlock>
 
-      <h3>Block Disclosure (stackable)</h3>
+      <h3>Block Disclosure (Accordion)</h3>
+      <p>
+        APG:
+        <a
+          href="https://www.w3.org/WAI/ARIA/apg/patterns/accordion/"
+          target="_blank"
+          >https://www.w3.org/WAI/ARIA/apg/patterns/accordion/</a
+        >
+      </p>
+
       <CodeBlock>
         <template #preview>
           <axdd-disclosure-block

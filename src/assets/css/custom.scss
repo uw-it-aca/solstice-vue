@@ -49,6 +49,8 @@ $custom-colors: (
   "gray": #e9ecef,
 ) !default;
 
+// map merging
+
 // bootstrap 5 map merging
 $theme-colors: map-merge($theme-colors, $custom-colors);
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
@@ -94,14 +96,7 @@ $utilities: (
   ),
 );
 
-// global axdd-component styles
-.axdd-font-open-sans {
-  font-family: "Open Sans", sans-serif !important;
-}
 
-.axdd-font-encode-sans {
-  font-family: "Encode Sans Condensed", sans-serif !important;
-}
 
 // adding extra font-sizes (fs-#)
 $extra-font-sizes: (
@@ -112,3 +107,13 @@ $extra-font-sizes: (
   11: 0.625rem,
 );
 $font-sizes: map-merge($font-sizes, $extra-font-sizes);
+
+
+// global axdd-component styles
+.axdd-font-open-sans {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.axdd-font-encode-sans {
+  font-family: "Encode Sans Condensed", sans-serif !important;
+}

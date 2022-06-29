@@ -1,6 +1,5 @@
-// map merging
+// MARK: bootstrap 5 map and utility merging
 
-// bootstrap 5 map merging
 $theme-colors: map-merge($theme-colors, $custom-colors);
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
 $utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
@@ -15,37 +14,37 @@ $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 // bootstrap: add bg hover utility class
 $utilities: (
   // MARK: bg-color-hover (changes bg-color on hover)
-  "background-color": (
-    property: background-color,
-    class: bg,
-    state: hover focus,
-    values:
-      map-merge(
-        $theme-colors,
-        (
-          "body": $body-bg,
-          "white": $white,
-          "transparent": transparent,
-        )
-      ),
-  ),
+  "background-color":
+    (
+      property: background-color,
+      class: bg,
+      state: hover focus,
+      values:
+        map-merge(
+          $theme-colors,
+          (
+            "body": $body-bg,
+            "white": $white,
+            "transparent": transparent,
+          )
+        ),
+    ),
   // MARK: text-color-hover (changes text-color on hover)
-  "color": (
-    property: color,
-    class: text,
-    state: hover focus,
-    values:
-      map-merge(
-        $theme-colors,
-        (
-          "white": $white,
-          "transparent": transparent,
-        )
-      ),
-  ),
+  "color":
+    (
+      property: color,
+      class: text,
+      state: hover focus,
+      values:
+        map-merge(
+          $theme-colors,
+          (
+            "white": $white,
+            "transparent": transparent,
+          )
+        ),
+    )
 );
-
-
 
 // adding extra font-sizes (fs-#)
 $extra-font-sizes: (

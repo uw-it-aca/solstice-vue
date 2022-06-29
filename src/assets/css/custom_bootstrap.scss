@@ -1,6 +1,5 @@
-@import "./import";
+// import custom + map-utils (specific order)
 @import "./custom";
-@import "./merge";
 
 // import bootstrap + bootstrap-icons
 @import "bootstrap/scss/bootstrap";

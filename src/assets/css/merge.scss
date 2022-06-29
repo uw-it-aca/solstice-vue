@@ -1,4 +1,4 @@
-// MARK: bootstrap 5 map and utility merging
+// MARK: Bootstrap 5.1.3 map and utility merging
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");

@@ -1,0 +1,30 @@
+
+// override theme colors
+$custom-colors: (
+  "purple": #4d307f,
+  // uw purple
+  "dark-purple": #452a78,
+  // thin bar
+  "beige": #e8e3d3,
+  // tan
+  "dark-beige": #85754d,
+  // headers
+  "light-beige": #faf8f4,
+  // beige bg
+  "mid-beige": #ab9765,
+  "gold": #ffbc24,
+  // uw gold
+  "teal": #4c7286,
+  // uw teal
+  "light-gray": #e8e8e8,
+  "gray": #e9ecef,
+) !default;
+
+// global axdd-component styles
+.axdd-font-open-sans {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.axdd-font-encode-sans {
+  font-family: "Encode Sans Condensed", sans-serif !important;
+}

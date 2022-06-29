@@ -1,5 +1,9 @@
+@import "./bs_import";
+
 // import custom + map-utils (specific order)
 @import "./custom";
+
+@import "./bs_merge";
 
 // import bootstrap + bootstrap-icons
 @import "bootstrap/scss/bootstrap";

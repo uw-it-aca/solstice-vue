@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="[$mq != 'mobile' ? 'd-flex min-vh-100' : '']"
+    :class="[$mq != 'mobile' && !isPreview ? 'd-flex min-vh-100' : '']"
     class="axdd-font-open-sans"
   >
     <div

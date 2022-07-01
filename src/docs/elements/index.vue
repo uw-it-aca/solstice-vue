@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import Layout from "../../layouts/docs.vue";
+import Layout from "../../layout.vue";
 
 export default {
   name: "DocsElementsIndex",

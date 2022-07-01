@@ -252,7 +252,7 @@
 </template>
 
 <script>
-import Layout from "../../layouts/docs.vue";
+import Layout from "../../layout.vue";
 import CodeBlock from "../../components/CodeBlock.vue";
 import VersionBadge from "../../components/VersionBadge.vue";
 

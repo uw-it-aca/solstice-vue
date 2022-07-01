@@ -157,7 +157,7 @@ export default {
 </template>
 
 <script>
-import Layout from "../../layouts/docs.vue";
+import Layout from "../../layout.vue";
 import Topbar from "../../_layouts/topbar.vue";
 import Sidebar from "../../_layouts/sidebar.vue";
 import CodeBlock from "../../components/CodeBlock.vue";

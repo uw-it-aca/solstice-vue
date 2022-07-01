@@ -60,7 +60,7 @@ export default {
   font-weight: bolder;
 }
 
-.bi::before {
+.bi-chevron-right::before {
   font-weight: bolder !important;
 }
 </style>

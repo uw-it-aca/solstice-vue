@@ -59,7 +59,7 @@ export default {
   font-weight: bolder;
 }
 
-.bi::before {
+.bi-chevron::before {
   font-weight: bolder !important;
 }
 </style>

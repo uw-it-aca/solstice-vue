@@ -11,6 +11,39 @@
 
       <hr class="mb-5 w-25 d-inline-block" />
 
+      <ul class="row list-unstyled">
+        <li class="col-4">
+          <CompDescription
+            :name="'Layouts'"
+            :version="'1.0.0'"
+            :link="'/components/layouts'"
+          >
+            <p>aasdflkjasdlkfj lksadjf alsfdkj</p>
+          </CompDescription>
+        </li>
+        <li class="col-4">
+          <CompDescription :name="'Navigation'"></CompDescription>
+        </li>
+        <li class="col-4">
+          <CompDescription :name="'Card'" :version="'1.0.4'"></CompDescription>
+        </li>
+        <li class="col-4">
+          <CompDescription :name="'Tabs'" :version="'1.0.5'"></CompDescription>
+        </li>
+        <li class="col-4">
+          <CompDescription
+            :name="'Disclosure'"
+            :version="'1.0.5'"
+          ></CompDescription>
+        </li>
+        <li class="col-4">
+          <CompDescription
+            :name="'Profile'"
+            :version="'1.0.5'"
+          ></CompDescription>
+        </li>
+      </ul>
+
       <h2>
         Layouts
         <VersionBadge>1.0.0</VersionBadge>
@@ -535,8 +568,9 @@ export default {
 </template>
 
 <script>
-import Layout from "../../layouts/docs.vue";
+import Layout from "../../layout.vue";
 import CodeBlock from "../../components/CodeBlock.vue";
+import CompDescription from "../../components/CompDescription.vue";
 import VersionBadge from "../../components/VersionBadge.vue";
 
 import Card from "../../_components/card/card.vue";
@@ -559,6 +593,8 @@ export default {
     Layout,
     CodeBlock,
     VersionBadge,
+    CompDescription,
+
     "axdd-card": Card,
     "axdd-card-heading": CardHeading,
     "axdd-card-action": CardAction,

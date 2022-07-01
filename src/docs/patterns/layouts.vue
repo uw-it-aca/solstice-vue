@@ -31,15 +31,17 @@
           <axdd-topbar
             :app-name="'TopBar'"
             :user-name="'javerage'"
+            :is-preview="true"
             class="bg-white"
           >
             <template #main>
-              <div class="row mt-4">
+              <div class="row my-4">
                 <div class="col">
                   <div class="bg-gray p-4 text-center">content here...</div>
                 </div>
               </div>
             </template>
+            <template #footer></template>
           </axdd-topbar>
         </template>
         <template #markup>
@@ -69,6 +71,7 @@ export default {
           <axdd-topbar
             :app-name="'TopBar'"
             :user-name="'javerage'"
+            :is-preview="true"
             class="bg-white"
           >
             <template #navigation>
@@ -79,12 +82,13 @@ export default {
               </div>
             </template>
             <template #main>
-              <div class="row mt-4">
+              <div class="row my-4">
                 <div class="col">
                   <div class="bg-gray p-4 text-center">content here...</div>
                 </div>
               </div>
             </template>
+            <template #footer></template>
           </axdd-topbar>
         </template>
         <template #markup>
@@ -114,6 +118,7 @@ export default {
           <axdd-sidebar
             :app-name="'SideBar'"
             :user-name="'javerage'"
+            :is-preview="true"
             class="bg-white"
           >
             <template #profile> profile here... </template>
@@ -125,6 +130,7 @@ export default {
                 </div>
               </div>
             </template>
+            <template #footer></template>
           </axdd-sidebar>
         </template>
         <template #markup>

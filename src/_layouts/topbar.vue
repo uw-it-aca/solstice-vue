@@ -1,5 +1,6 @@
 <template>
   <div
+    :class="[!isPreview ? 'min-vh-100' : ' ']"
     class="d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"
   >
     <header class="w-100">
@@ -53,7 +54,7 @@
         </div>
       </slot>
     </div>
-    <div class="w-100">
+    <div class="w-100 flex-fill">
       <div class="container-xl">
         <div class="row">
           <div v-if="$slots['navigation']" class="col-lg-3">
@@ -142,6 +143,10 @@ export default {
     signOutUrl: {
       type: String,
       default: "#",
+    },
+    isPreview: {
+      type: Boolean,
+      default: false,
     },
   },
   components: {},

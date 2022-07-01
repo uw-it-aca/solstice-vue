@@ -1,11 +1,11 @@
 <template>
   <div
-    :class="[$mq != 'mobile' ? 'd-flex vh-100' : '']"
+    :class="[$mq != 'mobile' ? 'd-flex min-vh-100' : '']"
     class="axdd-font-open-sans"
   >
     <div
       :class="[$mq != 'mobile' ? 'overflow-auto' : '']"
-      class="bg-purple axdd-sidebar axdd-sidebar-logo"
+      class="d-flex flex-column bg-purple axdd-sidebar"
       :style="[$mq != 'mobile' ? 'min-width: 280px; max-width:280px;' : '']"
     >
       <header>
@@ -70,10 +70,14 @@
           </div>
         </nav>
       </div>
+      <div class="axdd-sidebar-logo">&nbsp;</div>
     </div>
 
     <div :class="[$mq != 'mobile' ? 'flex-fill overflow-auto' : '']">
-      <div class="container-xl">
+      <div
+        :class="[!isPreview ? 'min-vh-100' : ' ']"
+        class="container-xl d-flex flex-column"
+      >
         <div v-if="$slots['bar']" class="row">
           <slot name="bar">
             <div class="col my-3">
@@ -84,7 +88,7 @@
           </slot>
         </div>
 
-        <main>
+        <main class="flex-fill">
           <slot name="main"></slot>
         </main>
 
@@ -132,6 +136,10 @@ export default {
       type: String,
       default: "#",
     },
+    isPreview: {
+      type: Boolean,
+      default: false,
+    },
   },
   created: function () {
     // constructs page title in the following format "Page Title - AppName"
@@ -142,7 +150,7 @@ export default {
 
 <style lang="scss">
 .axdd-sidebar-brand {
-  line-height: 105px;
+  line-height: 65px;
 }
 
 .axdd-sidebar-logo {
@@ -150,5 +158,6 @@ export default {
   background-repeat: no-repeat;
   background-size: 45px;
   background-position: right 20px bottom;
+  height: 30px;
 }
 </style>

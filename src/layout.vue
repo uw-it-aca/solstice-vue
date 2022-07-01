@@ -34,8 +34,8 @@
             <router-link
               class="nav-link rounded bg-purple-hover text-white-hover"
               active-class="bg-dark-purple text-white"
-              to="/components/"
-              >Components</router-link
+              to="/patterns/"
+              >Patterns</router-link
             >
           </nav>
         </div>

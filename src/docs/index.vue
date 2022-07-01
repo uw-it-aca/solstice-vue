@@ -73,9 +73,9 @@
           <p><router-link to="/elements/">Browse elements</router-link></p>
         </div>
         <div class="col">
-          <h3>Components</h3>
+          <h3>Patterns</h3>
           <p>Patterns consist of design tokens, elements, and patterns.</p>
-          <p><router-link to="/components/">Browse components</router-link></p>
+          <p><router-link to="/patterns/">Browse patterns</router-link></p>
         </div>
       </div>
 
@@ -83,7 +83,7 @@
 
       <div class="row">
         <div class="col">
-          <div class="alert alert-beige border-0 p-4">
+          <div class="alert alert-purple border-0 p-4">
             <h3 class="h5 mb-4">What's New? v.1.0.5</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto

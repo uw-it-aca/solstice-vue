@@ -3,7 +3,7 @@
     <template #content>
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/components/">Components</a></li>
+          <li class="breadcrumb-item"><a href="/patterns/">Patterns</a></li>
           <li class="breadcrumb-item active" aria-current="page">Layouts</li>
         </ol>
       </nav>

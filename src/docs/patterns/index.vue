@@ -1,11 +1,11 @@
 <template>
   <Layout>
     <template #content>
-      <h1>Components</h1>
+      <h1>Patterns</h1>
 
       <p class="p-0 col-md-8 lead">
-        Components are the re-usable UI patterns that fall on the more complex
-        side of the spectrum. Components utilize both elements and design tokens
+        Patterns are the re-usable UI components that fall on the more complex
+        side of the spectrum. Patterns utilize both elements and design tokens
         and are the design and building blocks of the visual design.
       </p>
 
@@ -16,7 +16,7 @@
           <CompDescription
             :name="'Layouts'"
             :version="'1.0.0'"
-            :link="'/components/layouts'"
+            :link="'/patterns/layouts'"
           >
             <p>aasdflkjasdlkfj lksadjf alsfdkj</p>
           </CompDescription>

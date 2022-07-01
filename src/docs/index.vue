@@ -20,6 +20,12 @@
             <li>Living documentation</li>
             <li>Automated testing</li>
           </ul>
+
+          <h2>Version</h2>
+          <ul>
+            <li>Bootstrap 5.1.3</li>
+            <li>Bootstrap Icons 1.8.3</li>
+          </ul>
         </div>
         <div class="col">
           <h2>Principles</h2>
@@ -82,8 +88,8 @@
       <hr class="mb-5 w-25 d-inline-block" />
 
       <div class="row">
-        <div class="col">
-          <div class="alert alert-purple border-0 p-4">
+        <div class="col d-flex flex-column">
+          <div class="flex-fill alert alert-purple border-0 p-4">
             <h3 class="h5 mb-4">What's New? v.1.0.5</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
@@ -94,8 +100,8 @@
             <p>Read updates</p>
           </div>
         </div>
-        <div class="col">
-          <div class="alert alert-beige border-0 p-4 mb-4">
+        <div class="col d-flex flex-column">
+          <div class="flex-fill alert alert-beige border-0 p-4">
             <h3 class="h5 mb-4">Development</h3>
             <p>
               Learn how to create global components that can be used by other

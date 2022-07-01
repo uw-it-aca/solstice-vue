@@ -48,7 +48,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .chevron[aria-expanded="true"] i {
   transform: rotate(90deg);
 }

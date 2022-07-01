@@ -25,7 +25,7 @@
           <CompDescription :name="'Navigation'"></CompDescription>
         </li>
         <li class="col-4">
-          <CompDescription :name="'Card'" :version="'1.0.4'"></CompDescription>
+          <CompDescription :name="'Card'" :version="'1.0.4'" :link="'/patterns/card'"></CompDescription>
         </li>
         <li class="col-4">
           <CompDescription :name="'Tabs'" :version="'1.0.5'"></CompDescription>
@@ -43,219 +43,6 @@
           ></CompDescription>
         </li>
       </ul>
-
-      <h2>
-        Layouts
-        <VersionBadge>1.0.0</VersionBadge>
-      </h2>
-      <p class="p-0 col-md-8">
-        Layouts info. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        Harum ullam dolore fugit exercitationem rem modi laudantium, accusantium
-        facere tenetur ipsam ratione impedit, odit dolores maxime quibusdam
-        eaque recusandae, eius tempora.
-      </p>
-      <p>
-        <router-link to="/components/layouts">View Layouts</router-link>
-      </p>
-
-      <h2>Navigation</h2>
-      <p class="p-0 col-md-8">
-        Navigation coming soon. Lorem ipsum, dolor sit amet consectetur
-        adipisicing elit. Harum ullam dolore fugit exercitationem rem modi
-        laudantium, accusantium facere tenetur ipsam ratione impedit, odit
-        dolores maxime quibusdam eaque recusandae, eius tempora.
-      </p>
-
-      <h2>
-        Card
-        <VersionBadge>1.0.4</VersionBadge>
-      </h2>
-      <p class="p-0 col-md-8">
-        This is a card. Cards can contain any type of content and even other
-        components. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        Harum ullam dolore fugit exercitationem rem modi laudantium, accusantium
-        facere tenetur ipsam ratione impedit, odit dolores maxime quibusdam
-        eaque recusandae, eius tempora.
-      </p>
-
-      <h3>Basic card container</h3>
-      <CodeBlock>
-        <template #preview>
-          <axdd-card style="max-width: 600px">
-            <template #body>card body</template>
-          </axdd-card>
-        </template>
-        <template #markup>
-          <pre class="language-html rounded">
-<code>&lt;axdd-card>
-  &lt;template #body>card body&lt;/template>
-&lt;/axdd-card></code></pre>
-        </template>
-        <template #script>
-          <pre class="language-js rounded">
-<code>import { Card } from "axdd-components";
-
-export default {
-  components: {
-    "axdd-card": Card,
-  },
-};</code></pre>
-        </template>
-      </CodeBlock>
-
-      <h3>Card with heading</h3>
-      <CodeBlock>
-        <template #preview>
-          <axdd-card style="max-width: 600px">
-            <template #heading>
-              <axdd-card-heading :level="3">Heading</axdd-card-heading>
-            </template>
-            <template #body>card body</template>
-          </axdd-card>
-        </template>
-        <template #markup>
-          <pre class="language-html rounded">
-<code>&lt;axdd-card>
-  &lt;template #heading>
-    &lt;axdd-card-heading :level="3">Heading&lt;/axdd-card-heading>
-  &lt;/template>
-  &lt;template #body>card body&lt;/template>
-&lt;/axdd-card></code></pre>
-        </template>
-        <template #script>
-          <pre class="language-js rounded">
-<code>import { Card, CardHeading } from "axdd-components";
-
-export default {
-  components: {
-    "axdd-card": Card,
-    "axdd-card-heading": CardHeadng,
-  },
-};</code></pre>
-        </template>
-      </CodeBlock>
-
-      <h3>Card with heading action</h3>
-      <CodeBlock>
-        <template #preview>
-          <axdd-card style="max-width: 600px">
-            <template #heading-action>
-              <axdd-card-heading :level="3">Heading</axdd-card-heading>
-              <axdd-card-action>
-                <a
-                  href="#"
-                  class="btn btn-dark-beige btn-sm"
-                  @click.prevent="greet"
-                  >Card heading action</a
-                >
-              </axdd-card-action>
-            </template>
-            <template #body>card body</template>
-          </axdd-card>
-        </template>
-        <template #markup>
-          <pre class="language-html rounded">
-<code>&lt;axdd-card>
-  &lt;template #heading-action>
-    &lt;axdd-card-heading :level="3">Heading&lt;/axdd-card-heading>
-    &lt;axdd-card-action>
-      &lt;a href="#" @click.prevent="greet">Card heading action&lt;/a>
-    &lt;/axdd-card-action>
-  &lt;/template>
-  &lt;template #body>card body&lt;/template>
-&lt;/axdd-card></code></pre>
-        </template>
-        <template #script>
-          <pre class="language-js rounded">
-<code>import { Card, CardHeading, CardAction } from "axdd-components";
-
-export default {
-  components: {
-    "axdd-card": Card,
-    "axdd-card-heading": CardHeadng,
-    "axdd-card-action": CardAction,
-  },
-};</code></pre>
-        </template>
-      </CodeBlock>
-
-      <p>this is a card w/ html as heading action</p>
-
-      <CodeBlock>
-        <template #preview>
-          <axdd-card style="max-width: 600px">
-            <template #heading-action>
-              <axdd-card-heading :level="3">Heading</axdd-card-heading>
-              <axdd-card-action>
-                <div class="input-group">
-                  <input
-                    type="text"
-                    class="form-control form-control-sm"
-                    placeholder="Search all students..."
-                    aria-label="Recipient's username"
-                    aria-describedby="button-addon2"
-                  />
-                  <button
-                    class="btn btn-sm btn-dark-beige"
-                    type="button"
-                    id="button-addon2"
-                  >
-                    Search
-                  </button>
-                </div>
-              </axdd-card-action>
-            </template>
-            <template #body>card body</template>
-          </axdd-card>
-        </template>
-        <template #markup>
-          <pre class="language-html rounded">
-<code>&lt;axdd-card>
-  &lt;template #heading-action>
-    &lt;axdd-card-heading :level="3">Heading&lt;/axdd-card-heading>
-    &lt;axdd-card-action>
-      &lt;div class="input-group">... html markup&lt;/div>
-    &lt;/axdd-card-action>
-  &lt;/template>
-  &lt;template #body>card body&lt;/template>
-&lt;/axdd-card></code></pre>
-        </template>
-        <template #script>
-          <pre class="language-js rounded">
-<code>import { Card, CardHeading, CardAction } from "axdd-components";
-
-export default {
-  components: {
-    "axdd-card": Card,
-    "axdd-card-heading": CardHeadng,
-    "axdd-card-action": CardAction,
-  },
-};</code></pre>
-        </template>
-      </CodeBlock>
-
-      <h3>Card with Footer</h3>
-      <CodeBlock>
-        <template #preview>
-          <axdd-card style="max-width: 600px">
-            <template #heading>
-              <axdd-card-heading :level="9">Heading</axdd-card-heading>
-            </template>
-            <template #body>card body</template>
-            <template #footer>this is the footer</template>
-          </axdd-card>
-        </template>
-        <template #markup>
-          <pre class="language-html rounded">
-<code>&lt;axdd-card>
-  &lt;template #heading>
-    &lt;axdd-card-heading :level="3">Heading&lt;/axdd-card-heading>
-  &lt;/template>
-  &lt;template #body>card body&lt;/template>
-  &lt;template #footer>this is the footer&lt;/template>
-&lt;/axdd-card></code></pre>
-        </template>
-      </CodeBlock>
 
       <h2>
         Tabs
@@ -423,13 +210,13 @@ export default {
           >
             link button w/ indicator
           </axdd-disclosure-action>
-          <axdd-disclosure-panel :disclosure-id="'blahWoo'" class="mt-3">
-            <p>
+          <axdd-disclosure-panel :disclosure-id="'blahWoo'">
+            <div class="mt-3">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Praesentium adipisci expedita tenetur officiis voluptate, laborum
               error cum soluta. Beatae veniam commodi voluptas saepe facere a
               reiciendis, explicabo minima nobis? Fugit.
-            </p>
+            </div>
           </axdd-disclosure-panel>
         </template>
       </CodeBlock>

@@ -2,7 +2,9 @@
   <div class="mb-5">
     <div v-if="$slots['preview']">
       <p class="h6 text-secondary">Preview</p>
-      <div class="preview border rounded-3 p-4 mb-3 axdd-font-open-sans">
+      <div
+        class="preview border border-gray rounded-3 p-4 mb-3 axdd-font-open-sans"
+      >
         <slot name="preview"></slot>
       </div>
     </div>

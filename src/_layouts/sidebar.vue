@@ -1,7 +1,8 @@
 <template>
   <div
-    :class="[$mq != 'mobile' && !isPreview ? 'd-flex min-vh-100' : '']"
+    :class="[$mq != 'mobile' ? 'd-flex min-vh-100' : '']"
     class="axdd-font-open-sans"
+    :style="[isPreview ? 'min-height: auto !important;' : '']"
   >
     <div
       :class="[$mq != 'mobile' ? 'overflow-auto' : '']"
@@ -75,7 +76,7 @@
 
     <div :class="[$mq != 'mobile' ? 'flex-fill overflow-auto' : '']">
       <div
-        :class="[!isPreview ? 'min-vh-100' : ' ']"
+        :class="[!isPreview ? 'min-vh-100' : '']"
         class="container-xl d-flex flex-column"
       >
         <div v-if="$slots['bar']" class="row">

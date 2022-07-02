@@ -32,12 +32,17 @@
             :app-name="'TopBar'"
             :user-name="'javerage'"
             :is-preview="true"
-            class="bg-white"
+            class="bg-white border shadow-sm"
           >
             <template #main>
               <div class="row my-4">
                 <div class="col">
-                  <div class="bg-gray p-4 text-center">content here...</div>
+                  <div
+                    class="bg-gray p-4 text-center"
+                    style="line-height: 250px"
+                  >
+                    content here...
+                  </div>
                 </div>
               </div>
             </template>
@@ -72,7 +77,7 @@ export default {
             :app-name="'TopBar'"
             :user-name="'javerage'"
             :is-preview="true"
-            class="bg-white"
+            class="bg-white border shadow-sm"
           >
             <template #navigation>
               <div class="row mt-4">
@@ -84,7 +89,12 @@ export default {
             <template #main>
               <div class="row my-4">
                 <div class="col">
-                  <div class="bg-gray p-4 text-center">content here...</div>
+                  <div
+                    class="bg-gray p-4 text-center"
+                    style="line-height: 250px"
+                  >
+                    content here...
+                  </div>
                 </div>
               </div>
             </template>
@@ -119,14 +129,19 @@ export default {
             :app-name="'SideBar'"
             :user-name="'javerage'"
             :is-preview="true"
-            class="bg-white"
+            class="bg-white border shadow-sm"
           >
             <template #profile> profile here... </template>
             <template #navigation> nav here... </template>
             <template #main>
               <div class="row">
                 <div class="col mt-3">
-                  <div class="bg-gray p-4 text-center">content here...</div>
+                  <div
+                    class="bg-gray p-4 text-center"
+                    style="line-height: 250px"
+                  >
+                    content here...
+                  </div>
                 </div>
               </div>
             </template>

@@ -58,14 +58,42 @@
         molestias hic. Esse ab inventore rerum, ipsa cupiditate quo. Aliquid
         optio, commodi sit fugit harum perspiciatis quia sunt fuga. Aliquam?
       </div>
-
     </template>
     <template #bar></template>
     <template #main>
       <div class="row">
         <div class="col">
           <h1>{{ pageTitle }}</h1>
-          asdfasdasadsfsda
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+            laborum nostrum saepe enim natus voluptates animi numquam molestiae
+            a accusamus totam, doloribus exercitationem delectus soluta
+            consectetur ab magni fugit eius.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+            laborum nostrum saepe enim natus voluptates animi numquam molestiae
+            a accusamus totam, doloribus exercitationem delectus soluta
+            consectetur ab magni fugit eius.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+            laborum nostrum saepe enim natus voluptates animi numquam molestiae
+            a accusamus totam, doloribus exercitationem delectus soluta
+            consectetur ab magni fugit eius.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+            laborum nostrum saepe enim natus voluptates animi numquam molestiae
+            a accusamus totam, doloribus exercitationem delectus soluta
+            consectetur ab magni fugit eius.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+            laborum nostrum saepe enim natus voluptates animi numquam molestiae
+            a accusamus totam, doloribus exercitationem delectus soluta
+            consectetur ab magni fugit eius.
+          </p>
         </div>
       </div>
     </template>

@@ -18,6 +18,15 @@
 
       <hr class="mb-5 w-25 d-inline-block" />
 
+      <p>
+        APG:
+        <a
+          href="https://www.w3.org/WAI/ARIA/apg/example-index/landmarks/index.html"
+          target="_blank"
+          >https://www.w3.org/WAI/ARIA/apg/example-index/landmarks/index.html</a
+        >
+      </p>
+
       <h2>Topbar</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex aut tempore

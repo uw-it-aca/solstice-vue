@@ -13,7 +13,11 @@
 
       <ul class="row list-unstyled">
         <li class="col-4">
-          <CompDescription :name="'Layouts'" :link="'/patterns/layouts'">
+          <CompDescription
+            :name="'Layouts'"
+            :link="'/patterns/layouts'"
+            :accessibility="true"
+          >
             <p>aasdflkjasdlkfj lksadjf alsfdkj</p>
           </CompDescription>
         </li>
@@ -30,6 +34,7 @@
           <CompDescription
             :name="'Tabs'"
             :link="'/patterns/tabs'"
+            :accessibility="true"
             :version="'1.0.5'"
           ></CompDescription>
         </li>
@@ -37,6 +42,7 @@
           <CompDescription
             :name="'Disclosure'"
             :link="'/patterns/disclosure'"
+            :accessibility="true"
             :version="'1.0.5'"
           ></CompDescription>
         </li>
@@ -44,6 +50,7 @@
           <CompDescription
             :name="'Profile'"
             :link="'/patterns/profile'"
+            :accessibility="true"
             :version="'1.0.5'"
           ></CompDescription>
         </li>

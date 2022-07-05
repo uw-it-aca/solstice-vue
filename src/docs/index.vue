@@ -23,7 +23,7 @@
 
           <h2>Version</h2>
           <ul>
-            <li>Bootstrap 5.1.3</li>
+            <li>Bootstrap 5.2.x</li>
             <li>Bootstrap Icons 1.8.3</li>
           </ul>
         </div>

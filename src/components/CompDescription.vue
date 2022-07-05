@@ -13,8 +13,10 @@
         <span v-else class="text-muted">Coming soon!</span>
       </div>
       <div class="position-absolute top-0 end-0 m-2">
-        <span class="d-none badge rounded bg-success me-1">a11y</span>
-        <span v-if="version" class="badge rounded alert-purple">
+        <span v-if="accessibility" class="badge bg-beige me-1 text-dark"
+          >a11y</span
+        >
+        <span v-if="version" class="badge bg-purple">
           {{ version }}
         </span>
       </div>
@@ -35,6 +37,10 @@ export default {
     },
     link: {
       type: String,
+    },
+    accessibility: {
+      type: Boolean,
+      default: false,
     },
   },
   data: function () {

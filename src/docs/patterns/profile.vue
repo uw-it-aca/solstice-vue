@@ -32,6 +32,16 @@
         </template>
       </CodeBlock>
       <h2>Flyout</h2>
+
+      <p>
+        APG:
+        <a
+          href="https://www.w3.org/WAI/ARIA/apg/patterns/menubutton/"
+          target="_blank"
+          >https://www.w3.org/WAI/ARIA/apg/patterns/menubutton/</a
+        >
+      </p>
+
       <CodeBlock>
         <template #preview>
           <div class="w-50 px-3 py-1 bg-dark-purple small">

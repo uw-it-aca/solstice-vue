@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="[$mq != 'mobile' ? 'd-flex min-vh-100' : '']"
+    :class="[$mq != 'mobile' ? 'd-flex vh-100' : '']"
     class="axdd-font-open-sans"
     :style="[isPreview ? 'min-height: auto !important;' : '']"
   >
@@ -159,6 +159,6 @@ export default {
   background-repeat: no-repeat;
   background-size: 45px;
   background-position: right 20px bottom;
-  height: 30px;
+  line-height: 30px;
 }
 </style>

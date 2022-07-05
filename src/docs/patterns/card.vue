@@ -208,7 +208,7 @@ import CardHeading from "../../_components/card/heading.vue";
 import CardAction from "../../_components/card/action.vue";
 
 export default {
-  name: "DocsComponentsLayouts",
+  name: "DocsComponentsCard",
   components: {
     Layout,
     CodeBlock,

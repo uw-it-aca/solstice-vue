@@ -9,10 +9,7 @@ export default defineConfig({
   plugins: [
     Vue(),
     Pages({
-      dirs: [
-        { dir: "src/docs", baseRoute: "" },
-        { dir: "src/dev", baseRoute: "dev" },
-      ],
+      dirs: [{ dir: "src/docs", baseRoute: "" }],
       exclude: ["_*.vue"],
     }),
   ],

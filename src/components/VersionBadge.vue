@@ -1,5 +1,5 @@
 <template>
-  <span class="badge bg-light-beige text-dark fs-6">
+  <span class="badge rounded-pill bg-purple fs-6">
     <slot></slot>
   </span>
 </template>

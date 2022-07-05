@@ -2,23 +2,30 @@
   <div
     :class="[$mq != 'mobile' ? 'd-flex vh-100' : '']"
     class="axdd-font-open-sans"
+    :style="[isPreview ? 'min-height: auto !important;' : '']"
   >
     <div
       :class="[$mq != 'mobile' ? 'overflow-auto' : '']"
-      class="bg-purple axdd-sidebar axdd-sidebar-logo"
-      :style="[$mq != 'mobile' ? 'min-width: 240px; max-width:240px;' : '']"
+      class="d-flex flex-column bg-purple axdd-sidebar"
+      :style="[$mq != 'mobile' ? 'min-width: 280px; max-width:280px;' : '']"
     >
       <header>
         <slot name="header">
-          <div class="bg-dark-purple text-white py-2 px-3 small">
-            <div class="d-flex">
-              <div class="flex-fill">{{ userName }}</div>
-              <div class="flex-fill text-end">
-                <a :href="signOutUrl" class="text-white">Sign out</a>
+          <div
+            v-if="$slots['profile']"
+            class="bg-dark-purple text-white py-2 px-3 small"
+          >
+            <slot name="profile">
+              <div class="d-flex">
+                <div class="flex-fill">username</div>
+                <div class="flex-fill text-end">
+                  <a :href="signOutUrl" class="text-white">Sign out</a>
+                </div>
               </div>
-            </div>
+            </slot>
           </div>
-          <div class="bg-purple axdd-sidebar-brand px-3">
+
+          <div class="axdd-sidebar-brand px-3">
             <a
               v-if="$slots['navigation']"
               class="btn btn-link btn-sm d-md-none border border-2 py-0 px-1 text-white me-2"
@@ -64,10 +71,14 @@
           </div>
         </nav>
       </div>
+      <div class="axdd-sidebar-logo">&nbsp;</div>
     </div>
 
     <div :class="[$mq != 'mobile' ? 'flex-fill overflow-auto' : '']">
-      <div class="container-xl">
+      <div
+        :class="[!isPreview ? 'min-vh-100' : '']"
+        class="container-xl d-flex flex-column"
+      >
         <div v-if="$slots['bar']" class="row">
           <slot name="bar">
             <div class="col my-3">
@@ -78,15 +89,22 @@
           </slot>
         </div>
 
-        <main>
+        <main class="flex-fill">
           <slot name="main"></slot>
         </main>
 
         <footer v-if="$slots['footer']" class="mt-auto">
           <slot name="footer">
             <div class="font-weight-light py-3 small">
-              Copyright &copy; {{ new Date().getFullYear() }} University of
-              Washington
+              <ul class="list-inline m-0">
+                <li class="list-inline-item"><a href="#">Contact</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+              </ul>
+              <div>
+                Copyright &copy; {{ new Date().getFullYear() }} University of
+                Washington
+              </div>
             </div>
           </slot>
         </footer>
@@ -119,6 +137,10 @@ export default {
       type: String,
       default: "#",
     },
+    isPreview: {
+      type: Boolean,
+      default: false,
+    },
   },
   created: function () {
     // constructs page title in the following format "Page Title - AppName"
@@ -137,5 +159,6 @@ export default {
   background-repeat: no-repeat;
   background-size: 45px;
   background-position: right 20px bottom;
+  line-height: 30px;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div
+    :class="[!isPreview ? 'min-vh-100' : ' ']"
     class="d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"
-    style="min-height: 300px"
   >
     <header class="w-100">
       <slot name="header">
@@ -54,7 +54,7 @@
         </div>
       </slot>
     </div>
-    <div class="w-100">
+    <div class="w-100 flex-fill">
       <div class="container-xl">
         <div class="row">
           <div v-if="$slots['navigation']" class="col-lg-3">
@@ -103,8 +103,15 @@
         <div class="bg-dark">
           <div class="container-xl">
             <div class="text-white font-weight-light py-3 small">
-              Copyright &copy; {{ new Date().getFullYear() }} University of
-              Washington
+              <ul class="list-inline m-0">
+                <li class="list-inline-item"><a href="#">Contact</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+              </ul>
+              <div>
+                Copyright &copy; {{ new Date().getFullYear() }} University of
+                Washington
+              </div>
             </div>
           </div>
         </div>
@@ -136,6 +143,10 @@ export default {
     signOutUrl: {
       type: String,
       default: "#",
+    },
+    isPreview: {
+      type: Boolean,
+      default: false,
     },
   },
   components: {},

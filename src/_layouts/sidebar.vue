@@ -25,10 +25,15 @@
             </slot>
           </div>
 
-          <div class="axdd-sidebar-brand px-3">
+          <div
+            :class="[
+              $mq != 'mobile' ? 'axdd-sidebar-brand' : 'axdd-sidebar-brand-sm',
+            ]"
+            class="px-3"
+          >
             <a
               v-if="$slots['navigation']"
-              class="btn btn-link btn-sm d-md-none border border-2 py-0 px-1 text-white me-2"
+              class="btn btn-link btn-sm d-md-none border border-2 rounded-3 py-0 px-1 text-white me-2"
               data-bs-toggle="collapse"
               data-bs-target="#sidebar-nav-collapse"
               role="button"
@@ -40,7 +45,7 @@
             </a>
             <div
               class="d-inline align-middle text-white"
-              :class="[$mq == 'desktop' ? 'h3' : 'h5']"
+              :class="[$mq == 'desktop' ? 'h2' : 'h3']"
             >
               <a
                 :href="appRootUrl"
@@ -150,8 +155,11 @@ export default {
 </script>
 
 <style lang="scss">
+.axdd-sidebar-brand-sm {
+  line-height: 75px;
+}
 .axdd-sidebar-brand {
-  line-height: 65px;
+  line-height: 105px;
 }
 
 .axdd-sidebar-logo {

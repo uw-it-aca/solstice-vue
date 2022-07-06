@@ -31,7 +31,7 @@
             </a>
             <div
               class="d-inline align-middle text-white"
-              :class="[$mq == 'desktop' ? 'h3' : 'h5']"
+              :class="[$mq == 'desktop' ? 'h3' : 'h4']"
             >
               <a
                 :href="appRootUrl"
@@ -166,7 +166,7 @@ export default {
 }
 
 .axdd-topbar-brand {
-  line-height: 65px;
+  line-height: 75px;
 }
 
 .axdd-topbar-logo {

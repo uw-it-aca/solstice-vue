@@ -29,10 +29,15 @@
       </p>
 
       <h2>Standard</h2>
-
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quidem
+        sunt, voluptas iure laborum est nesciunt perspiciatis corporis, ducimus
+        perferendis nihil unde illum asperiores doloribus vitae velit quod,
+        voluptate aperiam?
+      </p>
       <CodeBlock>
         <template #preview>
-          <axdd-tabs :tabs-id="'example'" style="max-width: 600px">
+          <axdd-tabs-list :tabs-id="'example'" style="max-width: 600px">
             <template #items>
               <axdd-tabs-item
                 :tabs-id="'example'"
@@ -47,6 +52,8 @@
                 >Third</axdd-tabs-item
               >
             </template>
+          </axdd-tabs-list>
+          <axdd-tabs-display :tabs-id="'example'" style="max-width: 600px">
             <template #panels>
               <axdd-tabs-panel :panel-id="'first'" :active-panel="true">
                 <p>
@@ -67,11 +74,11 @@
                 </p>
               </axdd-tabs-panel>
             </template>
-          </axdd-tabs>
+          </axdd-tabs-display>
         </template>
         <template #markup>
           <pre class="language-html rounded">
-<code>&lt;axdd-tabs :tabs-id="'example'">
+<code>&lt;axdd-tabs-list :tabs-id="'example'">
   &lt;template #items>
     &lt;axdd-tabs-item :tabs-id="'example'" :panel-id="'first'" :active-tab="true">
       First
@@ -83,6 +90,9 @@
     Third
     &lt;/axdd-tabs-item>
   &lt;/template>
+&lt;/axdd-tabs-list>
+
+&lt;axdd-tabs-display :tabs-id="'example'"
   &lt;template #panels>
     &lt;axdd-tabs-panel :panel-id="'first'" :active-panel="true">
       first ...
@@ -94,19 +104,75 @@
       third ...
     &lt;/axdd-tabs-panel>
   &lt;/template>
-&lt;/axdd-tabs></code></pre>
+&lt;/axdd-tabs-display></code></pre>
         </template>
         <template #script>
           <pre class="language-js rounded">
-<code>import { Tabs, TabsItem, TabsPanel } from "axdd-components";
+<code>import { TabsList, TabsDisplay, TabsItem, TabsPanel } from "axdd-components";
 
 export default {
   components: {
-    "axdd-tabs": Tabs,
+    "axdd-tabs-list": TabsList,
+    "axdd-tabs-display": TabsDisplay,
     "axdd-tabs-item": TabsItem,
     "axdd-tabs-panel": TabsPanel,
   },
 };</code></pre>
+        </template>
+      </CodeBlock>
+
+      <h2>Disconnected</h2>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad voluptate
+        veniam doloremque repudiandae architecto impedit saepe quos facilis,
+        beatae aperiam, fugit quidem itaque reprehenderit? Impedit harum fugiat
+        dolorum error! Rerum.
+      </p>
+      <CodeBlock>
+        <template #preview>
+          <axdd-tabs-list :tabs-id="'example2'" style="max-width: 600px">
+            <template #items>
+              <axdd-tabs-item
+                :tabs-id="'example2'"
+                :panel-id="'first2'"
+                :active-tab="true"
+                >First</axdd-tabs-item
+              >
+              <axdd-tabs-item :tabs-id="'example2'" :panel-id="'second2'"
+                >Second</axdd-tabs-item
+              >
+              <axdd-tabs-item :tabs-id="'example2'" :panel-id="'third2'"
+                >Third</axdd-tabs-item
+              >
+            </template>
+          </axdd-tabs-list>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            nihil saepe nemo quas enim cum, nisi fuga modi eius dolor quae
+            quibusdam dicta fugit, quia velit, similique magnam eaque tempora.
+          </p>
+          <axdd-tabs-display :tabs-id="'example2'" style="max-width: 600px">
+            <template #panels>
+              <axdd-tabs-panel :panel-id="'first2'" :active-panel="true">
+                <p>
+                  <strong>first</strong> Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit.
+                </p>
+              </axdd-tabs-panel>
+              <axdd-tabs-panel :panel-id="'second2'">
+                <p>
+                  <strong>second</strong> Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit.
+                </p>
+              </axdd-tabs-panel>
+              <axdd-tabs-panel :panel-id="'third2'">
+                <p>
+                  <strong>third</strong> Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit.
+                </p>
+              </axdd-tabs-panel>
+            </template>
+          </axdd-tabs-display>
         </template>
       </CodeBlock>
     </template>
@@ -117,7 +183,8 @@ export default {
 import Layout from "../../layout.vue";
 import CodeBlock from "../../components/CodeBlock.vue";
 
-import Tabs from "../../_components/tabs/tabs.vue";
+import TabsList from "../../_components/tabs/list.vue";
+import TabsDisplay from "../../_components/tabs/display.vue";
 import TabsItem from "../../_components/tabs/item.vue";
 import TabsPanel from "../../_components/tabs/panel.vue";
 
@@ -126,7 +193,8 @@ export default {
   components: {
     Layout,
     CodeBlock,
-    "axdd-tabs": Tabs,
+    "axdd-tabs-list": TabsList,
+    "axdd-tabs-display": TabsDisplay,
     "axdd-tabs-item": TabsItem,
     "axdd-tabs-panel": TabsPanel,
   },

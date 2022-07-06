@@ -13,26 +13,26 @@
         <div class="me-3">
           <nav class="nav">
             <router-link
-              class="nav-link rounded me-1 bg-purple-hover text-white-hover"
+              class="nav-link rounded-3 me-1 bg-purple-hover text-white-hover"
               active-class="bg-dark-purple text-white"
               to="/content/"
               >Content</router-link
             >
             <router-link
-              class="nav-link rounded me-1 bg-purple-hover text-white-hover"
+              class="nav-link rounded-3 me-1 bg-purple-hover text-white-hover"
               active-class="bg-dark-purple text-white"
               to="/tokens/"
               >Design Tokens</router-link
             >
             <router-link
-              class="nav-link rounded me-1 bg-purple-hover text-white-hover"
+              class="nav-link rounded-3 me-1 bg-purple-hover text-white-hover"
               active-class="bg-dark-purple text-white"
               to="/elements/"
               >Elements</router-link
             >
 
             <router-link
-              class="nav-link rounded bg-purple-hover text-white-hover"
+              class="nav-link rounded-3 bg-purple-hover text-white-hover"
               active-class="bg-dark-purple text-white"
               to="/patterns/"
               >Patterns</router-link

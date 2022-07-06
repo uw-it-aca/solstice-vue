@@ -4,7 +4,7 @@
       <div class="me-3" style="width: 330px">
         <a
           href="#"
-          class="chevron d-block text-start btn-link text-reset text-decoration-none py-1 ps-0 collapsed"
+          class="chevron d-block text-start btn-link text-reset rounded text-decoration-none py-1 ps-0 collapsed"
           type="button"
           data-bs-toggle="collapse"
           :data-bs-target="'#' + blockId + '-panel'"

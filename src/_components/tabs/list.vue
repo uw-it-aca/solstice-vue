@@ -1,6 +1,6 @@
 <template>
   <ul
-    class="nav nav-lines mb-4 border-light-gray border-bottom"
+    class="nav nav-lines border-light-gray border-bottom"
     :id="tabsId"
     role="tablist"
   >

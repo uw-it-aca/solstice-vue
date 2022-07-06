@@ -37,7 +37,11 @@
       </p>
       <CodeBlock>
         <template #preview>
-          <axdd-tabs-list :tabs-id="'example'" style="max-width: 600px">
+          <axdd-tabs-list
+            :tabs-id="'example'"
+            class="mb-4"
+            style="max-width: 600px"
+          >
             <template #items>
               <axdd-tabs-item
                 :tabs-id="'example'"
@@ -130,7 +134,11 @@ export default {
       </p>
       <CodeBlock>
         <template #preview>
-          <axdd-tabs-list :tabs-id="'example2'" style="max-width: 600px">
+          <axdd-tabs-list
+            :tabs-id="'example2'"
+            class="mb-4"
+            style="max-width: 600px"
+          >
             <template #items>
               <axdd-tabs-item
                 :tabs-id="'example2'"

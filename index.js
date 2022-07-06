@@ -7,6 +7,7 @@ import LinkButton from "./src/_components/link-button.vue";
 import Card from "./src/_components/card/card.vue";
 import CardHeading from "./src/_components/card/heading.vue";
 import CardAction from "./src/_components/card/action.vue";
+import CardTabs from "./src/_components/card/tabs.vue";
 import Tabs from "./src/_components/tabs/tabs.vue";
 import TabsList from "./src/_components/tabs/list.vue";
 import TabsDisplay from "./src/_components/tabs/display.vue";
@@ -24,6 +25,7 @@ export {
   Card,
   CardHeading,
   CardAction,
+  CardTabs,
   Tabs,
   TabsList,
   TabsDisplay,

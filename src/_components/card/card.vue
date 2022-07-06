@@ -12,6 +12,14 @@
     >
       <slot name="heading-action"></slot>
     </div>
+
+    <div
+      v-if="$slots['heading-tabs']"
+      class="card-header bg-white rounded-top pt-3 pb-0 d-flex justify-content-between"
+    >
+      <slot name="heading-tabs"></slot>
+    </div>
+
     <div v-if="$slots['body']" class="card-body">
       <slot name="body"></slot>
     </div>

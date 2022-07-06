@@ -78,7 +78,7 @@ export default {
         </template>
       </CodeBlock>
 
-      <h2>Body + Heading + Action</h2>
+      <h2>Body + Heading Action</h2>
       <CodeBlock>
         <template #preview>
           <axdd-card style="max-width: 600px">
@@ -177,6 +177,52 @@ export default {
         </template>
       </CodeBlock>
 
+      <h2>Body + Heading Tabs</h2>
+      <p>asdkfjalskdj</p>
+      <CodeBlock>
+        <template #preview>
+          <axdd-card style="max-width: 600px">
+            <template #heading-tabs>
+              <axdd-card-heading :level="3">Heading</axdd-card-heading>
+              <axdd-card-tabs>
+                <axdd-tabs-list :tabs-id="'example'">
+                  <template #items>
+                    <axdd-tabs-item
+                      :tabs-id="'example'"
+                      :panel-id="'first'"
+                      :active-tab="true"
+                    >
+                      First
+                    </axdd-tabs-item>
+                    <axdd-tabs-item :tabs-id="'example'" :panel-id="'second'">
+                      Second
+                    </axdd-tabs-item>
+                    <axdd-tabs-item :tabs-id="'example'" :panel-id="'third'">
+                      Third
+                    </axdd-tabs-item>
+                  </template>
+                </axdd-tabs-list>
+              </axdd-card-tabs>
+            </template>
+            <template #body>
+              <axdd-tabs-display :tabs-id="'example'">
+                <template #panels>
+                  <axdd-tabs-panel :panel-id="'first'" :active-panel="true">
+                    first ...
+                  </axdd-tabs-panel>
+                  <axdd-tabs-panel :panel-id="'second'">
+                    second ...
+                  </axdd-tabs-panel>
+                  <axdd-tabs-panel :panel-id="'third'">
+                    third ...
+                  </axdd-tabs-panel>
+                </template>
+              </axdd-tabs-display>
+            </template>
+          </axdd-card>
+        </template>
+      </CodeBlock>
+
       <h2>Body + Footer</h2>
       <CodeBlock>
         <template #preview>
@@ -206,6 +252,12 @@ import CodeBlock from "../../components/CodeBlock.vue";
 import Card from "../../_components/card/card.vue";
 import CardHeading from "../../_components/card/heading.vue";
 import CardAction from "../../_components/card/action.vue";
+import CardTabs from "../../_components/card/tabs.vue";
+
+import TabsList from "../../_components/tabs/list.vue";
+import TabsDisplay from "../../_components/tabs/display.vue";
+import TabsItem from "../../_components/tabs/item.vue";
+import TabsPanel from "../../_components/tabs/panel.vue";
 
 export default {
   name: "DocsComponentsCard",
@@ -216,6 +268,12 @@ export default {
     "axdd-card": Card,
     "axdd-card-heading": CardHeading,
     "axdd-card-action": CardAction,
+    "axdd-card-tabs": CardTabs,
+
+    "axdd-tabs-list": TabsList,
+    "axdd-tabs-display": TabsDisplay,
+    "axdd-tabs-item": TabsItem,
+    "axdd-tabs-panel": TabsPanel,
   },
   data() {
     return {};

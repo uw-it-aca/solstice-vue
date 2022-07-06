@@ -8,8 +8,10 @@ import Card from "./src/_components/card/card.vue";
 import CardHeading from "./src/_components/card/heading.vue";
 import CardAction from "./src/_components/card/action.vue";
 import Tabs from "./src/_components/tabs/tabs.vue";
-import TabItem from "./src/_components/tabs/item.vue";
-import TabPanel from "./src/_components/tabs/panel.vue";
+import TabsList from "./src/_components/tabs/list.vue";
+import TabsDisplay from "./src/_components/tabs/display.vue";
+import TabsItem from "./src/_components/tabs/item.vue";
+import TabsPanel from "./src/_components/tabs/panel.vue";
 
 // 1.0.0
 import Sidebar from "./src/_layouts/sidebar.vue";
@@ -23,8 +25,10 @@ export {
   CardHeading,
   CardAction,
   Tabs,
-  TabItem,
-  TabPanel,
+  TabsList,
+  TabsDisplay,
+  TabsItem,
+  TabsPanel,
   Sidebar,
   Topbar,
 };

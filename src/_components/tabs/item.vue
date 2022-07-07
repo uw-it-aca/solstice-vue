@@ -1,7 +1,7 @@
 <template>
   <li class="nav-item me-1" role="presentation">
     <button
-      class="nav-link text-secondary text-uppercase small border-light-gray border-bottom border-4"
+      class="nav-link text-secondary border-gray border-bottom border-3"
       :class="classObject"
       :tabindex="[activeTab ? '0' : '-1']"
       :id="panelId + '-tab'"

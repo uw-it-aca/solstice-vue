@@ -28,13 +28,14 @@
         >
       </p>
 
-      <h2>Standard</h2>
+      <h2>Standard (w/ variants)</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta quidem
         sunt, voluptas iure laborum est nesciunt perspiciatis corporis, ducimus
         perferendis nihil unde illum asperiores doloribus vitae velit quod,
         voluptate aperiam?
       </p>
+
       <CodeBlock>
         <template #preview>
           <axdd-tabs-list
@@ -51,10 +52,16 @@
                 :variant="'tabs'"
                 >First</axdd-tabs-item
               >
-              <axdd-tabs-item :tabs-id="'example'" :panel-id="'second'" :variant="'tabs'"
+              <axdd-tabs-item
+                :tabs-id="'example'"
+                :panel-id="'second'"
+                :variant="'tabs'"
                 >Second</axdd-tabs-item
               >
-              <axdd-tabs-item :tabs-id="'example'" :panel-id="'third'" :variant="'tabs'"
+              <axdd-tabs-item
+                :tabs-id="'example'"
+                :panel-id="'third'"
+                :variant="'tabs'"
                 >Third</axdd-tabs-item
               >
             </template>
@@ -73,10 +80,16 @@
                 :variant="'pills'"
                 >First</axdd-tabs-item
               >
-              <axdd-tabs-item :tabs-id="'example'" :panel-id="'second'" :variant="'pills'"
+              <axdd-tabs-item
+                :tabs-id="'example'"
+                :panel-id="'second'"
+                :variant="'pills'"
                 >Second</axdd-tabs-item
               >
-              <axdd-tabs-item :tabs-id="'example'" :panel-id="'third'" :variant="'pills'"
+              <axdd-tabs-item
+                :tabs-id="'example'"
+                :panel-id="'third'"
+                :variant="'pills'"
                 >Third</axdd-tabs-item
               >
             </template>

@@ -1,13 +1,28 @@
 <template>
   <ul
     v-if="variant == 'lines'"
-    class="nav nav-lines"
+    class="nav nav-lines gap-1"
     :id="tabsId"
     role="tablist"
   >
     <slot name="items"></slot>
   </ul>
-  <ul v-else :class="'nav nav-' + variant" :id="tabsId" role="tablist">
+  <ul
+    v-else-if="variant == 'pills'"
+    class="gap-1 border rounded-3 p-1"
+    :class="'nav nav-' + variant"
+    :id="tabsId"
+    role="tablist"
+  >
+    <slot name="items"></slot>
+  </ul>
+  <ul
+    v-else
+    class="gap-1"
+    :class="'nav nav-' + variant"
+    :id="tabsId"
+    role="tablist"
+  >
     <slot name="items"></slot>
   </ul>
 </template>

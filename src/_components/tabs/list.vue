@@ -84,7 +84,8 @@ export default {
 }
 
 .nav-tabs {
-  margin-bottom: -1px;
+  margin-bottom: -1px !important;
+
   .nav-link {
     color: gray;
   }

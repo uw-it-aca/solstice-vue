@@ -15,7 +15,7 @@
 
     <div
       v-if="$slots['heading-tabs']"
-      class="card-header bg-white rounded-top pt-3 pb-0 d-flex justify-content-between"
+      class="card-header bg-white border-bottom border-gray rounded-top pt-3 pb-0 d-flex justify-content-between"
     >
       <slot name="heading-tabs"></slot>
     </div>

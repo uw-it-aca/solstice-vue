@@ -16,15 +16,6 @@
   >
     <slot name="items"></slot>
   </ul>
-  <ul
-    v-else
-    class="gap-1"
-    :class="'nav nav-' + variant"
-    :id="tabsId"
-    role="tablist"
-  >
-    <slot name="items"></slot>
-  </ul>
 </template>
 
 <script>
@@ -80,18 +71,6 @@ export default {
   .nav-link:hover {
     background-color: #4d307f !important;
     color: #fff;
-  }
-}
-
-.nav-tabs {
-  margin-bottom: -1px !important;
-
-  .nav-link {
-    color: gray;
-  }
-  .nav-link.active {
-    //background-color: #452a78 !important;
-    color: #452a78 !important;
   }
 }
 </style>

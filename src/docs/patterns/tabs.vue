@@ -41,34 +41,6 @@
           <axdd-tabs-list
             :tabs-id="'example'"
             class="mb-4"
-            :variant="'tabs'"
-            style="max-width: 600px"
-          >
-            <template #items>
-              <axdd-tabs-item
-                :tabs-id="'example'"
-                :panel-id="'first'"
-                :active-tab="true"
-                :variant="'tabs'"
-                >First</axdd-tabs-item
-              >
-              <axdd-tabs-item
-                :tabs-id="'example'"
-                :panel-id="'second'"
-                :variant="'tabs'"
-                >Second</axdd-tabs-item
-              >
-              <axdd-tabs-item
-                :tabs-id="'example'"
-                :panel-id="'third'"
-                :variant="'tabs'"
-                >Third</axdd-tabs-item
-              >
-            </template>
-          </axdd-tabs-list>
-          <axdd-tabs-list
-            :tabs-id="'example'"
-            class="mb-4"
             :variant="'pills'"
             style="max-width: 600px"
           >

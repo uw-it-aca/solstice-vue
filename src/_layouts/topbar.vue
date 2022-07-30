@@ -19,7 +19,7 @@
           <div class="container-xl axdd-topbar-logo">
             <a
               v-if="$slots['navigation']"
-              class="btn btn-link btn-sm d-lg-none border border-2 py-0 px-1 text-white me-2"
+              class="btn btn-link btn-sm d-xl-none border border-2 py-0 px-1 text-white me-2"
               data-bs-toggle="collapse"
               data-bs-target="#topbar-nav-collapse"
               role="button"
@@ -31,7 +31,7 @@
             </a>
             <div
               class="d-inline align-middle text-white"
-              :class="[$mq == 'desktop' ? 'h2' : 'h3']"
+              :class="[mq.xlPlus ? 'h2' : 'h3']"
             >
               <a
                 :href="appRootUrl"
@@ -42,18 +42,19 @@
           </div>
         </div>
       </slot>
-    </header>
-    <div v-if="$slots['bar'] && $mq == 'desktop'" class="w-100">
-      <slot name="bar">
-        <div class="bg-gray">
-          <div class="container-xl">
-            <div class="col-12 py-2 text-center">
-              default gray bar (desktop)
+      <div v-if="$slots['bar'] && mq.xlPlus" class="w-100">
+        <slot name="bar">
+          <div class="bg-gray">
+            <div class="container-xl">
+              <div class="col-12 py-2 text-center">
+                default gray bar (desktop)
+              </div>
             </div>
           </div>
-        </div>
-      </slot>
-    </div>
+        </slot>
+      </div>
+    </header>
+
     <div class="w-100 flex-fill">
       <div class="container-xl">
         <div class="row">
@@ -62,13 +63,13 @@
             <nav role="navigation">
               <div
                 id="topbar-nav-collapse"
-                :class="[$mq == 'desktop' ? 'collapse.show' : 'collapse']"
+                :class="[!mq.xlPlus ? 'collapse' : 'collapse.show']"
               >
                 <slot name="navigation"></slot>
               </div>
             </nav>
           </div>
-          <div v-if="$slots['bar'] && $mq != 'desktop'" class="w-100 p-0 m-0">
+          <div v-if="$slots['bar'] && !mq.xlPlus" class="w-100 p-0 m-0">
             <slot name="bar">
               <div class="bg-gray">
                 <div class="container-xl">
@@ -123,6 +124,7 @@
 <script>
 export default {
   name: "TopbarLayout",
+  inject: ["mq"],
   props: {
     appName: {
       type: String,

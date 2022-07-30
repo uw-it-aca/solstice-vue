@@ -8,6 +8,7 @@
     :sign-out-url="signOutUrl"
   >
     <template #header></template>
+    <template #navigation> navigation content here </template>
     <template #bar></template>
     <template #main>
       <!-- main section override -->

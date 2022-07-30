@@ -31,7 +31,7 @@
             </a>
             <div
               class="d-inline align-middle text-white"
-              :class="[$mq == 'desktop' ? 'h3' : 'h4']"
+              :class="[$mq == 'desktop' ? 'h2' : 'h3']"
             >
               <a
                 :href="appRootUrl"

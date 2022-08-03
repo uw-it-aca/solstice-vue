@@ -4,44 +4,49 @@
     class="d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"
   >
     <header class="w-100">
-      <slot name="header">
-        <div class="bg-dark-purple text-white py-2 small">
-          <div class="container-xl">
+      <div
+        v-if="$slots['profile']"
+        class="bg-dark-purple text-white py-2 small"
+      >
+        <div class="container-xl">
+          <slot name="profile">
             <div class="d-flex">
-              <div class="flex-fill">{{ userName }}</div>
+              <div class="flex-fill">username</div>
               <div class="flex-fill text-end">
                 <a :href="signOutUrl" class="text-white">Sign out</a>
               </div>
             </div>
-          </div>
+          </slot>
         </div>
-        <div class="bg-purple axdd-topbar-brand">
-          <div class="container-xl axdd-topbar-logo">
+      </div>
+
+      <div class="bg-purple axdd-topbar-brand">
+        <div class="container-xl axdd-topbar-logo">
+          <a
+            v-if="$slots['navigation']"
+            class="btn btn-link btn-sm d-xl-none border border-2 rounded-3 py-0 px-1 text-white me-2"
+            data-bs-toggle="collapse"
+            data-bs-target="#topbar-nav-collapse"
+            role="button"
+            aria-expanded="false"
+            aria-controls="topbar-nav-collapse"
+            aria-label="Toggle Navigation Menu"
+          >
+            <i class="bi bi-list fw-bold text-white fs-6"></i>
+          </a>
+          <div
+            class="d-inline align-middle text-white"
+            :class="[mq.xlPlus ? 'h2' : 'h3']"
+          >
             <a
-              v-if="$slots['navigation']"
-              class="btn btn-link btn-sm d-xl-none border border-2 py-0 px-1 text-white me-2"
-              data-bs-toggle="collapse"
-              data-bs-target="#topbar-nav-collapse"
-              role="button"
-              aria-expanded="false"
-              aria-controls="topbar-nav-collapse"
-              aria-label="Toggle Navigation Menu"
+              :href="appRootUrl"
+              class="axdd-font-encode-sans text-white text-decoration-none"
+              >{{ appName }}</a
             >
-              <i class="bi bi-list fw-bold text-white fs-6"></i>
-            </a>
-            <div
-              class="d-inline align-middle text-white"
-              :class="[mq.xlPlus ? 'h2' : 'h3']"
-            >
-              <a
-                :href="appRootUrl"
-                class="axdd-font-encode-sans text-white text-decoration-none"
-                >{{ appName }}</a
-              >
-            </div>
           </div>
         </div>
-      </slot>
+      </div>
+
       <div v-if="$slots['bar'] && mq.xlPlus" class="w-100">
         <slot name="bar">
           <div class="bg-gray">

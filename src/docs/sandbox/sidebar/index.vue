@@ -7,28 +7,28 @@
         :user-official-name="userOfficial"
         :user-preferred-name="userPreferred"
         :profile-url="'https://identity.uw.edu'"
-        :signout-url="'/out'"
+        :signout-url="signoutUrl"
       ></axdd-profile>
     </template>
 
     <template #navigation>
       <ul class="nav flex-column">
-        <li class="nav-item mb-1 bg-dark-purple rounded">
+        <li class="nav-item mb-1 bg-dark-purple rounded-3">
           <a href="#" class="nav-link text-gray d-block px-3 py-2"
             ><i class="bi bi-house-door-fill me-3"></i>Home</a
           >
         </li>
-        <li class="nav-item mb-1 bg-dark-purple-hover rounded">
+        <li class="nav-item mb-1 bg-dark-purple-hover rounded-3">
           <a href="#" class="nav-link text-gray d-block px-3 py-2"
             ><i class="bi bi-mortarboard-fill me-3"></i>Academics</a
           >
         </li>
-        <li class="nav-item mb-1 bg-dark-purple-hover rounded">
+        <li class="nav-item mb-1 bg-dark-purple-hover rounded-3">
           <a href="#" class="nav-link text-gray d-block px-3 py-2"
             ><i class="bi bi-pencil-square me-3"></i>Teaching</a
           >
         </li>
-        <li class="nav-item bg-dark-purple-hover rounded">
+        <li class="nav-item bg-dark-purple-hover rounded-3">
           <a href="#" class="nav-link text-gray d-block px-3 py-2"
             ><i class="bi bi-credit-card me-3"></i>Accounts</a
           >
@@ -41,12 +41,12 @@
             <span class="visually-hidden"> Navigation separator</span></a
           >
         </li>
-        <li class="nav-item mb-1 bg-dark-purple-hover rounded">
+        <li class="nav-item mb-1 bg-dark-purple-hover rounded-3">
           <a href="#" class="nav-link text-gray d-block px-3 py-2"
             ><i class="bi bi-calendar-check me-3"></i>Calendar</a
           >
         </li>
-        <li class="nav-item bg-dark-purple-hover rounded">
+        <li class="nav-item bg-dark-purple-hover rounded-3">
           <a href="#" class="nav-link text-gray d-block px-3 py-2"
             ><i class="bi bi-bookmark-fill me-3"></i>UW Resources</a
           >
@@ -120,6 +120,7 @@ export default {
       userPreferred: "Preferred Name",
       currentYear: new Date().getFullYear(),
       pageTitle: "Page Title",
+      signOutUrl: "/signout",
     };
   },
 };

@@ -10,52 +10,50 @@
       :style="[!mq.mdMinus ? 'min-width: 280px; max-width:280px;' : '']"
     >
       <header>
-        <slot name="header">
-          <div
-            v-if="$slots['profile']"
-            class="bg-dark-purple text-white py-2 px-3 small"
-          >
-            <slot name="profile">
-              <div class="d-flex">
-                <div class="flex-fill">username</div>
-                <div class="flex-fill text-end">
-                  <a :href="signOutUrl" class="text-white">Sign out</a>
-                </div>
+        <div
+          v-if="$slots['profile']"
+          class="bg-dark-purple text-white py-2 px-3 small"
+        >
+          <slot name="profile">
+            <div class="d-flex">
+              <div class="flex-fill">username</div>
+              <div class="flex-fill text-end">
+                <a :href="signOutUrl" class="text-white">Sign out</a>
               </div>
-            </slot>
-          </div>
+            </div>
+          </slot>
+        </div>
 
+        <div
+          :class="[
+            !mq.lgMinus ? 'axdd-sidebar-brand' : 'axdd-sidebar-brand-sm',
+          ]"
+          class="px-3"
+        >
+          <a
+            v-if="$slots['navigation']"
+            class="btn btn-link btn-sm d-lg-none border border-2 rounded-3 py-0 px-1 text-white me-2"
+            data-bs-toggle="collapse"
+            data-bs-target="#sidebar-nav-collapse"
+            role="button"
+            aria-expanded="false"
+            aria-controls="sidebar-nav-collapse"
+            aria-label="Toggle Navigation Menu"
+          >
+            <i class="bi bi-list fw-bold text-white fs-6"></i>
+          </a>
           <div
-            :class="[
-              !mq.lgMinus ? 'axdd-sidebar-brand' : 'axdd-sidebar-brand-sm',
-            ]"
-            class="px-3"
+            class="d-inline align-middle text-white"
+            :class="[mq.mdPlus ? 'h2' : 'h3']"
           >
             <a
-              v-if="$slots['navigation']"
-              class="btn btn-link btn-sm d-lg-none border border-2 rounded-3 py-0 px-1 text-white me-2"
-              data-bs-toggle="collapse"
-              data-bs-target="#sidebar-nav-collapse"
-              role="button"
-              aria-expanded="false"
-              aria-controls="sidebar-nav-collapse"
-              aria-label="Toggle Navigation Menu"
+              :href="appRootUrl"
+              class="axdd-font-encode-sans text-white text-decoration-none"
             >
-              <i class="bi bi-list fw-bold text-white fs-6"></i>
+              {{ appName }}
             </a>
-            <div
-              class="d-inline align-middle text-white"
-              :class="[mq.mdPlus ? 'h2' : 'h3']"
-            >
-              <a
-                :href="appRootUrl"
-                class="axdd-font-encode-sans text-white text-decoration-none"
-              >
-                {{ appName }}
-              </a>
-            </div>
           </div>
-        </slot>
+        </div>
       </header>
       <div v-if="$slots['navigation']" class="flex-fill">
         <!-- main sidebar navigation -->

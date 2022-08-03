@@ -43,6 +43,7 @@
             :is-preview="true"
             class="bg-white border shadow-sm"
           >
+            <template #profile> profile here... </template>
             <template #main>
               <div class="row my-4">
                 <div class="col">
@@ -88,6 +89,7 @@ export default {
             :is-preview="true"
             class="bg-white border shadow-sm"
           >
+            <template #profile> profile here... </template>
             <template #navigation>
               <div class="row mt-4">
                 <div class="col">

@@ -52,8 +52,9 @@
           >
         </li>
       </ul>
-
-      <div class="alert alert-dark-purple border-0 small my-5">
+    </template>
+    <template #aside>
+      <div class="alert alert-dark-purple border-0 small rounded-3 my-5">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex voluptates
         molestias hic. Esse ab inventore rerum, ipsa cupiditate quo. Aliquid
         optio, commodi sit fugit harum perspiciatis quia sunt fuga. Aliquam?

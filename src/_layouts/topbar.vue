@@ -63,16 +63,26 @@
     <div class="w-100 flex-fill">
       <div class="container-xl">
         <div class="row">
-          <div v-if="$slots['navigation']" class="col-lg-3">
-            <!-- main sidebar navigation -->
-            <nav role="navigation">
-              <div
-                id="topbar-nav-collapse"
-                :class="[!mq.xlPlus ? 'collapse' : 'collapse.show']"
-              >
-                <slot name="navigation"></slot>
-              </div>
-            </nav>
+          <div class="col-lg-3">
+            <div
+              id="topbar-nav-collapse"
+              :class="[!mq.xlPlus ? 'collapse' : 'collapse.show']"
+            >
+              <!-- main topbar navigation -->
+              <nav v-if="$slots['navigation']" role="navigation">
+                <slot name="navigation">
+                  <ul class="text-dark">
+                    <li>nav 1</li>
+                    <li>nav 2</li>
+                    <li>nav 3</li>
+                    <li>nav 4</li>
+                  </ul>
+                </slot>
+              </nav>
+              <aside v-if="$slots['aside']">
+                <slot name="aside">this is aside content</slot>
+              </aside>
+            </div>
           </div>
           <div v-if="$slots['bar'] && !mq.xlPlus" class="w-100 p-0 m-0">
             <slot name="bar">

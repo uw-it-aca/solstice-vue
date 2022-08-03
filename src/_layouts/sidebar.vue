@@ -55,14 +55,14 @@
           </div>
         </div>
       </header>
-      <div v-if="$slots['navigation']" class="flex-fill">
-        <!-- main sidebar navigation -->
-        <nav role="navigation">
-          <div
-            id="sidebar-nav-collapse"
-            class="px-3"
-            :class="[!mq.mdMinus ? 'collapse.show' : 'collapse']"
-          >
+      <div class="flex-fill">
+        <div
+          id="sidebar-nav-collapse"
+          class="px-3"
+          :class="[!mq.mdMinus ? 'collapse.show' : 'collapse']"
+        >
+          <!-- main sidebar navigation -->
+          <nav v-if="$slots['navigation']" role="navigation">
             <slot name="navigation">
               <ul class="text-white">
                 <li>nav 1</li>
@@ -71,8 +71,11 @@
                 <li>nav 4</li>
               </ul>
             </slot>
-          </div>
-        </nav>
+          </nav>
+          <aside v-if="$slots['aside']">
+            <slot name="aside">this is aside content</slot>
+          </aside>
+        </div>
       </div>
       <div class="axdd-sidebar-logo">&nbsp;</div>
     </div>

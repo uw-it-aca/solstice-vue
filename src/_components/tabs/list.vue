@@ -1,7 +1,7 @@
 <template>
   <ul
     v-if="variant == 'lines'"
-    class="nav nav-lines gap-1"
+    class="nav nav-lines gap-1 border-bottom border-3 border-light"
     :id="tabsId"
     role="tablist"
   >
@@ -45,7 +45,7 @@ export default {
     background: none;
     border: none;
     color: gray;
-    margin-bottom: -1px;
+    margin-bottom: -3px;
   }
 
   .nav-link.active {

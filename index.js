@@ -3,6 +3,12 @@ import CardProperty from "./src/_components/card-property.vue";
 import CardStatus from "./src/_components/card-status.vue";
 import LinkButton from "./src/_components/link-button.vue";
 
+// 1.0.5
+import Profile from "./src/_components/profile.vue";
+import DisclosureAction from "./src/_components/disclosure/action.vue";
+import DisclosurePanel from "./src/_components/disclosure/panel.vue";
+import DisclosureBlock from "./src/_components/disclosure/block.vue";
+
 // 1.0.4
 import Card from "./src/_components/card/card.vue";
 import CardHeading from "./src/_components/card/heading.vue";
@@ -25,6 +31,10 @@ export {
   CardHeading,
   CardAction,
   CardTabs,
+  DisclosureAction,
+  DisclosureBlock,
+  DisclosurePanel,
+  Profile,
   TabsList,
   TabsDisplay,
   TabsItem,

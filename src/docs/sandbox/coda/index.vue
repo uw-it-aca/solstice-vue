@@ -125,6 +125,7 @@
 
 <script>
 import Topbar from "../../../_layouts/topbar.vue";
+
 import Tabs from "../../../_components/tabs/tabs.vue";
 import TabItem from "../../../_components/tabs/item.vue";
 import TabPanel from "../../../_components/tabs/panel.vue";

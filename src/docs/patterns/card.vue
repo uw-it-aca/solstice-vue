@@ -185,7 +185,11 @@ export default {
             <template #heading-action>
               <axdd-card-heading :level="3">Heading</axdd-card-heading>
               <axdd-card-action>
-                <axdd-tabs-list :tabs-id="'example'" :variant="'pills'">
+                <axdd-tabs-list
+                  :tabs-id="'example'"
+                  :variant="'pills'"
+                  class="small"
+                >
                   <template #items>
                     <axdd-tabs-item
                       :tabs-id="'example'"

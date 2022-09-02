@@ -1,7 +1,7 @@
 <template>
   <ul
     v-if="variant == 'lines'"
-    class="nav nav-lines gap-1 border-bottom border-3 border-light"
+    class="nav nav-lines border-bottom"
     :id="tabsId"
     role="tablist"
   >
@@ -9,7 +9,7 @@
   </ul>
   <ul
     v-else-if="variant == 'pills'"
-    class="gap-1 border rounded-3 p-1"
+    class="bg-light gap-1 rounded-3 p-1"
     :class="'nav nav-' + variant"
     :id="tabsId"
     role="tablist"
@@ -45,16 +45,21 @@ export default {
     background: none;
     border: none;
     color: gray;
-    margin-bottom: -3px;
+    margin-bottom: 0px;
   }
 
   .nav-link.active {
     border-color: #452a78 !important;
     color: #452a78 !important;
+
+    &:hover {
+      border-color: #452a78 !important;
+    }
   }
 
   .nav-link:hover {
-    border-color: #4d307f !important;
+    border-color: #f8f9fa !important;
+    //border-color: #4d307f !important;
     color: #4d307f !important;
   }
 }
@@ -64,13 +69,15 @@ export default {
     color: gray;
   }
   .nav-link.active {
-    background-color: #452a78 !important;
-    //color: #452a78 !important;
+    background-color: #fff !important;
+    //background-color: #452a78 !important;
+    color: #452a78 !important;
   }
 
   .nav-link:hover {
-    background-color: #4d307f !important;
-    color: #fff;
+    //background-color: #4d307f !important;
+    //color: #fff;
+    color: #452a78 !important;
   }
 }
 </style>

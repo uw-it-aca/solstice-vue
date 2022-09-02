@@ -182,27 +182,36 @@ export default {
       <CodeBlock>
         <template #preview>
           <axdd-card style="max-width: 600px">
-            <template #heading-tabs>
+            <template #heading-action>
               <axdd-card-heading :level="3">Heading</axdd-card-heading>
-              <axdd-card-tabs>
-                <axdd-tabs-list :tabs-id="'example'">
+              <axdd-card-action>
+                <axdd-tabs-list :tabs-id="'example'" :variant="'pills'">
                   <template #items>
                     <axdd-tabs-item
                       :tabs-id="'example'"
                       :panel-id="'first'"
                       :active-tab="true"
+                      :variant="'pills'"
                     >
-                      First
+                      Firstsss
                     </axdd-tabs-item>
-                    <axdd-tabs-item :tabs-id="'example'" :panel-id="'second'">
+                    <axdd-tabs-item
+                      :tabs-id="'example'"
+                      :panel-id="'second'"
+                      :variant="'pills'"
+                    >
                       Second
                     </axdd-tabs-item>
-                    <axdd-tabs-item :tabs-id="'example'" :panel-id="'third'">
+                    <axdd-tabs-item
+                      :tabs-id="'example'"
+                      :panel-id="'third'"
+                      :variant="'pills'"
+                    >
                       Third
                     </axdd-tabs-item>
                   </template>
                 </axdd-tabs-list>
-              </axdd-card-tabs>
+              </axdd-card-action>
             </template>
             <template #body>
               <axdd-tabs-display :tabs-id="'example'">

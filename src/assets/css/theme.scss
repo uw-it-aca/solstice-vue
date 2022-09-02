@@ -86,6 +86,8 @@ $utilities: (
     )
 );
 
+// override card border color
+$card-border-color: $gray-200;
 
 // adding extra font-sizes (fs-#)
 $extra-font-sizes: (

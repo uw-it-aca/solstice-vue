@@ -56,7 +56,7 @@
         </li>
       </ul>
 
-      <p>Example: bg-xxxxx, border-xxxxx, and text-xxxxx</p>
+      <p>Example: bg-xxxxx and text-xxxxx</p>
 
       <CodeBlock>
         <template #preview>

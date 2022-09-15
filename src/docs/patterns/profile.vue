@@ -23,14 +23,26 @@
       <CodeBlock>
         <template #preview>
           <div class="w-50 px-3 py-1 bg-dark-purple small">
-            <axdd-profile
-              :user-netid="'javerage'"
-              :profile-url="'/profile'"
-              :signout-url="'/signout'"
-            ></axdd-profile>
+            <axdd-profile :user-netid="'javerage'">
+              <a href="/">sign out</a>
+            </axdd-profile>
           </div>
         </template>
       </CodeBlock>
+
+      <h3>w/ userOverride prop</h3>
+      <CodeBlock>
+        <template #preview>
+          <div class="w-50 px-3 py-1 bg-dark-purple small">
+            <axdd-profile :user-netid="'javerage'" :user-override="'jbothell'">
+              <button class="btn btn-link btn-sm text-danger m-0 p-0 border-0">
+                clear action
+              </button>
+            </axdd-profile>
+          </div>
+        </template>
+      </CodeBlock>
+
       <h2>Flyout</h2>
 
       <p>
@@ -52,8 +64,30 @@
               :user-preferred-name="'John Average'"
               :user-pronouns="'he/him'"
               :profile-url="'/profile'"
-              :signout-url="'/signout'"
-            ></axdd-profile>
+            >
+              <a href="/">sign out</a>
+            </axdd-profile>
+          </div>
+        </template>
+      </CodeBlock>
+
+      <h3>w/ userOverride prop</h3>
+      <CodeBlock>
+        <template #preview>
+          <div class="w-50 px-3 py-1 bg-dark-purple small">
+            <axdd-profile
+              :variant="'flyout'"
+              :user-netid="'javerage'"
+              :user-override="'jbothell'"
+              :user-official-name="'John B. Bothell'"
+              :user-preferred-name="'John Bothell'"
+              :user-pronouns="'he/him'"
+              :profile-url="'/profile'"
+            >
+              <button class="btn btn-link btn-sm text-danger m-0 p-0 border-0">
+                clear action
+              </button>
+            </axdd-profile>
           </div>
         </template>
       </CodeBlock>

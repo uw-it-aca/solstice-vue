@@ -23,8 +23,10 @@
       <CodeBlock>
         <template #preview>
           <div class="w-50 px-3 py-1 bg-dark-purple small">
-            <axdd-profile :user-netid="'javerage'">
-              <a href="/">sign out</a>
+            <axdd-profile
+              :user-netid="'javerage'"
+              :signout-url="'/signout/url'"
+            >
             </axdd-profile>
           </div>
         </template>

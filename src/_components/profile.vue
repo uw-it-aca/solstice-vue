@@ -52,7 +52,10 @@
     <div v-else class="flex-fill text-white">{{ userNetid }}</div>
 
     <div class="flex-fill text-end">
-      <slot></slot>
+      <slot v-if="signoutUrl"
+        ><a :href="signoutUrl" class="text-white">Sign out</a></slot
+      >
+      <slot v-else><a href="sadkf">sign out test</a></slot>
     </div>
   </div>
 </template>
@@ -79,6 +82,9 @@ export default {
       type: String,
     },
     userPronouns: {
+      type: String,
+    },
+    signoutUrl: {
       type: String,
     },
     profileUrl: {

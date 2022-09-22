@@ -66,8 +66,8 @@
               :user-preferred-name="'John Average'"
               :user-pronouns="'he/him'"
               :profile-url="'/profile'"
+              :signout-url="'/signout/url'"
             >
-              <a href="/">sign out</a>
             </axdd-profile>
           </div>
         </template>

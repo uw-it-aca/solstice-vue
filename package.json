@@ -14,7 +14,7 @@
   "dependencies": {
     "@popperjs/core": "^2.9.2",
     "bootstrap": "^5.2.0",
-    "bootstrap-icons": "^1.8.3",
+    "bootstrap-icons": "^1.9.1",
     "jquery": "^3.6.0",
     "vue": "^3.1.4",
     "vue-router": "^4.0.10",
@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
-    "@vitejs/plugin-vue": "^2.3.1",
+    "@vitejs/plugin-vue": "^3.1.0",
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/test-utils": "^2.0.0-rc.20",
     "c8": "^7.11.0",
@@ -38,8 +38,8 @@
     "stylelint-config-recommended-scss": "^6.0.0",
     "stylelint-config-recommended-vue": "^1.4.0",
     "stylelint-config-standard-scss": "^3.0.0",
-    "vite": "^2.9.5",
-    "vite-plugin-pages": "^0.20.2",
+    "vite": "^3.1.3",
+    "vite-plugin-pages": "^0.26.0",
     "vitest": "^0.9.3"
   }
 }

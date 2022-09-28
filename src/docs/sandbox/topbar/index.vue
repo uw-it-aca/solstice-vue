@@ -98,7 +98,6 @@ export default {
       userOfficial: "MYOFFICAL NAME",
       userPreferred: "Preferred Name",
       currentYear: new Date().getFullYear(),
-
     };
   },
   created: function () {
@@ -107,5 +106,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

@@ -2,7 +2,7 @@
   <li class="nav-item" role="presentation">
     <button
       v-if="variant == 'lines'"
-      class="nav-link text-secondary border-bottom border-white border-4 p-3"
+      class="nav-lines-link text-secondary border-bottom border-white border-4 p-3"
       :class="classObject"
       :tabindex="[activeTab ? '0' : '-1']"
       :id="panelId + '-tab'"
@@ -20,7 +20,7 @@
     </button>
     <button
       v-else-if="variant == 'pills'"
-      class="nav-link rounded-3 px-3 py-2"
+      class="nav-pills-link rounded-3 px-3 py-2"
       :class="classObject"
       :tabindex="[activeTab ? '0' : '-1']"
       :id="panelId + '-tab'"

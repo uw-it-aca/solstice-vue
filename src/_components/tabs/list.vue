@@ -38,46 +38,43 @@ export default {
 
 <style lang="scss">
 // creates a custom bootstrap tab style
+
 .nav-lines {
   border-width: 1px;
 
-  .nav-link {
+  .nav-lines-link {
     background: none;
     border: none;
     color: gray;
-    margin-bottom: 0px;
-  }
-
-  .nav-link.active {
-    border-color: #452a78 !important;
-    color: #452a78 !important;
+    margin-bottom: 0;
 
     &:hover {
-      border-color: #452a78 !important;
+      border-color: #f8f9fa !important;
+      color: #4d307f !important;
     }
-  }
 
-  .nav-link:hover {
-    border-color: #f8f9fa !important;
-    //border-color: #4d307f !important;
-    color: #4d307f !important;
+    &.active {
+      border-color: #452a78 !important;
+      color: #452a78 !important;
+    }
   }
 }
 
 .nav-pills {
-  .nav-link {
+  .nav-pills-link {
     color: gray;
-  }
-  .nav-link.active {
-    background-color: #fff !important;
-    //background-color: #452a78 !important;
-    color: #452a78 !important;
-  }
+    background: none;
+    border: none;
+    margin-bottom: 0;
 
-  .nav-link:hover {
-    //background-color: #4d307f !important;
-    //color: #fff;
-    color: #452a78 !important;
+    &:hover {
+      color: #452a78 !important;
+    }
+
+    &.active {
+      background-color: #fff !important;
+      color: #452a78 !important;
+    }
   }
 }
 </style>

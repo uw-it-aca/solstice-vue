@@ -160,6 +160,7 @@ export default {
 .axdd-sidebar-brand-sm {
   line-height: 75px;
 }
+
 .axdd-sidebar-brand {
   line-height: 105px;
 }

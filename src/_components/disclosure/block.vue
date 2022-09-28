@@ -48,15 +48,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.chevron[aria-expanded="true"] i {
-  transform: rotate(90deg);
-}
-
 .chevron i {
   display: inline-block;
   transition: transform 0.35s ease;
   transform-origin: 0.5em 50%;
   font-weight: bolder;
+}
+
+.chevron[aria-expanded="true"] i {
+  transform: rotate(90deg);
 }
 
 .bi-chevron-right::before {

@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: "CardComp",
+  name: "axdd-card",
   data: function () {
     return {};
   },

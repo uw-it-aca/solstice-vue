@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: "TabsList",
+  name: "axdd-tabs-list",
   props: {
     variant: {
       type: String,

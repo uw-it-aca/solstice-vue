@@ -138,7 +138,7 @@
 
 <script>
 export default {
-  name: "TopbarLayout",
+  name: "axdd-topbar",
   inject: ["mq"],
   props: {
     appName: {

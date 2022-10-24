@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "DisclosurePanel",
+  name: "axdd-disclosure-panel",
   props: {
     disclosureId: {
       // must match tab panelId

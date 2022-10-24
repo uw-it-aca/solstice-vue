@@ -183,18 +183,11 @@
 import Layout from "../../layout.vue";
 import CodeBlock from "../../components/CodeBlock.vue";
 
-import DisclosureAction from "../../_components/disclosure/action.vue";
-import DisclosurePanel from "../../_components/disclosure/panel.vue";
-import DisclosureBlock from "../../_components/disclosure/block.vue";
-
 export default {
   name: "DocsComponentsDisclosure",
   components: {
     Layout,
     CodeBlock,
-    "axdd-disclosure-action": DisclosureAction,
-    "axdd-disclosure-panel": DisclosurePanel,
-    "axdd-disclosure-block": DisclosureBlock,
   },
   data() {
     return {};

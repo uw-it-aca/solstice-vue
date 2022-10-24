@@ -4,7 +4,7 @@
     :app-name="appName"
     :app-root-url="appRootUrl"
     :page-title="pageTitle"
-    :user-name="userName"
+    :user-name="userNetid"
     :sign-out-url="signOutUrl"
   >
     <template #profile>
@@ -79,14 +79,9 @@
 </template>
 
 <script>
-import Topbar from "../../../_layouts/topbar.vue";
-import Profile from "../../../_components/profile.vue";
 
 export default {
-  components: {
-    "axdd-topbar": Topbar,
-    "axdd-profile": Profile,
-  },
+  components: {},
   data() {
     return {
       // minimum application setup overrides

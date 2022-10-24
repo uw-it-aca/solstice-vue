@@ -190,8 +190,6 @@ export default {
 
 <script>
 import Layout from "../../layout.vue";
-import Topbar from "../../_layouts/topbar.vue";
-import Sidebar from "../../_layouts/sidebar.vue";
 import CodeBlock from "../../components/CodeBlock.vue";
 
 export default {
@@ -199,8 +197,6 @@ export default {
   components: {
     Layout,
     CodeBlock,
-    "axdd-topbar": Topbar,
-    "axdd-sidebar": Sidebar,
   },
   data() {
     return {};

@@ -101,14 +101,11 @@
 import Layout from "../../layout.vue";
 import CodeBlock from "../../components/CodeBlock.vue";
 
-import Profile from "../../_components/profile.vue";
-
 export default {
   name: "DocsComponentsTabs",
   components: {
     Layout,
     CodeBlock,
-    "axdd-profile": Profile,
   },
   data() {
     return {};

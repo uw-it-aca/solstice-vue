@@ -121,7 +121,7 @@
 
 <script>
 export default {
-  name: "SidebarLayout",
+  name: "axdd-sidebar",
   inject: ["mq"],
   props: {
     appName: {

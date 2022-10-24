@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "TabsDisplay",
+  name: "axdd-tabs-display",
   props: {
     tabsId: {
       // must match tab panelId

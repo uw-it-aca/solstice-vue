@@ -104,7 +104,7 @@
 
 <script>
 export default {
-  name: "DocsDevelopmentSidebarIndex",
+  name: "DocsSandboxSidebarIndex",
   components: {},
   props: {},
   data: function () {

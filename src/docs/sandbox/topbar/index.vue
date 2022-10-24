@@ -79,8 +79,8 @@
 </template>
 
 <script>
-
 export default {
+  name: "DocsSandboxTopbarIndex",
   components: {},
   data() {
     return {

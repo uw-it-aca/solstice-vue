@@ -263,7 +263,7 @@ import Layout from "../../layout.vue";
 import CodeBlock from "../../components/CodeBlock.vue";
 
 export default {
-  name: "DocsComponentsCard",
+  name: "DocsPatternsCard",
   components: {
     Layout,
     CodeBlock,

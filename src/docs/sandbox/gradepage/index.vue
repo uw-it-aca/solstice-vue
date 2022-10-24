@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: "DocsDevelopmentGradepageIndex",
+  name: "DocsSandboxGradepageIndex",
   components: {},
   data: function () {
     return {

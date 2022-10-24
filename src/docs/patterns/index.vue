@@ -64,7 +64,7 @@ import Layout from "../../layout.vue";
 import CompDescription from "../../components/CompDescription.vue";
 
 export default {
-  name: "DocsComponentsIndex",
+  name: "DocsPatternsIndex",
   components: {
     Layout,
     CompDescription,

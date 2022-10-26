@@ -83,6 +83,7 @@ import Topbar from "../../../_layouts/topbar.vue";
 import Profile from "../../../_components/profile.vue";
 
 export default {
+  name: "DocsSandboxTopbarIndex",
   components: {
     "axdd-topbar": Topbar,
     "axdd-profile": Profile,

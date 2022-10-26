@@ -265,7 +265,6 @@ import CodeBlock from "../../components/CodeBlock.vue";
 import Card from "../../_components/card/card.vue";
 import CardHeading from "../../_components/card/heading.vue";
 import CardAction from "../../_components/card/action.vue";
-import CardTabs from "../../_components/card/tabs.vue";
 
 import TabsList from "../../_components/tabs/list.vue";
 import TabsDisplay from "../../_components/tabs/display.vue";
@@ -281,7 +280,6 @@ export default {
     "axdd-card": Card,
     "axdd-card-heading": CardHeading,
     "axdd-card-action": CardAction,
-    "axdd-card-tabs": CardTabs,
 
     "axdd-tabs-list": TabsList,
     "axdd-tabs-display": TabsDisplay,

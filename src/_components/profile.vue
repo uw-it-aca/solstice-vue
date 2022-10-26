@@ -65,6 +65,7 @@
 
 <script>
 export default {
+  name: "ProfileComp",
   props: {
     variant: {
       type: String,

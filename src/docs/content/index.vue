@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <template #content>
-      <h1>Content</h1>
+      <h1>Content Guide</h1>
 
       <p class="p-0 col-md-8 lead">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi
@@ -36,14 +36,13 @@
 </template>
 
 <script>
-import Layout from "../../layouts/docs.vue";
+import Layout from "../../layout.vue";
 
 export default {
+  name: "DocsContentIndex",
   components: { Layout },
   data() {
     return {};
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

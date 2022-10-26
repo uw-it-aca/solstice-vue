@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/uw-it-aca/axdd-components/badge.svg?branch=main)](https://coveralls.io/github/uw-it-aca/axdd-components?branch=main)
+
 # axdd-components
 AXDD VueJS Component Library
 
@@ -31,8 +33,26 @@ npm run dev
 npm run build
 ```
 
+### Run Unit Tests with [Vitest](https://vitest.dev/)
+
+```sh
+npm run test:unit
+```
+
+### Run Unit Tests with Coverage report
+
+```sh
+npm run coverage
+```
+
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh
-npm run lint
+npm run eslint
+```
+
+### Lint with [Stylelint](https://stylelint.io/)
+
+```sh
+npm run stylelint
 ```

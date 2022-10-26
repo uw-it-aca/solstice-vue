@@ -1,15 +1,13 @@
 <template>
   <!-- MARK: https://vuejs.org/guide/essentials/component-basics.html#dynamic-components -->
-  <component
-    :is="`h${checkedLevel}`"
-    class="h5 m-0 text-uppercase fw-bold text-uppercase axdd-font-encode-sans text-dark-beige"
-  >
+  <component :is="`h${checkedLevel}`" class="h6 m-0 fw-bold">
     <slot></slot>
   </component>
 </template>
 
 <script>
 export default {
+  name: "CardHeading",
   props: {
     level: {
       type: Number,
@@ -32,5 +30,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

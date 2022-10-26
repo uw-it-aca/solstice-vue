@@ -1,74 +1,90 @@
 <template>
   <div
+    :class="[!isPreview ? 'min-vh-100' : ' ']"
     class="d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"
-    style="min-height: 300px"
   >
     <header class="w-100">
-      <slot name="header">
-        <div class="bg-dark-purple text-white py-2 small">
-          <div class="container-xl">
+      <div
+        v-if="$slots['profile']"
+        class="bg-dark-purple text-white py-2 small"
+      >
+        <div class="container-xl">
+          <slot name="profile">
             <div class="d-flex">
-              <div class="flex-fill">{{ userName }}</div>
+              <div class="flex-fill">username</div>
               <div class="flex-fill text-end">
                 <a :href="signOutUrl" class="text-white">Sign out</a>
               </div>
             </div>
-          </div>
+          </slot>
         </div>
-        <div class="bg-purple axdd-topbar-brand">
-          <div class="container-xl axdd-topbar-logo">
+      </div>
+
+      <div class="bg-purple axdd-topbar-brand">
+        <div class="container-xl axdd-topbar-logo">
+          <a
+            v-if="$slots['navigation']"
+            class="btn btn-link btn-sm d-xl-none border border-2 rounded-3 py-0 px-1 text-white me-2"
+            data-bs-toggle="collapse"
+            data-bs-target="#topbar-nav-collapse"
+            role="button"
+            aria-expanded="false"
+            aria-controls="topbar-nav-collapse"
+            aria-label="Toggle Navigation Menu"
+          >
+            <i class="bi bi-list fw-bold text-white fs-6"></i>
+          </a>
+          <div
+            class="d-inline align-middle text-white"
+            :class="[mq.xlPlus ? 'h2' : 'h3']"
+          >
             <a
-              v-if="$slots['navigation']"
-              class="btn btn-link btn-sm d-lg-none border border-2 py-0 px-1 text-white me-2"
-              data-bs-toggle="collapse"
-              data-bs-target="#topbar-nav-collapse"
-              role="button"
-              aria-expanded="false"
-              aria-controls="topbar-nav-collapse"
-              aria-label="Toggle Navigation Menu"
+              :href="appRootUrl"
+              class="axdd-font-encode-sans text-white text-decoration-none"
+              >{{ appName }}</a
             >
-              <i class="bi bi-list fw-bold text-white fs-6"></i>
-            </a>
-            <div
-              class="d-inline align-middle text-white"
-              :class="[$mq == 'desktop' ? 'h3' : 'h5']"
-            >
-              <a
-                :href="appRootUrl"
-                class="axdd-font-encode-sans text-white text-decoration-none"
-                >{{ appName }}</a
-              >
-            </div>
           </div>
         </div>
-      </slot>
+      </div>
+
+      <div v-if="$slots['bar'] && mq.xlPlus" class="w-100">
+        <slot name="bar">
+          <div class="bg-gray">
+            <div class="container-xl">
+              <div class="col-12 py-2 text-center">
+                default gray bar (desktop)
+              </div>
+            </div>
+          </div>
+        </slot>
+      </div>
     </header>
-    <div v-if="$slots['bar'] && $mq == 'desktop'" class="w-100">
-      <slot name="bar">
-        <div class="bg-gray">
-          <div class="container-xl">
-            <div class="col-12 py-2 text-center">
-              default gray bar (desktop)
-            </div>
-          </div>
-        </div>
-      </slot>
-    </div>
-    <div class="w-100">
+
+    <div class="w-100 flex-fill">
       <div class="container-xl">
         <div class="row">
-          <div v-if="$slots['navigation']" class="col-lg-3">
-            <!-- main sidebar navigation -->
-            <nav role="navigation">
-              <div
-                id="topbar-nav-collapse"
-                :class="[$mq == 'desktop' ? 'collapse.show' : 'collapse']"
-              >
-                <slot name="navigation"></slot>
-              </div>
-            </nav>
+          <div class="col-lg-3">
+            <div
+              id="topbar-nav-collapse"
+              :class="[!mq.xlPlus ? 'collapse' : 'collapse.show']"
+            >
+              <!-- main topbar navigation -->
+              <nav v-if="$slots['navigation']" role="navigation">
+                <slot name="navigation">
+                  <ul class="text-dark">
+                    <li>nav 1</li>
+                    <li>nav 2</li>
+                    <li>nav 3</li>
+                    <li>nav 4</li>
+                  </ul>
+                </slot>
+              </nav>
+              <aside v-if="$slots['aside']">
+                <slot name="aside">this is aside content</slot>
+              </aside>
+            </div>
           </div>
-          <div v-if="$slots['bar'] && $mq != 'desktop'" class="w-100 p-0 m-0">
+          <div v-if="$slots['bar'] && !mq.xlPlus" class="w-100 p-0 m-0">
             <slot name="bar">
               <div class="bg-gray">
                 <div class="container-xl">
@@ -103,8 +119,15 @@
         <div class="bg-dark">
           <div class="container-xl">
             <div class="text-white font-weight-light py-3 small">
-              Copyright &copy; {{ new Date().getFullYear() }} University of
-              Washington
+              <ul class="list-inline m-0">
+                <li class="list-inline-item"><a href="#">Contact</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+              </ul>
+              <div>
+                Copyright &copy; {{ new Date().getFullYear() }} University of
+                Washington
+              </div>
             </div>
           </div>
         </div>
@@ -115,6 +138,8 @@
 
 <script>
 export default {
+  name: "TopbarLayout",
+  inject: ["mq"],
   props: {
     appName: {
       type: String,
@@ -136,6 +161,10 @@ export default {
       type: String,
       default: "#",
     },
+    isPreview: {
+      type: Boolean,
+      default: false,
+    },
   },
   components: {},
   data() {
@@ -152,8 +181,9 @@ export default {
 .axdd-topbar {
   min-width: 320px;
 }
+
 .axdd-topbar-brand {
-  line-height: 65px;
+  line-height: 75px;
 }
 
 .axdd-topbar-logo {

@@ -1,7 +1,7 @@
 <template>
-  <a class="btn btn-outline-beige text-dark myuw-text-md">
+  <span class="badge rounded-pill bg-purple fs-6">
     <slot></slot>
-  </a>
+  </span>
 </template>
 
 <script>

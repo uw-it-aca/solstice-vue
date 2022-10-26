@@ -1,58 +1,68 @@
 <template>
   <div
-    :class="[$mq != 'mobile' ? 'd-flex vh-100' : '']"
+    :class="[!mq.mdMinus ? 'd-flex vh-100' : '']"
     class="axdd-font-open-sans"
+    :style="[isPreview ? 'min-height: auto !important;' : '']"
   >
     <div
-      :class="[$mq != 'mobile' ? 'overflow-auto' : '']"
-      class="bg-purple axdd-sidebar axdd-sidebar-logo"
-      :style="[$mq != 'mobile' ? 'min-width: 240px; max-width:240px;' : '']"
+      :class="[!mq.mdMinus ? 'overflow-auto' : '']"
+      class="d-flex flex-column bg-purple axdd-sidebar"
+      :style="[!mq.mdMinus ? 'min-width: 280px; max-width:280px;' : '']"
     >
       <header>
-        <slot name="header">
-          <div class="bg-dark-purple text-white py-2 px-3 small">
+        <div
+          v-if="$slots['profile']"
+          class="bg-dark-purple text-white py-2 px-3 small"
+        >
+          <slot name="profile">
             <div class="d-flex">
-              <div class="flex-fill">{{ userName }}</div>
+              <div class="flex-fill">username</div>
               <div class="flex-fill text-end">
                 <a :href="signOutUrl" class="text-white">Sign out</a>
               </div>
             </div>
-          </div>
-          <div class="bg-purple axdd-sidebar-brand px-3">
-            <a
-              v-if="$slots['navigation']"
-              class="btn btn-link btn-sm d-md-none border border-2 py-0 px-1 text-white me-2"
-              data-bs-toggle="collapse"
-              data-bs-target="#sidebar-nav-collapse"
-              role="button"
-              aria-expanded="false"
-              aria-controls="sidebar-nav-collapse"
-              aria-label="Toggle Navigation Menu"
-            >
-              <i class="bi bi-list fw-bold text-white fs-6"></i>
-            </a>
-            <div
-              class="d-inline align-middle text-white"
-              :class="[$mq == 'desktop' ? 'h3' : 'h5']"
-            >
-              <a
-                :href="appRootUrl"
-                class="axdd-font-encode-sans text-white text-decoration-none"
-              >
-                {{ appName }}
-              </a>
-            </div>
-          </div>
-        </slot>
-      </header>
-      <div v-if="$slots['navigation']" class="flex-fill">
-        <!-- main sidebar navigation -->
-        <nav role="navigation">
-          <div
-            id="sidebar-nav-collapse"
-            class="px-3"
-            :class="[$mq != 'mobile' ? 'collapse.show' : 'collapse']"
+          </slot>
+        </div>
+
+        <div
+          :class="[
+            !mq.lgMinus ? 'axdd-sidebar-brand' : 'axdd-sidebar-brand-sm',
+          ]"
+          class="px-3"
+        >
+          <a
+            v-if="$slots['navigation']"
+            class="btn btn-link btn-sm d-lg-none border border-2 rounded-3 py-0 px-1 text-white me-2"
+            data-bs-toggle="collapse"
+            data-bs-target="#sidebar-nav-collapse"
+            role="button"
+            aria-expanded="false"
+            aria-controls="sidebar-nav-collapse"
+            aria-label="Toggle Navigation Menu"
           >
+            <i class="bi bi-list fw-bold text-white fs-6"></i>
+          </a>
+          <div
+            class="d-inline align-middle text-white"
+            :class="[mq.mdPlus ? 'h2' : 'h3']"
+          >
+            <a
+              :href="appRootUrl"
+              class="axdd-font-encode-sans text-white text-decoration-none"
+            >
+              {{ appName }}
+            </a>
+          </div>
+        </div>
+      </header>
+      <div class="flex-fill">
+        <div
+          id="sidebar-nav-collapse"
+          class="px-3"
+          :class="[!mq.mdMinus ? 'collapse.show' : 'collapse']"
+        >
+          <!-- main sidebar navigation -->
+          <nav v-if="$slots['navigation']" role="navigation">
             <slot name="navigation">
               <ul class="text-white">
                 <li>nav 1</li>
@@ -61,13 +71,20 @@
                 <li>nav 4</li>
               </ul>
             </slot>
-          </div>
-        </nav>
+          </nav>
+          <aside v-if="$slots['aside']">
+            <slot name="aside">this is aside content</slot>
+          </aside>
+        </div>
       </div>
+      <div class="axdd-sidebar-logo">&nbsp;</div>
     </div>
 
-    <div :class="[$mq != 'mobile' ? 'flex-fill overflow-auto' : '']">
-      <div class="container-xl">
+    <div :class="[!mq.mdMinus ? 'flex-fill overflow-auto' : '']">
+      <div
+        :class="[!isPreview ? 'min-vh-100' : '']"
+        class="container-xl d-flex flex-column"
+      >
         <div v-if="$slots['bar']" class="row">
           <slot name="bar">
             <div class="col my-3">
@@ -78,15 +95,22 @@
           </slot>
         </div>
 
-        <main>
+        <main class="flex-fill">
           <slot name="main"></slot>
         </main>
 
         <footer v-if="$slots['footer']" class="mt-auto">
           <slot name="footer">
             <div class="font-weight-light py-3 small">
-              Copyright &copy; {{ new Date().getFullYear() }} University of
-              Washington
+              <ul class="list-inline m-0">
+                <li class="list-inline-item"><a href="#">Contact</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+              </ul>
+              <div>
+                Copyright &copy; {{ new Date().getFullYear() }} University of
+                Washington
+              </div>
             </div>
           </slot>
         </footer>
@@ -97,6 +121,8 @@
 
 <script>
 export default {
+  name: "SidebarLayout",
+  inject: ["mq"],
   props: {
     appName: {
       type: String,
@@ -118,6 +144,10 @@ export default {
       type: String,
       default: "#",
     },
+    isPreview: {
+      type: Boolean,
+      default: false,
+    },
   },
   created: function () {
     // constructs page title in the following format "Page Title - AppName"
@@ -127,8 +157,12 @@ export default {
 </script>
 
 <style lang="scss">
+.axdd-sidebar-brand-sm {
+  line-height: 75px;
+}
+
 .axdd-sidebar-brand {
-  line-height: 65px;
+  line-height: 105px;
 }
 
 .axdd-sidebar-logo {
@@ -136,5 +170,6 @@ export default {
   background-repeat: no-repeat;
   background-size: 45px;
   background-position: right 20px bottom;
+  line-height: 30px;
 }
 </style>

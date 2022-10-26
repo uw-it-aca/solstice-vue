@@ -20,6 +20,12 @@
             <li>Living documentation</li>
             <li>Automated testing</li>
           </ul>
+
+          <h2>Version</h2>
+          <ul>
+            <li>Bootstrap 5.2.x</li>
+            <li>Bootstrap Icons 1.8.3</li>
+          </ul>
         </div>
         <div class="col">
           <h2>Principles</h2>
@@ -73,43 +79,50 @@
           <p><router-link to="/elements/">Browse elements</router-link></p>
         </div>
         <div class="col">
-          <h3>Components</h3>
+          <h3>Patterns</h3>
           <p>Patterns consist of design tokens, elements, and patterns.</p>
-          <p><router-link to="/components/">Browse components</router-link></p>
+          <p><router-link to="/patterns/">Browse patterns</router-link></p>
         </div>
       </div>
 
       <hr class="mb-5 w-25 d-inline-block" />
 
       <div class="row">
-        <div class="col">
-          <h3>Implementations</h3>
-          <p>
-            This is a place to document style guides for specific apps - that
-            may deviate from AXDD Components.
-          </p>
-          <ul>
-            <li>
-              <router-link to="/guides/myuw/">MyUW</router-link>
-            </li>
-            <li><router-link to="/guides/dawgpath/">DawgPath</router-link></li>
-          </ul>
+        <div class="col d-flex flex-column">
+          <div class="flex-fill alert alert-purple border-0 p-4">
+            <h3 class="h5 mb-4">What's New? v.1.0.5</h3>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
+              nostrum beatae aperiam nesciunt voluptate. Placeat ipsum libero
+              similique enim labore corrupti porro iure commodi laborum iste
+              itaque, magnam voluptate esse.
+            </p>
+            <p>Read updates</p>
+          </div>
         </div>
-        <div class="col">
-          <h3>Development</h3>
-          <p>
-            Learn how to create global components that can be used by other
-            applications as well as creating brand new applications.
-          </p>
-          <p>
-            <router-link to="/dev/">Read development guidelines</router-link>
-          </p>
-          <ul>
-            <li>
-              <router-link to="/dev/topbar/">Topbar</router-link>
-            </li>
-            <li><router-link to="/dev/sidebar/">Sidebar</router-link></li>
-          </ul>
+        <div class="col d-flex flex-column">
+          <div class="flex-fill alert alert-beige border-0 p-4">
+            <h3 class="h5 mb-4">Development</h3>
+            <p>
+              Learn how to create global components that can be used by other
+              applications as well as creating brand new applications.
+            </p>
+            <p>
+              <router-link to="/development/"
+                >Read development guidelines</router-link
+              >
+            </p>
+            <ul>
+              <li>
+                <router-link to="/sandbox/topbar/">Topbar</router-link>
+                (generic)
+              </li>
+              <li>
+                <router-link to="/sandbox/sidebar/">Sidebar</router-link>
+                (generic)
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </template>
@@ -117,14 +130,15 @@
 </template>
 
 <script>
-import Layout from "../layouts/docs.vue";
+import Layout from "../layout.vue";
 
 export default {
-  components: { Layout },
+  name: "DocsIndex",
+  components: {
+    Layout,
+  },
   data() {
     return {};
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

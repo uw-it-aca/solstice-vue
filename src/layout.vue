@@ -5,7 +5,7 @@
         class="d-flex justify-content-between align-items-center pb-3 my-4 border-bottom"
       >
         <div class="h4 flex-fill">
-          <i class="bi bi-back me-2 text-purple"></i>
+          <i class="bi bi-box me-2 text-purple fw-normal"></i>
           <a href="/" class="text-reset text-decoration-none"
             >AXDD Components</a
           >
@@ -13,29 +13,29 @@
         <div class="me-3">
           <nav class="nav">
             <router-link
-              class="nav-link bg-light-gray-hover rounded me-1"
-              active-class="bg-light-gray text-purple"
+              class="nav-link rounded-3 me-1 bg-purple-hover text-white-hover"
+              active-class="bg-dark-purple text-white"
               to="/content/"
               >Content</router-link
             >
             <router-link
-              class="nav-link bg-light-gray-hover rounded me-1"
-              active-class="bg-light-gray text-purple"
+              class="nav-link rounded-3 me-1 bg-purple-hover text-white-hover"
+              active-class="bg-dark-purple text-white"
               to="/tokens/"
               >Design Tokens</router-link
             >
             <router-link
-              class="nav-link bg-light-gray-hover rounded me-1"
-              active-class="bg-light-gray text-purple"
+              class="nav-link rounded-3 me-1 bg-purple-hover text-white-hover"
+              active-class="bg-dark-purple text-white"
               to="/elements/"
               >Elements</router-link
             >
 
             <router-link
-              class="nav-link bg-light-gray-hover rounded"
-              active-class="bg-light-gray text-purple"
-              to="/components/"
-              >Components</router-link
+              class="nav-link rounded-3 bg-purple-hover text-white-hover"
+              active-class="bg-dark-purple text-white"
+              to="/patterns/"
+              >Patterns</router-link
             >
           </nav>
         </div>

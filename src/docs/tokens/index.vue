@@ -20,7 +20,10 @@
         >
       </p>
 
-      <p>Color is automatically applied to the following utilities.</p>
+      <p>
+        Color is automatically applied to the following utilities and
+        components.
+      </p>
       <ul>
         <li>
           <a
@@ -44,9 +47,16 @@
             >https://getbootstrap.com/docs/5.1/utilities/colors/</a
           >
         </li>
+        <li>
+          <a
+            href="https://getbootstrap.com/docs/5.1/components/alerts/"
+            target="_blank"
+            >https://getbootstrap.com/docs/5.1/components/alerts/</a
+          >
+        </li>
       </ul>
 
-      <p>Example: bg-xxxxx, border-xxxxx, and text-xxxxx</p>
+      <p>Example: bg-xxxxx and text-xxxxx</p>
 
       <CodeBlock>
         <template #preview>
@@ -149,7 +159,7 @@
             </li>
           </ul>
         </template>
-        <template #code>
+        <template #markup>
           <pre class="language-html rounded">
 <code class="html rounded">&lt;div class="bg-dark-purple"&gt;
 &lt;div class="bg-purple"&gt;
@@ -158,7 +168,7 @@
         </template>
       </CodeBlock>
 
-      <h2>Font Sizes (1.0.5)</h2>
+      <h2>Font Sizes <VersionBadge>1.0.5</VersionBadge></h2>
       <p>The base font-size for our apps is 16px.</p>
       <p>
         <a
@@ -182,7 +192,7 @@
           <p class="fs-10">.fs-10 text (11px)</p>
           <p class="fs-11">.fs-11 text (10px)</p>
         </template>
-        <template #code>
+        <template #markup>
           <pre class="language-html rounded">
 <code>&lt;div class="fs-7">Lorem ipsum dolor&lt;/div>
 &lt;div class="fs-8">Lorem ipsum dolor&lt;/div>
@@ -204,6 +214,7 @@
 
       <p>Typography is defined by the UW Brand guidelines.</p>
 
+      <h3>Open Sans</h3>
       <p>
         Open Sans is the default font-family used by UW. It is typically set at
         the page body level.
@@ -212,13 +223,14 @@
         <template #preview>
           <div class="axdd-font-open-sans">Lorem ipsum dolor... Open Sans</div>
         </template>
-        <template #code>
+        <template #markup>
           <pre class="language-html rounded">
 <code>&lt;body class="axdd-font-open-sans">Lorem ipsum dolor... Open Sans&lt;/body>
 </code></pre>
         </template>
       </CodeBlock>
 
+      <h3>Encode Sans Condensed</h3>
       <p>
         Encode Sans Condensed is the heading font-family used by UW. It is
         typically set at the page body level.
@@ -229,7 +241,7 @@
             Lorem ipsum dolor... Encode Sans Condensed
           </div>
         </template>
-        <template #code>
+        <template #markup>
           <pre class="language-html rounded">
 <code>&lt;body class="axdd-font-open-sans">Lorem ipsum dolor... Open Sans&lt;/body>
 </code></pre>
@@ -240,15 +252,19 @@
 </template>
 
 <script>
-import Layout from "../../layouts/docs.vue";
+import Layout from "../../layout.vue";
 import CodeBlock from "../../components/CodeBlock.vue";
+import VersionBadge from "../../components/VersionBadge.vue";
 
 export default {
-  components: { Layout, CodeBlock },
+  name: "DocsTokensIndex",
+  components: {
+    Layout,
+    CodeBlock,
+    VersionBadge,
+  },
   data() {
     return {};
   },
 };
 </script>
-
-<style lang="scss" scoped></style>

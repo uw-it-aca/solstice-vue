@@ -2,7 +2,7 @@
 // iterate the components object and globally register each component
 // source: https://blog.logrocket.com/building-vue-3-component-library/
 
-import components from "./src/components";
+import components from "./src/components.js";
 
 const AxddComponents = {
   install(Vue) {

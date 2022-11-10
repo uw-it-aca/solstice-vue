@@ -26,9 +26,9 @@ pnpm-debug.log*
 # exclude majority of directory and /src from npm package
 .github
 .vscode
-docker
-node_modules
-public
+/docker
+/node_modules
+/public
 /src/components
 /src/docs
 /src/layouts

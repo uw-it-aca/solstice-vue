@@ -259,7 +259,6 @@
         </template>
       </CodeBlock>
 
-
       <h2 class="mt-5">Sidebar</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex aut tempore

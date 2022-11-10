@@ -33,10 +33,12 @@ pnpm-debug.log*
 /src/docs
 /src/layouts
 /src/router
+
 /src/app.vue
 /src/layout.vue
 /src/main.js
 
-README.md
-vite.config.js
-vitest.config.js
+/index.html
+/README.md
+/vite.config.js
+/vitest.config.js

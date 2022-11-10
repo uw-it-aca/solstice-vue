@@ -3,10 +3,6 @@
   "version": "1.0.6",
   "private": true,
   "main": "src/index.js",
-  "files": [
-    "src/index.js",
-    "src/components.js"
-  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",

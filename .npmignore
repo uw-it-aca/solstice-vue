@@ -34,10 +34,6 @@ pnpm-debug.log*
 /src/layouts
 /src/router
 
-/*.md
-/*.html
-/*.js
-
 /index.html
 /README.md
 /vite.config.js

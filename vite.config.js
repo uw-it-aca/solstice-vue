@@ -13,11 +13,6 @@ export default defineConfig({
       exclude: ["_*.vue"],
     }),
   ],
-  build: {
-    rollupOptions: {
-      input: ["./src/main.js"],
-    },
-  },
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),

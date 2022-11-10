@@ -8,7 +8,7 @@ ADD docker/nginx.conf /etc/nginx/nginx.conf
 RUN chgrp acait /etc/nginx/nginx.conf && chmod g+w /etc/nginx/nginx.conf
 
 
-FROM gcr.io/uwit-mci-axdd/nginx-container:1.0.3 as node-bundler
+FROM us-docker.pkg.dev/uwit-mci-axdd/containers/nginx-container:1.1.2 AS node-bundler
 
 USER acait
 
@@ -18,6 +18,7 @@ COPY --chown=acait:acait public /app/public
 
 RUN . /app/bin/activate &&\
     npm install --production &&\
+    npm install vite &&\
     npm run build
 
 

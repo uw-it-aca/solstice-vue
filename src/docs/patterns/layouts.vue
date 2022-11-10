@@ -39,7 +39,7 @@
       <CodeBlock>
         <template #markup>
           <pre class="language-html rounded">
-<code>&lt;axdd-topbar :app-name="'App Name'">&lt;/axdd-topbar>
+<code>&lt;axdd-topbar :app-name="'App Name'" :app-root-url="'/'">&lt;/axdd-topbar>
 </code></pre>
         </template>
       </CodeBlock>
@@ -61,6 +61,13 @@
             <td>true</td>
             <td>String</td>
             <td>appName</td>
+            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</td>
+          </tr>
+          <tr>
+            <th scope="row"><code>:app-root-url</code></th>
+            <td>true</td>
+            <td>String</td>
+            <td>#</td>
             <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</td>
           </tr>
         </tbody>

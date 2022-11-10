@@ -125,6 +125,10 @@ export default {
       type: String,
       default: "appName",
     },
+    appRootUrl: {
+      type: String,
+      default: "#",
+    },
     isPreview: {
       type: Boolean,
       default: false,

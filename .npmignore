@@ -23,8 +23,16 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-# exclude majority of /src from npm package
+# exclude majority of directory and /src from npm package
+.github
+.vscode
+docker
+node_modules
+public
 /src/components
 /src/docs
 /src/layouts
 /src/router
+README.md
+vite.config.js
+vitest.config.js

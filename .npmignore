@@ -34,9 +34,9 @@ pnpm-debug.log*
 /src/layouts
 /src/router
 
-/src/app.vue
-/src/layout.vue
-/src/main.js
+/*.md
+/*.html
+/*.js
 
 /index.html
 /README.md

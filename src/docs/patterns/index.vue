@@ -14,8 +14,8 @@
       <ul class="row list-unstyled">
         <li class="col-4">
           <CompDescription
-            :name="'Layouts'"
-            :link="'/patterns/layouts'"
+            :name="'Layout'"
+            :link="'/patterns/layout'"
             :accessibility="true"
           >
             <p>aasdflkjasdlkfj lksadjf alsfdkj</p>

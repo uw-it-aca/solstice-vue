@@ -4,11 +4,11 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/patterns/">Patterns</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Layouts</li>
+          <li class="breadcrumb-item active" aria-current="page">Layout</li>
         </ol>
       </nav>
 
-      <h1>Layouts</h1>
+      <h1>Layout</h1>
 
       <p class="p-0 col-md-8 lead">
         Patterns are UI Patterns that fall on the more complex side of the

@@ -20,8 +20,8 @@ import TabsItem from "./tabs/item.vue";
 import TabsPanel from "./tabs/panel.vue";
 
 // 1.0.0
-import Sidebar from "./layouts/sidebar.vue";
-import Topbar from "./layouts/topbar.vue";
+import Sidebar from "./layout/sidebar.vue";
+import Topbar from "./layout/topbar.vue";
 
 export default {
   // CardProperty,

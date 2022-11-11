@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import App from "./app.vue";
 import router from "./router";
-import AxddComponents from "./index";
+import AxddComponents from "./_components/index";
 import { Vue3Mq, MqResponsive } from "vue3-mq";
 
 // bootstrap js

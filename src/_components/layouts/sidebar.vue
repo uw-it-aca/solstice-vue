@@ -173,7 +173,7 @@ export default {
 }
 
 .axdd-sidebar-logo {
-  background-image: url("../assets/images/w-logo-white.png");
+  background-image: url("../../assets/images/w-logo-white.png");
   background-repeat: no-repeat;
   background-size: 45px;
   background-position: right 20px bottom;

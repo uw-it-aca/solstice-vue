@@ -67,7 +67,8 @@
 
           <p>
             From the <code>main.js</code> file, import the AXDD Components
-            library and install it as plugin using <code>app.use()</code>.
+            library and install it as plugin using <code>app.use()</code>. Also
+            import the required component <code>style.css</code>.
           </p>
 
           <CodeBlock>
@@ -76,6 +77,8 @@
 <code>import { createApp } from "vue";
 import App from "./app.vue";
 import AxddComponents from "axdd-components";
+
+import "axdd-components/dist/style.css";
 
 const app = createApp(App);
 app.use(AxddComponents);

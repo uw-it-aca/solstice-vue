@@ -1,15 +1,25 @@
 {
   "name": "axdd-components",
+  "type": "module",
   "version": "1.0.6",
   "private": true,
-  "main": "src/_components/index.js",
+  "main": "./dist/axdd-components.umd.cjs",
+  "module": "./dist/axdd-components.js",
   "files": [
+    "dist",
     "src/_components",
     "src/assets",
     "LICENSE",
     "package.json",
     "README.md"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/axdd-components.js",
+      "require": "./dist/axdd-components.cjs"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",

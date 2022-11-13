@@ -1,13 +1,16 @@
 import { createApp } from "vue";
 import App from "./app.vue";
 import router from "./router";
-import AxddComponents from "./_components/index";
+import AxddComponents from "../dist/axdd-components";
 import { Vue3Mq, MqResponsive } from "vue3-mq";
 
 // bootstrap js
 import "bootstrap";
 // custom bootstrap theme
 import "../src/assets/css/custom.scss";
+
+// import axdd-component styles
+import "../dist/axdd-components.css";
 
 const app = createApp(App);
 

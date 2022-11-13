@@ -7,8 +7,6 @@
   "module": "./dist/axdd-components.js",
   "files": [
     "dist",
-    "src/_components",
-    "src/assets",
     "LICENSE",
     "package.json",
     "README.md"

@@ -6,6 +6,7 @@ import { Vue3Mq, MqResponsive } from "vue3-mq";
 
 // bootstrap js
 import "bootstrap";
+
 // custom bootstrap theme
 import "../src/assets/css/custom.scss";
 

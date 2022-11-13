@@ -9,8 +9,8 @@ import "bootstrap";
 // custom bootstrap theme
 import "../src/assets/css/custom.scss";
 
-// import axdd-component styles
-import "../dist/axdd-components.css";
+// import axdd-component styles along with library
+import "../dist/style.css";
 
 const app = createApp(App);
 

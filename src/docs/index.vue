@@ -39,7 +39,7 @@
       <div class="row">
         <div class="col">
           <h2 class="fw-bold">Getting started</h2>
-          <h3>Template</h3>
+          <h3>Template Repository <i class="bi bi-star-fill text-gold"></i></h3>
           <p>
             For any new AXDD applications, we recommend starting with the
             <a href="https://github.com/uw-it-aca/axdd-django-vue"
@@ -49,7 +49,7 @@
             already done for you.
           </p>
 
-          <h3>Installation</h3>
+          <h3>Manual Installation</h3>
           <p>
             If you wish to add AXDD Components to an existing Vue application,
             add the following dependency to your <code>package.json</code> and
@@ -67,8 +67,10 @@
 
           <p>
             From the <code>main.js</code> file, import the AXDD Components
-            library and install it as plugin using <code>app.use()</code>. Also
-            import the required component <code>style.css</code>.
+            library and install it as plugin using <code>app.use()</code>. You
+            must also import the required component library
+            <code>style.css</code> as well as the application's main Bootstrap
+            entry <code>styles.scss</code> file.
           </p>
 
           <CodeBlock>
@@ -78,6 +80,14 @@
 import App from "./app.vue";
 import AxddComponents from "axdd-components";
 
+// bootstrap js + bootstrap-icons
+import "bootstrap";
+import "bootstrap-icons/font/bootstrap-icons.css";
+
+// app bootstrap scss entry
+import "../path/to/css/styles.scss";
+
+// axdd-component css
 import "axdd-components/dist/style.css";
 
 const app = createApp(App);
@@ -140,33 +150,30 @@ app.use(AxddComponents);
 
       <div class="row">
         <div class="col d-flex flex-column">
-          <div class="flex-fill alert alert-purple border-0 p-4">
-            <h3 class="h5 mb-4">What's New? v.1.0.6</h3>
+          <PatternDescription
+            :name="'Release Notes'"
+            :link="'https://github.com/uw-it-aca/axdd-components/releases'"
+            class="alert-purple"
+          >
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
               nostrum beatae aperiam nesciunt voluptate. Placeat ipsum libero
               similique enim labore corrupti porro iure commodi laborum iste
               itaque, magnam voluptate esse.
             </p>
-            <p>
-              <a href="https://github.com/uw-it-aca/axdd-components/releases"
-                >Read Github releases</a
-              >
-            </p>
-          </div>
+          </PatternDescription>
         </div>
         <div class="col d-flex flex-column">
-          <div class="flex-fill alert alert-beige border-0 p-4">
-            <h3 class="h5 mb-4">Development</h3>
+          <PatternDescription
+            :name="'Development Guide'"
+            :link="'/development'"
+            class="alert-beige"
+          >
             <p>
               Learn how to create global components that can be used by other
               applications as well as creating brand new applications.
             </p>
-            <p>
-              <router-link to="/development/"
-                >Read development guidelines</router-link
-              >
-            </p>
+
             <ul>
               <li>
                 <router-link to="/sandbox/topbar/">Topbar</router-link>
@@ -177,7 +184,7 @@ app.use(AxddComponents);
                 (generic)
               </li>
             </ul>
-          </div>
+          </PatternDescription>
         </div>
       </div>
     </template>
@@ -187,12 +194,14 @@ app.use(AxddComponents);
 <script>
 import Layout from "../layout.vue";
 import CodeBlock from "../components/CodeBlock.vue";
+import PatternDescription from "../components/PatternDescription.vue";
 
 export default {
   name: "DocsIndex",
   components: {
     Layout,
     CodeBlock,
+    PatternDescription,
   },
   data() {
     return {};

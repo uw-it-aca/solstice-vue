@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import App from "./app.vue";
 import router from "./router";
-import AxddComponents from "/dist/axdd-components";
+import AxddComponents from "@dist/axdd-components";
 import { Vue3Mq, MqResponsive } from "vue3-mq";
 
 // bootstrap js + icons
@@ -12,7 +12,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "../src/assets/css/styles.scss";
 
 // axdd-component css
-import "/dist/style.css";
+import "@dist/style.css";
 
 const app = createApp(App);
 

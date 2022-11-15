@@ -19,6 +19,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
+      "@dist": fileURLToPath(new URL("./dist", import.meta.url)),
     },
   },
 });

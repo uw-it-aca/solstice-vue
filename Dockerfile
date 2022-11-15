@@ -12,7 +12,7 @@ FROM us-docker.pkg.dev/uwit-mci-axdd/containers/nginx-container:1.1.2 AS node-bu
 
 USER acait
 
-COPY --chown=acait:acait index.html package.json vite.config.js /app/
+COPY --chown=acait:acait index.html package.json vite.config.js vite-lib.config.js /app/
 COPY --chown=acait:acait src /app/src
 COPY --chown=acait:acait public /app/dist
 COPY --chown=acait:acait public /app/public

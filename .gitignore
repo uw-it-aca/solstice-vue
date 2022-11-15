@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # coverage
 coverage
+
+# dist
+dist/favicon.ico

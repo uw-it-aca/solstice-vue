@@ -1,9 +1,7 @@
 <template>
   <div class="mb-3">
     <div v-if="$slots['preview']">
-      <div
-        class="preview border border-gray rounded-3 p-4 mb-3 axdd-font-open-sans"
-      >
+      <div class="preview mb-3 axdd-font-open-sans">
         <slot name="preview"></slot>
       </div>
     </div>

@@ -121,7 +121,7 @@ $font-sizes: map-merge($font-sizes, $extra-font-sizes);
   $alert-border: shift-color($value, $alert-border-scale);
   $alert-color: shift-color($value, $alert-color-scale);
 
-  @if (contrast-ratio($alert-background, $alert-color) < $min-contrast-ratio) {
+  @if contrast-ratio($alert-background, $alert-color) < $min-contrast-ratio {
     $alert-color: mix(
       $value,
       color-contrast($alert-background),

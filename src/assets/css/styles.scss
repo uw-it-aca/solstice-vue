@@ -1,9 +1,15 @@
-// import entire bootstrap css library
-@import "node_modules/bootstrap/scss/bootstrap";
+// 1. import bootstrap functions first
+@import "node_modules/bootstrap/scss/functions";
+
+// 2. include any default variable overrides
 
 // override bootstrap default theme colors
 
 /*
+$body-bg: #000;
+$body-color: #111;
+$text-muted: orange;
+
 $danger: #a94442;
 $warning: #f5d300;
 
@@ -16,9 +22,16 @@ $theme-colors: (
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark,
-  "white":      $white
 );
 */
+
+// 3. include remaining bootstrap styles
+@import "node_modules/bootstrap/scss/variables";
+
+// override card border color
+$card-border-color: $gray-200;
+
+// 4. include default map overrides
 
 // apply custom theme colors
 $custom-colors: (
@@ -36,6 +49,30 @@ $custom-colors: (
 
 // merge the default bootstrap + custom color maps
 $theme-colors: map-merge($theme-colors, $custom-colors);
+
+// adding extra font-sizes (fs-#)
+$extra-font-sizes: (
+  7: 0.875rem,
+  8: 0.8125rem,
+  9: 0.75rem,
+  10: 0.6875rem,
+  11: 0.625rem,
+);
+$font-sizes: map-merge($font-sizes, $extra-font-sizes);
+
+// 5. include required parts
+@import "node_modules/bootstrap/scss/maps";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/root";
+
+// 6. optional include any other parts needed
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/containers";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/helpers";
 
 // add custom hover utilities for bg-color-hover and text-color-hover
 $utilities: (
@@ -65,30 +102,22 @@ $utilities: (
         map-merge(
           $theme-colors,
           (
+            // re-merge theme colors
+            "body": $body-color,
+            "muted": $text-muted,
             "white": $white,
+            "reset": inherit,
             "transparent": transparent,
           )
         ),
     )
 );
 
-// generte the utilities by importing the api
+// 7. include utilities api and import bootstrap last
 @import "node_modules/bootstrap/scss/utilities/api";
+@import "node_modules/bootstrap/scss/bootstrap";
 
-// continue... add global app overrides and custome mixins
-
-// override card border color
-$card-border-color: $gray-200;
-
-// adding extra font-sizes (fs-#)
-$extra-font-sizes: (
-  7: 0.875rem,
-  8: 0.8125rem,
-  9: 0.75rem,
-  10: 0.6875rem,
-  11: 0.625rem,
-);
-$font-sizes: map-merge($font-sizes, $extra-font-sizes);
+// 8. continue... add global app overrides and custom mixins
 
 // global axdd-component styles
 .axdd-font-open-sans {

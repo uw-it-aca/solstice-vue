@@ -24,7 +24,7 @@
     "preview": "vite preview --port 5050",
     "test:unit": "vitest",
     "coverage": "vitest run --coverage",
-    "eslint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "eslint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --ignore-pattern '/dist/' --ignore-path .gitignore",
     "stylelint": "stylelint '**/*.{vue,scss}'"
   },
   "dependencies": {

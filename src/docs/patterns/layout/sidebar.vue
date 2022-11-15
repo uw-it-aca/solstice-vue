@@ -28,8 +28,6 @@
         >
       </p>
 
-
-
       <h3>Usage</h3>
       <CodeBlock>
         <template #markup>

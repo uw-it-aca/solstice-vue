@@ -51,14 +51,12 @@
 
 <script>
 import Layout from "../../../layout.vue";
-import CodeBlock from "../../../components/CodeBlock.vue";
 import CompDescription from "../../../components/CompDescription.vue";
 
 export default {
   name: "DocsPatternsLayouts",
   components: {
     Layout,
-    CodeBlock,
     CompDescription,
   },
   data() {

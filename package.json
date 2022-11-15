@@ -21,7 +21,7 @@
   "scripts": {
     "dev": "vite",
     "build:lib": "vite build --config vite-lib.config.js",
-    "build": "vite build",
+    "build:web": "vite build",
     "preview": "vite preview --port 5050",
     "test:unit": "vitest",
     "coverage": "vitest run --coverage",

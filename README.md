@@ -27,10 +27,16 @@ npm install
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Compile and Build documentation website
 
 ```sh
-npm run build
+npm run build:web
+```
+
+### Compile and Build component library
+
+```sh
+npm run build:lib
 ```
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)

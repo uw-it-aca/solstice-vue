@@ -19,7 +19,7 @@ COPY --chown=acait:acait public /app/public
 RUN . /app/bin/activate &&\
     npm install --production &&\
     npm install vite &&\
-    npm run build
+    npm run build:web
 
 
 FROM pre-app-container as app-container

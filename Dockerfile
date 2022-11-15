@@ -19,6 +19,7 @@ COPY --chown=acait:acait public /app/public
 RUN . /app/bin/activate &&\
     npm install --production &&\
     npm install vite &&\
+    npm run build:lib &&\
     npm run build:web
 
 

@@ -7,7 +7,7 @@
         :user-official-name="userOfficial"
         :user-preferred-name="userPreferred"
         :profile-url="'https://identity.uw.edu'"
-        :signout-url="signoutUrl"
+        :sign-out-url="signOutUrl"
       ></axdd-profile>
     </template>
 
@@ -103,15 +103,9 @@
 </template>
 
 <script>
-import SideBar from "../../../_layouts/sidebar.vue";
-import Profile from "../../../_components/profile.vue";
-
 export default {
-  name: "DocsDevelopmentSidebarIndex",
-  components: {
-    "axdd-sidebar": SideBar,
-    "axdd-profile": Profile,
-  },
+  name: "DocsSandboxSidebarIndex",
+  components: {},
   props: {},
   data: function () {
     return {

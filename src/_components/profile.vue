@@ -65,7 +65,7 @@
 
 <script>
 export default {
-  name: "ProfileComp",
+  name: "axdd-profile",
   props: {
     variant: {
       type: String,

@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  name: "DisclosureAction",
+  name: "axdd-disclosure-action",
   props: {
     disclosureId: {
       // must match tab panelId

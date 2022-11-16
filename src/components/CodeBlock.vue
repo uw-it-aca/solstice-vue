@@ -1,23 +1,18 @@
 <template>
-  <div class="mb-5">
+  <div class="mb-3">
     <div v-if="$slots['preview']">
-      <p class="h6 text-secondary">Preview</p>
-      <div
-        class="preview border border-gray rounded-3 p-4 mb-3 axdd-font-open-sans"
-      >
+      <div class="preview mb-3 axdd-font-open-sans">
         <slot name="preview"></slot>
       </div>
     </div>
 
     <div v-if="$slots['markup']">
-      <p class="h6 text-secondary">Markup</p>
       <div class="p-0 small mb-3">
         <slot name="markup"></slot>
       </div>
     </div>
 
     <div v-if="$slots['script']">
-      <p class="h6 text-secondary">Script</p>
       <div class="p-0 small mb-3">
         <slot name="script"></slot>
       </div>
@@ -28,6 +23,7 @@
 <script>
 import Prism from "prismjs";
 import "prismjs/components/prism-javascript";
+import "prismjs/components/prism-json";
 import "prismjs/components/prism-markup-templating";
 import "prismjs/components/prism-scss";
 import "prismjs/themes/prism-tomorrow.css";

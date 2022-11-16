@@ -20,13 +20,9 @@
 </template>
 
 <script>
-import SideBar from "../../../_layouts/sidebar.vue";
-
 export default {
-  name: "DocsDevelopmentGradepageIndex",
-  components: {
-    "axdd-sidebar": SideBar,
-  },
+  name: "DocsSandboxGradepageIndex",
+  components: {},
   data: function () {
     return {
       // minimum application setup overrides
@@ -34,7 +30,6 @@ export default {
       appRootUrl: "/sandbox/gradepage/",
       userName: "javerage",
       signOutUrl: "/signout",
-      //
       pageTitle: "Online Grade Submission",
     };
   },

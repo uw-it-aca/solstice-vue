@@ -220,20 +220,11 @@ export default {
 import Layout from "../../layout.vue";
 import CodeBlock from "../../components/CodeBlock.vue";
 
-import TabsList from "../../_components/tabs/list.vue";
-import TabsDisplay from "../../_components/tabs/display.vue";
-import TabsItem from "../../_components/tabs/item.vue";
-import TabsPanel from "../../_components/tabs/panel.vue";
-
 export default {
-  name: "DocsComponentsTabs",
+  name: "DocsPatternsTabs",
   components: {
     Layout,
     CodeBlock,
-    "axdd-tabs-list": TabsList,
-    "axdd-tabs-display": TabsDisplay,
-    "axdd-tabs-item": TabsItem,
-    "axdd-tabs-panel": TabsPanel,
   },
   data() {
     return {};

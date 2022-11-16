@@ -13,6 +13,9 @@ export default defineConfig({
       exclude: ["_*.vue"],
     }),
   ],
+  build: {
+    emptyOutDir: false, // set to false to ensure axdd-components modules are not overridden
+  },
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),

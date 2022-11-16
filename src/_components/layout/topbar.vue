@@ -4,26 +4,16 @@
     class="d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"
   >
     <header class="w-100">
-      <div
-        v-if="$slots['profile']"
-        class="bg-dark-purple text-white py-2 small"
-      >
+      <div v-if="$slots.profile" class="bg-dark-purple text-white py-2 small">
         <div class="container-xl">
-          <slot name="profile">
-            <div class="d-flex">
-              <div class="flex-fill">username</div>
-              <div class="flex-fill text-end">
-                <a :href="signOutUrl" class="text-white">Sign out</a>
-              </div>
-            </div>
-          </slot>
+          <slot name="profile">Welcome!</slot>
         </div>
       </div>
 
       <div class="bg-purple axdd-topbar-brand">
         <div class="container-xl axdd-topbar-logo">
           <a
-            v-if="$slots['navigation']"
+            v-if="$slots.navigation"
             class="btn btn-link btn-sm d-xl-none border border-2 rounded-3 py-0 px-1 text-white me-2"
             data-bs-toggle="collapse"
             data-bs-target="#topbar-nav-collapse"
@@ -47,44 +37,29 @@
         </div>
       </div>
 
-      <div v-if="$slots['bar'] && mq.xlPlus" class="w-100">
-        <slot name="bar">
-          <div class="bg-gray">
-            <div class="container-xl">
-              <div class="col-12 py-2 text-center">
-                default gray bar (desktop)
-              </div>
-            </div>
-          </div>
-        </slot>
+      <div v-if="$slots.bar && mq.xlPlus" class="w-100">
+        <slot name="bar"></slot>
       </div>
     </header>
 
     <div class="w-100 flex-fill">
       <div class="container-xl">
         <div class="row">
-          <div class="col-lg-3">
+          <div v-if="$slots.navigation || $slots.aside" class="col-lg-3">
             <div
               id="topbar-nav-collapse"
               :class="[!mq.xlPlus ? 'collapse' : 'collapse.show']"
             >
               <!-- main topbar navigation -->
-              <nav v-if="$slots['navigation']" role="navigation">
-                <slot name="navigation">
-                  <ul class="text-dark">
-                    <li>nav 1</li>
-                    <li>nav 2</li>
-                    <li>nav 3</li>
-                    <li>nav 4</li>
-                  </ul>
-                </slot>
+              <nav role="navigation">
+                <slot name="navigation"></slot>
               </nav>
               <aside v-if="$slots['aside']">
                 <slot name="aside">this is aside content</slot>
               </aside>
             </div>
           </div>
-          <div v-if="$slots['bar'] && !mq.xlPlus" class="w-100 p-0 m-0">
+          <div v-if="$slots.bar && !mq.xlPlus" class="w-100 p-0 m-0">
             <slot name="bar">
               <div class="bg-gray">
                 <div class="container-xl">
@@ -95,7 +70,7 @@
               </div>
             </slot>
           </div>
-          <div :class="$slots['navigation'] ? 'col-lg-9' : 'col-lg-12'">
+          <div :class="$slots.navigation ? 'col-lg-9' : 'col-lg-12'">
             <main>
               <slot name="main">
                 <div style="outline: dashed 1px lightgray">
@@ -114,50 +89,43 @@
         </div>
       </div>
     </div>
-    <footer v-if="$slots['footer']" class="w-100 mt-auto">
-      <slot name="footer">
-        <div class="bg-dark">
-          <div class="container-xl">
-            <div class="text-white font-weight-light py-3 small">
+    <footer class="w-100">
+      <div v-if="$slots.footer" class="bg-dark text-white py-2 small">
+        <div class="container-xl">
+          <slot name="footer">
+            <div class="text-white font-weight-light py-3">
               <ul class="list-inline m-0">
-                <li class="list-inline-item"><a href="#">Contact</a></li>
-                <li class="list-inline-item"><a href="#">Terms</a></li>
-                <li class="list-inline-item"><a href="#">Privacy</a></li>
+                <li class="list-inline-item">
+                  <a href="http://www.washington.edu/online/privacy/"
+                    >Privacy</a
+                  >
+                </li>
+                <li class="list-inline-item">
+                  <a href="http://www.washington.edu/online/terms/">Terms</a>
+                </li>
               </ul>
               <div>
                 Copyright &copy; {{ new Date().getFullYear() }} University of
                 Washington
               </div>
             </div>
-          </div>
+          </slot>
         </div>
-      </slot>
+      </div>
     </footer>
   </div>
 </template>
 
 <script>
 export default {
-  name: "TopbarLayout",
+  name: "axdd-topbar",
   inject: ["mq"],
   props: {
     appName: {
       type: String,
       default: "appName",
     },
-    pageTitle: {
-      type: String,
-      default: "pageTitle",
-    },
-    userName: {
-      type: String,
-      default: "userName",
-    },
     appRootUrl: {
-      type: String,
-      default: "#",
-    },
-    signOutUrl: {
       type: String,
       default: "#",
     },
@@ -172,7 +140,7 @@ export default {
   },
   created: function () {
     // constructs page title in the following format "Page Title - AppName"
-    //document.title = this.pageTitle + " - " + this.appName;
+    // document.title = this.pageTitle + " - " + this.appName;
   },
 };
 </script>
@@ -187,7 +155,7 @@ export default {
 }
 
 .axdd-topbar-logo {
-  background-image: url("../assets/images/w-logo-white.png");
+  background-image: url("../../assets/images/w-logo-white.png");
   background-repeat: no-repeat;
   background-size: 45px;
   background-position: right 20px bottom;

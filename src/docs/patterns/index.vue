@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <template #content>
-      <h1>Patterns</h1>
+      <h1 class="fw-bold">Patterns</h1>
 
       <p class="p-0 col-md-8 lead">
         Patterns are the re-usable UI components that fall on the more complex
@@ -13,13 +13,13 @@
 
       <ul class="row list-unstyled">
         <li class="col-4">
-          <CompDescription
-            :name="'Layouts'"
-            :link="'/patterns/layouts'"
-            :accessibility="true"
+          <PatternDescription
+            :name="'Layout'"
+            :link="'/patterns/layout'"
+            class="alert-beige"
           >
             <p>aasdflkjasdlkfj lksadjf alsfdkj</p>
-          </CompDescription>
+          </PatternDescription>
         </li>
         <li class="col-4">
           <CompDescription :name="'Navigation'"></CompDescription>
@@ -62,12 +62,14 @@
 <script>
 import Layout from "../../layout.vue";
 import CompDescription from "../../components/CompDescription.vue";
+import PatternDescription from "../../components/PatternDescription.vue";
 
 export default {
-  name: "DocsComponentsIndex",
+  name: "DocsPatternsIndex",
   components: {
     Layout,
     CompDescription,
+    PatternDescription,
   },
   data() {
     return {};

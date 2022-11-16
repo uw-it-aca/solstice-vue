@@ -33,7 +33,7 @@
 
 <script>
 export default {
-  name: "DisclosureBlock",
+  name: "axdd-disclosure-block",
   props: {
     blockId: {
       type: [String, Number],

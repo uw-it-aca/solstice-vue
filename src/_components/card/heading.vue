@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: "CardHeading",
+  name: "axdd-card-heading",
   props: {
     level: {
       type: Number,

@@ -59,7 +59,7 @@
 
 <script>
 export default {
-  name: "TabsItem",
+  name: "axdd-tabs-item",
   props: {
     variant: {
       type: String,

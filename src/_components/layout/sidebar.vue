@@ -1,18 +1,19 @@
 <template>
   <div
     :class="[!mq.mdMinus ? 'd-flex vh-100' : '']"
-    class="axdd-font-open-sans"
+    class="axdd-font-open-sans axdd-sidebar"
     :style="[isPreview ? 'min-height: auto !important;' : '']"
   >
     <div
       :class="[!mq.mdMinus ? 'overflow-auto' : '']"
-      class="d-flex flex-column bg-purple axdd-sidebar"
+      class="d-flex flex-column"
       :style="[!mq.mdMinus ? 'min-width: 280px; max-width:280px;' : '']"
     >
       <header>
         <div
           v-if="$slots['profile']"
-          class="bg-dark-purple text-white py-2 px-3 small"
+          class="py-2 px-3 small bg-opaque"
+          :class="[variant === 'dark' ? 'text-white' : 'text-dark']"
         >
           <slot name="profile">
             <div class="d-flex">
@@ -48,7 +49,8 @@
           >
             <a
               :href="appRootUrl"
-              class="axdd-font-encode-sans text-white text-decoration-none"
+              class="axdd-font-encode-sans text-decoration-none"
+              :class="[variant === 'dark' ? 'text-white' : 'text-dark']"
             >
               {{ appName }}
             </a>
@@ -62,7 +64,11 @@
           :class="[!mq.mdMinus ? 'collapse.show' : 'collapse']"
         >
           <!-- main sidebar navigation -->
-          <nav v-if="$slots['navigation']" role="navigation">
+          <nav
+            v-if="$slots['navigation']"
+            role="navigation"
+            :class="[variant === 'dark' ? 'text-white' : 'text-dark']"
+          >
             <slot name="navigation">
               <ul class="text-white">
                 <li>nav 1</li>
@@ -72,7 +78,10 @@
               </ul>
             </slot>
           </nav>
-          <aside v-if="$slots['aside']">
+          <aside
+            v-if="$slots['aside']"
+            :class="[variant === 'dark' ? 'text-white' : 'text-dark']"
+          >
             <slot name="aside">this is aside content</slot>
           </aside>
         </div>
@@ -80,7 +89,10 @@
       <div class="axdd-sidebar-logo">&nbsp;</div>
     </div>
 
-    <div :class="[!mq.mdMinus ? 'flex-fill overflow-auto' : '']">
+    <div
+      :class="[!mq.mdMinus ? 'flex-fill overflow-auto' : '']"
+      class="bg-white"
+    >
       <div
         :class="[!isPreview ? 'min-vh-100' : '']"
         class="container-xl d-flex flex-column"
@@ -150,6 +162,10 @@ export default {
     signOutUrl: {
       type: String,
       default: "#",
+    },
+    variant: {
+      type: String,
+      default: "dark",
     },
     isPreview: {
       type: Boolean,

@@ -1,5 +1,5 @@
-import { openBlock as i, createElementBlock as l, createElementVNode as s, toDisplayString as h, createTextVNode as m, createCommentVNode as o, renderSlot as d, normalizeClass as c, pushScopeId as y, popScopeId as x, createBlock as $, resolveDynamicComponent as w, withCtx as k, withKeys as f, withModifiers as I, normalizeStyle as g, createStaticVNode as p } from "vue";
-const b = (e, a) => {
+import { openBlock as i, createElementBlock as l, createElementVNode as s, toDisplayString as h, createTextVNode as v, createCommentVNode as r, renderSlot as d, normalizeClass as o, pushScopeId as p, popScopeId as x, createBlock as $, resolveDynamicComponent as w, withCtx as k, withKeys as b, withModifiers as I, normalizeStyle as g, createStaticVNode as y } from "vue";
+const f = (e, a) => {
   const t = e.__vccOpts || e;
   for (const [u, _] of a)
     t[u] = _;
@@ -64,7 +64,7 @@ const b = (e, a) => {
 }, M = {
   key: 0,
   class: "small text-danger"
-}, j = /* @__PURE__ */ m(" overriding as "), D = /* @__PURE__ */ s("i", { class: "bi bi-arrow-right text-danger" }, null, -1), L = { class: "small" }, E = { class: "small" }, F = ["href"], K = ["href"], A = /* @__PURE__ */ s("a", { href: "sadkf" }, "sign out test", -1), R = {
+}, j = /* @__PURE__ */ v(" overriding as "), D = /* @__PURE__ */ s("i", { class: "bi bi-arrow-right text-danger" }, null, -1), L = { class: "small" }, E = { class: "small" }, F = ["href"], K = ["href"], A = /* @__PURE__ */ s("a", { href: "sadkf" }, "sign out test", -1), R = {
   key: 1,
   class: "d-flex"
 }, V = {
@@ -86,8 +86,8 @@ function Q(e, a, t, u, _, n) {
         t.userOverride ? (i(), l("p", M, [
           j,
           D,
-          m(" " + h(t.userOverride), 1)
-        ])) : o("", !0),
+          v(" " + h(t.userOverride), 1)
+        ])) : r("", !0),
         s("p", L, h(t.userOfficialName) + ", " + h(t.userPreferredName) + ", " + h(t.userPronouns), 1),
         s("p", E, [
           s("a", { href: t.profileUrl }, "go to profile", 8, F)
@@ -108,7 +108,7 @@ function Q(e, a, t, u, _, n) {
     t.userOverride ? (i(), l("div", V, [
       s("span", W, h(t.userNetid), 1),
       z,
-      m(" " + h(t.userOverride), 1)
+      v(" " + h(t.userOverride), 1)
     ])) : (i(), l("div", H, h(t.userNetid), 1)),
     s("div", Y, [
       t.signoutUrl ? d(e.$slots, "default", { key: 0 }, () => [
@@ -122,7 +122,7 @@ function Q(e, a, t, u, _, n) {
     ])
   ]));
 }
-const X = /* @__PURE__ */ b(N, [["render", Q]]);
+const X = /* @__PURE__ */ f(N, [["render", Q]]);
 const Z = {
   name: "axdd-disclosure-action",
   props: {
@@ -154,18 +154,18 @@ function ae(e, a, t, u, _, n) {
     d(e.$slots, "default", {}, void 0, !0)
   ], 8, ee)) : (i(), l("button", {
     key: 1,
-    class: c(["btn btn-beige", [t.hasIndicator ? "chevron" : ""]]),
+    class: o(["btn btn-beige", [t.hasIndicator ? "chevron" : ""]]),
     type: "button",
     "data-bs-toggle": "collapse",
     "data-bs-target": "#" + t.disclosureId,
     "aria-expanded": "false",
     "aria-controls": t.disclosureId
   }, [
-    t.hasIndicator ? (i(), l("i", se)) : o("", !0),
+    t.hasIndicator ? (i(), l("i", se)) : r("", !0),
     d(e.$slots, "default", {}, void 0, !0)
   ], 10, te));
 }
-const ne = /* @__PURE__ */ b(Z, [["render", ae], ["__scopeId", "data-v-4720c141"]]), ie = {
+const ne = /* @__PURE__ */ f(Z, [["render", ae], ["__scopeId", "data-v-4720c141"]]), ie = {
   name: "axdd-disclosure-panel",
   props: {
     disclosureId: {
@@ -182,7 +182,7 @@ function de(e, a, t, u, _, n) {
     d(e.$slots, "default")
   ], 8, le);
 }
-const oe = /* @__PURE__ */ b(ie, [["render", de]]);
+const oe = /* @__PURE__ */ f(ie, [["render", de]]);
 const re = {
   name: "axdd-disclosure-block",
   props: {
@@ -195,14 +195,14 @@ const re = {
       required: !0
     }
   }
-}, ce = (e) => (y("data-v-7e2919d6"), e = e(), x(), e), ue = { class: "rounded-3 p-3 mb-2" }, _e = { class: "d-flex" }, he = {
+}, ce = (e) => (p("data-v-7e2919d6"), e = e(), x(), e), ue = { class: "rounded-3 p-3 mb-2" }, _e = { class: "d-flex" }, he = {
   class: "me-3",
   style: { width: "330px" }
-}, be = ["data-bs-target", "aria-controls"], fe = /* @__PURE__ */ ce(() => /* @__PURE__ */ s("i", {
+}, fe = ["data-bs-target", "aria-controls"], be = /* @__PURE__ */ ce(() => /* @__PURE__ */ s("i", {
   class: "bi bi-chevron-right mx-2",
   "aria-hidden": "true"
-}, null, -1)), me = ["id"], ve = { class: "flex-fill" }, ge = ["id", "aria-labelledby"];
-function pe(e, a, t, u, _, n) {
+}, null, -1)), ve = ["id"], me = { class: "flex-fill" }, ge = ["id", "aria-labelledby"];
+function ye(e, a, t, u, _, n) {
   return i(), l("div", ue, [
     s("div", _e, [
       s("div", he, [
@@ -215,14 +215,14 @@ function pe(e, a, t, u, _, n) {
           "aria-expanded": "false",
           "aria-controls": t.blockId + "-panel"
         }, [
-          fe,
+          be,
           s("span", {
             class: "fw-bold",
             id: t.blockId + "-heading"
-          }, h(t.blockTitle), 9, me)
-        ], 8, be)
+          }, h(t.blockTitle), 9, ve)
+        ], 8, fe)
       ]),
-      s("div", ve, [
+      s("div", me, [
         d(e.$slots, "header", {}, void 0, !0)
       ])
     ]),
@@ -235,7 +235,7 @@ function pe(e, a, t, u, _, n) {
     ], 8, ge)
   ]);
 }
-const ye = /* @__PURE__ */ b(re, [["render", pe], ["__scopeId", "data-v-7e2919d6"]]), xe = {
+const pe = /* @__PURE__ */ f(re, [["render", ye], ["__scopeId", "data-v-7e2919d6"]]), xe = {
   name: "axdd-card",
   data: function() {
     return {};
@@ -257,19 +257,19 @@ function Se(e, a, t, u, _, n) {
   return i(), l("div", $e, [
     e.$slots.heading ? (i(), l("div", we, [
       d(e.$slots, "heading")
-    ])) : o("", !0),
+    ])) : r("", !0),
     e.$slots["heading-action"] ? (i(), l("div", ke, [
       d(e.$slots, "heading-action")
-    ])) : o("", !0),
+    ])) : r("", !0),
     e.$slots.body ? (i(), l("div", Ie, [
       d(e.$slots, "body")
-    ])) : o("", !0),
+    ])) : r("", !0),
     e.$slots.footer ? (i(), l("div", Ne, [
       d(e.$slots, "footer")
-    ])) : o("", !0)
+    ])) : r("", !0)
   ]);
 }
-const qe = /* @__PURE__ */ b(xe, [["render", Se]]), Pe = {
+const qe = /* @__PURE__ */ f(xe, [["render", Se]]), Pe = {
   name: "axdd-card-heading",
   props: {
     level: {
@@ -294,7 +294,7 @@ function Te(e, a, t, u, _, n) {
     _: 3
   });
 }
-const Ce = /* @__PURE__ */ b(Pe, [["render", Te]]), Oe = {
+const Ce = /* @__PURE__ */ f(Pe, [["render", Te]]), Oe = {
   name: "axdd-card-action",
   data: function() {
     return {};
@@ -305,7 +305,7 @@ function Be(e, a, t, u, _, n) {
     d(e.$slots, "default")
   ]);
 }
-const Ue = /* @__PURE__ */ b(Oe, [["render", Be]]), Me = {
+const Ue = /* @__PURE__ */ f(Oe, [["render", Be]]), Me = {
   name: "axdd-card-tabs",
   data: function() {
     return {};
@@ -316,7 +316,7 @@ function je(e, a, t, u, _, n) {
     d(e.$slots, "default")
   ]);
 }
-const De = /* @__PURE__ */ b(Me, [["render", je]]);
+const De = /* @__PURE__ */ f(Me, [["render", je]]);
 const Le = {
   name: "axdd-tabs-list",
   props: {
@@ -341,14 +341,14 @@ function Ke(e, a, t, u, _, n) {
     d(e.$slots, "items")
   ], 8, Ee)) : t.variant == "pills" ? (i(), l("ul", {
     key: 1,
-    class: c(["bg-light gap-1 rounded-3 p-1", "nav nav-" + t.variant]),
+    class: o(["bg-light gap-1 rounded-3 p-1", "nav nav-" + t.variant]),
     id: t.tabsId,
     role: "tablist"
   }, [
     d(e.$slots, "items")
-  ], 10, Fe)) : o("", !0);
+  ], 10, Fe)) : r("", !0);
 }
-const Ae = /* @__PURE__ */ b(Le, [["render", Ke]]), Re = {
+const Ae = /* @__PURE__ */ f(Le, [["render", Ke]]), Re = {
   name: "axdd-tabs-display",
   props: {
     tabsId: {
@@ -365,7 +365,7 @@ function We(e, a, t, u, _, n) {
     d(e.$slots, "panels")
   ], 8, Ve);
 }
-const ze = /* @__PURE__ */ b(Re, [["render", We]]), He = {
+const ze = /* @__PURE__ */ f(Re, [["render", We]]), He = {
   name: "axdd-tabs-item",
   props: {
     variant: {
@@ -425,7 +425,7 @@ function Xe(e, a, t, u, _, n) {
   return i(), l("li", Ye, [
     t.variant == "lines" ? (i(), l("button", {
       key: 0,
-      class: c(["nav-lines-link text-secondary border-bottom border-white border-4 p-3", n.classObject]),
+      class: o(["nav-lines-link text-secondary border-bottom border-white border-4 p-3", n.classObject]),
       tabindex: [t.activeTab ? "0" : "-1"],
       id: t.panelId + "-tab",
       "data-bs-toggle": "tab",
@@ -435,15 +435,15 @@ function Xe(e, a, t, u, _, n) {
       "aria-controls": t.panelId,
       "aria-selected": t.activeTab,
       onKeydown: [
-        a[0] || (a[0] = f((...r) => n.moveNext && n.moveNext(...r), ["right"])),
-        a[1] || (a[1] = f((...r) => n.movePrev && n.movePrev(...r), ["left"]))
+        a[0] || (a[0] = b((...c) => n.moveNext && n.moveNext(...c), ["right"])),
+        a[1] || (a[1] = b((...c) => n.movePrev && n.movePrev(...c), ["left"]))
       ],
-      onClick: a[2] || (a[2] = (...r) => n.onClick && n.onClick(...r))
+      onClick: a[2] || (a[2] = (...c) => n.onClick && n.onClick(...c))
     }, [
       d(e.$slots, "default")
     ], 42, Ge)) : t.variant == "pills" ? (i(), l("button", {
       key: 1,
-      class: c(["nav-pills-link rounded-3 px-3 py-2", n.classObject]),
+      class: o(["nav-pills-link rounded-3 px-3 py-2", n.classObject]),
       tabindex: [t.activeTab ? "0" : "-1"],
       id: t.panelId + "-tab",
       "data-bs-toggle": "tab",
@@ -453,15 +453,15 @@ function Xe(e, a, t, u, _, n) {
       "aria-controls": t.panelId,
       "aria-selected": t.activeTab,
       onKeydown: [
-        a[3] || (a[3] = f((...r) => n.moveNext && n.moveNext(...r), ["right"])),
-        a[4] || (a[4] = f((...r) => n.movePrev && n.movePrev(...r), ["left"]))
+        a[3] || (a[3] = b((...c) => n.moveNext && n.moveNext(...c), ["right"])),
+        a[4] || (a[4] = b((...c) => n.movePrev && n.movePrev(...c), ["left"]))
       ],
-      onClick: a[5] || (a[5] = (...r) => n.onClick && n.onClick(...r))
+      onClick: a[5] || (a[5] = (...c) => n.onClick && n.onClick(...c))
     }, [
       d(e.$slots, "default")
     ], 42, Je)) : (i(), l("button", {
       key: 2,
-      class: c(["nav-link", n.classObject]),
+      class: o(["nav-link", n.classObject]),
       tabindex: [t.activeTab ? "0" : "-1"],
       id: t.panelId + "-tab",
       "data-bs-toggle": "tab",
@@ -471,16 +471,16 @@ function Xe(e, a, t, u, _, n) {
       "aria-controls": t.panelId,
       "aria-selected": t.activeTab,
       onKeydown: [
-        a[6] || (a[6] = f((...r) => n.moveNext && n.moveNext(...r), ["right"])),
-        a[7] || (a[7] = f((...r) => n.movePrev && n.movePrev(...r), ["left"]))
+        a[6] || (a[6] = b((...c) => n.moveNext && n.moveNext(...c), ["right"])),
+        a[7] || (a[7] = b((...c) => n.movePrev && n.movePrev(...c), ["left"]))
       ],
-      onClick: a[8] || (a[8] = (...r) => n.onClick && n.onClick(...r))
+      onClick: a[8] || (a[8] = (...c) => n.onClick && n.onClick(...c))
     }, [
       d(e.$slots, "default")
     ], 42, Qe))
   ]);
 }
-const Ze = /* @__PURE__ */ b(He, [["render", Xe]]), et = {
+const Ze = /* @__PURE__ */ f(He, [["render", Xe]]), et = {
   name: "axdd-tabs-panel",
   props: {
     panelId: {
@@ -500,17 +500,17 @@ const Ze = /* @__PURE__ */ b(He, [["render", Xe]]), et = {
 }, tt = ["id", "aria-labelledby"];
 function st(e, a, t, u, _, n) {
   return i(), l("div", {
-    class: c(["tab-pane fade", { "show active": t.activePanel }]),
+    class: o(["tab-pane fade", { "show active": t.activePanel }]),
     id: t.panelId,
     role: "tabpanel",
     "aria-labelledby": t.panelId + "-tab",
     tabindex: "0",
-    onKeydown: a[0] || (a[0] = f(I((...r) => n.setFocus && n.setFocus(...r), ["shift", "prevent"]), ["tab"]))
+    onKeydown: a[0] || (a[0] = b(I((...c) => n.setFocus && n.setFocus(...c), ["shift", "prevent"]), ["tab"]))
   }, [
     d(e.$slots, "default")
   ], 42, tt);
 }
-const at = /* @__PURE__ */ b(et, [["render", st]]);
+const at = /* @__PURE__ */ f(et, [["render", st]]);
 const nt = {
   name: "axdd-sidebar",
   inject: ["mq"],
@@ -535,6 +535,10 @@ const nt = {
       type: String,
       default: "#"
     },
+    variant: {
+      type: String,
+      default: "dark"
+    },
     isPreview: {
       type: Boolean,
       default: !1
@@ -542,10 +546,7 @@ const nt = {
   },
   created: function() {
   }
-}, it = {
-  key: 0,
-  class: "bg-dark-purple text-white py-2 px-3 small"
-}, lt = { class: "d-flex" }, dt = /* @__PURE__ */ s("div", { class: "flex-fill" }, "username", -1), ot = { class: "flex-fill text-end" }, rt = ["href"], ct = {
+}, it = { class: "d-flex" }, lt = /* @__PURE__ */ s("div", { class: "flex-fill" }, "username", -1), dt = { class: "flex-fill text-end" }, ot = ["href"], rt = {
   key: 0,
   class: "btn btn-link btn-sm d-lg-none border border-2 rounded-3 py-0 px-1 text-white me-2",
   "data-bs-toggle": "collapse",
@@ -554,111 +555,118 @@ const nt = {
   "aria-expanded": "false",
   "aria-controls": "sidebar-nav-collapse",
   "aria-label": "Toggle Navigation Menu"
-}, ut = /* @__PURE__ */ s("i", { class: "bi bi-list fw-bold text-white fs-6" }, null, -1), _t = [
-  ut
-], ht = ["href"], bt = { class: "flex-fill" }, ft = {
-  key: 0,
-  role: "navigation"
-}, mt = /* @__PURE__ */ s("ul", { class: "text-white" }, [
+}, ct = /* @__PURE__ */ s("i", { class: "bi bi-list fw-bold text-white fs-6" }, null, -1), ut = [
+  ct
+], _t = ["href"], ht = { class: "flex-fill" }, ft = /* @__PURE__ */ s("ul", { class: "text-white" }, [
   /* @__PURE__ */ s("li", null, "nav 1"),
   /* @__PURE__ */ s("li", null, "nav 2"),
   /* @__PURE__ */ s("li", null, "nav 3"),
   /* @__PURE__ */ s("li", null, "nav 4")
-], -1), vt = { key: 1 }, gt = /* @__PURE__ */ m("this is aside content"), pt = /* @__PURE__ */ s("div", { class: "axdd-sidebar-logo" }, "\xA0", -1), yt = {
+], -1), bt = /* @__PURE__ */ v("this is aside content"), vt = /* @__PURE__ */ s("div", { class: "axdd-sidebar-logo" }, "\xA0", -1), mt = {
   key: 0,
   class: "row"
-}, xt = /* @__PURE__ */ s("div", { class: "col my-3" }, [
+}, gt = /* @__PURE__ */ s("div", { class: "col my-3" }, [
   /* @__PURE__ */ s("div", { class: "bg-gray py-2 text-center" }, " default gray bar (default) ")
-], -1), $t = { class: "flex-fill" }, wt = {
+], -1), yt = { class: "flex-fill" }, pt = {
   key: 1,
   class: "mt-auto"
-}, kt = { class: "font-weight-light py-3 small" }, It = /* @__PURE__ */ p('<ul class="list-inline m-0"><ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/">Terms</a></li></ul></ul>', 1);
-function Nt(e, a, t, u, _, n) {
+}, xt = { class: "font-weight-light py-3 small" }, $t = /* @__PURE__ */ y('<ul class="list-inline m-0"><ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/">Terms</a></li></ul></ul>', 1);
+function wt(e, a, t, u, _, n) {
   return i(), l("div", {
-    class: c([[n.mq.mdMinus ? "" : "d-flex vh-100"], "axdd-font-open-sans"]),
+    class: o([[n.mq.mdMinus ? "" : "d-flex vh-100"], "axdd-font-open-sans axdd-sidebar"]),
     style: g([t.isPreview ? "min-height: auto !important;" : ""])
   }, [
     s("div", {
-      class: c([[n.mq.mdMinus ? "" : "overflow-auto"], "d-flex flex-column bg-purple axdd-sidebar"]),
+      class: o([[n.mq.mdMinus ? "" : "overflow-auto"], "d-flex flex-column"]),
       style: g([n.mq.mdMinus ? "" : "min-width: 280px; max-width:280px;"])
     }, [
       s("header", null, [
-        e.$slots.profile ? (i(), l("div", it, [
+        e.$slots.profile ? (i(), l("div", {
+          key: 0,
+          class: o(["py-2 px-3 small bg-opaque", [t.variant === "dark" ? "text-white" : "text-dark"]])
+        }, [
           d(e.$slots, "profile", {}, () => [
-            s("div", lt, [
-              dt,
-              s("div", ot, [
+            s("div", it, [
+              lt,
+              s("div", dt, [
                 s("a", {
                   href: t.signOutUrl,
                   class: "text-white"
-                }, "Sign out", 8, rt)
+                }, "Sign out", 8, ot)
               ])
             ])
           ])
-        ])) : o("", !0),
+        ], 2)) : r("", !0),
         s("div", {
-          class: c([[
+          class: o([[
             n.mq.lgMinus ? "axdd-sidebar-brand-sm" : "axdd-sidebar-brand"
           ], "px-3"])
         }, [
-          e.$slots.navigation ? (i(), l("a", ct, _t)) : o("", !0),
+          e.$slots.navigation ? (i(), l("a", rt, ut)) : r("", !0),
           s("div", {
-            class: c(["d-inline align-middle text-white", [n.mq.mdPlus ? "h2" : "h3"]])
+            class: o(["d-inline align-middle text-white", [n.mq.mdPlus ? "h2" : "h3"]])
           }, [
             s("a", {
               href: t.appRootUrl,
-              class: "axdd-font-encode-sans text-white text-decoration-none"
-            }, h(t.appName), 9, ht)
+              class: o(["axdd-font-encode-sans text-decoration-none", [t.variant === "dark" ? "text-white" : "text-dark"]])
+            }, h(t.appName), 11, _t)
           ], 2)
         ], 2)
       ]),
-      s("div", bt, [
+      s("div", ht, [
         s("div", {
           id: "sidebar-nav-collapse",
-          class: c(["px-3", [n.mq.mdMinus ? "collapse" : "collapse.show"]])
+          class: o(["px-3", [n.mq.mdMinus ? "collapse" : "collapse.show"]])
         }, [
-          e.$slots.navigation ? (i(), l("nav", ft, [
+          e.$slots.navigation ? (i(), l("nav", {
+            key: 0,
+            role: "navigation",
+            class: o([t.variant === "dark" ? "text-white" : "text-dark"])
+          }, [
             d(e.$slots, "navigation", {}, () => [
-              mt
+              ft
             ])
-          ])) : o("", !0),
-          e.$slots.aside ? (i(), l("aside", vt, [
+          ], 2)) : r("", !0),
+          e.$slots.aside ? (i(), l("aside", {
+            key: 1,
+            class: o([t.variant === "dark" ? "text-white" : "text-dark"])
+          }, [
             d(e.$slots, "aside", {}, () => [
-              gt
+              bt
             ])
-          ])) : o("", !0)
+          ], 2)) : r("", !0)
         ], 2)
       ]),
-      pt
+      vt
     ], 6),
     s("div", {
-      class: c([n.mq.mdMinus ? "" : "flex-fill overflow-auto"])
+      class: o([[n.mq.mdMinus ? "" : "flex-fill overflow-auto"], "bg-white"])
     }, [
       s("div", {
-        class: c([[t.isPreview ? "" : "min-vh-100"], "container-xl d-flex flex-column"])
+        class: o([[t.isPreview ? "" : "min-vh-100"], "container-xl d-flex flex-column"])
       }, [
-        e.$slots.bar ? (i(), l("div", yt, [
+        e.$slots.bar ? (i(), l("div", mt, [
           d(e.$slots, "bar", {}, () => [
-            xt
+            gt
           ])
-        ])) : o("", !0),
-        s("main", $t, [
+        ])) : r("", !0),
+        s("main", yt, [
           d(e.$slots, "main")
         ]),
-        e.$slots.footer ? (i(), l("footer", wt, [
+        e.$slots.footer ? (i(), l("footer", pt, [
           d(e.$slots, "footer", {}, () => [
-            s("div", kt, [
-              It,
+            s("div", xt, [
+              $t,
               s("div", null, " Copyright \xA9 " + h(new Date().getFullYear()) + " University of Washington ", 1)
             ])
           ])
-        ])) : o("", !0)
+        ])) : r("", !0)
       ], 2)
     ], 2)
   ], 6);
 }
-const St = /* @__PURE__ */ b(nt, [["render", Nt]]);
-const qt = {
+const kt = /* @__PURE__ */ f(nt, [["render", wt]]);
+const It = {
   name: "axdd-topbar",
   inject: ["mq"],
   props: {
@@ -681,10 +689,10 @@ const qt = {
   },
   created: function() {
   }
-}, Pt = { class: "w-100" }, Tt = {
+}, Nt = { class: "w-100" }, St = {
   key: 0,
   class: "bg-dark-purple text-white py-2 small"
-}, Ct = { class: "container-xl" }, Ot = /* @__PURE__ */ m("Welcome!"), Bt = { class: "bg-purple axdd-topbar-brand" }, Ut = { class: "container-xl axdd-topbar-logo" }, Mt = {
+}, qt = { class: "container-xl" }, Pt = /* @__PURE__ */ v("Welcome!"), Tt = { class: "bg-purple axdd-topbar-brand" }, Ct = { class: "container-xl axdd-topbar-logo" }, Ot = {
   key: 0,
   class: "btn btn-link btn-sm d-xl-none border border-2 rounded-3 py-0 px-1 text-white me-2",
   "data-bs-toggle": "collapse",
@@ -693,130 +701,130 @@ const qt = {
   "aria-expanded": "false",
   "aria-controls": "topbar-nav-collapse",
   "aria-label": "Toggle Navigation Menu"
-}, jt = /* @__PURE__ */ s("i", { class: "bi bi-list fw-bold text-white fs-6" }, null, -1), Dt = [
-  jt
-], Lt = ["href"], Et = {
+}, Bt = /* @__PURE__ */ s("i", { class: "bi bi-list fw-bold text-white fs-6" }, null, -1), Ut = [
+  Bt
+], Mt = ["href"], jt = {
   key: 1,
   class: "w-100"
-}, Ft = { class: "w-100 flex-fill" }, Kt = { class: "container-xl" }, At = { class: "row" }, Rt = {
+}, Dt = { class: "w-100 flex-fill" }, Lt = { class: "container-xl" }, Et = { class: "row" }, Ft = {
   key: 0,
   class: "col-lg-3"
-}, Vt = { role: "navigation" }, Wt = { key: 0 }, zt = /* @__PURE__ */ m("this is aside content"), Ht = {
+}, Kt = { role: "navigation" }, At = { key: 0 }, Rt = /* @__PURE__ */ v("this is aside content"), Vt = {
   key: 1,
   class: "w-100 p-0 m-0"
-}, Yt = /* @__PURE__ */ s("div", { class: "bg-gray" }, [
+}, Wt = /* @__PURE__ */ s("div", { class: "bg-gray" }, [
   /* @__PURE__ */ s("div", { class: "container-xl" }, [
     /* @__PURE__ */ s("div", { class: "col-12 py-2 text-center" }, " default gray bar (mobile) ")
   ])
-], -1), Gt = /* @__PURE__ */ s("div", { style: { outline: "dashed 1px lightgray" } }, [
+], -1), zt = /* @__PURE__ */ s("div", { style: { outline: "dashed 1px lightgray" } }, [
   /* @__PURE__ */ s("h1", null, "Hello world..."),
   /* @__PURE__ */ s("p", null, " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa. ")
-], -1), Jt = { class: "w-100" }, Qt = {
+], -1), Ht = { class: "w-100" }, Yt = {
   key: 0,
   class: "bg-dark text-white py-2 small"
-}, Xt = { class: "container-xl" }, Zt = { class: "text-white font-weight-light py-3" }, es = /* @__PURE__ */ p('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/">Terms</a></li></ul>', 1);
-function ts(e, a, t, u, _, n) {
+}, Gt = { class: "container-xl" }, Jt = { class: "text-white font-weight-light py-3" }, Qt = /* @__PURE__ */ y('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/">Terms</a></li></ul>', 1);
+function Xt(e, a, t, u, _, n) {
   return i(), l("div", {
-    class: c([[t.isPreview ? " " : "min-vh-100"], "d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"])
+    class: o([[t.isPreview ? " " : "min-vh-100"], "d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"])
   }, [
-    s("header", Pt, [
-      e.$slots.profile ? (i(), l("div", Tt, [
-        s("div", Ct, [
+    s("header", Nt, [
+      e.$slots.profile ? (i(), l("div", St, [
+        s("div", qt, [
           d(e.$slots, "profile", {}, () => [
-            Ot
+            Pt
           ])
         ])
-      ])) : o("", !0),
-      s("div", Bt, [
-        s("div", Ut, [
-          e.$slots.navigation ? (i(), l("a", Mt, Dt)) : o("", !0),
+      ])) : r("", !0),
+      s("div", Tt, [
+        s("div", Ct, [
+          e.$slots.navigation ? (i(), l("a", Ot, Ut)) : r("", !0),
           s("div", {
-            class: c(["d-inline align-middle text-white", [n.mq.xlPlus ? "h2" : "h3"]])
+            class: o(["d-inline align-middle text-white", [n.mq.xlPlus ? "h2" : "h3"]])
           }, [
             s("a", {
               href: t.appRootUrl,
               class: "axdd-font-encode-sans text-white text-decoration-none"
-            }, h(t.appName), 9, Lt)
+            }, h(t.appName), 9, Mt)
           ], 2)
         ])
       ]),
-      e.$slots.bar && n.mq.xlPlus ? (i(), l("div", Et, [
+      e.$slots.bar && n.mq.xlPlus ? (i(), l("div", jt, [
         d(e.$slots, "bar")
-      ])) : o("", !0)
+      ])) : r("", !0)
     ]),
-    s("div", Ft, [
-      s("div", Kt, [
-        s("div", At, [
-          e.$slots.navigation || e.$slots.aside ? (i(), l("div", Rt, [
+    s("div", Dt, [
+      s("div", Lt, [
+        s("div", Et, [
+          e.$slots.navigation || e.$slots.aside ? (i(), l("div", Ft, [
             s("div", {
               id: "topbar-nav-collapse",
-              class: c([n.mq.xlPlus ? "collapse.show" : "collapse"])
+              class: o([n.mq.xlPlus ? "collapse.show" : "collapse"])
             }, [
-              s("nav", Vt, [
+              s("nav", Kt, [
                 d(e.$slots, "navigation")
               ]),
-              e.$slots.aside ? (i(), l("aside", Wt, [
+              e.$slots.aside ? (i(), l("aside", At, [
                 d(e.$slots, "aside", {}, () => [
-                  zt
+                  Rt
                 ])
-              ])) : o("", !0)
+              ])) : r("", !0)
             ], 2)
-          ])) : o("", !0),
-          e.$slots.bar && !n.mq.xlPlus ? (i(), l("div", Ht, [
+          ])) : r("", !0),
+          e.$slots.bar && !n.mq.xlPlus ? (i(), l("div", Vt, [
             d(e.$slots, "bar", {}, () => [
-              Yt
+              Wt
             ])
-          ])) : o("", !0),
+          ])) : r("", !0),
           s("div", {
-            class: c(e.$slots.navigation ? "col-lg-9" : "col-lg-12")
+            class: o(e.$slots.navigation ? "col-lg-9" : "col-lg-12")
           }, [
             s("main", null, [
               d(e.$slots, "main", {}, () => [
-                Gt
+                zt
               ])
             ])
           ], 2)
         ])
       ])
     ]),
-    s("footer", Jt, [
-      e.$slots.footer ? (i(), l("div", Qt, [
-        s("div", Xt, [
+    s("footer", Ht, [
+      e.$slots.footer ? (i(), l("div", Yt, [
+        s("div", Gt, [
           d(e.$slots, "footer", {}, () => [
-            s("div", Zt, [
-              es,
+            s("div", Jt, [
+              Qt,
               s("div", null, " Copyright \xA9 " + h(new Date().getFullYear()) + " University of Washington ", 1)
             ])
           ])
         ])
-      ])) : o("", !0)
+      ])) : r("", !0)
     ])
   ], 2);
 }
-const ss = /* @__PURE__ */ b(qt, [["render", ts]]), v = {
+const Zt = /* @__PURE__ */ f(It, [["render", Xt]]), m = {
   Card: qe,
   CardHeading: Ce,
   CardAction: Ue,
   CardTabs: De,
   DisclosureAction: ne,
-  DisclosureBlock: ye,
+  DisclosureBlock: pe,
   DisclosurePanel: oe,
   Profile: X,
   TabsList: Ae,
   TabsDisplay: ze,
   TabsItem: Ze,
   TabsPanel: at,
-  Sidebar: St,
-  Topbar: ss
-}, ns = {
+  Sidebar: kt,
+  Topbar: Zt
+}, ts = {
   install(e) {
-    for (const a in v)
-      if (Object.prototype.hasOwnProperty.call(v, a)) {
-        const t = v[a];
+    for (const a in m)
+      if (Object.prototype.hasOwnProperty.call(m, a)) {
+        const t = m[a];
         e.component(t.name, t);
       }
   }
 };
 export {
-  ns as default
+  ts as default
 };

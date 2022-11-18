@@ -60,7 +60,7 @@ export default {
   transform: rotate(90deg);
 }
 
-.bi-chevron-right::before {
+.bi-chevron-right::after {
   font-weight: bolder !important;
 }
 </style>

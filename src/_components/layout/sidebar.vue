@@ -1,7 +1,7 @@
 <template>
   <div
     :class="[!mq.mdMinus ? 'd-flex vh-100' : '']"
-    class="axdd-font-open-sans axdd-sidebar"
+    class="axdd-sidebar"
     :style="[isPreview ? 'min-height: auto !important;' : '']"
   >
     <div
@@ -52,7 +52,9 @@
               class="axdd-font-encode-sans text-decoration-none"
               :class="[variant === 'dark' ? 'text-white' : 'text-dark']"
             >
-              {{ appName }}
+              <span v-if="$slots['logo']" class="me-2">
+                <slot name="logo"><i class="bi bi-box-fill"></i></slot> </span
+              >{{ appName }}
             </a>
           </div>
         </div>

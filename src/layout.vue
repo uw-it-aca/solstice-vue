@@ -5,53 +5,12 @@
     :app-root-url="'/'"
     class="bg-teal"
   >
-    <template #profile>v.1.0.6</template>
+    <template #profile>Latest: v.1.0.7</template>
+    <template #logo>
+      <i class="bi bi-box-fill"></i>
+    </template>
     <template #navigation>
-      <ul class="nav flex-column mb-5">
-        <li class="nav-item mb-1">
-          <router-link
-            class="nav-link rounded-3 me-1 bg-opaque-hover text-reset"
-            active-class="bg-opaque text-black"
-            to="/content/"
-            >Content</router-link
-          >
-        </li>
-        <li class="nav-item mb-1">
-          <router-link
-            class="nav-link rounded-3 me-1 bg-opaque-hover text-reset"
-            active-class="bg-opaque text-black"
-            to="/tokens/"
-            >Design Tokens</router-link
-          >
-        </li>
-        <li class="nav-item mb-1">
-          <router-link
-            class="nav-link rounded-3 me-1 bg-opaque-hover text-reset"
-            active-class="bg-opaque text-black"
-            to="/elements/"
-            >Elements</router-link
-          >
-        </li>
-        <li class="nav-item mb-1">
-          <router-link
-            class="nav-link rounded-3 bg-opaque-hover text-reset"
-            active-class="bg-opaque text-black"
-            to="/patterns/"
-            >Patterns</router-link
-          >
-        </li>
-        <li aria-hidden="true" class="nav-item mt-1 mb-2">
-          <a
-            href="#"
-            class="nav-link disabled text-dark d-block p-0 internal-link"
-            ><hr class="m-0 bg-gray" />
-            <span class="visually-hidden">Navigation separator</span></a
-          >
-        </li>
-      </ul>
-
       <NavMenu />
-
     </template>
     <template #aside>
       <div class="bg-opaque rounded-3 small p-3">

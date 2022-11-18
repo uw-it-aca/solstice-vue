@@ -103,6 +103,12 @@
             <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</td>
           </tr>
           <tr>
+            <th scope="row"><code>#logo</code></th>
+            <td>false</td>
+            <td>empty</td>
+            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</td>
+          </tr>
+          <tr>
             <th scope="row"><code>#main</code></th>
             <td>true</td>
             <td>empty</td>
@@ -123,7 +129,7 @@
         </tbody>
       </table>
 
-      <h3>Basic structure</h3>
+      <h3>Default</h3>
 
       <CodeBlock>
         <template #preview>
@@ -195,6 +201,45 @@
         <template #markup>
           <pre class="language-html rounded">
 <code>&lt;axdd-sidebar :app-name="'App Name'" :variant="'dark'" class="bg-primary">
+&lt;/axdd-sidebar>
+</code></pre>
+        </template>
+      </CodeBlock>
+
+      <h3>Logo Branding</h3>
+
+      <CodeBlock>
+        <template #preview>
+          <axdd-sidebar
+            :app-name="'SideBar'"
+            :user-name="'javerage'"
+            :is-preview="true"
+            class="border shadow-sm bg-success"
+          >
+            <template #profile> profile here... </template>
+            <template #logo><i class="bi bi-emoji-smile"></i></template>
+            <template #navigation> nav here... </template>
+            <template #main>
+              <div class="row">
+                <div class="col mt-3">
+                  <div
+                    class="bg-gray p-4 text-center"
+                    style="line-height: 250px"
+                  >
+                    content here...
+                  </div>
+                </div>
+              </div>
+            </template>
+            <template #footer></template>
+          </axdd-sidebar>
+        </template>
+        <template #markup>
+          <pre class="language-html rounded">
+<code>&lt;axdd-sidebar :app-name="'App Name'" :variant="'dark'" class="bg-primary">
+  &lt;template #logo>
+    &lt;i class="bi bi-emoji-smile">&lt;/i>
+  &lt;/template>
 &lt;/axdd-sidebar>
 </code></pre>
         </template>

@@ -1,95 +1,139 @@
 <template>
-  <ul
-    class="nav flex-column mb-5 accordion accordion-flush blah"
-    id="accordionFlushExample"
-  >
-    <li class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingOne">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseOne"
-          aria-expanded="false"
-          aria-controls="flush-collapseOne"
-        >
-          Accordion Item #1
-        </button>
-      </h2>
-      <div
-        id="flush-collapseOne"
-        class="accordion-collapse collapse"
-        aria-labelledby="flush-headingOne"
-        data-bs-parent="#accordionFlushExample"
+  <ul class="nav flex-column mb-5">
+    <li class="nav-item mb-1 position-relative">
+      <router-link
+        class="d-flex justify-content-between nav-link rounded-3 bg-opaque-hover text-reset"
+        active-class="bg-opaque text-black"
+        to="/start/"
       >
-        <div class="accordion-body">
-          Placeholder content for this accordion, which is intended to
-          demonstrate the <code>.accordion-flush</code> class. This is the first
-          item's accordion body.
+        <span>Getting Started</span>
+      </router-link>
+      <button
+        class="btn btn-link p-2 text-white chevron position-absolute top-0 end-0"
+        id="flush-heading2"
+        data-bs-toggle="collapse"
+        data-bs-target="#flush-collapse2"
+        :aria-expanded="$route.path.includes('/start') ? true : false"
+        aria-controls="flush-collapse2"
+      >
+        <i class="bi bi-chevron-right" aria-hidden="true"></i>
+      </button>
+      <div
+        id="flush-collapse2"
+        class="collapse"
+        :class="$route.path.includes('/start') ? 'show' : ''"
+        aria-labelledby="flush-heading2"
+      >
+        <ul class="ms-4 nav flex-column small mt-1">
+          <li class="nav-item mb-1">
+            <router-link
+              class="nav-link rounded-3 bg-opaque-hover text-gray"
+              active-class="bg-opaque text-black"
+              to="/start/developers"
+              >Developers</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link
+              class="nav-link rounded-3 bg-opaque-hover text-reset"
+              active-class="bg-opaque text-black"
+              to="/start/designers"
+              >Designers</router-link
+            >
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item mb-1">
+      <router-link
+        class="nav-link rounded-3 bg-opaque-hover text-reset"
+        active-class="bg-opaque text-black"
+        to="/content/"
+        >Content</router-link
+      >
+    </li>
+    <li class="nav-item mb-1">
+      <router-link
+        class="nav-link rounded-3 bg-opaque-hover text-reset"
+        active-class="bg-opaque text-black"
+        to="/tokens/"
+        >Design Tokens</router-link
+      >
+    </li>
+    <li class="nav-item mb-1">
+      <router-link
+        class="nav-link rounded-3 bg-opaque-hover text-reset"
+        active-class="bg-opaque text-black"
+        to="/elements/"
+        >Elements</router-link
+      >
+    </li>
+    <li class="nav-item mb-1">
+      <router-link
+        class="nav-link rounded-3 bg-opaque-hover text-reset"
+        active-class="bg-opaque text-black"
+        to="/patterns/"
+        >Patterns</router-link
+      >
+    </li>
+    <li class="nav-item mb-1">
+      <router-link
+        class="d-flex justify-content-between nav-link rounded-3 bg-opaque-hover text-reset chevron"
+        to="#"
+        id="flush-heading1"
+        data-bs-toggle="collapse"
+        data-bs-target="#flush-collapse1"
+        aria-expanded="false"
+        aria-controls="flush-collapse1"
+      >
+        <span>Accordion Item #1</span>
+        <i class="bi bi-chevron-right" aria-hidden="true"></i>
+      </router-link>
+      <div
+        id="flush-collapse1"
+        class="collapse"
+        aria-labelledby="flush-heading1"
+      >
+        <div class="px-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ipsam
+          repellat velit recusandae obcaecati facere quibusdam modi rem, ducimus
+          voluptates nobis? Excepturi, blanditiis dicta. Nostrum consequuntur
+          eius iure aut odit!
         </div>
       </div>
     </li>
-    <li class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingTwo">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseTwo"
-          aria-expanded="false"
-          aria-controls="flush-collapseTwo"
-        >
-          Accordion Item #2
-        </button>
-      </h2>
-      <div
-        id="flush-collapseTwo"
-        class="accordion-collapse collapse"
-        aria-labelledby="flush-headingTwo"
-        data-bs-parent="#accordionFlushExample"
+
+    <li aria-hidden="true" class="nav-item mt-1 mb-2">
+      <a href="#" class="nav-link disabled text-dark d-block p-0 internal-link"
+        ><hr class="m-0 bg-gray" />
+        <span class="visually-hidden">Navigation separator</span></a
       >
-        <div class="accordion-body">
-          Placeholder content for this accordion, which is intended to
-          demonstrate the <code>.accordion-flush</code> class. This is the
-          second item's accordion body. Let's imagine this being filled with
-          some actual content.
-        </div>
-      </div>
-    </li>
-    <li class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingThree">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseThree"
-          aria-expanded="false"
-          aria-controls="flush-collapseThree"
-        >
-          Accordion Item #3
-        </button>
-      </h2>
-      <div
-        id="flush-collapseThree"
-        class="accordion-collapse collapse"
-        aria-labelledby="flush-headingThree"
-        data-bs-parent="#accordionFlushExample"
-      >
-        <div class="accordion-body">
-          Placeholder content for this accordion, which is intended to
-          demonstrate the <code>.accordion-flush</code> class. This is the third
-          item's accordion body. Nothing more exciting happening here in terms
-          of content, but just filling up the space to make it look, at least at
-          first glance, a bit more representative of how this would look in a
-          real-world application.
-        </div>
-      </div>
     </li>
   </ul>
 </template>
 
-<style lang="scss">
-.blah {
-  background: none !important;
+<script>
+export default {
+  data() {
+    return {};
+  },
+};
+</script>
+
+
+<style lang="scss" scoped>
+.chevron i {
+  display: inline-block;
+  transition: transform 0.35s ease;
+  transform-origin: 0.5em 50%;
+  font-weight: bolder;
+}
+
+.chevron[aria-expanded="true"] i {
+  transform: rotate(90deg);
+}
+
+.bi-chevron-right::after {
+  font-weight: bolder !important;
 }
 </style>

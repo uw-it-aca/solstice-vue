@@ -2,32 +2,36 @@
   <ul class="nav flex-column mb-5">
     <li class="nav-item mb-1 position-relative">
       <router-link
-        class="d-flex justify-content-between nav-link rounded-3 bg-opaque-hover text-reset"
+        class="d-flex justify-content-between nav-link rounded-3 bg-opaque-hover text-reset chevron"
         active-class="bg-opaque text-black"
         to="/start/"
-      >
-        <span>Getting Started</span>
-      </router-link>
-      <button
-        class="btn btn-link p-2 text-white chevron position-absolute top-0 end-0"
         id="flush-heading2"
         data-bs-toggle="collapse"
         data-bs-target="#flush-collapse2"
         :aria-expanded="$route.path.includes('/start') ? true : false"
         aria-controls="flush-collapse2"
       >
+        <span>Getting Started</span>
         <i class="bi bi-chevron-right" aria-hidden="true"></i>
-      </button>
+      </router-link>
       <div
         id="flush-collapse2"
         class="collapse"
         :class="$route.path.includes('/start') ? 'show' : ''"
         aria-labelledby="flush-heading2"
       >
-        <ul class="ms-4 nav flex-column small mt-1">
+        <ul class="nav flex-column small fw-light mt-1">
           <li class="nav-item mb-1">
             <router-link
-              class="nav-link rounded-3 bg-opaque-hover text-gray"
+              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              active-class="bg-opaque text-black"
+              to="/start/principles"
+              >Principles</router-link
+            >
+          </li>
+          <li class="nav-item mb-1">
+            <router-link
+              class="nav-link rounded-3 bg-opaque-hover text-muted"
               active-class="bg-opaque text-black"
               to="/start/developers"
               >Developers</router-link
@@ -35,7 +39,7 @@
           </li>
           <li class="nav-item">
             <router-link
-              class="nav-link rounded-3 bg-opaque-hover text-reset"
+              class="nav-link rounded-3 bg-opaque-hover text-muted"
               active-class="bg-opaque text-black"
               to="/start/designers"
               >Designers</router-link
@@ -70,36 +74,82 @@
     </li>
     <li class="nav-item mb-1">
       <router-link
-        class="nav-link rounded-3 bg-opaque-hover text-reset"
+        class="d-flex justify-content-between nav-link rounded-3 bg-opaque-hover text-reset chevron"
         active-class="bg-opaque text-black"
         to="/patterns/"
-        >Patterns</router-link
-      >
-    </li>
-    <li class="nav-item mb-1">
-      <router-link
-        class="d-flex justify-content-between nav-link rounded-3 bg-opaque-hover text-reset chevron"
-        to="#"
         id="flush-heading1"
         data-bs-toggle="collapse"
         data-bs-target="#flush-collapse1"
-        aria-expanded="false"
+        :aria-expanded="$route.path.includes('/patterns') ? true : false"
         aria-controls="flush-collapse1"
       >
-        <span>Accordion Item #1</span>
+        <span>Patterns</span>
         <i class="bi bi-chevron-right" aria-hidden="true"></i>
       </router-link>
       <div
         id="flush-collapse1"
         class="collapse"
+        :class="$route.path.includes('/patterns') ? 'show' : ''"
         aria-labelledby="flush-heading1"
       >
-        <div class="px-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ipsam
-          repellat velit recusandae obcaecati facere quibusdam modi rem, ducimus
-          voluptates nobis? Excepturi, blanditiis dicta. Nostrum consequuntur
-          eius iure aut odit!
-        </div>
+        <ul class="nav flex-column small fw-light mt-1">
+          <li class="nav-item mb-1">
+            <router-link
+              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              active-class="bg-opaque text-black"
+              to="/patterns/layouts"
+              >Layouts</router-link
+            >
+          </li>
+          <li class="nav-item mb-1">
+            <router-link
+              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              active-class="bg-opaque text-black"
+              to="/patterns/navigation"
+              >Navigation</router-link
+            >
+          </li>
+          <li class="nav-item mb-1">
+            <router-link
+              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              active-class="bg-opaque text-black"
+              to="/patterns/containers"
+              >Containers</router-link
+            >
+          </li>
+          <li class="nav-item mb-1">
+            <router-link
+              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              active-class="bg-opaque text-black"
+              to="/patterns/tabs"
+              >Tabs</router-link
+            >
+          </li>
+          <li class="nav-item mb-1">
+            <router-link
+              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              active-class="bg-opaque text-black"
+              to="/patterns/disclosure"
+              >Disclosure</router-link
+            >
+          </li>
+          <li class="nav-item mb-1">
+            <router-link
+              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              active-class="bg-opaque text-black"
+              to="/patterns/messaging"
+              >Messaging</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link
+              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              active-class="bg-opaque text-black"
+              to="/patterns/profile"
+              >Profile</router-link
+            >
+          </li>
+        </ul>
       </div>
     </li>
 
@@ -119,7 +169,6 @@ export default {
   },
 };
 </script>
-
 
 <style lang="scss" scoped>
 .chevron i {

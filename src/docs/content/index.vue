@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <template #content>
-      <h1>Content Guide</h1>
+      <h1>Content</h1>
 
       <p class="p-0 col-md-8 lead">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi

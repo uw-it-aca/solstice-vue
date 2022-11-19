@@ -14,8 +14,8 @@
       <ul class="row list-unstyled">
         <li class="col-4">
           <PatternDescription
-            :name="'Layout'"
-            :link="'/patterns/layout'"
+            :name="'Layouts'"
+            :link="'/patterns/layouts'"
             class="alert-beige"
           >
             <p>aasdflkjasdlkfj lksadjf alsfdkj</p>
@@ -25,10 +25,12 @@
           <CompDescription :name="'Navigation'"></CompDescription>
         </li>
         <li class="col-4">
-          <CompDescription
-            :name="'Card'"
-            :link="'/patterns/card'"
-          ></CompDescription>
+          <PatternDescription
+            :name="'Containers'"
+            :link="'/patterns/containers'"
+            class="alert-beige"
+            >sdfgsdgsd</PatternDescription
+          >
         </li>
         <li class="col-4">
           <CompDescription

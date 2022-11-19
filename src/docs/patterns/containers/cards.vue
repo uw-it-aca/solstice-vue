@@ -4,15 +4,18 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/patterns/">Patterns</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Card</li>
+          <li class="breadcrumb-item">
+            <a href="/patterns/containers">Containers</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Cards</li>
         </ol>
       </nav>
 
-      <h1>Card</h1>
+      <h1>Cards</h1>
 
       <p class="p-0 col-md-8 lead">
-        Card is a container of content... Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Ea nemo nobis, eligendi sit ipsa mollitia
+        Cards is a container of content... Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Ea nemo nobis, eligendi sit ipsa mollitia
         necessitatibus possimus, veniam sapiente deleniti quo. Nemo error quos,
         eius facilis rem amet deserunt est!
       </p>
@@ -259,8 +262,8 @@ export default {
 </template>
 
 <script>
-import Layout from "../../layout.vue";
-import CodeBlock from "../../components/CodeBlock.vue";
+import Layout from "../../../layout.vue";
+import CodeBlock from "../../../components/CodeBlock.vue";
 
 export default {
   name: "DocsPatternsCard",

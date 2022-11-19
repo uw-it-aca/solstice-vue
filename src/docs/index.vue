@@ -27,7 +27,7 @@
           </p>
 
           <p>
-            <router-link to="/principles"
+            <router-link to="/start/principles"
               >Learn about our design principles</router-link
             >
           </p>
@@ -151,8 +151,8 @@ app.use(AxddComponents);
       <div class="row">
         <div class="col d-flex flex-column">
           <PatternDescription
-            :name="'Release Notes'"
-            :link="'https://github.com/uw-it-aca/axdd-components/releases'"
+            :name="'Designers'"
+            :link="'/start/designers'"
             class="alert-purple"
           >
             <p>
@@ -165,9 +165,9 @@ app.use(AxddComponents);
         </div>
         <div class="col d-flex flex-column">
           <PatternDescription
-            :name="'Development Guide'"
-            :link="'/development'"
-            class="alert-beige"
+            :name="'Developers'"
+            :link="'/start/developers'"
+            class="alert-purple"
           >
             <p>
               Learn how to create global components that can be used by other

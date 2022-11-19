@@ -45,7 +45,7 @@ $custom-colors: (
   "teal": #4c7286,
   "light-gray": #e8e8e8,
   "gray": #e9ecef,
-  "opaque": transparentize(black, 0.9),
+  "opaque": transparentize(black, 0.95),
 ) !default;
 
 // merge the default bootstrap + custom color maps

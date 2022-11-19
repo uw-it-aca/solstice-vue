@@ -1,6 +1,13 @@
 <template>
   <Layout>
     <template #content>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/start/">Getting Started</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Priciples</li>
+        </ol>
+      </nav>
+
       <h1>Design Principles</h1>
 
       <p class="p-0 col-md-8 lead">
@@ -32,7 +39,7 @@
 </template>
 
 <script>
-import Layout from "../layout.vue";
+import Layout from "../../layout.vue";
 
 export default {
   name: "DocsPrinciples",

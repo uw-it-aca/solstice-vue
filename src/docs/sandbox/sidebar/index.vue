@@ -12,7 +12,7 @@
     </template>
 
     <template #navigation>
-      <ul class="nav flex-column">
+      <ul class="nav flex-column mb-5">
         <li class="nav-item mb-1 bg-dark-purple rounded-3">
           <a href="#" class="nav-link text-gray d-block px-3 py-2"
             ><i class="bi bi-house-door-fill me-3"></i>Home</a
@@ -54,7 +54,7 @@
       </ul>
     </template>
     <template #aside>
-      <div class="alert alert-dark-purple border-0 small rounded-3 my-5">
+      <div class="bg-opaque p-3 border-0 small rounded-3">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex voluptates
         molestias hic. Esse ab inventore rerum, ipsa cupiditate quo. Aliquid
         optio, commodi sit fugit harum perspiciatis quia sunt fuga. Aliquam?

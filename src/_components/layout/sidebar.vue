@@ -83,6 +83,7 @@
           <aside
             v-if="$slots['aside']"
             :class="[variant === 'dark' ? 'text-white' : 'text-dark']"
+            class="mb-5"
           >
             <slot name="aside">this is aside content</slot>
           </aside>

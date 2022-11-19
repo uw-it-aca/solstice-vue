@@ -3,17 +3,17 @@
     <template #content>
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/start/">Getting Started</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Designers</li>
+          <li class="breadcrumb-item"><a href="/patterns/">Patterns</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Navigation</li>
         </ol>
       </nav>
-      <h1>Designers Guide</h1>
+      <h1>Navigation</h1>
 
       <p class="p-0 col-md-8 lead">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum,
-        voluptate sint alias consectetur commodi dignissimos, minus ratione quos
-        a enim blanditiis hic perferendis ullam quod non, molestiae aut illo?
-        Aut!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
+        consequuntur tempore amet consectetur minus autem corporis nostrum sit
+        sapiente cumque. Rem nisi quidem aspernatur doloremque id non natus
+        voluptas debitis!
       </p>
 
       <hr class="mb-5 w-25 d-inline-block" />
@@ -25,6 +25,8 @@
         architecto velit magni rem odit?
       </p>
     </template>
+    <template #author>Charlon Palacay</template>
+    <template #modified>November 11, 2022</template>
   </Layout>
 </template>
 
@@ -32,7 +34,7 @@
 import Layout from "../../layout.vue";
 
 export default {
-  name: "DocsDesignersIndex",
+  name: "DocsPatternsNavigation",
   components: { Layout },
   data() {
     return {};

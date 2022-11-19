@@ -4,9 +4,9 @@
       <h1>Design Tokens</h1>
 
       <p class="p-0 col-md-8 lead">
-        Design tokens are the atoms of the system as Salesforce describes them.
-        In Vue Design System they are used instead of hard coded values to
-        ensure a better consistency across any platform.
+        Design tokens are the atoms of the design system. In AXDD Components
+        they are used instead of hard coded values to ensure a better
+        consistency across any platform.
       </p>
 
       <hr class="mb-5 w-25 d-inline-block" />

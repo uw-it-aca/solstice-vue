@@ -7,6 +7,10 @@ ingress:
   enabled: true
   type: nginx
   tls:
+    solstice:
+      secretName: solstice.uw.edu-ingress-cert
+      hosts:
+        - solstice.uw.edu
     axdd-components:
       secretName: components.axdd.s.uw.edu-ingress-cert
       hosts:
@@ -16,6 +20,10 @@ ingress:
       hosts:
         - styleguide.axdd.s.uw.edu
   hosts:
+    solstice:
+      host: solstice.uw.edu
+      paths:
+        - "/"
     axdd-components:
       host: components.axdd.s.uw.edu
       paths:
@@ -27,8 +35,8 @@ ingress:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
     nginx.ingress.kubernetes.io/configuration-snippet: |
-      if ($host != 'components.axdd.s.uw.edu' ) {
-        return 301 $scheme://components.axdd.s.uw.edu;
+      if ($host != 'solstice.uw.edu' ) {
+        return 301 $scheme://solstice.uw.edu;
       }
 
 repo: axdd-components

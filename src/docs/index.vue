@@ -36,76 +36,6 @@
 
       <hr class="mb-5 w-25 d-inline-block" />
 
-      <div class="row">
-        <div class="col">
-          <h2 class="fw-bold">Getting started</h2>
-          <h3>Template Repository <i class="bi bi-star-fill text-gold"></i></h3>
-          <p>
-            For any new AXDD applications, we recommend starting with the
-            <a href="https://github.com/uw-it-aca/axdd-django-vue"
-              >axdd-django-vue</a
-            >
-            template repository. Installation and the initial configuration is
-            already done for you.
-          </p>
-
-          <h3>Manual Installation</h3>
-          <p>
-            If you wish to add AXDD Components to an existing Vue application,
-            add the following dependency to your <code>package.json</code> and
-            run <code>npm install</code>.
-          </p>
-
-          <CodeBlock>
-            <template #script>
-              <pre class="language-json rounded">
-<code>"dependencies": {
-  "axdd-components": "git+https://github.com/uw-it-aca/axdd-components.git#1.0.6",
-}</code></pre>
-            </template>
-          </CodeBlock>
-
-          <p>
-            From the <code>main.js</code> file, import the AXDD Components
-            library and install it as plugin using <code>app.use()</code>. You
-            must also import the required component library
-            <code>style.css</code> as well as the application's main Bootstrap
-            entry <code>styles.scss</code> file.
-          </p>
-
-          <CodeBlock>
-            <template #script>
-              <pre class="language-js rounded">
-<code>import { createApp } from "vue";
-import App from "./app.vue";
-import AxddComponents from "axdd-components";
-
-// bootstrap js + bootstrap-icons
-import "bootstrap";
-import "bootstrap-icons/font/bootstrap-icons.css";
-
-// app bootstrap scss entry
-import "../path/to/css/styles.scss";
-
-// axdd-component css
-import "axdd-components/dist/style.css";
-
-const app = createApp(App);
-app.use(AxddComponents);
-</code></pre>
-            </template>
-          </CodeBlock>
-
-          <p>
-            The component library can now be used globally within the
-            application. Refer to the specific component resource for usage and
-            implementation documentation.
-          </p>
-        </div>
-      </div>
-
-      <hr class="mb-5 w-25 d-inline-block" />
-
       <div class="row mb-3">
         <div class="col">
           <h2 class="fw-bold">Guides</h2>
@@ -157,7 +87,7 @@ app.use(AxddComponents);
           <PatternDescription
             :name="'Designers'"
             :link="'/start/designers'"
-            class="alert-purple"
+            class="bg-light"
           >
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
@@ -171,7 +101,7 @@ app.use(AxddComponents);
           <PatternDescription
             :name="'Developers'"
             :link="'/start/developers'"
-            class="alert-purple"
+            class="bg-light"
           >
             <p>
               Learn how to create global components that can be used by other

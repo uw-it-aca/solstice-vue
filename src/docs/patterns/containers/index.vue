@@ -19,28 +19,27 @@
 
       <hr class="mb-5 w-25 d-inline-block" />
 
-      <p>
-        APG:
-        <a
-          href="https://www.w3.org/WAI/ARIA/apg/example-index/landmarks/index.html"
-          target="_blank"
-          >https://www.w3.org/WAI/ARIA/apg/example-index/landmarks/index.html</a
-        >
-      </p>
-
       <ul class="row list-unstyled">
         <li class="col-4">
           <CompDescription
-            :name="'Cards'"
-            :link="'/patterns/containers/cards'"
+            :name="'Card'"
+            :link="'/patterns/containers/card'"
             :accessibility="true"
             :version="'1.0.5'"
           ></CompDescription>
         </li>
         <li class="col-4">
           <CompDescription
-            :name="'basdf'"
-            :link="'/patterns/containers/cards'"
+            :name="'Panel'"
+            :link="'/patterns/containers/panel'"
+            :accessibility="true"
+            :version="'1.0.7'"
+          ></CompDescription>
+        </li>
+        <li class="col-4">
+          <CompDescription
+            :name="'Disclosure'"
+            :link="'/patterns/containers/disclosure'"
             :accessibility="true"
             :version="'1.0.5'"
           ></CompDescription>

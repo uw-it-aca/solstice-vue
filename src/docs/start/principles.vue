@@ -8,7 +8,7 @@
         </ol>
       </nav>
 
-      <h1>Design Principles</h1>
+      <h1>Principles</h1>
 
       <p class="p-0 col-md-8 lead">
         Principles are the foundation of the system. They form the basis of a

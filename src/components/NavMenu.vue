@@ -60,8 +60,8 @@
       <router-link
         class="nav-link rounded-3 bg-opaque-hover text-reset"
         active-class="bg-opaque text-black"
-        to="/tokens/"
-        >Design Tokens</router-link
+        to="/foundations/"
+        >Foundations</router-link
       >
     </li>
     <li class="nav-item mb-1">
@@ -121,24 +121,16 @@
             <router-link
               class="nav-link rounded-3 bg-opaque-hover text-muted"
               active-class="bg-opaque text-black"
-              to="/patterns/tabs"
-              >Tabs</router-link
-            >
-          </li>
-          <li class="nav-item mb-1">
-            <router-link
-              class="nav-link rounded-3 bg-opaque-hover text-muted"
-              active-class="bg-opaque text-black"
-              to="/patterns/disclosure"
-              >Disclosure</router-link
-            >
-          </li>
-          <li class="nav-item mb-1">
-            <router-link
-              class="nav-link rounded-3 bg-opaque-hover text-muted"
-              active-class="bg-opaque text-black"
               to="/patterns/messaging"
               >Messaging</router-link
+            >
+          </li>
+          <li class="nav-item mb-1">
+            <router-link
+              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              active-class="bg-opaque text-black"
+              to="/patterns/feedback"
+              >Feedback</router-link
             >
           </li>
           <li class="nav-item">

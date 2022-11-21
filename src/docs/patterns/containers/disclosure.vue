@@ -4,6 +4,9 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/patterns/">Patterns</a></li>
+          <li class="breadcrumb-item">
+            <a href="/patterns/containers/">Containers</a>
+          </li>
           <li class="breadcrumb-item active" aria-current="page">Disclosure</li>
         </ol>
       </nav>
@@ -180,8 +183,8 @@
 </template>
 
 <script>
-import Layout from "../../layout.vue";
-import CodeBlock from "../../components/CodeBlock.vue";
+import Layout from "../../../layout.vue";
+import CodeBlock from "../../../components/CodeBlock.vue";
 
 export default {
   name: "DocsPatternsDisclosure",

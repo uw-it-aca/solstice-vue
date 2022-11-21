@@ -7,11 +7,11 @@
           <li class="breadcrumb-item">
             <a href="/patterns/containers">Containers</a>
           </li>
-          <li class="breadcrumb-item active" aria-current="page">Cards</li>
+          <li class="breadcrumb-item active" aria-current="page">Card</li>
         </ol>
       </nav>
 
-      <h1>Cards</h1>
+      <h1>Card</h1>
 
       <p class="p-0 col-md-8 lead">
         Cards is a container of content... Lorem ipsum dolor sit amet

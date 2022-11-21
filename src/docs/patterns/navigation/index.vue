@@ -18,12 +18,24 @@
 
       <hr class="mb-5 w-25 d-inline-block" />
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, quia
-        dolorem? Perspiciatis excepturi cum aliquid praesentium aspernatur,
-        accusantium assumenda, odio neque nobis quo inventore dolorum,
-        architecto velit magni rem odit?
-      </p>
+      <ul class="row list-unstyled">
+        <li class="col-4">
+          <CompDescription
+            :name="'Tabs'"
+            :link="'/patterns/navigation/tabs'"
+            :accessibility="true"
+            :version="'1.0.5'"
+          ></CompDescription>
+        </li>
+        <li class="col-4">
+          <CompDescription
+            :name="'Menu'"
+            :link="'/patterns/navigation/menu'"
+            :accessibility="true"
+            :version="'1.0.7'"
+          ></CompDescription>
+        </li>
+      </ul>
     </template>
     <template #author>Charlon Palacay</template>
     <template #modified>November 11, 2022</template>
@@ -31,11 +43,12 @@
 </template>
 
 <script>
-import Layout from "../../layout.vue";
+import Layout from "../../../layout.vue";
+import CompDescription from "../../../components/CompDescription.vue";
 
 export default {
   name: "DocsPatternsNavigation",
-  components: { Layout },
+  components: { Layout, CompDescription },
   data() {
     return {};
   },

@@ -4,7 +4,9 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/patterns/">Patterns</a></li>
-          <li class="breadcrumb-item"><a href="/patterns/layouts">Layouts</a></li>
+          <li class="breadcrumb-item">
+            <a href="/patterns/layouts">Layouts</a>
+          </li>
           <li class="breadcrumb-item active" aria-current="page">Topbar</li>
         </ol>
       </nav>

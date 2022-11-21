@@ -1,12 +1,13 @@
 <template>
   <Layout>
     <template #content>
-      <h1>Design Tokens</h1>
+      <h1>Foundations</h1>
 
       <p class="p-0 col-md-8 lead">
-        Design tokens are the atoms of the design system. In AXDD Components
-        they are used instead of hard coded values to ensure a better
-        consistency across any platform.
+        Foundations are Lorem ipsum dolor sit amet consectetur, adipisicing
+        elit. Autem dicta error temporibus inventore sapiente debitis, non
+        minima excepturi quasi, cumque explicabo, esse illo impedit. Veniam
+        velit quia consectetur nisi cumque?
       </p>
 
       <hr class="mb-5 w-25 d-inline-block" />

@@ -33,7 +33,12 @@
         >
           <a
             v-if="$slots['navigation']"
-            class="btn btn-link btn-sm d-lg-none border border-2 rounded-3 py-0 px-1 text-white me-2"
+            class="btn btn-link btn-sm d-lg-none border border-1 rounded-3 py-0 px-1 me-2"
+            :class="[
+              variant === 'dark'
+                ? 'text-white border-white'
+                : 'text-dark border-dark',
+            ]"
             data-bs-toggle="collapse"
             data-bs-target="#sidebar-nav-collapse"
             role="button"
@@ -41,7 +46,7 @@
             aria-controls="sidebar-nav-collapse"
             aria-label="Toggle Navigation Menu"
           >
-            <i class="bi bi-list fw-bold text-white fs-6"></i>
+            <i class="bi bi-list fw-bold fs-6"></i>
           </a>
           <div
             class="d-inline align-middle text-white"
@@ -53,7 +58,7 @@
               :class="[variant === 'dark' ? 'text-white' : 'text-dark']"
             >
               <span v-if="$slots['logo']" class="me-2">
-                <slot name="logo"><i class="bi bi-box-fill"></i></slot> </span
+                <slot name="logo"><i class="bi bi-box-fill"></i></slot></span
               >{{ appName }}
             </a>
           </div>
@@ -89,7 +94,16 @@
           </aside>
         </div>
       </div>
-      <div class="axdd-sidebar-logo">&nbsp;</div>
+      <div
+        :class="[
+          variant === 'dark'
+            ? 'axdd-sidebar-logo-dark'
+            : 'axdd-sidebar-logo-light',
+        ]"
+        class=""
+      >
+        &nbsp;
+      </div>
     </div>
 
     <div
@@ -191,8 +205,16 @@ export default {
   line-height: 105px;
 }
 
-.axdd-sidebar-logo {
+.axdd-sidebar-logo-dark {
   background-image: url("../../assets/images/w-logo-white.png");
+  background-repeat: no-repeat;
+  background-size: 45px;
+  background-position: right 20px bottom;
+  line-height: 30px;
+}
+
+.axdd-sidebar-logo-light {
+  background-image: url("../../assets/images/w-logo-purple.png");
   background-repeat: no-repeat;
   background-size: 45px;
   background-position: right 20px bottom;

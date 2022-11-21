@@ -12,41 +12,47 @@
       <hr class="mb-5 w-25 d-inline-block" />
 
       <ul class="row list-unstyled">
-        <li class="col-4">
+        <li class="col-4 mb-3">
           <PatternDescription
             :name="'Layouts'"
             :link="'/patterns/layouts'"
-            class="alert-beige"
+            class="bg-light"
           >
             <p>aasdflkjasdlkfj lksadjf alsfdkj</p>
           </PatternDescription>
         </li>
         <li class="col-4">
-          <CompDescription :name="'Navigation'"></CompDescription>
+          <PatternDescription
+            :name="'Navigation'"
+            :link="'/patterns/navigation'"
+            class="bg-light"
+          >
+            <p>aasdflkjasdlkfj lksadjf alsfdkj</p>
+          </PatternDescription>
         </li>
         <li class="col-4">
           <PatternDescription
             :name="'Containers'"
             :link="'/patterns/containers'"
-            class="alert-beige"
+            class="bg-light"
             >sdfgsdgsd</PatternDescription
           >
         </li>
         <li class="col-4">
-          <CompDescription
-            :name="'Tabs'"
-            :link="'/patterns/tabs'"
-            :accessibility="true"
-            :version="'1.0.5'"
-          ></CompDescription>
+          <PatternDescription
+            :name="'Messaging'"
+            :link="'/patterns/messaging'"
+            class="bg-light"
+            >sdfgsdgsd</PatternDescription
+          >
         </li>
         <li class="col-4">
-          <CompDescription
-            :name="'Disclosure'"
-            :link="'/patterns/disclosure'"
-            :accessibility="true"
-            :version="'1.0.5'"
-          ></CompDescription>
+          <PatternDescription
+            :name="'Feedback'"
+            :link="'/patterns/feedback'"
+            class="bg-light"
+            >sdfgsdgsd</PatternDescription
+          >
         </li>
         <li class="col-4">
           <CompDescription

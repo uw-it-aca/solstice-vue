@@ -1,6 +1,6 @@
 <template>
   <div
-    class="d-flex flex-column flex-fill alert border-0 p-4"
+    class="d-flex flex-column flex-fill p-3 rounded-3"
     style="min-height: 230px"
   >
     <h2>{{ name }}</h2>

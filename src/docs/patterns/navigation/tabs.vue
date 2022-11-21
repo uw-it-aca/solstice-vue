@@ -4,6 +4,7 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/patterns/">Patterns</a></li>
+          <li class="breadcrumb-item"><a href="/patterns/navigation/">Navigation</a></li>
           <li class="breadcrumb-item active" aria-current="page">Tabs</li>
         </ol>
       </nav>
@@ -139,19 +140,6 @@
   &lt;/template>
 &lt;/axdd-tabs-display></code></pre>
         </template>
-        <template #script>
-          <pre class="language-js rounded">
-<code>import { TabsList, TabsDisplay, TabsItem, TabsPanel } from "axdd-components";
-
-export default {
-  components: {
-    "axdd-tabs-list": TabsList,
-    "axdd-tabs-display": TabsDisplay,
-    "axdd-tabs-item": TabsItem,
-    "axdd-tabs-panel": TabsPanel,
-  },
-};</code></pre>
-        </template>
       </CodeBlock>
 
       <h2>Disconnected</h2>
@@ -217,8 +205,8 @@ export default {
 </template>
 
 <script>
-import Layout from "../../layout.vue";
-import CodeBlock from "../../components/CodeBlock.vue";
+import Layout from "../../../layout.vue";
+import CodeBlock from "../../../components/CodeBlock.vue";
 
 export default {
   name: "DocsPatternsTabs",

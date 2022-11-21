@@ -4,7 +4,9 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/patterns/">Patterns</a></li>
-          <li class="breadcrumb-item"><a href="/patterns/layouts">Layouts</a></li>
+          <li class="breadcrumb-item">
+            <a href="/patterns/layouts">Layouts</a>
+          </li>
           <li class="breadcrumb-item active" aria-current="page">Sidebar</li>
         </ol>
       </nav>
@@ -38,7 +40,7 @@
       </CodeBlock>
 
       <h3>Props</h3>
-      <table class="table">
+      <table class="table small">
         <thead>
           <tr>
             <th scope="col" class="w-25">Prop</th>
@@ -74,7 +76,7 @@
       </table>
 
       <h3>Slots</h3>
-      <table class="table">
+      <table class="table small">
         <thead>
           <tr>
             <th scope="col" class="w-25">Slot</th>
@@ -244,7 +246,6 @@
 </code></pre>
         </template>
       </CodeBlock>
-
     </template>
   </Layout>
 </template>

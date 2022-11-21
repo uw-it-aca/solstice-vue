@@ -129,9 +129,13 @@ app.use(AxddComponents);
           </p>
         </div>
         <div class="col">
-          <h3>Design Tokens</h3>
-          <p>Use design tokens to ensure consistency across the application.</p>
-          <p><router-link to="/tokens/">Browse tokens</router-link></p>
+          <h3>Foundations</h3>
+          <p>
+            Use design foundations to ensure consistency across the application.
+          </p>
+          <p>
+            <router-link to="/foundations/">Browse foundations</router-link>
+          </p>
         </div>
         <div class="col">
           <h3>Elements</h3>

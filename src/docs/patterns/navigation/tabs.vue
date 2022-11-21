@@ -4,14 +4,16 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/patterns/">Patterns</a></li>
-          <li class="breadcrumb-item"><a href="/patterns/navigation/">Navigation</a></li>
+          <li class="breadcrumb-item">
+            <a href="/patterns/navigation/">Navigation</a>
+          </li>
           <li class="breadcrumb-item active" aria-current="page">Tabs</li>
         </ol>
       </nav>
 
       <h1>Tabs</h1>
 
-      <p class="p-0 col-md-8 lead">
+      <p class="p-0 col-md-8 lead text-muted">
         Tabs Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum eos
         provident praesentium ipsum sed aperiam aliquam quibusdam voluptatem
         corrupti, reprehenderit illum. Nobis quia incidunt non officia nihil id

@@ -13,7 +13,7 @@
 
       <h1>Card</h1>
 
-      <p class="p-0 col-md-8 lead">
+      <p class="p-0 col-md-8 lead text-muted">
         Cards is a container of content... Lorem ipsum dolor sit amet
         consectetur adipisicing elit. Ea nemo nobis, eligendi sit ipsa mollitia
         necessitatibus possimus, veniam sapiente deleniti quo. Nemo error quos,

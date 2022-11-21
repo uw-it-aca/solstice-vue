@@ -33,28 +33,92 @@
             <router-link
               class="nav-link rounded-3 bg-opaque-hover text-muted"
               active-class="bg-opaque text-black"
-              to="/start/developers"
-              >Developers</router-link
+              to="/start/designers"
+              >Designers</router-link
             >
           </li>
           <li class="nav-item">
             <router-link
               class="nav-link rounded-3 bg-opaque-hover text-muted"
               active-class="bg-opaque text-black"
-              to="/start/designers"
-              >Designers</router-link
+              to="/start/developers"
+              >Developers</router-link
             >
           </li>
         </ul>
       </div>
     </li>
-    <li class="nav-item mb-1">
+    <li class="nav-item mb-1 position-relative">
       <router-link
-        class="nav-link rounded-3 bg-opaque-hover text-reset"
+        class="d-flex justify-content-between nav-link rounded-3 bg-opaque-hover text-reset chevron"
         active-class="bg-opaque text-black"
         to="/content/"
-        >Content</router-link
+        id="flush-heading3"
+        data-bs-toggle="collapse"
+        data-bs-target="#flush-collapse3"
+        :aria-expanded="$route.path.includes('/content') ? true : false"
+        aria-controls="flush-collapse3"
       >
+        <span>Content</span>
+        <i class="bi bi-chevron-right" aria-hidden="true"></i>
+      </router-link>
+      <div
+        id="flush-collapse3"
+        class="collapse"
+        :class="$route.path.includes('/content') ? 'show' : ''"
+        aria-labelledby="flush-heading3"
+      >
+        <ul class="nav flex-column small fw-light mt-1">
+          <li class="nav-item mb-1">
+            <router-link
+              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              active-class="bg-opaque text-black"
+              to="/content/voice"
+              >Voice &amp; Tone</router-link
+            >
+          </li>
+          <li class="nav-item mb-1">
+            <router-link
+              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              active-class="bg-opaque text-black"
+              to="/content/grammar"
+              >Grammar &amp; Mechanics</router-link
+            >
+          </li>
+          <li class="nav-item mb-1">
+            <router-link
+              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              active-class="bg-opaque text-black"
+              to="/content/language"
+              >Language &amp; Inclusivity</router-link
+            >
+          </li>
+          <li class="nav-item mb-1">
+            <router-link
+              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              active-class="bg-opaque text-black"
+              to="/content/errors"
+              >Errors</router-link
+            >
+          </li>
+          <li class="nav-item mb-1">
+            <router-link
+              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              active-class="bg-opaque text-black"
+              to="/content/state"
+              >Page State</router-link
+            >
+          </li>
+          <li class="nav-item">
+            <router-link
+              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              active-class="bg-opaque text-black"
+              to="/content/onboarding"
+              >Onboarding</router-link
+            >
+          </li>
+        </ul>
+      </div>
     </li>
     <li class="nav-item mb-1">
       <router-link
@@ -131,14 +195,6 @@
               active-class="bg-opaque text-black"
               to="/patterns/feedback"
               >Feedback</router-link
-            >
-          </li>
-          <li class="nav-item">
-            <router-link
-              class="nav-link rounded-3 bg-opaque-hover text-muted"
-              active-class="bg-opaque text-black"
-              to="/patterns/profile"
-              >Profile</router-link
             >
           </li>
         </ul>

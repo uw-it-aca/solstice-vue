@@ -10,7 +10,7 @@
 
       <h1>Principles</h1>
 
-      <p class="p-0 col-md-8 lead">
+      <p class="p-0 col-md-8 lead text-muted">
         Principles are the foundation of the system. They form the basis of a
         good product and help the team with decision making. They are here to
         guide you and your team when working with the myriad parts of the system
@@ -35,6 +35,8 @@
       <h2>Let content determine breakpoints</h2>
       <h2>Strive for universality</h2>
     </template>
+    <template #author>Charlon Palacay</template>
+    <template #modified>November 11, 2022</template>
   </Layout>
 </template>
 

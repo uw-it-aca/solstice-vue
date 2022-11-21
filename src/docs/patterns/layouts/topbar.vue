@@ -13,7 +13,7 @@
 
       <h1 class="fw-bold">Topbar</h1>
 
-      <p class="p-0 col-md-8 lead">
+      <p class="p-0 col-md-8 lead text-muted">
         Patterns are UI Patterns that fall on the more complex side of the
         spectrum. Date pickers, data tables, and visualizations are good
         examples. Patterns utilize both elements and design tokens.
@@ -274,6 +274,8 @@
         </template>
       </CodeBlock>
     </template>
+    <template #author>Charlon Palacay</template>
+    <template #modified>November 11, 2022</template>
   </Layout>
 </template>
 

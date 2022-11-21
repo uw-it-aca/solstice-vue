@@ -3,7 +3,7 @@
     <template #content>
       <h1>Elements</h1>
 
-      <p class="p-0 col-md-8 lead">
+      <p class="p-0 col-md-8 lead text-muted">
         Elements are the smallest basic structures of an user interface. They
         cannot be broken down any further. Buttons, links, and inputs are good
         examples. Elements utilize decisions made on the design token level.
@@ -19,6 +19,8 @@
 
       <h2>Button</h2>
     </template>
+    <template #author>Charlon Palacay</template>
+    <template #modified>November 11, 2022</template>
   </Layout>
 </template>
 

@@ -3,13 +3,15 @@
     <template #content>
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/patterns/">Patterns</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Messaging</li>
+          <li class="breadcrumb-item"><a href="/content/">Content</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Language &amp; Inclusivity
+          </li>
         </ol>
       </nav>
-      <h1>Messaging</h1>
+      <h1>Language &amp; Inclusivity</h1>
 
-      <p class="p-0 col-md-8 lead">
+      <p class="p-0 col-md-8 lead text-muted">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
         consequuntur tempore amet consectetur minus autem corporis nostrum sit
         sapiente cumque. Rem nisi quidem aspernatur doloremque id non natus

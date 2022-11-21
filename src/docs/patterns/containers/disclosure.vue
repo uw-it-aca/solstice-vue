@@ -13,7 +13,7 @@
 
       <h1>Disclosure (Collapse)</h1>
 
-      <p class="p-0 col-md-8 lead">
+      <p class="p-0 col-md-8 lead text-muted">
         Disclosure Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         Earum eos provident praesentium ipsum sed aperiam aliquam quibusdam
         voluptatem corrupti, reprehenderit illum. Nobis quia incidunt non

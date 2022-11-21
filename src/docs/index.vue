@@ -3,14 +3,16 @@
     <template #content>
       <h1 class="fw-bold">Introduction</h1>
 
-      <p class="p-0 col-md-8 lead mb-5">
+      <p class="p-0 col-md-8 lead text-muted">
         AXDD Components is a resource for building and documenting UI components
         using Bootstrap and Vue.js. It provides a set of organized guidelines,
         patterns and best practices that work as the foundation for application
         design and development at AXDD.
       </p>
 
-      <div class="row">
+      <hr class="mb-5 w-25 d-inline-block" />
+
+      <div class="row mb-5">
         <div class="col">
           <h2>Goals</h2>
           <ul>
@@ -34,7 +36,55 @@
         </div>
       </div>
 
-      <hr class="mb-5 w-25 d-inline-block" />
+      <div class="row mb-3">
+        <div class="col">
+          <h2 class="fw-bold">Getting Started</h2>
+          <p>
+            Check out these guides to help you understand how to design
+            applications using AXDD Components.
+          </p>
+        </div>
+      </div>
+
+      <div class="row mb-5">
+        <div class="col d-flex flex-column">
+          <PatternDescription
+            :name="'Designers'"
+            :link="'/start/designers'"
+            class="bg-light"
+          >
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
+              nostrum beatae aperiam nesciunt voluptate. Placeat ipsum libero
+              similique enim labore corrupti porro iure commodi laborum iste
+              itaque, magnam voluptate esse.
+            </p>
+          </PatternDescription>
+        </div>
+        <div class="col d-flex flex-column">
+          <PatternDescription
+            :name="'Developers'"
+            :link="'/start/developers'"
+            class="bg-light"
+          >
+            <p>
+              Learn how to create global components that can be used by other
+              applications as well as creating brand new applications.
+            </p>
+
+            <ul>
+              <li>
+                <router-link to="/sandbox/topbar/">Topbar</router-link>
+                (generic)
+              </li>
+              <li>
+                <router-link to="/sandbox/sidebar/">Sidebar</router-link>
+                (generic)
+              </li>
+            </ul>
+          </PatternDescription>
+        </div>
+      </div>
 
       <div class="row mb-3">
         <div class="col">
@@ -81,60 +131,20 @@
           <p><router-link to="/patterns/">Browse patterns</router-link></p>
         </div>
       </div>
-
-      <div class="row">
-        <div class="col d-flex flex-column">
-          <PatternDescription
-            :name="'Designers'"
-            :link="'/start/designers'"
-            class="bg-light"
-          >
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
-              nostrum beatae aperiam nesciunt voluptate. Placeat ipsum libero
-              similique enim labore corrupti porro iure commodi laborum iste
-              itaque, magnam voluptate esse.
-            </p>
-          </PatternDescription>
-        </div>
-        <div class="col d-flex flex-column">
-          <PatternDescription
-            :name="'Developers'"
-            :link="'/start/developers'"
-            class="bg-light"
-          >
-            <p>
-              Learn how to create global components that can be used by other
-              applications as well as creating brand new applications.
-            </p>
-
-            <ul>
-              <li>
-                <router-link to="/sandbox/topbar/">Topbar</router-link>
-                (generic)
-              </li>
-              <li>
-                <router-link to="/sandbox/sidebar/">Sidebar</router-link>
-                (generic)
-              </li>
-            </ul>
-          </PatternDescription>
-        </div>
-      </div>
     </template>
+    <template #author>Charlon Palacay</template>
+    <template #modified>November 11, 2022</template>
   </Layout>
 </template>
 
 <script>
 import Layout from "../layout.vue";
-import CodeBlock from "../components/CodeBlock.vue";
 import PatternDescription from "../components/PatternDescription.vue";
 
 export default {
   name: "DocsIndex",
   components: {
     Layout,
-    CodeBlock,
     PatternDescription,
   },
   data() {

@@ -3,7 +3,7 @@
     <template #content>
       <h1>Foundations</h1>
 
-      <p class="p-0 col-md-8 lead">
+      <p class="p-0 col-md-8 lead text-muted">
         Foundations are Lorem ipsum dolor sit amet consectetur, adipisicing
         elit. Autem dicta error temporibus inventore sapiente debitis, non
         minima excepturi quasi, cumque explicabo, esse illo impedit. Veniam

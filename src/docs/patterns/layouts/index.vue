@@ -10,22 +10,13 @@
 
       <h1 class="fw-bold">Layouts</h1>
 
-      <p class="p-0 col-md-8 lead">
+      <p class="p-0 col-md-8 lead text-muted">
         Patterns are UI Patterns that fall on the more complex side of the
         spectrum. Date pickers, data tables, and visualizations are good
         examples. Patterns utilize both elements and design tokens.
       </p>
 
       <hr class="mb-5 w-25 d-inline-block" />
-
-      <p>
-        APG:
-        <a
-          href="https://www.w3.org/WAI/ARIA/apg/example-index/landmarks/index.html"
-          target="_blank"
-          >https://www.w3.org/WAI/ARIA/apg/example-index/landmarks/index.html</a
-        >
-      </p>
 
       <ul class="row list-unstyled">
         <li class="col-4">
@@ -46,6 +37,8 @@
         </li>
       </ul>
     </template>
+    <template #author>Charlon Palacay</template>
+    <template #modified>November 11, 2022</template>
   </Layout>
 </template>
 

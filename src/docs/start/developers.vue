@@ -7,9 +7,9 @@
           <li class="breadcrumb-item active" aria-current="page">Developers</li>
         </ol>
       </nav>
-      <h1>Developers Guide</h1>
+      <h1>Developers</h1>
 
-      <p class="p-0 col-md-8 lead">
+      <p class="p-0 col-md-8 lead text-muted">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nisi
         quaerat, molestiae vero doloribus asperiores pariatur fugit eligendi nam
         ratione, quos dolorum. Eaque atque quas, laboriosam distinctio fugiat
@@ -141,6 +141,8 @@ app.use(AxddComponents);
 
       <h2>AXDD Django Vue</h2>
     </template>
+    <template #author>Charlon Palacay</template>
+    <template #modified>November 11, 2022</template>
   </Layout>
 </template>
 

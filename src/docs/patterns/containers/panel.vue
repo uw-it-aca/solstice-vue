@@ -10,7 +10,7 @@
 
       <h1 class="fw-bold">Panel</h1>
 
-      <p class="p-0 col-md-8 lead">
+      <p class="p-0 col-md-8 lead text-muted">
         Panels are Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Mollitia repellendus sint veritatis assumenda facilis repudiandae vero
         natus unde voluptatum blanditiis nihil soluta, velit quaerat, corporis

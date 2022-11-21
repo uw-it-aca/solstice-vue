@@ -4,13 +4,16 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/patterns/">Patterns</a></li>
+          <li class="breadcrumb-item">
+            <a href="/patterns/containers/">Containers</a>
+          </li>
           <li class="breadcrumb-item active" aria-current="page">Profile</li>
         </ol>
       </nav>
 
       <h1>Profile</h1>
 
-      <p class="p-0 col-md-8 lead">
+      <p class="p-0 col-md-8 lead text-muted">
         Profile Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
         eos provident praesentium ipsum sed aperiam aliquam quibusdam voluptatem
         corrupti, reprehenderit illum. Nobis quia incidunt non officia nihil id
@@ -98,8 +101,8 @@
 </template>
 
 <script>
-import Layout from "../../layout.vue";
-import CodeBlock from "../../components/CodeBlock.vue";
+import Layout from "../../../layout.vue";
+import CodeBlock from "../../../components/CodeBlock.vue";
 
 export default {
   name: "DocsPatternsTabs",

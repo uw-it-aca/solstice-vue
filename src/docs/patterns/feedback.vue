@@ -1,13 +1,19 @@
 <template>
   <Layout>
     <template #content>
-      <h1>Getting Started</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/patterns/">Patterns</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Feedback</li>
+        </ol>
+      </nav>
+      <h1>Feedback</h1>
 
       <p class="p-0 col-md-8 lead text-muted">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum
-        accusamus vel doloremque odio ut sapiente quasi facilis veniam natus
-        eius expedita rem aspernatur itaque aperiam nemo quo sit, placeat
-        quisquam?
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
+        consequuntur tempore amet consectetur minus autem corporis nostrum sit
+        sapiente cumque. Rem nisi quidem aspernatur doloremque id non natus
+        voluptas debitis!
       </p>
 
       <hr class="mb-5 w-25 d-inline-block" />
@@ -28,7 +34,7 @@
 import Layout from "../../layout.vue";
 
 export default {
-  name: "DocsDevelopersIndex",
+  name: "DocsPatternsMessaging",
   components: { Layout },
   data() {
     return {};

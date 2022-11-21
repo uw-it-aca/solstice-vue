@@ -10,7 +10,7 @@
 
       <h1 class="fw-bold">Containers</h1>
 
-      <p class="p-0 col-md-8 lead">
+      <p class="p-0 col-md-8 lead text-muted">
         Containers are Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Mollitia repellendus sint veritatis assumenda facilis repudiandae vero
         natus unde voluptatum blanditiis nihil soluta, velit quaerat, corporis
@@ -40,6 +40,14 @@
           <CompDescription
             :name="'Disclosure'"
             :link="'/patterns/containers/disclosure'"
+            :accessibility="true"
+            :version="'1.0.5'"
+          ></CompDescription>
+        </li>
+        <li class="col-4">
+          <CompDescription
+            :name="'Profile'"
+            :link="'/patterns/containers/profile'"
             :accessibility="true"
             :version="'1.0.5'"
           ></CompDescription>

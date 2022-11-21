@@ -6,7 +6,7 @@
     :variant="'light'"
     class="bg-light"
   >
-    <template #profile>Latest: v.1.0.7</template>
+    <template #profile>Latest: v.1.1.0</template>
     <template #logo>
       <i class="bi bi-c-square-fill text-purple"></i>
     </template>

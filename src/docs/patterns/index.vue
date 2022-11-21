@@ -3,7 +3,7 @@
     <template #content>
       <h1 class="fw-bold">Patterns</h1>
 
-      <p class="p-0 col-md-8 lead">
+      <p class="p-0 col-md-8 lead text-muted">
         Patterns are the re-usable UI components that fall on the more complex
         side of the spectrum. Patterns utilize both elements and design tokens
         and are the design and building blocks of the visual design.
@@ -54,29 +54,21 @@
             >sdfgsdgsd</PatternDescription
           >
         </li>
-        <li class="col-4">
-          <CompDescription
-            :name="'Profile'"
-            :link="'/patterns/profile'"
-            :accessibility="true"
-            :version="'1.0.5'"
-          ></CompDescription>
-        </li>
       </ul>
     </template>
+    <template #author>Charlon Palacay</template>
+    <template #modified>November 11, 2022</template>
   </Layout>
 </template>
 
 <script>
 import Layout from "../../layout.vue";
-import CompDescription from "../../components/CompDescription.vue";
 import PatternDescription from "../../components/PatternDescription.vue";
 
 export default {
   name: "DocsPatternsIndex",
   components: {
     Layout,
-    CompDescription,
     PatternDescription,
   },
   data() {

@@ -26,15 +26,20 @@
             :link="'/patterns/containers/card'"
             :accessibility="true"
             :version="'1.0.5'"
-          ></CompDescription>
+            >Cards have a raised profile and has shadow. Meant to visually
+            display prominence over flat items.</CompDescription
+          >
         </li>
         <li class="col-4">
           <CompDescription
             :name="'Panel'"
             :link="'/patterns/containers/panel'"
             :accessibility="true"
-            :version="'1.0.7'"
-          ></CompDescription>
+            :version="'1.1.0'"
+            >Panels remain on the flat surface of the page. Bounding container
+            can have background color applied to show slight prominence. Still
+            not a card.</CompDescription
+          >
         </li>
         <li class="col-4">
           <CompDescription

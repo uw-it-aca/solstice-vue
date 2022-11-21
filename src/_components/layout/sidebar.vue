@@ -1,4 +1,5 @@
 <template>
+
   <div
     :class="[!mq.mdMinus ? 'd-flex vh-100' : '']"
     class="axdd-sidebar"
@@ -108,7 +109,7 @@
 
     <div
       :class="[!mq.mdMinus ? 'flex-fill overflow-auto' : '']"
-      class="bg-white"
+      class="bg-white px-5"
     >
       <div
         :class="[!isPreview ? 'min-vh-100' : '']"

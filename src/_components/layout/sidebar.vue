@@ -108,7 +108,8 @@
 
     <div
       :class="[!mq.mdMinus ? 'flex-fill overflow-auto' : '']"
-      class="bg-white pt-5 px-5"
+      class="bg-white px-5"
+      style="padding-top: 37px !important"
     >
       <div
         :class="[!isPreview ? 'min-vh-100' : '']"

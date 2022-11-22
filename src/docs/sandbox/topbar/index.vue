@@ -66,7 +66,30 @@
         optio, commodi sit fugit harum perspiciatis quia sunt fuga. Aliquam?
       </div>
     </template>
-    <template #bar></template>
+    <template #bar>
+      <div
+        class="alert alert-purple alert-dismissible m-0 fade show border-0 border-purple border-start border-5 rounded-0"
+        role="alert"
+      >
+        <p>
+          <strong>Holy guacamole!</strong> You should check in on some of those
+          fields below.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+          fuga, voluptatem ad corrupti nobis eveniet tempore nam magni
+          consequuntur iste unde corporis! Eum molestias nulla perspiciatis
+          impedit alias hic veritatis.
+        </p>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+
+    </template>
     <template #main>
       <!-- main section override -->
       <h1>

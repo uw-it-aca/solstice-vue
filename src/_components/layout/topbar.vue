@@ -36,16 +36,16 @@
           </div>
         </div>
       </div>
-
-      <div v-if="$slots.bar && mq.xlPlus" class="w-100">
-        <slot name="bar"></slot>
-      </div>
     </header>
 
-    <div class="w-100 flex-fill">
+    <div class="w-100 flex-fill bg-white">
       <div class="container-xl">
         <div class="row">
-          <div v-if="$slots.navigation || $slots.aside" class="col-lg-3">
+          <div
+            class=""
+            v-if="$slots.navigation || $slots.aside"
+            style="min-width: 272px; max-width: 272px"
+          >
             <div
               id="topbar-nav-collapse"
               :class="[!mq.xlPlus ? 'collapse' : 'collapse.show']"
@@ -59,18 +59,11 @@
               </aside>
             </div>
           </div>
-          <div v-if="$slots.bar && !mq.xlPlus" class="w-100 p-0 m-0">
-            <slot name="bar">
-              <div class="bg-gray">
-                <div class="container-xl">
-                  <div class="col-12 py-2 text-center">
-                    default gray bar (mobile)
-                  </div>
-                </div>
-              </div>
-            </slot>
-          </div>
-          <div :class="$slots.navigation ? 'col-lg-9' : 'col-lg-12'">
+
+          <div class="col">
+            <div v-if="$slots.bar" class="my-4">
+              <slot name="bar"></slot>
+            </div>
             <main>
               <slot name="main">
                 <div style="outline: dashed 1px lightgray">

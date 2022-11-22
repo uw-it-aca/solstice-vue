@@ -16,7 +16,29 @@
     <template #aside>
       <ReleaseNotes />
     </template>
-    <template #bar></template>
+    <template #bar>
+      <div
+        class="alert alert-warning alert-dismissible mb-5 fade show border-0 border-warning border-start border-5 rounded-0"
+        role="alert"
+      >
+        <p>
+          <strong>Holy guacamole!</strong> You should check in on some of those
+          fields below.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
+          fuga, voluptatem ad corrupti nobis eveniet tempore nam magni
+          consequuntur iste unde corporis! Eum molestias nulla perspiciatis
+          impedit alias hic veritatis.
+        </p>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+    </template>
     <template #main>
       <slot name="content" />
     </template>

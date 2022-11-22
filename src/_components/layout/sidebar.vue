@@ -1,5 +1,4 @@
 <template>
-
   <div
     :class="[!mq.mdMinus ? 'd-flex vh-100' : '']"
     class="axdd-sidebar"
@@ -109,20 +108,20 @@
 
     <div
       :class="[!mq.mdMinus ? 'flex-fill overflow-auto' : '']"
-      class="bg-white px-5"
+      class="bg-white pt-5 px-5"
     >
       <div
         :class="[!isPreview ? 'min-vh-100' : '']"
         class="container-xl d-flex flex-column"
       >
         <div v-if="$slots['bar']" class="row">
-          <slot name="bar">
-            <div class="col my-3">
+          <div class="col">
+            <slot name="bar">
               <div class="bg-gray py-2 text-center">
                 default gray bar (default)
               </div>
-            </div>
-          </slot>
+            </slot>
+          </div>
         </div>
 
         <main class="flex-fill">

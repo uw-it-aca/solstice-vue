@@ -88,7 +88,6 @@
           aria-label="Close"
         ></button>
       </div>
-
     </template>
     <template #main>
       <!-- main section override -->

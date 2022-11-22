@@ -68,7 +68,7 @@
     </template>
     <template #bar>
       <div
-        class="alert alert-purple alert-dismissible m-0 fade show border-0 border-purple border-start border-5 rounded-0"
+        class="alert alert-warning alert-dismissible m-0 fade show border-0 border-warning border-start border-5 rounded-0"
         role="alert"
       >
         <p>

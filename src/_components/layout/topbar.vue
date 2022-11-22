@@ -44,7 +44,7 @@
           <div
             class=""
             v-if="$slots.navigation || $slots.aside"
-            style="min-width: 272px; max-width: 272px"
+            :style="mq.xlPlus ? 'min-width: 272px; max-width: 272px' : ''"
           >
             <div
               id="topbar-nav-collapse"
@@ -61,7 +61,7 @@
           </div>
 
           <div class="col">
-            <div v-if="$slots.bar" class="my-4">
+            <div v-if="$slots.bar" class="my-3">
               <slot name="bar"></slot>
             </div>
             <main>

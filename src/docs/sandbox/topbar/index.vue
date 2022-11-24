@@ -108,7 +108,7 @@ export default {
     return {
       // minimum application setup overrides
       appName: "MyApp",
-      appRootUrl: "/myapp",
+      appRootUrl: "/",
       signOutUrl: "/signout",
       pageTitle: "Home",
       userNetid: "myusername",

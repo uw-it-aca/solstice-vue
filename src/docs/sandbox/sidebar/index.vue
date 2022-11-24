@@ -2,11 +2,10 @@
   <axdd-sidebar :app-name="appName" :page-title="pageTitle">
     <template #profile>
       <axdd-profile
-        :variant="'flyout'"
-        :user-netid="userNetid"
-        :user-official-name="userOfficial"
-        :user-preferred-name="userPreferred"
-        :profile-url="'https://identity.uw.edu'"
+        :app-name="appName"
+        :app-root-url="appRootUrl"
+        :page-title="pageTitle"
+        :user-name="userNetid"
         :sign-out-url="signOutUrl"
       ></axdd-profile>
     </template>
@@ -109,13 +108,15 @@ export default {
   props: {},
   data: function () {
     return {
+      // minimum application setup overrides
       appName: "MyApp",
+      appRootUrl: "/",
+      signOutUrl: "/signout",
+      pageTitle: "Home",
       userNetid: "myusername",
       userOfficial: "MYOFFICAL NAME",
       userPreferred: "Preferred Name",
       currentYear: new Date().getFullYear(),
-      pageTitle: "Page Title",
-      signOutUrl: "/signout",
     };
   },
 };

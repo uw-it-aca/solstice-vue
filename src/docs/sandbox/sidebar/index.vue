@@ -1,12 +1,18 @@
 <template>
-  <axdd-sidebar :app-name="appName" :page-title="pageTitle">
+  <axdd-sidebar
+    :app-name="appName"
+    :app-root-url="appRootUrl"
+    :page-title="pageTitle"
+    :user-name="userNetid"
+    :sign-out-url="signOutUrl"
+  >
     <template #profile>
       <axdd-profile
-        :app-name="appName"
-        :app-root-url="appRootUrl"
-        :page-title="pageTitle"
-        :user-name="userNetid"
-        :sign-out-url="signOutUrl"
+        :user-netid="userNetid"
+        :user-official-name="userOfficial"
+        :user-preferred-name="userPreferred"
+        :profile-url="'https://identity.uw.edu'"
+        :signout-url="signOutUrl"
       ></axdd-profile>
     </template>
 

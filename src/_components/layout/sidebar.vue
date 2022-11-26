@@ -52,15 +52,15 @@
             class="d-inline align-middle text-white"
             :class="[mq.mdPlus ? 'h2' : 'h3']"
           >
-            <a
-              :href="appRootUrl"
+            <router-link
+              :to="appRootUrl"
               class="axdd-font-encode-sans text-decoration-none"
               :class="[variant === 'dark' ? 'text-white' : 'text-dark']"
             >
               <span v-if="$slots['logo']" class="me-2">
                 <slot name="logo"><i class="bi bi-box-fill"></i></slot></span
               >{{ appName }}
-            </a>
+            </router-link>
           </div>
         </div>
       </header>

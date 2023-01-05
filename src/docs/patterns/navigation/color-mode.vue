@@ -28,6 +28,8 @@
         accusantium assumenda, odio neque nobis quo inventore dolorum,
         architecto velit magni rem odit?
       </p>
+
+      <axdd-color-mode></axdd-color-mode>
     </template>
     <template #author>Charlon Palacay</template>
     <template #modified>November 11, 2022</template>

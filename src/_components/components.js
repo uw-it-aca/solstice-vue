@@ -3,6 +3,8 @@
 // import CardStatus from "./card-status.vue";
 // import LinkButton from "./link-button.vue";
 
+import ColorMode from "./color-mode.vue";
+
 // 1.0.5
 import Profile from "./profile.vue";
 import DisclosureAction from "./disclosure/action.vue";
@@ -41,4 +43,5 @@ export default {
   TabsPanel,
   Sidebar,
   Topbar,
+  ColorMode,
 };

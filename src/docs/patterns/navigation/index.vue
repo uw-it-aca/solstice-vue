@@ -35,6 +35,14 @@
             :version="'1.0.7'"
           ></CompDescription>
         </li>
+        <li class="col-4">
+          <CompDescription
+            :name="'Color Mode'"
+            :link="'/patterns/navigation/color-mode'"
+            :accessibility="true"
+            :version="'1.1.0'"
+          ></CompDescription>
+        </li>
       </ul>
     </template>
     <template #author>Charlon Palacay</template>

@@ -1,7 +1,6 @@
 <template>
   <div>
-    <p>user prefers dark: {{ userPrefersDark }}</p>
-    <p>is dark: {{ isDark }}</p>
+
     <p>color mode: {{ colorMode }}</p>
     <select v-model="colorMode" class="form-select">
       <option value="auto">Auto</option>
@@ -11,21 +10,20 @@
   </div>
 </template>
 <script>
-import { useDark, usePreferredDark, useColorMode } from "@vueuse/core";
+import { useColorMode } from "@vueuse/core";
 
 export default {
   name: "axdd-color-mode",
 
   // composition in options api requires setup()
   setup() {
-    const userPrefersDark = usePreferredDark();
-    const isDark = useDark();
+
     const colorMode = useColorMode({
       emitAuto: true,
       attribute: "data-bs-theme",
     });
 
-    return { userPrefersDark, isDark, colorMode };
+    return { colorMode };
   },
 };
 </script>

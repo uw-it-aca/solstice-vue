@@ -4,7 +4,7 @@
     :style="[isPreview ? 'min-height: auto !important;' : '']"
   >
     <div
-      :class="[!mq.mdMinus ? 'overflow-auto' : '']"
+      :class="[!mq.mdMinus ? 'overflow-auto ' + sidebarClass : '']"
       class="axdd-sidebar d-flex flex-column"
       :style="[!mq.mdMinus ? 'min-width: 280px; max-width:280px;' : '']"
     >
@@ -173,6 +173,10 @@ export default {
       default: "userName",
     },
     appRootUrl: {
+      type: String,
+      default: "#",
+    },
+    sidebarClass: {
       type: String,
       default: "#",
     },

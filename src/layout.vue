@@ -4,10 +4,11 @@
     :user-name="'javerage'"
     :app-root-url="'/'"
     :variant="'dark'"
+    :sidebar-class="'bg-success'"
   >
     <template #profile>Latest: v.1.1.0</template>
     <template #logo>
-      <i class="bi bi-cup-fill text-purple"></i>
+      <i class="bi bi-cup-fill"></i>
     </template>
     <template #navigation>
       <NavMenu />

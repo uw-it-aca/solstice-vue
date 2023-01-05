@@ -1,12 +1,11 @@
 <template>
   <div
     :class="[!mq.mdMinus ? 'd-flex vh-100' : '']"
-    class="axdd-sidebar"
     :style="[isPreview ? 'min-height: auto !important;' : '']"
   >
     <div
       :class="[!mq.mdMinus ? 'overflow-auto' : '']"
-      class="d-flex flex-column"
+      class="axdd-sidebar d-flex flex-column"
       :style="[!mq.mdMinus ? 'min-width: 280px; max-width:280px;' : '']"
     >
       <header>

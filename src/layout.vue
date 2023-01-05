@@ -3,8 +3,7 @@
     :app-name="'Solstice'"
     :user-name="'javerage'"
     :app-root-url="'/'"
-    :variant="'light'"
-    class="bg-light"
+    :variant="'dark'"
   >
     <template #profile>Latest: v.1.1.0</template>
     <template #logo>
@@ -17,6 +16,10 @@
       <ReleaseNotes />
     </template>
     <template #bar>
+      <div class="mb-3">
+        <axdd-color-mode></axdd-color-mode>
+      </div>
+
       <div
         class="alert alert-warning alert-dismissible mb-5 fade show border-0 border-warning border-start border-5 rounded-0"
         role="alert"

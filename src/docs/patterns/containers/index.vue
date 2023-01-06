@@ -49,14 +49,6 @@
             :version="'1.0.5'"
           ></CompDescription>
         </li>
-        <li class="col-4">
-          <CompDescription
-            :name="'Profile'"
-            :link="'/patterns/containers/profile'"
-            :accessibility="true"
-            :version="'1.0.5'"
-          ></CompDescription>
-        </li>
       </ul>
     </template>
   </Layout>

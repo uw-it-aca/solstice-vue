@@ -5,7 +5,7 @@
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/patterns/">Patterns</a></li>
           <li class="breadcrumb-item">
-            <a href="/patterns/navigation/">Navigation</a>
+            <a href="/patterns/layout/">Layout</a>
           </li>
           <li class="breadcrumb-item active" aria-current="page">Color Mode</li>
         </ol>

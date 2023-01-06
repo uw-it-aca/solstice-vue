@@ -161,8 +161,8 @@
             <router-link
               class="nav-link rounded-3 bg-opaque-hover text-muted"
               active-class="bg-opaque text-black"
-              to="/patterns/layouts"
-              >Layouts</router-link
+              to="/patterns/layout"
+              >Layout</router-link
             >
           </li>
           <li class="nav-item mb-1">

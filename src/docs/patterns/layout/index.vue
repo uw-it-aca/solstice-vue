@@ -4,11 +4,11 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/patterns/">Patterns</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Layouts</li>
+          <li class="breadcrumb-item active" aria-current="page">Layout</li>
         </ol>
       </nav>
 
-      <h1 class="fw-bold">Layouts</h1>
+      <h1 class="fw-bold">Layout</h1>
 
       <p class="p-0 col-md-8 lead text-muted">
         Patterns are UI Patterns that fall on the more complex side of the
@@ -22,7 +22,7 @@
         <li class="col-4">
           <CompDescription
             :name="'Topbar'"
-            :link="'/patterns/layouts/topbar'"
+            :link="'/patterns/layout/topbar'"
             :accessibility="true"
             :version="'1.0.5'"
           ></CompDescription>
@@ -30,7 +30,23 @@
         <li class="col-4">
           <CompDescription
             :name="'Sidebar'"
-            :link="'/patterns/layouts/sidebar'"
+            :link="'/patterns/layout/sidebar'"
+            :accessibility="true"
+            :version="'1.0.5'"
+          ></CompDescription>
+        </li>
+        <li class="col-4">
+          <CompDescription
+            :name="'Profile'"
+            :link="'/patterns/layout/profile'"
+            :accessibility="true"
+            :version="'1.0.5'"
+          ></CompDescription>
+        </li>
+        <li class="col-4">
+          <CompDescription
+            :name="'Color Mode'"
+            :link="'/patterns/layout/color-mode'"
             :accessibility="true"
             :version="'1.0.5'"
           ></CompDescription>

@@ -1,5 +1,5 @@
 <template>
-  <div class="card border shadow-sm rounded-3 mb-4">
+  <div class="card shadow-sm rounded-3 mb-4">
     <div
       v-if="$slots['heading']"
       class="card-header bg-transparent border-0 rounded-top p-3"

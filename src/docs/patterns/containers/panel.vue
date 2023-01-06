@@ -19,24 +19,27 @@
 
       <hr class="mb-5 w-25 d-inline-block" />
 
-
-      <axdd-panel class="text-bg-light-beige">
-        <h2 class="card-title">heading</h2>
-        asdfjadlskj
-      </axdd-panel>
-
-
+      <CodeBlock>
+        <template #preview>
+          <axdd-panel class="text-bg-light-beige" style="max-width: 600px">
+            <h2 class="card-title">heading</h2>
+            asdfjadlskj
+          </axdd-panel>
+        </template>
+      </CodeBlock>
     </template>
   </Layout>
 </template>
 
 <script>
 import Layout from "../../../layout.vue";
+import CodeBlock from "../../../components/CodeBlock.vue";
 
 export default {
   name: "DocsPatternsPanel",
   components: {
     Layout,
+    CodeBlock,
   },
   data() {
     return {};

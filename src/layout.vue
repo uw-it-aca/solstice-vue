@@ -8,7 +8,7 @@
   >
     <template #profile><div class="text-light">Latest: v.1.1.0</div></template>
     <template #logo>
-      <i class="bi bi-cup-fill text-purple"></i>
+      <i class="bi bi-cup-hot-fill text-white"></i>
     </template>
     <template #navigation>
       <NavMenu />

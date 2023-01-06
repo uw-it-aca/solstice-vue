@@ -2,7 +2,7 @@
   <ul class="nav flex-column mb-5">
     <li class="nav-item mb-1 position-relative">
       <router-link
-        class="d-flex justify-content-between nav-link rounded-3 bg-opaque-hover text-reset chevron"
+        class="d-flex justify-content-between nav-link rounded-3 bg-opaque-hover chevron text-light"
         active-class="bg-opaque text-black"
         to="/start/"
         id="flush-heading2"
@@ -23,7 +23,7 @@
         <ul class="nav flex-column small fw-light mt-1">
           <li class="nav-item mb-1">
             <router-link
-              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              class="nav-link rounded-3 bg-opaque-hover text-light"
               active-class="bg-opaque text-black"
               to="/start/principles"
               >Principles</router-link
@@ -31,7 +31,7 @@
           </li>
           <li class="nav-item mb-1">
             <router-link
-              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              class="nav-link rounded-3 bg-opaque-hover text-light"
               active-class="bg-opaque text-black"
               to="/start/designers"
               >Designers</router-link
@@ -39,7 +39,7 @@
           </li>
           <li class="nav-item">
             <router-link
-              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              class="nav-link rounded-3 bg-opaque-hover text-light"
               active-class="bg-opaque text-black"
               to="/start/developers"
               >Developers</router-link
@@ -50,7 +50,7 @@
     </li>
     <li class="nav-item mb-1 position-relative">
       <router-link
-        class="d-flex justify-content-between nav-link rounded-3 bg-opaque-hover text-reset chevron"
+        class="d-flex justify-content-between nav-link rounded-3 bg-opaque-hover text-light chevron"
         active-class="bg-opaque text-black"
         to="/content/"
         id="flush-heading3"
@@ -71,7 +71,7 @@
         <ul class="nav flex-column small fw-light mt-1">
           <li class="nav-item mb-1">
             <router-link
-              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              class="nav-link rounded-3 bg-opaque-hover text-light"
               active-class="bg-opaque text-black"
               to="/content/voice"
               >Voice &amp; Tone</router-link
@@ -79,7 +79,7 @@
           </li>
           <li class="nav-item mb-1">
             <router-link
-              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              class="nav-link rounded-3 bg-opaque-hover text-light"
               active-class="bg-opaque text-black"
               to="/content/grammar"
               >Grammar &amp; Mechanics</router-link
@@ -87,7 +87,7 @@
           </li>
           <li class="nav-item mb-1">
             <router-link
-              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              class="nav-link rounded-3 bg-opaque-hover text-light"
               active-class="bg-opaque text-black"
               to="/content/language"
               >Language &amp; Inclusivity</router-link
@@ -95,7 +95,7 @@
           </li>
           <li class="nav-item mb-1">
             <router-link
-              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              class="nav-link rounded-3 bg-opaque-hover text-light"
               active-class="bg-opaque text-black"
               to="/content/errors"
               >Errors</router-link
@@ -103,7 +103,7 @@
           </li>
           <li class="nav-item mb-1">
             <router-link
-              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              class="nav-link rounded-3 bg-opaque-hover text-light"
               active-class="bg-opaque text-black"
               to="/content/state"
               >Page State</router-link
@@ -111,7 +111,7 @@
           </li>
           <li class="nav-item">
             <router-link
-              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              class="nav-link rounded-3 bg-opaque-hover text-light"
               active-class="bg-opaque text-black"
               to="/content/onboarding"
               >Onboarding</router-link
@@ -122,7 +122,7 @@
     </li>
     <li class="nav-item mb-1">
       <router-link
-        class="nav-link rounded-3 bg-opaque-hover text-reset"
+        class="nav-link rounded-3 bg-opaque-hover text-light"
         active-class="bg-opaque text-black"
         to="/foundations/"
         >Foundations</router-link
@@ -130,7 +130,7 @@
     </li>
     <li class="nav-item mb-1">
       <router-link
-        class="nav-link rounded-3 bg-opaque-hover text-reset"
+        class="nav-link rounded-3 bg-opaque-hover text-light"
         active-class="bg-opaque text-black"
         to="/elements/"
         >Elements</router-link
@@ -138,7 +138,7 @@
     </li>
     <li class="nav-item mb-1">
       <router-link
-        class="d-flex justify-content-between nav-link rounded-3 bg-opaque-hover text-reset chevron"
+        class="d-flex justify-content-between nav-link rounded-3 bg-opaque-hover text-light chevron"
         active-class="bg-opaque text-black"
         to="/patterns/"
         id="flush-heading1"
@@ -159,7 +159,7 @@
         <ul class="nav flex-column small fw-light mt-1">
           <li class="nav-item mb-1">
             <router-link
-              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              class="nav-link rounded-3 bg-opaque-hover text-light"
               active-class="bg-opaque text-black"
               to="/patterns/layout"
               >Layout</router-link
@@ -167,7 +167,7 @@
           </li>
           <li class="nav-item mb-1">
             <router-link
-              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              class="nav-link rounded-3 bg-opaque-hover text-light"
               active-class="bg-opaque text-black"
               to="/patterns/navigation"
               >Navigation</router-link
@@ -175,7 +175,7 @@
           </li>
           <li class="nav-item mb-1">
             <router-link
-              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              class="nav-link rounded-3 bg-opaque-hover text-light"
               active-class="bg-opaque text-black"
               to="/patterns/containers"
               >Containers</router-link
@@ -183,7 +183,7 @@
           </li>
           <li class="nav-item mb-1">
             <router-link
-              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              class="nav-link rounded-3 bg-opaque-hover text-light"
               active-class="bg-opaque text-black"
               to="/patterns/messaging"
               >Messaging</router-link
@@ -191,7 +191,7 @@
           </li>
           <li class="nav-item mb-1">
             <router-link
-              class="nav-link rounded-3 bg-opaque-hover text-muted"
+              class="nav-link rounded-3 bg-opaque-hover text-light"
               active-class="bg-opaque text-black"
               to="/patterns/feedback"
               >Feedback</router-link

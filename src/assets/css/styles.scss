@@ -30,7 +30,7 @@ $theme-colors: (
 @import "node_modules/bootstrap/scss/variables-dark";
 
 // override card border color
-$card-border-color: $gray-200;
+//$card-border-color: $gray-200;
 
 // 4. include default map overrides
 
@@ -46,7 +46,6 @@ $custom-colors: (
   "teal": #4c7286,
   "light-gray": #e8e8e8,
   "gray": #e9ecef,
-  "white": #fff,
   "opaque": transparentize(black, 0.95),
   "transparent": transparent,
 );

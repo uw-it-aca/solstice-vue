@@ -10,11 +10,7 @@
       :style="[!mq.mdMinus ? 'min-width: 280px; max-width:280px;' : '']"
     >
       <header>
-        <div
-          v-if="$slots['profile']"
-          class="py-2 px-3 small bg-opaque"
-          :class="[variant === 'dark' ? 'text-white' : 'text-dark']"
-        >
+        <div v-if="$slots['profile']" class="py-2 px-3 small bg-opaque">
           <slot name="profile">
             <div class="d-flex">
               <div class="flex-fill">username</div>
@@ -34,11 +30,6 @@
           <a
             v-if="$slots['navigation']"
             class="btn btn-link btn-sm d-lg-none border border-1 rounded-3 py-0 px-1 me-2"
-            :class="[
-              variant === 'dark'
-                ? 'text-white border-white'
-                : 'text-dark border-dark',
-            ]"
             data-bs-toggle="collapse"
             data-bs-target="#sidebar-nav-collapse"
             role="button"
@@ -49,12 +40,12 @@
             <i class="bi bi-list fw-bold fs-6"></i>
           </a>
           <div
-            class="d-inline align-middle text-white"
+            class="d-inline align-middle"
             :class="[mq.mdPlus ? 'h2' : 'h3']"
           >
             <router-link
               :to="appRootUrl"
-              class="axdd-font-encode-sans text-decoration-none text-white"
+              class="axdd-font-encode-sans text-decoration-none text-light"
             >
               <span v-if="$slots['logo']" class="me-2">
                 <slot name="logo"><i class="bi bi-box-fill"></i></slot></span
@@ -70,11 +61,7 @@
           :class="[!mq.mdMinus ? 'collapse.show' : 'collapse']"
         >
           <!-- main sidebar navigation -->
-          <nav
-            v-if="$slots['navigation']"
-            role="navigation"
-            :class="[variant === 'dark' ? 'text-white' : 'text-dark']"
-          >
+          <nav v-if="$slots['navigation']" role="navigation">
             <slot name="navigation">
               <ul class="text-white">
                 <li>nav 1</li>
@@ -84,25 +71,12 @@
               </ul>
             </slot>
           </nav>
-          <aside
-            v-if="$slots['aside']"
-            :class="[variant === 'dark' ? 'text-white' : 'text-dark']"
-            class="mb-5"
-          >
+          <aside v-if="$slots['aside']" class="mb-5">
             <slot name="aside">this is aside content</slot>
           </aside>
         </div>
       </div>
-      <div
-        :class="[
-          variant === 'dark'
-            ? 'axdd-sidebar-logo-dark'
-            : 'axdd-sidebar-logo-light',
-        ]"
-        class=""
-      >
-        &nbsp;
-      </div>
+      <div class="axdd-sidebar-logo">&nbsp;</div>
     </div>
 
     <div
@@ -184,10 +158,6 @@ export default {
       type: String,
       default: "#",
     },
-    variant: {
-      type: String,
-      default: "dark",
-    },
     isPreview: {
       type: Boolean,
       default: false,
@@ -209,7 +179,7 @@ export default {
   line-height: 105px;
 }
 
-.axdd-sidebar-logo-dark {
+.axdd-sidebar-logo {
   background-image: url("../../assets/images/w-logo-white.png");
   background-repeat: no-repeat;
   background-size: 45px;

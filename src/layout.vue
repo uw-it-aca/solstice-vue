@@ -3,12 +3,12 @@
     :app-name="'Solstice'"
     :user-name="'javerage'"
     :app-root-url="'/'"
-    :variant="'dark'"
-    :sidebar-class="'bg-success'"
+    :variant="'light'"
+    :sidebar-class="'bg-light'"
   >
     <template #profile>Latest: v.1.1.0</template>
     <template #logo>
-      <i class="bi bi-cup-fill"></i>
+      <i class="bi bi-cup-fill text-purple"></i>
     </template>
     <template #navigation>
       <NavMenu />

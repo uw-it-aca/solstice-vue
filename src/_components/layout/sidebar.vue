@@ -6,6 +6,7 @@
     <div
       :class="[!mq.mdMinus ? 'overflow-auto ' + sidebarClass : '']"
       class="axdd-sidebar d-flex flex-column"
+      data-bs-theme="dark"
       :style="[!mq.mdMinus ? 'min-width: 280px; max-width:280px;' : '']"
     >
       <header>
@@ -53,8 +54,7 @@
           >
             <router-link
               :to="appRootUrl"
-              class="axdd-font-encode-sans text-decoration-none"
-              :class="[variant === 'dark' ? 'text-white' : 'text-dark']"
+              class="axdd-font-encode-sans text-decoration-none text-white"
             >
               <span v-if="$slots['logo']" class="me-2">
                 <slot name="logo"><i class="bi bi-box-fill"></i></slot></span
@@ -107,7 +107,7 @@
 
     <div
       :class="[!mq.mdMinus ? 'flex-fill overflow-auto' : '']"
-      class=""
+      class="bg-body text-body"
       style="padding-top: 37px !important"
     >
       <div

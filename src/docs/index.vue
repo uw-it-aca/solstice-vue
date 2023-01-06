@@ -51,7 +51,7 @@
           <PatternDescription
             :name="'Designers'"
             :link="'/start/designers'"
-            class="bg-light"
+            class="text-bg-light-beige"
           >
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
@@ -65,7 +65,7 @@
           <PatternDescription
             :name="'Developers'"
             :link="'/start/developers'"
-            class="bg-light"
+            class="text-bg-purple"
           >
             <p>
               Learn how to create global components that can be used by other

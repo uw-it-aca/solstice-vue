@@ -18,6 +18,14 @@
       </p>
 
       <hr class="mb-5 w-25 d-inline-block" />
+
+
+      <axdd-panel class="text-bg-light-beige">
+        <h2 class="card-title">heading</h2>
+        asdfjadlskj
+      </axdd-panel>
+
+
     </template>
   </Layout>
 </template>

@@ -64,10 +64,10 @@
           <ul class="list-inline m-0">
             <li class="list-inline-item">
               <div
-                class="bg-dark-purple rounded"
+                class="text-bg-dark-purple rounded p-2"
                 style="width: 85px; height: 60px"
               >
-                &nbsp;
+                hello
               </div>
               <small
                 >dark-purple<br />
@@ -75,8 +75,8 @@
               >
             </li>
             <li class="list-inline-item">
-              <div class="bg-purple rounded" style="width: 85px; height: 60px">
-                &nbsp;
+              <div class="text-bg-purple rounded p-2" style="width: 85px; height: 60px">
+                hello
               </div>
               <small
                 >purple<br />
@@ -85,10 +85,10 @@
             </li>
             <li class="list-inline-item">
               <div
-                class="bg-dark-beige rounded"
+                class="text-bg-dark-beige rounded p-2"
                 style="width: 85px; height: 60px"
               >
-                &nbsp;
+                hello
               </div>
               <small
                 >dark-beige<br />
@@ -97,10 +97,10 @@
             </li>
             <li class="list-inline-item">
               <div
-                class="bg-mid-beige rounded"
+                class="text-bg-mid-beige rounded p-2"
                 style="width: 85px; height: 60px"
               >
-                &nbsp;
+                hello
               </div>
               <small
                 >mid-beige<br />
@@ -108,8 +108,11 @@
               >
             </li>
             <li class="list-inline-item">
-              <div class="bg-beige rounded" style="width: 85px; height: 60px">
-                &nbsp;
+              <div
+                class="text-bg-beige rounded p-2"
+                style="width: 85px; height: 60px"
+              >
+                hello
               </div>
               <small
                 >beige<br />
@@ -118,10 +121,10 @@
             </li>
             <li class="list-inline-item">
               <div
-                class="bg-light-beige rounded"
+                class="text-bg-light-beige rounded p-2"
                 style="width: 85px; height: 60px"
               >
-                &nbsp;
+                hello
               </div>
               <small
                 >light-beige<br />
@@ -129,8 +132,11 @@
               >
             </li>
             <li class="list-inline-item">
-              <div class="bg-gold rounded" style="width: 85px; height: 60px">
-                &nbsp;
+              <div
+                class="text-bg-gold rounded p-2"
+                style="width: 85px; height: 60px"
+              >
+                hello
               </div>
               <small
                 >gold<br />
@@ -138,8 +144,11 @@
               >
             </li>
             <li class="list-inline-item">
-              <div class="bg-teal rounded" style="width: 85px; height: 60px">
-                &nbsp;
+              <div
+                class="text-bg-teal rounded p-2"
+                style="width: 85px; height: 60px"
+              >
+                hello
               </div>
               <small
                 >teal<br />
@@ -148,10 +157,10 @@
             </li>
             <li class="list-inline-item">
               <div
-                class="bg-light-gray rounded"
+                class="text-bg-light-gray rounded p-2"
                 style="width: 85px; height: 60px"
               >
-                &nbsp;
+                <h5>hello</h5>
               </div>
               <small
                 >light-gray<br />

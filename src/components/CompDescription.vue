@@ -1,5 +1,5 @@
 <template>
-  <div class="card rounded-3 border border-gray mb-3">
+  <div class="card rounded-3 border mb-3">
     <div class="card-body d-flex flex-column">
       <h2>{{ name }}</h2>
       <div class="flex-fill">

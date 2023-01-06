@@ -4,6 +4,7 @@
 // import LinkButton from "./link-button.vue";
 
 import ColorMode from "./color-mode.vue";
+import Panel from "./panel.vue";
 
 // 1.0.5
 import Profile from "./profile.vue";
@@ -44,4 +45,5 @@ export default {
   Sidebar,
   Topbar,
   ColorMode,
+  Panel,
 };

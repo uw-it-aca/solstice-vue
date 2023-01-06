@@ -4,9 +4,9 @@
     :user-name="'javerage'"
     :app-root-url="'/'"
     :variant="'light'"
-    :sidebar-class="'bg-light'"
+    :sidebar-class="'bg-purple'"
   >
-    <template #profile>Latest: v.1.1.0</template>
+    <template #profile><div class="text-light">Latest: v.1.1.0</div></template>
     <template #logo>
       <i class="bi bi-cup-fill text-purple"></i>
     </template>

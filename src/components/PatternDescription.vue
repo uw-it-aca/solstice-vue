@@ -1,9 +1,9 @@
 <template>
   <div
-    class="d-flex flex-column flex-fill p-3 rounded-3"
+    class="d-flex flex-column flex-fill p-4 rounded-3 border-0"
     style="min-height: 230px"
   >
-    <h2>{{ name }}</h2>
+    <h2 class="card-title">{{ name }}</h2>
     <div class="flex-fill">
       <slot>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse labore

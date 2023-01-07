@@ -13,22 +13,28 @@
 
       <ul class="row list-unstyled">
         <li class="col-4 mb-3">
-          <PatternDescription
-            :name="'Layouts'"
-            :link="'/patterns/layouts'"
-            class="bg-light"
-          >
-            <p>aasdflkjasdlkfj lksadjf alsfdkj</p>
-          </PatternDescription>
+          <axdd-panel class="bg-opaque flex-fill">
+            <h3 class="card-title">Layout</h3>
+            <p class="flex-fill">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
+              nostrum beatae aperiam nesciunt voluptate.
+            </p>
+            <div class="text-end">
+              <router-link to="/patterns/layout">View Layout</router-link>
+            </div>
+          </axdd-panel>
         </li>
         <li class="col-4">
-          <PatternDescription
-            :name="'Navigation'"
-            :link="'/patterns/navigation'"
-            class="bg-light"
-          >
-            <p>aasdflkjasdlkfj lksadjf alsfdkj</p>
-          </PatternDescription>
+          <axdd-panel class="bg-opaque text-body flex-fill">
+            <h3 class="card-title">Navigation</h3>
+            <p class="flex-fill">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
+              nostrum beatae aperiam nesciunt voluptate.
+            </p>
+            <div class="text-end">
+              <router-link to="/patterns/navigation">View Navigation</router-link>
+            </div>
+          </axdd-panel>
         </li>
         <li class="col-4">
           <PatternDescription

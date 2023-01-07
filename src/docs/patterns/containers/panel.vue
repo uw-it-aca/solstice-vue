@@ -4,7 +4,10 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/patterns/">Patterns</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Containers</li>
+          <li class="breadcrumb-item">
+            <a href="/patterns/containers">Containers</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Panel</li>
         </ol>
       </nav>
 

@@ -127,16 +127,6 @@ $color-mode-type: data;
   }
 }
 
-// Generate contextual modifier classes for colorizing the alert
-@each $state in map-keys($theme-colors) {
-  .alert-#{$state} {
-    --#{$prefix}alert-color: var(--#{$prefix}#{$state}-text);
-    --#{$prefix}alert-bg: var(--#{$prefix}#{$state}-bg-subtle);
-    --#{$prefix}alert-border-color: var(--#{$prefix}#{$state}-border-subtle);
-    --#{$prefix}alert-link-color: var(--#{$prefix}#{$state}-text);
-  }
-}
-
 // 7. include utilities api and import bootstrap last
 @import "node_modules/bootstrap/scss/utilities/api";
 @import "node_modules/bootstrap/scss/bootstrap";

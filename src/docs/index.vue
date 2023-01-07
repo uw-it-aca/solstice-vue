@@ -48,25 +48,22 @@
 
       <div class="row mb-5">
         <div class="col d-flex flex-column">
-          <PatternDescription
-            :name="'Designers'"
-            :link="'/start/designers'"
-            class="text-bg-light-beige"
-          >
-            <p>
+          <axdd-panel class="text-bg-light-beige flex-fill">
+            <h3 class="card-title">Designers</h3>
+            <p class="flex-fill">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
               nostrum beatae aperiam nesciunt voluptate. Placeat ipsum libero
               similique enim labore corrupti porro iure commodi laborum iste
               itaque, magnam voluptate esse.
             </p>
-          </PatternDescription>
+            <div class="text-end">
+              <router-link to="/start/designers">View Designers</router-link>
+            </div>
+          </axdd-panel>
         </div>
         <div class="col d-flex flex-column">
-          <PatternDescription
-            :name="'Developers'"
-            :link="'/start/developers'"
-            class="text-bg-purple"
-          >
+          <axdd-panel class="text-bg-purple flex-fill">
+            <h3 class="card-title">Developers</h3>
             <p>
               Learn how to create global components that can be used by other
               applications as well as creating brand new applications.
@@ -82,7 +79,10 @@
                 (generic)
               </li>
             </ul>
-          </PatternDescription>
+            <div class="text-end">
+              <router-link to="/start/developers">View Developers</router-link>
+            </div>
+          </axdd-panel>
         </div>
       </div>
 

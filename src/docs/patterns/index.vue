@@ -13,7 +13,7 @@
 
       <ul class="row list-unstyled">
         <li class="col-4 mb-3">
-          <axdd-panel class="bg-opaque flex-fill">
+          <axdd-panel class="bg-black bg-opacity-10 flex-fill">
             <h3 class="card-title">Layout</h3>
             <p class="flex-fill">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
@@ -25,7 +25,7 @@
           </axdd-panel>
         </li>
         <li class="col-4">
-          <axdd-panel class="bg-opaque text-body flex-fill">
+          <axdd-panel class="bg-black bg-opacity-10 text-body flex-fill">
             <h3 class="card-title">Navigation</h3>
             <p class="flex-fill">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto

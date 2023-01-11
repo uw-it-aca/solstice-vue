@@ -160,11 +160,35 @@
                 class="text-bg-light-gray rounded p-2"
                 style="width: 85px; height: 60px"
               >
-                <h5>hello</h5>
+                hello
               </div>
               <small
                 >light-gray<br />
                 #e8e8e8</small
+              >
+            </li>
+            <li class="list-inline-item">
+              <div
+                class="text-bg-gray rounded p-2"
+                style="width: 85px; height: 60px"
+              >
+                hello
+              </div>
+              <small
+                >gray<br />
+                #e9ecef</small
+              >
+            </li>
+            <li class="list-inline-item">
+              <div
+                class="text-bg-dark bg-opacity-10 rounded p-2"
+                style="width: 85px; height: 60px"
+              >
+                hello
+              </div>
+              <small
+                >bg-opacity-10<br />
+                90% black</small
               >
             </li>
           </ul>

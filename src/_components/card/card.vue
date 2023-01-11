@@ -18,7 +18,7 @@
 
     <div
       v-if="$slots['footer']"
-      class="card-footer bg-opaque border-0 rounded-bottom"
+      class="card-footer bg-black bg-opacity-10 border-0 rounded-bottom"
     >
       <slot name="footer"></slot>
     </div>

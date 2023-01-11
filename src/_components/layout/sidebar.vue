@@ -10,7 +10,7 @@
       :style="[!mq.mdMinus ? 'min-width: 280px; max-width:280px;' : '']"
     >
       <header>
-        <div v-if="$slots['profile']" class="py-2 px-3 small bg-opaque">
+        <div v-if="$slots['profile']" class="py-2 px-3 small bg-black bg-opacity-10">
           <slot name="profile">
             <div class="d-flex">
               <div class="flex-fill">username</div>

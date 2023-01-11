@@ -1,6 +1,8 @@
 {
   "name": "axdd-components",
-  "version": "1.0.6",
+  "type": "module",
+  "version": "task/dark-mode",
+  "private": true,
   "main": "./dist/axdd-components.umd.cjs",
   "module": "./dist/axdd-components.js",
   "files": [

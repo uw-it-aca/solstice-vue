@@ -2,7 +2,7 @@ import { getCurrentInstance as he, onMounted as ve, nextTick as ne, unref as me,
 var H;
 const L = typeof window < "u", Ne = (e) => typeof e == "function", Ce = (e) => typeof e == "string", Te = () => {
 };
-L && ((H = window == null ? void 0 : window.navigator) == null ? void 0 : H.userAgent) && /iP(ad|hone|od)/.test(window.navigator.userAgent);
+L && ((H = window == null ? void 0 : window.navigator) != null && H.userAgent) && /iP(ad|hone|od)/.test(window.navigator.userAgent);
 function le(e) {
   return typeof e == "function" ? e() : me(e);
 }
@@ -113,9 +113,9 @@ function Ge(e, s = {}) {
   const { window: t = A } = s, n = Je(() => t && "matchMedia" in t && typeof t.matchMedia == "function");
   let o;
   const r = j(!1), d = () => {
-    !o || ("removeEventListener" in o ? o.removeEventListener("change", v) : o.removeListener(v));
+    o && ("removeEventListener" in o ? o.removeEventListener("change", v) : o.removeListener(v));
   }, v = () => {
-    !n.value || (d(), o = t.matchMedia(qe(e).value), r.value = o.matches, "addEventListener" in o ? o.addEventListener("change", v) : o.addListener(v));
+    n.value && (d(), o = t.matchMedia(qe(e).value), r.value = o.matches, "addEventListener" in o ? o.addEventListener("change", v) : o.addListener(v));
   };
   return we(v), ce(() => d()), r;
 }
@@ -279,7 +279,7 @@ function dt(e = {}) {
     }
   }), O = pe("updateHTMLAttrs", ($, S, C) => {
     const M = o == null ? void 0 : o.document.querySelector($);
-    if (!!M)
+    if (M)
       if (S === "class") {
         const F = C.split(/\s/g);
         Object.values(m).flatMap((u) => (u || "").split(/\s/g)).filter(Boolean).forEach((u) => {
@@ -346,6 +346,7 @@ const h = (e, s) => {
   return t;
 }, ht = {
   name: "axdd-color-mode",
+  // composition in options api requires setup()
   setup() {
     return { colorMode: dt({
       emitAuto: !0,
@@ -502,6 +503,7 @@ const Xt = {
   name: "axdd-disclosure-action",
   props: {
     disclosureId: {
+      // must match tab panelId
       type: [String, Number],
       required: !0
     },
@@ -544,6 +546,7 @@ const as = /* @__PURE__ */ h(Xt, [["render", ss], ["__scopeId", "data-v-fa03efea
   name: "axdd-disclosure-panel",
   props: {
     disclosureId: {
+      // must match tab panelId
       type: [String, Number],
       required: !0
     }
@@ -670,6 +673,8 @@ function Ns(e, s, t, n, o, r) {
   });
 }
 const Cs = /* @__PURE__ */ h(Ps, [["render", Ns]]), Ts = {
+  // MARK: single word component names need to have a double word specification
+  // example 'action.vue' --> name: CardAction
   name: "axdd-card-action",
   data: function() {
     return {};
@@ -681,6 +686,8 @@ function Es(e, s, t, n, o, r) {
   ]);
 }
 const Ms = /* @__PURE__ */ h(Ts, [["render", Es]]), js = {
+  // MARK: single word component names need to have a double word specification
+  // example 'action.vue' --> name: CardAction
   name: "axdd-card-tabs",
   data: function() {
     return {};
@@ -701,6 +708,7 @@ const Ls = {
       default: "lines"
     },
     tabsId: {
+      // must match tab panelId
       type: [String, Number],
       required: !0
     }
@@ -727,6 +735,7 @@ const Us = /* @__PURE__ */ h(Ls, [["render", Ds]]), Vs = {
   name: "axdd-tabs-display",
   props: {
     tabsId: {
+      // must match tab panelId
       type: [String, Number],
       required: !0
     }
@@ -749,10 +758,12 @@ const Ws = /* @__PURE__ */ h(Vs, [["render", Qs]]), zs = {
       default: "lines"
     },
     panelId: {
+      // must match tab panelId
       type: [String, Number],
       required: !0
     },
     tabsId: {
+      // must match tab panelId
       type: [String, Number],
       required: !0
     },
@@ -859,6 +870,7 @@ const Xs = /* @__PURE__ */ h(zs, [["render", Ys]]), Zs = {
   name: "axdd-tabs-panel",
   props: {
     panelId: {
+      // must match tab panelId
       type: [String, Number],
       required: !0
     },
@@ -949,7 +961,7 @@ const aa = {
 ], -1), ma = {
   key: 1,
   class: "mb-5"
-}, ba = /* @__PURE__ */ a("div", { class: "axdd-sidebar-logo" }, "\xA0", -1), ga = {
+}, ba = /* @__PURE__ */ a("div", { class: "axdd-sidebar-logo" }, " ", -1), ga = {
   key: 0,
   class: "row"
 }, ya = { class: "col" }, wa = /* @__PURE__ */ a("div", { class: "bg-gray py-2 text-center" }, " default gray bar (default) ", -1), $a = { class: "flex-fill" }, xa = {
@@ -1047,7 +1059,7 @@ function Sa(e, s, t, n, o, r) {
           c(e.$slots, "footer", {}, () => [
             a("div", Oa, [
               ka,
-              a("div", null, " Copyright \xA9 " + _(new Date().getFullYear()) + " University of Washington ", 1)
+              a("div", null, " Copyright © " + _(new Date().getFullYear()) + " University of Washington ", 1)
             ])
           ])
         ])) : f("", !0)
@@ -1176,7 +1188,7 @@ function Ga(e, s, t, n, o, r) {
           c(e.$slots, "footer", {}, () => [
             a("div", Ka, [
               Ja,
-              a("div", null, " Copyright \xA9 " + _(new Date().getFullYear()) + " University of Washington ", 1)
+              a("div", null, " Copyright © " + _(new Date().getFullYear()) + " University of Washington ", 1)
             ])
           ])
         ])
@@ -1185,6 +1197,9 @@ function Ga(e, s, t, n, o, r) {
   ], 2);
 }
 const Ya = /* @__PURE__ */ h(Pa, [["render", Ga]]), U = {
+  // CardProperty,
+  // CardStatus,
+  // LinkButton,
   Card: Is,
   CardHeading: Cs,
   CardAction: Ms,

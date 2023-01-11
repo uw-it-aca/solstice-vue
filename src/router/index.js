@@ -1,11 +1,9 @@
 import { createWebHistory, createRouter } from "vue-router";
 
-//import Home from "../pages/index.vue";
-//import MyApp from "../examples/my-app/home.vue";
-//import SupportTools from "../examples/support-tools/home.vue";
-import routes from "~pages";
+import Home from "../pages/index.vue";
+import Topbar from "../pages/topbar/index.vue";
+import Sidebar from "../pages/sidebar/index.vue";
 
-/*
 const routes = [
   {
     path: "/",
@@ -13,19 +11,18 @@ const routes = [
     component: Home,
   },
   {
-    path: "/support",
-    name: "Support",
-    component: SupportTools,
+    path: "/topbar",
+    name: "Topbar",
+    component: Topbar,
     pathToRegexpOptions: { strict: true },
   },
   {
-    path: "/myapp",
-    name: "MyApp",
-    component: MyApp,
+    path: "/sidebar",
+    name: "Sidebar",
+    component: Sidebar,
     pathToRegexpOptions: { strict: true },
   },
 ];
-*/
 
 const router = createRouter({
   history: createWebHistory(),

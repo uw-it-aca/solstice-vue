@@ -4,12 +4,14 @@
 AXDD VueJS Component Library
 
 * Vue 3
-* Vite 2
+* Vite 4
 * Bootstrap 5
 
 ## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (disable or uninstall Vetur)
+
+Optional: [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
 
 ## Customize configuration
 
@@ -27,17 +29,13 @@ npm install
 npm run dev
 ```
 
-### Compile and Build documentation website
-
-```sh
-npm run build:web
-```
-
 ### Compile and Build component library
 
 ```sh
-npm run build:lib
+npm run build
 ```
+
+This command will produce a /dist directory that will be imported by other apps.
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
 

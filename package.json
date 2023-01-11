@@ -1,8 +1,6 @@
 {
   "name": "axdd-components",
-  "type": "module",
   "version": "1.0.6",
-  "private": true,
   "main": "./dist/axdd-components.umd.cjs",
   "module": "./dist/axdd-components.js",
   "files": [

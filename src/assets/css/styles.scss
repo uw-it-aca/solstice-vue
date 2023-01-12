@@ -75,6 +75,9 @@ $font-sizes: map-merge($font-sizes, $extra-font-sizes);
 @import "node_modules/bootstrap/scss/grid";
 @import "node_modules/bootstrap/scss/helpers";
 
+// add or modify utilities here
+
+
 
 // 7. include utilities api and import bootstrap last
 @import "node_modules/bootstrap/scss/utilities/api";

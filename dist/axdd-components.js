@@ -920,12 +920,13 @@ const aa = {
     },
     sidebarClass: {
       type: String,
-      default: "#"
+      default: "bg-purple"
     },
     signOutUrl: {
       type: String,
       default: "#"
     },
+    // used for documentation site
     isPreview: {
       type: Boolean,
       default: !1
@@ -936,47 +937,50 @@ const aa = {
 }, na = {
   key: 0,
   class: "py-2 px-3 small bg-black bg-opacity-10"
-}, ra = { class: "d-flex" }, oa = /* @__PURE__ */ a("div", { class: "flex-fill" }, "username", -1), ia = { class: "flex-fill text-end" }, la = ["href"], da = {
+}, ra = { class: "d-flex" }, oa = /* @__PURE__ */ a("div", { class: "flex-fill" }, "username", -1), ia = { class: "flex-fill text-end" }, la = ["href"], da = { class: "d-inline-block align-middle" }, ca = {
   key: 0,
-  class: "btn btn-link btn-sm d-lg-none border border-1 rounded-3 py-0 px-1 me-2",
+  class: "me-2"
+}, ua = /* @__PURE__ */ a("i", { class: "bi bi-box-fill" }, null, -1), fa = {
+  key: 0,
+  class: "d-inline-block d-lg-none"
+}, _a = /* @__PURE__ */ a("a", {
+  class: "btn btn-link btn-sm border border-1 border-light rounded-3 py-0 px-1 text-light",
   "data-bs-toggle": "collapse",
   "data-bs-target": "#sidebar-nav-collapse",
   role: "button",
   "aria-expanded": "false",
   "aria-controls": "sidebar-nav-collapse",
   "aria-label": "Toggle Navigation Menu"
-}, ca = /* @__PURE__ */ a("i", { class: "bi bi-list fw-bold fs-6" }, null, -1), ua = [
-  ca
-], fa = {
-  key: 0,
-  class: "me-2"
-}, _a = /* @__PURE__ */ a("i", { class: "bi bi-box-fill" }, null, -1), pa = { class: "flex-fill" }, ha = {
+}, [
+  /* @__PURE__ */ a("i", { class: "bi bi-list fw-bold fs-6" })
+], -1), pa = [
+  _a
+], ha = { class: "flex-fill" }, va = {
   key: 0,
   role: "navigation"
-}, va = /* @__PURE__ */ a("ul", { class: "text-white" }, [
+}, ba = /* @__PURE__ */ a("ul", { class: "text-white" }, [
   /* @__PURE__ */ a("li", null, "nav 1"),
   /* @__PURE__ */ a("li", null, "nav 2"),
   /* @__PURE__ */ a("li", null, "nav 3"),
   /* @__PURE__ */ a("li", null, "nav 4")
-], -1), ba = {
+], -1), ma = {
   key: 1,
   class: "mb-5"
-}, ma = /* @__PURE__ */ a("div", { class: "axdd-sidebar-logo" }, " ", -1), ga = {
+}, ga = /* @__PURE__ */ a("div", { class: "axdd-sidebar-logo" }, " ", -1), ya = {
   key: 0,
   class: "row"
-}, ya = { class: "col" }, wa = /* @__PURE__ */ a("div", { class: "bg-gray py-2 text-center" }, " default gray bar (default) ", -1), $a = { class: "flex-fill" }, xa = {
+}, wa = { class: "col" }, $a = /* @__PURE__ */ a("div", { class: "bg-gray py-2 text-center" }, " default gray bar (default) ", -1), xa = { class: "flex-fill" }, Oa = {
   key: 1,
   class: "mt-auto"
-}, Oa = { class: "font-weight-light py-3 small" }, ka = /* @__PURE__ */ ie('<ul class="list-inline m-0"><ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/">Terms</a></li></ul></ul>', 1);
-function Sa(e, s, t, n, o, r) {
+}, ka = { class: "font-weight-light py-3 small" }, Sa = /* @__PURE__ */ ie('<ul class="list-inline m-0"><ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/">Terms</a></li></ul></ul>', 1);
+function Ia(e, s, t, n, o, r) {
   const d = re("router-link");
   return i(), l("div", {
     class: p([r.mq.mdMinus ? "" : "d-flex vh-100"]),
     style: R([t.isPreview ? "min-height: auto !important;" : ""])
   }, [
     a("div", {
-      class: p([[r.mq.mdMinus ? "" : "overflow-auto " + t.sidebarClass], "axdd-sidebar d-flex flex-column"]),
-      "data-bs-theme": "dark",
+      class: p([t.sidebarClass + [r.mq.mdMinus ? "" : " overflow-auto"], "axdd-sidebar d-flex flex-column"]),
       style: R([r.mq.mdMinus ? "" : "min-width: 280px; max-width:280px;"])
     }, [
       a("header", null, [
@@ -996,47 +1000,45 @@ function Sa(e, s, t, n, o, r) {
         a("div", {
           class: p([[
             r.mq.lgMinus ? "axdd-sidebar-brand-sm" : "axdd-sidebar-brand"
-          ], "px-3"])
+          ], "d-flex justify-content-between px-3"])
         }, [
-          e.$slots.navigation ? (i(), l("a", da, ua)) : f("", !0),
-          a("div", {
-            class: p(["d-inline align-middle", [r.mq.mdPlus ? "h2" : "h3"]])
-          }, [
+          a("div", da, [
             oe(d, {
               to: t.appRootUrl,
-              class: "axdd-font-encode-sans text-decoration-none text-light"
+              class: p(["axdd-font-encode-sans text-decoration-none text-light", [r.mq.mdPlus ? "h2" : "h3"]])
             }, {
               default: z(() => [
-                e.$slots.logo ? (i(), l("span", fa, [
+                e.$slots.logo ? (i(), l("span", ca, [
                   c(e.$slots, "logo", {}, () => [
-                    _a
+                    ua
                   ])
                 ])) : f("", !0),
                 I(_(t.appName), 1)
               ]),
               _: 3
-            }, 8, ["to"])
-          ], 2)
+            }, 8, ["to", "class"])
+          ]),
+          e.$slots.navigation ? (i(), l("div", fa, pa)) : f("", !0)
         ], 2)
       ]),
-      a("div", pa, [
+      a("div", ha, [
         a("div", {
           id: "sidebar-nav-collapse",
           class: p(["px-3", [r.mq.mdMinus ? "collapse" : "collapse.show"]])
         }, [
-          e.$slots.navigation ? (i(), l("nav", ha, [
+          e.$slots.navigation ? (i(), l("nav", va, [
             c(e.$slots, "navigation", {}, () => [
-              va
+              ba
             ])
           ])) : f("", !0),
-          e.$slots.aside ? (i(), l("aside", ba, [
+          e.$slots.aside ? (i(), l("aside", ma, [
             c(e.$slots, "aside", {}, () => [
               I("this is aside content")
             ])
           ])) : f("", !0)
         ], 2)
       ]),
-      ma
+      ga
     ], 6),
     a("div", {
       class: p([[r.mq.mdMinus ? "" : "flex-fill overflow-auto"], "bg-body text-body"]),
@@ -1045,20 +1047,20 @@ function Sa(e, s, t, n, o, r) {
       a("div", {
         class: p([[t.isPreview ? "" : "min-vh-100"], "container-xl d-flex flex-column"])
       }, [
-        e.$slots.bar ? (i(), l("div", ga, [
-          a("div", ya, [
+        e.$slots.bar ? (i(), l("div", ya, [
+          a("div", wa, [
             c(e.$slots, "bar", {}, () => [
-              wa
+              $a
             ])
           ])
         ])) : f("", !0),
-        a("main", $a, [
+        a("main", xa, [
           c(e.$slots, "main")
         ]),
-        e.$slots.footer ? (i(), l("footer", xa, [
+        e.$slots.footer ? (i(), l("footer", Oa, [
           c(e.$slots, "footer", {}, () => [
-            a("div", Oa, [
-              ka,
+            a("div", ka, [
+              Sa,
               a("div", null, " Copyright © " + _(new Date().getFullYear()) + " University of Washington ", 1)
             ])
           ])
@@ -1067,8 +1069,8 @@ function Sa(e, s, t, n, o, r) {
     ], 2)
   ], 6);
 }
-const Ia = /* @__PURE__ */ h(aa, [["render", Sa]]);
-const Pa = {
+const Pa = /* @__PURE__ */ h(aa, [["render", Ia]]);
+const Na = {
   name: "axdd-topbar",
   inject: ["mq"],
   props: {
@@ -1091,10 +1093,10 @@ const Pa = {
   },
   created: function() {
   }
-}, Na = { class: "w-100" }, Ca = {
+}, Ca = { class: "w-100" }, Ta = {
   key: 0,
   class: "bg-dark-purple text-white py-2 small"
-}, Ta = { class: "container-xl" }, Ea = { class: "bg-purple axdd-topbar-brand" }, Ma = { class: "container-xl axdd-topbar-logo" }, ja = {
+}, Ea = { class: "container-xl" }, Ma = { class: "bg-purple axdd-topbar-brand" }, ja = { class: "container-xl axdd-topbar-logo" }, qa = {
   key: 0,
   class: "btn btn-link btn-sm d-xl-none border border-2 rounded-3 py-0 px-1 text-white me-2",
   "data-bs-toggle": "collapse",
@@ -1103,34 +1105,34 @@ const Pa = {
   "aria-expanded": "false",
   "aria-controls": "topbar-nav-collapse",
   "aria-label": "Toggle Navigation Menu"
-}, qa = /* @__PURE__ */ a("i", { class: "bi bi-list fw-bold text-white fs-6" }, null, -1), Aa = [
-  qa
-], La = { class: "w-100 flex-fill bg-white" }, Fa = { class: "container-xl" }, Ba = { class: "row" }, Da = { role: "navigation" }, Ua = { key: 0 }, Va = { class: "col" }, Ra = {
+}, Aa = /* @__PURE__ */ a("i", { class: "bi bi-list fw-bold text-white fs-6" }, null, -1), La = [
+  Aa
+], Fa = { class: "w-100 flex-fill bg-white" }, Ba = { class: "container-xl" }, Da = { class: "row" }, Ua = { role: "navigation" }, Va = { key: 0 }, Ra = { class: "col" }, Qa = {
   key: 0,
   class: "my-3"
-}, Qa = /* @__PURE__ */ a("div", { style: { outline: "dashed 1px lightgray" } }, [
+}, Wa = /* @__PURE__ */ a("div", { style: { outline: "dashed 1px lightgray" } }, [
   /* @__PURE__ */ a("h1", null, "Hello world..."),
   /* @__PURE__ */ a("p", null, " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa. ")
-], -1), Wa = { class: "w-100" }, za = {
+], -1), za = { class: "w-100" }, Ha = {
   key: 0,
   class: "bg-dark text-white py-2 small"
-}, Ha = { class: "container-xl" }, Ka = { class: "text-white font-weight-light py-3" }, Ja = /* @__PURE__ */ ie('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/">Terms</a></li></ul>', 1);
-function Ga(e, s, t, n, o, r) {
+}, Ka = { class: "container-xl" }, Ja = { class: "text-white font-weight-light py-3" }, Ga = /* @__PURE__ */ ie('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/">Terms</a></li></ul>', 1);
+function Ya(e, s, t, n, o, r) {
   const d = re("router-link");
   return i(), l("div", {
     class: p([[t.isPreview ? " " : "min-vh-100"], "d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"])
   }, [
-    a("header", Na, [
-      e.$slots.profile ? (i(), l("div", Ca, [
-        a("div", Ta, [
+    a("header", Ca, [
+      e.$slots.profile ? (i(), l("div", Ta, [
+        a("div", Ea, [
           c(e.$slots, "profile", {}, () => [
             I("Welcome!")
           ])
         ])
       ])) : f("", !0),
-      a("div", Ea, [
-        a("div", Ma, [
-          e.$slots.navigation ? (i(), l("a", ja, Aa)) : f("", !0),
+      a("div", Ma, [
+        a("div", ja, [
+          e.$slots.navigation ? (i(), l("a", qa, La)) : f("", !0),
           a("div", {
             class: p(["d-inline align-middle text-white", [r.mq.xlPlus ? "h2" : "h3"]])
           }, [
@@ -1147,9 +1149,9 @@ function Ga(e, s, t, n, o, r) {
         ])
       ])
     ]),
-    a("div", La, [
-      a("div", Fa, [
-        a("div", Ba, [
+    a("div", Fa, [
+      a("div", Ba, [
+        a("div", Da, [
           e.$slots.navigation || e.$slots.aside ? (i(), l("div", {
             key: 0,
             class: "",
@@ -1159,35 +1161,35 @@ function Ga(e, s, t, n, o, r) {
               id: "topbar-nav-collapse",
               class: p([r.mq.xlPlus ? "collapse.show" : "collapse"])
             }, [
-              a("nav", Da, [
+              a("nav", Ua, [
                 c(e.$slots, "navigation")
               ]),
-              e.$slots.aside ? (i(), l("aside", Ua, [
+              e.$slots.aside ? (i(), l("aside", Va, [
                 c(e.$slots, "aside", {}, () => [
                   I("this is aside content")
                 ])
               ])) : f("", !0)
             ], 2)
           ], 4)) : f("", !0),
-          a("div", Va, [
-            e.$slots.bar ? (i(), l("div", Ra, [
+          a("div", Ra, [
+            e.$slots.bar ? (i(), l("div", Qa, [
               c(e.$slots, "bar")
             ])) : f("", !0),
             a("main", null, [
               c(e.$slots, "main", {}, () => [
-                Qa
+                Wa
               ])
             ])
           ])
         ])
       ])
     ]),
-    a("footer", Wa, [
-      e.$slots.footer ? (i(), l("div", za, [
-        a("div", Ha, [
+    a("footer", za, [
+      e.$slots.footer ? (i(), l("div", Ha, [
+        a("div", Ka, [
           c(e.$slots, "footer", {}, () => [
-            a("div", Ka, [
-              Ja,
+            a("div", Ja, [
+              Ga,
               a("div", null, " Copyright © " + _(new Date().getFullYear()) + " University of Washington ", 1)
             ])
           ])
@@ -1196,7 +1198,7 @@ function Ga(e, s, t, n, o, r) {
     ])
   ], 2);
 }
-const Ya = /* @__PURE__ */ h(Pa, [["render", Ga]]), U = {
+const Xa = /* @__PURE__ */ h(Na, [["render", Ya]]), U = {
   // CardProperty,
   // CardStatus,
   // LinkButton,
@@ -1212,11 +1214,11 @@ const Ya = /* @__PURE__ */ h(Pa, [["render", Ga]]), U = {
   TabsDisplay: Ws,
   TabsItem: Xs,
   TabsPanel: sa,
-  Sidebar: Ia,
-  Topbar: Ya,
+  Sidebar: Pa,
+  Topbar: Xa,
   ColorMode: wt,
   Panel: kt
-}, Za = {
+}, en = {
   install(e) {
     for (const s in U)
       if (Object.prototype.hasOwnProperty.call(U, s)) {
@@ -1226,5 +1228,5 @@ const Ya = /* @__PURE__ */ h(Pa, [["render", Ga]]), U = {
   }
 };
 export {
-  Za as default
+  en as default
 };

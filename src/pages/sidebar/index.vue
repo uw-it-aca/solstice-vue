@@ -60,11 +60,12 @@
       </ul>
     </template>
     <template #aside>
-      <div class="bg-black bg-opacity-10 p-3 border-0 small rounded-3">
+      <div class="bg-black bg-opacity-10 p-3 mb-5 border-0 small rounded-3">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex voluptates
         molestias hic. Esse ab inventore rerum, ipsa cupiditate quo. Aliquid
         optio, commodi sit fugit harum perspiciatis quia sunt fuga. Aliquam?
       </div>
+      <axdd-color-mode></axdd-color-mode>
     </template>
     <template #bar></template>
     <template #main>

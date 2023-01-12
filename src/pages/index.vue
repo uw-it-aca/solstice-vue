@@ -8,13 +8,11 @@
 
 <script>
 import Layout from "../layout.vue";
-import PatternDescription from "../components/PatternDescription.vue";
 
 export default {
   name: "DocsIndex",
   components: {
     Layout,
-    PatternDescription,
   },
   data() {
     return {};

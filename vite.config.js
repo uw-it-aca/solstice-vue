@@ -15,7 +15,7 @@ export default defineConfig({
   build: {
     lib: {
       // Could also be a dictionary or array of multiple entry points
-      entry: "src/_components/index.js",
+      entry: "src/components/index.js",
       name: "AxddComponents",
       // the proper extensions will be added
       fileName: "axdd-components",

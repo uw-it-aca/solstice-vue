@@ -1,33 +1,52 @@
 <template>
-  <!-- docs.vue: this is the layout for documentation app -->
-  <div>
-    <header
-      class="d-flex align-items-center h4 border-bottom bg-purple text-white p-3"
-    ></header>
+  <div class="container-xl">
+    <div class="px-3">
+      <header
+        class="d-flex justify-content-between align-items-center pb-3 my-4 border-bottom"
+      >
+        <div class="h4 flex-fill">
+          <i class="bi bi-box-fill me-2 text-purple"></i>
+          <a href="/" class="text-reset text-decoration-none">{{ appName }}</a>
+        </div>
+      </header>
 
-    <main class="container">
-      <nav>
-        <ul>
-          <li>
-            <router-link :to="'/topbar'">Topbar</router-link>
-          </li>
-          <li>
-            <router-link :to="'/sidebar'">Sidebar</router-link>
-          </li>
-        </ul>
-      </nav>
-      <slot name="content" />
-    </main>
+      <main>
+        <h1 class="">
+          <slot name="title">
+            {{ pageTitle }}
+          </slot>
+        </h1>
 
-    <footer class="border-top bg-purple text-white p-3">
-      <div class="container">Copyright University of Washington</div>
-    </footer>
+        <slot name="description" />
+        <hr class="mb-5 w-25 d-inline-block" />
+        <slot name="content" />
+      </main>
+
+      <footer class="pt-2 mt-5 mb-3 text-muted border-top">
+        Copyright &copy; {{ new Date().getFullYear() }} University of Washington
+      </footer>
+    </div>
   </div>
 </template>
-
 <script>
 export default {
-  name: "App",
+  name: "AxddComponents",
   components: {},
+  props: {
+    pageTitle: {
+      type: String,
+      required: true,
+    },
+  },
+  data() {
+    return {
+      // minimum application setup overrides
+      appName: "AXDD Components",
+    };
+  },
+  created: function () {
+    // constructs page title in the following format "Page Title - AppName"
+    document.title = this.pageTitle + " - " + this.appName;
+  },
 };
 </script>

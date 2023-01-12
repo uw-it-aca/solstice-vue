@@ -5,6 +5,7 @@
     :page-title="pageTitle"
     :user-name="userNetid"
     :sign-out-url="signOutUrl"
+    :sidebar-class="'bg-primary'"
   >
     <template #profile>
       <axdd-profile

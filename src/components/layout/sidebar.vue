@@ -6,11 +6,13 @@
     <div
       :class="[!mq.mdMinus ? 'overflow-auto ' + sidebarClass : '']"
       class="axdd-sidebar d-flex flex-column"
-      data-bs-theme="dark"
       :style="[!mq.mdMinus ? 'min-width: 280px; max-width:280px;' : '']"
     >
       <header>
-        <div v-if="$slots['profile']" class="py-2 px-3 small bg-black bg-opacity-10">
+        <div
+          v-if="$slots['profile']"
+          class="py-2 px-3 small bg-black bg-opacity-10"
+        >
           <slot name="profile">
             <div class="d-flex">
               <div class="flex-fill">username</div>
@@ -39,10 +41,7 @@
           >
             <i class="bi bi-list fw-bold fs-6"></i>
           </a>
-          <div
-            class="d-inline align-middle"
-            :class="[mq.mdPlus ? 'h2' : 'h3']"
-          >
+          <div class="d-inline align-middle" :class="[mq.mdPlus ? 'h2' : 'h3']">
             <router-link
               :to="appRootUrl"
               class="axdd-font-encode-sans text-decoration-none text-light"

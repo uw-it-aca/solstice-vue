@@ -1,20 +1,23 @@
 <template>
   <div
-    :class="[!isPreview ? 'min-vh-100' : ' ']"
+    :class="topbarClass + [!isPreview ? ' min-vh-100' : ' ']"
     class="d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"
   >
     <header class="w-100">
-      <div v-if="$slots.profile" class="bg-dark-purple text-white py-2 small">
+      <div
+        v-if="$slots.profile"
+        class="bg-black bg-opacity-10 text-white py-2 small"
+      >
         <div class="container-xl">
           <slot name="profile">Welcome!</slot>
         </div>
       </div>
 
-      <div class="bg-purple axdd-topbar-brand">
+      <div class="axdd-topbar-brand">
         <div class="container-xl axdd-topbar-logo">
           <a
             v-if="$slots.navigation"
-            class="btn btn-link btn-sm d-xl-none border border-2 rounded-3 py-0 px-1 text-white me-2"
+            class="btn btn-link btn-sm d-xl-none border border-1 border-light rounded-3 py-0 px-1 text-white me-2"
             data-bs-toggle="collapse"
             data-bs-target="#topbar-nav-collapse"
             role="button"
@@ -39,7 +42,7 @@
       </div>
     </header>
 
-    <div class="w-100 flex-fill bg-white">
+    <div class="w-100 flex-fill bg-body text-body">
       <div class="container-xl">
         <div class="row">
           <div
@@ -122,6 +125,10 @@ export default {
     appRootUrl: {
       type: String,
       default: "#",
+    },
+    topbarClass: {
+      type: String,
+      default: "bg-purple",
     },
     isPreview: {
       type: Boolean,

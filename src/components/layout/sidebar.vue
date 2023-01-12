@@ -27,31 +27,26 @@
           :class="[
             !mq.lgMinus ? 'axdd-sidebar-brand' : 'axdd-sidebar-brand-sm',
           ]"
-          class="d-flex justify-content-between px-3"
+          class="px-3"
         >
-          <div class="d-inline-block align-middle">
+          <a
+            v-if="$slots['navigation']"
+            class="btn btn-link btn-sm border border-1 border-light rounded-3 py-0 px-1 text-light d-lg-none me-2"
+            data-bs-toggle="collapse"
+            data-bs-target="#sidebar-nav-collapse"
+            role="button"
+            aria-expanded="false"
+            aria-controls="sidebar-nav-collapse"
+            aria-label="Toggle Navigation Menu"
+          >
+            <i class="bi bi-list fw-bold fs-6"></i>
+          </a>
+          <div class="d-inline align-middle" :class="[mq.mdPlus ? 'h2' : 'h3']">
             <router-link
               :to="appRootUrl"
               class="axdd-font-encode-sans text-decoration-none text-light"
-              :class="[mq.mdPlus ? 'h2' : 'h3']"
-            >
-              <span v-if="$slots['logo']" class="me-2">
-                <slot name="logo"><i class="bi bi-box-fill"></i></slot></span
               >{{ appName }}
             </router-link>
-          </div>
-          <div v-if="$slots['navigation']" class="d-inline-block d-lg-none">
-            <a
-              class="btn btn-link btn-sm border border-1 border-light rounded-3 py-0 px-1 text-light"
-              data-bs-toggle="collapse"
-              data-bs-target="#sidebar-nav-collapse"
-              role="button"
-              aria-expanded="false"
-              aria-controls="sidebar-nav-collapse"
-              aria-label="Toggle Navigation Menu"
-            >
-              <i class="bi bi-list fw-bold fs-6"></i>
-            </a>
           </div>
         </div>
       </header>

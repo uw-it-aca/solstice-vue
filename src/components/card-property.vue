@@ -11,6 +11,7 @@
 
 <script>
 export default {
+  name: "axdd-card-property",
   props: {
     title: {
       type: String,

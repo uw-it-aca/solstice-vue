@@ -17,5 +17,10 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "axdd-card-status",
+  data: function () {
+    return {};
+  },
+};
 </script>

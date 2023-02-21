@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <p>color mode: {{ colorMode }}</p>
     <select v-model="colorMode" class="form-select">
       <option value="auto">Auto</option>
@@ -17,7 +16,6 @@ export default {
 
   // composition in options api requires setup()
   setup() {
-
     const colorMode = useColorMode({
       emitAuto: true,
       attribute: "data-bs-theme",

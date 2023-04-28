@@ -6,11 +6,9 @@
 import ColorMode from "./color-mode.vue";
 import Panel from "./panel.vue";
 
-// 1.0.5
-import Profile from "./profile.vue";
-import DisclosureAction from "./disclosure/action.vue";
-import DisclosurePanel from "./disclosure/panel.vue";
-import DisclosureBlock from "./disclosure/block.vue";
+// 1.0.0
+import Sidebar from "./layout/sidebar.vue";
+import Topbar from "./layout/topbar.vue";
 
 // 1.0.4
 import Card from "./card/card.vue";
@@ -22,9 +20,11 @@ import TabsDisplay from "./tabs/display.vue";
 import TabsItem from "./tabs/item.vue";
 import TabsPanel from "./tabs/panel.vue";
 
-// 1.0.0
-import Sidebar from "./layout/sidebar.vue";
-import Topbar from "./layout/topbar.vue";
+// 1.0.5
+import Profile from "./profile.vue";
+import DisclosureAction from "./disclosure/action.vue";
+import DisclosurePanel from "./disclosure/panel.vue";
+import DisclosureBlock from "./disclosure/block.vue";
 
 export default {
   // CardProperty,

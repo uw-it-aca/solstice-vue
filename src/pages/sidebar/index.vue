@@ -5,7 +5,7 @@
     :page-title="pageTitle"
     :user-name="userNetid"
     :sign-out-url="signOutUrl"
-    :sidebar-class="'bg-primary'"
+    :sidebar-class="'bg-primary text-light'"
   >
     <template #profile>
       <axdd-profile
@@ -19,22 +19,22 @@
 
     <template #navigation>
       <ul class="nav flex-column mb-5">
-        <li class="nav-item mb-1 bg-dark-purple rounded-3">
+        <li class="nav-item mb-1 bg-black bg-opacity-10 rounded-3">
           <a href="#" class="nav-link text-gray d-block px-3 py-2"
             ><i class="bi bi-house-door-fill me-3"></i>Home</a
           >
         </li>
-        <li class="nav-item mb-1 bg-dark-purple-hover rounded-3">
+        <li class="nav-item mb-1 rounded-3">
           <a href="#" class="nav-link text-gray d-block px-3 py-2"
             ><i class="bi bi-mortarboard-fill me-3"></i>Academics</a
           >
         </li>
-        <li class="nav-item mb-1 bg-dark-purple-hover rounded-3">
+        <li class="nav-item mb-1 rounded-3">
           <a href="#" class="nav-link text-gray d-block px-3 py-2"
             ><i class="bi bi-pencil-square me-3"></i>Teaching</a
           >
         </li>
-        <li class="nav-item bg-dark-purple-hover rounded-3">
+        <li class="nav-item rounded-3">
           <a href="#" class="nav-link text-gray d-block px-3 py-2"
             ><i class="bi bi-credit-card me-3"></i>Accounts</a
           >
@@ -47,12 +47,12 @@
             <span class="visually-hidden"> Navigation separator</span></a
           >
         </li>
-        <li class="nav-item mb-1 bg-dark-purple-hover rounded-3">
+        <li class="nav-item mb-1 rounded-3">
           <a href="#" class="nav-link text-gray d-block px-3 py-2"
             ><i class="bi bi-calendar-check me-3"></i>Calendar</a
           >
         </li>
-        <li class="nav-item bg-dark-purple-hover rounded-3">
+        <li class="nav-item rounded-3">
           <a href="#" class="nav-link text-gray d-block px-3 py-2"
             ><i class="bi bi-bookmark-fill me-3"></i>UW Resources</a
           >

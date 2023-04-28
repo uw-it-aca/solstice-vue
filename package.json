@@ -16,7 +16,8 @@
       "import": "./dist/axdd-components.js",
       "require": "./dist/axdd-components.cjs"
     },
-    "./dist/style.css": "./dist/style.css"
+    "./dist/style.css": "./dist/style.css",
+    "./dist/custom.scss": "./dist/custom.scss"
   },
   "scripts": {
     "dev": "vite",

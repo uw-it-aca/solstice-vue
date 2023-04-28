@@ -5,7 +5,7 @@ import Vue from "@vitejs/plugin-vue";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  publicDir: false,
+  publicDir: true,
   plugins: [Vue()],
   resolve: {
     alias: {

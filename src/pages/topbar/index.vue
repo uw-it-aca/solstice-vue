@@ -35,7 +35,7 @@
             ><i class="bi bi-pencil-square me-3"></i>Teaching</a
           >
         </li>
-        <li class="nav-item  rounded-3">
+        <li class="nav-item rounded-3">
           <a href="#" class="nav-link text-body d-block px-3 py-2"
             ><i class="bi bi-credit-card me-3"></i>Accounts</a
           >
@@ -53,7 +53,7 @@
             ><i class="bi bi-calendar-check me-3"></i>Calendar</a
           >
         </li>
-        <li class="nav-item  rounded-3">
+        <li class="nav-item rounded-3">
           <a href="#" class="nav-link text-dark d-block px-3 py-2"
             ><i class="bi bi-bookmark-fill me-3"></i>UW Resources</a
           >
@@ -61,7 +61,9 @@
       </ul>
     </template>
     <template #aside>
-      <div class="bg-secondary bg-opacity-10 p-3 border-0 small rounded-3 mb-5 my-5">
+      <div
+        class="bg-secondary bg-opacity-10 p-3 border-0 small rounded-3 mb-5 my-5"
+      >
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex voluptates
         molestias hic. Esse ab inventore rerum, ipsa cupiditate quo. Aliquid
         optio, commodi sit fugit harum perspiciatis quia sunt fuga. Aliquam?

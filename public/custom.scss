@@ -1,0 +1,98 @@
+// VERSION: 1.1.0
+
+// 1. import bootstrap functions first
+@import "node_modules/bootstrap/scss/functions";
+
+// 2. include any default variable overrides
+
+// override bootstrap default theme colors
+
+/*
+$body-bg: #000;
+$body-color: #111;
+$text-muted: orange;
+
+$danger: #a94442;
+$warning: #f5d300;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+);
+*/
+
+// 3. include remaining bootstrap styles
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/variables-dark";
+
+// override card border color
+// $card-border-color: $gray-200;
+
+// 4. include default map overrides
+
+// apply custom theme colors
+$custom-colors: (
+  "purple": #4d307f,
+  "dark-purple": #452a78, // deprecated for opaque
+  "beige": #e8e3d3,
+  "dark-beige": #85754d,
+  "light-beige": #faf8f4,
+  "mid-beige": #ab9765,
+  "gold": #ffbc24,
+  "teal": #4c7286,
+  "light-gray": #e8e8e8,
+  "gray": #e9ecef,
+);
+
+// merge the default bootstrap + custom color maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// adding extra font-sizes (fs-#)
+$extra-font-sizes: (
+  7: 0.875rem,
+  8: 0.8125rem,
+  9: 0.75rem,
+  10: 0.6875rem,
+  11: 0.625rem,
+);
+$font-sizes: map-merge($font-sizes, $extra-font-sizes);
+
+// 5. include required parts
+@import "node_modules/bootstrap/scss/maps";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/root";
+
+// 6. optional include any other parts needed
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/containers";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/helpers";
+
+// add or modify utilities here
+
+
+
+// 7. include utilities api and import bootstrap last
+@import "node_modules/bootstrap/scss/utilities/api";
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// 8. continue... add global app overrides and custom mixins
+
+// global axdd-component styles
+.axdd-font-open-sans {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.axdd-font-encode-sans {
+  font-family: "Encode Sans Condensed", sans-serif !important;
+}
+

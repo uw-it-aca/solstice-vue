@@ -76,13 +76,13 @@
     </div>
 
     <div
-      :class="[!mq.mdMinus ? 'flex-fill overflow-auto' : '']"
+      :class="[!mq.mdMinus ? 'flex-fill overflow-y-auto' : '']"
       class="bg-body text-body"
       style="padding-top: 37px !important"
     >
       <div
         :class="[!isPreview ? 'min-vh-100' : '']"
-        class="container-xl d-flex flex-column"
+        class="container-xl d-flex flex-column px-5"
       >
         <div v-if="$slots['bar']" class="row">
           <div class="col">

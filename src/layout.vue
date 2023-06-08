@@ -51,3 +51,7 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+@import "/public/custom";
+</style>

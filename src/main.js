@@ -8,7 +8,7 @@ import { Vue3Mq, MqResponsive } from "vue3-mq";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 // custom axdd bootstrap css
-import "../public/custom.scss";
+//import "/custom.scss";
 
 // Import all of Bootstrap's JS
 import "bootstrap";

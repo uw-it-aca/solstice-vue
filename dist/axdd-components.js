@@ -1,8 +1,8 @@
-import { getCurrentInstance as he, onMounted as ve, nextTick as ne, unref as be, ref as j, getCurrentScope as me, onScopeDispose as ge, watch as B, computed as V, shallowRef as ye, watchEffect as we, openBlock as i, createElementBlock as l, createElementVNode as s, toDisplayString as _, withDirectives as $e, vModelSelect as xe, renderSlot as c, resolveComponent as re, normalizeClass as p, normalizeStyle as R, createCommentVNode as f, createVNode as oe, withCtx as z, createTextVNode as I, createStaticVNode as ie, createBlock as Oe, resolveDynamicComponent as ke, withKeys as E, withModifiers as Se, pushScopeId as Ie, popScopeId as Pe } from "vue";
-var H;
-const L = typeof window < "u", Ne = (e) => typeof e == "function", Ce = (e) => typeof e == "string", Te = () => {
+import { getCurrentInstance as he, onMounted as ve, nextTick as se, unref as be, ref as j, getCurrentScope as me, onScopeDispose as ge, watch as F, computed as U, shallowRef as ye, watchEffect as we, openBlock as i, createElementBlock as l, createElementVNode as s, toDisplayString as _, withDirectives as $e, vModelSelect as xe, renderSlot as c, resolveComponent as ne, normalizeClass as p, normalizeStyle as V, createCommentVNode as f, createVNode as re, withCtx as W, createTextVNode as I, createStaticVNode as oe, createBlock as Oe, resolveDynamicComponent as ke, withKeys as E, withModifiers as Se, pushScopeId as Ie, popScopeId as Pe } from "vue";
+var z;
+const ie = typeof window < "u", Ne = (e) => typeof e == "function", Ce = (e) => typeof e == "string", Te = () => {
 };
-L && ((H = window == null ? void 0 : window.navigator) != null && H.userAgent) && /iP(ad|hone|od)/.test(window.navigator.userAgent);
+ie && ((z = window == null ? void 0 : window.navigator) != null && z.userAgent) && /iP(ad|hone|od)/.test(window.navigator.userAgent);
 function le(e) {
   return typeof e == "function" ? e() : be(e);
 }
@@ -34,17 +34,17 @@ function ce(e) {
   return me() ? (ge(e), !0) : !1;
 }
 function qe(e) {
-  return typeof e == "function" ? V(e) : j(e);
+  return typeof e == "function" ? U(e) : j(e);
 }
 function ue(e, a = !0) {
-  he() ? ve(e) : a ? e() : ne(e);
+  he() ? ve(e) : a ? e() : se(e);
 }
-var K = Object.getOwnPropertySymbols, Ae = Object.prototype.hasOwnProperty, Le = Object.prototype.propertyIsEnumerable, Fe = (e, a) => {
+var H = Object.getOwnPropertySymbols, Ae = Object.prototype.hasOwnProperty, Le = Object.prototype.propertyIsEnumerable, Fe = (e, a) => {
   var t = {};
   for (var n in e)
     Ae.call(e, n) && a.indexOf(n) < 0 && (t[n] = e[n]);
-  if (e != null && K)
-    for (var n of K(e))
+  if (e != null && H)
+    for (var n of H(e))
       a.indexOf(n) < 0 && Le.call(e, n) && (t[n] = e[n]);
   return t;
 };
@@ -54,21 +54,21 @@ function Be(e, a, t = {}) {
   } = n, r = Fe(n, [
     "eventFilter"
   ]);
-  return B(e, Ee(o, a), r);
+  return F(e, Ee(o, a), r);
 }
-var De = Object.defineProperty, Ue = Object.defineProperties, Ve = Object.getOwnPropertyDescriptors, D = Object.getOwnPropertySymbols, fe = Object.prototype.hasOwnProperty, _e = Object.prototype.propertyIsEnumerable, J = (e, a, t) => a in e ? De(e, a, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[a] = t, Re = (e, a) => {
+var De = Object.defineProperty, Ue = Object.defineProperties, Ve = Object.getOwnPropertyDescriptors, B = Object.getOwnPropertySymbols, fe = Object.prototype.hasOwnProperty, _e = Object.prototype.propertyIsEnumerable, K = (e, a, t) => a in e ? De(e, a, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[a] = t, Re = (e, a) => {
   for (var t in a || (a = {}))
-    fe.call(a, t) && J(e, t, a[t]);
-  if (D)
-    for (var t of D(a))
-      _e.call(a, t) && J(e, t, a[t]);
+    fe.call(a, t) && K(e, t, a[t]);
+  if (B)
+    for (var t of B(a))
+      _e.call(a, t) && K(e, t, a[t]);
   return e;
 }, Qe = (e, a) => Ue(e, Ve(a)), We = (e, a) => {
   var t = {};
   for (var n in e)
     fe.call(e, n) && a.indexOf(n) < 0 && (t[n] = e[n]);
-  if (e != null && D)
-    for (var n of D(e))
+  if (e != null && B)
+    for (var n of B(e))
       a.indexOf(n) < 0 && _e.call(e, n) && (t[n] = e[n]);
   return t;
 };
@@ -87,10 +87,7 @@ function He(e) {
   const t = le(e);
   return (a = t == null ? void 0 : t.$el) != null ? a : t;
 }
-const A = L ? window : void 0;
-L && window.document;
-L && window.navigator;
-L && window.location;
+const A = ie ? window : void 0;
 function Ke(...e) {
   let a, t, n, o;
   if (Ce(e[0]) || Array.isArray(e[0]) ? ([t, n, o] = e, a = A) : [a, t, n, o] = e, !a)
@@ -98,7 +95,7 @@ function Ke(...e) {
   Array.isArray(t) || (t = [t]), Array.isArray(n) || (n = [n]);
   const r = [], d = () => {
     r.forEach((b) => b()), r.length = 0;
-  }, v = (b, g, x) => (b.addEventListener(g, x, o), () => b.removeEventListener(g, x, o)), P = B(() => He(a), (b) => {
+  }, v = (b, g, x) => (b.addEventListener(g, x, o), () => b.removeEventListener(g, x, o)), P = F(() => He(a), (b) => {
     d(), b && r.push(...t.flatMap((g) => n.map((x) => v(b, g, x))));
   }, { immediate: !0, flush: "post" }), y = () => {
     P(), d();
@@ -106,7 +103,7 @@ function Ke(...e) {
   return ce(y), y;
 }
 function Je(e, a = !1) {
-  const t = j(), n = () => t.value = Boolean(e());
+  const t = j(), n = () => t.value = !!e();
   return n(), ue(n, a), t;
 }
 function Ge(e, a = {}) {
@@ -119,21 +116,21 @@ function Ge(e, a = {}) {
   };
   return we(v), ce(() => d()), r;
 }
-const Q = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {}, W = "__vueuse_ssr_handlers__";
-Q[W] = Q[W] || {};
-const Ye = Q[W];
+const R = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {}, Q = "__vueuse_ssr_handlers__";
+R[Q] = R[Q] || {};
+const Ye = R[Q];
 function pe(e, a) {
   return Ye[e] || a;
 }
 function Xe(e) {
   return e == null ? "any" : e instanceof Set ? "set" : e instanceof Map ? "map" : e instanceof Date ? "date" : typeof e == "boolean" ? "boolean" : typeof e == "string" ? "string" : typeof e == "object" ? "object" : Number.isNaN(e) ? "any" : "number";
 }
-var Ze = Object.defineProperty, G = Object.getOwnPropertySymbols, et = Object.prototype.hasOwnProperty, tt = Object.prototype.propertyIsEnumerable, Y = (e, a, t) => a in e ? Ze(e, a, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[a] = t, X = (e, a) => {
+var Ze = Object.defineProperty, J = Object.getOwnPropertySymbols, et = Object.prototype.hasOwnProperty, tt = Object.prototype.propertyIsEnumerable, G = (e, a, t) => a in e ? Ze(e, a, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[a] = t, Y = (e, a) => {
   for (var t in a || (a = {}))
-    et.call(a, t) && Y(e, t, a[t]);
-  if (G)
-    for (var t of G(a))
-      tt.call(a, t) && Y(e, t, a[t]);
+    et.call(a, t) && G(e, t, a[t]);
+  if (J)
+    for (var t of J(a))
+      tt.call(a, t) && G(e, t, a[t]);
   return e;
 };
 const at = {
@@ -197,7 +194,7 @@ function st(e, a, t, n = {}) {
   if (!t)
     return w;
   const O = le(a), q = Xe(O), k = (o = n.serializer) != null ? o : at[q], { pause: $, resume: S } = ze(w, () => C(w.value), { flush: r, deep: d, eventFilter: x });
-  return g && v && Ke(g, "storage", F), F(), w;
+  return g && v && Ke(g, "storage", L), L(), w;
   function C(u) {
     try {
       if (u == null)
@@ -221,11 +218,11 @@ function st(e, a, t, n = {}) {
       return P && O !== null && t.setItem(e, k.write(O)), O;
     if (!u && y) {
       const T = k.read(m);
-      return Ne(y) ? y(T, O) : q === "object" && !Array.isArray(T) ? X(X({}, O), T) : T;
+      return Ne(y) ? y(T, O) : q === "object" && !Array.isArray(T) ? Y(Y({}, O), T) : T;
     } else
       return typeof m != "string" ? m : k.read(m);
   }
-  function F(u) {
+  function L(u) {
     if (!(u && u.storageArea !== t)) {
       if (u && u.key == null) {
         w.value = O;
@@ -238,7 +235,7 @@ function st(e, a, t, n = {}) {
         } catch (m) {
           N(m);
         } finally {
-          u ? ne(S) : S();
+          u ? se(S) : S();
         }
       }
     }
@@ -247,12 +244,12 @@ function st(e, a, t, n = {}) {
 function nt(e) {
   return Ge("(prefers-color-scheme: dark)", e);
 }
-var rt = Object.defineProperty, Z = Object.getOwnPropertySymbols, ot = Object.prototype.hasOwnProperty, it = Object.prototype.propertyIsEnumerable, ee = (e, a, t) => a in e ? rt(e, a, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[a] = t, lt = (e, a) => {
+var rt = Object.defineProperty, X = Object.getOwnPropertySymbols, ot = Object.prototype.hasOwnProperty, it = Object.prototype.propertyIsEnumerable, Z = (e, a, t) => a in e ? rt(e, a, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[a] = t, lt = (e, a) => {
   for (var t in a || (a = {}))
-    ot.call(a, t) && ee(e, t, a[t]);
-  if (Z)
-    for (var t of Z(a))
-      it.call(a, t) && ee(e, t, a[t]);
+    ot.call(a, t) && Z(e, t, a[t]);
+  if (X)
+    for (var t of X(a))
+      it.call(a, t) && Z(e, t, a[t]);
   return e;
 };
 function dt(e = {}) {
@@ -270,7 +267,7 @@ function dt(e = {}) {
     auto: "",
     light: "light",
     dark: "dark"
-  }, e.modes || {}), g = nt({ window: o }), x = V(() => g.value ? "dark" : "light"), N = P || (d == null ? j(n) : st(d, n, r, { window: o, listenToStorageChanges: v })), w = V({
+  }, e.modes || {}), g = nt({ window: o }), x = U(() => g.value ? "dark" : "light"), N = P || (d == null ? j(n) : st(d, n, r, { window: o, listenToStorageChanges: v })), w = U({
     get() {
       return N.value === "auto" && !y ? x.value : N.value;
     },
@@ -281,9 +278,9 @@ function dt(e = {}) {
     const M = o == null ? void 0 : o.document.querySelector($);
     if (M)
       if (S === "class") {
-        const F = C.split(/\s/g);
+        const L = C.split(/\s/g);
         Object.values(b).flatMap((u) => (u || "").split(/\s/g)).filter(Boolean).forEach((u) => {
-          F.includes(u) ? M.classList.add(u) : M.classList.remove(u);
+          L.includes(u) ? M.classList.add(u) : M.classList.remove(u);
         });
       } else
         M.setAttribute(S, C);
@@ -296,18 +293,18 @@ function dt(e = {}) {
   function k($) {
     e.onChanged ? e.onChanged($, q) : q($);
   }
-  return B(w, k, { flush: "post", immediate: !0 }), y && B(x, () => k(w.value), { flush: "post" }), ue(() => k(w.value)), w;
+  return F(w, k, { flush: "post", immediate: !0 }), y && F(x, () => k(w.value), { flush: "post" }), ue(() => k(w.value)), w;
 }
-var te;
+var ee;
 (function(e) {
   e.UP = "UP", e.RIGHT = "RIGHT", e.DOWN = "DOWN", e.LEFT = "LEFT", e.NONE = "NONE";
-})(te || (te = {}));
-var ct = Object.defineProperty, ae = Object.getOwnPropertySymbols, ut = Object.prototype.hasOwnProperty, ft = Object.prototype.propertyIsEnumerable, se = (e, a, t) => a in e ? ct(e, a, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[a] = t, _t = (e, a) => {
+})(ee || (ee = {}));
+var ct = Object.defineProperty, te = Object.getOwnPropertySymbols, ut = Object.prototype.hasOwnProperty, ft = Object.prototype.propertyIsEnumerable, ae = (e, a, t) => a in e ? ct(e, a, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[a] = t, _t = (e, a) => {
   for (var t in a || (a = {}))
-    ut.call(a, t) && se(e, t, a[t]);
-  if (ae)
-    for (var t of ae(a))
-      ft.call(a, t) && se(e, t, a[t]);
+    ut.call(a, t) && ae(e, t, a[t]);
+  if (te)
+    for (var t of te(a))
+      ft.call(a, t) && ae(e, t, a[t]);
   return e;
 };
 const pt = {
@@ -448,16 +445,16 @@ const St = {
 }, Ut = { class: "col" }, Vt = /* @__PURE__ */ s("div", { class: "bg-gray py-2 text-center" }, " default gray bar (default) ", -1), Rt = { class: "flex-fill" }, Qt = {
   key: 1,
   class: "mt-auto"
-}, Wt = { class: "font-weight-light py-3 small" }, zt = /* @__PURE__ */ ie('<ul class="list-inline m-0"><ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/">Terms</a></li></ul></ul>', 1);
+}, Wt = { class: "font-weight-light py-3 small" }, zt = /* @__PURE__ */ oe('<ul class="list-inline m-0"><ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/">Terms</a></li></ul></ul>', 1);
 function Ht(e, a, t, n, o, r) {
-  const d = re("router-link");
+  const d = ne("router-link");
   return i(), l("div", {
     class: p([r.mq.mdMinus ? "" : "d-flex vh-100"]),
-    style: R([t.isPreview ? "min-height: auto !important;" : ""])
+    style: V([t.isPreview ? "min-height: auto !important;" : ""])
   }, [
     s("div", {
       class: p([t.sidebarClass + [r.mq.mdMinus ? "" : " overflow-auto"], "axdd-sidebar d-flex flex-column"]),
-      style: R([r.mq.mdMinus ? "" : "min-width: 280px; max-width:280px;"])
+      style: V([r.mq.mdMinus ? "" : "min-width: 280px; max-width:280px;"])
     }, [
       s("header", null, [
         e.$slots.profile ? (i(), l("div", It, [
@@ -482,11 +479,11 @@ function Ht(e, a, t, n, o, r) {
           s("div", {
             class: p(["d-inline align-middle", [r.mq.mdPlus ? "h2" : "h3"]])
           }, [
-            oe(d, {
+            re(d, {
               to: t.appRootUrl,
               class: "axdd-font-encode-sans text-decoration-none text-light"
             }, {
-              default: z(() => [
+              default: W(() => [
                 I(_(t.appName), 1)
               ]),
               _: 1
@@ -514,11 +511,11 @@ function Ht(e, a, t, n, o, r) {
       Bt
     ], 6),
     s("div", {
-      class: p([[r.mq.mdMinus ? "" : "flex-fill overflow-auto"], "bg-body text-body"]),
+      class: p([[r.mq.mdMinus ? "" : "flex-fill overflow-y-auto"], "bg-body text-body"]),
       style: { "padding-top": "37px !important" }
     }, [
       s("div", {
-        class: p([[t.isPreview ? "" : "min-vh-100"], "container-xl d-flex flex-column"])
+        class: p([[t.isPreview ? "" : "min-vh-100"], "container-xl d-flex flex-column px-5"])
       }, [
         e.$slots.bar ? (i(), l("div", Dt, [
           s("div", Ut, [
@@ -534,7 +531,7 @@ function Ht(e, a, t, n, o, r) {
           c(e.$slots, "footer", {}, () => [
             s("div", Wt, [
               zt,
-              s("div", null, " Copyright © " + _(new Date().getFullYear()) + " University of Washington ", 1)
+              s("div", null, " Copyright © " + _((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
             ])
           ])
         ])) : f("", !0)
@@ -593,9 +590,9 @@ const Jt = {
 ], -1), fa = { class: "w-100" }, _a = {
   key: 0,
   class: "bg-dark text-white py-2 small"
-}, pa = { class: "container-xl" }, ha = { class: "text-white font-weight-light py-3" }, va = /* @__PURE__ */ ie('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/">Terms</a></li></ul>', 1);
+}, pa = { class: "container-xl" }, ha = { class: "text-white font-weight-light py-3" }, va = /* @__PURE__ */ oe('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/">Terms</a></li></ul>', 1);
 function ba(e, a, t, n, o, r) {
-  const d = re("router-link");
+  const d = ne("router-link");
   return i(), l("div", {
     class: p([t.topbarClass + [t.isPreview ? " " : " min-vh-100"], "d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"])
   }, [
@@ -613,11 +610,11 @@ function ba(e, a, t, n, o, r) {
           s("div", {
             class: p(["d-inline align-middle text-white", [r.mq.xlPlus ? "h2" : "h3"]])
           }, [
-            oe(d, {
+            re(d, {
               to: t.appRootUrl,
               class: "axdd-font-encode-sans text-white text-decoration-none"
             }, {
-              default: z(() => [
+              default: W(() => [
                 I(_(t.appName), 1)
               ]),
               _: 1
@@ -632,7 +629,7 @@ function ba(e, a, t, n, o, r) {
           e.$slots.navigation || e.$slots.aside ? (i(), l("div", {
             key: 0,
             class: "",
-            style: R(r.mq.xlPlus ? "min-width: 272px; max-width: 272px" : "")
+            style: V(r.mq.xlPlus ? "min-width: 272px; max-width: 272px" : "")
           }, [
             s("div", {
               id: "topbar-nav-collapse",
@@ -667,7 +664,7 @@ function ba(e, a, t, n, o, r) {
           c(e.$slots, "footer", {}, () => [
             s("div", ha, [
               va,
-              s("div", null, " Copyright © " + _(new Date().getFullYear()) + " University of Washington ", 1)
+              s("div", null, " Copyright © " + _((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
             ])
           ])
         ])
@@ -728,7 +725,7 @@ const Sa = /* @__PURE__ */ h(ga, [["render", ka]]), Ia = {
 };
 function Pa(e, a, t, n, o, r) {
   return i(), Oe(ke(`h${r.checkedLevel}`), { class: "h6 m-0 fw-bold" }, {
-    default: z(() => [
+    default: W(() => [
       c(e.$slots, "default")
     ]),
     _: 3
@@ -1192,7 +1189,7 @@ function Ks(e, a, t, n, o, r) {
     ], 8, Hs)
   ]);
 }
-const Js = /* @__PURE__ */ h(Fs, [["render", Ks], ["__scopeId", "data-v-075da959"]]), U = {
+const Js = /* @__PURE__ */ h(Fs, [["render", Ks], ["__scopeId", "data-v-075da959"]]), D = {
   // CardProperty,
   // CardStatus,
   // LinkButton,
@@ -1214,9 +1211,9 @@ const Js = /* @__PURE__ */ h(Fs, [["render", Ks], ["__scopeId", "data-v-075da959
   Panel: kt
 }, Ys = {
   install(e) {
-    for (const a in U)
-      if (Object.prototype.hasOwnProperty.call(U, a)) {
-        const t = U[a];
+    for (const a in D)
+      if (Object.prototype.hasOwnProperty.call(D, a)) {
+        const t = D[a];
         e.component(t.name, t);
       }
   }

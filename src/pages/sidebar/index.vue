@@ -1,11 +1,11 @@
 <template>
-  <axdd-sidebar
+  <sol-sidebar
     :app-name="appName"
     :app-root-url="appRootUrl"
     :page-title="pageTitle"
     :user-name="userNetid"
     :sign-out-url="signOutUrl"
-    :sidebar-class="'bg-primary text-light'"
+    :sidebar-class="'bg-primary'"
   >
     <template #profile>
       <axdd-profile
@@ -24,7 +24,7 @@
             ><i class="bi bi-house-door-fill me-3"></i>Home</a
           >
         </li>
-        <li class="nav-item mb-1 rounded-3">
+        <li class="nav-item mb-1 bg-black-hover bg-opacity-10-hover rounded-3">
           <a href="#" class="nav-link text-gray d-block px-3 py-2"
             ><i class="bi bi-mortarboard-fill me-3"></i>Academics</a
           >
@@ -60,14 +60,12 @@
       </ul>
     </template>
     <template #aside>
-      <div class="bg-black bg-opacity-10 p-3 mb-5 border-0 small rounded-3">
+      <div class="bg-black bg-opacity-10 p-3 mt-3 border-0 small rounded-3">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex voluptates
         molestias hic. Esse ab inventore rerum, ipsa cupiditate quo. Aliquid
         optio, commodi sit fugit harum perspiciatis quia sunt fuga. Aliquam?
       </div>
-      <axdd-color-mode></axdd-color-mode>
     </template>
-    <template #bar></template>
     <template #main>
       <div class="row">
         <div class="col">
@@ -102,17 +100,19 @@
             a accusamus totam, doloribus exercitationem delectus soluta
             consectetur ab magni fugit eius.
           </p>
-        </div>
 
-        <!-- Button trigger modal -->
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-        >
-          Launch demo modal
-        </button>
+          <p>
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Launch demo modal
+            </button>
+          </p>
+        </div>
 
         <!-- Modal -->
         <div
@@ -153,8 +153,25 @@
         </div>
       </div>
     </template>
-    <template #footer></template>
-  </axdd-sidebar>
+    <template #footer>
+      <div class="d-flex justify-content-between">
+        <div class="font-weight-light py-3 small">
+          <ul class="list-inline m-0">
+            <ul class="list-inline m-0">
+              <li class="list-inline-item">
+                <a href="http://www.washington.edu/online/privacy/">Privacy</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="http://www.washington.edu/online/terms/">Terms</a>
+              </li>
+            </ul>
+          </ul>
+          <div>Copyright © 2023 University of Washington</div>
+        </div>
+        <div><axdd-color-mode></axdd-color-mode></div>
+      </div>
+    </template>
+  </sol-sidebar>
 </template>
 
 <script>

@@ -5,7 +5,7 @@
   >
     <div
       :class="sidebarClass + [!mq.mdMinus ? ' overflow-auto' : '']"
-      class="axdd-sidebar d-flex flex-column"
+      class="sol-sidebar d-flex flex-column"
       :style="[!mq.mdMinus ? 'min-width: 280px; max-width:280px;' : '']"
     >
       <header>
@@ -24,9 +24,7 @@
         </div>
 
         <div
-          :class="[
-            !mq.lgMinus ? 'axdd-sidebar-brand' : 'axdd-sidebar-brand-sm',
-          ]"
+          :class="[!mq.lgMinus ? 'sol-sidebar-brand' : 'sol-sidebar-brand-sm']"
           class="px-3"
         >
           <a
@@ -44,61 +42,55 @@
           <div class="d-inline align-middle" :class="[mq.mdPlus ? 'h2' : 'h3']">
             <router-link
               :to="appRootUrl"
-              class="axdd-font-encode-sans text-decoration-none text-light"
+              class="ff-encode-sans text-decoration-none text-light"
               >{{ appName }}
             </router-link>
           </div>
         </div>
       </header>
-      <div class="flex-fill">
-        <div
-          id="sidebar-nav-collapse"
-          class="px-3"
-          :class="[!mq.mdMinus ? 'collapse.show' : 'collapse']"
-        >
-          <!-- main sidebar navigation -->
-          <nav v-if="$slots['navigation']" role="navigation">
-            <slot name="navigation">
-              <ul class="text-white">
-                <li>nav 1</li>
-                <li>nav 2</li>
-                <li>nav 3</li>
-                <li>nav 4</li>
-              </ul>
-            </slot>
-          </nav>
-          <aside v-if="$slots['aside']" class="mb-5">
-            <slot name="aside">this is aside content</slot>
-          </aside>
-        </div>
+
+      <div
+        id="sidebar-nav-collapse"
+        class="px-3 flex-fill"
+        :class="[
+          !mq.mdMinus
+            ? 'collapse.show d-flex flex-column justify-content-between'
+            : 'collapse',
+        ]"
+      >
+        <!-- main sidebar navigation -->
+        <nav v-if="$slots['navigation']" role="navigation">
+          <slot name="navigation">
+            <ul class="text-white">
+              <li>nav 1</li>
+              <li>nav 2</li>
+              <li>nav 3</li>
+              <li>nav 4</li>
+            </ul>
+          </slot>
+        </nav>
+        <aside v-if="$slots['aside']" class="mb-3 text-light">
+          <slot name="aside">this is aside content</slot>
+        </aside>
       </div>
-      <div class="axdd-sidebar-logo">&nbsp;</div>
+
+      <div class="sol-sidebar-logo">&nbsp;</div>
     </div>
 
     <div
       :class="[!mq.mdMinus ? 'flex-fill overflow-y-auto' : '']"
-      class="bg-body text-body"
+      class="d-flex bg-body text-body"
       style="padding-top: 37px !important"
     >
       <div
-        :class="[!isPreview ? 'min-vh-100' : '']"
-        class="container-xl d-flex flex-column px-5"
+        :class="[mq.lgPlus ? 'px-5' : '']"
+        class="container-xl d-flex flex-column"
       >
-        <div v-if="$slots['bar']" class="row">
-          <div class="col">
-            <slot name="bar">
-              <div class="bg-gray py-2 text-center">
-                default gray bar (default)
-              </div>
-            </slot>
-          </div>
-        </div>
-
         <main class="flex-fill">
           <slot name="main"></slot>
         </main>
 
-        <footer v-if="$slots['footer']" class="mt-auto">
+        <footer v-if="$slots['footer']">
           <slot name="footer">
             <div class="font-weight-light py-3 small">
               <ul class="list-inline m-0">
@@ -127,7 +119,7 @@
 
 <script>
 export default {
-  name: "axdd-sidebar",
+  name: "sol-sidebar",
   inject: ["mq"],
   props: {
     appName: {
@@ -168,15 +160,15 @@ export default {
 </script>
 
 <style lang="scss">
-.axdd-sidebar-brand-sm {
+.sol-sidebar-brand-sm {
   line-height: 75px;
 }
 
-.axdd-sidebar-brand {
+.sol-sidebar-brand {
   line-height: 105px;
 }
 
-.axdd-sidebar-logo {
+.sol-sidebar-logo {
   background-image: url("../../assets/images/w-logo-white.png");
   background-repeat: no-repeat;
   background-size: 45px;
@@ -184,7 +176,7 @@ export default {
   line-height: 30px;
 }
 
-.axdd-sidebar-logo-light {
+.sol-sidebar-logo-light {
   background-image: url("../../assets/images/w-logo-purple.png");
   background-repeat: no-repeat;
   background-size: 45px;

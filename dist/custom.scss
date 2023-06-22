@@ -1,3 +1,5 @@
+/* stylelint-disable color-function-notation */
+
 // VERSION: 1.1.0
 
 // 1. import bootstrap functions first
@@ -79,20 +81,70 @@ $font-sizes: map-merge($font-sizes, $extra-font-sizes);
 
 // add or modify utilities here
 
-
+// add or modify utilities here
+$utilities: (
+  // bg-xxxx-hover
+  "background-color-hover": (
+    property: background-color,
+    class: bg,
+    local-vars: (
+      "bg-opacity": 1
+    ),
+    state: hover focus,
+    values: map-merge(
+      $utilities-bg-colors,
+      (
+        "transparent": transparent,
+        "body-secondary": rgba(var(--#{$prefix}secondary-bg-rgb), var(--#{$prefix}bg-opacity)),
+        "body-tertiary": rgba(var(--#{$prefix}tertiary-bg-rgb), var(--#{$prefix}bg-opacity)),
+      )
+    )
+  ),
+  // bg-opacity-xx-hover
+  "bg-opacity-hover": (
+    css-var: true,
+    class: bg-opacity,
+    state: hover focus,
+    values: (
+      10: .1,
+      25: .25,
+      50: .5,
+      75: .75,
+      100: 1
+    )
+  ),
+  // text-xxxx-hover
+  "color-hover": (
+    property: color,
+    class: text,
+    local-vars: (
+      "text-opacity": 1
+    ),
+    state: hover focus,
+    values: map-merge(
+      $utilities-text-colors,
+      (
+        "muted": var(--#{$prefix}secondary-color), // deprecated
+        "black-50": rgba($black, .5), // deprecated
+        "white-50": rgba($white, .5), // deprecated
+        "body-secondary": var(--#{$prefix}secondary-color),
+        "body-tertiary": var(--#{$prefix}tertiary-color),
+        "body-emphasis": var(--#{$prefix}emphasis-color),
+        "reset": inherit,
+      )
+    )
+  ),
+  // ff-xxxx
+  "font-family-custom": (
+    property: font-family,
+    class: ff,
+    values: (
+      "open-sans": ("Open Sans", sans-serif),
+      "encode-sans": ("Encode Sans Condensed", sans-serif)
+    )
+  )
+);
 
 // 7. include utilities api and import bootstrap last
 @import "node_modules/bootstrap/scss/utilities/api";
 @import "node_modules/bootstrap/scss/bootstrap";
-
-// 8. continue... add global app overrides and custom mixins
-
-// global axdd-component styles
-.axdd-font-open-sans {
-  font-family: "Open Sans", sans-serif !important;
-}
-
-.axdd-font-encode-sans {
-  font-family: "Encode Sans Condensed", sans-serif !important;
-}
-

@@ -11,7 +11,7 @@
 
       <hr class="mb-5 w-25 d-inline-block" />
 
-      <h2>Crip and clear</h2>
+      <h2>Crisp and clear</h2>
 
       <h2>Empathetic</h2>
 

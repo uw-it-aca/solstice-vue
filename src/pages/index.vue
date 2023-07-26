@@ -10,7 +10,9 @@
     <template #description>
       <div class="p-0 col-md-8 lead">
         <p>
-          <a href="https://github.com/uw-it-aca/axdd-components"
+          <a
+            href="https://github.com/uw-it-aca/axdd-components"
+            class="link-primary"
             >AXDD-Components</a
           >
           is a VueJs component library. Lorem ipsum dolor sit amet consectetur,
@@ -35,10 +37,14 @@
           <h3>Start with a layout</h3>
           <ul>
             <li>
-              <router-link :to="'/topbar'">Topbar</router-link>
+              <router-link :to="'/topbar'" class="link-primary"
+                >Topbar</router-link
+              >
             </li>
             <li>
-              <router-link :to="'/sidebar'">Sidebar</router-link>
+              <router-link :to="'/sidebar'" class="link-primary"
+                >Sidebar</router-link
+              >
             </li>
           </ul>
 

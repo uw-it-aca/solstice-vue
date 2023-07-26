@@ -96,12 +96,18 @@
               <ul class="list-inline m-0">
                 <ul class="list-inline m-0">
                   <li class="list-inline-item">
-                    <a href="http://www.washington.edu/online/privacy/"
+                    <a
+                      href="http://www.washington.edu/online/privacy/"
+                      class="link-primary"
                       >Privacy</a
                     >
                   </li>
                   <li class="list-inline-item">
-                    <a href="http://www.washington.edu/online/terms/">Terms</a>
+                    <a
+                      href="http://www.washington.edu/online/terms/"
+                      class="link-primary"
+                      >Terms</a
+                    >
                   </li>
                 </ul>
               </ul>

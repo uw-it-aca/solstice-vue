@@ -1,4 +1,4 @@
-import { getCurrentInstance as be, onMounted as ge, nextTick as ie, unref as ye, ref as q, readonly as we, getCurrentScope as $e, onScopeDispose as xe, watch as F, computed as V, shallowRef as Oe, watchEffect as ke, openBlock as i, createElementBlock as l, createElementVNode as a, withDirectives as Se, vModelSelect as Ie, renderSlot as c, resolveComponent as le, normalizeClass as _, normalizeStyle as R, createCommentVNode as f, createVNode as de, withCtx as z, createTextVNode as N, toDisplayString as h, createStaticVNode as ce, createBlock as Pe, resolveDynamicComponent as Ne, withKeys as M, withModifiers as Ce, pushScopeId as Te, popScopeId as Ee } from "vue";
+import { getCurrentInstance as be, onMounted as ge, nextTick as ie, unref as ye, ref as q, readonly as we, getCurrentScope as $e, onScopeDispose as xe, watch as F, computed as V, shallowRef as Oe, watchEffect as ke, openBlock as i, createElementBlock as l, createElementVNode as a, withDirectives as Se, vModelSelect as Ie, renderSlot as c, resolveComponent as le, normalizeClass as _, normalizeStyle as R, createCommentVNode as f, createVNode as de, withCtx as z, createTextVNode as N, toDisplayString as m, createStaticVNode as ce, createBlock as Pe, resolveDynamicComponent as Ne, withKeys as M, withModifiers as Ce, pushScopeId as Te, popScopeId as Ee } from "vue";
 var K;
 const ue = typeof window < "u", Me = (e) => typeof e == "function", je = (e) => typeof e == "string", qe = () => {
 };
@@ -57,20 +57,20 @@ function Re(e, s, t = {}) {
   ]);
   return F(e, Ae(o, s), n);
 }
-var Qe = Object.defineProperty, We = Object.defineProperties, ze = Object.getOwnPropertyDescriptors, B = Object.getOwnPropertySymbols, he = Object.prototype.hasOwnProperty, me = Object.prototype.propertyIsEnumerable, G = (e, s, t) => s in e ? Qe(e, s, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[s] = t, He = (e, s) => {
+var Qe = Object.defineProperty, We = Object.defineProperties, ze = Object.getOwnPropertyDescriptors, B = Object.getOwnPropertySymbols, me = Object.prototype.hasOwnProperty, he = Object.prototype.propertyIsEnumerable, G = (e, s, t) => s in e ? Qe(e, s, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[s] = t, He = (e, s) => {
   for (var t in s || (s = {}))
-    he.call(s, t) && G(e, t, s[t]);
+    me.call(s, t) && G(e, t, s[t]);
   if (B)
     for (var t of B(s))
-      me.call(s, t) && G(e, t, s[t]);
+      he.call(s, t) && G(e, t, s[t]);
   return e;
 }, Ke = (e, s) => We(e, ze(s)), Je = (e, s) => {
   var t = {};
   for (var r in e)
-    he.call(e, r) && s.indexOf(r) < 0 && (t[r] = e[r]);
+    me.call(e, r) && s.indexOf(r) < 0 && (t[r] = e[r]);
   if (e != null && B)
     for (var r of B(e))
-      s.indexOf(r) < 0 && me.call(e, r) && (t[r] = e[r]);
+      s.indexOf(r) < 0 && he.call(e, r) && (t[r] = e[r]);
   return t;
 };
 function Ge(e, s, t = {}) {
@@ -78,10 +78,10 @@ function Ge(e, s, t = {}) {
     eventFilter: o
   } = r, n = Je(r, [
     "eventFilter"
-  ]), { eventFilter: d, pause: m, resume: C, isActive: w } = Le(o);
+  ]), { eventFilter: d, pause: h, resume: C, isActive: w } = Le(o);
   return { stop: Re(e, s, Ke(He({}, n), {
     eventFilter: d
-  })), pause: m, resume: C, isActive: w };
+  })), pause: h, resume: C, isActive: w };
 }
 function Ye(e) {
   var s;
@@ -96,8 +96,8 @@ function Y(...e) {
   Array.isArray(t) || (t = [t]), Array.isArray(r) || (r = [r]);
   const n = [], d = () => {
     n.forEach((v) => v()), n.length = 0;
-  }, m = (v, g, O, y) => (v.addEventListener(g, O, y), () => v.removeEventListener(g, O, y)), C = F(() => [Ye(s), H(o)], ([v, g]) => {
-    d(), v && n.push(...t.flatMap((O) => r.map((y) => m(v, O, y, g))));
+  }, h = (v, g, O, y) => (v.addEventListener(g, O, y), () => v.removeEventListener(g, O, y)), C = F(() => [Ye(s), H(o)], ([v, g]) => {
+    d(), v && n.push(...t.flatMap((O) => r.map((y) => h(v, O, y, g))));
   }, { immediate: !0, flush: "post" }), w = () => {
     C(), d();
   };
@@ -111,11 +111,11 @@ function Ze(e, s = {}) {
   const { window: t = L } = s, r = Xe(() => t && "matchMedia" in t && typeof t.matchMedia == "function");
   let o;
   const n = q(!1), d = () => {
-    o && ("removeEventListener" in o ? o.removeEventListener("change", m) : o.removeListener(m));
-  }, m = () => {
-    r.value && (d(), o = t.matchMedia(Be(e).value), n.value = o.matches, "addEventListener" in o ? o.addEventListener("change", m) : o.addListener(m));
+    o && ("removeEventListener" in o ? o.removeEventListener("change", h) : o.removeListener(h));
+  }, h = () => {
+    r.value && (d(), o = t.matchMedia(Be(e).value), n.value = o.matches, "addEventListener" in o ? o.addEventListener("change", h) : o.addListener(h));
   };
-  return ke(m), _e(() => d()), n;
+  return ke(h), _e(() => d()), n;
 }
 const Q = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {}, W = "__vueuse_ssr_handlers__";
 Q[W] = Q[W] || {};
@@ -173,7 +173,7 @@ function ot(e, s, t, r = {}) {
   const {
     flush: n = "pre",
     deep: d = !0,
-    listenToStorageChanges: m = !0,
+    listenToStorageChanges: h = !0,
     writeDefaults: C = !0,
     mergeDefaults: w = !1,
     shallow: v,
@@ -195,7 +195,7 @@ function ot(e, s, t, r = {}) {
   if (!t)
     return $;
   const k = H(s), A = tt(k), I = (o = r.serializer) != null ? o : rt[A], { pause: x, resume: P } = Ge($, () => T($.value), { flush: n, deep: d, eventFilter: O });
-  return g && m && (Y(g, "storage", S), Y(g, te, D)), S(), $;
+  return g && h && (Y(g, "storage", S), Y(g, te, D)), S(), $;
   function T(u) {
     try {
       if (u == null)
@@ -266,14 +266,14 @@ function ft(e = {}) {
     window: o = L,
     storage: n,
     storageKey: d = "vueuse-color-scheme",
-    listenToStorageChanges: m = !0,
+    listenToStorageChanges: h = !0,
     storageRef: C,
     emitAuto: w
   } = e, v = ut({
     auto: "",
     light: "light",
     dark: "dark"
-  }, e.modes || {}), g = it({ window: o }), O = V(() => g.value ? "dark" : "light"), y = C || (d == null ? q(r) : ot(d, r, n, { window: o, listenToStorageChanges: m })), $ = V({
+  }, e.modes || {}), g = it({ window: o }), O = V(() => g.value ? "dark" : "light"), y = C || (d == null ? q(r) : ot(d, r, n, { window: o, listenToStorageChanges: h })), $ = V({
     get() {
       return y.value === "auto" && !w ? O.value : y.value;
     },
@@ -305,12 +305,12 @@ var ne;
 (function(e) {
   e.UP = "UP", e.RIGHT = "RIGHT", e.DOWN = "DOWN", e.LEFT = "LEFT", e.NONE = "NONE";
 })(ne || (ne = {}));
-var _t = Object.defineProperty, re = Object.getOwnPropertySymbols, pt = Object.prototype.hasOwnProperty, ht = Object.prototype.propertyIsEnumerable, oe = (e, s, t) => s in e ? _t(e, s, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[s] = t, mt = (e, s) => {
+var _t = Object.defineProperty, re = Object.getOwnPropertySymbols, pt = Object.prototype.hasOwnProperty, mt = Object.prototype.propertyIsEnumerable, oe = (e, s, t) => s in e ? _t(e, s, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[s] = t, ht = (e, s) => {
   for (var t in s || (s = {}))
     pt.call(s, t) && oe(e, t, s[t]);
   if (re)
     for (var t of re(s))
-      ht.call(s, t) && oe(e, t, s[t]);
+      mt.call(s, t) && oe(e, t, s[t]);
   return e;
 };
 const vt = {
@@ -339,7 +339,7 @@ const vt = {
   easeOutBack: [0.34, 1.56, 0.64, 1],
   easeInOutBack: [0.68, -0.6, 0.32, 1.6]
 };
-mt({
+ht({
   linear: Fe
 }, vt);
 const p = (e, s) => {
@@ -447,7 +447,7 @@ const Tt = {
 ], -1), Vt = {
   key: 1,
   class: "mb-3 text-light"
-}, Rt = /* @__PURE__ */ a("div", { class: "sol-sidebar-logo" }, " ", -1), Qt = { class: "flex-fill" }, Wt = { key: 0 }, zt = { class: "font-weight-light py-3 small" }, Ht = /* @__PURE__ */ ce('<ul class="list-inline m-0"><ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/">Terms</a></li></ul></ul>', 1);
+}, Rt = /* @__PURE__ */ a("div", { class: "sol-sidebar-logo" }, " ", -1), Qt = { class: "flex-fill" }, Wt = { key: 0 }, zt = { class: "font-weight-light py-3 small" }, Ht = /* @__PURE__ */ ce('<ul class="list-inline m-0"><ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/" class="link-primary">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/" class="link-primary">Terms</a></li></ul></ul>', 1);
 function Kt(e, s, t, r, o, n) {
   const d = le("router-link");
   return i(), l("div", {
@@ -484,7 +484,7 @@ function Kt(e, s, t, r, o, n) {
               class: "ff-encode-sans text-decoration-none text-light"
             }, {
               default: z(() => [
-                N(h(t.appName), 1)
+                N(m(t.appName), 1)
               ]),
               _: 1
             }, 8, ["to"])
@@ -524,7 +524,7 @@ function Kt(e, s, t, r, o, n) {
           c(e.$slots, "footer", {}, () => [
             a("div", zt, [
               Ht,
-              a("div", null, " Copyright © " + h((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
+              a("div", null, " Copyright © " + m((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
             ])
           ])
         ])) : f("", !0)
@@ -583,7 +583,7 @@ const Gt = {
 ], -1), _s = { class: "w-100" }, ps = {
   key: 0,
   class: "bg-dark text-white py-2 small"
-}, hs = { class: "container-xl" }, ms = { class: "text-white font-weight-light py-3" }, vs = /* @__PURE__ */ ce('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/">Terms</a></li></ul>', 1);
+}, ms = { class: "container-xl" }, hs = { class: "text-white font-weight-light py-3" }, vs = /* @__PURE__ */ ce('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/" class="link-primary">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/" class="link-primary">Terms</a></li></ul>', 1);
 function bs(e, s, t, r, o, n) {
   const d = le("router-link");
   return i(), l("div", {
@@ -608,7 +608,7 @@ function bs(e, s, t, r, o, n) {
               class: "axdd-font-encode-sans text-white text-decoration-none"
             }, {
               default: z(() => [
-                N(h(t.appName), 1)
+                N(m(t.appName), 1)
               ]),
               _: 1
             }, 8, ["to"])
@@ -653,11 +653,11 @@ function bs(e, s, t, r, o, n) {
     ]),
     a("footer", _s, [
       e.$slots.footer ? (i(), l("div", ps, [
-        a("div", hs, [
+        a("div", ms, [
           c(e.$slots, "footer", {}, () => [
-            a("div", ms, [
+            a("div", hs, [
               vs,
-              a("div", null, " Copyright © " + h((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
+              a("div", null, " Copyright © " + m((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
             ])
           ])
         ])
@@ -1009,7 +1009,7 @@ const sa = /* @__PURE__ */ p(Zs, [["render", ta]]), aa = {
 }, fa = {
   key: 0,
   class: "small text-danger"
-}, _a = /* @__PURE__ */ a("i", { class: "bi bi-arrow-right text-danger" }, null, -1), pa = { class: "small" }, ha = { class: "small" }, ma = ["href"], va = ["href"], ba = /* @__PURE__ */ a("a", { href: "sadkf" }, "sign out test", -1), ga = {
+}, _a = /* @__PURE__ */ a("i", { class: "bi bi-arrow-right text-danger" }, null, -1), pa = { class: "small" }, ma = { class: "small" }, ha = ["href"], va = ["href"], ba = /* @__PURE__ */ a("a", { href: "sadkf" }, "sign out test", -1), ga = {
   key: 1,
   class: "d-flex"
 }, ya = {
@@ -1023,19 +1023,19 @@ function Ia(e, s, t, r, o, n) {
   return t.variant === "flyout" ? (i(), l("div", na, [
     a("div", ra, [
       t.userOverride ? (i(), l("a", oa, [
-        a("span", ia, h(t.userNetid), 1),
+        a("span", ia, m(t.userNetid), 1),
         la,
-        a("span", da, h(t.userOverride), 1)
-      ])) : (i(), l("a", ca, h(t.userNetid), 1)),
+        a("span", da, m(t.userOverride), 1)
+      ])) : (i(), l("a", ca, m(t.userNetid), 1)),
       a("div", ua, [
         t.userOverride ? (i(), l("p", fa, [
           N(" overriding as "),
           _a,
-          N(" " + h(t.userOverride), 1)
+          N(" " + m(t.userOverride), 1)
         ])) : f("", !0),
-        a("p", pa, h(t.userOfficialName) + ", " + h(t.userPreferredName) + ", " + h(t.userPronouns), 1),
-        a("p", ha, [
-          a("a", { href: t.profileUrl }, "go to profile", 8, ma)
+        a("p", pa, m(t.userOfficialName) + ", " + m(t.userPreferredName) + ", " + m(t.userPronouns), 1),
+        a("p", ma, [
+          a("a", { href: t.profileUrl }, "go to profile", 8, ha)
         ]),
         a("div", null, [
           t.signoutUrl ? c(e.$slots, "default", { key: 0 }, () => [
@@ -1051,10 +1051,10 @@ function Ia(e, s, t, r, o, n) {
     ])
   ])) : (i(), l("div", ga, [
     t.userOverride ? (i(), l("div", ya, [
-      a("span", wa, h(t.userNetid), 1),
+      a("span", wa, m(t.userNetid), 1),
       $a,
-      N(" " + h(t.userOverride), 1)
-    ])) : (i(), l("div", xa, h(t.userNetid), 1)),
+      N(" " + m(t.userOverride), 1)
+    ])) : (i(), l("div", xa, m(t.userNetid), 1)),
     a("div", Oa, [
       t.signoutUrl ? c(e.$slots, "default", { key: 0 }, () => [
         a("a", {
@@ -1166,7 +1166,7 @@ function Ja(e, s, t, r, o, n) {
           a("span", {
             class: "fw-bold",
             id: t.blockId + "-heading"
-          }, h(t.blockTitle), 9, za)
+          }, m(t.blockTitle), 9, za)
         ], 8, Qa)
       ]),
       a("div", Ha, [

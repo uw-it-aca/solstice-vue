@@ -6,7 +6,7 @@
     :page-title="pageTitle"
     :user-name="userNetid"
     :sign-out-url="signOutUrl"
-    :topbar-class="'bg-primary'"
+    :topbar-class="'bg-purple'"
   >
     <template #profile>
       <axdd-profile

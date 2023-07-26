@@ -5,6 +5,11 @@
 // 1. import bootstrap functions first
 @import "node_modules/bootstrap/scss/functions";
 
+// 3. include remaining bootstrap styles
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/variables-dark";
+
+
 // 2. include any default variable overrides
 
 // override bootstrap default theme colors
@@ -16,9 +21,10 @@ $text-muted: orange;
 
 $danger: #a94442;
 $warning: #f5d300;
+*/
 
 $theme-colors: (
-  "primary":    $primary,
+  "primary":    #2F68CB,
   "secondary":  $secondary,
   "success":    $success,
   "info":       $info,
@@ -27,11 +33,6 @@ $theme-colors: (
   "light":      $light,
   "dark":       $dark,
 );
-*/
-
-// 3. include remaining bootstrap styles
-@import "node_modules/bootstrap/scss/variables";
-@import "node_modules/bootstrap/scss/variables-dark";
 
 // override card border color
 // $card-border-color: $gray-200;

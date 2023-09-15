@@ -1,6 +1,8 @@
 import { createApp } from "vue";
-import App from "./app.vue";
-import router from "./router";
+
+import App from "@/app.vue";
+import router from "@/router";
+
 import AxddComponents from "./components/";
 import { Vue3Mq, MqResponsive } from "vue3-mq";
 

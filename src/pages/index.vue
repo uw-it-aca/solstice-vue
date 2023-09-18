@@ -53,6 +53,13 @@
             <li>create a branch</li>
             <li>run the <code>npm run build</code> command</li>
           </ol>
+
+          <h3>Sandbox</h3>
+          <ul class="list-unstyled">
+            <li>variant (default) <sol-link :href="'http://www.google.com'">aksdfjaslkdfj</sol-link></li>
+            <li>variant (default - quiet) <sol-link :href="'http://www.google.com'" :quiet="true">aksdfjaslkdfj</sol-link></li>
+            <li>variant (icon) <sol-link variant="icon" :href="'http://www.google.com'" :icon="'bi-android2'" :quiet="true">aksdfjaslkdfj</sol-link></li>
+          </ul>
         </div>
       </div>
     </template>

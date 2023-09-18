@@ -2,23 +2,26 @@
   <template v-if="variant == 'icon'">
     <a
       :href="href"
-      class="link-primary link-underline link-offset-1 link-underline-opacity-0 link-underline-opacity-75-hover"
-    >
+      :class="'link-' + color"
+      class="link-underline link-offset-1 link-underline-opacity-0 link-underline-opacity-50-hover"
+      >
       <slot name="icon">
         <i class="bi me-1" :class="icon"></i>
       </slot>
       <slot></slot>
     </a>
   </template>
-  <template v-else>
+  <template v-else-if="variant == 'quiet'">
     <a
       :href="href"
-      class="link-primary link-offset-1"
-      :class="{
-        'link-underline link-underline-opacity-0 link-underline-opacity-75-hover':
-          quiet,
-      }"
+      :class="'link-' + color"
+      class="link-offset-1 link-underline link-underline-opacity-0 link-underline-opacity-50-hover"
     >
+      <slot></slot>
+    </a>
+  </template>
+  <template v-else>
+    <a :href="href" :class="'link-' + color" class="link-offset-1 link-underline-opacity-50 link-underline-opacity-100-hover">
       <slot></slot>
     </a>
   </template>
@@ -41,10 +44,10 @@ export default {
       type: String,
       required: false,
     },
-    quiet: {
-      type: Boolean,
+    color: {
+      type: String,
       required: false,
-      default: false,
+      default: "primary",
     },
   },
   data: function () {

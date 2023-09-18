@@ -55,11 +55,28 @@
           </ol>
 
           <h3>Sandbox</h3>
-          <ul class="list-unstyled">
-            <li>variant (default) <sol-link :href="'http://www.google.com'">aksdfjaslkdfj</sol-link></li>
-            <li>variant (default - quiet) <sol-link :href="'http://www.google.com'" :quiet="true">aksdfjaslkdfj</sol-link></li>
-            <li>variant (icon) <sol-link variant="icon" :href="'http://www.google.com'" :icon="'bi-android2'" :quiet="true">aksdfjaslkdfj</sol-link></li>
+
+          <p>Color (default on light/dark mode backgrounds)</p>
+          <ul class="list-unstyled p-2 border">
+            <li>default: <sol-link :href="'http://www.google.com'" :variant="'default'">aksdfjaslkdfj</sol-link></li>
+            <li>quiet: <sol-link :href="'http://www.google.com'" :variant="'quiet'">aksdfjaslkdfj</sol-link></li>
+            <li>icon: <sol-link :href="'http://www.google.com'" :variant="'icon'" :icon="'bi-android2'">aksdfjaslkdfj</sol-link></li>
           </ul>
+
+          <p>Color (light - used on dark backgrounds)</p>
+          <ul class="list-unstyled bg-purple text-light p-2">
+            <li>default: <sol-link :href="'http://www.google.com'" :variant="'default'" :color="'light'">aksdfjaslkdfj</sol-link></li>
+            <li>quiet: <sol-link :href="'http://www.google.com'" :variant="'quiet'" :color="'light'">aksdfjaslkdfj</sol-link></li>
+            <li>icon: <sol-link :href="'http://www.google.com'" :variant="'icon'" :icon="'bi-android2'" :color="'light'">aksdfjaslkdfj</sol-link></li>
+          </ul>
+
+          <p>Color (dark - used on light (non-white?) backgrounds)</p>
+          <ul class="list-unstyled bg-warning text-muted p-2">
+            <li>default: <sol-link :href="'http://www.google.com'" :variant="'default'" :color="'dark'">aksdfjaslkdfj</sol-link></li>
+            <li>quiet: <sol-link :href="'http://www.google.com'" :variant="'quiet'" :color="'dark'">aksdfjaslkdfj</sol-link></li>
+            <li>icon: <sol-link :href="'http://www.google.com'" :variant="'icon'" :icon="'bi-android2'" :color="'dark'">aksdfjaslkdfj</sol-link></li>
+          </ul>
+
         </div>
       </div>
     </template>

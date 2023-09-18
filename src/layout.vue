@@ -5,44 +5,21 @@
         class="d-flex justify-content-between align-items-center pb-3 my-4 border-bottom"
       >
         <div class="h4 flex-fill">
-          <i class="bi bi-grid-fill me-2 text-purple fw-normal"></i>
-          <a href="/" class="text-reset text-decoration-none"
-            >AXDD Components</a
-          >
+          <i class="bi bi-box-fill me-2 text-purple"></i>
+          <a href="/" class="text-reset text-decoration-none">{{ appName }}</a>
         </div>
-        <div class="me-3">
-          <nav class="nav">
-            <router-link
-              class="nav-link rounded-3 me-1 bg-purple-hover text-white-hover"
-              active-class="bg-dark-purple text-white"
-              to="/content/"
-              >Content</router-link
-            >
-            <router-link
-              class="nav-link rounded-3 me-1 bg-purple-hover text-white-hover"
-              active-class="bg-dark-purple text-white"
-              to="/tokens/"
-              >Design Tokens</router-link
-            >
-            <router-link
-              class="nav-link rounded-3 me-1 bg-purple-hover text-white-hover"
-              active-class="bg-dark-purple text-white"
-              to="/elements/"
-              >Elements</router-link
-            >
-
-            <router-link
-              class="nav-link rounded-3 bg-purple-hover text-white-hover"
-              active-class="bg-dark-purple text-white"
-              to="/patterns/"
-              >Patterns</router-link
-            >
-          </nav>
-        </div>
-        <div class="text-muted">v.1.0.6</div>
+        <div><axdd-color-mode></axdd-color-mode></div>
       </header>
 
       <main>
+        <h1 class="">
+          <slot name="title">
+            {{ pageTitle }}
+          </slot>
+        </h1>
+
+        <slot name="description" />
+        <hr class="mb-5 w-25 d-inline-block" />
         <slot name="content" />
       </main>
 
@@ -52,10 +29,29 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
-  name: "App",
+  name: "AxddComponents",
   components: {},
+  props: {
+    pageTitle: {
+      type: String,
+      required: true,
+    },
+  },
+  data() {
+    return {
+      // minimum application setup overrides
+      appName: "AXDD Components",
+    };
+  },
+  created: function () {
+    // constructs page title in the following format "Page Title - AppName"
+    document.title = this.pageTitle + " - " + this.appName;
+  },
 };
 </script>
+
+<style lang="scss">
+@import "/public/custom";
+</style>

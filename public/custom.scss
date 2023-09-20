@@ -23,8 +23,16 @@ $danger: #a94442;
 $warning: #f5d300;
 */
 
+// $body-bg-dark: #212529;
+
+// default link color overrides
+$link-color: #2F68CB;
+$link-color-dark: #94B2E6;
+
+// base theme colors
 $theme-colors: (
   "primary":    #2F68CB,
+  // "primary":    $primary,
   "secondary":  $secondary,
   "success":    $success,
   "info":       $info,

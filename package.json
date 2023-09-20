@@ -22,7 +22,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview --port 5050",
+    "preview": "vite preview",
     "test:unit": "vitest",
     "coverage": "vitest run --coverage",
     "eslint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --ignore-pattern '/dist/' --ignore-path .gitignore",

@@ -10,8 +10,10 @@
     <template #description>
       <div class="p-0 col-md-8 lead">
         <p>
-          <sol-link href="https://github.com/uw-it-aca/axdd-components"
-            >AXDD-Components</sol-link
+          <a
+            href="https://github.com/uw-it-aca/axdd-components"
+            class="link-underline link-offset-1 link-underline-opacity-50-hover"
+            >AXDD-Components</a
           >
           is a VueJs component library. Lorem ipsum dolor sit amet consectetur,
           adipisicing elit. Eius eaque placeat corrupti sequi eveniet aliquam
@@ -32,45 +34,79 @@
             magnam expedita eius repellat!
           </p>
 
-          <h3>Start with a layout</h3>
-          <ul>
-            <li>
-              <router-link to="/topbar">Topbar</router-link>
-            </li>
-            <li>
-              <router-link to="/sidebar">Sidebar</router-link>
-            </li>
-          </ul>
-
           <h3>Development</h3>
           <ol>
             <li>create a branch</li>
             <li>run the <code>npm run build</code> command</li>
           </ol>
 
-          <h3>Sandbox</h3>
+          <h3>Kitchen Sink</h3>
 
+          <p>The core building blocks consists of:</p>
+          <ul>
+            <li>
+              <strong>Layouts</strong> - where elements and containers live
+            </li>
+            <li><strong>Elements</strong> - single atom</li>
+            <li>
+              <strong>Containers</strong> - surfaces that encapsulates 1 or more
+              elements
+            </li>
+            <li>
+              <strong>Patterns</strong> - elements + containers and other
+              complex ui interactions
+            </li>
+          </ul>
+
+          <h4>Layouts</h4>
+          <p>
+            Layout defines the boilerplate container of the application. Most
+            D&A applications fall into 2 types of layouts:
+          </p>
+          <ul>
+            <li>
+              <sol-link href="/topbar">Topbar</sol-link>
+            </li>
+            <li>
+              <sol-link href="/sidebar">Sidebar</sol-link>
+            </li>
+          </ul>
+
+          <h4>Elements</h4>
+          <p>
+            Elements are the atomic pieces of the Solstice Design System. They
+            are the core building blocks of user interfaces.
+          </p>
+
+          <h5>Link</h5>
           <p>Color (default on light/dark mode backgrounds)</p>
           <ul class="list-unstyled text-secondary p-2 border">
             <li>
               default:
-              <sol-link :href="'http://www.google.com'" :variant="'default'"
-                >aksdfjaslkdfj</sol-link
-              >
+              <sol-link href="/topbar">topbar</sol-link>
+              external:
+              <sol-link href="https://google.com" isExternal>google</sol-link>
             </li>
             <li>
               quiet:
-              <sol-link :href="'http://www.google.com'" :variant="'quiet'"
-                >aksdfjaslkdfj</sol-link
+              <sol-link href="/topbar" variant="quiet">topbar</sol-link>
+              external:
+              <sol-link href="https://google.com" variant="quiet" isExternal
+                >google</sol-link
               >
             </li>
             <li>
               icon:
+              <sol-link href="/topbar" variant="icon" icon="bi-android2"
+                >topbar</sol-link
+              >
+              external:
               <sol-link
-                :href="'http://www.google.com'"
-                :variant="'icon'"
-                :icon="'bi-android2'"
-                >aksdfjaslkdfj</sol-link
+                href="https://google.com"
+                variant="icon"
+                icon="bi-android2"
+                isExternal
+                >google</sol-link
               >
             </li>
           </ul>
@@ -79,30 +115,49 @@
           <ul class="list-unstyled bg-purple text-secondary p-2">
             <li>
               default:
+              <sol-link href="/topbar" variant="default" color="link-light"
+                >topbar</sol-link
+              >
+              external:
               <sol-link
-                :href="'http://www.google.com'"
-                :variant="'default'"
-                :color="'link-light'"
-                >aksdfjaslkdfj</sol-link
+                href="https://google.com"
+                variant="default"
+                color="link-light"
+                isExternal
+                >google</sol-link
               >
             </li>
             <li>
               quiet:
+              <sol-link href="/topbar" variant="quiet" color="link-light"
+                >topbar</sol-link
+              >
+              external:
               <sol-link
-                href="http://www.google.com"
+                href="https://google.com"
                 variant="quiet"
                 color="link-light"
-                >aksdfjaslkdfj</sol-link
+                isExternal
+                >google</sol-link
               >
             </li>
             <li>
               icon:
               <sol-link
-                href="http://www.google.com"
+                href="/topbar"
                 variant="icon"
                 icon="bi-android2"
                 color="link-light"
-                >aksdfjaslkdfj</sol-link
+                >topbar</sol-link
+              >
+              external:
+              <sol-link
+                href="https://google.com"
+                variant="icon"
+                icon="bi-android2"
+                color="link-light"
+                isExternal
+                >google</sol-link
               >
             </li>
           </ul>
@@ -112,32 +167,94 @@
             <li>
               default:
               <sol-link
-                href="http://www.google.com"
+                href="/topbar"
                 variant="default"
-                color="link-dark"
-                >aksdfjaslkdfj</sol-link
+                color="link-dark link-underline-dark"
+                >topbar</sol-link
               >
             </li>
             <li>
               quiet:
-              <sol-link
-                href="http://www.google.com"
-                variant="quiet"
-                color="link-dark"
-                >aksdfjaslkdfj</sol-link
+              <sol-link href="/topbar" variant="quiet" color="link-dark"
+                >topbar</sol-link
               >
             </li>
             <li>
               icon:
               <sol-link
-                href="http://www.google.com"
+                href="/topbar"
                 variant="icon"
                 icon="bi-android2"
                 color="link-dark"
-                >aksdfjaslkdfj</sol-link
+                >topbar</sol-link
               >
             </li>
           </ul>
+
+          <hr class="mb-5 w-25 d-inline-block" />
+
+          <h5>Badge</h5>
+          <ul class="list-unstyled">
+            <li>default <span class="badge bg-primary">New</span></li>
+            <li>
+              pill
+              <span class="badge rounded-pill text-bg-primary">Primary</span>
+            </li>
+            <li></li>
+          </ul>
+
+          <hr class="mb-5 w-25 d-inline-block" />
+
+          <h5>Button</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <button type="button" class="btn btn-primary">Primary</button>
+            </li>
+            <li class="mb-2">
+              <button type="button" class="btn btn-outline-primary">
+                Primary Outline
+              </button>
+            </li>
+            <li class="mb-2">
+              <button type="button" class="btn btn-primary btn-sm">
+                Small button
+              </button>
+            </li>
+            <li class="mb-2">
+              <button type="button" class="btn btn-outline-primary btn-sm">
+                Small outline
+              </button>
+            </li>
+          </ul>
+
+          <hr class="mb-5 w-25 d-inline-block" />
+
+          <h5>Heading</h5>
+          <ul class="list-unstyled">
+            <li><h1>h1</h1></li>
+            <li><h2>h2</h2></li>
+            <li><h3>h3</h3></li>
+            <li><h4>h4</h4></li>
+            <li><h5>h5</h5></li>
+            <li><h6>h6</h6></li>
+            <li><h1 class="text-dark-beige ff-encode-sans">Encode-sans</h1></li>
+          </ul>
+
+          <hr class="mb-5 w-25 d-inline-block" />
+
+          <h5>Paragraph</h5>
+          <p>
+            System. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Neque similique consequuntur numquam assumenda nihil, error
+            reiciendis sequi voluptas perferendis magnam expedita et, minus
+            tenetur hic. Illum iste eaque officiis obcaecati.
+          </p>
+          <p class="ff-open-sans">
+            Open Sans. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Neque similique consequuntur numquam assumenda nihil, error
+            reiciendis sequi voluptas perferendis magnam expedita et, minus
+            tenetur hic. Illum iste eaque officiis obcaecati.
+          </p>
         </div>
       </div>
     </template>

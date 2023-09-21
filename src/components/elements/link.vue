@@ -1,9 +1,9 @@
 <template>
-  <template v-if="variant == 'icon'">
+  <template v-if="variant == 'icon' && isExternal">
     <a
       :href="href"
-      :class="color"
-      class="link-underline link-offset-1 link-underline-opacity-0 link-underline-opacity-100-hover"
+      :class="[color ? color : 'link-underline']"
+      class="link-offset-1 link-underline-opacity-0 link-underline-opacity-50-hover"
     >
       <slot name="icon">
         <i class="bi me-1" :class="icon"></i>
@@ -11,19 +11,53 @@
       <slot></slot>
     </a>
   </template>
-  <template v-else-if="variant == 'quiet'">
+  <template v-else-if="variant == 'quiet' && isExternal">
     <a
       :href="href"
-      :class="color"
-      class="link-offset-1 link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+      :class="[color ? color : 'link-underline']"
+      class="link-offset-1 link-underline-opacity-0 link-underline-opacity-50-hover"
     >
       <slot></slot>
     </a>
   </template>
-  <template v-else>
-    <a :href="href" :class="color" class="link-offset-1">
+  <template v-else-if="isExternal">
+    <a
+      :href="href"
+      :class="[color ? color : 'link-underline']"
+      class="link-offset-1 link-underline-opacity-50-hover"
+    >
       <slot></slot>
     </a>
+  </template>
+  <template v-else-if="variant == 'icon'">
+    <router-link
+      :to="href"
+      :class="[color ? color : 'link-underline']"
+      class="link-offset-1 link-underline-opacity-0 link-underline-opacity-50-hover"
+    >
+      <slot name="icon">
+        <i class="bi me-1" :class="icon"></i>
+      </slot>
+      <slot></slot>
+    </router-link>
+  </template>
+  <template v-else-if="variant == 'quiet'">
+    <router-link
+      :to="href"
+      :class="[color ? color : 'link-underline']"
+      class="link-offset-1 link-underline-opacity-0 link-underline-opacity-50-hover"
+    >
+      <slot></slot>
+    </router-link>
+  </template>
+  <template v-else>
+    <router-link
+      :to="href"
+      :class="[color ? color : 'link-underline']"
+      class="link-offset-1 link-underline-opacity-50-hover"
+    >
+      <slot></slot>
+    </router-link>
   </template>
 </template>
 
@@ -48,6 +82,11 @@ export default {
       type: String,
       required: false,
       default: "",
+    },
+    isExternal: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
   },
   data: function () {

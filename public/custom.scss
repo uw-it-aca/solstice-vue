@@ -27,7 +27,10 @@ $warning: #f5d300;
 
 // default link color overrides
 $link-color: #2F68CB;
+//$link-hover-color: shift-color($link-color, 20%);
+
 $link-color-dark: #94B2E6;
+//$link-hover-color-dark: shift-color($link-color-dark, -$link-shade-percentage);
 
 // base theme colors
 $theme-colors: (

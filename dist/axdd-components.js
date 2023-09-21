@@ -1,6 +1,6 @@
-import { getCurrentInstance as ge, onMounted as ye, nextTick as de, unref as we, ref as A, readonly as $e, getCurrentScope as ke, onScopeDispose as xe, watch as D, computed as Q, shallowRef as Oe, watchEffect as Se, openBlock as i, createElementBlock as l, createElementVNode as a, withDirectives as Ie, vModelSelect as Pe, renderSlot as d, resolveComponent as K, normalizeClass as f, normalizeStyle as W, createCommentVNode as _, createVNode as ce, withCtx as j, createTextVNode as N, toDisplayString as m, createStaticVNode as ue, createBlock as F, resolveDynamicComponent as Ne, withKeys as E, withModifiers as Ce, pushScopeId as Te, popScopeId as qe } from "vue";
+import { getCurrentInstance as ge, onMounted as ye, nextTick as de, unref as we, ref as A, readonly as $e, getCurrentScope as ke, onScopeDispose as xe, watch as D, computed as Q, shallowRef as Oe, watchEffect as Se, openBlock as i, createElementBlock as l, createElementVNode as a, withDirectives as Ie, vModelSelect as Pe, renderSlot as d, resolveComponent as K, normalizeClass as f, normalizeStyle as W, createCommentVNode as _, createVNode as ce, withCtx as j, createTextVNode as N, toDisplayString as m, createStaticVNode as ue, createBlock as F, resolveDynamicComponent as Ne, withKeys as q, withModifiers as Ce, pushScopeId as Ee, popScopeId as Te } from "vue";
 var G;
-const fe = typeof window < "u", Ee = (e) => typeof e == "function", Me = (e) => typeof e == "string", je = () => {
+const fe = typeof window < "u", qe = (e) => typeof e == "function", Me = (e) => typeof e == "string", je = () => {
 };
 fe && ((G = window == null ? void 0 : window.navigator) != null && G.userAgent) && /iP(ad|hone|od)/.test(window.navigator.userAgent);
 function J(e) {
@@ -194,18 +194,18 @@ function it(e, n, t, r = {}) {
     }
   if (!t)
     return $;
-  const O = J(n), L = tt(O), I = (o = r.serializer) != null ? o : rt[L], { pause: k, resume: P } = Ge($, () => T($.value), { flush: s, deep: c, eventFilter: x });
+  const O = J(n), L = tt(O), I = (o = r.serializer) != null ? o : rt[L], { pause: k, resume: P } = Ge($, () => E($.value), { flush: s, deep: c, eventFilter: x });
   return g && v && (Z(g, "storage", S), Z(g, ae, V)), S(), $;
-  function T(u) {
+  function E(u) {
     try {
       if (u == null)
         t.removeItem(e);
       else {
-        const p = I.write(u), q = t.getItem(e);
-        q !== p && (t.setItem(e, p), g && g.dispatchEvent(new CustomEvent(ae, {
+        const p = I.write(u), T = t.getItem(e);
+        T !== p && (t.setItem(e, p), g && g.dispatchEvent(new CustomEvent(ae, {
           detail: {
             key: e,
-            oldValue: q,
+            oldValue: T,
             newValue: p,
             storageArea: t
           }
@@ -220,8 +220,8 @@ function it(e, n, t, r = {}) {
     if (p == null)
       return C && O !== null && t.setItem(e, I.write(O)), O;
     if (!u && w) {
-      const q = I.read(p);
-      return Ee(w) ? w(q, O) : L === "object" && !Array.isArray(q) ? ne(ne({}, O), q) : q;
+      const T = I.read(p);
+      return qe(w) ? w(T, O) : L === "object" && !Array.isArray(T) ? ne(ne({}, O), T) : T;
     } else
       return typeof p != "string" ? p : I.read(p);
   }
@@ -280,21 +280,21 @@ function ft(e = {}) {
     set(k) {
       y.value = k;
     }
-  }), O = pe("updateHTMLAttrs", (k, P, T) => {
+  }), O = pe("updateHTMLAttrs", (k, P, E) => {
     const M = o == null ? void 0 : o.document.querySelector(k);
     if (M)
       if (P === "class") {
-        const V = T.split(/\s/g);
+        const V = E.split(/\s/g);
         Object.values(b).flatMap((S) => (S || "").split(/\s/g)).filter(Boolean).forEach((S) => {
           V.includes(S) ? M.classList.add(S) : M.classList.remove(S);
         });
       } else
-        M.setAttribute(P, T);
+        M.setAttribute(P, E);
   });
   function L(k) {
     var P;
-    const T = k === "auto" ? x.value : k;
-    O(n, t, (P = b[T]) != null ? P : T);
+    const E = k === "auto" ? x.value : k;
+    O(n, t, (P = b[E]) != null ? P : E);
   }
   function I(k) {
     e.onChanged ? e.onChanged(k, L) : L(k);
@@ -386,7 +386,7 @@ function Nt(e, n, t, r, o, s) {
   ]);
 }
 const Ct = /* @__PURE__ */ h(It, [["render", Nt]]);
-const Tt = {
+const Et = {
   name: "sol-sidebar",
   inject: ["mq"],
   props: {
@@ -422,10 +422,10 @@ const Tt = {
   },
   created: function() {
   }
-}, qt = {
+}, Tt = {
   key: 0,
   class: "py-2 px-3 small bg-black bg-opacity-10"
-}, Et = { class: "d-flex" }, Mt = /* @__PURE__ */ a("div", { class: "flex-fill" }, "username", -1), jt = { class: "flex-fill text-end" }, At = ["href"], Lt = {
+}, qt = { class: "d-flex" }, Mt = /* @__PURE__ */ a("div", { class: "flex-fill" }, "username", -1), jt = { class: "flex-fill text-end" }, At = ["href"], Lt = {
   key: 0,
   class: "btn btn-link btn-sm border border-1 border-light rounded-3 py-0 px-1 text-light d-lg-none me-2",
   "data-bs-toggle": "collapse",
@@ -459,9 +459,9 @@ function Kt(e, n, t, r, o, s) {
       style: W([s.mq.mdMinus ? "" : "min-width: 280px; max-width:280px;"])
     }, [
       a("header", null, [
-        e.$slots.profile ? (i(), l("div", qt, [
+        e.$slots.profile ? (i(), l("div", Tt, [
           d(e.$slots, "profile", {}, () => [
-            a("div", Et, [
+            a("div", qt, [
               Mt,
               a("div", jt, [
                 a("a", {
@@ -532,7 +532,7 @@ function Kt(e, n, t, r, o, s) {
     ], 2)
   ], 6);
 }
-const Jt = /* @__PURE__ */ h(Tt, [["render", Kt]]);
+const Jt = /* @__PURE__ */ h(Et, [["render", Kt]]);
 const Gt = {
   name: "axdd-topbar",
   inject: ["mq"],
@@ -724,7 +724,7 @@ function Cn(e, n, t, r, o, s) {
     _: 3
   });
 }
-const Tn = /* @__PURE__ */ h(Nn, [["render", Cn]]), qn = {
+const En = /* @__PURE__ */ h(Nn, [["render", Cn]]), Tn = {
   // MARK: single word component names need to have a double word specification
   // example 'action.vue' --> name: CardAction
   name: "axdd-card-action",
@@ -732,12 +732,12 @@ const Tn = /* @__PURE__ */ h(Nn, [["render", Cn]]), qn = {
     return {};
   }
 };
-function En(e, n, t, r, o, s) {
+function qn(e, n, t, r, o, s) {
   return i(), l("div", null, [
     d(e.$slots, "default")
   ]);
 }
-const Mn = /* @__PURE__ */ h(qn, [["render", En]]), jn = {
+const Mn = /* @__PURE__ */ h(Tn, [["render", qn]]), jn = {
   // MARK: single word component names need to have a double word specification
   // example 'action.vue' --> name: CardAction
   name: "axdd-card-tabs",
@@ -873,8 +873,8 @@ function Xn(e, n, t, r, o, s) {
       "aria-controls": t.panelId,
       "aria-selected": t.activeTab,
       onKeydown: [
-        n[0] || (n[0] = E((...c) => s.moveNext && s.moveNext(...c), ["right"])),
-        n[1] || (n[1] = E((...c) => s.movePrev && s.movePrev(...c), ["left"]))
+        n[0] || (n[0] = q((...c) => s.moveNext && s.moveNext(...c), ["right"])),
+        n[1] || (n[1] = q((...c) => s.movePrev && s.movePrev(...c), ["left"]))
       ],
       onClick: n[2] || (n[2] = (...c) => s.onClick && s.onClick(...c))
     }, [
@@ -891,8 +891,8 @@ function Xn(e, n, t, r, o, s) {
       "aria-controls": t.panelId,
       "aria-selected": t.activeTab,
       onKeydown: [
-        n[3] || (n[3] = E((...c) => s.moveNext && s.moveNext(...c), ["right"])),
-        n[4] || (n[4] = E((...c) => s.movePrev && s.movePrev(...c), ["left"]))
+        n[3] || (n[3] = q((...c) => s.moveNext && s.moveNext(...c), ["right"])),
+        n[4] || (n[4] = q((...c) => s.movePrev && s.movePrev(...c), ["left"]))
       ],
       onClick: n[5] || (n[5] = (...c) => s.onClick && s.onClick(...c))
     }, [
@@ -909,8 +909,8 @@ function Xn(e, n, t, r, o, s) {
       "aria-controls": t.panelId,
       "aria-selected": t.activeTab,
       onKeydown: [
-        n[6] || (n[6] = E((...c) => s.moveNext && s.moveNext(...c), ["right"])),
-        n[7] || (n[7] = E((...c) => s.movePrev && s.movePrev(...c), ["left"]))
+        n[6] || (n[6] = q((...c) => s.moveNext && s.moveNext(...c), ["right"])),
+        n[7] || (n[7] = q((...c) => s.movePrev && s.movePrev(...c), ["left"]))
       ],
       onClick: n[8] || (n[8] = (...c) => s.onClick && s.onClick(...c))
     }, [
@@ -944,7 +944,7 @@ function na(e, n, t, r, o, s) {
     role: "tabpanel",
     "aria-labelledby": t.panelId + "-tab",
     tabindex: "0",
-    onKeydown: n[0] || (n[0] = E(Ce((...c) => s.setFocus && s.setFocus(...c), ["shift", "prevent"]), ["tab"]))
+    onKeydown: n[0] || (n[0] = q(Ce((...c) => s.setFocus && s.setFocus(...c), ["shift", "prevent"]), ["tab"]))
   }, [
     d(e.$slots, "default")
   ], 42, ta);
@@ -1083,7 +1083,7 @@ const Ca = {
       type: Boolean
     }
   }
-}, Ta = ["href", "aria-controls"], qa = ["data-bs-target", "aria-controls"], Ea = {
+}, Ea = ["href", "aria-controls"], Ta = ["data-bs-target", "aria-controls"], qa = {
   key: 0,
   class: "bi bi-chevron-right text-dark-beige",
   "aria-hidden": "true"
@@ -1098,7 +1098,7 @@ function Ma(e, n, t, r, o, s) {
     "aria-controls": t.disclosureId
   }, [
     d(e.$slots, "default", {}, void 0, !0)
-  ], 8, Ta)) : (i(), l("button", {
+  ], 8, Ea)) : (i(), l("button", {
     key: 1,
     class: f(["btn btn-beige", [t.hasIndicator ? "chevron" : ""]]),
     type: "button",
@@ -1107,9 +1107,9 @@ function Ma(e, n, t, r, o, s) {
     "aria-expanded": "false",
     "aria-controls": t.disclosureId
   }, [
-    t.hasIndicator ? (i(), l("i", Ea)) : _("", !0),
+    t.hasIndicator ? (i(), l("i", qa)) : _("", !0),
     d(e.$slots, "default", {}, void 0, !0)
-  ], 10, qa));
+  ], 10, Ta));
 }
 const ja = /* @__PURE__ */ h(Ca, [["render", Ma], ["__scopeId", "data-v-bac417f3"]]), Aa = {
   name: "axdd-disclosure-panel",
@@ -1142,7 +1142,7 @@ const Da = {
       required: !0
     }
   }
-}, Ua = (e) => (Te("data-v-075da959"), e = e(), qe(), e), Va = { class: "rounded-3 p-3 mb-2" }, Ra = { class: "d-flex" }, Qa = {
+}, Ua = (e) => (Ee("data-v-075da959"), e = e(), Te(), e), Va = { class: "rounded-3 p-3 mb-2" }, Ra = { class: "d-flex" }, Qa = {
   class: "me-3",
   style: { width: "330px" }
 }, Wa = ["data-bs-target", "aria-controls"], za = /* @__PURE__ */ Ua(() => /* @__PURE__ */ a("i", {
@@ -1203,7 +1203,7 @@ const Ya = /* @__PURE__ */ h(Da, [["render", Ga], ["__scopeId", "data-v-075da959
       required: !1,
       default: ""
     },
-    external: {
+    isExternal: {
       type: Boolean,
       required: !1,
       default: !1
@@ -1215,7 +1215,7 @@ const Ya = /* @__PURE__ */ h(Da, [["render", Ga], ["__scopeId", "data-v-075da959
 }, Za = ["href"], es = ["href"], ts = ["href"];
 function ns(e, n, t, r, o, s) {
   const c = K("router-link");
-  return t.variant == "icon" && t.external ? (i(), l("a", {
+  return t.variant == "icon" && t.isExternal ? (i(), l("a", {
     key: 0,
     href: t.href,
     class: f([[t.color ? t.color : "link-underline"], "link-offset-1 link-underline-opacity-0 link-underline-opacity-50-hover"])
@@ -1226,13 +1226,13 @@ function ns(e, n, t, r, o, s) {
       }, null, 2)
     ]),
     d(e.$slots, "default")
-  ], 10, Za)) : t.variant == "quiet" && t.external ? (i(), l("a", {
+  ], 10, Za)) : t.variant == "quiet" && t.isExternal ? (i(), l("a", {
     key: 1,
     href: t.href,
     class: f([[t.color ? t.color : "link-underline"], "link-offset-1 link-underline-opacity-0 link-underline-opacity-50-hover"])
   }, [
     d(e.$slots, "default")
-  ], 10, es)) : t.external ? (i(), l("a", {
+  ], 10, es)) : t.isExternal ? (i(), l("a", {
     key: 2,
     href: t.href,
     class: f([[t.color ? t.color : "link-underline"], "link-offset-1 link-underline-opacity-50-hover"])
@@ -1277,7 +1277,7 @@ const as = /* @__PURE__ */ h(Xa, [["render", ns]]), R = {
   // CardStatus,
   // LinkButton,
   Card: Pn,
-  CardHeading: Tn,
+  CardHeading: En,
   CardAction: Mn,
   CardTabs: Ln,
   DisclosureAction: ja,

@@ -12,7 +12,7 @@
         <p>
           <sol-link
             href="https://github.com/uw-it-aca/axdd-components"
-            isExternal
+            is-external
             >AXDD-Components</sol-link
           >
           is a VueJs component library. Lorem ipsum dolor sit amet consectetur,
@@ -156,16 +156,11 @@
           <ul class="list-unstyled text-secondary p-2 border">
             <li>
               external default:
-              <sol-link href="https://google.com" external="true"
-                >google</sol-link
-              >
+              <sol-link href="https://google.com" is-external>google</sol-link>
             </li>
             <li>
               external quiet:
-              <sol-link
-                href="https://google.com"
-                variant="quiet"
-                external="true"
+              <sol-link href="https://google.com" variant="quiet" is-external
                 >google</sol-link
               >
             </li>
@@ -175,7 +170,7 @@
                 href="https://google.com"
                 variant="icon"
                 icon="bi-android2"
-                external
+                is-external
                 >google</sol-link
               >
             </li>

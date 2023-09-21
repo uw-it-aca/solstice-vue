@@ -1,5 +1,5 @@
 <template>
-  <template v-if="variant == 'icon' && isExternal">
+  <template v-if="variant == 'icon' && external">
     <a
       :href="href"
       :class="[color ? color : 'link-underline']"
@@ -11,7 +11,7 @@
       <slot></slot>
     </a>
   </template>
-  <template v-else-if="variant == 'quiet' && isExternal">
+  <template v-else-if="variant == 'quiet' && external">
     <a
       :href="href"
       :class="[color ? color : 'link-underline']"
@@ -20,7 +20,7 @@
       <slot></slot>
     </a>
   </template>
-  <template v-else-if="isExternal">
+  <template v-else-if="external">
     <a
       :href="href"
       :class="[color ? color : 'link-underline']"
@@ -83,7 +83,7 @@ export default {
       required: false,
       default: "",
     },
-    isExternal: {
+    external: {
       type: Boolean,
       required: false,
       default: false,

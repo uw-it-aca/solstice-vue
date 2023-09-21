@@ -10,10 +10,10 @@
     <template #description>
       <div class="p-0 col-md-8 lead">
         <p>
-          <a
+          <sol-link
             href="https://github.com/uw-it-aca/axdd-components"
-            class="link-underline link-offset-1 link-underline-opacity-50-hover"
-            >AXDD-Components</a
+            isExternal
+            >AXDD-Components</sol-link
           >
           is a VueJs component library. Lorem ipsum dolor sit amet consectetur,
           adipisicing elit. Eius eaque placeat corrupti sequi eveniet aliquam
@@ -84,29 +84,15 @@
             <li>
               default:
               <sol-link href="/topbar">topbar</sol-link>
-              external:
-              <sol-link href="https://google.com" isExternal>google</sol-link>
             </li>
             <li>
               quiet:
               <sol-link href="/topbar" variant="quiet">topbar</sol-link>
-              external:
-              <sol-link href="https://google.com" variant="quiet" isExternal
-                >google</sol-link
-              >
             </li>
             <li>
               icon:
               <sol-link href="/topbar" variant="icon" icon="bi-android2"
                 >topbar</sol-link
-              >
-              external:
-              <sol-link
-                href="https://google.com"
-                variant="icon"
-                icon="bi-android2"
-                isExternal
-                >google</sol-link
               >
             </li>
           </ul>
@@ -118,27 +104,11 @@
               <sol-link href="/topbar" variant="default" color="link-light"
                 >topbar</sol-link
               >
-              external:
-              <sol-link
-                href="https://google.com"
-                variant="default"
-                color="link-light"
-                isExternal
-                >google</sol-link
-              >
             </li>
             <li>
               quiet:
               <sol-link href="/topbar" variant="quiet" color="link-light"
                 >topbar</sol-link
-              >
-              external:
-              <sol-link
-                href="https://google.com"
-                variant="quiet"
-                color="link-light"
-                isExternal
-                >google</sol-link
               >
             </li>
             <li>
@@ -149,15 +119,6 @@
                 icon="bi-android2"
                 color="link-light"
                 >topbar</sol-link
-              >
-              external:
-              <sol-link
-                href="https://google.com"
-                variant="icon"
-                icon="bi-android2"
-                color="link-light"
-                isExternal
-                >google</sol-link
               >
             </li>
           </ul>
@@ -187,6 +148,35 @@
                 icon="bi-android2"
                 color="link-dark"
                 >topbar</sol-link
+              >
+            </li>
+          </ul>
+
+          <p>External links - go outside of the page</p>
+          <ul class="list-unstyled text-secondary p-2 border">
+            <li>
+              external default:
+              <sol-link href="https://google.com" external="true"
+                >google</sol-link
+              >
+            </li>
+            <li>
+              external quiet:
+              <sol-link
+                href="https://google.com"
+                variant="quiet"
+                external="true"
+                >google</sol-link
+              >
+            </li>
+            <li>
+              external icon:
+              <sol-link
+                href="https://google.com"
+                variant="icon"
+                icon="bi-android2"
+                external
+                >google</sol-link
               >
             </li>
           </ul>

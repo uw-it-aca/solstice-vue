@@ -1,5 +1,4 @@
 import { fileURLToPath, URL } from "url";
-
 import { defineConfig } from "vite";
 
 import VueRouter from "unplugin-vue-router/vite";

@@ -11,9 +11,9 @@
       <div class="p-0 col-md-8 lead">
         <p>
           <a
-            href="https://github.com/uw-it-aca/axdd-components"
+            href="https://github.com/uw-it-aca/solstice-vue"
             class="link-primary"
-            >AXDD-Components</a
+            >solstice-vue</a
           >
           is a VueJs component library. Lorem ipsum dolor sit amet consectetur,
           adipisicing elit. Eius eaque placeat corrupti sequi eveniet aliquam

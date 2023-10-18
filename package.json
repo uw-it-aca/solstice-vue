@@ -1,10 +1,10 @@
 {
-  "name": "axdd-components",
+  "name": "solstice-vue",
   "type": "module",
   "version": "task/dark-mode",
   "private": true,
-  "main": "./dist/axdd-components.umd.cjs",
-  "module": "./dist/axdd-components.js",
+  "main": "./dist/solstice-vue.umd.cjs",
+  "module": "./dist/solstice-vue.js",
   "files": [
     "dist",
     "LICENSE",
@@ -13,8 +13,8 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/axdd-components.js",
-      "require": "./dist/axdd-components.cjs"
+      "import": "./dist/solstice-vue.js",
+      "require": "./dist/solstice-vue.cjs"
     },
     "./dist/style.css": "./dist/style.css",
     "./dist/custom.scss": "./dist/custom.scss"

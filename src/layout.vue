@@ -31,7 +31,7 @@
 </template>
 <script>
 export default {
-  name: "AxddComponents",
+  name: "SolsticeVue",
   components: {},
   props: {
     pageTitle: {

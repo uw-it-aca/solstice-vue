@@ -17,9 +17,9 @@ export default defineConfig({
     lib: {
       // Could also be a dictionary or array of multiple entry points
       entry: "src/components/index.js",
-      name: "AxddComponents",
+      name: "SolsticeVue",
       // the proper extensions will be added
-      fileName: "axdd-components",
+      fileName: "solstice-vue",
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

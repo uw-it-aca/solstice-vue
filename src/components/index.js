@@ -4,7 +4,7 @@
 
 import components from "./components";
 
-const AxddComponents = {
+const SolsticeVue = {
   install(Vue) {
     for (const prop in components) {
       if (Object.prototype.hasOwnProperty.call(components, prop)) {
@@ -15,4 +15,4 @@ const AxddComponents = {
   },
 };
 
-export default AxddComponents;
+export default SolsticeVue;

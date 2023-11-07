@@ -42,7 +42,7 @@ export default {
   data() {
     return {
       // minimum application setup overrides
-      appName: "AXDD Components",
+      appName: "Solstice Vue",
     };
   },
   created: function () {

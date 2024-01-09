@@ -23,13 +23,83 @@ $danger: #a94442;
 $warning: #f5d300;
 */
 
+// define new colors
+$purple2: #4b2e83;
+$red2: #cb444a;
+$blue2: #2F68CB;
+
+// custom color swatches
+$purple2-100: tint-color($purple2, 80%);
+$purple2-200: tint-color($purple2, 60%);
+$purple2-300: tint-color($purple2, 40%);
+$purple2-400: tint-color($purple2, 20%);
+$purple2-500: $purple2;
+$purple2-600: shade-color($purple2, 20%);
+$purple2-700: shade-color($purple2, 40%);
+$purple2-800: shade-color($purple2, 60%);
+$purple2-900: shade-color($purple2, 80%);
+$red2-100: tint-color($red2, 80%);
+$red2-200: tint-color($red2, 60%);
+$red2-300: tint-color($red2, 40%);
+$red2-400: tint-color($red2, 20%);
+$red2-500: $red2;
+$red2-600: shade-color($red2, 20%);
+$red2-700: shade-color($red2, 40%);
+$red2-800: shade-color($red2, 60%);
+$red2-900: shade-color($red2, 80%);
+$blue2-100: tint-color($blue2, 80%);
+$blue2-200: tint-color($blue2, 60%);
+$blue2-300: tint-color($blue2, 40%);
+$blue2-400: tint-color($blue2, 20%);
+$blue2-500: $blue2;
+$blue2-600: shade-color($blue2, 20%);
+$blue2-700: shade-color($blue2, 40%);
+$blue2-800: shade-color($blue2, 60%);
+$blue2-900: shade-color($blue2, 80%);
+
+// custom color swatch maps
+$purple2s: (
+  "100": $purple2-100,
+  "200": $purple2-200,
+  "300": $purple2-300,
+  "400": $purple2-400,
+  "500": $purple2-500,
+  "600": $purple2-600,
+  "700": $purple2-700,
+  "800": $purple2-800,
+  "900": $purple2-900
+);
+$red2s: (
+  "100": $red2-100,
+  "200": $red2-200,
+  "300": $red2-300,
+  "400": $red2-400,
+  "500": $red2-500,
+  "600": $red2-600,
+  "700": $red2-700,
+  "800": $red2-800,
+  "900": $red2-900
+);
+$blue2s: (
+  "100": $blue2-100,
+  "200": $blue2-200,
+  "300": $blue2-300,
+  "400": $blue2-400,
+  "500": $blue2-500,
+  "600": $blue2-600,
+  "700": $blue2-700,
+  "800": $blue2-800,
+  "900": $blue2-900
+);
+
+// override theme colors
 $theme-colors: (
-  "primary":    #2F68CB, // override
+  "primary":    $blue2, // override
   "secondary":  $secondary,
   "success":    $success,
   "info":       $info,
   "warning":    $warning,
-  "danger":     #cb444a, // override
+  "danger":     $red2, // override
   "light":      $light,
   "dark":       $dark,
 );
@@ -53,9 +123,9 @@ $custom-colors: (
   "gray": #e9ecef,
 
   // new solstice foundations
-  "action": #2F68CB, // bg-action, text-action
-  "brand-accent": #4b2e83, // bg-brand-accent, text-brand-accent, table-brand-accent, btn-brand-accent
-  "critical": #cb444a, // bg-critical, text-critical
+  "action": $blue2, // bg-action, text-action
+  "brand": $purple2, // bg-brand-accent, text-brand-accent, table-brand-accent, btn-brand-accent
+  "critical": $red2, // bg-critical, text-critical
 );
 
 // merge the default bootstrap + custom color maps
@@ -85,6 +155,32 @@ $font-sizes: map-merge($font-sizes, $extra-font-sizes);
 @import "node_modules/bootstrap/scss/grid";
 @import "node_modules/bootstrap/scss/helpers";
 
+// generate brand color swatches
+
+@each $key, $value in $purple2s {
+  .bg-purple2-#{$key} {
+    background-color: $value !important;
+  }
+  .text-purple2-#{$key} {
+    color: $value !important;
+  }
+}
+@each $key, $value in $red2s {
+  .bg-red2-#{$key} {
+    background-color: $value !important;
+  }
+  .text-red2-#{$key} {
+    color: $value !important;
+  }
+}
+@each $key, $value in $blue2s {
+  .bg-blue2-#{$key} {
+    background-color: $value !important;
+  }
+  .text-blue2-#{$key} {
+    color: $value !important;
+  }
+}
 
 
 // add or modify utilities here

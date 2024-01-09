@@ -57,35 +57,57 @@
           </ul>
           <h3>Color</h3>
 
-          <h4>Token</h4>
-          <ul>
-            <li>
-              <span
-                class="d-inline-block bg-action"
-                style="width: 50px; height: 50px"
-                >&nbsp;</span
-              >
-              action #2f68cb
-            </li>
-            <li>
-              <span
-                class="d-inline-block bg-critical"
-                style="width: 50px; height: 50px"
-                >&nbsp;</span
-              >
-              critical #cb444a
-            </li>
-            <li>
-              <span
-                class="d-inline-block bg-brand-accent"
-                style="width: 50px; height: 50px"
-                >&nbsp;</span
-              >
-              brand-accent #4b2e83
-            </li>
-          </ul>
+          <h4>Swatches</h4>
+          <div class="d-flex w-50">
+            <div style="width: 150px" class="col mb-3">
+              <div class="p-3 mb-2 position-relative bg-purple2-500 text-white">
+                <strong class="d-block">$purple2</strong>
+                #4b2e83
+              </div>
+              <div class="p-3 bg-purple2-100">$purple2-100</div>
+              <div class="p-3 bg-purple2-200">$purple2-200</div>
+              <div class="p-3 bg-purple2-300">$purple2-300</div>
+              <div class="p-3 bg-purple2-400 text-light">$purple2-400</div>
+              <div class="p-3 bg-purple2-500 text-white">$purple2-500</div>
+              <div class="p-3 bg-purple2-600 text-white">$purple2-600</div>
+              <div class="p-3 bg-purple2-700 text-white">$purple2-700</div>
+              <div class="p-3 bg-purple2-800 text-white">$purple2-800</div>
+              <div class="p-3 bg-purple2-900 text-white">$purple2-900</div>
+            </div>
 
-          <h4>Background</h4>
+            <div style="width: 150px" class="col mb-3">
+              <div class="p-3 mb-2 position-relative bg-red2-500 text-white">
+                <strong class="d-block">$red2</strong>
+                #cb444a
+              </div>
+              <div class="p-3 bg-red2-100">$red2-100</div>
+              <div class="p-3 bg-red2-200">$red2-200</div>
+              <div class="p-3 bg-red2-300">$red2-300</div>
+              <div class="p-3 bg-red2-400 text-light">$red2-400</div>
+              <div class="p-3 bg-red2-500 text-white">$red2-500</div>
+              <div class="p-3 bg-red2-600 text-white">$red2-600</div>
+              <div class="p-3 bg-red2-700 text-white">$red2-700</div>
+              <div class="p-3 bg-red2-800 text-white">$red2-800</div>
+              <div class="p-3 bg-red2-900 text-white">$red2-900</div>
+            </div>
+
+            <div style="width: 150px" class="col mb-3">
+              <div class="p-3 mb-2 position-relative bg-blue2-500 text-white">
+                <strong class="d-block">$blue2</strong>
+                #2F68CB
+              </div>
+              <div class="p-3 bg-blue2-100">$blue2-100</div>
+              <div class="p-3 bg-blue2-200">$blue2-200</div>
+              <div class="p-3 bg-blue2-300">$blue2-300</div>
+              <div class="p-3 bg-blue2-400 text-light">$blue2-400</div>
+              <div class="p-3 bg-blue2-500 text-white">$blue2-500</div>
+              <div class="p-3 bg-blue2-600 text-white">$blue2-600</div>
+              <div class="p-3 bg-blue2-700 text-white">$blue2-700</div>
+              <div class="p-3 bg-blue2-800 text-white">$blue2-800</div>
+              <div class="p-3 bg-blue2-900 text-white">$blue2-900</div>
+            </div>
+
+          </div>
         </div>
       </div>
     </template>

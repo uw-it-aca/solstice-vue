@@ -33,8 +33,16 @@
             incidunt iusto, esse voluptatum animi nobis dolores modi earum
             magnam expedita eius repellat!
           </p>
+          <h3>Development</h3>
+          <ol>
+            <li>create a branch</li>
+            <li>run the <code>npm run build</code> command</li>
+          </ol>
 
-          <h3>Start with a layout</h3>
+          <hr />
+
+          <h2>Foundations</h2>
+          <h3>Layout</h3>
           <ul>
             <li>
               <router-link :to="'/topbar'" class="link-primary"
@@ -47,12 +55,37 @@
               >
             </li>
           </ul>
+          <h3>Color</h3>
 
-          <h3>Development</h3>
-          <ol>
-            <li>create a branch</li>
-            <li>run the <code>npm run build</code> command</li>
-          </ol>
+          <h4>Token</h4>
+          <ul>
+            <li>
+              <span
+                class="d-inline-block bg-action"
+                style="width: 50px; height: 50px"
+                >&nbsp;</span
+              >
+              action #2f68cb
+            </li>
+            <li>
+              <span
+                class="d-inline-block bg-critical"
+                style="width: 50px; height: 50px"
+                >&nbsp;</span
+              >
+              critical #cb444a
+            </li>
+            <li>
+              <span
+                class="d-inline-block bg-brand-accent"
+                style="width: 50px; height: 50px"
+                >&nbsp;</span
+              >
+              brand-accent #4b2e83
+            </li>
+          </ul>
+
+          <h4>Background</h4>
         </div>
       </div>
     </template>

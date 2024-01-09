@@ -24,12 +24,12 @@ $warning: #f5d300;
 */
 
 $theme-colors: (
-  "primary":    #2F68CB,
+  "primary":    #2F68CB, // override
   "secondary":  $secondary,
   "success":    $success,
   "info":       $info,
   "warning":    $warning,
-  "danger":     $danger,
+  "danger":     #cb444a, // override
   "light":      $light,
   "dark":       $dark,
 );
@@ -51,6 +51,11 @@ $custom-colors: (
   "teal": #4c7286,
   "light-gray": #e8e8e8,
   "gray": #e9ecef,
+
+  // new solstice foundations
+  "action": #2F68CB, // bg-action, text-action
+  "brand-accent": #4b2e83, // bg-brand-accent, text-brand-accent, table-brand-accent, btn-brand-accent
+  "critical": #cb444a, // bg-critical, text-critical
 );
 
 // merge the default bootstrap + custom color maps
@@ -80,7 +85,7 @@ $font-sizes: map-merge($font-sizes, $extra-font-sizes);
 @import "node_modules/bootstrap/scss/grid";
 @import "node_modules/bootstrap/scss/helpers";
 
-// add or modify utilities here
+
 
 // add or modify utilities here
 $utilities: (

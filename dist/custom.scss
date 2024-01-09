@@ -14,6 +14,8 @@
 
 // override bootstrap default theme colors
 
+$enable-cssgrid: true;
+
 /*
 $body-bg: #000;
 $body-color: #111;
@@ -27,6 +29,8 @@ $warning: #f5d300;
 $purple2: #4b2e83;
 $red2: #cb444a;
 $blue2: #2F68CB;
+$beige: #ab9765;
+$gold: #ffbc24;
 
 // custom color swatches
 $purple2-100: tint-color($purple2, 80%);
@@ -56,6 +60,24 @@ $blue2-600: shade-color($blue2, 20%);
 $blue2-700: shade-color($blue2, 40%);
 $blue2-800: shade-color($blue2, 60%);
 $blue2-900: shade-color($blue2, 80%);
+$beige-100: tint-color($beige, 80%);
+$beige-200: tint-color($beige, 60%);
+$beige-300: tint-color($beige, 40%);
+$beige-400: tint-color($beige, 20%);
+$beige-500: $beige;
+$beige-600: shade-color($beige, 20%);
+$beige-700: shade-color($beige, 40%);
+$beige-800: shade-color($beige, 60%);
+$beige-900: shade-color($beige, 80%);
+$gold-100: tint-color($gold, 80%);
+$gold-200: tint-color($gold, 60%);
+$gold-300: tint-color($gold, 40%);
+$gold-400: tint-color($gold, 20%);
+$gold-500: $gold;
+$gold-600: shade-color($gold, 20%);
+$gold-700: shade-color($gold, 40%);
+$gold-800: shade-color($gold, 60%);
+$gold-900: shade-color($gold, 80%);
 
 // custom color swatch maps
 $purple2s: (
@@ -90,6 +112,28 @@ $blue2s: (
   "700": $blue2-700,
   "800": $blue2-800,
   "900": $blue2-900
+);
+$beiges: (
+  "100": $beige-100,
+  "200": $beige-200,
+  "300": $beige-300,
+  "400": $beige-400,
+  "500": $beige-500,
+  "600": $beige-600,
+  "700": $beige-700,
+  "800": $beige-800,
+  "900": $beige-900
+);
+$golds: (
+  "100": $gold-100,
+  "200": $gold-200,
+  "300": $gold-300,
+  "400": $gold-400,
+  "500": $gold-500,
+  "600": $gold-600,
+  "700": $gold-700,
+  "800": $gold-800,
+  "900": $gold-900
 );
 
 // override theme colors
@@ -178,6 +222,22 @@ $font-sizes: map-merge($font-sizes, $extra-font-sizes);
     background-color: $value !important;
   }
   .text-blue2-#{$key} {
+    color: $value !important;
+  }
+}
+@each $key, $value in $beiges {
+  .bg-beige-#{$key} {
+    background-color: $value !important;
+  }
+  .text-beige-#{$key} {
+    color: $value !important;
+  }
+}
+@each $key, $value in $golds {
+  .bg-gold-#{$key} {
+    background-color: $value !important;
+  }
+  .text-gold-#{$key} {
     color: $value !important;
   }
 }

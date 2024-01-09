@@ -5,7 +5,7 @@
         class="d-flex justify-content-between align-items-center pb-3 my-4 border-bottom"
       >
         <div class="h4 flex-fill">
-          <i class="bi bi-box-fill me-2 text-brand-accent"></i>
+          <i class="bi bi-box-fill me-2 text-brand"></i>
           <a href="/" class="text-reset text-decoration-none">{{ appName }}</a>
         </div>
         <div><axdd-color-mode></axdd-color-mode></div>

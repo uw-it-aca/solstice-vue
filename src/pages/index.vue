@@ -58,8 +58,8 @@
           <h3>Color</h3>
 
           <h4>Swatches</h4>
-          <div class="d-flex w-50">
-            <div style="width: 150px" class="col mb-3">
+          <div class="grid" style="--bs-columns: 6">
+            <div>
               <div class="p-3 mb-2 position-relative bg-purple2-500 text-white">
                 <strong class="d-block">$purple2</strong>
                 #4b2e83
@@ -75,7 +75,7 @@
               <div class="p-3 bg-purple2-900 text-white">$purple2-900</div>
             </div>
 
-            <div style="width: 150px" class="col mb-3">
+            <div>
               <div class="p-3 mb-2 position-relative bg-red2-500 text-white">
                 <strong class="d-block">$red2</strong>
                 #cb444a
@@ -91,10 +91,10 @@
               <div class="p-3 bg-red2-900 text-white">$red2-900</div>
             </div>
 
-            <div style="width: 150px" class="col mb-3">
+            <div>
               <div class="p-3 mb-2 position-relative bg-blue2-500 text-white">
                 <strong class="d-block">$blue2</strong>
-                #2F68CB
+                #2f68cb
               </div>
               <div class="p-3 bg-blue2-100">$blue2-100</div>
               <div class="p-3 bg-blue2-200">$blue2-200</div>
@@ -107,6 +107,37 @@
               <div class="p-3 bg-blue2-900 text-white">$blue2-900</div>
             </div>
 
+            <div>
+              <div class="p-3 mb-2 position-relative bg-beige-500 text-white">
+                <strong class="d-block">$beige</strong>
+                #ab9765
+              </div>
+              <div class="p-3 bg-beige-100">$beige-100</div>
+              <div class="p-3 bg-beige-200">$beige-200</div>
+              <div class="p-3 bg-beige-300">$beige-300</div>
+              <div class="p-3 bg-beige-400">$beige-400</div>
+              <div class="p-3 bg-beige-500 text-white">$beige-500</div>
+              <div class="p-3 bg-beige-600 text-white">$beige-600</div>
+              <div class="p-3 bg-beige-700 text-white">$beige-700</div>
+              <div class="p-3 bg-beige-800 text-white">$beige-800</div>
+              <div class="p-3 bg-beige-900 text-white">$beige-900</div>
+            </div>
+
+            <div>
+              <div class="p-3 mb-2 position-relative bg-gold-500 text-white">
+                <strong class="d-block">$gold</strong>
+                #ffbc24
+              </div>
+              <div class="p-3 bg-gold-100">$gold-100</div>
+              <div class="p-3 bg-gold-200">$gold-200</div>
+              <div class="p-3 bg-gold-300">$gold-300</div>
+              <div class="p-3 bg-gold-400">$gold-400</div>
+              <div class="p-3 bg-gold-500">$gold-500</div>
+              <div class="p-3 bg-gold-600 text-white">$gold-600</div>
+              <div class="p-3 bg-gold-700 text-white">$gold-700</div>
+              <div class="p-3 bg-gold-800 text-white">$gold-800</div>
+              <div class="p-3 bg-gold-900 text-white">$gold-900</div>
+            </div>
           </div>
         </div>
       </div>
@@ -115,7 +146,7 @@
 </template>
 
 <script>
-import Layout from "../layout.vue";
+import Layout from "@/layout.vue";
 //import HelloWorld from "../components/hello-world.vue";
 
 export default {

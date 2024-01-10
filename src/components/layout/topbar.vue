@@ -134,7 +134,7 @@ export default {
     },
     topbarClass: {
       type: String,
-      default: "bg-purple",
+      default: "bg-brand",
     },
     isPreview: {
       type: Boolean,

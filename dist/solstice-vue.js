@@ -1,4 +1,4 @@
-import { getCurrentInstance as be, onMounted as ge, nextTick as ie, unref as ye, ref as q, readonly as we, getCurrentScope as $e, onScopeDispose as xe, watch as F, computed as V, shallowRef as Oe, watchEffect as ke, openBlock as i, createElementBlock as l, createElementVNode as a, withDirectives as Se, vModelSelect as Ie, renderSlot as c, resolveComponent as le, normalizeClass as _, normalizeStyle as R, createCommentVNode as f, createVNode as de, withCtx as z, createTextVNode as N, toDisplayString as m, createStaticVNode as ce, createBlock as Pe, resolveDynamicComponent as Ne, withKeys as M, withModifiers as Ce, pushScopeId as Te, popScopeId as Ee } from "vue";
+import { getCurrentInstance as ve, onMounted as ge, nextTick as ie, unref as ye, ref as q, readonly as we, getCurrentScope as $e, onScopeDispose as xe, watch as F, computed as V, shallowRef as Oe, watchEffect as ke, openBlock as i, createElementBlock as l, createElementVNode as a, withDirectives as Se, vModelSelect as Ie, renderSlot as c, resolveComponent as le, normalizeClass as _, normalizeStyle as R, createCommentVNode as f, createVNode as de, withCtx as z, createTextVNode as N, toDisplayString as m, createStaticVNode as ce, createBlock as Pe, resolveDynamicComponent as Ne, withKeys as M, withModifiers as Ce, pushScopeId as Te, popScopeId as Ee } from "vue";
 var K;
 const ue = typeof window < "u", Me = (e) => typeof e == "function", je = (e) => typeof e == "string", qe = () => {
 };
@@ -38,7 +38,7 @@ function Be(e) {
   return typeof e == "function" ? V(e) : q(e);
 }
 function pe(e, s = !0) {
-  be() ? ge(e) : s ? e() : ie(e);
+  ve() ? ge(e) : s ? e() : ie(e);
 }
 var J = Object.getOwnPropertySymbols, De = Object.prototype.hasOwnProperty, Ue = Object.prototype.propertyIsEnumerable, Ve = (e, s) => {
   var t = {};
@@ -95,9 +95,9 @@ function Y(...e) {
     return qe;
   Array.isArray(t) || (t = [t]), Array.isArray(r) || (r = [r]);
   const n = [], d = () => {
-    n.forEach((v) => v()), n.length = 0;
-  }, h = (v, g, O, y) => (v.addEventListener(g, O, y), () => v.removeEventListener(g, O, y)), C = F(() => [Ye(s), H(o)], ([v, g]) => {
-    d(), v && n.push(...t.flatMap((O) => r.map((y) => h(v, O, y, g))));
+    n.forEach((b) => b()), n.length = 0;
+  }, h = (b, g, O, y) => (b.addEventListener(g, O, y), () => b.removeEventListener(g, O, y)), C = F(() => [Ye(s), H(o)], ([b, g]) => {
+    d(), b && n.push(...t.flatMap((O) => r.map((y) => h(b, O, y, g))));
   }, { immediate: !0, flush: "post" }), w = () => {
     C(), d();
   };
@@ -120,7 +120,7 @@ function Ze(e, s = {}) {
 const Q = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {}, W = "__vueuse_ssr_handlers__";
 Q[W] = Q[W] || {};
 const et = Q[W];
-function ve(e, s) {
+function be(e, s) {
   return et[e] || s;
 }
 function tt(e) {
@@ -176,16 +176,16 @@ function ot(e, s, t, r = {}) {
     listenToStorageChanges: h = !0,
     writeDefaults: C = !0,
     mergeDefaults: w = !1,
-    shallow: v,
+    shallow: b,
     window: g = L,
     eventFilter: O,
     onError: y = (u) => {
       console.error(u);
     }
-  } = r, $ = (v ? Oe : q)(s);
+  } = r, $ = (b ? Oe : q)(s);
   if (!t)
     try {
-      t = ve("getDefaultStorage", () => {
+      t = be("getDefaultStorage", () => {
         var u;
         return (u = L) == null ? void 0 : u.localStorage;
       })();
@@ -201,29 +201,29 @@ function ot(e, s, t, r = {}) {
       if (u == null)
         t.removeItem(e);
       else {
-        const b = I.write(u), E = t.getItem(e);
-        E !== b && (t.setItem(e, b), g && g.dispatchEvent(new CustomEvent(te, {
+        const v = I.write(u), E = t.getItem(e);
+        E !== v && (t.setItem(e, v), g && g.dispatchEvent(new CustomEvent(te, {
           detail: {
             key: e,
             oldValue: E,
-            newValue: b,
+            newValue: v,
             storageArea: t
           }
         })));
       }
-    } catch (b) {
-      y(b);
+    } catch (v) {
+      y(v);
     }
   }
   function j(u) {
-    const b = u ? u.newValue : t.getItem(e);
-    if (b == null)
+    const v = u ? u.newValue : t.getItem(e);
+    if (v == null)
       return C && k !== null && t.setItem(e, I.write(k)), k;
     if (!u && w) {
-      const E = I.read(b);
+      const E = I.read(v);
       return Me(w) ? w(E, k) : A === "object" && !Array.isArray(E) ? ee(ee({}, k), E) : E;
     } else
-      return typeof b != "string" ? b : I.read(b);
+      return typeof v != "string" ? v : I.read(v);
   }
   function D(u) {
     S(u.detail);
@@ -238,8 +238,8 @@ function ot(e, s, t, r = {}) {
         x();
         try {
           $.value = j(u);
-        } catch (b) {
-          y(b);
+        } catch (v) {
+          y(v);
         } finally {
           u ? ie(P) : P();
         }
@@ -269,7 +269,7 @@ function ft(e = {}) {
     listenToStorageChanges: h = !0,
     storageRef: C,
     emitAuto: w
-  } = e, v = ut({
+  } = e, b = ut({
     auto: "",
     light: "light",
     dark: "dark"
@@ -280,12 +280,12 @@ function ft(e = {}) {
     set(x) {
       y.value = x;
     }
-  }), k = ve("updateHTMLAttrs", (x, P, T) => {
+  }), k = be("updateHTMLAttrs", (x, P, T) => {
     const j = o == null ? void 0 : o.document.querySelector(x);
     if (j)
       if (P === "class") {
         const D = T.split(/\s/g);
-        Object.values(v).flatMap((S) => (S || "").split(/\s/g)).filter(Boolean).forEach((S) => {
+        Object.values(b).flatMap((S) => (S || "").split(/\s/g)).filter(Boolean).forEach((S) => {
           D.includes(S) ? j.classList.add(S) : j.classList.remove(S);
         });
       } else
@@ -294,7 +294,7 @@ function ft(e = {}) {
   function A(x) {
     var P;
     const T = x === "auto" ? O.value : x;
-    k(s, t, (P = v[T]) != null ? P : T);
+    k(s, t, (P = b[T]) != null ? P : T);
   }
   function I(x) {
     e.onChanged ? e.onChanged(x, A) : A(x);
@@ -313,7 +313,7 @@ var _t = Object.defineProperty, re = Object.getOwnPropertySymbols, pt = Object.p
       mt.call(s, t) && oe(e, t, s[t]);
   return e;
 };
-const vt = {
+const bt = {
   easeInSine: [0.12, 0, 0.39, 0],
   easeOutSine: [0.61, 1, 0.88, 1],
   easeInOutSine: [0.37, 0, 0.63, 1],
@@ -341,13 +341,13 @@ const vt = {
 };
 ht({
   linear: Fe
-}, vt);
+}, bt);
 const p = (e, s) => {
   const t = e.__vccOpts || e;
   for (const [r, o] of s)
     t[r] = o;
   return t;
-}, bt = {
+}, vt = {
   name: "axdd-color-mode",
   // composition in options api requires setup()
   setup() {
@@ -374,7 +374,7 @@ function kt(e, s, t, r, o, n) {
     ])
   ]);
 }
-const St = /* @__PURE__ */ p(bt, [["render", kt]]), It = {
+const St = /* @__PURE__ */ p(vt, [["render", kt]]), It = {
   name: "axdd-panel",
   data: function() {
     return {};
@@ -408,7 +408,7 @@ const Tt = {
     },
     sidebarClass: {
       type: String,
-      default: "bg-purple"
+      default: "bg-brand"
     },
     signOutUrl: {
       type: String,
@@ -547,7 +547,7 @@ const Gt = {
     },
     topbarClass: {
       type: String,
-      default: "bg-purple"
+      default: "bg-brand"
     },
     isPreview: {
       type: Boolean,
@@ -583,8 +583,8 @@ const Gt = {
 ], -1), _s = { class: "w-100" }, ps = {
   key: 0,
   class: "bg-dark text-white py-2 small"
-}, ms = { class: "container-xl" }, hs = { class: "text-white font-weight-light py-3" }, vs = /* @__PURE__ */ ce('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/" class="link-primary">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/" class="link-primary">Terms</a></li></ul>', 1);
-function bs(e, s, t, r, o, n) {
+}, ms = { class: "container-xl" }, hs = { class: "text-white font-weight-light py-3" }, bs = /* @__PURE__ */ ce('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/" class="link-primary">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/" class="link-primary">Terms</a></li></ul>', 1);
+function vs(e, s, t, r, o, n) {
   const d = le("router-link");
   return i(), l("div", {
     class: _([t.topbarClass + [t.isPreview ? " " : " min-vh-100"], "d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"])
@@ -656,7 +656,7 @@ function bs(e, s, t, r, o, n) {
         a("div", ms, [
           c(e.$slots, "footer", {}, () => [
             a("div", hs, [
-              vs,
+              bs,
               a("div", null, " Copyright © " + m((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
             ])
           ])
@@ -665,7 +665,7 @@ function bs(e, s, t, r, o, n) {
     ])
   ], 2);
 }
-const gs = /* @__PURE__ */ p(Gt, [["render", bs]]), ys = {
+const gs = /* @__PURE__ */ p(Gt, [["render", vs]]), ys = {
   name: "axdd-card",
   data: function() {
     return {};
@@ -1009,7 +1009,7 @@ const sa = /* @__PURE__ */ p(Zs, [["render", ta]]), aa = {
 }, fa = {
   key: 0,
   class: "small text-danger"
-}, _a = /* @__PURE__ */ a("i", { class: "bi bi-arrow-right text-danger" }, null, -1), pa = { class: "small" }, ma = { class: "small" }, ha = ["href"], va = ["href"], ba = /* @__PURE__ */ a("a", { href: "sadkf" }, "sign out test", -1), ga = {
+}, _a = /* @__PURE__ */ a("i", { class: "bi bi-arrow-right text-danger" }, null, -1), pa = { class: "small" }, ma = { class: "small" }, ha = ["href"], ba = ["href"], va = /* @__PURE__ */ a("a", { href: "sadkf" }, "sign out test", -1), ga = {
   key: 1,
   class: "d-flex"
 }, ya = {
@@ -1042,9 +1042,9 @@ function Ia(e, s, t, r, o, n) {
             a("a", {
               href: t.signoutUrl,
               class: "text-white"
-            }, "Sign out", 8, va)
+            }, "Sign out", 8, ba)
           ]) : c(e.$slots, "default", { key: 1 }, () => [
-            ba
+            va
           ])
         ])
       ])

@@ -146,7 +146,7 @@ export default {
     },
     sidebarClass: {
       type: String,
-      default: "bg-purple",
+      default: "bg-brand",
     },
     signOutUrl: {
       type: String,

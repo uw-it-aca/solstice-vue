@@ -6,14 +6,12 @@ import router from "@/router";
 import SolsticeVue from "./components/";
 import { Vue3Mq, MqResponsive } from "vue3-mq";
 
-// bootstrap-icons
+// bootstrap js + icons
+import "bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 // custom axdd bootstrap css
 import "../public/custom.scss";
-
-// Import all of Bootstrap's JS
-import "bootstrap";
 
 const app = createApp(App);
 

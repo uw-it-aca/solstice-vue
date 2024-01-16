@@ -9,7 +9,6 @@
 @import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/variables-dark";
 
-
 // 2. include any default variable overrides
 
 // override bootstrap default theme colors
@@ -28,7 +27,7 @@ $warning: #f5d300;
 // define new colors
 $purple2: #4b2e83;
 $red2: #cb444a;
-$blue2: #2F68CB;
+$blue2: #2f68cb;
 $beige: #ab9765;
 $gold: #ffbc24;
 
@@ -89,7 +88,7 @@ $purple2s: (
   "600": $purple2-600,
   "700": $purple2-700,
   "800": $purple2-800,
-  "900": $purple2-900
+  "900": $purple2-900,
 );
 $red2s: (
   "100": $red2-100,
@@ -100,7 +99,7 @@ $red2s: (
   "600": $red2-600,
   "700": $red2-700,
   "800": $red2-800,
-  "900": $red2-900
+  "900": $red2-900,
 );
 $blue2s: (
   "100": $blue2-100,
@@ -111,7 +110,7 @@ $blue2s: (
   "600": $blue2-600,
   "700": $blue2-700,
   "800": $blue2-800,
-  "900": $blue2-900
+  "900": $blue2-900,
 );
 $beiges: (
   "100": $beige-100,
@@ -122,7 +121,7 @@ $beiges: (
   "600": $beige-600,
   "700": $beige-700,
   "800": $beige-800,
-  "900": $beige-900
+  "900": $beige-900,
 );
 $golds: (
   "100": $gold-100,
@@ -133,19 +132,21 @@ $golds: (
   "600": $gold-600,
   "700": $gold-700,
   "800": $gold-800,
-  "900": $gold-900
+  "900": $gold-900,
 );
 
 // override theme colors
 $theme-colors: (
-  "primary":    $blue2, // override
-  "secondary":  $secondary,
-  "success":    $success,
-  "info":       $info,
-  "warning":    $warning,
-  "danger":     $red2, // override
-  "light":      $light,
-  "dark":       $dark,
+  "primary": $blue2,
+  // override
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $red2,
+  // override
+  "light": $light,
+  "dark": $dark,
 );
 
 // override card border color
@@ -156,7 +157,8 @@ $theme-colors: (
 // apply custom theme colors
 $custom-colors: (
   "purple": #4d307f,
-  "dark-purple": #452a78, // deprecated for opaque
+  "dark-purple": #452a78,
+  // deprecated for opaque
   "beige": #e8e3d3,
   "dark-beige": #85754d,
   "light-beige": #faf8f4,
@@ -167,9 +169,12 @@ $custom-colors: (
   "gray": #e9ecef,
 
   // new solstice foundations
-  "action": $blue2, // bg-action, text-action
-  "brand": $purple2, // bg-brand-accent, text-brand-accent, table-brand-accent, btn-brand-accent
-  "critical": $red2, // bg-critical, text-critical
+  "action": $blue2,
+  // bg-action, text-action
+  "brand": $purple2,
+  // bg-brand-accent, text-brand-accent, table-brand-accent, btn-brand-accent
+  "critical": $red2,
+  // bg-critical, text-critical
 );
 
 // merge the default bootstrap + custom color maps
@@ -209,6 +214,7 @@ $font-sizes: map-merge($font-sizes, $extra-font-sizes);
     color: $value !important;
   }
 }
+
 @each $key, $value in $red2s {
   .bg-red2-#{$key} {
     background-color: $value !important;
@@ -217,6 +223,7 @@ $font-sizes: map-merge($font-sizes, $extra-font-sizes);
     color: $value !important;
   }
 }
+
 @each $key, $value in $blue2s {
   .bg-blue2-#{$key} {
     background-color: $value !important;
@@ -225,6 +232,7 @@ $font-sizes: map-merge($font-sizes, $extra-font-sizes);
     color: $value !important;
   }
 }
+
 @each $key, $value in $beiges {
   .bg-beige-#{$key} {
     background-color: $value !important;
@@ -233,6 +241,7 @@ $font-sizes: map-merge($font-sizes, $extra-font-sizes);
     color: $value !important;
   }
 }
+
 @each $key, $value in $golds {
   .bg-gold-#{$key} {
     background-color: $value !important;
@@ -242,69 +251,91 @@ $font-sizes: map-merge($font-sizes, $extra-font-sizes);
   }
 }
 
-
 // add or modify utilities here
 $utilities: (
   // bg-xxxx-hover
-  "background-color-hover": (
-    property: background-color,
-    class: bg,
-    local-vars: (
-      "bg-opacity": 1
+  "background-color-hover":
+    (
+      property: background-color,
+      class: bg,
+      local-vars: (
+        "bg-opacity": 1,
+      ),
+      state: hover focus,
+      values:
+        map-merge(
+          $utilities-bg-colors,
+          (
+            "transparent": transparent,
+            "body-secondary":
+              rgba(
+                var(--#{$prefix}secondary-bg-rgb),
+                var(--#{$prefix}bg-opacity)
+              ),
+            "body-tertiary":
+              rgba(
+                var(--#{$prefix}tertiary-bg-rgb),
+                var(--#{$prefix}bg-opacity)
+              ),
+          )
+        ),
     ),
-    state: hover focus,
-    values: map-merge(
-      $utilities-bg-colors,
-      (
-        "transparent": transparent,
-        "body-secondary": rgba(var(--#{$prefix}secondary-bg-rgb), var(--#{$prefix}bg-opacity)),
-        "body-tertiary": rgba(var(--#{$prefix}tertiary-bg-rgb), var(--#{$prefix}bg-opacity)),
-      )
-    )
-  ),
   // bg-opacity-xx-hover
-  "bg-opacity-hover": (
-    css-var: true,
-    class: bg-opacity,
-    state: hover focus,
-    values: (
-      10: .1,
-      25: .25,
-      50: .5,
-      75: .75,
-      100: 1
-    )
-  ),
-  // text-xxxx-hover
-  "color-hover": (
-    property: color,
-    class: text,
-    local-vars: (
-      "text-opacity": 1
+  "bg-opacity-hover":
+    (
+      css-var: true,
+      class: bg-opacity,
+      state: hover focus,
+      values: (
+        10: 0.1,
+        25: 0.25,
+        50: 0.5,
+        75: 0.75,
+        100: 1,
+      ),
     ),
-    state: hover focus,
-    values: map-merge(
-      $utilities-text-colors,
-      (
-        "muted": var(--#{$prefix}secondary-color), // deprecated
-        "black-50": rgba($black, .5), // deprecated
-        "white-50": rgba($white, .5), // deprecated
-        "body-secondary": var(--#{$prefix}secondary-color),
-        "body-tertiary": var(--#{$prefix}tertiary-color),
-        "body-emphasis": var(--#{$prefix}emphasis-color),
-        "reset": inherit,
-      )
-    )
-  ),
+  // text-xxxx-hover
+  "color-hover":
+    (
+      property: color,
+      class: text,
+      local-vars: (
+        "text-opacity": 1,
+      ),
+      state: hover focus,
+      values:
+        map-merge(
+          $utilities-text-colors,
+          (
+            "muted": var(--#{$prefix}secondary-color),
+            // deprecated
+            "black-50": rgba($black, 0.5),
+            // deprecated
+            "white-50": rgba($white, 0.5),
+            // deprecated
+            "body-secondary": var(--#{$prefix}secondary-color),
+            "body-tertiary": var(--#{$prefix}tertiary-color),
+            "body-emphasis": var(--#{$prefix}emphasis-color),
+            "reset": inherit,
+          )
+        ),
+    ),
   // ff-xxxx
-  "font-family-custom": (
-    property: font-family,
-    class: ff,
-    values: (
-      "open-sans": ("Open Sans", sans-serif),
-      "encode-sans": ("Encode Sans Condensed", sans-serif)
+  "font-family-custom":
+    (
+      property: font-family,
+      class: ff,
+      values: (
+        "open-sans": (
+          "Open Sans",
+          sans-serif,
+        ),
+        "encode-sans": (
+          "Encode Sans Condensed",
+          sans-serif,
+        ),
+      ),
     )
-  )
 );
 
 // 7. include utilities api and import bootstrap last

@@ -1,3 +1,4 @@
+/* stylelint-disable media-feature-range-notation */
 <template>
   <div class="d-md-flex mb-3 myuw-text-md">
     <div class="flex-md-fill me-3 bd-highlight font-weight-bold property-label">
@@ -25,7 +26,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .property-label {
     min-width: 25%;
     max-width: 25%;

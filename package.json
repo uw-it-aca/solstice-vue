@@ -17,7 +17,7 @@
       "require": "./dist/solstice-vue.cjs"
     },
     "./dist/style.css": "./dist/style.css",
-    "./dist/custom.scss": "./dist/custom.scss"
+    "./dist/solstice.scss": "./dist/bootstrap.scss"
   },
   "scripts": {
     "dev": "vite",

@@ -1,7 +1,7 @@
 {
   "name": "solstice-vue",
   "type": "module",
-  "version": "task/dark-mode",
+  "version": "develop",
   "private": true,
   "main": "./dist/solstice-vue.umd.cjs",
   "module": "./dist/solstice-vue.js",
@@ -17,7 +17,7 @@
       "require": "./dist/solstice-vue.cjs"
     },
     "./dist/style.css": "./dist/style.css",
-    "./dist/bootstrap.scss": "./dist/bootstrap.scss"
+    "./dist/solstice.scss": "./dist/solstice.scss"
   },
   "scripts": {
     "dev": "vite",

@@ -12,6 +12,13 @@
 
 // 2. include any default variable overrides
 
+// define new colors
+$purple2: #4b2e83;
+$red2: #cb444a;
+$blue2: #2f68cb;
+$beige: #ab9765;
+$gold: #ffbc24;
+
 // override bootstrap default theme colors
 
 $enable-cssgrid: true;
@@ -25,12 +32,8 @@ $danger: #a94442;
 $warning: #f5d300;
 */
 
-// define new colors
-$purple2: #4b2e83;
-$red2: #cb444a;
-$blue2: #2f68cb;
-$beige: #ab9765;
-$gold: #ffbc24;
+// override dropdown active color with new blue
+$dropdown-link-active-bg: $blue2;
 
 // custom color swatches
 $purple2-100: tint-color($purple2, 80%);
@@ -190,6 +193,7 @@ $extra-font-sizes: (
   11: 0.625rem,
 );
 $font-sizes: map-merge($font-sizes, $extra-font-sizes);
+
 
 // 5. include required parts
 @import "node_modules/bootstrap/scss/maps";

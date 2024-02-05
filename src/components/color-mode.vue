@@ -1,12 +1,48 @@
 <template>
-  <div class="d-flex mt-4 align-items-center">
-    <div class="small me-2">color mode:</div>
+  <div class="d-flex align-items-center">
     <div>
-      <select v-model="colorMode" class="form-select form-select-sm">
-        <option value="auto">Auto</option>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-      </select>
+      <button
+        class="btn btn-link text-reset dropdown-toggle p-1"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <i v-show="colorMode == 'light'" class="bi bi-brightness-high-fill"></i>
+        <i v-show="colorMode == 'dark'" class="bi bi-moon-stars-fill"></i>
+        <i v-show="colorMode == 'auto'" class="bi bi-circle-half"></i>
+      </button>
+      <ul class="dropdown-menu p-1">
+        <li class="mb-1">
+          <a
+            class="dropdown-item rounded"
+            :class="colorMode == 'light' ? 'active' : ''"
+            href="#"
+            role="button"
+            @click="colorMode = 'light'"
+            ><i class="bi bi-brightness-high-fill"></i> Light</a
+          >
+        </li>
+        <li class="mb-1">
+          <a
+            class="dropdown-item rounded"
+            :class="colorMode == 'dark' ? 'active' : ''"
+            href="#"
+            role="button"
+            @click="colorMode = 'dark'"
+            ><i class="bi bi-moon-stars-fill"></i> Dark</a
+          >
+        </li>
+        <li>
+          <a
+            class="dropdown-item rounded"
+            :class="colorMode == 'auto' ? 'active' : ''"
+            href="#"
+            role="button"
+            @click="colorMode = 'auto'"
+            ><i class="bi bi-circle-half"></i> Auto</a
+          >
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -14,15 +50,14 @@
 import { useColorMode } from "@vueuse/core";
 
 export default {
-  name: "axdd-color-mode",
-
+  name: "sol-color-mode",
   // composition in options api requires setup()
   setup() {
     const colorMode = useColorMode({
       emitAuto: true,
+      // bootstrap's dark theming attribute
       attribute: "data-bs-theme",
     });
-
     return { colorMode };
   },
 };

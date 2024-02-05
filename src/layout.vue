@@ -8,7 +8,7 @@
           <i class="bi bi-box-fill me-2 text-brand"></i>
           <a href="/" class="text-reset text-decoration-none">{{ appName }}</a>
         </div>
-        <div><axdd-color-mode></axdd-color-mode></div>
+        <div><sol-color-mode></sol-color-mode></div>
       </header>
 
       <main>

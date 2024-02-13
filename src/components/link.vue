@@ -5,7 +5,7 @@
   <router-link
     v-if="variant == 'quiet'"
     :to="href"
-    :class="colorClass"
+    :class="color"
     class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
   >
     <slot></slot>

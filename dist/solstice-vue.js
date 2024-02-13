@@ -1232,7 +1232,7 @@ function Ms(e, n, t, i, o, a) {
     t.variant == "quiet" ? (l(), K(r, {
       key: 1,
       to: t.href,
-      class: f([e.colorClass, "link-underline link-underline-opacity-0 link-underline-opacity-100-hover"])
+      class: f([t.color, "link-underline link-underline-opacity-0 link-underline-opacity-100-hover"])
     }, {
       default: E(() => [
         c(e.$slots, "default")

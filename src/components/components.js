@@ -26,6 +26,9 @@ import DisclosureAction from "./disclosure/action.vue";
 import DisclosurePanel from "./disclosure/panel.vue";
 import DisclosureBlock from "./disclosure/block.vue";
 
+// 1.1.0
+import Link from "@/components/link.vue";
+
 export default {
   // CardProperty,
   // CardStatus,
@@ -46,4 +49,5 @@ export default {
   Topbar,
   ColorMode,
   Panel,
+  Link,
 };

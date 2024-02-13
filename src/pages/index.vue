@@ -24,9 +24,9 @@
     </template>
 
     <template #content>
-      <div class="row">
+      <div class="row mb-5">
         <div class="col">
-          <h2>Building components</h2>
+          <h2 class="fw-bold">Building components</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
             numquam perspiciatis, laudantium suscipit corrupti atque ea officiis
@@ -38,10 +38,11 @@
             <li>create a branch</li>
             <li>run the <code>npm run build</code> command</li>
           </ol>
-
-          <hr />
-
-          <h2>Foundations</h2>
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col">
+          <h2 class="fw-bold">Foundations</h2>
           <h3>Layout</h3>
           <ul>
             <li>
@@ -139,6 +140,37 @@
               <div class="p-3 bg-gold-900 text-white">$gold-900</div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="row mb-5">
+        <div class="col">
+          <h2 class="fw-bold">Elements</h2>
+          <h3>Link</h3>
+          <ul>
+            <li>
+              default:
+              <sol-link :href="'/topbar'" :color="'link-dark'"
+                >hello world</sol-link
+              >
+            </li>
+            <li>
+              quiet:
+              <sol-link :variant="'quiet'" :href="'/topbar'"
+                >hello world</sol-link
+              >
+            </li>
+            <li>
+              icon:
+              <sol-link
+                :variant="'icon'"
+                :href="'/topbar'"
+                :color="'link-danger'"
+                :icon="'bi-globe-americas'"
+                >hello world</sol-link
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </template>

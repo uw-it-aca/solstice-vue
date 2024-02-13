@@ -1,23 +1,29 @@
 [![Coverage Status](https://coveralls.io/repos/github/uw-it-aca/solstice-vue/badge.svg?branch=main)](https://coveralls.io/github/uw-it-aca/solstice-vue?branch=main)
 
 # solstice-vue
-AXDD VueJS Component Library
+Solstice Vue Component Library
 
 * Vue 3
-* Vite 4
 * Bootstrap 5
+* Vite 4 (library packaging)
 
-## Recommended IDE Setup
+Note: This repo does not currently deploy to any host.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (disable or uninstall Vetur)
+## Requirements
+Install or update the following applications:
 
-Optional: [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+* [VS Code](https://code.visualstudio.com/)
+* [Node.js (LTS)](https://nodejs.org/en)
 
 ## Project Setup
+
+```sh
+git clone git@github.com:uw-it-aca/solstice-vue.git
+```
+
+```sh
+cd solstice-vue
+```
 
 ```sh
 npm install

@@ -20,7 +20,6 @@ $beige: #ab9765;
 $gold: #ffbc24;
 
 // override bootstrap default theme colors
-
 $enable-cssgrid: true;
 
 /*
@@ -152,6 +151,12 @@ $theme-colors: (
   "light": $light,
   "dark": $dark,
 );
+
+// link color overrides
+$link-color: $blue2;
+$link-hover-color: $blue2-600;
+$link-color-dark: $blue2-300;
+$link-hover-color-dark: $blue2-400;
 
 // override card border color
 // $card-border-color: $gray-200;

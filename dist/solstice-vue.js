@@ -1204,8 +1204,7 @@ const Is = /* @__PURE__ */ m(_s, [["render", Ns], ["__scopeId", "data-v-075da959
     },
     color: {
       type: String,
-      required: !0,
-      default: "link-primary"
+      required: !1
     },
     icon: {
       type: String,

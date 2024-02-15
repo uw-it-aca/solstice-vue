@@ -46,14 +46,10 @@
           <h3>Layout</h3>
           <ul>
             <li>
-              <router-link :to="'/topbar'" class="link-primary"
-                >Topbar</router-link
-              >
+              <sol-link href="/topbar">Topbar</sol-link>
             </li>
             <li>
-              <router-link :to="'/sidebar'" class="link-primary"
-                >Sidebar</router-link
-              >
+              <router-link to="/sidebar">Sidebar</router-link>
             </li>
           </ul>
           <h3>Color</h3>
@@ -148,11 +144,10 @@
           <h2 class="fw-bold">Elements</h2>
           <h3>Link</h3>
           <ul>
+            <li>a: <a href="/">hello anchor</a></li>
             <li>
               default:
-              <sol-link :href="'/topbar'" :color="'link-dark'"
-                >hello world</sol-link
-              >
+              <sol-link :href="'/topbar'">hello world</sol-link>
             </li>
             <li>
               quiet:

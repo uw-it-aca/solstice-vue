@@ -36,8 +36,7 @@ export default {
     },
     color: {
       type: String,
-      required: true,
-      default: "link-primary",
+      required: false,
     },
     icon: {
       type: String,

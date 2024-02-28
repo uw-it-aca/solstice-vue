@@ -141,12 +141,14 @@ $golds: (
 // override theme colors
 $theme-colors: (
   "primary": $blue2,
+  "action": $blue2,
   // override
   "secondary": $secondary,
   "success": $success,
   "info": $info,
   "warning": $warning,
   "danger": $red2,
+  "critical": $red2,
   // override
   "light": $light,
   "dark": $dark,
@@ -189,6 +191,14 @@ $custom-colors: (
 // merge the default bootstrap + custom color maps
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
+// new alerts based on $red2 and $blue2
+$action-text-emphasis: shade-color($blue2, 60%) !default;
+$action-bg-subtle: tint-color($blue2, 80%) !default;
+$action-border-subtle: tint-color($blue2, 60%) !default;
+$critical-text-emphasis: shade-color($red2, 60%) !default;
+$critical-bg-subtle: tint-color($red2, 80%) !default;
+$critical-border-subtle: tint-color($red2, 60%) !default;
+
 // adding extra font-sizes (fs-#)
 $extra-font-sizes: (
   7: 0.875rem,
@@ -198,7 +208,6 @@ $extra-font-sizes: (
   11: 0.625rem,
 );
 $font-sizes: map-merge($font-sizes, $extra-font-sizes);
-
 
 // 5. include required parts
 @import "node_modules/bootstrap/scss/maps";
@@ -214,8 +223,31 @@ $font-sizes: map-merge($font-sizes, $extra-font-sizes);
 @import "node_modules/bootstrap/scss/grid";
 @import "node_modules/bootstrap/scss/helpers";
 
-// generate brand color swatches
+// generate theme alert
 
+$custom-theme-colors-text: (
+  "action": $action-text-emphasis,
+  "critical": $critical-text-emphasis,
+);
+$theme-colors-text: map-merge($theme-colors-text, $custom-theme-colors-text);
+$custom-theme-colors-bg-subtle: (
+  "action": $action-bg-subtle,
+  "critical": $critical-bg-subtle,
+);
+$theme-colors-bg-subtle: map-merge(
+  $theme-colors-bg-subtle,
+  $custom-theme-colors-bg-subtle
+);
+$custom-theme-colors-border-subtle: (
+  "action": $action-border-subtle,
+  "critical": $critical-border-subtle,
+);
+$theme-colors-border-subtle: map-merge(
+  $theme-colors-border-subtle,
+  $custom-theme-colors-border-subtle
+);
+
+// generate brand color swatches
 @each $key, $value in $purple2s {
   .bg-purple2-#{$key} {
     background-color: $value !important;

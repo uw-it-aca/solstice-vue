@@ -167,6 +167,34 @@
             </li>
           </ul>
         </div>
+
+        <h3>Alerts</h3>
+        <div class="alert alert-primary" role="alert">
+          A simple primary alert—check it out!
+        </div>
+        <div class="alert alert-action" role="alert">
+          A simple action alert—check it out!
+        </div>
+
+        <div class="alert alert-danger" role="alert">
+          A simple danger alert—check it out!
+        </div>
+
+        <div class="alert alert-critical" role="alert">
+          A simple critical alert—check it out!
+        </div>
+
+        <div class="alert alert-warning" role="alert">
+          A simple warning alert—check it out!
+        </div>
+
+        <div class="alert alert-action" role="alert">
+  <h4 class="alert-heading">Well done!</h4>
+  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+  <hr>
+  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+</div>
+
       </div>
     </template>
   </layout>

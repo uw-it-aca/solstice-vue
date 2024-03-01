@@ -140,15 +140,18 @@ $golds: (
 
 // override theme colors
 $theme-colors: (
-  "primary": $blue2,
-  "action": $blue2,
-  // override
+  // default
+  "primary": $primary,
   "secondary": $secondary,
   "success": $success,
   "info": $info,
   "warning": $warning,
-  "danger": $red2,
+  "danger": $danger,
+
+  // custom
+  "action": $blue2,
   "critical": $red2,
+
   // override
   "light": $light,
   "dark": $dark,
@@ -156,7 +159,7 @@ $theme-colors: (
 
 // link color overrides
 $link-color: $blue2;
-$link-hover-color: $blue2-600;
+$link-hover-color: $blue2-800;
 $link-color-dark: $blue2-300;
 $link-hover-color-dark: $blue2-400;
 
@@ -222,30 +225,6 @@ $font-sizes: map-merge($font-sizes, $extra-font-sizes);
 @import "node_modules/bootstrap/scss/containers";
 @import "node_modules/bootstrap/scss/grid";
 @import "node_modules/bootstrap/scss/helpers";
-
-// generate theme alert
-
-$custom-theme-colors-text: (
-  "action": $action-text-emphasis,
-  "critical": $critical-text-emphasis,
-);
-$theme-colors-text: map-merge($theme-colors-text, $custom-theme-colors-text);
-$custom-theme-colors-bg-subtle: (
-  "action": $action-bg-subtle,
-  "critical": $critical-bg-subtle,
-);
-$theme-colors-bg-subtle: map-merge(
-  $theme-colors-bg-subtle,
-  $custom-theme-colors-bg-subtle
-);
-$custom-theme-colors-border-subtle: (
-  "action": $action-border-subtle,
-  "critical": $critical-border-subtle,
-);
-$theme-colors-border-subtle: map-merge(
-  $theme-colors-border-subtle,
-  $custom-theme-colors-border-subtle
-);
 
 // generate brand color swatches
 @each $key, $value in $purple2s {

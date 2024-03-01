@@ -78,7 +78,8 @@
     </div>
 
     <div
-      :class="[!mq.mdMinus ? 'flex-fill overflow-y-auto' : '']"
+      id="scrollbody"
+      :class="[!mq.mdMinus ? 'flex-fill overflow-y-scroll' : '']"
       class="d-flex bg-body text-body"
       style="padding-top: 37px !important"
     >

@@ -61,15 +61,15 @@
                 <strong class="d-block">$purple2</strong>
                 #4b2e83
               </div>
-              <div class="p-3 bg-purple2-100">$purple2-100</div>
-              <div class="p-3 bg-purple2-200">$purple2-200</div>
-              <div class="p-3 bg-purple2-300">$purple2-300</div>
+              <div class="p-3 bg-purple2-100 text-dark">$purple2-100</div>
+              <div class="p-3 bg-purple2-200 text-dark">$purple2-200</div>
+              <div class="p-3 bg-purple2-300 text-dark">$purple2-300</div>
               <div class="p-3 bg-purple2-400 text-light">$purple2-400</div>
-              <div class="p-3 bg-purple2-500 text-white">$purple2-500</div>
-              <div class="p-3 bg-purple2-600 text-white">$purple2-600</div>
-              <div class="p-3 bg-purple2-700 text-white">$purple2-700</div>
-              <div class="p-3 bg-purple2-800 text-white">$purple2-800</div>
-              <div class="p-3 bg-purple2-900 text-white">$purple2-900</div>
+              <div class="p-3 bg-purple2-500 text-light">$purple2-500</div>
+              <div class="p-3 bg-purple2-600 text-light">$purple2-600</div>
+              <div class="p-3 bg-purple2-700 text-light">$purple2-700</div>
+              <div class="p-3 bg-purple2-800 text-light">$purple2-800</div>
+              <div class="p-3 bg-purple2-900 text-light">$purple2-900</div>
             </div>
 
             <div>
@@ -77,9 +77,9 @@
                 <strong class="d-block">$red2</strong>
                 #cb444a
               </div>
-              <div class="p-3 bg-red2-100">$red2-100</div>
-              <div class="p-3 bg-red2-200">$red2-200</div>
-              <div class="p-3 bg-red2-300">$red2-300</div>
+              <div class="p-3 bg-red2-100 text-dark">$red2-100</div>
+              <div class="p-3 bg-red2-200 text-dark">$red2-200</div>
+              <div class="p-3 bg-red2-300 text-dark">$red2-300</div>
               <div class="p-3 bg-red2-400 text-light">$red2-400</div>
               <div class="p-3 bg-red2-500 text-white">$red2-500</div>
               <div class="p-3 bg-red2-600 text-white">$red2-600</div>
@@ -93,15 +93,15 @@
                 <strong class="d-block">$blue2</strong>
                 #2f68cb
               </div>
-              <div class="p-3 bg-blue2-100">$blue2-100</div>
-              <div class="p-3 bg-blue2-200">$blue2-200</div>
-              <div class="p-3 bg-blue2-300">$blue2-300</div>
+              <div class="p-3 bg-blue2-100 text-dark">$blue2-100</div>
+              <div class="p-3 bg-blue2-200 text-dark">$blue2-200</div>
+              <div class="p-3 bg-blue2-300 text-dark">$blue2-300</div>
               <div class="p-3 bg-blue2-400 text-light">$blue2-400</div>
-              <div class="p-3 bg-blue2-500 text-white">$blue2-500</div>
-              <div class="p-3 bg-blue2-600 text-white">$blue2-600</div>
-              <div class="p-3 bg-blue2-700 text-white">$blue2-700</div>
-              <div class="p-3 bg-blue2-800 text-white">$blue2-800</div>
-              <div class="p-3 bg-blue2-900 text-white">$blue2-900</div>
+              <div class="p-3 bg-blue2-500 text-light">$blue2-500</div>
+              <div class="p-3 bg-blue2-600 text-light">$blue2-600</div>
+              <div class="p-3 bg-blue2-700 text-light">$blue2-700</div>
+              <div class="p-3 bg-blue2-800 text-light">$blue2-800</div>
+              <div class="p-3 bg-blue2-900 text-light">$blue2-900</div>
             </div>
 
             <div>
@@ -109,15 +109,15 @@
                 <strong class="d-block">$beige</strong>
                 #ab9765
               </div>
-              <div class="p-3 bg-beige-100">$beige-100</div>
-              <div class="p-3 bg-beige-200">$beige-200</div>
-              <div class="p-3 bg-beige-300">$beige-300</div>
-              <div class="p-3 bg-beige-400">$beige-400</div>
-              <div class="p-3 bg-beige-500 text-white">$beige-500</div>
-              <div class="p-3 bg-beige-600 text-white">$beige-600</div>
-              <div class="p-3 bg-beige-700 text-white">$beige-700</div>
-              <div class="p-3 bg-beige-800 text-white">$beige-800</div>
-              <div class="p-3 bg-beige-900 text-white">$beige-900</div>
+              <div class="p-3 bg-beige-100 text-dark">$beige-100</div>
+              <div class="p-3 bg-beige-200 text-dark">$beige-200</div>
+              <div class="p-3 bg-beige-300 text-dark">$beige-300</div>
+              <div class="p-3 bg-beige-400 text-dark">$beige-400</div>
+              <div class="p-3 bg-beige-500 text-dark">$beige-500</div>
+              <div class="p-3 bg-beige-600 text-light">$beige-600</div>
+              <div class="p-3 bg-beige-700 text-light">$beige-700</div>
+              <div class="p-3 bg-beige-800 text-light">$beige-800</div>
+              <div class="p-3 bg-beige-900 text-light">$beige-900</div>
             </div>
 
             <div>
@@ -125,15 +125,15 @@
                 <strong class="d-block">$gold</strong>
                 #ffbc24
               </div>
-              <div class="p-3 bg-gold-100">$gold-100</div>
-              <div class="p-3 bg-gold-200">$gold-200</div>
-              <div class="p-3 bg-gold-300">$gold-300</div>
-              <div class="p-3 bg-gold-400">$gold-400</div>
-              <div class="p-3 bg-gold-500">$gold-500</div>
-              <div class="p-3 bg-gold-600 text-white">$gold-600</div>
-              <div class="p-3 bg-gold-700 text-white">$gold-700</div>
-              <div class="p-3 bg-gold-800 text-white">$gold-800</div>
-              <div class="p-3 bg-gold-900 text-white">$gold-900</div>
+              <div class="p-3 bg-gold-100 text-dark">$gold-100</div>
+              <div class="p-3 bg-gold-200 text-dark">$gold-200</div>
+              <div class="p-3 bg-gold-300 text-dark">$gold-300</div>
+              <div class="p-3 bg-gold-400 text-dark">$gold-400</div>
+              <div class="p-3 bg-gold-500 text-dark">$gold-500</div>
+              <div class="p-3 bg-gold-600 text-light">$gold-600</div>
+              <div class="p-3 bg-gold-700 text-light">$gold-700</div>
+              <div class="p-3 bg-gold-800 text-light">$gold-800</div>
+              <div class="p-3 bg-gold-900 text-light">$gold-900</div>
             </div>
           </div>
         </div>
@@ -169,32 +169,50 @@
         </div>
 
         <h3>Alerts</h3>
+        <p>alerts are NOT supported by custom theming</p>
         <div class="alert alert-primary" role="alert">
           A simple primary alert—check it out!
         </div>
-        <div class="alert alert-action" role="alert">
-          A simple action alert—check it out!
-        </div>
-
         <div class="alert alert-danger" role="alert">
           A simple danger alert—check it out!
         </div>
-
-        <div class="alert alert-critical" role="alert">
-          A simple critical alert—check it out!
+        <div class="alert alert-success" role="alert">
+          A simple sucess alert—check it out!
         </div>
-
-        <div class="alert alert-warning" role="alert">
+        <div
+          class="alert alert-warning alert-dismissible fade show"
+          role="alert"
+        >
           A simple warning alert—check it out!
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
         </div>
 
-        <div class="alert alert-action" role="alert">
-  <h4 class="alert-heading">Well done!</h4>
-  <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-  <hr>
-  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
-</div>
-
+        <h3>Button</h3>
+        <ul>
+          <li>
+            <button type="button" class="btn btn-primary rounded-3">
+              Primary
+            </button>
+          </li>
+          <li>
+            <button type="button" class="btn btn-action rounded-3">
+              Action
+            </button>
+          </li>
+          <li>
+            <button type="button" class="btn btn-outline-secondary rounded-3">
+              Cancel
+            </button>
+            <button type="button" class="btn btn-primary rounded-3">
+              Primary
+            </button>
+          </li>
+        </ul>
       </div>
     </template>
   </layout>

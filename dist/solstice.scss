@@ -140,13 +140,18 @@ $golds: (
 
 // override theme colors
 $theme-colors: (
-  "primary": $blue2,
-  // override
+  // default
+  "primary": $primary,
   "secondary": $secondary,
   "success": $success,
   "info": $info,
   "warning": $warning,
-  "danger": $red2,
+  "danger": $danger,
+
+  // custom
+  "action": $blue2,
+  "critical": $red2,
+
   // override
   "light": $light,
   "dark": $dark,
@@ -154,7 +159,7 @@ $theme-colors: (
 
 // link color overrides
 $link-color: $blue2;
-$link-hover-color: $blue2-600;
+$link-hover-color: $blue2-800;
 $link-color-dark: $blue2-300;
 $link-hover-color-dark: $blue2-400;
 
@@ -189,6 +194,14 @@ $custom-colors: (
 // merge the default bootstrap + custom color maps
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
+// new alerts based on $red2 and $blue2
+$action-text-emphasis: shade-color($blue2, 60%) !default;
+$action-bg-subtle: tint-color($blue2, 80%) !default;
+$action-border-subtle: tint-color($blue2, 60%) !default;
+$critical-text-emphasis: shade-color($red2, 60%) !default;
+$critical-bg-subtle: tint-color($red2, 80%) !default;
+$critical-border-subtle: tint-color($red2, 60%) !default;
+
 // adding extra font-sizes (fs-#)
 $extra-font-sizes: (
   7: 0.875rem,
@@ -198,7 +211,6 @@ $extra-font-sizes: (
   11: 0.625rem,
 );
 $font-sizes: map-merge($font-sizes, $extra-font-sizes);
-
 
 // 5. include required parts
 @import "node_modules/bootstrap/scss/maps";
@@ -215,7 +227,6 @@ $font-sizes: map-merge($font-sizes, $extra-font-sizes);
 @import "node_modules/bootstrap/scss/helpers";
 
 // generate brand color swatches
-
 @each $key, $value in $purple2s {
   .bg-purple2-#{$key} {
     background-color: $value !important;

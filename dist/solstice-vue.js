@@ -522,7 +522,8 @@ function xt(e, n, t, i, o, a) {
       vt
     ], 6),
     s("div", {
-      class: f([[a.mq.mdMinus ? "" : "flex-fill overflow-y-auto"], "d-flex bg-body text-body"]),
+      id: "scrollbody",
+      class: f([[a.mq.mdMinus ? "" : "flex-fill overflow-y-scroll"], "d-flex bg-body text-body"]),
       style: { "padding-top": "37px !important" }
     }, [
       s("div", {

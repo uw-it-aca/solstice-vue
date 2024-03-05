@@ -1,4 +1,6 @@
-FROM us-docker.pkg.dev/uwit-mci-axdd/containers/nginx-container:1.1.2 as pre-app-container
+ARG NGINX_CONTAINER_VERSION=1.2.0
+
+FROM us-docker.pkg.dev/uwit-mci-axdd/containers/nginx-container:${NGINX_CONTAINER_VERSION} as pre-app-container
 
 USER root
 
@@ -8,7 +10,7 @@ ADD docker/nginx.conf /etc/nginx/nginx.conf
 RUN chgrp acait /etc/nginx/nginx.conf && chmod g+w /etc/nginx/nginx.conf
 
 
-FROM us-docker.pkg.dev/uwit-mci-axdd/containers/nginx-container:1.1.2 AS node-bundler
+FROM us-docker.pkg.dev/uwit-mci-axdd/containers/nginx-container:${NGINX_CONTAINER_VERSION} AS node-bundler
 
 USER acait
 

@@ -95,22 +95,14 @@
           <slot name="footer">
             <div class="font-weight-light py-3 small">
               <ul class="list-inline m-0">
-                <ul class="list-inline m-0">
-                  <li class="list-inline-item">
-                    <a
-                      href="http://www.washington.edu/online/privacy/"
-                      class="link-primary"
-                      >Privacy</a
-                    >
-                  </li>
-                  <li class="list-inline-item">
-                    <a
-                      href="http://www.washington.edu/online/terms/"
-                      class="link-primary"
-                      >Terms</a
-                    >
-                  </li>
-                </ul>
+                <li class="list-inline-item">
+                  <a href="http://www.washington.edu/online/privacy/"
+                    >Privacy</a
+                  >
+                </li>
+                <li class="list-inline-item">
+                  <a href="http://www.washington.edu/online/terms/">Terms</a>
+                </li>
               </ul>
               <div>
                 Copyright &copy; {{ new Date().getFullYear() }} University of

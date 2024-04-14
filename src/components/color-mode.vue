@@ -6,6 +6,7 @@
         type="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
+        aria-label="Choose color mode"
       >
         <i v-show="colorMode == 'light'" class="bi bi-brightness-high-fill"></i>
         <i v-show="colorMode == 'dark'" class="bi bi-moon-stars-fill"></i>

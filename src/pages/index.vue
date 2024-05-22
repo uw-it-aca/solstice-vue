@@ -190,27 +190,26 @@
 
         <h3>Alerts</h3>
         <p>alerts are NOT supported by custom theming</p>
-        <div class="alert alert-primary" role="alert">
-          A simple primary alert—check it out!
-        </div>
-        <div class="alert alert-danger" role="alert">
-          A simple danger alert—check it out!
-        </div>
-        <div class="alert alert-success" role="alert">
-          A simple sucess alert—check it out!
-        </div>
-        <div
-          class="alert alert-warning alert-dismissible fade show"
-          role="alert"
+
+        <sol-alert
+          variant="warning"
+          :has-icon="true"
+          cta-url="[url]"
+          cta-label="Go to MyPlan"
         >
-          A simple warning alert—check it out!
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="alert"
-            aria-label="Close"
-          ></button>
-        </div>
+          Class meeting times overlap. Adjust your schedule to avoid conflicts.
+        </sol-alert>
+        <sol-alert
+          variant="critical"
+          :has-icon="true"
+          cta-url="[url]"
+          cta-label="Go to MyPlan"
+        >
+          Class meeting times overlap. Adjust your schedule to avoid conflicts.
+        </sol-alert>
+        <sol-alert variant="info" cta-url="[url]" cta-label="Go to MyPlan">
+          Class meeting times overlap. Adjust your schedule to avoid conflicts.
+        </sol-alert>
 
         <h3>Button</h3>
         <ul>

@@ -84,10 +84,5 @@ export default {
       default: "",
     },
   },
-  computed: {
-    ctaClass() {
-      return `btn btn-outline-${this.variant} rounded-3 alert-cta`;
-    },
-  },
 };
 </script>

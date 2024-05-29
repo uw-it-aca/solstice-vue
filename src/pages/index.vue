@@ -207,7 +207,12 @@
         >
           Class meeting times overlap. Adjust your schedule to avoid conflicts.
         </sol-alert>
-        <sol-alert variant="info" cta-url="[url]" cta-label="Go to MyPlan">
+        <sol-alert
+          variant="info"
+          :has-icon="true"
+          cta-url="[url]"
+          cta-label="Go to MyPlan"
+        >
           Class meeting times overlap. Adjust your schedule to avoid conflicts.
         </sol-alert>
 

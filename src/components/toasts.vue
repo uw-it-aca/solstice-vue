@@ -1,8 +1,9 @@
 <template>
-  <div class="toast-container bottom-0 start-50 translate-middle-x p-3">
+  <div class="toast-container p-3">
+    <!-- bottom-0 start-50 translate-middle-x -->
     <div
       v-if="variant == 'success'"
-      class="toast align-items-center text-bg-success border-0 show"
+      class="toast align-items-center text-bg-success border-0"
       role="alert"
       aria-live="assertive"
       aria-atomic="true"
@@ -22,7 +23,7 @@
     </div>
     <div
       v-if="variant == 'neutral'"
-      class="toast align-items-center text-bg-secondary border-0 show"
+      class="toast align-items-center text-bg-secondary border-0"
       role="alert"
       aria-live="assertive"
       aria-atomic="true"

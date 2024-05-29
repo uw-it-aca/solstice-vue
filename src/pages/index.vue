@@ -188,9 +188,13 @@
           </div>
         </div>
         <h3>Toasts</h3>
-
-        <sol-toast variant="success">This is a success toast</sol-toast>
-        <sol-toast variant="neutral">This is a neutral toast</sol-toast>
+        <p>Toasts are hidden by default until triggered</p>
+        <div>
+          <sol-toast variant="success">This is a success toast</sol-toast>
+        </div>
+        <div>
+          <sol-toast variant="neutral">This is a neutral toast</sol-toast>
+        </div>
 
         <h3>Alerts</h3>
         <p>alerts are NOT supported by custom theming</p>

@@ -28,6 +28,7 @@ import DisclosureBlock from "./disclosure/block.vue";
 
 // 1.1.0
 import Link from "@/components/link.vue";
+import Toast from "@/components/toasts.vue";
 
 export default {
   // CardProperty,
@@ -50,4 +51,5 @@ export default {
   ColorMode,
   Panel,
   Link,
+  Toast,
 };

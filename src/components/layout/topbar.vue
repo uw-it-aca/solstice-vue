@@ -33,7 +33,7 @@
           >
             <router-link
               :to="appRootUrl"
-              class="axdd-font-encode-sans text-white text-decoration-none"
+              class="ff-encode-sans text-white text-decoration-none"
             >
               {{ appName }}
             </router-link>
@@ -42,7 +42,7 @@
       </div>
     </header>
 
-    <div class="w-100 flex-fill bg-body text-body">
+    <div :class="backgroundClass" class="w-100 flex-fill text-body">
       <div class="container-xl">
         <div class="row">
           <div
@@ -139,6 +139,10 @@ export default {
     isPreview: {
       type: Boolean,
       default: false,
+    },
+    backgroundClass: {
+      type: String,
+      default: "bg-body",
     },
   },
   components: {},

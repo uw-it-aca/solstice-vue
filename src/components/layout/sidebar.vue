@@ -118,7 +118,7 @@
 
 <script>
 export default {
-  name: "sol-sidebar",
+  name: "SSidebar",
   inject: ["mq"],
   props: {
     appName: {

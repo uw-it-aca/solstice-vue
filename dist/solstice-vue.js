@@ -404,7 +404,7 @@ function ot(e, n, t, i, o, a) {
   ]);
 }
 const lt = /* @__PURE__ */ b(at, [["render", ot]]), rt = {
-  name: "sol-sidebar",
+  name: "SSidebar",
   inject: ["mq"],
   props: {
     appName: {
@@ -551,7 +551,7 @@ function St(e, n, t, i, o, a) {
   ], 6);
 }
 const Ct = /* @__PURE__ */ b(rt, [["render", St]]), Nt = {
-  name: "axdd-topbar",
+  name: "STopbar",
   inject: ["mq"],
   props: {
     appName: {
@@ -1287,11 +1287,12 @@ const Ts = /* @__PURE__ */ b(Is, [["render", Ms]]), G = {
   TabsDisplay: kn,
   TabsItem: Mn,
   TabsPanel: Pn,
-  Sidebar: Ct,
-  Topbar: Gt,
   ColorMode: st,
   Panel: lt,
-  Link: Ts
+  Link: Ts,
+  // updated on develop
+  Sidebar: Ct,
+  Topbar: Gt
 }, Os = {
   install(e) {
     for (const n in G)

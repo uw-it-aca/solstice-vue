@@ -45,9 +45,10 @@ export default {
   TabsDisplay,
   TabsItem,
   TabsPanel,
-  Sidebar,
-  Topbar,
   ColorMode,
   Panel,
   Link,
+  // updated on develop
+  Sidebar,
+  Topbar,
 };

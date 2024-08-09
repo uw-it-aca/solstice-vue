@@ -9,14 +9,14 @@
     :topbar-class="'bg-brand'"
   >
     <template #profile>
-      <axdd-profile
+      <SProfile
         :variant="'flyout'"
         :user-netid="userNetid"
         :user-official-name="userOfficial"
         :user-preferred-name="userPreferred"
         :profile-url="'https://identity.uw.edu'"
         :signout-url="signOutUrl"
-      ></axdd-profile>
+      ></SProfile>
     </template>
     <template #navigation>
       <ul class="nav flex-column my-3">
@@ -107,10 +107,11 @@
 <script>
 import STopbar from "@/components/layout/STopbar.vue";
 import SColorMode from "@/components/SColorMode.vue";
+import SProfile from "@/components/SProfile.vue";
 
 export default {
   name: "DocsSandboxTopbarIndex",
-  components: { STopbar, SColorMode },
+  components: { STopbar, SColorMode, SProfile },
   data() {
     return {
       // minimum application setup overrides

@@ -36,5 +36,4 @@ export default {
   STopbar,
   SColorMode,
   SProfile,
-
 };

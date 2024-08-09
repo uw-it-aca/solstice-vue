@@ -8,13 +8,13 @@
     :sidebar-class="'bg-brand'"
   >
     <template #profile>
-      <axdd-profile
+      <SProfile
         :user-netid="userNetid"
         :user-official-name="userOfficial"
         :user-preferred-name="userPreferred"
         :profile-url="'https://identity.uw.edu'"
         :signout-url="signOutUrl"
-      ></axdd-profile>
+      ></SProfile>
     </template>
 
     <template #navigation>
@@ -184,11 +184,12 @@
 
 <script>
 import SColorMode from "@/components/SColorMode.vue";
+import SProfile from "@/components/SProfile.vue";
 import SSidebar from "@/components/layout/SSidebar.vue";
 
 export default {
   name: "DocsSandboxSidebarIndex",
-  components: { SSidebar, SColorMode },
+  components: { SSidebar, SColorMode, SProfile },
   props: {},
   data: function () {
     return {

@@ -9,8 +9,7 @@
     "dist",
     "LICENSE",
     "package.json",
-    "README.md",
-    "typed-router.d.ts"
+    "README.md"
   ],
   "exports": {
     ".": {
@@ -56,7 +55,6 @@
     "stylelint-config-standard-scss": "^13.0.0",
     "unplugin-vue-router": "^0.7.0",
     "vite": "^5.0.11",
-    "vite-plugin-dts": "^4.0.2",
     "vitest": "^1.2.0"
   }
 }

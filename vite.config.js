@@ -3,11 +3,12 @@ import { defineConfig } from "vite";
 
 import VueRouter from "unplugin-vue-router/vite";
 import Vue from "@vitejs/plugin-vue";
+import dts from "vite-plugin-dts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   publicDir: true,
-  plugins: [VueRouter({}), Vue()],
+  plugins: [VueRouter({}), Vue(), dts()],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),

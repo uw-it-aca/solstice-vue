@@ -14,7 +14,6 @@
 
 <script>
 export default {
-  name: "axdd-tabs-panel",
   props: {
     panelId: {
       // must match tab panelId

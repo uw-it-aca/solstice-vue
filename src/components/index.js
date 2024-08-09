@@ -1,15 +1,16 @@
-import Card from "./card/card.vue";
-import CardHeading from "./card/heading.vue";
-import CardAction from "./card/action.vue";
-import CardTabs from "./card/tabs.vue";
-import TabsList from "./tabs/list.vue";
-import TabsDisplay from "./tabs/display.vue";
-import TabsItem from "./tabs/item.vue";
-import TabsPanel from "./tabs/panel.vue";
+//import Card from "./card/card.vue";
+//import CardHeading from "./card/heading.vue";
+//import CardAction from "./card/action.vue";
+//import CardTabs from "./card/tabs.vue";
 
-import DisclosureAction from "./disclosure/action.vue";
-import DisclosurePanel from "./disclosure/panel.vue";
-import DisclosureBlock from "./disclosure/block.vue";
+import STabsList from "./tabs/STabsList.vue";
+import STabsDisplay from "./tabs/STabsDisplay.vue";
+import STabsItem from "./tabs/STabsItem.vue";
+import STabsPanel from "./tabs/STabsPanel.vue";
+
+//import DisclosureAction from "./disclosure/action.vue";
+//import DisclosurePanel from "./disclosure/panel.vue";
+//import DisclosureBlock from "./disclosure/block.vue";
 
 import SSidebar from "./layout/SSidebar.vue";
 import STopbar from "./layout/STopbar.vue";
@@ -20,17 +21,19 @@ export {
   // CardProperty,
   // CardStatus,
   // LinkButton,
-  Card,
-  CardHeading,
-  CardAction,
-  CardTabs,
-  DisclosureAction,
-  DisclosureBlock,
-  DisclosurePanel,
-  TabsList,
-  TabsDisplay,
-  TabsItem,
-  TabsPanel,
+  //Card,
+  //CardHeading,
+  //CardAction,
+  //CardTabs,
+
+  //DisclosureAction,
+  //DisclosureBlock,
+  //DisclosurePanel,
+
+  STabsList,
+  STabsDisplay,
+  STabsItem,
+  STabsPanel,
   SSidebar,
   STopbar,
   SColorMode,

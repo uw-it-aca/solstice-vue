@@ -20,7 +20,6 @@
 
 <script>
 export default {
-  name: "axdd-tabs-list",
   props: {
     variant: {
       type: String,

@@ -15,10 +15,10 @@ import Card from "./card/card.vue";
 import CardHeading from "./card/heading.vue";
 import CardAction from "./card/action.vue";
 import CardTabs from "./card/tabs.vue";
-import TabsList from "./tabs/list.vue";
-import TabsDisplay from "./tabs/display.vue";
-import TabsItem from "./tabs/item.vue";
-import TabsPanel from "./tabs/panel.vue";
+import TabsList from "./tabs/STabsList.vue";
+import TabsDisplay from "./tabs/STabsDisplay.vue";
+import TabsItem from "./tabs/STabsItem.vue";
+import TabsPanel from "./tabs/STabsPanel.vue";
 
 // 1.0.5
 import Profile from "./profile.vue";

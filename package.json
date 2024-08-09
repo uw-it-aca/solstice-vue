@@ -1,7 +1,6 @@
 {
   "name": "solstice-vue",
   "type": "module",
-  "types": "./dist/solstice.d.ts",
   "version": "develop",
   "private": true,
   "main": "./dist/solstice-vue.umd.cjs",

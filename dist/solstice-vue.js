@@ -1035,8 +1035,7 @@ function Vs(e, s, t, i = {}) {
     if (!c && w) {
       const q = T.read(g);
       return typeof w == "function" ? w(q, C) : E === "object" && !Array.isArray(q) ? { ...C, ...q } : q;
-    } else
-      return typeof g != "string" ? g : T.read(g);
+    } else return typeof g != "string" ? g : T.read(g);
   }
   function N(c) {
     if (!(c && c.storageArea !== t)) {

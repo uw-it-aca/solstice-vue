@@ -9,7 +9,8 @@
     "dist",
     "LICENSE",
     "package.json",
-    "README.md"
+    "README.md",
+    "typed-router.d.ts"
   ],
   "exports": {
     ".": {

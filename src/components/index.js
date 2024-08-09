@@ -16,7 +16,7 @@ import STopbar from "./layout/STopbar.vue";
 import SProfile from "./SProfile.vue";
 import SColorMode from "./SColorMode.vue";
 
-export default {
+export {
   // CardProperty,
   // CardStatus,
   // LinkButton,
@@ -31,7 +31,6 @@ export default {
   TabsDisplay,
   TabsItem,
   TabsPanel,
-
   SSidebar,
   STopbar,
   SColorMode,

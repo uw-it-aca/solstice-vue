@@ -9,12 +9,12 @@
               appName
             }}</a>
           </div>
-          <div><sol-color-mode></sol-color-mode></div>
+          <div><SColorMode></SColorMode></div>
         </header>
         <nav>
           <ul>
-            <li><router-link to="/">Home</router-link></li>
-            <li><router-link to="/link">Link</router-link></li>
+            <li><RouterLink to="/">Home</RouterLink></li>
+            <li><RouterLink to="/link">Link</RouterLink></li>
           </ul>
         </nav>
       </div>
@@ -44,9 +44,11 @@
   </div>
 </template>
 <script>
+import SColorMode from "@/components/SColorMode.vue";
+
 export default {
   name: "SolsticeVue",
-  components: {},
+  components: { SColorMode },
   props: {
     pageTitle: {
       type: String,

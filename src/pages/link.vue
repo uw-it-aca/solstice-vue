@@ -1,7 +1,7 @@
 // home.vue
 
 <template>
-  <layout :page-title="pageTitle">
+  <Layout :page-title="pageTitle">
     <!-- page content -->
     <template #title>
       {{ pageTitle }}
@@ -55,18 +55,16 @@
         </div>
       </div>
     </template>
-  </layout>
+  </Layout>
 </template>
 
 <script>
 import Layout from "@/layout.vue";
-//import HelloWorld from "../components/hello-world.vue";
 
 export default {
   name: "PagesLink",
   components: {
-    layout: Layout,
-    //HelloWorld,
+    Layout,
   },
   data() {
     return {

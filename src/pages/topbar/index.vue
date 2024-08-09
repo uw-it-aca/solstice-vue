@@ -1,6 +1,6 @@
 <template>
   <!-- layout.vue: this is where you override the layout -->
-  <axdd-topbar
+  <STopbar
     :app-name="appName"
     :app-root-url="appRootUrl"
     :page-title="pageTitle"
@@ -68,7 +68,7 @@
         molestias hic. Esse ab inventore rerum, ipsa cupiditate quo. Aliquid
         optio, commodi sit fugit harum perspiciatis quia sunt fuga. Aliquam?
       </div>
-      <axdd-color-mode></axdd-color-mode>
+      <SColorMode></SColorMode>
     </template>
     <template #bar>
       <div
@@ -101,13 +101,16 @@
       <slot name="content"></slot>
     </template>
     <template #footer></template>
-  </axdd-topbar>
+  </STopbar>
 </template>
 
 <script>
+import STopbar from "@/components/layout/STopbar.vue";
+import SColorMode from "@/components/SColorMode.vue";
+
 export default {
   name: "DocsSandboxTopbarIndex",
-  components: {},
+  components: { STopbar, SColorMode },
   data() {
     return {
       // minimum application setup overrides

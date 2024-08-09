@@ -3,7 +3,7 @@ import { createApp } from "vue";
 import App from "@/app.vue";
 import router from "@/router";
 
-import SolsticeVue from "@/components";
+//import SolsticeVue from "@/components";
 import { Vue3Mq, MqResponsive } from "vue3-mq";
 
 // bootstrap js + icons
@@ -24,7 +24,7 @@ app.use(Vue3Mq, {
 app.component("mq-responsive", MqResponsive);
 
 // solstice-vue
-app.use(SolsticeVue);
+//app.use(SolsticeVue);
 
 app.use(router);
 app.mount("#app");

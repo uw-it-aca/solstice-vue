@@ -121,7 +121,6 @@
 
 <script>
 export default {
-  name: "STopbar",
   inject: ["mq"],
   props: {
     appName: {

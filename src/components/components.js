@@ -7,8 +7,8 @@ import ColorMode from "./color-mode.vue";
 import Panel from "./panel.vue";
 
 // 1.0.0
-import Sidebar from "./layout/sidebar.vue";
-import Topbar from "./layout/topbar.vue";
+import Sidebar from "./layout/SSidebar.vue";
+import Topbar from "./layout/STopbar.vue";
 
 // 1.0.4
 import Card from "./card/card.vue";

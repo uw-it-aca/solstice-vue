@@ -1,7 +1,7 @@
 // home.vue
 
 <template>
-  <layout :page-title="pageTitle">
+  <Layout :page-title="pageTitle">
     <!-- page content -->
     <template #title>
       {{ pageTitle }}
@@ -46,10 +46,10 @@
           <h3>Layout</h3>
           <ul>
             <li>
-              <sol-link href="/topbar">Topbar</sol-link>
+              <RouterLink to="/topbar">Topbar</RouterLink>
             </li>
             <li>
-              <router-link to="/sidebar">Sidebar</router-link>
+              <RouterLink to="/sidebar">Sidebar</RouterLink>
             </li>
           </ul>
           <h3>Color</h3>
@@ -143,110 +143,20 @@
         <div class="col">
           <h2 class="fw-bold">Elements</h2>
 
-          <h3>Link</h3>
-          <div class="d-flex">
-            <div class="w-100">
-              <p>Default</p>
-              <ul>
-                <li>a: <a href="/">hello anchor</a></li>
-                <li>
-                  default:
-                  <sol-link :href="'/topbar'">hello world</sol-link>
-                </li>
-                <li>
-                  quiet:
-                  <sol-link :variant="'quiet'" :href="'/topbar'"
-                    >hello world</sol-link
-                  >
-                </li>
-                <li>
-                  icon:
-                  <sol-link
-                    :variant="'icon'"
-                    :href="'/topbar'"
-                    :color="'link-danger'"
-                    :icon="'bi-globe-americas'"
-                    >hello world</sol-link
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="w-100">
-              <p>Dark</p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-              molestiae distinctio vel! Consectetur voluptatibus accusantium
-              quas! Distinctio aperiam quidem saepe asperiores consectetur
-              placeat quaerat repellat! Placeat nihil enim sequi quaerat.
-            </div>
-            <div class="w-100">
-              <p>Light</p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-              molestiae distinctio vel! Consectetur voluptatibus accusantium
-              quas! Distinctio aperiam quidem saepe asperiores consectetur
-              placeat quaerat repellat! Placeat nihil enim sequi quaerat.
-            </div>
-          </div>
+          <h2 class="fw-bold">Patterns</h2>
         </div>
-
-        <h3>Alerts</h3>
-        <p>alerts are NOT supported by custom theming</p>
-        <div class="alert alert-primary" role="alert">
-          A simple primary alert—check it out!
-        </div>
-        <div class="alert alert-danger" role="alert">
-          A simple danger alert—check it out!
-        </div>
-        <div class="alert alert-success" role="alert">
-          A simple sucess alert—check it out!
-        </div>
-        <div
-          class="alert alert-warning alert-dismissible fade show"
-          role="alert"
-        >
-          A simple warning alert—check it out!
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="alert"
-            aria-label="Close"
-          ></button>
-        </div>
-
-        <h3>Button</h3>
-        <ul>
-          <li>
-            <button type="button" class="btn btn-primary rounded-3">
-              Primary
-            </button>
-          </li>
-          <li>
-            <button type="button" class="btn btn-action rounded-3">
-              Action
-            </button>
-          </li>
-          <li>
-            <button type="button" class="btn btn-outline-secondary rounded-3">
-              Cancel
-            </button>
-            <button type="button" class="btn btn-primary rounded-3">
-              Primary
-            </button>
-          </li>
-        </ul>
       </div>
     </template>
-  </layout>
+  </Layout>
 </template>
 
 <script>
 import Layout from "@/layout.vue";
-//import HelloWorld from "../components/hello-world.vue";
 
 export default {
   name: "PagesHome",
   components: {
-    layout: Layout,
-    //HelloWorld,
+    Layout,
   },
   data() {
     return {

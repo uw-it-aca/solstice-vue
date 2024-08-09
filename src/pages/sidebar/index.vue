@@ -1,5 +1,5 @@
 <template>
-  <sol-sidebar
+  <SSidebar
     :app-name="appName"
     :app-root-url="appRootUrl"
     :page-title="pageTitle"
@@ -176,16 +176,19 @@
           </ul>
           <div>Copyright © 2023 University of Washington</div>
         </div>
-        <div><axdd-color-mode></axdd-color-mode></div>
+        <div><SColorMode></SColorMode></div>
       </div>
     </template>
-  </sol-sidebar>
+  </SSidebar>
 </template>
 
 <script>
+import SColorMode from "@/components/SColorMode.vue";
+import SSidebar from "@/components/layout/SSidebar.vue";
+
 export default {
   name: "DocsSandboxSidebarIndex",
-  components: {},
+  components: { SSidebar, SColorMode },
   props: {},
   data: function () {
     return {

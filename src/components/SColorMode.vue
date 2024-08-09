@@ -51,7 +51,6 @@
 import { useColorMode } from "@vueuse/core";
 
 export default {
-  name: "sol-color-mode",
   // composition in options api requires setup()
   setup() {
     const colorMode = useColorMode({

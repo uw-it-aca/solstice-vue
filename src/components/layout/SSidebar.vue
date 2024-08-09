@@ -118,7 +118,6 @@
 
 <script>
 export default {
-  name: "SSidebar",
   inject: ["mq"],
   props: {
     appName: {

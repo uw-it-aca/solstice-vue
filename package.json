@@ -3,8 +3,8 @@
   "type": "module",
   "version": "develop",
   "private": true,
-  "main": "./dist/solstice-vue.js",
-  "module": "./dist/solstice-vue.umd.cjs",
+  "main": "./dist/solstice-vue.umd.cjs",
+  "module": "./dist/solstice-vue.js",
   "files": [
     "dist",
     "LICENSE",
@@ -14,7 +14,7 @@
   "exports": {
     ".": {
       "import": "./dist/solstice-vue.js",
-      "require": "./dist/solstice-vue.cjs"
+      "require": "./dist/solstice-vue.umd.cjs"
     },
     "./dist/style.css": "./dist/style.css",
     "./dist/solstice.scss": "./dist/solstice.scss"

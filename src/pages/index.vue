@@ -144,6 +144,102 @@
           <h2 class="fw-bold">Elements</h2>
 
           <h2 class="fw-bold">Patterns</h2>
+
+          <h3>Tabs</h3>
+          <p>
+            Customized from Bootstrap to meet
+            <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabs/"
+              >https://www.w3.org/WAI/ARIA/apg/patterns/tabs/</a
+            >
+            specs.
+          </p>
+
+          <h4>Underline (Default)</h4>
+          <STabsList :tabs-id="'example2'">
+            <STabsItem
+              :tabs-id="'example2'"
+              :panel-id="'first2'"
+              active-tab="true"
+            >
+              First
+            </STabsItem>
+            <STabsItem :tabs-id="'example2'" :panel-id="'second2'">
+              Second
+            </STabsItem>
+            <STabsItem :tabs-id="'example2'" :panel-id="'third2'">
+              Third
+            </STabsItem>
+          </STabsList>
+
+          <STabsDisplay :tabs-id="'example2'">
+            <STabsPanel :panel-id="'first2'" :active-panel="true">
+              <p>
+                First... Lorem ipsum dolor, sit amet consectetur adipisicing
+                elit. Voluptatum quaerat fuga ad quo facere, beatae odit at
+                mollitia reiciendis harum nostrum dolorum eum dolor corporis
+                doloremque architecto accusantium? Quibusdam, vitae?
+              </p>
+            </STabsPanel>
+            <STabsPanel :panel-id="'second2'"
+              ><p>
+                Second... Lorem ipsum dolor, sit amet consectetur adipisicing
+                elit. Tempore, provident quas molestias dicta exercitationem
+                nihil odit. Itaque qui minima sequi, reprehenderit veritatis,
+                cum perspiciatis ad neque architecto repellat consequuntur
+                repudiandae!
+              </p>
+            </STabsPanel>
+            <STabsPanel :panel-id="'third2'"
+              ><p>
+                Third... Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Quidem quam, beatae perferendis dolore ratione doloremque,
+                voluptates aut, ullam illum esse sequi blanditiis pariatur
+                delectus saepe molestias necessitatibus cupiditate maxime
+                voluptatem.
+              </p></STabsPanel
+            >
+          </STabsDisplay>
+
+          <h4>Pills</h4>
+
+          <STabsList :tabs-id="'example'" variant="pills">
+            <STabsItem
+              :tabs-id="'example'"
+              :panel-id="'first'"
+              :active-tab="true"
+            >
+              First
+            </STabsItem>
+            <STabsItem :tabs-id="'example'" :panel-id="'second'">
+              Second
+            </STabsItem>
+            <STabsItem :tabs-id="'example'" :panel-id="'third'">
+              Third
+            </STabsItem>
+          </STabsList>
+
+          <STabsDisplay :tabs-id="'example2'">
+            <STabsPanel :panel-id="'first'" :active-panel="true">
+              first... Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Sint repudiandae dolorum, velit laborum doloremque distinctio eum
+              dolores labore corrupti repellat adipisci minima eveniet
+              exercitationem, praesentium expedita porro vero error omnis.
+            </STabsPanel>
+            <STabsPanel :panel-id="'second'">
+              second... Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Vero deleniti, repellendus harum voluptatum necessitatibus
+              mollitia facilis temporibus architecto, voluptatibus officiis
+              error asperiores quo autem iure ex laboriosam ut totam!
+              Sit.</STabsPanel
+            >
+            <STabsPanel :panel-id="'third'">
+              third... Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Sunt quibusdam culpa deleniti quo reiciendis nobis exercitationem
+              sapiente! Dolore, provident, consequatur velit autem magnam
+              nesciunt esse, laboriosam doloribus perferendis natus
+              incidunt?</STabsPanel
+            >
+          </STabsDisplay>
         </div>
       </div>
     </template>
@@ -152,11 +248,19 @@
 
 <script>
 import Layout from "@/layout.vue";
+import STabsList from "@/components/tabs/STabsList.vue";
+import STabsItem from "@/components/tabs/STabsItem.vue";
+import STabsDisplay from "@/components/tabs/STabsDisplay.vue";
+import STabsPanel from "@/components/tabs/STabsPanel.vue";
 
 export default {
   name: "PagesHome",
   components: {
     Layout,
+    STabsList,
+    STabsItem,
+    STabsDisplay,
+    STabsPanel,
   },
   data() {
     return {

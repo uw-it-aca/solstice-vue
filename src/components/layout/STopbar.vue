@@ -95,14 +95,14 @@
                 <li class="list-inline-item">
                   <a
                     href="http://www.washington.edu/online/privacy/"
-                    class="link-primary"
+                    class="link-light link-opacity-50 link-opacity-75-hover link-underline-opacity-50 link-underline-opacity-75-hover"
                     >Privacy</a
                   >
                 </li>
                 <li class="list-inline-item">
                   <a
                     href="http://www.washington.edu/online/terms/"
-                    class="link-primary"
+                    class="link-light link-opacity-50 link-opacity-75-hover link-underline-opacity-50 link-underline-opacity-75-hover"
                     >Terms</a
                   >
                 </li>

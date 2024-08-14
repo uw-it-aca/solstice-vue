@@ -1,44 +1,8 @@
 <template>
   <li class="nav-item" role="presentation">
-    <button
-      v-if="variant == 'lines'"
-      class="nav-lines-link text-secondary border-bottom border-white border-4 p-3"
-      :class="classObject"
-      :tabindex="[activeTab ? '0' : '-1']"
-      :id="panelId + '-tab'"
-      data-bs-toggle="tab"
-      :data-bs-target="'#' + panelId"
-      type="button"
-      role="tab"
-      :aria-controls="panelId"
-      :aria-selected="activeTab"
-      @keydown.right="moveNext"
-      @keydown.left="movePrev"
-      @click="onClick"
-    >
-      <slot></slot>
-    </button>
-    <button
-      v-else-if="variant == 'pills'"
-      class="nav-pills-link rounded-3 px-3 py-2"
-      :class="classObject"
-      :tabindex="[activeTab ? '0' : '-1']"
-      :id="panelId + '-tab'"
-      data-bs-toggle="tab"
-      :data-bs-target="'#' + panelId"
-      type="button"
-      role="tab"
-      :aria-controls="panelId"
-      :aria-selected="activeTab"
-      @keydown.right="moveNext"
-      @keydown.left="movePrev"
-      @click="onClick"
-    >
-      <slot></slot>
-    </button>
-    <button
-      v-else
+    <a
       class="nav-link"
+      href="#"
       :class="classObject"
       :tabindex="[activeTab ? '0' : '-1']"
       :id="panelId + '-tab'"
@@ -53,7 +17,7 @@
       @click="onClick"
     >
       <slot></slot>
-    </button>
+    </a>
   </li>
 </template>
 

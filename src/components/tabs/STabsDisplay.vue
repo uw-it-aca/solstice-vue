@@ -1,6 +1,6 @@
 <template>
   <div class="tab-content" :id="tabsId + 'Content'">
-    <slot name="panels">
+    <slot>
       <!-- axdd-tab-panel components with panelId matching tabs-->
     </slot>
   </div>

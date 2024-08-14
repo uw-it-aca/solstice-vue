@@ -1,20 +1,19 @@
 <template>
   <ul
-    v-if="variant == 'lines'"
-    class="nav nav-lines border-bottom"
+    v-if="variant == 'underline'"
+    class="nav nav-underline border-bottom"
     :id="tabsId"
     role="tablist"
   >
-    <slot name="items"></slot>
+    <slot></slot>
   </ul>
   <ul
     v-else-if="variant == 'pills'"
-    class="bg-light gap-1 rounded-3 p-1"
-    :class="'nav nav-' + variant"
+    class="bg-body-tertiary gap-1 rounded-3 p-1 nav nav-pills"
     :id="tabsId"
     role="tablist"
   >
-    <slot name="items"></slot>
+    <slot></slot>
   </ul>
 </template>
 
@@ -24,7 +23,7 @@ export default {
     variant: {
       type: String,
       required: false,
-      default: "lines",
+      default: "underline",
     },
     tabsId: {
       // must match tab panelId
@@ -36,44 +35,36 @@ export default {
 </script>
 
 <style lang="scss">
-// creates a custom bootstrap tab style
+// override bootstrap defaults
+.nav-link {
+  color: gray;
 
-.nav-lines {
-  border-width: 1px;
-
-  .nav-lines-link {
-    background: none;
-    border: none;
-    color: gray;
-    margin-bottom: 0;
-
-    &:hover {
-      border-color: #f8f9fa !important;
-      color: #4d307f !important;
-    }
-
-    &.active {
-      border-color: #452a78 !important;
-      color: #452a78 !important;
-    }
+  &:focus-visible {
+    outline: -webkit-focus-ring-color auto 1px;
+    box-shadow: none;
   }
 }
 
-.nav-pills {
-  .nav-pills-link {
-    color: gray;
-    background: none;
-    border: none;
-    margin-bottom: 0;
+.nav-pills .nav-link {
+  padding: 0.25rem 0.5rem;
 
-    &:hover {
-      color: #452a78 !important;
-    }
+  &.active {
+    background: white;
+    color: black;
+  }
+}
 
-    &.active {
-      background-color: #fff !important;
-      color: #452a78 !important;
-    }
+.nav-underline .nav-link {
+  border-width: 4px;
+
+  &:hover {
+    border-color: gray;
+  }
+
+  &.active {
+    font-weight: normal;
+    color: black;
+    border-color: #4b2e83;
   }
 }
 </style>

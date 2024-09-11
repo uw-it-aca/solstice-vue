@@ -31,12 +31,12 @@
             class="d-inline align-middle text-white"
             :class="[mq.xlPlus ? 'h2' : 'h3']"
           >
-            <router-link
-              :to="appRootUrl"
+            <a
+              :href="appRootUrl"
               class="ff-encode-sans text-white text-decoration-none"
             >
               {{ appName }}
-            </router-link>
+            </a>
           </div>
         </div>
       </div>

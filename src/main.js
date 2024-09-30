@@ -1,18 +1,17 @@
 import { createApp } from "vue";
-import App from "./app.vue";
-import router from "./router";
-import AxddComponents from "../dist/axdd-components";
+
+import App from "@/app.vue";
+import router from "@/router";
+
+//import SolsticeVue from "@/components";
 import { Vue3Mq, MqResponsive } from "vue3-mq";
 
 // bootstrap js + icons
 import "bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-// custom axdd bootstrap css
-import "../src/assets/css/styles.scss";
-
-// axdd-component css
-import "../dist/style.css";
+// custom solstice bootstrap theming
+import "@/assets/css/custom.scss";
 
 const app = createApp(App);
 
@@ -24,8 +23,8 @@ app.use(Vue3Mq, {
 });
 app.component("mq-responsive", MqResponsive);
 
-// axdd-components
-app.use(AxddComponents);
+// solstice-vue
+//app.use(SolsticeVue);
 
 app.use(router);
 app.mount("#app");

@@ -1,0 +1,364 @@
+/* stylelint-disable color-function-notation */
+
+// VERSION: 1.1.0
+// custom bootstrap 5.3 theming
+
+// 1. import bootstrap functions first
+@import "node_modules/bootstrap/scss/functions";
+
+// 3. include remaining bootstrap styles
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/variables-dark";
+
+// 2. include any default variable overrides
+
+// define new colors
+$purple2: #4b2e83;
+$red2: #cb444a;
+$blue2: #2f68cb;
+$beige: #ab9765;
+$gold: #ffbc24;
+
+// override bootstrap default theme colors
+$enable-cssgrid: true;
+
+/*
+$body-bg: #000;
+$body-color: #111;
+$text-muted: orange;
+
+$danger: #a94442;
+$warning: #f5d300;
+*/
+
+// override dropdown active color with new blue
+$dropdown-link-active-bg: $blue2;
+
+// custom color swatches
+$purple2-100: tint-color($purple2, 80%);
+$purple2-200: tint-color($purple2, 60%);
+$purple2-300: tint-color($purple2, 40%);
+$purple2-400: tint-color($purple2, 20%);
+$purple2-500: $purple2;
+$purple2-600: shade-color($purple2, 20%);
+$purple2-700: shade-color($purple2, 40%);
+$purple2-800: shade-color($purple2, 60%);
+$purple2-900: shade-color($purple2, 80%);
+$red2-100: tint-color($red2, 80%);
+$red2-200: tint-color($red2, 60%);
+$red2-300: tint-color($red2, 40%);
+$red2-400: tint-color($red2, 20%);
+$red2-500: $red2;
+$red2-600: shade-color($red2, 20%);
+$red2-700: shade-color($red2, 40%);
+$red2-800: shade-color($red2, 60%);
+$red2-900: shade-color($red2, 80%);
+$blue2-100: tint-color($blue2, 80%);
+$blue2-200: tint-color($blue2, 60%);
+$blue2-300: tint-color($blue2, 40%);
+$blue2-400: tint-color($blue2, 20%);
+$blue2-500: $blue2;
+$blue2-600: shade-color($blue2, 20%);
+$blue2-700: shade-color($blue2, 40%);
+$blue2-800: shade-color($blue2, 60%);
+$blue2-900: shade-color($blue2, 80%);
+$beige-100: tint-color($beige, 80%);
+$beige-200: tint-color($beige, 60%);
+$beige-300: tint-color($beige, 40%);
+$beige-400: tint-color($beige, 20%);
+$beige-500: $beige;
+$beige-600: shade-color($beige, 20%);
+$beige-700: shade-color($beige, 40%);
+$beige-800: shade-color($beige, 60%);
+$beige-900: shade-color($beige, 80%);
+$gold-100: tint-color($gold, 80%);
+$gold-200: tint-color($gold, 60%);
+$gold-300: tint-color($gold, 40%);
+$gold-400: tint-color($gold, 20%);
+$gold-500: $gold;
+$gold-600: shade-color($gold, 20%);
+$gold-700: shade-color($gold, 40%);
+$gold-800: shade-color($gold, 60%);
+$gold-900: shade-color($gold, 80%);
+
+// custom color swatch maps
+$purple2s: (
+  "100": $purple2-100,
+  "200": $purple2-200,
+  "300": $purple2-300,
+  "400": $purple2-400,
+  "500": $purple2-500,
+  "600": $purple2-600,
+  "700": $purple2-700,
+  "800": $purple2-800,
+  "900": $purple2-900,
+);
+$red2s: (
+  "100": $red2-100,
+  "200": $red2-200,
+  "300": $red2-300,
+  "400": $red2-400,
+  "500": $red2-500,
+  "600": $red2-600,
+  "700": $red2-700,
+  "800": $red2-800,
+  "900": $red2-900,
+);
+$blue2s: (
+  "100": $blue2-100,
+  "200": $blue2-200,
+  "300": $blue2-300,
+  "400": $blue2-400,
+  "500": $blue2-500,
+  "600": $blue2-600,
+  "700": $blue2-700,
+  "800": $blue2-800,
+  "900": $blue2-900,
+);
+$beiges: (
+  "100": $beige-100,
+  "200": $beige-200,
+  "300": $beige-300,
+  "400": $beige-400,
+  "500": $beige-500,
+  "600": $beige-600,
+  "700": $beige-700,
+  "800": $beige-800,
+  "900": $beige-900,
+);
+$golds: (
+  "100": $gold-100,
+  "200": $gold-200,
+  "300": $gold-300,
+  "400": $gold-400,
+  "500": $gold-500,
+  "600": $gold-600,
+  "700": $gold-700,
+  "800": $gold-800,
+  "900": $gold-900,
+);
+
+// override theme colors
+$theme-colors: (
+  // default
+  "primary": $blue2,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $red2,
+
+  // custom
+  "action": $blue2,
+  "critical": $red2,
+
+  // override
+  "light": $light,
+  "dark": $dark,
+);
+
+// link color overrides
+$link-color: $blue2;
+$link-hover-color: $blue2-800;
+$link-color-dark: $blue2-300;
+$link-hover-color-dark: $blue2-400;
+
+// override card border color
+// $card-border-color: $gray-200;
+
+// 4. include default map overrides
+
+// apply custom theme colors
+$custom-colors: (
+  "purple": #4d307f,
+  "dark-purple": #452a78,
+  // deprecated for opaque
+  "beige": #e8e3d3,
+  "dark-beige": #85754d,
+  "light-beige": #faf8f4,
+  "mid-beige": #ab9765,
+  "gold": #ffbc24,
+  "teal": #4c7286,
+  "light-gray": #e8e8e8,
+  "gray": #e9ecef,
+
+  // new solstice foundations
+  "action": $blue2,
+  // bg-action, text-action
+  "brand": $purple2,
+  // bg-brand-accent, text-brand-accent, table-brand-accent, btn-brand-accent
+  "critical": $red2,
+  // bg-critical, text-critical
+);
+
+// merge the default bootstrap + custom color maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// new alerts based on $red2 and $blue2
+$action-text-emphasis: shade-color($blue2, 60%) !default;
+$action-bg-subtle: tint-color($blue2, 80%) !default;
+$action-border-subtle: tint-color($blue2, 60%) !default;
+$critical-text-emphasis: shade-color($red2, 60%) !default;
+$critical-bg-subtle: tint-color($red2, 80%) !default;
+$critical-border-subtle: tint-color($red2, 60%) !default;
+
+// adding extra font-sizes (fs-#)
+$extra-font-sizes: (
+  7: 0.875rem,
+  8: 0.8125rem,
+  9: 0.75rem,
+  10: 0.6875rem,
+  11: 0.625rem,
+);
+$font-sizes: map-merge($font-sizes, $extra-font-sizes);
+
+// 5. include required parts
+@import "node_modules/bootstrap/scss/maps";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/root";
+
+// 6. optional include any other parts needed
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/containers";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/helpers";
+
+// generate brand color swatches
+@each $key, $value in $purple2s {
+  .bg-purple2-#{$key} {
+    background-color: $value !important;
+  }
+  .text-purple2-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $red2s {
+  .bg-red2-#{$key} {
+    background-color: $value !important;
+  }
+  .text-red2-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $blue2s {
+  .bg-blue2-#{$key} {
+    background-color: $value !important;
+  }
+  .text-blue2-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $beiges {
+  .bg-beige-#{$key} {
+    background-color: $value !important;
+  }
+  .text-beige-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $golds {
+  .bg-gold-#{$key} {
+    background-color: $value !important;
+  }
+  .text-gold-#{$key} {
+    color: $value !important;
+  }
+}
+
+// add or modify utilities here
+$utilities: (
+  // bg-xxxx-hover
+  "background-color-hover":
+    (
+      property: background-color,
+      class: bg,
+      local-vars: (
+        "bg-opacity": 1,
+      ),
+      state: hover focus,
+      values:
+        map-merge(
+          $utilities-bg-colors,
+          (
+            "transparent": transparent,
+            "body-secondary":
+              rgba(
+                var(--#{$prefix}secondary-bg-rgb),
+                var(--#{$prefix}bg-opacity)
+              ),
+            "body-tertiary":
+              rgba(
+                var(--#{$prefix}tertiary-bg-rgb),
+                var(--#{$prefix}bg-opacity)
+              ),
+          )
+        ),
+    ),
+  // bg-opacity-xx-hover
+  "bg-opacity-hover":
+    (
+      css-var: true,
+      class: bg-opacity,
+      state: hover focus,
+      values: (
+        10: 0.1,
+        25: 0.25,
+        50: 0.5,
+        75: 0.75,
+        100: 1,
+      ),
+    ),
+  // text-xxxx-hover
+  "color-hover":
+    (
+      property: color,
+      class: text,
+      local-vars: (
+        "text-opacity": 1,
+      ),
+      state: hover focus,
+      values:
+        map-merge(
+          $utilities-text-colors,
+          (
+            "muted": var(--#{$prefix}secondary-color),
+            // deprecated
+            "black-50": rgba($black, 0.5),
+            // deprecated
+            "white-50": rgba($white, 0.5),
+            // deprecated
+            "body-secondary": var(--#{$prefix}secondary-color),
+            "body-tertiary": var(--#{$prefix}tertiary-color),
+            "body-emphasis": var(--#{$prefix}emphasis-color),
+            "reset": inherit,
+          )
+        ),
+    ),
+  // ff-xxxx
+  "font-family-custom":
+    (
+      property: font-family,
+      class: ff,
+      values: (
+        "open-sans": (
+          "Open Sans",
+          sans-serif,
+        ),
+        "encode-sans": (
+          "Encode Sans Condensed",
+          sans-serif,
+        ),
+      ),
+    )
+);
+
+// 7. include utilities api and import bootstrap last
+@import "node_modules/bootstrap/scss/utilities/api";
+@import "node_modules/bootstrap/scss/bootstrap";

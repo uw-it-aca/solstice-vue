@@ -1,21 +1,29 @@
-[![Coverage Status](https://coveralls.io/repos/github/uw-it-aca/axdd-components/badge.svg?branch=main)](https://coveralls.io/github/uw-it-aca/axdd-components?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/uw-it-aca/solstice-vue/badge.svg?branch=main)](https://coveralls.io/github/uw-it-aca/solstice-vue?branch=main)
 
-# axdd-components
-AXDD VueJS Component Library
+# solstice-vue
+Solstice Vue Component Library
 
 * Vue 3
-* Vite 2
 * Bootstrap 5
+* Vite 4 (library packaging)
 
-## Recommended IDE Setup
+Note: This repo does not currently deploy to any host.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
+## Requirements
+Install or update the following applications:
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+* [VS Code](https://code.visualstudio.com/)
+* [Node.js (LTS)](https://nodejs.org/en)
 
 ## Project Setup
+
+```sh
+git clone git@github.com:uw-it-aca/solstice-vue.git
+```
+
+```sh
+cd solstice-vue
+```
 
 ```sh
 npm install
@@ -27,17 +35,13 @@ npm install
 npm run dev
 ```
 
-### Compile and Build documentation website
-
-```sh
-npm run build:web
-```
-
 ### Compile and Build component library
 
 ```sh
-npm run build:lib
+npm run build
 ```
+
+This command will produce a /dist directory that will be imported by other apps.
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
 

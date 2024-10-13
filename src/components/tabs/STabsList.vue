@@ -34,10 +34,10 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 // override bootstrap defaults
 .nav-link {
-  color: gray !important;
+  //color: gray !important;
 
   &:focus-visible {
     outline: -webkit-focus-ring-color auto 1px !important;

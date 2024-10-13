@@ -1,7 +1,7 @@
 <template>
   <ul
     v-if="variant == 'underline'"
-    class="nav nav-underline border-bottom"
+    class="text-body nav nav-underline border-bottom"
     :id="tabsId"
     role="tablist"
   >
@@ -9,7 +9,7 @@
   </ul>
   <ul
     v-else-if="variant == 'pills'"
-    class="bg-body-tertiary gap-1 rounded-3 p-1 nav nav-pills"
+    class="bg-body-tertiary text-body gap-1 rounded-3 p-1 nav nav-pills"
     :id="tabsId"
     role="tablist"
   >
@@ -37,34 +37,33 @@ export default {
 <style lang="scss">
 // override bootstrap defaults
 .nav-link {
-  color: gray;
+  color: gray !important;
 
   &:focus-visible {
-    outline: -webkit-focus-ring-color auto 1px;
-    box-shadow: none;
+    outline: -webkit-focus-ring-color auto 1px !important;
+    box-shadow: none !important;
   }
 }
 
 .nav-pills .nav-link {
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0.5rem !important;
 
   &.active {
-    background: white;
-    color: black;
+    background: white !important;
+    color: black !important;
   }
 }
 
 .nav-underline .nav-link {
-  border-width: 4px;
+  border-width: 4px !important;
 
   &:hover {
-    border-color: gray;
+    border-color: gray !important;
   }
 
   &.active {
-    font-weight: normal;
-    color: black;
-    border-color: #4b2e83;
+    font-weight: normal !important;
+    border-color: #4b2e83 !important;
   }
 }
 </style>

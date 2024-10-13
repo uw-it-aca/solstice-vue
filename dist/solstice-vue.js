@@ -21,14 +21,14 @@ const I = (e, n) => {
 function xe(e, n, t, o, a, i) {
   return t.variant == "underline" ? (d(), c("ul", {
     key: 0,
-    class: "nav nav-underline border-bottom",
+    class: "text-body nav nav-underline border-bottom",
     id: t.tabsId,
     role: "tablist"
   }, [
     u(e.$slots, "default")
   ], 8, ye)) : t.variant == "pills" ? (d(), c("ul", {
     key: 1,
-    class: "bg-body-tertiary gap-1 rounded-3 p-1 nav nav-pills",
+    class: "bg-body-tertiary text-body gap-1 rounded-3 p-1 nav nav-pills",
     id: t.tabsId,
     role: "tablist"
   }, [

@@ -4,11 +4,11 @@
 // custom bootstrap 5.3 theming
 
 // 1. import bootstrap functions first
-@import "node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/functions";
 
 // 3. include remaining bootstrap styles
-@import "node_modules/bootstrap/scss/variables";
-@import "node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
 
 // 2. include any default variable overrides
 
@@ -213,18 +213,18 @@ $extra-font-sizes: (
 $font-sizes: map-merge($font-sizes, $extra-font-sizes);
 
 // 5. include required parts
-@import "node_modules/bootstrap/scss/maps";
-@import "node_modules/bootstrap/scss/mixins";
-@import "node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
 
 // 6. optional include any other parts needed
-@import "node_modules/bootstrap/scss/utilities";
-@import "node_modules/bootstrap/scss/reboot";
-@import "node_modules/bootstrap/scss/type";
-@import "node_modules/bootstrap/scss/images";
-@import "node_modules/bootstrap/scss/containers";
-@import "node_modules/bootstrap/scss/grid";
-@import "node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
 
 // generate brand color swatches
 @each $key, $value in $purple2s {
@@ -360,5 +360,5 @@ $utilities: (
 );
 
 // 7. include utilities api and import bootstrap last
-@import "node_modules/bootstrap/scss/utilities/api";
-@import "node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/utilities/api";
+@import "../node_modules/bootstrap/scss/bootstrap";

@@ -6,12 +6,6 @@
   "rules": {
     "custom-property-empty-line-before": "never",
     "scss/no-global-function-names": null,
-    "no-invalid-position-at-import-rule": null,
-    "scss/at-import-partial-extension": [
-      "never",
-      {
-        "severity": "warning"
-      }
-    ]
+    "no-invalid-position-at-import-rule": null
   }
 }

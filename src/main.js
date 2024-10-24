@@ -10,8 +10,17 @@ import { Vue3Mq, MqResponsive } from "vue3-mq";
 import "bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-// solstice bootstrap theming
-//import "@/assets/css/custom.scss";
+// solstice bootstrap theme (version release)
+import "solstice-theme/dist/solstice.scss";
+
+// solstice bootstrap theme (local development)
+// import "@/assets/css/custom.scss";
+
+// solstice-vue comps
+import "solstice-vue/dist/style.css";
+
+// bootstrap-vue-next css
+import "bootstrap-vue-next/dist/bootstrap-vue-next.css";
 
 const app = createApp(App);
 

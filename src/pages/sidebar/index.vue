@@ -19,18 +19,18 @@
 
     <template #navigation>
       <ul class="nav flex-column mb-5">
-        <li class="nav-item mb-1 bg-black bg-opacity-10 rounded-3">
-          <a href="#" class="nav-link text-gray d-block px-3 py-2"
+        <li class="nav-item mb-1 bg-white bg-opacity-10 rounded-3">
+          <a href="#" class="nav-link text-light d-block px-3 py-2"
             ><i class="bi bi-house-door-fill me-3"></i>Home</a
           >
         </li>
-        <li class="nav-item mb-1 bg-black-hover bg-opacity-10-hover rounded-3">
-          <a href="#" class="nav-link text-gray d-block px-3 py-2"
+        <li class="nav-item mb-1 bg-white-hover bg-opacity-10-hover rounded-3">
+          <a href="#" class="nav-link text-light d-block px-3 py-2"
             ><i class="bi bi-mortarboard-fill me-3"></i>Academics</a
           >
         </li>
-        <li class="nav-item mb-1 rounded-3">
-          <a href="#" class="nav-link text-gray d-block px-3 py-2"
+        <li class="nav-item mb-1 bg-white-hover bg-opacity-10-hover rounded-3">
+          <a href="#" class="nav-link text-light d-block px-3 py-2"
             ><i class="bi bi-pencil-square me-3"></i>Teaching</a
           >
         </li>

@@ -49,8 +49,8 @@ export default {
   padding: 0.25rem 0.5rem !important;
 
   &.active {
-    background: white !important;
-    color: black !important;
+    // background: #2f68cb !important; // use action blue
+    // color: black !important;
   }
 }
 
@@ -58,12 +58,12 @@ export default {
   border-width: 4px !important;
 
   &:hover {
-    border-color: gray !important;
+    // border-color: gray !important;
   }
 
   &.active {
     font-weight: normal !important;
-    border-color: #4b2e83 !important;
+    // border-color: #2f68cb !important;
   }
 }
 </style>

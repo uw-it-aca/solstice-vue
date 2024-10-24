@@ -1,14 +1,10 @@
 /* stylelint-disable color-function-notation */
 
-// VERSION: 1.1.0
+// VERSION: 1.0.0
 // custom bootstrap 5.3 theming
 
 // 1. import bootstrap functions first
-@import "node_modules/bootstrap/scss/functions";
-
-// 3. include remaining bootstrap styles
-@import "node_modules/bootstrap/scss/variables";
-@import "node_modules/bootstrap/scss/variables-dark";
+@import "bootstrap/scss/functions";
 
 // 2. include any default variable overrides
 
@@ -19,17 +15,12 @@ $blue2: #2f68cb;
 $beige: #ab9765;
 $gold: #ffbc24;
 
-// override bootstrap default theme colors
+// 3. include remaining bootstrap styles
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+
+// enable css grid
 $enable-cssgrid: true;
-
-/*
-$body-bg: #000;
-$body-color: #111;
-$text-muted: orange;
-
-$danger: #a94442;
-$warning: #f5d300;
-*/
 
 // override dropdown active color with new blue
 $dropdown-link-active-bg: $blue2;
@@ -141,23 +132,20 @@ $golds: (
 // override theme colors
 $theme-colors: (
   // default
-  "primary": $blue2,
   "secondary": $secondary,
   "success": $success,
   "info": $info,
   "warning": $warning,
-  "danger": $red2,
-
-  // custom
-  "action": $blue2,
-  "critical": $red2,
-
-  // override
   "light": $light,
   "dark": $dark,
+
+  // override
+  "primary": $blue2,
+  "danger": $red2,
+
 );
 
-// link color overrides
+// default link color overrides
 $link-color: $blue2;
 $link-hover-color: $blue2-800;
 $link-color-dark: $blue2-300;
@@ -183,12 +171,10 @@ $custom-colors: (
   "gray": #e9ecef,
 
   // new solstice foundations
-  "action": $blue2,
-  // bg-action, text-action
+
   "brand": $purple2,
-  // bg-brand-accent, text-brand-accent, table-brand-accent, btn-brand-accent
-  "critical": $red2,
-  // bg-critical, text-critical
+  // bg-brand, text-brand, table-brand, btn-brand, link-brand
+
 );
 
 // merge the default bootstrap + custom color maps
@@ -213,20 +199,107 @@ $extra-font-sizes: (
 $font-sizes: map-merge($font-sizes, $extra-font-sizes);
 
 // 5. include required parts
-@import "node_modules/bootstrap/scss/maps";
-@import "node_modules/bootstrap/scss/mixins";
-@import "node_modules/bootstrap/scss/root";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
 
 // 6. optional include any other parts needed
-@import "node_modules/bootstrap/scss/utilities";
-@import "node_modules/bootstrap/scss/reboot";
-@import "node_modules/bootstrap/scss/type";
-@import "node_modules/bootstrap/scss/images";
-@import "node_modules/bootstrap/scss/containers";
-@import "node_modules/bootstrap/scss/grid";
-@import "node_modules/bootstrap/scss/helpers";
+@import "bootstrap/scss/utilities";
 
-// generate brand color swatches
+// custom utilities
+
+$utilities: map-merge(
+  $utilities,
+  (
+    // extend existing bg/text classes for hover state
+    "background-color": map-merge(
+      map-get($utilities, "background-color"),
+      (
+        state: hover focus,
+      )
+    ),
+    "color": map-merge(
+      map-get($utilities, "color"),
+      (
+        state: hover focus,
+      )
+    ),
+    // 25, 50, 75, 100
+    "text-opacity": map-merge(
+      //
+      map-get($utilities, "text-opacity"),
+      (
+        state: hover focus,
+      )
+    ),
+    // 10, 25, 50, 75, 100
+    "bg-opacity": map-merge(
+      //
+      map-get($utilities, "bg-opacity"),
+      (
+        state: hover focus,
+      )
+    ),
+    // ff-xxxx
+    "font-family":
+    (
+      property: font-family,
+      class: ff,
+      values: (
+        "open-sans": (
+          "Open Sans",
+          sans-serif,
+        ),
+        "encode-sans": (
+          "Encode Sans Condensed",
+          sans-serif,
+        ),
+      ),
+    )
+  ),
+);
+
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+
+// components
+@import "bootstrap/scss/accordion";
+@import "bootstrap/scss/alert";
+@import "bootstrap/scss/badge";
+@import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/carousel";
+@import "bootstrap/scss/close";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/list-group";
+@import "bootstrap/scss/modal";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/offcanvas";
+@import "bootstrap/scss/pagination";
+@import "bootstrap/scss/placeholders";
+@import "bootstrap/scss/popover";
+@import "bootstrap/scss/progress";
+@import "bootstrap/scss/spinners";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/toasts";
+@import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/helpers";
+
+// 7. include utilities api and import bootstrap last
+@import "bootstrap/scss/utilities/api";
+
+// @import "bootstrap/scss/bootstrap";
+
+// 8. Add additional custom code here
+
 @each $key, $value in $purple2s {
   .bg-purple2-#{$key} {
     background-color: $value !important;
@@ -271,94 +344,3 @@ $font-sizes: map-merge($font-sizes, $extra-font-sizes);
     color: $value !important;
   }
 }
-
-// add or modify utilities here
-$utilities: (
-  // bg-xxxx-hover
-  "background-color-hover":
-    (
-      property: background-color,
-      class: bg,
-      local-vars: (
-        "bg-opacity": 1,
-      ),
-      state: hover focus,
-      values:
-        map-merge(
-          $utilities-bg-colors,
-          (
-            "transparent": transparent,
-            "body-secondary":
-              rgba(
-                var(--#{$prefix}secondary-bg-rgb),
-                var(--#{$prefix}bg-opacity)
-              ),
-            "body-tertiary":
-              rgba(
-                var(--#{$prefix}tertiary-bg-rgb),
-                var(--#{$prefix}bg-opacity)
-              ),
-          )
-        ),
-    ),
-  // bg-opacity-xx-hover
-  "bg-opacity-hover":
-    (
-      css-var: true,
-      class: bg-opacity,
-      state: hover focus,
-      values: (
-        10: 0.1,
-        25: 0.25,
-        50: 0.5,
-        75: 0.75,
-        100: 1,
-      ),
-    ),
-  // text-xxxx-hover
-  "color-hover":
-    (
-      property: color,
-      class: text,
-      local-vars: (
-        "text-opacity": 1,
-      ),
-      state: hover focus,
-      values:
-        map-merge(
-          $utilities-text-colors,
-          (
-            "muted": var(--#{$prefix}secondary-color),
-            // deprecated
-            "black-50": rgba($black, 0.5),
-            // deprecated
-            "white-50": rgba($white, 0.5),
-            // deprecated
-            "body-secondary": var(--#{$prefix}secondary-color),
-            "body-tertiary": var(--#{$prefix}tertiary-color),
-            "body-emphasis": var(--#{$prefix}emphasis-color),
-            "reset": inherit,
-          )
-        ),
-    ),
-  // ff-xxxx
-  "font-family-custom":
-    (
-      property: font-family,
-      class: ff,
-      values: (
-        "open-sans": (
-          "Open Sans",
-          sans-serif,
-        ),
-        "encode-sans": (
-          "Encode Sans Condensed",
-          sans-serif,
-        ),
-      ),
-    )
-);
-
-// 7. include utilities api and import bootstrap last
-@import "node_modules/bootstrap/scss/utilities/api";
-@import "node_modules/bootstrap/scss/bootstrap";

@@ -26,7 +26,17 @@
     <template #content>
       <div class="row mb-5">
         <div class="col">
-          <h2 class="fw-bold">Building components</h2>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Library</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+          </nav>
+
+          <h2 class="fw-bold text-danger text-primary-hover">
+            Building components
+          </h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
             numquam perspiciatis, laudantium suscipit corrupti atque ea officiis
@@ -34,6 +44,7 @@
             magnam expedita eius repellat!
           </p>
           <h3>Development</h3>
+
           <ol>
             <li>create a branch</li>
             <li>run the <code>npm run build</code> command</li>
@@ -242,6 +253,15 @@
           </STabsDisplay>
         </div>
       </div>
+
+      <h2 class="fw-bold">Custom Utilities (solstice.scss)</h2>
+
+      <h3>Hover</h3>
+
+      <h3>text-color-hover</h3>
+      <h3>text-opacity-x-hover</h3>
+      <h3>bg-color-hover</h3>
+      <h3>bg-opacity-x-hover</h3>
     </template>
   </Layout>
 </template>

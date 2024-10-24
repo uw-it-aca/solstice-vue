@@ -49,7 +49,7 @@ export default {
   padding: 0.25rem 0.5rem !important;
 
   &.active {
-    // background: #2f68cb !important; // use action blue
+    background: #2f68cb !important; // use action blue
     // color: black !important;
   }
 }
@@ -63,6 +63,7 @@ export default {
 
   &.active {
     font-weight: normal !important;
+
     // border-color: #2f68cb !important;
   }
 }

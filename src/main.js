@@ -11,10 +11,10 @@ import "bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 // solstice bootstrap theme (version release)
-import "solstice-theme/dist/solstice.scss";
+//import "solstice-theme/dist/solstice.scss";
 
 // solstice bootstrap theme (local development)
-// import "@/assets/css/custom.scss";
+import "@/assets/css/solsticeDev.scss";
 
 // solstice-vue comps
 import "solstice-vue/dist/style.css";

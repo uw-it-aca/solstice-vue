@@ -9,7 +9,7 @@
   </ul>
   <ul
     v-else-if="variant == 'pills'"
-    class="bg-body-tertiary text-body gap-1 rounded-3 p-1 nav nav-pills"
+    class="bg-body-tertiary text-body gap-1 rounded-3 p-1 nav nav-pills border"
     :id="tabsId"
     role="tablist"
   >

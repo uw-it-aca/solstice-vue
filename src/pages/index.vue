@@ -154,6 +154,14 @@
         <div class="col">
           <h2 class="fw-bold">Elements</h2>
 
+          <h3>Buttons</h3>
+          <BButton variant="primary">Primary</BButton>
+          <BButton variant="secondary" class="text-primary">Secondary</BButton>
+          <BButton variant="outline-primary">Outline</BButton>
+          <br />
+          <BButton variant="light" size="sm"><i class="bi bi-trash3"></i></BButton>
+          <BButton variant="outline-dark" size="sm"><i class="bi bi-trash3"></i></BButton>
+
           <h2 class="fw-bold">Patterns</h2>
 
           <h3>Tabs</h3>
@@ -272,6 +280,7 @@ import STabsList from "@/components/tabs/STabsList.vue";
 import STabsItem from "@/components/tabs/STabsItem.vue";
 import STabsDisplay from "@/components/tabs/STabsDisplay.vue";
 import STabsPanel from "@/components/tabs/STabsPanel.vue";
+import { BButton } from "bootstrap-vue-next";
 
 export default {
   name: "PagesHome",
@@ -281,6 +290,7 @@ export default {
     STabsItem,
     STabsDisplay,
     STabsPanel,
+    BButton,
   },
   data() {
     return {

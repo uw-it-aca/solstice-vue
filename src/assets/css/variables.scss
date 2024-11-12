@@ -1,24 +1,3 @@
-/* stylelint-disable color-function-notation */
-
-// VERSION: 1.0.0
-// custom bootstrap 5.3 theming
-
-// 1. import bootstrap functions first
-@import "bootstrap/scss/functions";
-
-// 2. include any default variable overrides
-
-// define new colors
-$purple2: #4b2e83;
-$red2: #cb444a;
-$blue2: #2f68cb;
-$beige: #ab9765;
-$gold: #ffbc24;
-
-// 3. include remaining bootstrap styles
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/variables-dark";
-
 // enable css grid
 $enable-cssgrid: true;
 
@@ -141,8 +120,7 @@ $theme-colors: (
   // override
   "primary": $blue2,
   "secondary": $blue2-100,
-  "danger": $red2,
-
+  "danger": $red2
 );
 
 // default link color overrides
@@ -168,11 +146,11 @@ $custom-colors: (
   "gold": #ffbc24,
   "teal": #4c7286,
   "light-gray": #e8e8e8,
+  "gray": #e9ecef,
 
   // new solstice foundations
   "brand": $purple2,
   // bg-brand, text-brand, table-brand, btn-brand, link-brand
-
 );
 
 // merge the default bootstrap + custom color maps
@@ -195,150 +173,3 @@ $extra-font-sizes: (
   11: 0.625rem,
 );
 $font-sizes: map-merge($font-sizes, $extra-font-sizes);
-
-// 5. include required parts
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/root";
-
-// 6. optional include any other parts needed
-@import "bootstrap/scss/utilities";
-
-// custom utilities
-
-$utilities: map-merge(
-  $utilities,
-  (
-    // extend existing bg/text classes for hover state
-    "background-color": map-merge(
-      map-get($utilities, "background-color"),
-      (
-        state: hover focus,
-      )
-    ),
-    "color": map-merge(
-      map-get($utilities, "color"),
-      (
-        state: hover focus,
-      )
-    ),
-    // 25, 50, 75, 100
-    "text-opacity": map-merge(
-      //
-      map-get($utilities, "text-opacity"),
-      (
-        state: hover focus,
-      )
-    ),
-    // 10, 25, 50, 75, 100
-    "bg-opacity": map-merge(
-      //
-      map-get($utilities, "bg-opacity"),
-      (
-        state: hover focus,
-      )
-    ),
-    // ff-xxxx
-    "font-family":
-    (
-      property: font-family,
-      class: ff,
-      values: (
-        "open-sans": (
-          "Open Sans",
-          sans-serif,
-        ),
-        "encode-sans": (
-          "Encode Sans Condensed",
-          sans-serif,
-        ),
-      ),
-    )
-  ),
-);
-
-@import "bootstrap/scss/reboot";
-@import "bootstrap/scss/type";
-@import "bootstrap/scss/images";
-@import "bootstrap/scss/containers";
-@import "bootstrap/scss/grid";
-
-// components
-@import "bootstrap/scss/accordion";
-@import "bootstrap/scss/alert";
-@import "bootstrap/scss/badge";
-@import "bootstrap/scss/breadcrumb";
-@import "bootstrap/scss/button-group";
-@import "bootstrap/scss/buttons";
-@import "bootstrap/scss/card";
-@import "bootstrap/scss/carousel";
-@import "bootstrap/scss/close";
-@import "bootstrap/scss/dropdown";
-@import "bootstrap/scss/forms";
-@import "bootstrap/scss/list-group";
-@import "bootstrap/scss/modal";
-@import "bootstrap/scss/nav";
-@import "bootstrap/scss/navbar";
-@import "bootstrap/scss/offcanvas";
-@import "bootstrap/scss/pagination";
-@import "bootstrap/scss/placeholders";
-@import "bootstrap/scss/popover";
-@import "bootstrap/scss/progress";
-@import "bootstrap/scss/spinners";
-@import "bootstrap/scss/tables";
-@import "bootstrap/scss/toasts";
-@import "bootstrap/scss/tooltip";
-@import "bootstrap/scss/transitions";
-@import "bootstrap/scss/helpers";
-
-// 7. include utilities api and import bootstrap last
-@import "bootstrap/scss/utilities/api";
-
-// @import "bootstrap/scss/bootstrap";
-
-// 8. Add additional custom code here
-
-@each $key, $value in $purple2s {
-  .bg-purple2-#{$key} {
-    background-color: $value !important;
-  }
-  .text-purple2-#{$key} {
-    color: $value !important;
-  }
-}
-
-@each $key, $value in $red2s {
-  .bg-red2-#{$key} {
-    background-color: $value !important;
-  }
-  .text-red2-#{$key} {
-    color: $value !important;
-  }
-}
-
-@each $key, $value in $blue2s {
-  .bg-blue2-#{$key} {
-    background-color: $value !important;
-  }
-  .text-blue2-#{$key} {
-    color: $value !important;
-  }
-}
-
-@each $key, $value in $beiges {
-  .bg-beige-#{$key} {
-    background-color: $value !important;
-  }
-  .text-beige-#{$key} {
-    color: $value !important;
-  }
-}
-
-@each $key, $value in $golds {
-  .bg-gold-#{$key} {
-    background-color: $value !important;
-  }
-  .text-gold-#{$key} {
-    color: $value !important;
-  }
-}

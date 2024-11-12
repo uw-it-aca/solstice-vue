@@ -1,0 +1,69 @@
+/* stylelint-disable color-function-notation */
+
+// VERSION: 1.0.0
+// custom bootstrap 5.3 theming
+
+// 1. import bootstrap functions first
+@import "bootstrap/scss/functions";
+
+// 2. include any default variable overrides
+@import "colors";
+
+// 3. include remaining bootstrap styles
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+
+// custom variables
+@import "variables";
+
+// 5. include required parts
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+
+// 6. optional include any other parts needed
+@import "bootstrap/scss/utilities";
+
+// custom utilities
+@import "utilities";
+
+// reboot and grid
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+
+// components
+@import "bootstrap/scss/accordion";
+@import "bootstrap/scss/alert";
+@import "bootstrap/scss/badge";
+@import "bootstrap/scss/breadcrumb";
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/carousel";
+@import "bootstrap/scss/close";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/list-group";
+@import "bootstrap/scss/modal";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/offcanvas";
+@import "bootstrap/scss/pagination";
+@import "bootstrap/scss/placeholders";
+@import "bootstrap/scss/popover";
+@import "bootstrap/scss/progress";
+@import "bootstrap/scss/spinners";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/toasts";
+@import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/helpers";
+
+// 7. include utilities api and import bootstrap last
+@import "bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
+@import "custom";

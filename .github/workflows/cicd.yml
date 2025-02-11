@@ -30,7 +30,6 @@ jobs:
 
   test:
     runs-on: ubuntu-22.04
-    needs: build
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4

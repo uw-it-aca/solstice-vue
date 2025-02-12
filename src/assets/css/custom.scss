@@ -1,0 +1,44 @@
+@each $key, $value in $purple2s {
+  .bg-purple2-#{$key} {
+    background-color: $value !important;
+  }
+  .text-purple2-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $red2s {
+  .bg-red2-#{$key} {
+    background-color: $value !important;
+  }
+  .text-red2-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $blue2s {
+  .bg-blue2-#{$key} {
+    background-color: $value !important;
+  }
+  .text-blue2-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $beiges {
+  .bg-beige-#{$key} {
+    background-color: $value !important;
+  }
+  .text-beige-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $golds {
+  .bg-gold-#{$key} {
+    background-color: $value !important;
+  }
+  .text-gold-#{$key} {
+    color: $value !important;
+  }
+}

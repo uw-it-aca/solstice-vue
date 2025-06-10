@@ -14,7 +14,7 @@ $utilities: map-merge(
         map-get($utilities, "color"),
         (
           state: hover focus,
-        )
+        ),
       ),
     // 25, 50, 75, 100
     "text-opacity":

@@ -3,6 +3,10 @@
     :class="topbarClass + [!isPreview ? ' min-vh-100' : ' ']"
     class="d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"
   >
+    <div v-if="$slots.system" class="w-100">
+      <slot name="system">System messages</slot>
+    </div>
+
     <header class="w-100">
       <div
         v-if="$slots.profile"
@@ -46,8 +50,7 @@
       <div class="container-xl">
         <div class="row">
           <div
-            class=""
-            v-if="$slots.navigation || $slots.aside"
+            v-if="$slots.navigation"
             :style="mq.xlPlus ? 'min-width: 272px; max-width: 272px' : ''"
           >
             <div
@@ -55,34 +58,42 @@
               :class="[!mq.xlPlus ? 'collapse' : 'collapse.show']"
             >
               <!-- main topbar navigation -->
-              <nav role="navigation">
+              <nav v-if="$slots['navigation']" role="navigation">
                 <slot name="navigation"></slot>
               </nav>
-              <aside v-if="$slots['aside']">
-                <slot name="aside">this is aside content</slot>
+              <!-- show aside here if side navigation is present -->
+              <aside v-if="$slots['navigation'] && $slots['aside']">
+                <slot name="aside">Aside content</slot>
               </aside>
             </div>
           </div>
-
-          <div class="col">
-            <div v-if="$slots.bar" class="my-3">
+          <!-- toggle main width based on side nav presence -->
+          <main :class="$slots.navigation ? 'col' : 'col col-xl-9'">
+            <!-- message bar -->
+            <div v-if="$slots.bar">
               <slot name="bar"></slot>
             </div>
-            <main>
-              <slot name="main">
-                <div style="outline: dashed 1px lightgray">
-                  <!-- main content -->
-                  <h1>Hello world...</h1>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Nam, soluta omnis repudiandae aliquam nesciunt nisi nulla,
-                    ducimus eligendi natus voluptatum iusto reiciendis deserunt
-                    tempora praesentium laboriosam ullam facilis velit culpa.
-                  </p>
-                </div>
-              </slot>
-            </main>
-          </div>
+
+            <slot name="main">
+              <div style="outline: dashed 1px lightgray">
+                <!-- main content -->
+                <h1>Hello world...</h1>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam,
+                  soluta omnis repudiandae aliquam nesciunt nisi nulla, ducimus
+                  eligendi natus voluptatum iusto reiciendis deserunt tempora
+                  praesentium laboriosam ullam facilis velit culpa.
+                </p>
+              </div>
+            </slot>
+          </main>
+          <!-- hide aside if side navigation is present -->
+          <aside
+            v-if="!$slots['navigation'] && $slots['aside']"
+            class="col-xl-3"
+          >
+            <slot name="aside">Aside content</slot>
+          </aside>
         </div>
       </div>
     </div>
@@ -133,7 +144,7 @@ export default {
     },
     topbarClass: {
       type: String,
-      default: "bg-brand",
+      default: "bg-spirit-purple",
     },
     isPreview: {
       type: Boolean,

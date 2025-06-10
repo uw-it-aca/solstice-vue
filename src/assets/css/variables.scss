@@ -1,10 +1,132 @@
-// enable css grid
-$enable-cssgrid: true;
+// bootstrap theme swatches
+$yellows: (
+  "100": $yellow-100,
+  "200": $yellow-200,
+  "300": $yellow-300,
+  "400": $yellow-400,
+  "500": $yellow-500,
+  "600": $yellow-600,
+  "700": $yellow-700,
+  "800": $yellow-800,
+  "900": $yellow-900,
+);
+$greens: (
+  "100": $green-100,
+  "200": $green-200,
+  "300": $green-300,
+  "400": $green-400,
+  "500": $green-500,
+  "600": $green-600,
+  "700": $green-700,
+  "800": $green-800,
+  "900": $green-900,
+);
+$cyans: (
+  "100": $cyan-100,
+  "200": $cyan-200,
+  "300": $cyan-300,
+  "400": $cyan-400,
+  "500": $cyan-500,
+  "600": $cyan-600,
+  "700": $cyan-700,
+  "800": $cyan-800,
+  "900": $cyan-900,
+);
+$grays: (
+  "100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900,
+);
 
-// override dropdown active color with new blue
-$dropdown-link-active-bg: $blue2;
+// academic primitives + swatches
+$scarlet-100: tint-color($scarlet, 80%);
+$scarlet-200: tint-color($scarlet, 60%);
+$scarlet-300: tint-color($scarlet, 40%);
+$scarlet-400: tint-color($scarlet, 20%);
+$scarlet-500: $scarlet;
+$scarlet-600: shade-color($scarlet, 20%);
+$scarlet-700: shade-color($scarlet, 40%);
+$scarlet-800: shade-color($scarlet, 60%);
+$scarlet-900: shade-color($scarlet, 80%);
+$scarlets: (
+  "100": $scarlet-100,
+  "200": $scarlet-200,
+  "300": $scarlet-300,
+  "400": $scarlet-400,
+  "500": $scarlet-500,
+  "600": $scarlet-600,
+  "700": $scarlet-700,
+  "800": $scarlet-800,
+  "900": $scarlet-900,
+);
+$icicle-100: tint-color($icicle, 80%);
+$icicle-200: tint-color($icicle, 60%);
+$icicle-300: tint-color($icicle, 40%);
+$icicle-400: tint-color($icicle, 20%);
+$icicle-500: $icicle;
+$icicle-600: shade-color($icicle, 20%);
+$icicle-700: shade-color($icicle, 40%);
+$icicle-800: shade-color($icicle, 60%);
+$icicle-900: shade-color($icicle, 80%);
+$icicles: (
+  "100": $icicle-100,
+  "200": $icicle-200,
+  "300": $icicle-300,
+  "400": $icicle-400,
+  "500": $icicle-500,
+  "600": $icicle-600,
+  "700": $icicle-700,
+  "800": $icicle-800,
+  "900": $icicle-900,
+);
+$lime-100: tint-color($lime, 80%);
+$lime-200: tint-color($lime, 60%);
+$lime-300: tint-color($lime, 40%);
+$lime-400: tint-color($lime, 20%);
+$lime-500: $lime;
+$lime-600: shade-color($lime, 20%);
+$lime-700: shade-color($lime, 40%);
+$lime-800: shade-color($lime, 60%);
+$lime-900: shade-color($lime, 80%);
+$limes: (
+  "100": $lime-100,
+  "200": $lime-200,
+  "300": $lime-300,
+  "400": $lime-400,
+  "500": $lime-500,
+  "600": $lime-600,
+  "700": $lime-700,
+  "800": $lime-800,
+  "900": $lime-900,
+);
+$amber-100: tint-color($amber, 80%);
+$amber-200: tint-color($amber, 60%);
+$amber-300: tint-color($amber, 40%);
+$amber-400: tint-color($amber, 20%);
+$amber-500: $amber;
+$amber-600: shade-color($amber, 20%);
+$amber-700: shade-color($amber, 40%);
+$amber-800: shade-color($amber, 60%);
+$amber-900: shade-color($amber, 80%);
+$ambers: (
+  "100": $amber-100,
+  "200": $amber-200,
+  "300": $amber-300,
+  "400": $amber-400,
+  "500": $amber-500,
+  "600": $amber-600,
+  "700": $amber-700,
+  "800": $amber-800,
+  "900": $amber-900,
+);
 
-// custom color swatches
+// uw brand primitives + swatches
 $purple2-100: tint-color($purple2, 80%);
 $purple2-200: tint-color($purple2, 60%);
 $purple2-300: tint-color($purple2, 40%);
@@ -14,44 +136,6 @@ $purple2-600: shade-color($purple2, 20%);
 $purple2-700: shade-color($purple2, 40%);
 $purple2-800: shade-color($purple2, 60%);
 $purple2-900: shade-color($purple2, 80%);
-$red2-100: tint-color($red2, 80%);
-$red2-200: tint-color($red2, 60%);
-$red2-300: tint-color($red2, 40%);
-$red2-400: tint-color($red2, 20%);
-$red2-500: $red2;
-$red2-600: shade-color($red2, 20%);
-$red2-700: shade-color($red2, 40%);
-$red2-800: shade-color($red2, 60%);
-$red2-900: shade-color($red2, 80%);
-$blue2-100: tint-color($blue2, 80%);
-$blue2-200: tint-color($blue2, 60%);
-$blue2-300: tint-color($blue2, 40%);
-$blue2-400: tint-color($blue2, 20%);
-$blue2-500: $blue2;
-$blue2-600: shade-color($blue2, 20%);
-$blue2-700: shade-color($blue2, 40%);
-$blue2-800: shade-color($blue2, 60%);
-$blue2-900: shade-color($blue2, 80%);
-$beige-100: tint-color($beige, 80%);
-$beige-200: tint-color($beige, 60%);
-$beige-300: tint-color($beige, 40%);
-$beige-400: tint-color($beige, 20%);
-$beige-500: $beige;
-$beige-600: shade-color($beige, 20%);
-$beige-700: shade-color($beige, 40%);
-$beige-800: shade-color($beige, 60%);
-$beige-900: shade-color($beige, 80%);
-$gold-100: tint-color($gold, 80%);
-$gold-200: tint-color($gold, 60%);
-$gold-300: tint-color($gold, 40%);
-$gold-400: tint-color($gold, 20%);
-$gold-500: $gold;
-$gold-600: shade-color($gold, 20%);
-$gold-700: shade-color($gold, 40%);
-$gold-800: shade-color($gold, 60%);
-$gold-900: shade-color($gold, 80%);
-
-// custom color swatch maps
 $purple2s: (
   "100": $purple2-100,
   "200": $purple2-200,
@@ -63,6 +147,35 @@ $purple2s: (
   "800": $purple2-800,
   "900": $purple2-900,
 );
+$purple3-100: tint-color($purple3, 80%);
+$purple3-200: tint-color($purple3, 60%);
+$purple3-300: tint-color($purple3, 40%);
+$purple3-400: tint-color($purple3, 20%);
+$purple3-500: $purple3;
+$purple3-600: shade-color($purple3, 20%);
+$purple3-700: shade-color($purple3, 40%);
+$purple3-800: shade-color($purple3, 60%);
+$purple3-900: shade-color($purple3, 80%);
+$purple3s: (
+  "100": $purple3-100,
+  "200": $purple3-200,
+  "300": $purple3-300,
+  "400": $purple3-400,
+  "500": $purple3-500,
+  "600": $purple3-600,
+  "700": $purple3-700,
+  "800": $purple3-800,
+  "900": $purple3-900,
+);
+$red2-100: tint-color($red2, 80%);
+$red2-200: tint-color($red2, 60%);
+$red2-300: tint-color($red2, 40%);
+$red2-400: tint-color($red2, 20%);
+$red2-500: $red2;
+$red2-600: shade-color($red2, 20%);
+$red2-700: shade-color($red2, 40%);
+$red2-800: shade-color($red2, 60%);
+$red2-900: shade-color($red2, 80%);
 $red2s: (
   "100": $red2-100,
   "200": $red2-200,
@@ -74,6 +187,15 @@ $red2s: (
   "800": $red2-800,
   "900": $red2-900,
 );
+$blue2-100: tint-color($blue2, 80%);
+$blue2-200: tint-color($blue2, 60%);
+$blue2-300: tint-color($blue2, 40%);
+$blue2-400: tint-color($blue2, 20%);
+$blue2-500: $blue2;
+$blue2-600: shade-color($blue2, 20%);
+$blue2-700: shade-color($blue2, 40%);
+$blue2-800: shade-color($blue2, 60%);
+$blue2-900: shade-color($blue2, 80%);
 $blue2s: (
   "100": $blue2-100,
   "200": $blue2-200,
@@ -85,6 +207,15 @@ $blue2s: (
   "800": $blue2-800,
   "900": $blue2-900,
 );
+$beige-100: tint-color($beige, 80%);
+$beige-200: tint-color($beige, 60%);
+$beige-300: tint-color($beige, 40%);
+$beige-400: tint-color($beige, 20%);
+$beige-500: $beige;
+$beige-600: shade-color($beige, 20%);
+$beige-700: shade-color($beige, 40%);
+$beige-800: shade-color($beige, 60%);
+$beige-900: shade-color($beige, 80%);
 $beiges: (
   "100": $beige-100,
   "200": $beige-200,
@@ -96,6 +227,35 @@ $beiges: (
   "800": $beige-800,
   "900": $beige-900,
 );
+$beige2-100: tint-color($beige2, 80%);
+$beige2-200: tint-color($beige2, 60%);
+$beige2-300: tint-color($beige2, 40%);
+$beige2-400: tint-color($beige2, 20%);
+$beige2-500: $beige2;
+$beige2-600: shade-color($beige2, 20%);
+$beige2-700: shade-color($beige2, 40%);
+$beige2-800: shade-color($beige2, 60%);
+$beige2-900: shade-color($beige2, 80%);
+$beige2s: (
+  "100": $beige2-100,
+  "200": $beige2-200,
+  "300": $beige2-300,
+  "400": $beige2-400,
+  "500": $beige2-500,
+  "600": $beige2-600,
+  "700": $beige2-700,
+  "800": $beige2-800,
+  "900": $beige2-900,
+);
+$gold-100: tint-color($gold, 80%);
+$gold-200: tint-color($gold, 60%);
+$gold-300: tint-color($gold, 40%);
+$gold-400: tint-color($gold, 20%);
+$gold-500: $gold;
+$gold-600: shade-color($gold, 20%);
+$gold-700: shade-color($gold, 40%);
+$gold-800: shade-color($gold, 60%);
+$gold-900: shade-color($gold, 80%);
 $golds: (
   "100": $gold-100,
   "200": $gold-200,
@@ -108,49 +268,247 @@ $golds: (
   "900": $gold-900,
 );
 
+// decorative primitives + swatches
+$violet-100: tint-color($violet, 80%);
+$violet-200: tint-color($violet, 60%);
+$violet-300: tint-color($violet, 40%);
+$violet-400: tint-color($violet, 20%);
+$violet-500: $violet;
+$violet-600: shade-color($violet, 20%);
+$violet-700: shade-color($violet, 40%);
+$violet-800: shade-color($violet, 60%);
+$violet-900: shade-color($violet, 80%);
+$violets: (
+  "100": $violet-100,
+  "200": $violet-200,
+  "300": $violet-300,
+  "400": $violet-400,
+  "500": $violet-500,
+  "600": $violet-600,
+  "700": $violet-700,
+  "800": $violet-800,
+  "900": $violet-900,
+);
+$turquoise-100: tint-color($turquoise, 80%);
+$turquoise-200: tint-color($turquoise, 60%);
+$turquoise-300: tint-color($turquoise, 40%);
+$turquoise-400: tint-color($turquoise, 20%);
+$turquoise-500: $turquoise;
+$turquoise-600: shade-color($turquoise, 20%);
+$turquoise-700: shade-color($turquoise, 40%);
+$turquoise-800: shade-color($turquoise, 60%);
+$turquoise-900: shade-color($turquoise, 80%);
+$turquoises: (
+  "100": $turquoise-100,
+  "200": $turquoise-200,
+  "300": $turquoise-300,
+  "400": $turquoise-400,
+  "500": $turquoise-500,
+  "600": $turquoise-600,
+  "700": $turquoise-700,
+  "800": $turquoise-800,
+  "900": $turquoise-900,
+);
+$burnt-100: tint-color($burnt, 80%);
+$burnt-200: tint-color($burnt, 60%);
+$burnt-300: tint-color($burnt, 40%);
+$burnt-400: tint-color($burnt, 20%);
+$burnt-500: $burnt;
+$burnt-600: shade-color($burnt, 20%);
+$burnt-700: shade-color($burnt, 40%);
+$burnt-800: shade-color($burnt, 60%);
+$burnt-900: shade-color($burnt, 80%);
+$burnts: (
+  "100": $burnt-100,
+  "200": $burnt-200,
+  "300": $burnt-300,
+  "400": $burnt-400,
+  "500": $burnt-500,
+  "600": $burnt-600,
+  "700": $burnt-700,
+  "800": $burnt-800,
+  "900": $burnt-900,
+);
+$olive-100: tint-color($olive, 80%);
+$olive-200: tint-color($olive, 60%);
+$olive-300: tint-color($olive, 40%);
+$olive-400: tint-color($olive, 20%);
+$olive-500: $olive;
+$olive-600: shade-color($olive, 20%);
+$olive-700: shade-color($olive, 40%);
+$olive-800: shade-color($olive, 60%);
+$olive-900: shade-color($olive, 80%);
+$olives: (
+  "100": $olive-100,
+  "200": $olive-200,
+  "300": $olive-300,
+  "400": $olive-400,
+  "500": $olive-500,
+  "600": $olive-600,
+  "700": $olive-700,
+  "800": $olive-800,
+  "900": $olive-900,
+);
+$rose-100: tint-color($rose, 80%);
+$rose-200: tint-color($rose, 60%);
+$rose-300: tint-color($rose, 40%);
+$rose-400: tint-color($rose, 20%);
+$rose-500: $rose;
+$rose-600: shade-color($rose, 20%);
+$rose-700: shade-color($rose, 40%);
+$rose-800: shade-color($rose, 60%);
+$rose-900: shade-color($rose, 80%);
+$roses: (
+  "100": $rose-100,
+  "200": $rose-200,
+  "300": $rose-300,
+  "400": $rose-400,
+  "500": $rose-500,
+  "600": $rose-600,
+  "700": $rose-700,
+  "800": $rose-800,
+  "900": $rose-900,
+);
+$lavender-100: tint-color($lavender, 80%);
+$lavender-200: tint-color($lavender, 60%);
+$lavender-300: tint-color($lavender, 40%);
+$lavender-400: tint-color($lavender, 20%);
+$lavender-500: $lavender;
+$lavender-600: shade-color($lavender, 20%);
+$lavender-700: shade-color($lavender, 40%);
+$lavender-800: shade-color($lavender, 60%);
+$lavender-900: shade-color($lavender, 80%);
+$lavenders: (
+  "100": $lavender-100,
+  "200": $lavender-200,
+  "300": $lavender-300,
+  "400": $lavender-400,
+  "500": $lavender-500,
+  "600": $lavender-600,
+  "700": $lavender-700,
+  "800": $lavender-800,
+  "900": $lavender-900,
+);
+$russet-100: tint-color($russet, 80%);
+$russet-200: tint-color($russet, 60%);
+$russet-300: tint-color($russet, 40%);
+$russet-400: tint-color($russet, 20%);
+$russet-500: $russet;
+$russet-600: shade-color($russet, 20%);
+$russet-700: shade-color($russet, 40%);
+$russet-800: shade-color($russet, 60%);
+$russet-900: shade-color($russet, 80%);
+$russets: (
+  "100": $russet-100,
+  "200": $russet-200,
+  "300": $russet-300,
+  "400": $russet-400,
+  "500": $russet-500,
+  "600": $russet-600,
+  "700": $russet-700,
+  "800": $russet-800,
+  "900": $russet-900,
+);
+$ultra-100: tint-color($ultra, 80%);
+$ultra-200: tint-color($ultra, 60%);
+$ultra-300: tint-color($ultra, 40%);
+$ultra-400: tint-color($ultra, 20%);
+$ultra-500: $ultra;
+$ultra-600: shade-color($ultra, 20%);
+$ultra-700: shade-color($ultra, 40%);
+$ultra-800: shade-color($ultra, 60%);
+$ultra-900: shade-color($ultra, 80%);
+$ultras: (
+  "100": $ultra-100,
+  "200": $ultra-200,
+  "300": $ultra-300,
+  "400": $ultra-400,
+  "500": $ultra-500,
+  "600": $ultra-600,
+  "700": $ultra-700,
+  "800": $ultra-800,
+  "900": $ultra-900,
+);
+
 // override theme colors
 $theme-colors: (
   // defaults
+  "secondary": $secondary,
   "success": $success,
   "info": $info,
   "warning": $warning,
   "light": $light,
   "dark": $dark,
 
-  // override
+  // override defaults
   "primary": $blue2,
-  "secondary": $blue2-100,
   "danger": $red2
 );
 
-// default link color overrides
-$link-color: $blue2;
-$link-hover-color: $blue2-800;
-$link-color-dark: $blue2-300;
-$link-hover-color-dark: $blue2-400;
+// enable css grid
+$enable-cssgrid: true;
 
-// override card border color
-// $card-border-color: $gray-200;
+// override dropdown active color with new blue
+$dropdown-link-active-bg: $blue2;
+
+// override default link colors (+2 on hover)
+$link-color: $blue2-500;
+$link-hover-color: $blue2-700;
+$link-color-dark: $blue2-300;
+$link-hover-color-dark: $blue2-500;
+
+// override form inputs & groups, selects, radio, and checkbox
+$input-border-color: $secondary;
+$form-check-input-border: 1px solid $secondary;
+$form-select-border-color: $secondary;
 
 // 4. include default map overrides
 
 // apply custom theme colors
 $custom-colors: (
+  // deprecated (do not delete yet)
   "purple": #4d307f,
   "dark-purple": #452a78,
-  // deprecated for opaque
-  "beige": #e8e3d3,
+  // "beige": #e8e3d3,
   "dark-beige": #85754d,
   "light-beige": #faf8f4,
   "mid-beige": #ab9765,
-  "gold": #ffbc24,
+  // "gold": #ffbc24,
   "teal": #4c7286,
   "light-gray": #e8e8e8,
   "gray": #e9ecef,
-
-  // new solstice foundations
   "brand": $purple2,
-  // bg-brand, text-brand, table-brand, btn-brand, link-brand
+  // grayscale (button)
+  "gray-primary": $gray-600,
+  "gray-secondary": $gray-200,
+
+  // subdued (used for subdued buttons)
+  "subdued-primary": $blue-100,
+  "subdued-danger": $red2-100,
+
+  // uw brand palette
+  "husky-purple": $purple3,
+  "spirit-purple": $purple2,
+  "husky-gold": $beige,
+  "heritage-gold": $beige2,
+  "spirit-gold": $gold,
+
+  // decorative
+  "deco-violet": $violet,
+  "deco-turquoise": $turquoise,
+  "deco-burnt": $burnt,
+  "deco-olive": $olive,
+  "deco-rose": $rose,
+  "deco-lavender": $lavender,
+  "deco-russet": $russet,
+  "deco-ultra": $ultra,
+
+  // academic terms
+  "autumn": $scarlet,
+  "winter": $icicle,
+  "spring": $lime,
+  "summer": $amber,
+
 );
 
 // merge the default bootstrap + custom color maps

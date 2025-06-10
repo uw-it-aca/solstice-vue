@@ -1,8 +1,92 @@
+// semantic palette
+@each $key, $value in $yellows {
+  .bg-yellow-#{$key} {
+    background-color: $value !important;
+  }
+  .text-yellow-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $greens {
+  .bg-green-#{$key} {
+    background-color: $value !important;
+  }
+  .text-green-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $cyans {
+  .bg-cyan-#{$key} {
+    background-color: $value !important;
+  }
+  .text-cyan-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $grays {
+  .bg-gray-#{$key} {
+    background-color: $value !important;
+  }
+  .text-gray-#{$key} {
+    color: $value !important;
+  }
+}
+
+// academic terms palette
+@each $key, $value in $scarlets {
+  .bg-scarlet-#{$key} {
+    background-color: $value !important;
+  }
+  .text-scarlet-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $icicles {
+  .bg-icicle-#{$key} {
+    background-color: $value !important;
+  }
+  .text-icicle-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $limes {
+  .bg-lime-#{$key} {
+    background-color: $value !important;
+  }
+  .text-lime-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $ambers {
+  .bg-amber-#{$key} {
+    background-color: $value !important;
+  }
+  .text-amber-#{$key} {
+    color: $value !important;
+  }
+}
+
+// uw brand palette
 @each $key, $value in $purple2s {
   .bg-purple2-#{$key} {
     background-color: $value !important;
   }
   .text-purple2-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $purple3s {
+  .bg-purple3-#{$key} {
+    background-color: $value !important;
+  }
+  .text-purple3-#{$key} {
     color: $value !important;
   }
 }
@@ -34,11 +118,528 @@
   }
 }
 
+@each $key, $value in $beige2s {
+  .bg-beige2-#{$key} {
+    background-color: $value !important;
+  }
+  .text-beige2-#{$key} {
+    color: $value !important;
+  }
+}
+
 @each $key, $value in $golds {
   .bg-gold-#{$key} {
     background-color: $value !important;
   }
   .text-gold-#{$key} {
     color: $value !important;
+  }
+}
+
+// decorative palette
+@each $key, $value in $violets {
+  .bg-violet-#{$key} {
+    background-color: $value !important;
+  }
+  .text-violet-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $turquoises {
+  .bg-turquoise-#{$key} {
+    background-color: $value !important;
+  }
+  .text-turquoise-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $burnts {
+  .bg-burnt-#{$key} {
+    background-color: $value !important;
+  }
+  .text-burnt-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $olives {
+  .bg-olive-#{$key} {
+    background-color: $value !important;
+  }
+  .text-olive-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $roses {
+  .bg-rose-#{$key} {
+    background-color: $value !important;
+  }
+  .text-rose-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $lavenders {
+  .bg-lavender-#{$key} {
+    background-color: $value !important;
+  }
+  .text-lavender-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $russets {
+  .bg-russet-#{$key} {
+    background-color: $value !important;
+  }
+  .text-russet-#{$key} {
+    color: $value !important;
+  }
+}
+
+@each $key, $value in $ultras {
+  .bg-ultra-#{$key} {
+    background-color: $value !important;
+  }
+  .text-ultra-#{$key} {
+    color: $value !important;
+  }
+}
+
+// uw brand palette (bg subtles)
+.bg-husky-purple-subtle {
+  background-color: rgba($purple3-100, var(--bs-bg-opacity)) !important;
+}
+
+.bg-spirit-purple-subtle {
+  background-color: rgba($purple2-100, var(--bs-bg-opacity)) !important;
+}
+
+.bg-heritage-gold-subtle {
+  background-color: rgba($beige2-100, var(--bs-bg-opacity)) !important;
+}
+
+.bg-husky-gold-subtle {
+  background-color: rgba($beige-100, var(--bs-bg-opacity)) !important;
+}
+
+.bg-spirit-gold-subtle {
+  background-color: rgba($gold-100, var(--bs-bg-opacity)) !important;
+}
+
+// uw brand palette (text emphasis)
+.text-husky-purple-emphasis {
+  color: $purple3-800 !important;
+}
+
+.text-spirit-purple-emphasis {
+  color: $purple2-800 !important;
+}
+
+.text-heritage-gold-emphasis {
+  color: $beige2-800 !important;
+}
+
+.text-husky-gold-emphasis {
+  color: $beige-800 !important;
+}
+
+.text-spirit-gold-emphasis {
+  color: $gold-800 !important;
+}
+
+// academic calendar (bg subtles)
+.bg-autumn-subtle {
+  background-color: rgba($scarlet-200, var(--bs-bg-opacity)) !important;
+}
+
+.bg-winter-subtle {
+  background-color: rgba($icicle-200, var(--bs-bg-opacity)) !important;
+}
+
+.bg-spring-subtle {
+  background-color: rgba($lime-200, var(--bs-bg-opacity)) !important;
+}
+
+.bg-summer-subtle {
+  background-color: rgba($amber-200, var(--bs-bg-opacity)) !important;
+}
+
+// academic calender (text emphasis)
+.text-autumn-emphasis {
+  color: $scarlet-800 !important;
+}
+
+.text-winter-emphasis {
+  color: $icicle-800 !important;
+}
+
+.text-spring-emphasis {
+  color: $lime-800 !important;
+}
+
+.text-summer-emphasis {
+  color: $amber-800 !important;
+}
+
+// decorative (bg subtles)
+.bg-deco-violet-subtle {
+  background-color: rgba($violet-100, var(--bs-bg-opacity)) !important;
+}
+
+.bg-deco-turquoise-subtle {
+  background-color: rgba($turquoise-100, var(--bs-bg-opacity)) !important;
+}
+
+.bg-deco-burnt-subtle {
+  background-color: rgba($burnt-100, var(--bs-bg-opacity)) !important;
+}
+
+.bg-deco-olive-subtle {
+  background-color: rgba($olive-100, var(--bs-bg-opacity)) !important;
+}
+
+.bg-deco-rose-subtle {
+  background-color: rgba($rose-100, var(--bs-bg-opacity)) !important;
+}
+
+.bg-deco-lavender-subtle {
+  background-color: rgba($lavender-100, var(--bs-bg-opacity)) !important;
+}
+
+.bg-deco-russet-subtle {
+  background-color: rgba($russet-100, var(--bs-bg-opacity)) !important;
+}
+
+.bg-deco-ultra-subtle {
+  background-color: rgba($ultra-100, var(--bs-bg-opacity)) !important;
+}
+
+// decorative (text emphasis)
+.text-deco-violet-emphasis {
+  color: $violet-800 !important;
+}
+
+.text-deco-turquoise-emphasis {
+  color: $turquoise-800 !important;
+}
+
+.text-deco-burnt-emphasis {
+  color: $burnt-800 !important;
+}
+
+.text-deco-olive-emphasis {
+  color: $olive-800 !important;
+}
+
+.text-deco-rose-emphasis {
+  color: $rose-800 !important;
+}
+
+.text-deco-lavender-emphasis {
+  color: $lavender-800 !important;
+}
+
+.text-deco-russet-emphasis {
+  color: $russet-800 !important;
+}
+
+.text-deco-ultra-emphasis {
+  color: $ultra-800 !important;
+}
+
+// links
+.link-primary {
+  color: $blue2-500 !important;
+
+  &:hover {
+    color: $blue2-700 !important;
+  }
+}
+
+.link-quiet-primary {
+  color: $blue2-500 !important;
+  text-decoration: none;
+
+  &:hover {
+    color: $blue2-700 !important;
+    text-decoration: underline;
+  }
+}
+
+.link-light, .link-dark {
+  opacity: 0.75;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.link-quiet-light {
+  color: $gray-100;
+  opacity: 0.75;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.9;
+    text-decoration: underline;
+  }
+}
+
+.link-quiet-dark {
+  color: $gray-900;
+  opacity: 0.75;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.9;
+    text-decoration: underline;
+  }
+}
+
+// subdued buttons
+.btn-subdued-primary {
+  color: $blue2-500;
+
+  &:hover {
+    color: $blue2-700;
+  }
+}
+
+.btn-subdued-danger {
+  color: $red-600;
+
+  &:hover {
+    color: $red-800;
+  }
+}
+
+// quiet buttons
+.btn-quiet-primary {
+  color: $blue2-500;
+
+  &:hover {
+    background-color: $blue-100;
+    color: $blue2-700;
+  }
+}
+
+.btn-quiet-danger {
+  color: $blue-600;
+
+  &:hover {
+    background-color: $red-100;
+    color: $red-800;
+  }
+}
+
+// DARK MODE
+
+[data-bs-theme="dark"] {
+  .link-primary {
+    color: $blue2-300 !important;
+    text-decoration-color: $blue2-300 !important;
+
+    &:hover {
+      color: $blue2-400 !important;
+      text-decoration-color: $blue2-400 !important;
+    }
+  }
+
+  .link-danger {
+    color: $red2-300 !important;
+    text-decoration-color: $red2-300 !important;
+
+    &:hover {
+      color: $red2-400 !important;
+      text-decoration-color: $red2-400 !important;
+    }
+  }
+
+  // override outline buttons
+  .btn-outline-primary {
+    border-color: $blue2-300;
+    color: $blue2-300;
+
+    &:hover {
+      border-color: $blue2;
+      color: #fff !important;
+    }
+  }
+
+  .btn-outline-danger {
+    border-color: $red2-300;
+    color: $red2-300;
+
+    &:hover {
+      border-color: $red2;
+      color: #fff !important;
+    }
+  }
+
+  // override quiet buttons
+  .btn-quiet-primary {
+    color: $blue2-300 !important;
+
+    &:hover {
+      color: $blue-800 !important;
+    }
+  }
+
+  .btn-quiet-danger {
+    color: $blue2-300 !important;
+
+    &:hover {
+      color: $red2-800 !important;
+    }
+  }
+
+  // uw brand palette (subtle dark mode)
+
+  .bg-husky-purple-subtle {
+    background-color: rgba($purple3-900, var(--bs-bg-opacity)) !important;
+  }
+
+  .bg-spirit-purple-subtle {
+    background-color: rgba($purple2-900, var(--bs-bg-opacity)) !important;
+  }
+
+  .bg-heritage-gold-subtle {
+    background-color: rgba($beige2-900, var(--bs-bg-opacity)) !important;
+  }
+
+  .bg-husky-gold-subtle {
+    background-color: rgba($beige-900, var(--bs-bg-opacity)) !important;
+  }
+
+  .bg-spirit-gold-subtle {
+    background-color: rgba($gold-900, var(--bs-bg-opacity)) !important;
+  }
+
+  // uw brand palette (text emphasis)
+
+  .text-husky-purple-emphasis {
+    color: $purple3-300 !important;
+  }
+
+  .text-spirit-purple-emphasis {
+    color: $purple2-300 !important;
+  }
+
+  .text-heritage-gold-emphasis {
+    color: $beige2-300 !important;
+  }
+
+  .text-husky-gold-emphasis {
+    color: $beige-300 !important;
+  }
+
+  .text-spirit-gold-emphasis {
+    color: $gold-300 !important;
+  }
+
+  // academic calendar (bg subtles)
+  .bg-autumn-subtle {
+    background-color: rgba($scarlet-900, var(--bs-bg-opacity)) !important;
+  }
+
+  .bg-winter-subtle {
+    background-color: rgba($icicle-900, var(--bs-bg-opacity)) !important;
+  }
+
+  .bg-spring-subtle {
+    background-color: rgba($lime-900, var(--bs-bg-opacity)) !important;
+  }
+
+  .bg-summer-subtle {
+    background-color: rgba($amber-900, var(--bs-bg-opacity)) !important;
+  }
+
+  // academic calender (text emphasis)
+  .text-autumn-emphasis {
+    color: $scarlet-300 !important;
+  }
+
+  .text-winter-emphasis {
+    color: $icicle-300 !important;
+  }
+
+  .text-spring-emphasis {
+    color: $lime-300 !important;
+  }
+
+  .text-summer-emphasis {
+    color: $amber-300 !important;
+  }
+
+  // decorative (subtle dark mode)
+
+  .bg-deco-violet-subtle {
+    background-color: rgba($violet-900, var(--bs-bg-opacity)) !important;
+  }
+
+  .bg-deco-turquoise-subtle {
+    background-color: rgba($turquoise-900, var(--bs-bg-opacity)) !important;
+  }
+
+  .bg-deco-burnt-subtle {
+    background-color: rgba($burnt-900, var(--bs-bg-opacity)) !important;
+  }
+
+  .bg-deco-olive-subtle {
+    background-color: rgba($olive-900, var(--bs-bg-opacity)) !important;
+  }
+
+  .bg-deco-rose-subtle {
+    background-color: rgba($rose-900, var(--bs-bg-opacity)) !important;
+  }
+
+  .bg-deco-lavender-subtle {
+    background-color: rgba($lavender-900, var(--bs-bg-opacity)) !important;
+  }
+
+  .bg-deco-russet-subtle {
+    background-color: rgba($russet-900, var(--bs-bg-opacity)) !important;
+  }
+
+  .bg-deco-ultra-subtle {
+    background-color: rgba($ultra-900, var(--bs-bg-opacity)) !important;
+  }
+
+  // decorative (text emphasis)
+
+  .text-deco-violet-emphasis {
+    color: $violet-300 !important;
+  }
+
+  .text-deco-turquoise-emphasis {
+    color: $turquoise-300 !important;
+  }
+
+  .text-deco-burnt-emphasis {
+    color: $burnt-300 !important;
+  }
+
+  .text-deco-olive-emphasis {
+    color: $olive-300 !important;
+  }
+
+  .text-deco-rose-emphasis {
+    color: $rose-300 !important;
+  }
+
+  .text-deco-lavender-emphasis {
+    color: $lavender-300 !important;
+  }
+
+  .text-deco-russet-emphasis {
+    color: $russet-300 !important;
+  }
+
+  .text-deco-ultra-emphasis {
+    color: $ultra-300 !important;
   }
 }

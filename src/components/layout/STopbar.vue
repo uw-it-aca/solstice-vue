@@ -68,7 +68,7 @@
             </div>
           </div>
           <!-- toggle main width based on side nav presence -->
-          <main :class="$slots.navigation ? 'col' : 'col col-xl-9'">
+          <main class="col-xl">
             <!-- message bar -->
             <div v-if="$slots.bar">
               <slot name="bar"></slot>
@@ -90,7 +90,7 @@
           <!-- hide aside if side navigation is present -->
           <aside
             v-if="!$slots['navigation'] && $slots['aside']"
-            class="col-xl-3"
+            class="col-sm col-xl-3"
           >
             <slot name="aside">Aside content</slot>
           </aside>

@@ -3225,6 +3225,4 @@ export default {
 };
 </script>
 
-<script setup>
-const modal = false;
-</script>
+<script setup></script>

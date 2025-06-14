@@ -96,18 +96,23 @@
       </div>
     </template>
     <template #main>
-      <!-- main section override -->
-      <h1>
-        <slot name="title">{{ pageTitle }}</slot>
-      </h1>
-      <slot name="content"
-        >Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Exercitationem, quas similique voluptatum illum molestias excepturi
-        mollitia saepe minima facere eius? Provident amet laboriosam ducimus et
-        illum temporibus autem est blanditiis.</slot
-      >
+      <div class="row">
+        <!-- main section override -->
+        <h1>
+          <slot name="title">{{ pageTitle }}</slot>
+        </h1>
+        <slot name="content"
+          ><div class="col-9">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem, quas similique voluptatum illum molestias excepturi
+            mollitia saepe minima facere eius? Provident amet laboriosam ducimus
+            et illum temporibus autem est blanditiis.
+          </div>
+        </slot>
+        <div class="col-3">dasflkjasdlkf</div>
+      </div>
     </template>
-    <template #aside>
+    <!--<template #aside>
       <div
         class="bg-secondary bg-opacity-10 p-3 border-0 small rounded-3 mb-5 my-5"
       >
@@ -115,7 +120,7 @@
         molestias hic. Esse ab inventore rerum, ipsa cupiditate quo. Aliquid
         optio, commodi sit fugit harum perspiciatis quia sunt fuga. Aliquam?
       </div>
-    </template>
+    </template>-->
     <template #footer></template>
   </STopbar>
 </template>

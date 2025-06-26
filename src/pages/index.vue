@@ -51,6 +51,9 @@
       <h2 class="fw-bold">Foundations</h2>
       <h3>Layout</h3>
       <ul>
+         <li>
+          <RouterLink to="/topbar-neo">Topbar (Neo)</RouterLink>
+        </li>
         <li>
           <RouterLink to="/topbar">Topbar</RouterLink>
         </li>
@@ -2496,6 +2499,90 @@
             adipiscing elit.
           </li>
         </ul>
+      </div>
+
+      <hr />
+      <h2 class="fw-bold mb-5">Tables</h2>
+
+      <div class="grid mb-5">
+        <div class="g-col-6">
+          <h4>Normal</h4>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>John</td>
+                <td>Doe</td>
+                <td>@social</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>John</td>
+                <td>Doe</td>
+                <td>@social</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="g-col-6">
+          <h4>Striped</h4>
+          <table class="table table-striped">
+            <thead class="table-body-secondary">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>John</td>
+                <td>Doe</td>
+                <td>@social</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>John</td>
+                <td>Doe</td>
+                <td>@social</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <hr />

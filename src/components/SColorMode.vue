@@ -2,7 +2,7 @@
   <div class="d-flex align-items-center">
     <div>
       <button
-        class="btn btn-link text-reset dropdown-toggle p-1"
+        class="btn btn-link text-white dropdown-toggle p-1"
         type="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"

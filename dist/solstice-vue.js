@@ -487,7 +487,7 @@ const pn = /* @__PURE__ */ I(ze, [["render", ct]]), ft = {
   }
 }, mt = {
   key: 0,
-  class: "d-flex"
+  class: "d-flex border rounded-2 px-3"
 }, pt = { class: "flex-fill dropdown" }, gt = {
   key: 0,
   class: "text-white text-decoration-none",
@@ -513,14 +513,14 @@ const pn = /* @__PURE__ */ I(ze, [["render", ct]]), ft = {
   class: "small text-danger"
 }, _t = { class: "small" }, xt = { class: "small" }, St = ["href"], kt = ["href"], $t = {
   key: 1,
-  class: "d-flex"
+  class: "d-flex align-items-center text-nowrap"
 }, Nt = {
   key: 0,
   class: "flex-fill text-white"
 }, Ct = { class: "me-1" }, Mt = {
   key: 1,
   class: "flex-fill text-white"
-}, Ot = { class: "flex-fill text-end" }, Tt = ["href"];
+}, Ot = { class: "flex-fill text-end ms-2" }, Tt = ["href"];
 function qt(e, t, n, o, l, i) {
   return n.variant === "flyout" ? (d(), r("div", mt, [
     s("div", pt, [
@@ -898,7 +898,7 @@ const Yt = {
     }) };
   }
 }, Xt = { class: "d-flex align-items-center" }, Zt = {
-  class: "btn btn-link text-reset dropdown-toggle p-1",
+  class: "btn btn-link text-white dropdown-toggle p-1",
   type: "button",
   "data-bs-toggle": "dropdown",
   "aria-expanded": "false",

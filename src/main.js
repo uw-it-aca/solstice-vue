@@ -9,9 +9,12 @@ import router from "@/router";
 import "bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-// solstice bootstrap theme (version release) -OR-
-//import "solstice-theme/dist/solstice.scss";
-// solstice bootstrap theme (local development)
+// solstice bootstrap theme (version release)
+// import "solstice-theme/dist/solstice.scss";
+
+// -OR-
+
+// solstice bootstrap theme (local development for solstice-theme)
 import "@/assets/css/solstice.scss";
 
 // solstice-vue comps

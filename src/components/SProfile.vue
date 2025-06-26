@@ -1,5 +1,5 @@
 <template>
-  <div v-if="variant === 'flyout'" class="d-flex">
+  <div v-if="variant === 'flyout'" class="d-flex border rounded-2 px-3">
     <div class="flex-fill dropdown">
       <a
         v-if="userOverride"
@@ -47,14 +47,14 @@
       </div>
     </div>
   </div>
-  <div v-else class="d-flex">
+  <div v-else class="d-flex align-items-center text-nowrap">
     <div v-if="userOverride" class="flex-fill text-white">
       <span class="me-1">{{ userNetid }}</span>
       <i class="bi bi-arrow-right text-danger"></i> {{ userOverride }}
     </div>
     <div v-else class="flex-fill text-white">{{ userNetid }}</div>
 
-    <div class="flex-fill text-end">
+    <div class="flex-fill text-end ms-2">
       <slot v-if="signoutUrl"
         ><a :href="signoutUrl" class="text-white">Sign out</a></slot
       >

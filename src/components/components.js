@@ -29,6 +29,9 @@ import DisclosureBlock from "./disclosure/block.vue";
 // 1.1.0
 import Link from "@/components/link.vue";
 
+// 1.2.0
+import TopbarNeo from "./layout/STopbarNeo.vue";
+
 export default {
   // CardProperty,
   // CardStatus,
@@ -51,4 +54,5 @@ export default {
   // updated on develop
   Sidebar,
   Topbar,
+  TopbarNeo,
 };

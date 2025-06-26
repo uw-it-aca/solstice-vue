@@ -1,7 +1,7 @@
 {
   "name": "solstice-vue",
   "type": "module",
-  "version": "1.2.0",
+  "version": "develop",
   "private": true,
   "main": "./dist/solstice-vue.umd.cjs",
   "module": "./dist/solstice-vue.js",

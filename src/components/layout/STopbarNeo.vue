@@ -75,13 +75,13 @@
       </nav>
     </template>
 
-    <!--<template v-if="$slots.system">
+    <template v-if="$slots.system">
       <div class="bg-info-subtle w-100">
         <div class="container-xl">
           <slot name="system">system messages</slot>
         </div>
       </div>
-    </template>-->
+    </template>
 
     <div class="container-xl flex-fill">
       <div class="row">

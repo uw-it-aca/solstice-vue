@@ -18,6 +18,7 @@
         <SColorMode class="ms-3" />
       </div>
     </template>
+
     <template #navigation>
       <!-- Bootstrap navbar-nav classes -->
       <ul class="navbar-nav text-white me-auto mb-2 mb-xl-0">

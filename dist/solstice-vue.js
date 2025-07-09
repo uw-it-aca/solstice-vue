@@ -497,21 +497,21 @@ function Bt(e, t, n, l, o, i) {
         s("div", bt, [
           s("div", ht, [
             s("div", vt, [
-              t[0] || (t[0] = s("div", { class: "d-xl-none border-end pe-3 me-3" }, [
+              t[0] || (t[0] = s("div", { class: "d-xl-none border-end border-white border-opacity-25 pe-3 me-3" }, [
                 s("img", {
                   src: Q,
                   class: "my-1",
-                  style: { height: "40px" }
+                  style: { height: "38px" }
                 })
               ], -1)),
               t[1] || (t[1] = s("div", {
-                class: "d-none d-xl-block border-end pe-3 me-3",
-                style: { "margin-left": "-75px" }
+                class: "d-none d-xl-block border-end border-white border-opacity-25 pe-3 me-3",
+                style: { "margin-left": "-73px" }
               }, [
                 s("img", {
                   src: Q,
                   class: "my-1",
-                  style: { height: "40px" }
+                  style: { height: "38px" }
                 })
               ], -1)),
               s("div", yt, [

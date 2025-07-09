@@ -9,21 +9,23 @@
           <div class="d-flex justify-content-between align-items-center">
             <div class="w-50 d-flex align-items-center my-4">
               <!-- MARK: nudge logo for xl only -->
-              <div class="d-xl-none border-end pe-3 me-3">
-                <img
-                  src="/src/assets/images/w-logo-white.png"
-                  class="my-1"
-                  style="height: 40px"
-                />
-              </div>
               <div
-                class="d-none d-xl-block border-end pe-3 me-3"
-                style="margin-left: -75px"
+                class="d-xl-none border-end border-white border-opacity-25 pe-3 me-3"
               >
                 <img
                   src="/src/assets/images/w-logo-white.png"
                   class="my-1"
-                  style="height: 40px"
+                  style="height: 38px"
+                />
+              </div>
+              <div
+                class="d-none d-xl-block border-end border-white border-opacity-25 pe-3 me-3"
+                style="margin-left: -73px"
+              >
+                <img
+                  src="/src/assets/images/w-logo-white.png"
+                  class="my-1"
+                  style="height: 38px"
                 />
               </div>
 

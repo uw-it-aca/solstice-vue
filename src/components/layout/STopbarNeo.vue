@@ -1,64 +1,62 @@
 <template>
   <div
     :class="[!isPreview ? ' min-vh-100' : ' ']"
-    class="d-flex align-items-end flex-column sol-topbar"
+    class="d-flex align-items-end flex-column sol-topbar-neo"
   >
     <header class="w-100 bg-spirit-purple">
-      <div class="sol-topbar-brand">
-        <div class="container-xl">
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="w-50 d-flex align-items-center my-4">
-              <!-- MARK: nudge logo for xl only -->
-              <div
-                class="d-xl-none border-end border-white border-opacity-25 pe-3 me-3"
-              >
-                <img
-                  src="/src/assets/images/w-logo-white.png"
-                  class="my-1"
-                  style="height: 38px"
-                />
-              </div>
-              <div
-                class="d-none d-xl-block border-end border-white border-opacity-25 pe-3 me-3"
-                style="margin-left: -73px"
-              >
-                <img
-                  src="/src/assets/images/w-logo-white.png"
-                  class="my-1"
-                  style="height: 38px"
-                />
-              </div>
-
-              <div class="text-white d-flex flex-column">
-                <div v-if="appDeptName" class="fw-light text-nowrap mb-1 lh-1">
-                  {{ appDeptName }}
-                </div>
-                <a
-                  :href="appRootUrl"
-                  class="ff-encode-sans text-white text-decoration-none fs-3 fw-medium lh-1"
-                >
-                  {{ appName }}
-                </a>
-              </div>
+      <div class="container-xl">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="w-50 d-flex align-items-center my-4">
+            <!-- MARK: nudge logo for xl only -->
+            <div
+              class="d-xl-none border-end border-white border-opacity-25 pe-3 me-3"
+            >
+              <img
+                src="/src/assets/images/w-logo-white.png"
+                class="my-1"
+                style="height: 38px"
+              />
+            </div>
+            <div
+              class="d-none d-xl-block border-end border-white border-opacity-25 pe-3 me-3"
+              style="margin-left: -73px"
+            >
+              <img
+                src="/src/assets/images/w-logo-white.png"
+                class="my-1"
+                style="height: 38px"
+              />
             </div>
 
-            <div class="w-50 d-flex justify-content-end align-items-center">
-              <!-- MARK: slot for app settings -->
-              <template v-if="$slots.settings">
-                <slot name="settings">user info</slot>
-              </template>
-              <!-- MARK: navigation toggler -->
+            <div class="text-white d-flex flex-column">
+              <div v-if="appDeptName" class="fw-light text-nowrap mb-1 lh-1">
+                {{ appDeptName }}
+              </div>
               <a
-                class="ms-1 btn btn-link btn-sm d-xl-none py-0 py-1 text-white"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarToggler"
-                aria-controls="navbarToggler"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
+                :href="appRootUrl"
+                class="ff-encode-sans text-white text-decoration-none fs-3 fw-medium lh-1"
               >
-                <i class="bi bi-list text-light fs-3"></i>
+                {{ appName }}
               </a>
             </div>
+          </div>
+
+          <div class="w-50 d-flex justify-content-end align-items-center">
+            <!-- MARK: slot for app settings -->
+            <template v-if="$slots.settings">
+              <slot name="settings">user info</slot>
+            </template>
+            <!-- MARK: navigation toggler -->
+            <a
+              class="ms-1 btn btn-link btn-sm d-xl-none py-0 py-1 text-white"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarToggler"
+              aria-controls="navbarToggler"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="bi bi-list text-light fs-3"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -66,7 +64,7 @@
 
     <template v-if="$slots.navigation">
       <nav
-        class="navbar navbar-expand-xl w-100 p-0 bg-husky-purple"
+        class="navbar navbar-expand-xl w-100 p-0 py-xl-2 bg-husky-purple"
         data-bs-theme="dark"
       >
         <div class="container-xl">
@@ -169,14 +167,7 @@ export default {
 </script>
 
 <style lang="scss">
-.sol-topbar {
+.sol-topbar-neo {
   min-width: 430px;
-}
-
-// container-xl and above
-@media (min-width: 1200px) {
-  .navbar-nav .nav-link.active {
-    border-bottom: solid 5px;
-  }
 }
 </style>

@@ -8,25 +8,24 @@
         <div class="d-flex justify-content-between align-items-center">
           <div class="w-50 d-flex align-items-center my-4">
             <!-- MARK: nudge logo for xl only -->
-            <div
-              class="d-xl-none border-end border-white border-opacity-25 pe-3 me-3"
-            >
+            <div class="border-end border-white border-opacity-25 pe-3 me-3">
               <img
                 src="/src/assets/images/w-logo-white.png"
+                alt="UW logo"
                 class="my-1"
                 style="height: 38px"
               />
             </div>
-            <div
+            <!--<div
               class="d-none d-xl-block border-end border-white border-opacity-25 pe-3 me-3"
-              style="margin-left: -73px"
             >
               <img
                 src="/src/assets/images/w-logo-white.png"
+                alt="UW logo"
                 class="my-1"
                 style="height: 38px"
               />
-            </div>
+            </div>-->
 
             <div class="text-white d-flex flex-column">
               <div v-if="appDeptName" class="fw-light text-nowrap mb-1 lh-1">
@@ -34,7 +33,7 @@
               </div>
               <a
                 :href="appRootUrl"
-                class="ff-encode-sans text-white text-decoration-none fs-3 fw-medium lh-1"
+                class="ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium lh-1"
               >
                 {{ appName }}
               </a>

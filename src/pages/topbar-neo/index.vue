@@ -21,19 +21,19 @@
 
     <template #navigation>
       <!-- Bootstrap navbar-nav classes -->
-      <ul class="navbar-nav text-white me-auto mb-2 mb-xl-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+      <ul class="navbar-nav text-white ms-3 me-auto mb-2 mb-xl-0">
+        <li class="nav-item me-5">
+          <a class="nav-link px-0 active" aria-current="page" href="#">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+        <li class="nav-item me-5">
+          <a class="nav-link px-0" href="#">Link</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        <li class="nav-item me-5">
+          <a class="nav-link px-0 disabled" aria-disabled="true">Disabled</a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown me-5">
           <a
-            class="nav-link dropdown-toggle"
+            class="nav-link px-0 dropdown-toggle"
             href="#"
             role="button"
             data-bs-toggle="dropdown"

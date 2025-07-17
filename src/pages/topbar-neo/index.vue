@@ -23,17 +23,14 @@
       <!-- Bootstrap navbar-nav classes -->
       <ul class="navbar-nav text-white me-auto my-2 my-xl-0">
         <li class="nav-item me-5">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link px-0 text-white active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item me-5">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item me-5">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          <a class="nav-link text-white px-0" href="#">Link</a>
         </li>
         <li class="nav-item dropdown me-5">
           <a
-            class="nav-link dropdown-toggle"
+            class="nav-link px-0 text-white dropdown-toggle"
             href="#"
             role="button"
             data-bs-toggle="dropdown"
@@ -52,7 +49,7 @@
       <div class="mb-3 mb-xl-0">
         <form class="d-flex" role="search">
           <input
-            class="form-control form-control-sm me-2"
+            class="form-control form-control-sm me-2 bg-opacity-25"
             type="search"
             placeholder="Search"
             aria-label="Search"

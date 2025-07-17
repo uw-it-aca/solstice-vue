@@ -476,8 +476,7 @@ const Ps = /* @__PURE__ */ M(Ge, [["render", ct]]), ft = "data:image/png;base64,
   class: "fw-light text-nowrap mb-1 lh-1"
 }, wt = ["href"], xt = { class: "w-50 d-flex justify-content-end align-items-center" }, St = {
   key: 0,
-  class: "navbar navbar-expand-xl w-100 p-0 py-xl-2 bg-husky-purple",
-  "data-bs-theme": "dark"
+  class: "navbar navbar-expand-xl w-100 p-0 py-xl-2 bg-husky-purple"
 }, kt = { class: "container-xl" }, _t = {
   class: "collapse navbar-collapse",
   id: "navbarToggler"

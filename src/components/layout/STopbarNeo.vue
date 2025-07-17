@@ -62,10 +62,7 @@
     </header>
 
     <template v-if="$slots.navigation">
-      <nav
-        class="navbar navbar-expand-xl w-100 p-0 py-xl-2 bg-husky-purple"
-        data-bs-theme="dark"
-      >
+      <nav class="navbar navbar-expand-xl w-100 p-0 py-xl-2 bg-husky-purple">
         <div class="container-xl">
           <div class="collapse navbar-collapse" id="navbarToggler">
             <slot name="navigation">navigation bar</slot>

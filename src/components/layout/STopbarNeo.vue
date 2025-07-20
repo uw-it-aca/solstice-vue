@@ -112,7 +112,8 @@
               <div class="col small font-weight-light my-4">
                 <ul class="list-inline m-0">
                   <li class="list-inline-item">
-                    <a v-if="privacyURL"
+                    <a
+                      v-if="privacyURL"
                       :href="privacyURL"
                       target="_blank"
                       rel="noopener"
@@ -121,7 +122,8 @@
                     >
                   </li>
                   <li class="list-inline-item">
-                    <a v-if="termsURL"
+                    <a
+                      v-if="termsURL"
                       :href="termsURL"
                       target="_blank"
                       rel="noopener"

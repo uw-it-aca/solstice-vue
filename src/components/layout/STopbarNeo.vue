@@ -112,15 +112,19 @@
               <div class="col small font-weight-light my-4">
                 <ul class="list-inline m-0">
                   <li class="list-inline-item">
-                    <a
-                      href="http://www.washington.edu/online/privacy/"
+                    <a v-if="privacyURL"
+                      :href="privacyURL"
+                      target="_blank"
+                      rel="noopener"
                       class="link-light"
                       >Privacy</a
                     >
                   </li>
                   <li class="list-inline-item">
-                    <a
-                      href="http://www.washington.edu/online/terms/"
+                    <a v-if="termsURL"
+                      :href="termsURL"
+                      target="_blank"
+                      rel="noopener"
                       class="link-light"
                       >Terms</a
                     >
@@ -157,6 +161,16 @@ export default {
     isPreview: {
       type: Boolean,
       default: false,
+    },
+    privacyURL: {
+      type: String,
+      required: false,
+      default: "https://www.washington.edu/online/privacy/",
+    },
+    termsURL: {
+      type: String,
+      required: false,
+      default: "https://www.washington.edu/online/terms/",
     },
   },
 };

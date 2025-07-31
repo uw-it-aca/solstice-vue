@@ -47,6 +47,7 @@
             </template>
             <!-- MARK: navigation toggler -->
             <a
+              v-if="$slots.navigation"
               class="ms-1 btn btn-link btn-sm d-xl-none py-0 py-1 text-white"
               data-bs-toggle="collapse"
               data-bs-target="#navbarToggler"

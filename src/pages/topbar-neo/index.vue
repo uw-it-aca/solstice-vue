@@ -23,7 +23,12 @@
       <!-- Bootstrap navbar-nav classes -->
       <ul class="navbar-nav text-white me-auto my-2 my-xl-0">
         <li class="nav-item me-5">
-          <a class="nav-link px-0 text-white active" aria-current="page" href="#">Home</a>
+          <a
+            class="nav-link px-0 text-white active"
+            aria-current="page"
+            href="#"
+            >Home</a
+          >
         </li>
         <li class="nav-item me-5">
           <a class="nav-link text-white px-0" href="#">Link</a>

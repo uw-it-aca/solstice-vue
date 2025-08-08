@@ -1,9 +1,9 @@
 <template>
-  <div v-if="variant === 'flyout'" class="d-flex">
+  <div v-if="variant === 'flyout'" class="d-flex align-items-center">
     <div class="flex-fill dropdown">
       <a
         v-if="userOverride"
-        class="text-white text-decoration-none"
+        class="text-white text-decoration-none py-2"
         href="#"
         role="button"
         id="dropdownMenuButton1"
@@ -16,7 +16,7 @@
 
       <a
         v-else
-        class="text-white"
+        class="text-white text-decoration-none py-2"
         href="#"
         role="button"
         id="dropdownMenuButton1"
@@ -25,36 +25,36 @@
         >{{ userNetid }}</a
       >
       <div
-        class="dropdown-menu p-3 bg-dark border-0 text-white small"
+        class="dropdown-menu p-3"
         aria-labelledby="dropdownMenuButton1"
         style="width: 220px"
       >
-        <p v-if="userOverride" class="small text-danger">
+        <p v-if="userOverride" class="text-danger">
           overriding as <i class="bi bi-arrow-right text-danger"></i>
           {{ userOverride }}
         </p>
-        <p class="small">
+        <p class="">
           {{ userOfficialName }}, {{ userPreferredName }}, {{ userPronouns }}
         </p>
-        <p class="small"><a :href="profileUrl">go to profile</a></p>
+        <p class=""><a :href="profileUrl">go to profile</a></p>
 
         <div>
           <slot v-if="signoutUrl"
-            ><a :href="signoutUrl" class="text-white">Sign out</a></slot
+            ><a :href="signoutUrl">Sign out</a></slot
           >
           <slot v-else><a href="sadkf">sign out test</a></slot>
         </div>
       </div>
     </div>
   </div>
-  <div v-else class="d-flex">
+  <div v-else class="d-flex align-items-center text-nowrap">
     <div v-if="userOverride" class="flex-fill text-white">
       <span class="me-1">{{ userNetid }}</span>
       <i class="bi bi-arrow-right text-danger"></i> {{ userOverride }}
     </div>
     <div v-else class="flex-fill text-white">{{ userNetid }}</div>
 
-    <div class="flex-fill text-end">
+    <div class="flex-fill text-end ms-2">
       <slot v-if="signoutUrl"
         ><a :href="signoutUrl" class="text-white">Sign out</a></slot
       >

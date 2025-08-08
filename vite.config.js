@@ -27,6 +27,7 @@ export default defineConfig({
       name: "SolsticeVue",
       // the proper extensions will be added
       fileName: "solstice-vue",
+      cssFileName: "style",
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
@@ -38,6 +39,14 @@ export default defineConfig({
         globals: {
           vue: "Vue",
         },
+      },
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        quietDeps: true,
+        silenceDeprecations: ["global-builtin", "import"], // silence bootstrap5 related deprecations
       },
     },
   },

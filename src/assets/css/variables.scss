@@ -462,6 +462,14 @@ $input-border-color: $secondary;
 $form-check-input-border: 1px solid $secondary;
 $form-select-border-color: $secondary;
 
+// table striping starts on even row
+$table-striped-order: even;
+$table-striped-bg-factor: 0.03;
+$table-striped-bg: rgba(
+  var(--#{$prefix}emphasis-color-rgb),
+  $table-striped-bg-factor
+);
+
 // 4. include default map overrides
 
 // apply custom theme colors
@@ -483,7 +491,7 @@ $custom-colors: (
   "gray-secondary": $gray-200,
 
   // subdued (used for subdued buttons)
-  "subdued-primary": $blue-100,
+  "subdued-primary": $blue2-100,
   "subdued-danger": $red2-100,
 
   // uw brand palette
@@ -507,8 +515,7 @@ $custom-colors: (
   "autumn": $scarlet,
   "winter": $icicle,
   "spring": $lime,
-  "summer": $amber,
-
+  "summer": $amber
 );
 
 // merge the default bootstrap + custom color maps

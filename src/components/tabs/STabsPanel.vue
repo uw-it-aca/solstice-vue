@@ -1,8 +1,8 @@
 <template>
   <div
+    :id="panelId"
     class="tab-pane fade"
     :class="{ 'show active': activePanel }"
-    :id="panelId"
     role="tabpanel"
     :aria-labelledby="panelId + '-tab'"
     tabindex="0"

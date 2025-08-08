@@ -9,7 +9,7 @@
               appName
             }}</a>
           </div>
-          <div><SColorMode></SColorMode></div>
+          <div><SColorMode :color-class="'text-deco-violet'"></SColorMode></div>
         </header>
         <nav>
           <ul>

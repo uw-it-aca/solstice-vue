@@ -1,3 +1,5 @@
+// working theme file - sync with custom.scss on solstice-theme repo
+
 // semantic palette
 @each $key, $value in $yellows {
   .bg-yellow-#{$key} {
@@ -370,8 +372,8 @@
   }
 }
 
-.link-light, .link-dark {
-  opacity: 0.75;
+.link-light {
+  opacity: 0.6;
 
   &:hover {
     opacity: 0.9;
@@ -380,7 +382,7 @@
 
 .link-quiet-light {
   color: $gray-100;
-  opacity: 0.75;
+  opacity: 0.6;
   text-decoration: none;
 
   &:hover {
@@ -389,23 +391,31 @@
   }
 }
 
+.link-dark {
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
 .link-quiet-dark {
   color: $gray-900;
-  opacity: 0.75;
+  opacity: 0.7;
   text-decoration: none;
 
   &:hover {
-    opacity: 0.9;
+    opacity: 1;
     text-decoration: underline;
   }
 }
 
 // subdued buttons
 .btn-subdued-primary {
-  color: $blue2-500;
+  color: $blue2-600;
 
   &:hover {
-    color: $blue2-700;
+    color: $blue2-800;
   }
 }
 
@@ -422,21 +432,37 @@
   color: $blue2-500;
 
   &:hover {
-    background-color: $blue-100;
+    background-color: $blue2-100;
     color: $blue2-700;
+  }
+
+  &:active {
+    border: solid 1px transparent !important;
   }
 }
 
 .btn-quiet-danger {
-  color: $blue-600;
+  color: $red-600;
 
   &:hover {
-    background-color: $red-100;
+    background-color: $red2-100;
     color: $red-800;
+  }
+
+  &:active {
+    border: solid 1px transparent !important;
   }
 }
 
-// DARK MODE
+// table striped
+
+.table-body-secondary th {
+  background-color: $gray-200;
+}
+
+// TBD nav tabs (link, pills, tabs)
+
+// -------------------------- DARK MODE --------------------------
 
 [data-bs-theme="dark"] {
   .link-primary {
@@ -446,6 +472,16 @@
     &:hover {
       color: $blue2-400 !important;
       text-decoration-color: $blue2-400 !important;
+    }
+  }
+
+  .link-quiet-primary {
+    color: $blue2-300 !important;
+    text-decoration: none;
+
+    &:hover {
+      color: $blue2-400 !important;
+      text-decoration: underline;
     }
   }
 
@@ -459,14 +495,41 @@
     }
   }
 
-  // override outline buttons
+  // buttons (primary and danger)
+
+  .btn-primary {
+    background-color: $blue2-300;
+    border-color: $blue2-300;
+    color: $blue2-900;
+
+    &:hover {
+      background-color: $blue2-400;
+      border-color: $blue2-400;
+      color: $blue2-900;
+    }
+  }
+
+  .btn-danger {
+    background-color: $red2-300;
+    border-color: $red2-300;
+    color: $red2-900;
+
+    &:hover {
+      background-color: $red2-400;
+      border-color: $red2-400;
+      color: $red2-900;
+    }
+  }
+
+  // outline buttons
   .btn-outline-primary {
     border-color: $blue2-300;
     color: $blue2-300;
 
     &:hover {
-      border-color: $blue2;
-      color: #fff !important;
+      background-color: $blue2-400;
+      border-color: $blue2-400;
+      color: $blue2-900;
     }
   }
 
@@ -475,26 +538,40 @@
     color: $red2-300;
 
     &:hover {
-      border-color: $red2;
-      color: #fff !important;
+      background-color: $red2-400;
+      border-color: $red2-400;
+      color: $red2-900;
     }
   }
 
-  // override quiet buttons
+  // quiet buttons
   .btn-quiet-primary {
     color: $blue2-300 !important;
 
     &:hover {
       color: $blue-800 !important;
     }
+
+    &:active {
+      color: $blue2-300 !important;
+    }
   }
 
   .btn-quiet-danger {
-    color: $blue2-300 !important;
+    color: $red2-300 !important;
 
     &:hover {
       color: $red2-800 !important;
     }
+
+    &:active {
+      color: $red2-300 !important;
+    }
+  }
+
+  // table striping
+  .table-body-secondary th {
+    background-color: #343a40;
   }
 
   // uw brand palette (subtle dark mode)

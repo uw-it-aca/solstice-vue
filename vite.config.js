@@ -27,6 +27,7 @@ export default defineConfig({
       name: "SolsticeVue",
       // the proper extensions will be added
       fileName: "solstice-vue",
+      cssFileName: "style",
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

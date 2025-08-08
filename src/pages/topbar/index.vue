@@ -19,15 +19,17 @@
       </div>
     </template>-->
     <template #profile>
-      <SProfile
-        :variant="'flyout'"
-        :user-netid="userNetid"
-        :user-official-name="userOfficial"
-        :user-preferred-name="userPreferred"
-        :profile-url="'https://identity.uw.edu'"
-        :signout-url="signOutUrl"
-      ></SProfile>
-      <SColorMode></SColorMode>
+      <div class="d-flex justify-content-end">
+        <SProfile
+          :variant="'flyout'"
+          :user-netid="userNetid"
+          :user-official-name="userOfficial"
+          :user-preferred-name="userPreferred"
+          :profile-url="'https://identity.uw.edu'"
+          :signout-url="signOutUrl"
+        ></SProfile>
+        <SColorMode color-class="text-white" class="ms-3"></SColorMode>
+      </div>
     </template>
     <!--<template #navigation>
       <ul class="nav flex-column my-3">

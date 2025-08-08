@@ -15,7 +15,7 @@
           :profile-url="'https://identity.uw.edu'"
           :signout-url="signOutUrl"
         />
-        <SColorMode class="ms-3" />
+        <SColorMode :color-class="'text-deco-violet'" class="ms-3" />
       </div>
     </template>
 

@@ -14,7 +14,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 
 // -OR-
 
-// solstice bootstrap theme (local development for solstice-theme)
+// solstice bootstrap theme (local development for 'custom.scss' file on solstice-theme)
 import "@/assets/css/solstice.scss";
 
 // solstice-vue comps

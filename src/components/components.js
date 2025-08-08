@@ -4,7 +4,7 @@
 // import LinkButton from "./link-button.vue";
 
 import ColorMode from "./color-mode.vue";
-import Panel from "./panel.vue";
+import Panel from "./SPanel.vue";
 
 // 1.0.0
 import Sidebar from "./layout/SSidebar.vue";
@@ -22,9 +22,9 @@ import TabsPanel from "./tabs/STabsPanel.vue";
 
 // 1.0.5
 import Profile from "./profile.vue";
-import DisclosureAction from "./disclosure/action.vue";
-import DisclosurePanel from "./disclosure/panel.vue";
-import DisclosureBlock from "./disclosure/block.vue";
+import DisclosureAction from "./disclosure/SDisclosureAction.vue";
+import DisclosurePanel from "./disclosure/SDisclosurePanel.vue";
+import DisclosureBlock from "./disclosure/SDisclosureBlock.vue";
 
 // 1.1.0
 import Link from "@/components/link.vue";

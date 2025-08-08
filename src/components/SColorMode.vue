@@ -2,7 +2,8 @@
   <div class="d-flex align-items-center">
     <div>
       <button
-        class="btn btn-link text-white dropdown-toggle p-1"
+        class="btn btn-link dropdown-toggle p-1"
+        :class="colorClass"
         type="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
@@ -51,6 +52,12 @@
 import { useColorMode } from "@vueuse/core";
 
 export default {
+  props: {
+    colorClass: {
+      type: String,
+      default: 'text-body'
+    }
+  },
   // composition in options api requires setup()
   setup() {
     const colorMode = useColorMode({

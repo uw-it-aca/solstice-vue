@@ -51,7 +51,7 @@
       <h2 class="fw-bold">Foundations</h2>
       <h3>Layout</h3>
       <ul>
-         <li>
+        <li>
           <RouterLink to="/topbar-neo">Topbar (Neo)</RouterLink>
         </li>
         <li>
@@ -1835,7 +1835,7 @@
               aria-describedby="button-addon2"
             />
             <button
-              class="btn btn-subdued-primary link-underline link-underline-opacity-0 border border-secondary"
+              class="btn btn-subdued-primary border border-secondary"
               type="button"
               id="button-addon2"
             >
@@ -1896,7 +1896,7 @@
               aria-describedby="button-addon2"
             />
             <button
-              class="btn btn-subdued-primary link-underline link-underline-opacity-0 border border-secondary"
+              class="btn btn-subdued-primary border border-secondary"
               type="button"
               id="button-addon2"
             >
@@ -2470,12 +2470,12 @@
             <a href="#" class="link-primary">link-primary</a> consectetur
             adipiscing elit.
           </li>
-          <li class="bg-husky-purple p-2 text-light mb-2">
+          <li class="bg-husky-purple p-2 text-white mb-2">
             Lorem ipsum dolor sit amet,
             <a href="#" class="link-light">link-light</a> consectetur adipiscing
             elit.
           </li>
-          <li class="bg-body-tertiary p-2">
+          <li class="bg-spirit-gold text-black p-2">
             Lorem ipsum dolor sit amet,
             <a href="#" class="link-dark">link-dark</a> consectetur adipiscing
             elit.
@@ -2484,19 +2484,19 @@
 
         <ul class="g-col-6 list-unstyled">
           <li class="border p-2 mb-2">
-            Lorem ipsum dolor sit amet,
-            <a href="#" class="link-quiet-primary">link-quiet-primary</a>
-            consectetur adipiscing elit.
+            <a href="#" class="link-quiet-primary"
+              ><i class="bi bi-emoji-smile"></i> link-quiet-primary</a
+            >
           </li>
           <li class="bg-husky-purple p-2 text-light mb-2">
-            Lorem ipsum dolor sit amet,
-            <a href="#" class="link-quiet-light">link-quiet-light</a>
-            consectetur adipiscing elit.
+            <a href="#" class="link-quiet-light"
+              ><i class="bi bi-emoji-smile"></i> link-quiet-light</a
+            >
           </li>
-          <li class="bg-body-tertiary p-2">
-            Lorem ipsum dolor sit amet,
-            <a href="#" class="link-quiet-dark">link-quiet-dark</a> consectetur
-            adipiscing elit.
+          <li class="bg-spirit-gold text-dark p-2">
+            <a href="#" class="link-quiet-dark"
+              ><i class="bi bi-emoji-smile"></i> link-quiet-dark</a
+            >
           </li>
         </ul>
       </div>
@@ -2506,7 +2506,7 @@
 
       <div class="grid mb-5">
         <div class="g-col-6">
-          <h4>Normal</h4>
+          <h3>Normal</h3>
           <table class="table">
             <thead>
               <tr>
@@ -2545,7 +2545,7 @@
           </table>
         </div>
         <div class="g-col-6">
-          <h4>Striped</h4>
+          <h3>Striped</h3>
           <table class="table table-striped">
             <thead class="table-body-secondary">
               <tr>
@@ -3236,8 +3236,8 @@
 
       <p class="fw-bold">text-xxxxx-hover</p>
       <ul class="fs-5">
-        <li class="text-husky-purple text-husky-gold-hover">Hello world..</li>
-        <li class="text-danger text-spirit-gold-hover">Hello world..</li>
+        <li class="text-body text-husky-gold-hover">Hello world..</li>
+        <li class="text-body text-spirit-gold-hover">Hello world..</li>
       </ul>
 
       <p class="fw-bold">text-opacity-x-hover</p>

@@ -1866,6 +1866,29 @@
               <li><a class="dropdown-item" href="#">Separated link</a></li>
             </ul>
           </div>
+
+          <div class="input-group mb-3">
+            <SCountryCode @update:calling-code="callingCode = $event" />
+            <input
+              type="hidden"
+              name="emergencyCallingCode1"
+              :value="'+' + callingCode"
+            />
+            <span class="input-group-text border border-secondary"
+              >+{{ callingCode }}</span
+            >
+            <input
+              type="text"
+              class="form-control phone-input flex-shrink-1"
+              style="outline: none"
+              pattern="[0-9]+"
+              required
+              minlength="10"
+              maxlength="10"
+              title="Enter a valid mobile number"
+            />
+          </div>
+          <input type="hidden" class="country-code-input" />
         </div>
         <div class="g-col-6">
           <div class="input-group input-group-sm mb-3">
@@ -1926,6 +1949,29 @@
               <li><hr class="dropdown-divider" /></li>
               <li><a class="dropdown-item" href="#">Separated link</a></li>
             </ul>
+          </div>
+
+          <div class="input-group input-group-sm mb-3">
+            <button
+              class="btn btn-subdued-primary border border-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Country Code
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+            <input
+              type="text"
+              class="form-control"
+              aria-label="Text input with dropdown button"
+            />
           </div>
         </div>
       </div>
@@ -2034,58 +2080,47 @@
               class="dropdown-menu p-2 w-100"
               aria-labelledby="dropdownMenuButton1"
             >
-              <div>
-                <div
-                  class="form-check bg-subdued-primary-hover text-black-hover rounded-1"
-                >
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault1"
-                    style="margin-left: -1.25em !important"
-                  />
-                  <label
-                    class="form-check-label d-block"
-                    for="flexCheckDefault1"
-                  >
-                    Checkbox 1
-                  </label>
-                </div>
-                <div
-                  class="form-check bg-subdued-primary-hover text-black-hover rounded-1"
-                >
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault2"
-                    style="margin-left: -1.25em !important"
-                  />
-                  <label
-                    class="form-check-label d-block"
-                    for="flexCheckDefault2"
-                  >
-                    Checkbox 2
-                  </label>
-                </div>
-                <div
-                  class="form-check bg-subdued-primary-hover text-black-hover rounded-1"
-                >
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault3"
-                    style="margin-left: -1.25em !important"
-                  />
-                  <label
-                    class="form-check-label d-block"
-                    for="flexCheckDefault3"
-                  >
-                    Checkbox 3
-                  </label>
-                </div>
+              <div
+                class="form-check bg-subdued-primary-hover text-black-hover rounded-1"
+              >
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault1"
+                  style="margin-left: -1.25em !important"
+                />
+                <label class="form-check-label d-block" for="flexCheckDefault1">
+                  Checkbox 1
+                </label>
+              </div>
+              <div
+                class="form-check bg-subdued-primary-hover text-black-hover rounded-1"
+              >
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault2"
+                  style="margin-left: -1.25em !important"
+                />
+                <label class="form-check-label d-block" for="flexCheckDefault2">
+                  Checkbox 2
+                </label>
+              </div>
+              <div
+                class="form-check bg-subdued-primary-hover text-black-hover rounded-1"
+              >
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault3"
+                  style="margin-left: -1.25em !important"
+                />
+                <label class="form-check-label d-block" for="flexCheckDefault3">
+                  Checkbox 3
+                </label>
               </div>
             </div>
           </div>
@@ -3283,6 +3318,9 @@ import STabsList from "@/components/tabs/STabsList.vue";
 import STabsItem from "@/components/tabs/STabsItem.vue";
 import STabsDisplay from "@/components/tabs/STabsDisplay.vue";
 import STabsPanel from "@/components/tabs/STabsPanel.vue";
+
+import SCountryCode from "@/components/SCountryCode.vue";
+
 import { BBadge, BButton, BCard, BModal } from "bootstrap-vue-next";
 
 export default {
@@ -3293,6 +3331,7 @@ export default {
     STabsItem,
     STabsDisplay,
     STabsPanel,
+    SCountryCode,
     BBadge,
     BButton,
     BCard,
@@ -3303,6 +3342,7 @@ export default {
       pageTitle: "Getting started",
       colorMode: "light",
       modal: false,
+      callingCode: "1", // default to US
     };
   },
   updated() {

@@ -36,6 +36,8 @@
     "bootstrap": "^5.3.7",
     "bootstrap-icons": "^1.13.1",
     "bootstrap-vue-next": "^0.30.4",
+    "country-codes-list": "^2.0.0",
+    "country-flag-icons": "^1.5.21",
     "solstice-theme": "github:uw-it-aca/solstice-theme#develop",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1",

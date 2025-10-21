@@ -39,9 +39,7 @@
         <p class=""><a :href="profileUrl">go to profile</a></p>
 
         <div>
-          <slot v-if="signoutUrl"
-            ><a :href="signoutUrl">Sign out</a></slot
-          >
+          <slot v-if="signoutUrl"><a :href="signoutUrl">Sign out</a></slot>
           <slot v-else><a href="sadkf">sign out test</a></slot>
         </div>
       </div>

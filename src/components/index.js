@@ -17,6 +17,7 @@ import STopbar from "./layout/STopbar.vue";
 import STopbarNeo from "./layout/STopbarNeo.vue";
 import SProfile from "./SProfile.vue";
 import SColorMode from "./SColorMode.vue";
+import SCountryCode from "./SCountryCode.vue";
 
 export {
   // CardProperty,
@@ -40,4 +41,5 @@ export {
   STopbarNeo,
   SColorMode,
   SProfile,
+  SCountryCode,
 };

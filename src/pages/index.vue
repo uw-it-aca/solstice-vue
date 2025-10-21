@@ -1808,7 +1808,7 @@
       <div class="grid mb-5">
         <div class="g-col-6">
           <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">@</span>
+            <span id="basic-addon1" class="input-group-text">@</span>
             <input
               type="text"
               class="form-control"
@@ -1835,9 +1835,9 @@
               aria-describedby="button-addon2"
             />
             <button
+              id="button-addon2"
               class="btn btn-subdued-primary border border-secondary"
               type="button"
-              id="button-addon2"
             >
               Button
             </button>
@@ -1865,11 +1865,43 @@
               <li><hr class="dropdown-divider" /></li>
               <li><a class="dropdown-item" href="#">Separated link</a></li>
             </ul>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputPassword5" class="form-label">Phone Number</label>
+            <div class="input-group">
+              <SCountryCode
+                @update:calling-code="emergencyCallingCode1 = $event"
+              />
+              <input
+                type="hidden"
+                name="emergencyCallingCode1"
+                :value="'+' + emergencyCallingCode1"
+              />
+              <span class="input-group-text border border-secondary"
+                >+{{ emergencyCallingCode1 }}</span
+              >
+              <input
+                type="text"
+                class="form-control phone-input flex-shrink-1"
+                style="outline: none"
+                pattern="[0-9]+"
+                required
+                minlength="10"
+                maxlength="12"
+                title="Enter a valid mobile number"
+              />
+            </div>
+            <input type="hidden" class="country-code-input" />
+            <div id="passwordHelpBlock" class="form-text">
+              Your area code and phone number must be 10-12 characters. Example
+              format: xxx-xxx-xxxx
+            </div>
           </div>
         </div>
         <div class="g-col-6">
           <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="basic-addon1">@</span>
+            <span id="basic-addon1" class="input-group-text">@</span>
             <input
               type="text"
               class="form-control"
@@ -1896,9 +1928,9 @@
               aria-describedby="button-addon2"
             />
             <button
+              id="button-addon2"
               class="btn btn-subdued-primary border border-secondary"
               type="button"
-              id="button-addon2"
             >
               Button
             </button>
@@ -1926,6 +1958,38 @@
               <li><hr class="dropdown-divider" /></li>
               <li><a class="dropdown-item" href="#">Separated link</a></li>
             </ul>
+          </div>
+
+          <div class="mb-3">
+            <label for="inputPassword5" class="form-label">Phone Number</label>
+            <div class="input-group input-group-sm">
+              <SCountryCode
+                @update:calling-code="emergencyCallingCode2 = $event"
+              />
+              <input
+                type="hidden"
+                name="emergencyCallingCode2"
+                :value="'+' + emergencyCallingCode2"
+              />
+              <span class="input-group-text border border-secondary"
+                >+{{ emergencyCallingCode2 }}</span
+              >
+              <input
+                type="text"
+                class="form-control phone-input flex-shrink-1"
+                style="outline: none"
+                pattern="[0-9]+"
+                required
+                minlength="10"
+                maxlength="12"
+                title="Enter a valid mobile number"
+              />
+            </div>
+            <input type="hidden" class="country-code-input" />
+            <div id="passwordHelpBlock" class="form-text">
+              Your area code and phone number must be 10-12 characters. Example
+              format: xxx-xxx-xxxx
+            </div>
           </div>
         </div>
       </div>
@@ -1934,10 +1998,10 @@
       <div class="mb-5">
         <div class="form-check">
           <input
+            id="flexCheckDefault"
             class="form-check-input"
             type="checkbox"
             value=""
-            id="flexCheckDefault"
           />
           <label class="form-check-label" for="flexCheckDefault">
             Default checkbox
@@ -1945,10 +2009,10 @@
         </div>
         <div class="form-check">
           <input
+            id="flexCheckChecked"
             class="form-check-input"
             type="checkbox"
             value=""
-            id="flexCheckChecked"
             checked
           />
           <label class="form-check-label" for="flexCheckChecked">
@@ -1957,10 +2021,10 @@
         </div>
         <div class="form-check">
           <input
+            id="flexRadioDefault1"
             class="form-check-input"
             type="radio"
             name="flexRadioDefault"
-            id="flexRadioDefault1"
           />
           <label class="form-check-label" for="flexRadioDefault1">
             Default radio
@@ -1968,10 +2032,10 @@
         </div>
         <div class="form-check">
           <input
+            id="flexRadioDefault2"
             class="form-check-input"
             type="radio"
             name="flexRadioDefault"
-            id="flexRadioDefault2"
             checked
           />
           <label class="form-check-label" for="flexRadioDefault2">
@@ -2022,9 +2086,9 @@
           </p>
           <div class="dropdown">
             <input
+              id="dropdownMenuButton1"
               class="form-select text-start"
               type="button"
-              id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
               data-bs-auto-close="outside"
               aria-expanded="false"
@@ -2034,58 +2098,47 @@
               class="dropdown-menu p-2 w-100"
               aria-labelledby="dropdownMenuButton1"
             >
-              <div>
-                <div
-                  class="form-check bg-subdued-primary-hover text-black-hover rounded-1"
-                >
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault1"
-                    style="margin-left: -1.25em !important"
-                  />
-                  <label
-                    class="form-check-label d-block"
-                    for="flexCheckDefault1"
-                  >
-                    Checkbox 1
-                  </label>
-                </div>
-                <div
-                  class="form-check bg-subdued-primary-hover text-black-hover rounded-1"
-                >
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault2"
-                    style="margin-left: -1.25em !important"
-                  />
-                  <label
-                    class="form-check-label d-block"
-                    for="flexCheckDefault2"
-                  >
-                    Checkbox 2
-                  </label>
-                </div>
-                <div
-                  class="form-check bg-subdued-primary-hover text-black-hover rounded-1"
-                >
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault3"
-                    style="margin-left: -1.25em !important"
-                  />
-                  <label
-                    class="form-check-label d-block"
-                    for="flexCheckDefault3"
-                  >
-                    Checkbox 3
-                  </label>
-                </div>
+              <div
+                class="form-check bg-subdued-primary-hover text-black-hover rounded-1"
+              >
+                <input
+                  id="flexCheckDefault1"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  style="margin-left: -1.25em !important"
+                />
+                <label class="form-check-label d-block" for="flexCheckDefault1">
+                  Checkbox 1
+                </label>
+              </div>
+              <div
+                class="form-check bg-subdued-primary-hover text-black-hover rounded-1"
+              >
+                <input
+                  id="flexCheckDefault2"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  style="margin-left: -1.25em !important"
+                />
+                <label class="form-check-label d-block" for="flexCheckDefault2">
+                  Checkbox 2
+                </label>
+              </div>
+              <div
+                class="form-check bg-subdued-primary-hover text-black-hover rounded-1"
+              >
+                <input
+                  id="flexCheckDefault3"
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  style="margin-left: -1.25em !important"
+                />
+                <label class="form-check-label d-block" for="flexCheckDefault3">
+                  Checkbox 3
+                </label>
               </div>
             </div>
           </div>
@@ -2098,8 +2151,8 @@
           >Example textarea</label
         >
         <textarea
-          class="form-control"
           id="exampleFormControlTextarea1"
+          class="form-control"
           rows="3"
         ></textarea>
       </div>
@@ -3283,6 +3336,9 @@ import STabsList from "@/components/tabs/STabsList.vue";
 import STabsItem from "@/components/tabs/STabsItem.vue";
 import STabsDisplay from "@/components/tabs/STabsDisplay.vue";
 import STabsPanel from "@/components/tabs/STabsPanel.vue";
+
+import SCountryCode from "@/components/SCountryCode.vue";
+
 import { BBadge, BButton, BCard, BModal } from "bootstrap-vue-next";
 
 export default {
@@ -3293,6 +3349,7 @@ export default {
     STabsItem,
     STabsDisplay,
     STabsPanel,
+    SCountryCode,
     BBadge,
     BButton,
     BCard,
@@ -3303,6 +3360,8 @@ export default {
       pageTitle: "Getting started",
       colorMode: "light",
       modal: false,
+      emergencyCallingCode1: "1", // default to US
+      emergencyCallingCode2: "1", // default to US
     };
   },
   updated() {

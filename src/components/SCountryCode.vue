@@ -33,7 +33,8 @@
         class="dropdown-item"
         @click="selectCountry(country)"
       >
-        {{ flag(country.code) }} {{ country.name }} <span class="text-secondary">+{{ country.callingCode }}</span>
+        {{ flag(country.code) }} {{ country.name }}
+        <span class="text-secondary">+{{ country.callingCode }}</span>
       </button>
     </li>
   </ul>

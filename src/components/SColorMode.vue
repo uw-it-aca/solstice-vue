@@ -55,8 +55,8 @@ export default {
   props: {
     colorClass: {
       type: String,
-      default: 'text-body'
-    }
+      default: "text-body",
+    },
   },
   // composition in options api requires setup()
   setup() {

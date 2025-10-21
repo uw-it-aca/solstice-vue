@@ -1808,7 +1808,7 @@
       <div class="grid mb-5">
         <div class="g-col-6">
           <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">@</span>
+            <span id="basic-addon1" class="input-group-text">@</span>
             <input
               type="text"
               class="form-control"
@@ -1835,9 +1835,9 @@
               aria-describedby="button-addon2"
             />
             <button
+              id="button-addon2"
               class="btn btn-subdued-primary border border-secondary"
               type="button"
-              id="button-addon2"
             >
               Button
             </button>
@@ -1870,7 +1870,9 @@
           <div class="mb-3">
             <label for="inputPassword5" class="form-label">Phone Number</label>
             <div class="input-group">
-              <SCountryCode @update:calling-code="emergencyCallingCode1 = $event" />
+              <SCountryCode
+                @update:calling-code="emergencyCallingCode1 = $event"
+              />
               <input
                 type="hidden"
                 name="emergencyCallingCode1"
@@ -1899,7 +1901,7 @@
         </div>
         <div class="g-col-6">
           <div class="input-group input-group-sm mb-3">
-            <span class="input-group-text" id="basic-addon1">@</span>
+            <span id="basic-addon1" class="input-group-text">@</span>
             <input
               type="text"
               class="form-control"
@@ -1926,9 +1928,9 @@
               aria-describedby="button-addon2"
             />
             <button
+              id="button-addon2"
               class="btn btn-subdued-primary border border-secondary"
               type="button"
-              id="button-addon2"
             >
               Button
             </button>
@@ -1958,10 +1960,12 @@
             </ul>
           </div>
 
-           <div class="mb-3">
+          <div class="mb-3">
             <label for="inputPassword5" class="form-label">Phone Number</label>
             <div class="input-group input-group-sm">
-              <SCountryCode @update:calling-code="emergencyCallingCode2 = $event" />
+              <SCountryCode
+                @update:calling-code="emergencyCallingCode2 = $event"
+              />
               <input
                 type="hidden"
                 name="emergencyCallingCode2"
@@ -1994,10 +1998,10 @@
       <div class="mb-5">
         <div class="form-check">
           <input
+            id="flexCheckDefault"
             class="form-check-input"
             type="checkbox"
             value=""
-            id="flexCheckDefault"
           />
           <label class="form-check-label" for="flexCheckDefault">
             Default checkbox
@@ -2005,10 +2009,10 @@
         </div>
         <div class="form-check">
           <input
+            id="flexCheckChecked"
             class="form-check-input"
             type="checkbox"
             value=""
-            id="flexCheckChecked"
             checked
           />
           <label class="form-check-label" for="flexCheckChecked">
@@ -2017,10 +2021,10 @@
         </div>
         <div class="form-check">
           <input
+            id="flexRadioDefault1"
             class="form-check-input"
             type="radio"
             name="flexRadioDefault"
-            id="flexRadioDefault1"
           />
           <label class="form-check-label" for="flexRadioDefault1">
             Default radio
@@ -2028,10 +2032,10 @@
         </div>
         <div class="form-check">
           <input
+            id="flexRadioDefault2"
             class="form-check-input"
             type="radio"
             name="flexRadioDefault"
-            id="flexRadioDefault2"
             checked
           />
           <label class="form-check-label" for="flexRadioDefault2">
@@ -2082,9 +2086,9 @@
           </p>
           <div class="dropdown">
             <input
+              id="dropdownMenuButton1"
               class="form-select text-start"
               type="button"
-              id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
               data-bs-auto-close="outside"
               aria-expanded="false"
@@ -2098,10 +2102,10 @@
                 class="form-check bg-subdued-primary-hover text-black-hover rounded-1"
               >
                 <input
+                  id="flexCheckDefault1"
                   class="form-check-input"
                   type="checkbox"
                   value=""
-                  id="flexCheckDefault1"
                   style="margin-left: -1.25em !important"
                 />
                 <label class="form-check-label d-block" for="flexCheckDefault1">
@@ -2112,10 +2116,10 @@
                 class="form-check bg-subdued-primary-hover text-black-hover rounded-1"
               >
                 <input
+                  id="flexCheckDefault2"
                   class="form-check-input"
                   type="checkbox"
                   value=""
-                  id="flexCheckDefault2"
                   style="margin-left: -1.25em !important"
                 />
                 <label class="form-check-label d-block" for="flexCheckDefault2">
@@ -2126,10 +2130,10 @@
                 class="form-check bg-subdued-primary-hover text-black-hover rounded-1"
               >
                 <input
+                  id="flexCheckDefault3"
                   class="form-check-input"
                   type="checkbox"
                   value=""
-                  id="flexCheckDefault3"
                   style="margin-left: -1.25em !important"
                 />
                 <label class="form-check-label d-block" for="flexCheckDefault3">
@@ -2147,8 +2151,8 @@
           >Example textarea</label
         >
         <textarea
-          class="form-control"
           id="exampleFormControlTextarea1"
+          class="form-control"
           rows="3"
         ></textarea>
       </div>

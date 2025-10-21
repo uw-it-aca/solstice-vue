@@ -1894,8 +1894,8 @@
             </div>
             <input type="hidden" class="country-code-input" />
             <div id="passwordHelpBlock" class="form-text">
-              Your phone number must be 10-12 characters. Example format:
-              xxx-xxx-xxxx
+              Your area code and phone number must be 10-12 characters. Example
+              format: xxx-xxx-xxxx
             </div>
           </div>
         </div>
@@ -1987,8 +1987,8 @@
             </div>
             <input type="hidden" class="country-code-input" />
             <div id="passwordHelpBlock" class="form-text">
-              Your phone number must be 10-12 characters. Example format:
-              xxx-xxx-xxxx
+              Your area code and phone number must be 10-12 characters. Example
+              format: xxx-xxx-xxxx
             </div>
           </div>
         </div>

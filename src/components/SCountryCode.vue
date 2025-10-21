@@ -6,9 +6,7 @@
     data-bs-toggle="dropdown"
     aria-expanded="false"
   >
-    <span class="me-1"
-      ><span class="me-1">{{ flag(selectedCountry.code) }}</span></span
-    >
+    <span class="me-1">{{ flag(selectedCountry.code) }}</span>
   </button>
 
   <ul class="dropdown-menu" aria-labelledby="countryDropdownMenuButton">

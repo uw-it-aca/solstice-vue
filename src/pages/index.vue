@@ -1867,6 +1867,7 @@
             </ul>
           </div>
 
+          <label for="inputPassword5" class="form-label">Phone Number</label>
           <div class="input-group mb-3">
             <SCountryCode @update:calling-code="callingCode = $event" />
             <input
@@ -1884,11 +1885,15 @@
               pattern="[0-9]+"
               required
               minlength="10"
-              maxlength="10"
+              maxlength="12"
               title="Enter a valid mobile number"
             />
           </div>
           <input type="hidden" class="country-code-input" />
+          <div id="passwordHelpBlock" class="form-text">
+            Your phone number must be 10-12 characters. Example format:
+            xxx-xxx-xxxx
+          </div>
         </div>
         <div class="g-col-6">
           <div class="input-group input-group-sm mb-3">

@@ -1867,32 +1867,34 @@
             </ul>
           </div>
 
-          <label for="inputPassword5" class="form-label">Phone Number</label>
-          <div class="input-group">
-            <SCountryCode @update:calling-code="callingCode = $event" />
-            <input
-              type="hidden"
-              name="emergencyCallingCode1"
-              :value="'+' + callingCode"
-            />
-            <span class="input-group-text border border-secondary"
-              >+{{ callingCode }}</span
-            >
-            <input
-              type="text"
-              class="form-control phone-input flex-shrink-1"
-              style="outline: none"
-              pattern="[0-9]+"
-              required
-              minlength="10"
-              maxlength="12"
-              title="Enter a valid mobile number"
-            />
-          </div>
-          <input type="hidden" class="country-code-input" />
-          <div id="passwordHelpBlock" class="form-text">
-            Your phone number must be 10-12 characters. Example format:
-            xxx-xxx-xxxx
+          <div class="mb-3">
+            <label for="inputPassword5" class="form-label">Phone Number</label>
+            <div class="input-group">
+              <SCountryCode @update:calling-code="emergencyCallingCode1 = $event" />
+              <input
+                type="hidden"
+                name="emergencyCallingCode1"
+                :value="'+' + emergencyCallingCode1"
+              />
+              <span class="input-group-text border border-secondary"
+                >+{{ emergencyCallingCode1 }}</span
+              >
+              <input
+                type="text"
+                class="form-control phone-input flex-shrink-1"
+                style="outline: none"
+                pattern="[0-9]+"
+                required
+                minlength="10"
+                maxlength="12"
+                title="Enter a valid mobile number"
+              />
+            </div>
+            <input type="hidden" class="country-code-input" />
+            <div id="passwordHelpBlock" class="form-text">
+              Your phone number must be 10-12 characters. Example format:
+              xxx-xxx-xxxx
+            </div>
           </div>
         </div>
         <div class="g-col-6">
@@ -1956,27 +1958,34 @@
             </ul>
           </div>
 
-          <div class="input-group input-group-sm mb-3">
-            <button
-              class="btn btn-subdued-primary border border-secondary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Country Code
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
-            </ul>
-            <input
-              type="text"
-              class="form-control"
-              aria-label="Text input with dropdown button"
-            />
+           <div class="mb-3">
+            <label for="inputPassword5" class="form-label">Phone Number</label>
+            <div class="input-group input-group-sm">
+              <SCountryCode @update:calling-code="emergencyCallingCode2 = $event" />
+              <input
+                type="hidden"
+                name="emergencyCallingCode2"
+                :value="'+' + emergencyCallingCode2"
+              />
+              <span class="input-group-text border border-secondary"
+                >+{{ emergencyCallingCode2 }}</span
+              >
+              <input
+                type="text"
+                class="form-control phone-input flex-shrink-1"
+                style="outline: none"
+                pattern="[0-9]+"
+                required
+                minlength="10"
+                maxlength="12"
+                title="Enter a valid mobile number"
+              />
+            </div>
+            <input type="hidden" class="country-code-input" />
+            <div id="passwordHelpBlock" class="form-text">
+              Your phone number must be 10-12 characters. Example format:
+              xxx-xxx-xxxx
+            </div>
           </div>
         </div>
       </div>
@@ -3347,7 +3356,8 @@ export default {
       pageTitle: "Getting started",
       colorMode: "light",
       modal: false,
-      callingCode: "1", // default to US
+      emergencyCallingCode1: "1", // default to US
+      emergencyCallingCode2: "1", // default to US
     };
   },
   updated() {

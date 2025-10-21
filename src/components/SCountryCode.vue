@@ -33,7 +33,7 @@
         class="dropdown-item"
         @click="selectCountry(country)"
       >
-        {{ flag(country.code) }} {{ country.name }} (+{{ country.callingCode }})
+        {{ flag(country.code) }} {{ country.name }} <span class="text-secondary">+{{ country.callingCode }}</span>
       </button>
     </li>
   </ul>
@@ -62,9 +62,11 @@ export default {
       "{countryNameEn}|{countryCallingCode}"
     );
 
+    // format country calling codes
     this.countries = Object.entries(countryList)
       .map(([code, value]) => {
-        const [name, callingCode] = value.split("|");
+        const [name, callingCodeRaw] = value.split("|");
+        const callingCode = callingCodeRaw.split(" ")[0]; // Keep only the first part before any space
         return {
           code,
           name,

@@ -63,18 +63,28 @@ export default {
       "{countryNameEn}|{countryCallingCode}"
     );
 
-    // format country calling codes
+    // clean up incorrect data
     this.countries = Object.entries(countryList)
       .map(([code, value]) => {
         const [name, callingCodeRaw] = value.split("|");
-        const callingCode = callingCodeRaw.split(" ")[0]; // Keep only the first part before any space
+
+        let callingCode = callingCodeRaw.split(" ")[0]; // handle space-separated codes
+
+        // special case for Bonaire "5997"
+        if (callingCode === "5997") {
+          callingCode = "599";
+        } else if (/^\d{4}$/.test(callingCode)) {
+          // else, shorten all four digit codes "1234"
+          callingCode = callingCode[0]; // keep only the first digit
+        }
+
         return {
           code,
           name,
           callingCode,
         };
       })
-      .sort((a, b) => a.name.localeCompare(b.name)); // Sort alphabetically by name
+      .sort((a, b) => a.name.localeCompare(b.name)); // sort alphabetically by country name
   },
   methods: {
     flag(country) {

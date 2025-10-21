@@ -1868,7 +1868,7 @@
           </div>
 
           <label for="inputPassword5" class="form-label">Phone Number</label>
-          <div class="input-group mb-3">
+          <div class="input-group">
             <SCountryCode @update:calling-code="callingCode = $event" />
             <input
               type="hidden"

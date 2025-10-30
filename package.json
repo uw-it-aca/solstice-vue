@@ -12,6 +12,7 @@
     "package.json",
     "README.md"
   ],
+  "types": "./components.d.ts",
   "exports": {
     ".": {
       "import": "./dist/solstice-vue.js",
@@ -62,7 +63,6 @@
     "unplugin-vue-components": "^30.0.0",
     "unplugin-vue-router": "^0.16.0",
     "vite": "^7.1.12",
-    "vite-plugin-dts": "^4.5.4",
     "vitest": "^3.2.4"
   }
 }

@@ -4,6 +4,7 @@ import VueRouter from "unplugin-vue-router/vite";
 import Components from "unplugin-vue-components/vite";
 import { BootstrapVueNextResolver } from "bootstrap-vue-next";
 import Vue from "@vitejs/plugin-vue";
+import dts from "vite-plugin-dts";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,6 +15,7 @@ export default defineConfig({
     Components({
       resolvers: [BootstrapVueNextResolver()],
     }),
+    dts({}),
   ],
   resolve: {
     alias: {

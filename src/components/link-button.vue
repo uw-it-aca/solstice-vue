@@ -5,10 +5,10 @@
 </template>
 
 <script>
-export default {
-  name: "axdd-link-buttom",
-  data: function () {
-    return {};
-  },
-};
+  export default {
+    name: "axdd-link-buttom",
+    data() {
+      return {};
+    },
+  };
 </script>

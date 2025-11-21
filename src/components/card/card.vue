@@ -26,10 +26,10 @@
 </template>
 
 <script>
-export default {
-  name: "axdd-card",
-  data: function () {
-    return {};
-  },
-};
+  export default {
+    name: "axdd-card",
+    data() {
+      return {};
+    },
+  };
 </script>

@@ -36,11 +36,17 @@
         <p class="">
           {{ userOfficialName }}, {{ userPreferredName }}, {{ userPronouns }}
         </p>
-        <p class=""><a :href="profileUrl">go to profile</a></p>
+        <p class="">
+          <a :href="profileUrl">go to profile</a>
+        </p>
 
         <div>
-          <slot v-if="signoutUrl"><a :href="signoutUrl">Sign out</a></slot>
-          <slot v-else><a href="sadkf">sign out test</a></slot>
+          <slot v-if="signoutUrl">
+            <a :href="signoutUrl">Sign out</a>
+          </slot>
+          <slot v-else>
+            <a href="sadkf">sign out test</a>
+          </slot>
         </div>
       </div>
     </div>
@@ -48,52 +54,55 @@
   <div v-else class="d-flex align-items-center text-nowrap">
     <div v-if="userOverride" class="flex-fill text-white">
       <span class="me-1">{{ userNetid }}</span>
-      <i class="bi bi-arrow-right text-danger"></i> {{ userOverride }}
+      <i class="bi bi-arrow-right text-danger"></i>
+      {{ userOverride }}
     </div>
     <div v-else class="flex-fill text-white">{{ userNetid }}</div>
 
     <div class="flex-fill text-end ms-2">
-      <slot v-if="signoutUrl"
-        ><a :href="signoutUrl" class="text-white">Sign out</a></slot
-      >
-      <slot v-else><a href="sadkf">sign out test</a></slot>
+      <slot v-if="signoutUrl">
+        <a :href="signoutUrl" class="text-white">Sign out</a>
+      </slot>
+      <slot v-else>
+        <a href="sadkf">sign out test</a>
+      </slot>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  props: {
-    variant: {
-      type: String,
-      default: "standard",
+  export default {
+    props: {
+      variant: {
+        type: String,
+        default: "standard",
+      },
+      userNetid: {
+        type: String,
+        required: true,
+      },
+      userOverride: {
+        type: String,
+        required: false,
+      },
+      userOfficialName: {
+        type: String,
+      },
+      userPreferredName: {
+        type: String,
+      },
+      userPronouns: {
+        type: String,
+      },
+      signoutUrl: {
+        type: String,
+      },
+      profileUrl: {
+        type: String,
+      },
     },
-    userNetid: {
-      type: String,
-      required: true,
+    data() {
+      return {};
     },
-    userOverride: {
-      type: String,
-      required: false,
-    },
-    userOfficialName: {
-      type: String,
-    },
-    userPreferredName: {
-      type: String,
-    },
-    userPronouns: {
-      type: String,
-    },
-    signoutUrl: {
-      type: String,
-    },
-    profileUrl: {
-      type: String,
-    },
-  },
-  data: function () {
-    return {};
-  },
-};
+  };
 </script>

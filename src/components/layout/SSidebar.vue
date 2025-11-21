@@ -43,7 +43,8 @@
             <router-link
               :to="appRootUrl"
               class="ff-encode-sans text-decoration-none text-light"
-              >{{ appName }}
+            >
+              {{ appName }}
             </router-link>
           </div>
         </div>
@@ -105,7 +106,7 @@
                 </li>
               </ul>
               <div>
-                Copyright &copy; {{ new Date().getFullYear() }} University of
+                Copyright &copy; {{ new Date().getFullYear() }}University of
                 Washington
               </div>
             </div>
@@ -117,68 +118,68 @@
 </template>
 
 <script>
-export default {
-  inject: ["mq"],
-  props: {
-    appName: {
-      type: String,
-      default: "appName",
+  export default {
+    inject: ["mq"],
+    props: {
+      appName: {
+        type: String,
+        default: "appName",
+      },
+      pageTitle: {
+        type: String,
+        default: "pageTitle",
+      },
+      userName: {
+        type: String,
+        default: "userName",
+      },
+      appRootUrl: {
+        type: String,
+        default: "#",
+      },
+      sidebarClass: {
+        type: String,
+        default: "bg-brand",
+      },
+      signOutUrl: {
+        type: String,
+        default: "#",
+      },
+      // used for documentation site
+      isPreview: {
+        type: Boolean,
+        default: false,
+      },
     },
-    pageTitle: {
-      type: String,
-      default: "pageTitle",
+    created() {
+      // constructs page title in the following format "Page Title - AppName"
+      //document.title = this.pageTitle + " - " + this.appName;
     },
-    userName: {
-      type: String,
-      default: "userName",
-    },
-    appRootUrl: {
-      type: String,
-      default: "#",
-    },
-    sidebarClass: {
-      type: String,
-      default: "bg-brand",
-    },
-    signOutUrl: {
-      type: String,
-      default: "#",
-    },
-    // used for documentation site
-    isPreview: {
-      type: Boolean,
-      default: false,
-    },
-  },
-  created: function () {
-    // constructs page title in the following format "Page Title - AppName"
-    //document.title = this.pageTitle + " - " + this.appName;
-  },
-};
+  };
 </script>
 
-<style lang="scss">
-.sol-sidebar-brand-sm {
-  line-height: 75px;
-}
+<style lang="css">
+  .sol-sidebar-brand-sm {
+    line-height: 75px;
+  }
 
-.sol-sidebar-brand {
-  line-height: 105px;
-}
+  .sol-sidebar-brand {
+    line-height: 105px;
+  }
 
-.sol-sidebar-logo {
-  background-image: url("../../assets/images/w-logo-white.png");
-  background-repeat: no-repeat;
-  background-size: 45px;
-  background-position: right 20px bottom;
-  line-height: 30px;
-}
+  .sol-sidebar-logo {
+    background-image: url('../../assets/images/w-logo-white.png');
+    background-repeat: no-repeat;
+    background-size: 45px;
+    background-position: right 20px bottom;
+    line-height: 30px;
+  }
 
-.sol-sidebar-logo-light {
-  background-image: url("../../assets/images/w-logo-purple.png");
-  background-repeat: no-repeat;
-  background-size: 45px;
-  background-position: right 20px bottom;
-  line-height: 30px;
-}
+  .sol-sidebar-logo-light {
+    background-image: url('../../assets/images/w-logo-purple.png');
+    background-repeat: no-repeat;
+    background-size: 45px;
+    background-position: right 20px bottom;
+    line-height: 30px;
+  }
 </style>

@@ -1,0 +1,45 @@
+{
+  // ignore eslint
+  "language_servers": ["!eslint", "biome"],
+  "buffer_font_features": {
+    "calt": false
+  },
+  "lsp": {
+    "biome": {
+      "settings": {
+        "require_config_file": true
+      }
+    }
+  },
+  // ... other settings
+  "languages": {
+    "Vue.js": {
+      "formatter": {
+        "external": {
+          // use biome
+          "command": "./node_modules/.bin/biome",
+          "arguments": ["format", "--write", "--stdin-file-path={buffer_path}"]
+        }
+      },
+      "format_on_save": "off"
+      // set line length more than default 80
+      // "preferred_line_length": 100
+      // "language_servers": ["biome"]
+    },
+    "JavaScript": {
+      "formatter": { "language_server": { "name": "biome" } },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      }
+      // "language_servers": ["biome"]
+    },
+    "TypeScript": {
+      "formatter": { "language_server": { "name": "biome" } },
+      "code_actions_on_format": {
+        "source.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      }
+    }
+  }
+}

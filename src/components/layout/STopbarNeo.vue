@@ -14,7 +14,7 @@
                 alt="UW logo"
                 class="my-1"
                 style="height: 38px"
-              />
+              >
             </div>
             <!--<div
               class="d-none d-xl-block border-end border-white border-opacity-25 pe-3 me-3"
@@ -134,7 +134,7 @@
                   </li>
                 </ul>
                 <div class="text-light">
-                  Copyright &copy; {{ new Date().getFullYear() }} University of
+                  Copyright &copy; {{ new Date().getFullYear() }}University of
                   Washington
                 </div>
               </div>
@@ -147,40 +147,40 @@
 </template>
 
 <script>
-export default {
-  inject: ["mq"],
-  props: {
-    appName: {
-      type: String,
-      default: "appName",
+  export default {
+    inject: ["mq"],
+    props: {
+      appName: {
+        type: String,
+        default: "appName",
+      },
+      appDeptName: {
+        type: String,
+      },
+      appRootUrl: {
+        type: String,
+        default: "#",
+      },
+      isPreview: {
+        type: Boolean,
+        default: false,
+      },
+      privacyURL: {
+        type: String,
+        required: false,
+        default: "https://www.washington.edu/online/privacy/",
+      },
+      termsURL: {
+        type: String,
+        required: false,
+        default: "https://www.washington.edu/online/terms/",
+      },
     },
-    appDeptName: {
-      type: String,
-    },
-    appRootUrl: {
-      type: String,
-      default: "#",
-    },
-    isPreview: {
-      type: Boolean,
-      default: false,
-    },
-    privacyURL: {
-      type: String,
-      required: false,
-      default: "https://www.washington.edu/online/privacy/",
-    },
-    termsURL: {
-      type: String,
-      required: false,
-      default: "https://www.washington.edu/online/terms/",
-    },
-  },
-};
+  };
 </script>
 
-<style lang="scss">
-.sol-topbar-neo {
-  min-width: 430px;
-}
+<style lang="css">
+  .sol-topbar-neo {
+    min-width: 430px;
+  }
 </style>

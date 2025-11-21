@@ -7,13 +7,13 @@
 </template>
 
 <script>
-export default {
-  props: {
-    tabsId: {
-      // must match tab panelId
-      type: [String, Number],
-      required: true,
+  export default {
+    props: {
+      tabsId: {
+        // must match tab panelId
+        type: [String, Number],
+        required: true,
+      },
     },
-  },
-};
+  };
 </script>

@@ -5418,15 +5418,7 @@ const Zo = /* @__PURE__ */ D(Lo, [["render", bo]]), wa = "data:image/png;base64,
   src: wa,
   alt: "UW logo",
   class: "img-profile rounded-circle"
-}, Po = ["src"], Fo = { class: "mt-3" }, Go = { class: "mt-3 pt-3 border-top" }, xo = {
-  key: 0,
-  href: "/",
-  class: "link-quiet-danger"
-}, Ko = {
-  key: 1,
-  href: "sadkf",
-  class: "link-quiet-danger"
-};
+}, Po = ["src"], Fo = { class: "mt-3" }, Go = { class: "mt-3 pt-3 border-top" }, xo = ["href"], Ko = ["href"];
 function Wo(a, e, n, r, c, i) {
   return l(), t("div", {
     class: h(["d-flex align-items-center border border-white p-0 rounded-pill small", { "bg-danger-subtle border-0": n.userOverride }])
@@ -5481,20 +5473,28 @@ function Wo(a, e, n, r, c, i) {
             ], !0)
           ]),
           o("div", Go, [
-            n.userOverride ? (l(), t("a", xo, [...e[6] || (e[6] = [
+            n.userOverride ? (l(), t("a", {
+              key: 0,
+              href: n.clearOverrideUrl,
+              class: "link-quiet-danger"
+            }, [...e[6] || (e[6] = [
               o("i", { class: "bi bi-x-circle me-1" }, null, -1),
               p("Clear override", -1)
-            ])])) : (l(), t("a", Ko, [...e[7] || (e[7] = [
+            ])], 8, xo)) : (l(), t("a", {
+              key: 1,
+              href: a.signOutUrl,
+              class: "link-quiet-danger"
+            }, [...e[7] || (e[7] = [
               o("i", { class: "bi bi-x-circle me-1" }, null, -1),
               p("Sign out", -1)
-            ])]))
+            ])], 8, Ko))
           ])
         ])
       ])
     ])
   ], 2);
 }
-const _o = /* @__PURE__ */ D(To, [["render", Wo], ["__scopeId", "data-v-b812dfb3"]]);
+const _o = /* @__PURE__ */ D(To, [["render", Wo], ["__scopeId", "data-v-672d98f7"]]);
 export {
   Xo as SColorMode,
   Zo as SCountryCode,

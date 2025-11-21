@@ -77,12 +77,12 @@
 
           <div class="mt-3 pt-3 border-top">
             <template v-if="userOverride">
-              <a :href="'/'" class="link-quiet-danger"
+              <a :href="clearOverrideUrl" class="link-quiet-danger"
                 ><i class="bi bi-x-circle me-1"></i>Clear override</a
               >
             </template>
             <template v-else>
-              <a href="sadkf" class="link-quiet-danger"
+              <a :href="signOutUrl" class="link-quiet-danger"
                 ><i class="bi bi-x-circle me-1"></i>Sign out</a
               >
             </template>

@@ -11,8 +11,8 @@
           :user-netid="userNetid"
           :user-override="(userOverride = 'billy')"
           :photo-url="'https://randomuser.me/api/portraits/men/66.jpg'"
-          :signout-url="signOutUrl"
-          :clear-override-url="'/'"
+          :signout-url="'/signout'"
+          :clear-override-url="'/support'"
         >
           <template v-if="userOverride !== ''">
             i am the override in user, here is my info

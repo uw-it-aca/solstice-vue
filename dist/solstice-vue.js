@@ -5482,7 +5482,7 @@ function Wo(a, e, n, r, c, i) {
               p("Clear override", -1)
             ])], 8, xo)) : (l(), t("a", {
               key: 1,
-              href: a.signOutUrl,
+              href: n.signoutUrl,
               class: "link-quiet-danger"
             }, [...e[7] || (e[7] = [
               o("i", { class: "bi bi-x-circle me-1" }, null, -1),
@@ -5494,7 +5494,7 @@ function Wo(a, e, n, r, c, i) {
     ])
   ], 2);
 }
-const _o = /* @__PURE__ */ D(To, [["render", Wo], ["__scopeId", "data-v-672d98f7"]]);
+const _o = /* @__PURE__ */ D(To, [["render", Wo], ["__scopeId", "data-v-d616e42d"]]);
 export {
   Xo as SColorMode,
   Zo as SCountryCode,

@@ -82,7 +82,7 @@
               >
             </template>
             <template v-else>
-              <a :href="signOutUrl" class="link-quiet-danger"
+              <a :href="signoutUrl" class="link-quiet-danger"
                 ><i class="bi bi-x-circle me-1"></i>Sign out</a
               >
             </template>

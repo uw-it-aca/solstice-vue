@@ -3,9 +3,7 @@
 <template>
   <Layout :page-title="pageTitle">
     <!-- page content -->
-    <template #title>
-      {{ pageTitle }}
-    </template>
+    <template #title>{{ pageTitle }}</template>
 
     <template #description>
       <div class="p-0 col-md-8 lead">
@@ -26,8 +24,12 @@
     <template #content>
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item"><a href="#">Library</a></li>
+          <li class="breadcrumb-item">
+            <a href="#">Home</a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#">Library</a>
+          </li>
           <li class="breadcrumb-item active" aria-current="page">Data</li>
         </ol>
       </nav>
@@ -45,7 +47,9 @@
 
       <ol>
         <li>create a branch</li>
-        <li>run the <code>npm run build</code> command</li>
+        <li>
+          run the <code>npm run build</code>command
+        </li>
       </ol>
 
       <h2 class="fw-bold">Foundations</h2>
@@ -489,12 +493,12 @@
             </td>
             <td>--</td>
             <td>
-              <code class="d-inline-block" style="width: 240px"
-                >bg-husky-purple</code
-              >
-              <code class="d-inline-block" style="width: 240px"
-                >text-husky-purple</code
-              >
+              <code class="d-inline-block" style="width: 240px">
+                bg-husky-purple
+              </code>
+              <code class="d-inline-block" style="width: 240px">
+                text-husky-purple
+              </code>
             </td>
           </tr>
           <tr>
@@ -513,12 +517,12 @@
             </td>
             <td>--</td>
             <td>
-              <code class="d-inline-block" style="width: 240px"
-                >bg-spirit-purple</code
-              >
-              <code class="d-inline-block" style="width: 240px"
-                >text-spirit-purple</code
-              >
+              <code class="d-inline-block" style="width: 240px">
+                bg-spirit-purple
+              </code>
+              <code class="d-inline-block" style="width: 240px">
+                text-spirit-purple
+              </code>
             </td>
           </tr>
           <tr>
@@ -537,12 +541,12 @@
             </td>
             <td>--</td>
             <td>
-              <code class="d-inline-block" style="width: 240px"
-                >bg-heritage-gold</code
-              >
-              <code class="d-inline-block" style="width: 240px"
-                >text-heritage-gold</code
-              >
+              <code class="d-inline-block" style="width: 240px">
+                bg-heritage-gold
+              </code>
+              <code class="d-inline-block" style="width: 240px">
+                text-heritage-gold
+              </code>
             </td>
           </tr>
           <tr>
@@ -561,12 +565,12 @@
             </td>
             <td>--</td>
             <td>
-              <code class="d-inline-block" style="width: 240px"
-                >bg-husky-gold</code
-              >
-              <code class="d-inline-block" style="width: 240px"
-                >text-husky-gold</code
-              >
+              <code class="d-inline-block" style="width: 240px">
+                bg-husky-gold
+              </code>
+              <code class="d-inline-block" style="width: 240px">
+                text-husky-gold
+              </code>
             </td>
           </tr>
           <tr>
@@ -585,12 +589,12 @@
             </td>
             <td>--</td>
             <td>
-              <code class="d-inline-block" style="width: 240px"
-                >bg-spirit-gold</code
-              >
-              <code class="d-inline-block" style="width: 240px"
-                >text-spirit-gold</code
-              >
+              <code class="d-inline-block" style="width: 240px">
+                bg-spirit-gold
+              </code>
+              <code class="d-inline-block" style="width: 240px">
+                text-spirit-gold
+              </code>
             </td>
           </tr>
         </tbody>
@@ -622,7 +626,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$purple3-900</code>
             </td>
-            <td><code>bg-husky-purple-subtle</code></td>
+            <td>
+              <code>bg-husky-purple-subtle</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -641,7 +647,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$purple2-900</code>
             </td>
-            <td><code>bg-spirit-purple-subtle</code></td>
+            <td>
+              <code>bg-spirit-purple-subtle</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -660,7 +668,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$beige-900</code>
             </td>
-            <td><code>bg-heritage-gold-subtle</code></td>
+            <td>
+              <code>bg-heritage-gold-subtle</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -679,7 +689,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$beige-900</code>
             </td>
-            <td><code>bg-husky-gold-subtle</code></td>
+            <td>
+              <code>bg-husky-gold-subtle</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -698,7 +710,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$beige-900</code>
             </td>
-            <td><code>bg-spirit-gold-subtle</code></td>
+            <td>
+              <code>bg-spirit-gold-subtle</code>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -726,7 +740,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$purple3-300</code>
             </td>
-            <td><code>text-husky-purple-emphasis</code></td>
+            <td>
+              <code>text-husky-purple-emphasis</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -742,7 +758,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$purple2-300</code>
             </td>
-            <td><code>text-spirit-purple-emphasis</code></td>
+            <td>
+              <code>text-spirit-purple-emphasis</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -758,7 +776,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$beige2-900-300</code>
             </td>
-            <td><code>text-heritage-gold-emphasis</code></td>
+            <td>
+              <code>text-heritage-gold-emphasis</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -772,7 +792,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$beige-300</code>
             </td>
-            <td><code>text-husky-gold-emphasis</code></td>
+            <td>
+              <code>text-husky-gold-emphasis</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -788,7 +810,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$gold-300</code>
             </td>
-            <td><code>text-spirit-gold-emphasis</code></td>
+            <td>
+              <code>text-spirit-gold-emphasis</code>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -818,7 +842,9 @@
               <span class="d-inline-block" style="width: 100px">#212529</span>
               <code class="d-inline-block text-muted">$gray-900</code>
             </td>
-            <td><code>bg-body</code></td>
+            <td>
+              <code>bg-body</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -834,7 +860,9 @@
               <code class="d-inline-block text-muted">$gray-100</code>
             </td>
             <td>#2b3035</td>
-            <td><code>bg-body-tertiary</code></td>
+            <td>
+              <code>bg-body-tertiary</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -850,7 +878,9 @@
               <code class="d-inline-block text-muted">$gray-200</code>
             </td>
             <td>#343a40</td>
-            <td><code>bg-body-secondary</code></td>
+            <td>
+              <code>bg-body-secondary</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -869,7 +899,9 @@
               <span class="d-inline-block" style="width: 100px">#0f091a</span>
               <code class="d-inline-block text-muted">$purple2-900</code>
             </td>
-            <td><code>bg-spirit-purple-subtle</code></td>
+            <td>
+              <code>bg-spirit-purple-subtle</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -888,7 +920,9 @@
               <span class="d-inline-block" style="width: 100px">#252118</span>
               <code class="d-inline-block text-muted">$beige-900</code>
             </td>
-            <td><code>bg-husky-gold-subtle</code></td>
+            <td>
+              <code>bg-husky-gold-subtle</code>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -913,7 +947,9 @@
               <code class="d-inline-block text-muted">$white</code>
             </td>
             <td>--</td>
-            <td><code>text-white</code></td>
+            <td>
+              <code>text-white</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -924,7 +960,9 @@
               <code class="d-inline-block text-muted">$black</code>
             </td>
             <td>--</td>
-            <td><code>text-black</code></td>
+            <td>
+              <code>text-black</code>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -951,7 +989,9 @@
               <span class="d-inline-block" style="width: 100px">#dee2e6</span>
               <code class="d-inline-block text-muted">$gray-300</code>
             </td>
-            <td><code>text-body</code></td>
+            <td>
+              <code>text-body</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -965,7 +1005,9 @@
               <span class="d-inline-block" style="width: 100px">#dee2e6bf</span>
               <code class="d-inline-block text-muted">$gray-300 (75%)</code>
             </td>
-            <td><code>text-body-secondary</code></td>
+            <td>
+              <code>text-body-secondary</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -979,7 +1021,9 @@
               <span class="d-inline-block" style="width: 100px">#dee2e680</span>
               <code class="d-inline-block text-muted">$gray-300 (50%)</code>
             </td>
-            <td><code>text-body-tertiary</code></td>
+            <td>
+              <code>text-body-tertiary</code>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -1018,7 +1062,9 @@
               <span class="d-inline-block" style="width: 100px">#495057</span>
               <code class="d-inline-block text-muted">$gray-700</code>
             </td>
-            <td><code>border</code></td>
+            <td>
+              <code>border</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1036,7 +1082,9 @@
             </td>
             <td>#c8c8c9</td>
             <td>#f7f8f9</td>
-            <td><code>hr</code></td>
+            <td>
+              <code>hr</code>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -1069,9 +1117,9 @@
             <td>--</td>
             <td>
               <code class="d-inline-block" style="width: 240px">bg-autumn</code>
-              <code class="d-inline-block" style="width: 240px"
-                >text-autumn</code
-              >
+              <code class="d-inline-block" style="width: 240px">
+                text-autumn
+              </code>
             </td>
           </tr>
           <tr>
@@ -1091,9 +1139,9 @@
             <td>--</td>
             <td>
               <code class="d-inline-block" style="width: 240px">bg-winter</code>
-              <code class="d-inline-block" style="width: 240px"
-                >text-winter</code
-              >
+              <code class="d-inline-block" style="width: 240px">
+                text-winter
+              </code>
             </td>
           </tr>
           <tr>
@@ -1113,9 +1161,9 @@
             <td>--</td>
             <td>
               <code class="d-inline-block" style="width: 240px">bg-spring</code>
-              <code class="d-inline-block" style="width: 240px"
-                >text-spring</code
-              >
+              <code class="d-inline-block" style="width: 240px">
+                text-spring
+              </code>
             </td>
           </tr>
           <tr>
@@ -1135,9 +1183,9 @@
             <td>--</td>
             <td>
               <code class="d-inline-block" style="width: 240px">bg-summer</code>
-              <code class="d-inline-block" style="width: 240px"
-                >text-summer</code
-              >
+              <code class="d-inline-block" style="width: 240px">
+                text-summer
+              </code>
             </td>
           </tr>
         </tbody>
@@ -1169,7 +1217,9 @@
               <span class="d-inline-block" style="width: 100px">#331a09</span>
               <code class="d-inline-block text-muted">$scarlet-900</code>
             </td>
-            <td><code>bg-autumn-subtle</code></td>
+            <td>
+              <code>bg-autumn-subtle</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1188,7 +1238,9 @@
               <span class="d-inline-block" style="width: 100px">#002a33</span>
               <code class="d-inline-block text-muted">$icicle-900</code>
             </td>
-            <td><code>bg-winter-subtle</code></td>
+            <td>
+              <code>bg-winter-subtle</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1207,7 +1259,9 @@
               <span class="d-inline-block" style="width: 100px">#162e0d</span>
               <code class="d-inline-block text-muted">$lime-900</code>
             </td>
-            <td><code>bg-spring-subtle</code></td>
+            <td>
+              <code>bg-spring-subtle</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1226,7 +1280,9 @@
               <span class="d-inline-block" style="width: 100px">#332800</span>
               <code class="d-inline-block text-muted">$amber-900</code>
             </td>
-            <td><code>bg-summer-subtle</code></td>
+            <td>
+              <code>bg-summer-subtle</code>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -1252,7 +1308,9 @@
               <span class="d-inline-block" style="width: 100px">#ffb380</span>
               <code class="d-inline-block text-muted">$scarlet-300</code>
             </td>
-            <td><code>text-autumn-emphasis</code></td>
+            <td>
+              <code>text-autumn-emphasis</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1266,7 +1324,9 @@
               <span class="d-inline-block" style="width: 100px">#66e4ff</span>
               <code class="d-inline-block text-muted">$icicle-300</code>
             </td>
-            <td><code>text-winter-emphasis</code></td>
+            <td>
+              <code>text-winter-emphasis</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1280,7 +1340,9 @@
               <span class="d-inline-block" style="width: 100px">#a9f18c</span>
               <code class="d-inline-block text-muted">$lime-300</code>
             </td>
-            <td><code>text-spring-emphasis</code></td>
+            <td>
+              <code>text-spring-emphasis</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1294,7 +1356,9 @@
               <span class="d-inline-block" style="width: 100px">#ffdf67</span>
               <code class="d-inline-block text-muted">$amber-300</code>
             </td>
-            <td><code>text-summer-emphasis</code></td>
+            <td>
+              <code>text-summer-emphasis</code>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -1326,12 +1390,12 @@
             </td>
             <td>--</td>
             <td>
-              <code class="d-inline-block" style="width: 240px"
-                >bg-deco-violet</code
-              >
-              <code class="d-inline-block" style="width: 240px"
-                >text-deco-violet</code
-              >
+              <code class="d-inline-block" style="width: 240px">
+                bg-deco-violet
+              </code>
+              <code class="d-inline-block" style="width: 240px">
+                text-deco-violet
+              </code>
             </td>
           </tr>
           <tr>
@@ -1350,12 +1414,12 @@
             </td>
             <td>--</td>
             <td>
-              <code class="d-inline-block" style="width: 240px"
-                >bg-deco-turquoise</code
-              >
-              <code class="d-inline-block" style="width: 240px"
-                >text-deco-turquoise</code
-              >
+              <code class="d-inline-block" style="width: 240px">
+                bg-deco-turquoise
+              </code>
+              <code class="d-inline-block" style="width: 240px">
+                text-deco-turquoise
+              </code>
             </td>
           </tr>
           <tr>
@@ -1374,12 +1438,12 @@
             </td>
             <td>--</td>
             <td>
-              <code class="d-inline-block" style="width: 240px"
-                >bg-deco-burnt</code
-              >
-              <code class="d-inline-block" style="width: 240px"
-                >text-deco-burnt</code
-              >
+              <code class="d-inline-block" style="width: 240px">
+                bg-deco-burnt
+              </code>
+              <code class="d-inline-block" style="width: 240px">
+                text-deco-burnt
+              </code>
             </td>
           </tr>
           <tr>
@@ -1398,12 +1462,12 @@
             </td>
             <td>--</td>
             <td>
-              <code class="d-inline-block" style="width: 240px"
-                >bg-deco-olive</code
-              >
-              <code class="d-inline-block" style="width: 240px"
-                >text-deco-olive</code
-              >
+              <code class="d-inline-block" style="width: 240px">
+                bg-deco-olive
+              </code>
+              <code class="d-inline-block" style="width: 240px">
+                text-deco-olive
+              </code>
             </td>
           </tr>
           <tr>
@@ -1422,12 +1486,12 @@
             </td>
             <td>--</td>
             <td>
-              <code class="d-inline-block" style="width: 240px"
-                >bg-deco-rose</code
-              >
-              <code class="d-inline-block" style="width: 240px"
-                >text-deco-rose</code
-              >
+              <code class="d-inline-block" style="width: 240px">
+                bg-deco-rose
+              </code>
+              <code class="d-inline-block" style="width: 240px">
+                text-deco-rose
+              </code>
             </td>
           </tr>
           <tr>
@@ -1446,12 +1510,12 @@
             </td>
             <td>--</td>
             <td>
-              <code class="d-inline-block" style="width: 240px"
-                >bg-deco-lavender</code
-              >
-              <code class="d-inline-block" style="width: 240px"
-                >text-deco-lavender</code
-              >
+              <code class="d-inline-block" style="width: 240px">
+                bg-deco-lavender
+              </code>
+              <code class="d-inline-block" style="width: 240px">
+                text-deco-lavender
+              </code>
             </td>
           </tr>
           <tr>
@@ -1470,12 +1534,12 @@
             </td>
             <td>--</td>
             <td>
-              <code class="d-inline-block" style="width: 240px"
-                >bg-deco-russet</code
-              >
-              <code class="d-inline-block" style="width: 240px"
-                >text-deco-russet</code
-              >
+              <code class="d-inline-block" style="width: 240px">
+                bg-deco-russet
+              </code>
+              <code class="d-inline-block" style="width: 240px">
+                text-deco-russet
+              </code>
             </td>
           </tr>
           <tr>
@@ -1494,12 +1558,12 @@
             </td>
             <td>--</td>
             <td>
-              <code class="d-inline-block" style="width: 240px"
-                >bg-deco-ultra</code
-              >
-              <code class="d-inline-block" style="width: 240px"
-                >text-deco-ultra</code
-              >
+              <code class="d-inline-block" style="width: 240px">
+                bg-deco-ultra
+              </code>
+              <code class="d-inline-block" style="width: 240px">
+                text-deco-ultra
+              </code>
             </td>
           </tr>
         </tbody>
@@ -1531,7 +1595,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$violet-900</code>
             </td>
-            <td><code>bg-deco-violet-subtle</code></td>
+            <td>
+              <code>bg-deco-violet-subtle</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1550,7 +1616,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$turquoise-900</code>
             </td>
-            <td><code>bg-deco-turquoise-subtle</code></td>
+            <td>
+              <code>bg-deco-turquoise-subtle</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1569,7 +1637,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$burnt-900</code>
             </td>
-            <td><code>bg-deco-burnt-subtle</code></td>
+            <td>
+              <code>bg-deco-burnt-subtle</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1588,7 +1658,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$olive-900</code>
             </td>
-            <td><code>bg-deco-olive-subtle</code></td>
+            <td>
+              <code>bg-deco-olive-subtle</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1607,7 +1679,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$rose-900</code>
             </td>
-            <td><code>bg-deco-rose-subtle</code></td>
+            <td>
+              <code>bg-deco-rose-subtle</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1626,7 +1700,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$lavender-900</code>
             </td>
-            <td><code>bg-deco-lavender-subtle</code></td>
+            <td>
+              <code>bg-deco-lavender-subtle</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1645,7 +1721,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$russet-900</code>
             </td>
-            <td><code>bg-deco-russet-subtle</code></td>
+            <td>
+              <code>bg-deco-russet-subtle</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1664,7 +1742,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$ultra-900</code>
             </td>
-            <td><code>bg-deco-ultra-subtle</code></td>
+            <td>
+              <code>bg-deco-ultra-subtle</code>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -1692,7 +1772,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$violet-300</code>
             </td>
-            <td><code>text-deco-violet-emphasis</code></td>
+            <td>
+              <code>text-deco-violet-emphasis</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1708,7 +1790,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$turquoise-300</code>
             </td>
-            <td><code>text-deco-turquoise-emphasis</code></td>
+            <td>
+              <code>text-deco-turquoise-emphasis</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1722,7 +1806,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$burnt-300</code>
             </td>
-            <td><code>text-deco-burnt-emphasis</code></td>
+            <td>
+              <code>text-deco-burnt-emphasis</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1736,7 +1822,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$olive-300</code>
             </td>
-            <td><code>text-deco-olive-emphasis</code></td>
+            <td>
+              <code>text-deco-olive-emphasis</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1750,7 +1838,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$rose-300</code>
             </td>
-            <td><code>text-deco-rose-emphasis</code></td>
+            <td>
+              <code>text-deco-rose-emphasis</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1766,7 +1856,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$lavender-300</code>
             </td>
-            <td><code>text-deco-lavender-emphasis</code></td>
+            <td>
+              <code>text-deco-lavender-emphasis</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1782,7 +1874,9 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$russet-300</code>
             </td>
-            <td><code>text-deco-russet-emphasis</code></td>
+            <td>
+              <code>text-deco-russet-emphasis</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -1796,12 +1890,14 @@
               <span class="d-inline-block" style="width: 100px">#xxxx</span>
               <code class="d-inline-block text-muted">$ultra-300</code>
             </td>
-            <td><code>text-deco-ultra-emphasis</code></td>
+            <td>
+              <code>text-deco-ultra-emphasis</code>
+            </td>
           </tr>
         </tbody>
       </table>
 
-      <hr />
+      <hr>
       <h2 class="fw-bold mb-5">Form Elements</h2>
 
       <h3>Input Group</h3>
@@ -1815,7 +1911,7 @@
               placeholder="Username"
               aria-label="Username"
               aria-describedby="basic-addon1"
-            />
+            >
           </div>
           <div class="input-group mb-3">
             <span class="input-group-text">$</span>
@@ -1823,7 +1919,7 @@
               type="text"
               class="form-control"
               aria-label="Amount (to the nearest dollar)"
-            />
+            >
             <span class="input-group-text">.00</span>
           </div>
           <div class="input-group mb-3">
@@ -1833,7 +1929,7 @@
               placeholder="Recipient's username"
               aria-label="Recipient's username"
               aria-describedby="button-addon2"
-            />
+            >
             <button
               id="button-addon2"
               class="btn btn-subdued-primary border border-secondary"
@@ -1847,7 +1943,7 @@
               type="text"
               class="form-control"
               aria-label="Text input with dropdown button"
-            />
+            >
             <button
               class="btn btn-subdued-primary border border-secondary dropdown-toggle"
               type="button"
@@ -1857,13 +1953,21 @@
               Dropdown
             </button>
             <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Action</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Another action</a>
+              </li>
               <li>
                 <a class="dropdown-item" href="#">Something else here</a>
               </li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Separated link</a>
+              </li>
             </ul>
           </div>
 
@@ -1877,7 +1981,7 @@
                 type="hidden"
                 name="emergencyCallingCode1"
                 :value="'+' + emergencyCallingCode1"
-              />
+              >
               <span class="input-group-text border border-secondary"
                 >+{{ emergencyCallingCode1 }}</span
               >
@@ -1890,9 +1994,9 @@
                 minlength="10"
                 maxlength="12"
                 title="Enter a valid mobile number"
-              />
+              >
             </div>
-            <input type="hidden" class="country-code-input" />
+            <input type="hidden" class="country-code-input">
             <div id="passwordHelpBlock" class="form-text">
               Your area code and phone number must be 10-12 characters. Example
               format: xxx-xxx-xxxx
@@ -1908,7 +2012,7 @@
               placeholder="Username"
               aria-label="Username"
               aria-describedby="basic-addon1"
-            />
+            >
           </div>
           <div class="input-group input-group-sm mb-3">
             <span class="input-group-text">$</span>
@@ -1916,7 +2020,7 @@
               type="text"
               class="form-control"
               aria-label="Amount (to the nearest dollar)"
-            />
+            >
             <span class="input-group-text">.00</span>
           </div>
           <div class="input-group input-group-sm mb-3">
@@ -1926,7 +2030,7 @@
               placeholder="Recipient's username"
               aria-label="Recipient's username"
               aria-describedby="button-addon2"
-            />
+            >
             <button
               id="button-addon2"
               class="btn btn-subdued-primary border border-secondary"
@@ -1940,7 +2044,7 @@
               type="text"
               class="form-control"
               aria-label="Text input with dropdown button"
-            />
+            >
             <button
               class="btn btn-subdued-primary border border-secondary dropdown-toggle"
               type="button"
@@ -1950,13 +2054,21 @@
               Dropdown
             </button>
             <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Action</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Another action</a>
+              </li>
               <li>
                 <a class="dropdown-item" href="#">Something else here</a>
               </li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Separated link</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Separated link</a>
+              </li>
             </ul>
           </div>
 
@@ -1970,7 +2082,7 @@
                 type="hidden"
                 name="emergencyCallingCode2"
                 :value="'+' + emergencyCallingCode2"
-              />
+              >
               <span class="input-group-text border border-secondary"
                 >+{{ emergencyCallingCode2 }}</span
               >
@@ -1983,9 +2095,9 @@
                 minlength="10"
                 maxlength="12"
                 title="Enter a valid mobile number"
-              />
+              >
             </div>
-            <input type="hidden" class="country-code-input" />
+            <input type="hidden" class="country-code-input">
             <div id="passwordHelpBlock" class="form-text">
               Your area code and phone number must be 10-12 characters. Example
               format: xxx-xxx-xxxx
@@ -2002,7 +2114,7 @@
             class="form-check-input"
             type="checkbox"
             value=""
-          />
+          >
           <label class="form-check-label" for="flexCheckDefault">
             Default checkbox
           </label>
@@ -2014,7 +2126,7 @@
             type="checkbox"
             value=""
             checked
-          />
+          >
           <label class="form-check-label" for="flexCheckChecked">
             Checked checkbox
           </label>
@@ -2025,7 +2137,7 @@
             class="form-check-input"
             type="radio"
             name="flexRadioDefault"
-          />
+          >
           <label class="form-check-label" for="flexRadioDefault1">
             Default radio
           </label>
@@ -2037,7 +2149,7 @@
             type="radio"
             name="flexRadioDefault"
             checked
-          />
+          >
           <label class="form-check-label" for="flexRadioDefault2">
             Default checked radio
           </label>
@@ -2093,7 +2205,7 @@
               data-bs-auto-close="outside"
               aria-expanded="false"
               value="Open this select menu"
-            />
+            >
             <div
               class="dropdown-menu p-2 w-100"
               aria-labelledby="dropdownMenuButton1"
@@ -2107,7 +2219,7 @@
                   type="checkbox"
                   value=""
                   style="margin-left: -1.25em !important"
-                />
+                >
                 <label class="form-check-label d-block" for="flexCheckDefault1">
                   Checkbox 1
                 </label>
@@ -2121,7 +2233,7 @@
                   type="checkbox"
                   value=""
                   style="margin-left: -1.25em !important"
-                />
+                >
                 <label class="form-check-label d-block" for="flexCheckDefault2">
                   Checkbox 2
                 </label>
@@ -2135,7 +2247,7 @@
                   type="checkbox"
                   value=""
                   style="margin-left: -1.25em !important"
-                />
+                >
                 <label class="form-check-label d-block" for="flexCheckDefault3">
                   Checkbox 3
                 </label>
@@ -2147,9 +2259,9 @@
 
       <h3>Text Area</h3>
       <div class="mb-5">
-        <label for="exampleFormControlTextarea1" class="form-label"
-          >Example textarea</label
-        >
+        <label for="exampleFormControlTextarea1" class="form-label">
+          Example textarea
+        </label>
         <textarea
           id="exampleFormControlTextarea1"
           class="form-control"
@@ -2157,7 +2269,7 @@
         ></textarea>
       </div>
 
-      <hr />
+      <hr>
       <h2 class="fw-bold mb-5">Elements</h2>
 
       <h3 class="mt-4">Badge</h3>
@@ -2165,7 +2277,8 @@
       <div class="grid mb-5">
         <div class="g-col-3">
           <p>
-            Semantic palette:<br />
+            Semantic palette:
+            <br>
             Messaging / Workflow States
           </p>
           <ul class="list-unstyled">
@@ -2175,15 +2288,17 @@
                 bg-variant="success-subtle"
                 text-variant="success-emphasis"
                 class="fw-semibold me-1"
-                >success-subtle</BBadge
               >
+                success-subtle
+              </BBadge>
               <BBadge
                 pill
                 bg-variant="success"
                 text-variant="white"
                 class="fw-semibold"
-                >success</BBadge
               >
+                success
+              </BBadge>
             </li>
             <li class="mb-1">
               <BBadge
@@ -2191,15 +2306,17 @@
                 bg-variant="warning-subtle"
                 text-variant="warning-emphasis"
                 class="fw-semibold me-1"
-                >warning-subtle</BBadge
               >
+                warning-subtle
+              </BBadge>
               <BBadge
                 pill
                 bg-variant="warning"
                 text-variant="black"
                 class="fw-semibold"
-                >warning</BBadge
               >
+                warning
+              </BBadge>
             </li>
             <li class="mb-1">
               <BBadge
@@ -2207,15 +2324,17 @@
                 bg-variant="danger-subtle"
                 text-variant="danger-emphasis"
                 class="fw-semibold me-1"
-                >danger-subtle</BBadge
               >
+                danger-subtle
+              </BBadge>
               <BBadge
                 pill
                 bg-variant="danger"
                 text-variant="white"
                 class="fw-semibold"
-                >danger</BBadge
               >
+                danger
+              </BBadge>
             </li>
             <li class="mb-1">
               <BBadge
@@ -2223,15 +2342,17 @@
                 bg-variant="info-subtle"
                 text-variant="info-emphasis"
                 class="fw-semibold me-1"
-                >info-subtle</BBadge
               >
+                info-subtle
+              </BBadge>
               <BBadge
                 pill
                 bg-variant="info"
                 text-variant="black"
                 class="fw-semibold"
-                >info</BBadge
               >
+                info
+              </BBadge>
             </li>
             <li class="mb-1">
               <BBadge
@@ -2239,15 +2360,17 @@
                 bg-variant="secondary-subtle"
                 text-variant="secondary-emphasis"
                 class="fw-semibold me-1"
-                >secondary-subtle</BBadge
               >
+                secondary-subtle
+              </BBadge>
               <BBadge
                 pill
                 bg-variant="secondary"
                 text-variant="white"
                 class="fw-semibold"
-                >secondary</BBadge
               >
+                secondary
+              </BBadge>
             </li>
           </ul>
           <p>subtle set at swatch -100 (default)</p>
@@ -2261,15 +2384,17 @@
                 bg-variant="autumn-subtle"
                 text-variant="autumn-emphasis"
                 class="fw-semibold me-1"
-                >autumn-subtle</BBadge
               >
+                autumn-subtle
+              </BBadge>
               <BBadge
                 pill
                 bg-variant="autumn"
                 text-variant="black"
                 class="fw-semibold"
-                >autumn</BBadge
               >
+                autumn
+              </BBadge>
             </li>
             <li class="mb-1">
               <BBadge
@@ -2277,15 +2402,17 @@
                 bg-variant="winter-subtle"
                 text-variant="winter-emphasis"
                 class="fw-semibold me-1"
-                >winter-subtle</BBadge
               >
+                winter-subtle
+              </BBadge>
               <BBadge
                 pill
                 bg-variant="winter"
                 text-variant="black"
                 class="fw-semibold"
-                >winter</BBadge
               >
+                winter
+              </BBadge>
             </li>
             <li class="mb-1">
               <BBadge
@@ -2293,15 +2420,17 @@
                 bg-variant="spring-subtle"
                 text-variant="spring-emphasis"
                 class="fw-semibold me-1"
-                >spring-subtle</BBadge
               >
+                spring-subtle
+              </BBadge>
               <BBadge
                 pill
                 bg-variant="spring"
                 text-variant="black"
                 class="fw-semibold"
-                >spring</BBadge
               >
+                spring
+              </BBadge>
             </li>
             <li class="mb-1">
               <BBadge
@@ -2309,15 +2438,17 @@
                 bg-variant="summer-subtle"
                 text-variant="summer-emphasis"
                 class="fw-semibold me-1"
-                >summer-subtle</BBadge
               >
+                summer-subtle
+              </BBadge>
               <BBadge
                 pill
                 bg-variant="summer"
                 text-variant="black"
                 class="fw-semibold"
-                >summer</BBadge
               >
+                summer
+              </BBadge>
             </li>
           </ul>
           <p>subtle set at swatch -200 (testing)</p>
@@ -2331,15 +2462,17 @@
                 bg-variant="deco-violet-subtle"
                 text-variant="deco-violet-emphasis"
                 class="fw-semibold me-1"
-                >deco-violet-subtle</BBadge
               >
+                deco-violet-subtle
+              </BBadge>
               <BBadge
                 pill
                 bg-variant="deco-violet"
                 text-variant="white"
                 class="fw-semibold"
-                >deco-violet</BBadge
               >
+                deco-violet
+              </BBadge>
             </li>
             <li class="mb-1">
               <BBadge
@@ -2347,15 +2480,17 @@
                 bg-variant="deco-turquoise-subtle"
                 text-variant="deco-turquoise-emphasis"
                 class="fw-semibold me-1"
-                >deco-turquoise-subtle</BBadge
               >
+                deco-turquoise-subtle
+              </BBadge>
               <BBadge
                 pill
                 bg-variant="deco-turquoise"
                 text-variant="white"
                 class="fw-semibold"
-                >deco-turquoise</BBadge
               >
+                deco-turquoise
+              </BBadge>
             </li>
             <li class="mb-1">
               <BBadge
@@ -2363,15 +2498,17 @@
                 bg-variant="deco-burnt-subtle"
                 text-variant="deco-burnt-emphasis"
                 class="fw-semibold me-1"
-                >deco-burnt-subtle</BBadge
               >
+                deco-burnt-subtle
+              </BBadge>
               <BBadge
                 pill
                 bg-variant="deco-burnt"
                 text-variant="white"
                 class="fw-semibold"
-                >deco-burnt</BBadge
               >
+                deco-burnt
+              </BBadge>
             </li>
             <li class="mb-1">
               <BBadge
@@ -2379,15 +2516,17 @@
                 bg-variant="deco-olive-subtle"
                 text-variant="deco-olive-emphasis"
                 class="fw-semibold me-1"
-                >deco-olive-subtle</BBadge
               >
+                deco-olive-subtle
+              </BBadge>
               <BBadge
                 pill
                 bg-variant="deco-olive"
                 text-variant="white"
                 class="fw-semibold"
-                >deco-olive</BBadge
               >
+                deco-olive
+              </BBadge>
             </li>
             <li class="mb-1">
               <BBadge
@@ -2395,15 +2534,17 @@
                 bg-variant="deco-rose-subtle"
                 text-variant="deco-rose-emphasis"
                 class="fw-semibold me-1"
-                >deco-rose-subtle</BBadge
               >
+                deco-rose-subtle
+              </BBadge>
               <BBadge
                 pill
                 bg-variant="deco-rose"
                 text-variant="white"
                 class="fw-semibold"
-                >deco-rose</BBadge
               >
+                deco-rose
+              </BBadge>
             </li>
             <li class="mb-1">
               <BBadge
@@ -2411,15 +2552,17 @@
                 bg-variant="deco-lavender-subtle"
                 text-variant="deco-lavender-emphasis"
                 class="fw-semibold me-1"
-                >deco-lavender-subtle</BBadge
               >
+                deco-lavender-subtle
+              </BBadge>
               <BBadge
                 pill
                 bg-variant="deco-lavender"
                 text-variant="white"
                 class="fw-semibold"
-                >deco-lavender</BBadge
               >
+                deco-lavender
+              </BBadge>
             </li>
             <li class="mb-1">
               <BBadge
@@ -2427,15 +2570,17 @@
                 bg-variant="deco-russet-subtle"
                 text-variant="deco-russet-emphasis"
                 class="fw-semibold me-1"
-                >deco-russet-subtle</BBadge
               >
+                deco-russet-subtle
+              </BBadge>
               <BBadge
                 pill
                 bg-variant="deco-russet"
                 text-variant="white"
                 class="fw-semibold"
-                >deco-russet</BBadge
               >
+                deco-russet
+              </BBadge>
             </li>
             <li class="mb-1">
               <BBadge
@@ -2443,15 +2588,17 @@
                 bg-variant="deco-ultra-subtle"
                 text-variant="deco-ultra-emphasis"
                 class="fw-semibold me-1"
-                >deco-ultra-subtle</BBadge
               >
+                deco-ultra-subtle
+              </BBadge>
               <BBadge
                 pill
                 bg-variant="deco-ultra"
                 text-variant="white"
                 class="fw-semibold"
-                >deco-ultra</BBadge
               >
+                deco-ultra
+              </BBadge>
             </li>
           </ul>
           <p>subtle set at swatch -100 (default)</p>
@@ -2466,53 +2613,58 @@
         <BButton variant="quiet-primary">Quiet</BButton>
       </div>
       <div class="mb-3">
-        <BButton variant="primary" size="sm" class="me-1" aria-label="Settings"
-          ><i class="bi bi-gear-wide-connected"></i
-        ></BButton>
+        <BButton variant="primary" size="sm" class="me-1" aria-label="Settings">
+          <i class="bi bi-gear-wide-connected"></i>
+        </BButton>
         <BButton
           variant="outline-primary"
           size="sm"
           class="me-1"
           aria-label="Settings"
-          ><i class="bi bi-gear-wide-connected"></i
-        ></BButton>
+        >
+          <i class="bi bi-gear-wide-connected"></i>
+        </BButton>
         <BButton
           variant="subdued-primary"
           size="sm"
           class="me-1"
           aria-label="Settings"
-          ><i class="bi bi-gear-wide-connected"></i
-        ></BButton>
+        >
+          <i class="bi bi-gear-wide-connected"></i>
+        </BButton>
 
         <BButton
           variant="quiet-primary"
           size="sm"
           class=""
           aria-label="Settings"
-          ><i class="bi bi-gear-wide-connected"></i
-        ></BButton>
+        >
+          <i class="bi bi-gear-wide-connected"></i>
+        </BButton>
       </div>
       <div class="mb-5">
-        <BButton variant="danger" size="sm" class="me-1" aria-label="Trash"
-          ><i class="bi bi-trash"></i
-        ></BButton>
+        <BButton variant="danger" size="sm" class="me-1" aria-label="Trash">
+          <i class="bi bi-trash"></i>
+        </BButton>
         <BButton
           variant="outline-danger"
           size="sm"
           class="me-1"
           aria-label="Trash"
-          ><i class="bi bi-trash"></i
-        ></BButton>
+        >
+          <i class="bi bi-trash"></i>
+        </BButton>
         <BButton
           variant="subdued-danger"
           size="sm"
           class="me-1"
           aria-label="Trash"
-          ><i class="bi bi-trash"></i
-        ></BButton>
-        <BButton variant="quiet-danger" size="sm" aria-label="Trash"
-          ><i class="bi bi-trash"></i
-        ></BButton>
+        >
+          <i class="bi bi-trash"></i>
+        </BButton>
+        <BButton variant="quiet-danger" size="sm" aria-label="Trash">
+          <i class="bi bi-trash"></i>
+        </BButton>
       </div>
 
       <h3 class="mt-4">Links</h3>
@@ -2520,17 +2672,17 @@
         <ul class="g-col-6 list-unstyled">
           <li class="border p-2 mb-2">
             Lorem ipsum dolor sit amet,
-            <a href="#" class="link-primary">link-primary</a> consectetur
+            <a href="#" class="link-primary">link-primary</a>consectetur
             adipiscing elit.
           </li>
           <li class="bg-husky-purple p-2 text-white mb-2">
             Lorem ipsum dolor sit amet,
-            <a href="#" class="link-light">link-light</a> consectetur adipiscing
+            <a href="#" class="link-light">link-light</a>consectetur adipiscing
             elit.
           </li>
           <li class="bg-spirit-gold text-black p-2">
             Lorem ipsum dolor sit amet,
-            <a href="#" class="link-dark">link-dark</a> consectetur adipiscing
+            <a href="#" class="link-dark">link-dark</a>consectetur adipiscing
             elit.
           </li>
         </ul>
@@ -2538,23 +2690,23 @@
         <ul class="g-col-6 list-unstyled">
           <li class="border p-2 mb-2">
             <a href="#" class="link-quiet-primary"
-              ><i class="bi bi-emoji-smile"></i> link-quiet-primary</a
+              ><i class="bi bi-emoji-smile"></i>link-quiet-primary</a
             >
           </li>
           <li class="bg-husky-purple p-2 text-light mb-2">
             <a href="#" class="link-quiet-light"
-              ><i class="bi bi-emoji-smile"></i> link-quiet-light</a
+              ><i class="bi bi-emoji-smile"></i>link-quiet-light</a
             >
           </li>
           <li class="bg-spirit-gold text-dark p-2">
             <a href="#" class="link-quiet-dark"
-              ><i class="bi bi-emoji-smile"></i> link-quiet-dark</a
+              ><i class="bi bi-emoji-smile"></i>link-quiet-dark</a
             >
           </li>
         </ul>
       </div>
 
-      <hr />
+      <hr>
       <h2 class="fw-bold mb-5">Tables</h2>
 
       <div class="grid mb-5">
@@ -2638,7 +2790,7 @@
         </div>
       </div>
 
-      <hr />
+      <hr>
       <h2 class="fw-bold mb-5">Patterns</h2>
 
       <h3>Tabs</h3>
@@ -2677,8 +2829,8 @@
               architecto accusantium? Quibusdam, vitae?
             </p>
           </STabsPanel>
-          <STabsPanel :panel-id="'second2'"
-            ><p>
+          <STabsPanel :panel-id="'second2'">
+            <p>
               Second... Lorem ipsum dolor, sit amet consectetur adipisicing
               elit. Tempore, provident quas molestias dicta exercitationem nihil
               odit. Itaque qui minima sequi, reprehenderit veritatis, cum
@@ -2686,15 +2838,15 @@
               repudiandae!
             </p>
           </STabsPanel>
-          <STabsPanel :panel-id="'third2'"
-            ><p>
+          <STabsPanel :panel-id="'third2'">
+            <p>
               Third... Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Quidem quam, beatae perferendis dolore ratione doloremque,
               voluptates aut, ullam illum esse sequi blanditiis pariatur
               delectus saepe molestias necessitatibus cupiditate maxime
               voluptatem.
-            </p></STabsPanel
-          >
+            </p>
+          </STabsPanel>
         </STabsDisplay>
 
         <h4>Pills</h4>
@@ -2710,9 +2862,7 @@
           <STabsItem :tabs-id="'example'" :panel-id="'second'">
             Second
           </STabsItem>
-          <STabsItem :tabs-id="'example'" :panel-id="'third'">
-            Third
-          </STabsItem>
+          <STabsItem :tabs-id="'example'" :panel-id="'third'">Third</STabsItem>
         </STabsList>
 
         <STabsDisplay :tabs-id="'example2'">
@@ -2726,14 +2876,14 @@
             second... Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Vero deleniti, repellendus harum voluptatum necessitatibus mollitia
             facilis temporibus architecto, voluptatibus officiis error
-            asperiores quo autem iure ex laboriosam ut totam! Sit.</STabsPanel
-          >
+            asperiores quo autem iure ex laboriosam ut totam! Sit.
+          </STabsPanel>
           <STabsPanel :panel-id="'third'">
             third... Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Sunt quibusdam culpa deleniti quo reiciendis nobis exercitationem
             sapiente! Dolore, provident, consequatur velit autem magnam nesciunt
-            esse, laboriosam doloribus perferendis natus incidunt?</STabsPanel
-          >
+            esse, laboriosam doloribus perferendis natus incidunt?
+          </STabsPanel>
         </STabsDisplay>
       </div>
 
@@ -2741,40 +2891,45 @@
       <div class="grid mb-5">
         <div class="g-col-4">
           <h4>Elevated</h4>
-          <BCard class="shadow border-0 mb-3"> card 1 w/ shadow </BCard>
+          <BCard class="shadow border-0 mb-3">card 1 w/ shadow </BCard>
           <BCard class="shadow border-0 mb-3">card 2 w/ shadow</BCard>
         </div>
 
         <div class="g-col-4">
           <h4>Filled</h4>
-          <BCard bg-variant="body-tertiary" class="border-0 mb-3"
-            >body-tertiary</BCard
+          <BCard bg-variant="body-tertiary" class="border-0 mb-3">
+            body-tertiary
+          </BCard>
+          <BCard
+            bg-variant="body-secondary"
+            class="bg-opacity-50 border-0 mb-3"
           >
-          <BCard bg-variant="body-secondary" class="bg-opacity-50 border-0 mb-3"
-            >body-secondary, bg-opacity-50</BCard
-          >
+            body-secondary, bg-opacity-50
+          </BCard>
           <BCard
             bg-variant="spirit-purple-subtle"
             class="bg-opacity-25 border-0 mb-3"
-            >bg-spirit-purple-subtle, bg-opacity-25</BCard
           >
+            bg-spirit-purple-subtle, bg-opacity-25
+          </BCard>
 
           <BCard
             bg-variant="husky-gold-subtle"
             class="bg-opacity-50 border-0 mb-3"
-            >bg-husky-gold-subtle, bg-opacity-50</BCard
           >
+            bg-husky-gold-subtle, bg-opacity-50
+          </BCard>
         </div>
         <div class="g-col-4">
           <h4>Outline</h4>
           <BCard class="mb-3">default card border</BCard>
-          <BCard class="mb-3 border border-secondary-subtle"
-            >border-secondary-subtle</BCard
-          >
+          <BCard class="mb-3 border border-secondary-subtle">
+            border-secondary-subtle
+          </BCard>
         </div>
       </div>
 
-      <hr />
+      <hr>
       <h2 class="fw-bold mb-5">Kitchen Sink</h2>
 
       <div class="grid mb-5">
@@ -2787,16 +2942,17 @@
                 size="sm"
                 class="me-1"
                 aria-label="Settings"
-                ><i class="bi bi-three-dots-vertical"></i
-              ></BButton>
+              >
+                <i class="bi bi-three-dots-vertical"></i>
+              </BButton>
             </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
               deserunt
               <a href="#" class="link-primary">dolorum fugiat (link-primary)</a>
               consectetur corporis corrupti nulla,
-              <a href="#">distinctio ipsum (default)</a> doloribus animi? Quae
-              ad sit quasi voluptate perferendis consequatur tempore fuga
+              <a href="#">distinctio ipsum (default)</a>doloribus animi? Quae ad
+              sit quasi voluptate perferendis consequatur tempore fuga
               repudiandae.
             </p>
 
@@ -2806,16 +2962,17 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </div>
                 <div>
-                  <BButton variant="quiet-primary" size="sm" class="me-1"
-                    ><i class="bi bi-pencil"></i> Edit</BButton
-                  >
+                  <BButton variant="quiet-primary" size="sm" class="me-1">
+                    <i class="bi bi-pencil"></i>Edit
+                  </BButton>
                   <BButton
                     variant="quiet-danger"
                     size="sm"
                     class="me-2"
                     aria-label="Trash"
-                    ><i class="bi bi-trash3"></i
-                  ></BButton>
+                  >
+                    <i class="bi bi-trash3"></i>
+                  </BButton>
                 </div>
               </li>
               <li class="d-flex justify-content-between mb-2">
@@ -2823,16 +2980,17 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </div>
                 <div>
-                  <BButton variant="quiet-primary" size="sm" class="me-1"
-                    ><i class="bi bi-pencil"></i> Edit</BButton
-                  >
+                  <BButton variant="quiet-primary" size="sm" class="me-1">
+                    <i class="bi bi-pencil"></i>Edit
+                  </BButton>
                   <BButton
                     variant="quiet-danger"
                     size="sm"
                     class="me-2"
                     aria-label="Trash"
-                    ><i class="bi bi-trash3"></i
-                  ></BButton>
+                  >
+                    <i class="bi bi-trash3"></i>
+                  </BButton>
                 </div>
               </li>
               <li class="d-flex justify-content-between mb-2">
@@ -2840,16 +2998,17 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </div>
                 <div>
-                  <BButton variant="quiet-primary" size="sm" class="me-1"
-                    ><i class="bi bi-pencil"></i> Edit</BButton
-                  >
+                  <BButton variant="quiet-primary" size="sm" class="me-1">
+                    <i class="bi bi-pencil"></i>Edit
+                  </BButton>
                   <BButton
                     variant="quiet-danger"
                     size="sm"
                     class="me-2"
                     aria-label="Trash"
-                    ><i class="bi bi-trash3"></i
-                  ></BButton>
+                  >
+                    <i class="bi bi-trash3"></i>
+                  </BButton>
                 </div>
               </li>
             </ul>
@@ -2864,18 +3023,17 @@
           <BCard class="shadow border-0 mb-3">
             <div class="d-flex justify-content-between mb-3">
               <h3 class="fw-bold">Heading</h3>
-              <BButton variant="subdued-primary" size="sm" class="me-1"
-                ><i class="bi bi-three-dots-vertical"></i> Manage
-                settings</BButton
-              >
+              <BButton variant="subdued-primary" size="sm" class="me-1">
+                <i class="bi bi-three-dots-vertical"></i>Manage settings
+              </BButton>
             </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
               deserunt
               <a href="#" class="link-primary">dolorum fugiat (link-primary)</a>
               consectetur corporis corrupti nulla,
-              <a href="#">distinctio ipsum (default)</a> doloribus animi? Quae
-              ad sit quasi voluptate perferendis consequatur tempore fuga
+              <a href="#">distinctio ipsum (default)</a>doloribus animi? Quae ad
+              sit quasi voluptate perferendis consequatur tempore fuga
               repudiandae.
             </p>
 
@@ -2885,16 +3043,17 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </div>
                 <div>
-                  <BButton variant="subdued-primary" size="sm" class="me-1"
-                    ><i class="bi bi-pencil"></i> Edit</BButton
-                  >
+                  <BButton variant="subdued-primary" size="sm" class="me-1">
+                    <i class="bi bi-pencil"></i>Edit
+                  </BButton>
                   <BButton
                     variant="subdued-danger"
                     size="sm"
                     class="me-2"
                     aria-label="Trash"
-                    ><i class="bi bi-trash3"></i
-                  ></BButton>
+                  >
+                    <i class="bi bi-trash3"></i>
+                  </BButton>
                 </div>
               </li>
               <li class="d-flex justify-content-between mb-2">
@@ -2902,16 +3061,17 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </div>
                 <div>
-                  <BButton variant="subdued-primary" size="sm" class="me-1"
-                    ><i class="bi bi-pencil"></i> Edit</BButton
-                  >
+                  <BButton variant="subdued-primary" size="sm" class="me-1">
+                    <i class="bi bi-pencil"></i>Edit
+                  </BButton>
                   <BButton
                     variant="subdued-danger"
                     size="sm"
                     class="me-2"
                     aria-label="Trash"
-                    ><i class="bi bi-trash3"></i
-                  ></BButton>
+                  >
+                    <i class="bi bi-trash3"></i>
+                  </BButton>
                 </div>
               </li>
               <li class="d-flex justify-content-between mb-2">
@@ -2919,16 +3079,17 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </div>
                 <div>
-                  <BButton variant="subdued-primary" size="sm" class="me-1"
-                    ><i class="bi bi-pencil"></i> Edit</BButton
-                  >
+                  <BButton variant="subdued-primary" size="sm" class="me-1">
+                    <i class="bi bi-pencil"></i>Edit
+                  </BButton>
                   <BButton
                     variant="subdued-danger"
                     size="sm"
                     class="me-2"
                     aria-label="Trash"
-                    ><i class="bi bi-trash3"></i
-                  ></BButton>
+                  >
+                    <i class="bi bi-trash3"></i>
+                  </BButton>
                 </div>
               </li>
             </ul>
@@ -2944,18 +3105,17 @@
           <BCard bg-variant="body-tertiary" class="border-0 mb-3">
             <div class="d-flex justify-content-between mb-3">
               <h3 class="fw-bold">Heading</h3>
-              <BButton variant="quiet-primary" size="sm" class="me-1"
-                ><i class="bi bi-three-dots-vertical"></i> Manage
-                settings</BButton
-              >
+              <BButton variant="quiet-primary" size="sm" class="me-1">
+                <i class="bi bi-three-dots-vertical"></i>Manage settings
+              </BButton>
             </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
               deserunt
               <a href="#" class="link-primary">dolorum fugiat (link-primary)</a>
               consectetur corporis corrupti nulla,
-              <a href="#">distinctio ipsum (default)</a> doloribus animi? Quae
-              ad sit quasi voluptate perferendis consequatur tempore fuga
+              <a href="#">distinctio ipsum (default)</a>doloribus animi? Quae ad
+              sit quasi voluptate perferendis consequatur tempore fuga
               repudiandae.
             </p>
 
@@ -2965,16 +3125,17 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </div>
                 <div>
-                  <BButton variant="quiet-primary" size="sm" class="me-1"
-                    ><i class="bi bi-pencil"></i> Edit</BButton
-                  >
+                  <BButton variant="quiet-primary" size="sm" class="me-1">
+                    <i class="bi bi-pencil"></i>Edit
+                  </BButton>
                   <BButton
                     variant="quiet-danger"
                     size="sm"
                     class="me-2"
                     aria-label="Trash"
-                    ><i class="bi bi-trash3"></i
-                  ></BButton>
+                  >
+                    <i class="bi bi-trash3"></i>
+                  </BButton>
                 </div>
               </li>
               <li class="d-flex justify-content-between mb-2">
@@ -2982,16 +3143,17 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </div>
                 <div>
-                  <BButton variant="quiet-primary" size="sm" class="me-1"
-                    ><i class="bi bi-pencil"></i> Edit</BButton
-                  >
+                  <BButton variant="quiet-primary" size="sm" class="me-1">
+                    <i class="bi bi-pencil"></i>Edit
+                  </BButton>
                   <BButton
                     variant="quiet-danger"
                     size="sm"
                     class="me-2"
                     aria-label="Trash"
-                    ><i class="bi bi-trash3"></i
-                  ></BButton>
+                  >
+                    <i class="bi bi-trash3"></i>
+                  </BButton>
                 </div>
               </li>
               <li class="d-flex justify-content-between mb-2">
@@ -2999,16 +3161,17 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </div>
                 <div>
-                  <BButton variant="quiet-primary" size="sm" class="me-1"
-                    ><i class="bi bi-pencil"></i> Edit</BButton
-                  >
+                  <BButton variant="quiet-primary" size="sm" class="me-1">
+                    <i class="bi bi-pencil"></i>Edit
+                  </BButton>
                   <BButton
                     variant="quiet-danger"
                     size="sm"
                     class="me-2"
                     aria-label="Trash"
-                    ><i class="bi bi-trash3"></i
-                  ></BButton>
+                  >
+                    <i class="bi bi-trash3"></i>
+                  </BButton>
                 </div>
               </li>
             </ul>
@@ -3027,18 +3190,17 @@
           >
             <div class="d-flex justify-content-between mb-3">
               <h3 class="fw-bold">Heading</h3>
-              <BButton variant="quiet-primary" size="sm" class="me-1"
-                ><i class="bi bi-three-dots-vertical"></i> Manage
-                settings</BButton
-              >
+              <BButton variant="quiet-primary" size="sm" class="me-1">
+                <i class="bi bi-three-dots-vertical"></i>Manage settings
+              </BButton>
             </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
               deserunt
               <a href="#" class="link-primary">dolorum fugiat (link-primary)</a>
               consectetur corporis corrupti nulla,
-              <a href="#">distinctio ipsum (default)</a> doloribus animi? Quae
-              ad sit quasi voluptate perferendis consequatur tempore fuga
+              <a href="#">distinctio ipsum (default)</a>doloribus animi? Quae ad
+              sit quasi voluptate perferendis consequatur tempore fuga
               repudiandae.
             </p>
 
@@ -3048,16 +3210,17 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </div>
                 <div>
-                  <BButton variant="quiet-primary" size="sm" class="me-1"
-                    ><i class="bi bi-pencil"></i> Edit</BButton
-                  >
+                  <BButton variant="quiet-primary" size="sm" class="me-1">
+                    <i class="bi bi-pencil"></i>Edit
+                  </BButton>
                   <BButton
                     variant="quiet-danger"
                     size="sm"
                     class="me-2"
                     aria-label="Trash"
-                    ><i class="bi bi-trash3"></i
-                  ></BButton>
+                  >
+                    <i class="bi bi-trash3"></i>
+                  </BButton>
                 </div>
               </li>
               <li class="d-flex justify-content-between mb-2">
@@ -3065,16 +3228,17 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </div>
                 <div>
-                  <BButton variant="quiet-primary" size="sm" class="me-1"
-                    ><i class="bi bi-pencil"></i> Edit</BButton
-                  >
+                  <BButton variant="quiet-primary" size="sm" class="me-1">
+                    <i class="bi bi-pencil"></i>Edit
+                  </BButton>
                   <BButton
                     variant="quiet-danger"
                     size="sm"
                     class="me-2"
                     aria-label="Trash"
-                    ><i class="bi bi-trash3"></i
-                  ></BButton>
+                  >
+                    <i class="bi bi-trash3"></i>
+                  </BButton>
                 </div>
               </li>
               <li class="d-flex justify-content-between mb-2">
@@ -3082,16 +3246,17 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </div>
                 <div>
-                  <BButton variant="quiet-primary" size="sm" class="me-1"
-                    ><i class="bi bi-pencil"></i> Edit</BButton
-                  >
+                  <BButton variant="quiet-primary" size="sm" class="me-1">
+                    <i class="bi bi-pencil"></i>Edit
+                  </BButton>
                   <BButton
                     variant="quiet-danger"
                     size="sm"
                     class="me-2"
                     aria-label="Trash"
-                    ><i class="bi bi-trash3"></i
-                  ></BButton>
+                  >
+                    <i class="bi bi-trash3"></i>
+                  </BButton>
                 </div>
               </li>
             </ul>
@@ -3110,18 +3275,17 @@
           >
             <div class="d-flex justify-content-between mb-3">
               <h3 class="fw-bold">Heading</h3>
-              <BButton variant="quiet-primary" size="sm" class="me-1"
-                ><i class="bi bi-three-dots-vertical"></i> Manage
-                settings</BButton
-              >
+              <BButton variant="quiet-primary" size="sm" class="me-1">
+                <i class="bi bi-three-dots-vertical"></i>Manage settings
+              </BButton>
             </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
               deserunt
               <a href="#" class="link-primary">dolorum fugiat (link-primary)</a>
               consectetur corporis corrupti nulla,
-              <a href="#">distinctio ipsum (default)</a> doloribus animi? Quae
-              ad sit quasi voluptate perferendis consequatur tempore fuga
+              <a href="#">distinctio ipsum (default)</a>doloribus animi? Quae ad
+              sit quasi voluptate perferendis consequatur tempore fuga
               repudiandae.
             </p>
 
@@ -3131,16 +3295,17 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </div>
                 <div>
-                  <BButton variant="quiet-primary" size="sm" class="me-1"
-                    ><i class="bi bi-pencil"></i> Edit</BButton
-                  >
+                  <BButton variant="quiet-primary" size="sm" class="me-1">
+                    <i class="bi bi-pencil"></i>Edit
+                  </BButton>
                   <BButton
                     variant="quiet-danger"
                     size="sm"
                     class="me-2"
                     aria-label="Trash"
-                    ><i class="bi bi-trash3"></i
-                  ></BButton>
+                  >
+                    <i class="bi bi-trash3"></i>
+                  </BButton>
                 </div>
               </li>
               <li class="d-flex justify-content-between mb-2">
@@ -3148,16 +3313,17 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </div>
                 <div>
-                  <BButton variant="quiet-primary" size="sm" class="me-1"
-                    ><i class="bi bi-pencil"></i> Edit</BButton
-                  >
+                  <BButton variant="quiet-primary" size="sm" class="me-1">
+                    <i class="bi bi-pencil"></i>Edit
+                  </BButton>
                   <BButton
                     variant="quiet-danger"
                     size="sm"
                     class="me-2"
                     aria-label="Trash"
-                    ><i class="bi bi-trash3"></i
-                  ></BButton>
+                  >
+                    <i class="bi bi-trash3"></i>
+                  </BButton>
                 </div>
               </li>
               <li class="d-flex justify-content-between mb-2">
@@ -3165,16 +3331,17 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </div>
                 <div>
-                  <BButton variant="quiet-primary" size="sm" class="me-1"
-                    ><i class="bi bi-pencil"></i> Edit</BButton
-                  >
+                  <BButton variant="quiet-primary" size="sm" class="me-1">
+                    <i class="bi bi-pencil"></i>Edit
+                  </BButton>
                   <BButton
                     variant="quiet-danger"
                     size="sm"
                     class="me-2"
                     aria-label="Trash"
-                    ><i class="bi bi-trash3"></i
-                  ></BButton>
+                  >
+                    <i class="bi bi-trash3"></i>
+                  </BButton>
                 </div>
               </li>
             </ul>
@@ -3193,18 +3360,17 @@
           >
             <div class="d-flex justify-content-between mb-3">
               <h3 class="fw-bold">Heading</h3>
-              <BButton variant="quiet-primary" size="sm" class="me-1"
-                ><i class="bi bi-three-dots-vertical"></i> Manage
-                settings</BButton
-              >
+              <BButton variant="quiet-primary" size="sm" class="me-1">
+                <i class="bi bi-three-dots-vertical"></i>Manage settings
+              </BButton>
             </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
               deserunt
               <a href="#" class="link-primary">dolorum fugiat (link-primary)</a>
               consectetur corporis corrupti nulla,
-              <a href="#">distinctio ipsum (default)</a> doloribus animi? Quae
-              ad sit quasi voluptate perferendis consequatur tempore fuga
+              <a href="#">distinctio ipsum (default)</a>doloribus animi? Quae ad
+              sit quasi voluptate perferendis consequatur tempore fuga
               repudiandae.
             </p>
 
@@ -3214,16 +3380,17 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </div>
                 <div>
-                  <BButton variant="quiet-primary" size="sm" class="me-1"
-                    ><i class="bi bi-pencil"></i> Edit</BButton
-                  >
+                  <BButton variant="quiet-primary" size="sm" class="me-1">
+                    <i class="bi bi-pencil"></i>Edit
+                  </BButton>
                   <BButton
                     variant="quiet-danger"
                     size="sm"
                     class="me-2"
                     aria-label="Trash"
-                    ><i class="bi bi-trash3"></i
-                  ></BButton>
+                  >
+                    <i class="bi bi-trash3"></i>
+                  </BButton>
                 </div>
               </li>
               <li class="d-flex justify-content-between mb-2">
@@ -3231,16 +3398,17 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </div>
                 <div>
-                  <BButton variant="quiet-primary" size="sm" class="me-1"
-                    ><i class="bi bi-pencil"></i> Edit</BButton
-                  >
+                  <BButton variant="quiet-primary" size="sm" class="me-1">
+                    <i class="bi bi-pencil"></i>Edit
+                  </BButton>
                   <BButton
                     variant="quiet-danger"
                     size="sm"
                     class="me-2"
                     aria-label="Trash"
-                    ><i class="bi bi-trash3"></i
-                  ></BButton>
+                  >
+                    <i class="bi bi-trash3"></i>
+                  </BButton>
                 </div>
               </li>
               <li class="d-flex justify-content-between mb-2">
@@ -3248,16 +3416,17 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </div>
                 <div>
-                  <BButton variant="quiet-primary" size="sm" class="me-1"
-                    ><i class="bi bi-pencil"></i> Edit</BButton
-                  >
+                  <BButton variant="quiet-primary" size="sm" class="me-1">
+                    <i class="bi bi-pencil"></i>Edit
+                  </BButton>
                   <BButton
                     variant="quiet-danger"
                     size="sm"
                     class="me-2"
                     aria-label="Trash"
-                    ><i class="bi bi-trash3"></i
-                  ></BButton>
+                  >
+                    <i class="bi bi-trash3"></i>
+                  </BButton>
                 </div>
               </li>
             </ul>
@@ -3282,7 +3451,31 @@
         </div>
       </BModal>
 
-      <hr />
+      <div class="d-flex justify-content-between bg-dark p-3 mt-5">
+        <div class="flex-fill">xxx</div>
+        <div class="me-3">
+          <SUser
+            :user-netid="'javerage'"
+            :signout-url="'/'"
+            :clear-override-url="'/'"
+          >
+            i am the logged in user, here is my info
+          </SUser>
+        </div>
+        <div>
+          <SUser
+            :user-netid="'javerage'"
+            :user-override="'billy'"
+            :photo-url="'https://randomuser.me/api/portraits/men/66.jpg'"
+            :signout-url="'/signout'"
+            :clear-override-url="'/'"
+          >
+            i am the override in user, here is my info
+          </SUser>
+        </div>
+      </div>
+
+      <hr>
       <h2 class="mb-5 fw-bold">Custom Utilities (solstice.scss)</h2>
 
       <h3>Hover</h3>
@@ -3331,44 +3524,46 @@
 </template>
 
 <script>
-import Layout from "@/layout.vue";
-import STabsList from "@/components/tabs/STabsList.vue";
-import STabsItem from "@/components/tabs/STabsItem.vue";
-import STabsDisplay from "@/components/tabs/STabsDisplay.vue";
-import STabsPanel from "@/components/tabs/STabsPanel.vue";
+  import Layout from "@/layout.vue";
+  import STabsList from "@/components/tabs/STabsList.vue";
+  import STabsItem from "@/components/tabs/STabsItem.vue";
+  import STabsDisplay from "@/components/tabs/STabsDisplay.vue";
+  import STabsPanel from "@/components/tabs/STabsPanel.vue";
 
-import SCountryCode from "@/components/SCountryCode.vue";
+  import SCountryCode from "@/components/SCountryCode.vue";
+  import SUser from "@/components/SUser.vue";
 
-import { BBadge, BButton, BCard, BModal } from "bootstrap-vue-next";
+  import { BBadge, BButton, BCard, BModal } from "bootstrap-vue-next";
 
-export default {
-  name: "PagesHome",
-  components: {
-    Layout,
-    STabsList,
-    STabsItem,
-    STabsDisplay,
-    STabsPanel,
-    SCountryCode,
-    BBadge,
-    BButton,
-    BCard,
-    BModal,
-  },
-  data() {
-    return {
-      pageTitle: "Getting started",
-      colorMode: "light",
-      modal: false,
-      emergencyCallingCode1: "1", // default to US
-      emergencyCallingCode2: "1", // default to US
-    };
-  },
-  updated() {
-    this.colorMode = document.documentElement.getAttribute("data-bs-theme");
-  },
-  methods: {},
-};
+  export default {
+    name: "PagesHome",
+    components: {
+      Layout,
+      STabsList,
+      STabsItem,
+      STabsDisplay,
+      STabsPanel,
+      SCountryCode,
+      SUser,
+      BBadge,
+      BButton,
+      BCard,
+      BModal,
+    },
+    data() {
+      return {
+        pageTitle: "Getting started",
+        colorMode: "light",
+        modal: false,
+        emergencyCallingCode1: "1", // default to US
+        emergencyCallingCode2: "1", // default to US
+      };
+    },
+    updated() {
+      this.colorMode = document.documentElement.getAttribute("data-bs-theme");
+    },
+    methods: {},
+  };
 </script>
 
 <script setup></script>

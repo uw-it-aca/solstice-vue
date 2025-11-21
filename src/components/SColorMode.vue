@@ -21,7 +21,7 @@
             href="#"
             role="button"
             @click="colorMode = 'light'"
-            ><i class="bi bi-brightness-high-fill"></i> Light</a
+            ><i class="bi bi-brightness-high-fill"></i>Light</a
           >
         </li>
         <li class="mb-1">
@@ -31,7 +31,7 @@
             href="#"
             role="button"
             @click="colorMode = 'dark'"
-            ><i class="bi bi-moon-stars-fill"></i> Dark</a
+            ><i class="bi bi-moon-stars-fill"></i>Dark</a
           >
         </li>
         <li>
@@ -41,7 +41,7 @@
             href="#"
             role="button"
             @click="colorMode = 'auto'"
-            ><i class="bi bi-circle-half"></i> Auto</a
+            ><i class="bi bi-circle-half"></i>Auto</a
           >
         </li>
       </ul>
@@ -49,23 +49,23 @@
   </div>
 </template>
 <script>
-import { useColorMode } from "@vueuse/core";
+  import { useColorMode } from "@vueuse/core";
 
-export default {
-  props: {
-    colorClass: {
-      type: String,
-      default: "text-body",
+  export default {
+    props: {
+      colorClass: {
+        type: String,
+        default: "text-body",
+      },
     },
-  },
-  // composition in options api requires setup()
-  setup() {
-    const colorMode = useColorMode({
-      emitAuto: true,
-      // bootstrap's dark theming attribute
-      attribute: "data-bs-theme",
-    });
-    return { colorMode };
-  },
-};
+    // composition in options api requires setup()
+    setup() {
+      const colorMode = useColorMode({
+        emitAuto: true,
+        // bootstrap's dark theming attribute
+        attribute: "data-bs-theme",
+      });
+      return { colorMode };
+    },
+  };
 </script>

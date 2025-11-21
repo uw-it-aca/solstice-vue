@@ -1,10 +1,10 @@
-import { createElementBlock as t, createCommentVNode as C, openBlock as l, renderSlot as s, createElementVNode as o, withKeys as oa, normalizeClass as b, withModifiers as va, resolveComponent as ka, normalizeStyle as ia, createVNode as wa, withCtx as Pa, createTextVNode as k, toDisplayString as E, createStaticVNode as ya, toRef as Ma, readonly as Ca, ref as Na, customRef as Ia, onMounted as La, nextTick as Ea, getCurrentInstance as ca, watch as X, getCurrentScope as Ra, onScopeDispose as Da, hasInjectionContext as pa, inject as Fa, computed as _, shallowRef as Z, toValue as F, watchEffect as Ba, unref as Ua, withDirectives as Q, vShow as aa, Fragment as ta, renderList as Ga } from "vue";
-const R = (a, e) => {
+import { createElementBlock as t, createCommentVNode as m, openBlock as l, renderSlot as f, createElementVNode as o, withKeys as oa, normalizeClass as h, withModifiers as Ba, resolveComponent as Ia, normalizeStyle as ia, createVNode as ka, withCtx as Ma, createTextVNode as p, toDisplayString as C, createStaticVNode as ya, toRef as Da, readonly as Ca, ref as Na, customRef as Ra, onMounted as La, nextTick as Ea, getCurrentInstance as ta, watch as _, getCurrentScope as pa, onScopeDispose as Ua, hasInjectionContext as ha, inject as Pa, computed as W, shallowRef as H, toValue as U, watchEffect as Fa, unref as Ga, withDirectives as $, vShow as aa, Fragment as ra, renderList as xa } from "vue";
+const D = (a, e) => {
   const n = a.__vccOpts || a;
   for (const [r, c] of e)
     n[r] = c;
   return n;
-}, xa = {
+}, Ka = {
   props: {
     variant: {
       type: String,
@@ -17,25 +17,25 @@ const R = (a, e) => {
       required: !0
     }
   }
-}, _a = ["id"], Oa = ["id"];
-function Va(a, e, n, r, c, i) {
+}, Wa = ["id"], Oa = ["id"];
+function Qa(a, e, n, r, c, i) {
   return n.variant == "underline" ? (l(), t("ul", {
     key: 0,
     class: "text-body nav nav-underline border-bottom",
     id: n.tabsId,
     role: "tablist"
   }, [
-    s(a.$slots, "default")
-  ], 8, _a)) : n.variant == "pills" ? (l(), t("ul", {
+    f(a.$slots, "default")
+  ], 8, Wa)) : n.variant == "pills" ? (l(), t("ul", {
     key: 1,
     class: "bg-body-tertiary text-body gap-1 rounded-3 p-1 nav nav-pills border",
     id: n.tabsId,
     role: "tablist"
   }, [
-    s(a.$slots, "default")
-  ], 8, Oa)) : C("", !0);
+    f(a.$slots, "default")
+  ], 8, Oa)) : m("", !0);
 }
-const So = /* @__PURE__ */ R(xa, [["render", Va]]), za = {
+const Qo = /* @__PURE__ */ D(Ka, [["render", Qa]]), Ya = {
   props: {
     tabsId: {
       // must match tab panelId
@@ -43,16 +43,16 @@ const So = /* @__PURE__ */ R(xa, [["render", Va]]), za = {
       required: !0
     }
   }
-}, Ka = ["id"];
-function ja(a, e, n, r, c, i) {
+}, ja = ["id"];
+function Va(a, e, n, r, c, i) {
   return l(), t("div", {
     class: "tab-content",
     id: n.tabsId + "Content"
   }, [
-    s(a.$slots, "default")
-  ], 8, Ka);
+    f(a.$slots, "default")
+  ], 8, ja);
 }
-const To = /* @__PURE__ */ R(za, [["render", ja]]), Za = {
+const Yo = /* @__PURE__ */ D(Ya, [["render", Va]]), Ha = {
   props: {
     variant: {
       type: String,
@@ -89,7 +89,7 @@ const To = /* @__PURE__ */ R(za, [["render", ja]]), Za = {
     },
     moveTab(a) {
       this.elements[a].click(), this.elements[a].focus(), Array.from(this.elements).forEach((e, n) => {
-        n == a ? e.tabIndex = 0 : e.tabIndex = -1;
+        n === a ? e.tabIndex = 0 : e.tabIndex = -1;
       });
     },
     moveNext(a) {
@@ -105,14 +105,14 @@ const To = /* @__PURE__ */ R(za, [["render", ja]]), Za = {
       this.moveTab(e);
     }
   }
-}, $a = {
+}, Ja = {
   class: "nav-item",
   role: "presentation"
-}, Ha = ["tabindex", "id", "data-bs-target", "aria-controls", "aria-selected"];
-function Wa(a, e, n, r, c, i) {
-  return l(), t("li", $a, [
+}, za = ["tabindex", "id", "data-bs-target", "aria-controls", "aria-selected"];
+function qa(a, e, n, r, c, i) {
+  return l(), t("li", Ja, [
     o("a", {
-      class: b(["nav-link", i.classObject]),
+      class: h(["nav-link", i.classObject]),
       href: "#",
       tabindex: [n.activeTab ? "0" : "-1"],
       id: n.panelId + "-tab",
@@ -128,11 +128,11 @@ function Wa(a, e, n, r, c, i) {
       ],
       onClick: e[2] || (e[2] = (...g) => i.onClick && i.onClick(...g))
     }, [
-      s(a.$slots, "default")
-    ], 42, Ha)
+      f(a.$slots, "default")
+    ], 42, za)
   ]);
 }
-const vo = /* @__PURE__ */ R(Za, [["render", Wa]]), qa = {
+const jo = /* @__PURE__ */ D(Ha, [["render", qa]]), Xa = {
   props: {
     panelId: {
       // must match tab panelId
@@ -149,20 +149,20 @@ const vo = /* @__PURE__ */ R(Za, [["render", Wa]]), qa = {
       document.getElementById(this.panelId + "-tab").focus();
     }
   }
-}, Ja = ["id", "aria-labelledby"];
-function Ya(a, e, n, r, c, i) {
+}, Za = ["id", "aria-labelledby"];
+function _a(a, e, n, r, c, i) {
   return l(), t("div", {
     id: n.panelId,
-    class: b(["tab-pane fade", { "show active": n.activePanel }]),
+    class: h(["tab-pane fade", { "show active": n.activePanel }]),
     role: "tabpanel",
     "aria-labelledby": n.panelId + "-tab",
     tabindex: "0",
-    onKeydown: e[0] || (e[0] = oa(va((...g) => i.setFocus && i.setFocus(...g), ["shift", "prevent"]), ["tab"]))
+    onKeydown: e[0] || (e[0] = oa(Ba((...g) => i.setFocus && i.setFocus(...g), ["shift", "prevent"]), ["tab"]))
   }, [
-    s(a.$slots, "default")
-  ], 42, Ja);
+    f(a.$slots, "default")
+  ], 42, Za);
 }
-const ko = /* @__PURE__ */ R(qa, [["render", Ya]]), Xa = {
+const Vo = /* @__PURE__ */ D(Xa, [["render", _a]]), $a = {
   inject: ["mq"],
   props: {
     appName: {
@@ -195,12 +195,12 @@ const ko = /* @__PURE__ */ R(qa, [["render", Ya]]), Xa = {
       default: !1
     }
   },
-  created: function() {
+  created() {
   }
-}, Qa = {
+}, ae = {
   key: 0,
   class: "py-2 px-3 small bg-black bg-opacity-10"
-}, ae = { class: "d-flex" }, ee = { class: "flex-fill text-end" }, ne = ["href"], oe = {
+}, ee = { class: "d-flex" }, ne = { class: "flex-fill text-end" }, oe = ["href"], ie = {
   key: 0,
   class: "btn btn-link btn-sm border border-1 border-light rounded-3 py-0 px-1 text-light d-lg-none me-2",
   "data-bs-toggle": "collapse",
@@ -209,52 +209,52 @@ const ko = /* @__PURE__ */ R(qa, [["render", Ya]]), Xa = {
   "aria-expanded": "false",
   "aria-controls": "sidebar-nav-collapse",
   "aria-label": "Toggle Navigation Menu"
-}, ie = {
+}, re = {
   key: 0,
   role: "navigation"
-}, re = {
+}, ce = {
   key: 1,
   class: "mb-3 text-light"
-}, ce = { class: "flex-fill" }, te = { key: 0 }, le = { class: "font-weight-light py-3 small" };
-function ue(a, e, n, r, c, i) {
-  const g = ka("router-link");
+}, te = { class: "flex-fill" }, le = { key: 0 }, ue = { class: "font-weight-light py-3 small" };
+function ge(a, e, n, r, c, i) {
+  const g = Ia("router-link");
   return l(), t("div", {
-    class: b([i.mq.mdMinus ? "" : "d-flex vh-100"]),
+    class: h([i.mq.mdMinus ? "" : "d-flex vh-100"]),
     style: ia([n.isPreview ? "min-height: auto !important;" : ""])
   }, [
     o("div", {
-      class: b([n.sidebarClass + [i.mq.mdMinus ? "" : " overflow-auto"], "sol-sidebar d-flex flex-column"]),
+      class: h([n.sidebarClass + [i.mq.mdMinus ? "" : " overflow-auto"], "sol-sidebar d-flex flex-column"]),
       style: ia([i.mq.mdMinus ? "" : "min-width: 280px; max-width:280px;"])
     }, [
       o("header", null, [
-        a.$slots.profile ? (l(), t("div", Qa, [
-          s(a.$slots, "profile", {}, () => [
-            o("div", ae, [
+        a.$slots.profile ? (l(), t("div", ae, [
+          f(a.$slots, "profile", {}, () => [
+            o("div", ee, [
               e[0] || (e[0] = o("div", { class: "flex-fill" }, "username", -1)),
-              o("div", ee, [
+              o("div", ne, [
                 o("a", {
                   href: n.signOutUrl,
                   class: "text-white"
-                }, "Sign out", 8, ne)
+                }, "Sign out", 8, oe)
               ])
             ])
           ])
-        ])) : C("", !0),
+        ])) : m("", !0),
         o("div", {
-          class: b([[i.mq.lgMinus ? "sol-sidebar-brand-sm" : "sol-sidebar-brand"], "px-3"])
+          class: h([[i.mq.lgMinus ? "sol-sidebar-brand-sm" : "sol-sidebar-brand"], "px-3"])
         }, [
-          a.$slots.navigation ? (l(), t("a", oe, [...e[1] || (e[1] = [
+          a.$slots.navigation ? (l(), t("a", ie, [...e[1] || (e[1] = [
             o("i", { class: "bi bi-list fw-bold fs-6" }, null, -1)
-          ])])) : C("", !0),
+          ])])) : m("", !0),
           o("div", {
-            class: b(["d-inline align-middle", [i.mq.mdPlus ? "h2" : "h3"]])
+            class: h(["d-inline align-middle", [i.mq.mdPlus ? "h2" : "h3"]])
           }, [
-            wa(g, {
+            ka(g, {
               to: n.appRootUrl,
               class: "ff-encode-sans text-decoration-none text-light"
             }, {
-              default: Pa(() => [
-                k(E(n.appName), 1)
+              default: Ma(() => [
+                p(C(n.appName), 1)
               ]),
               _: 1
             }, 8, ["to"])
@@ -263,12 +263,12 @@ function ue(a, e, n, r, c, i) {
       ]),
       o("div", {
         id: "sidebar-nav-collapse",
-        class: b(["px-3 flex-fill", [
+        class: h(["px-3 flex-fill", [
           i.mq.mdMinus ? "collapse" : "collapse.show d-flex flex-column justify-content-between"
         ]])
       }, [
-        a.$slots.navigation ? (l(), t("nav", ie, [
-          s(a.$slots, "navigation", {}, () => [
+        a.$slots.navigation ? (l(), t("nav", re, [
+          f(a.$slots, "navigation", {}, () => [
             e[2] || (e[2] = o("ul", { class: "text-white" }, [
               o("li", null, "nav 1"),
               o("li", null, "nav 2"),
@@ -276,39 +276,39 @@ function ue(a, e, n, r, c, i) {
               o("li", null, "nav 4")
             ], -1))
           ])
-        ])) : C("", !0),
-        a.$slots.aside ? (l(), t("aside", re, [
-          s(a.$slots, "aside", {}, () => [
-            e[3] || (e[3] = k("this is aside content", -1))
+        ])) : m("", !0),
+        a.$slots.aside ? (l(), t("aside", ce, [
+          f(a.$slots, "aside", {}, () => [
+            e[3] || (e[3] = p("this is aside content", -1))
           ])
-        ])) : C("", !0)
+        ])) : m("", !0)
       ], 2),
       e[4] || (e[4] = o("div", { class: "sol-sidebar-logo" }, " ", -1))
     ], 6),
     o("div", {
       id: "scrollbody",
-      class: b([[i.mq.mdMinus ? "" : "flex-fill overflow-y-scroll"], "d-flex bg-body text-body"]),
+      class: h([[i.mq.mdMinus ? "" : "flex-fill overflow-y-scroll"], "d-flex bg-body text-body"]),
       style: { "padding-top": "37px !important" }
     }, [
       o("div", {
-        class: b([[i.mq.lgPlus ? "px-5" : ""], "container-xl d-flex flex-column"])
+        class: h([[i.mq.lgPlus ? "px-5" : ""], "container-xl d-flex flex-column"])
       }, [
-        o("main", ce, [
-          s(a.$slots, "main")
+        o("main", te, [
+          f(a.$slots, "main")
         ]),
-        a.$slots.footer ? (l(), t("footer", te, [
-          s(a.$slots, "footer", {}, () => [
-            o("div", le, [
+        a.$slots.footer ? (l(), t("footer", le, [
+          f(a.$slots, "footer", {}, () => [
+            o("div", ue, [
               e[5] || (e[5] = ya('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/">Terms</a></li></ul>', 1)),
-              o("div", null, " Copyright © " + E((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
+              o("div", null, " Copyright © " + C((/* @__PURE__ */ new Date()).getFullYear()) + "University of Washington ", 1)
             ])
           ])
-        ])) : C("", !0)
+        ])) : m("", !0)
       ], 2)
     ], 2)
   ], 6);
 }
-const wo = /* @__PURE__ */ R(Xa, [["render", ue]]), ge = {
+const Ho = /* @__PURE__ */ D($a, [["render", ge]]), de = {
   inject: ["mq"],
   props: {
     appName: {
@@ -336,15 +336,15 @@ const wo = /* @__PURE__ */ R(Xa, [["render", ue]]), ge = {
   data() {
     return {};
   },
-  created: function() {
+  created() {
   }
-}, de = {
+}, se = {
   key: 0,
   class: "w-100"
-}, fe = { class: "w-100" }, se = {
+}, fe = { class: "w-100" }, me = {
   key: 0,
   class: "bg-black bg-opacity-10 text-white py-2 small"
-}, me = { class: "container-xl" }, ye = { class: "axdd-topbar-brand" }, Ce = { class: "container-xl axdd-topbar-logo" }, Ne = {
+}, ye = { class: "container-xl" }, Ce = { class: "axdd-topbar-brand" }, Ne = { class: "container-xl axdd-topbar-logo" }, Le = {
   key: 0,
   class: "btn btn-link btn-sm d-xl-none border border-1 border-light rounded-3 py-0 px-1 text-white me-2",
   "data-bs-toggle": "collapse",
@@ -353,106 +353,106 @@ const wo = /* @__PURE__ */ R(Xa, [["render", ue]]), ge = {
   "aria-expanded": "false",
   "aria-controls": "topbar-nav-collapse",
   "aria-label": "Toggle Navigation Menu"
-}, Le = ["href"], Ee = { class: "container-xl" }, pe = { class: "row" }, he = {
+}, Ee = ["href"], pe = { class: "container-xl" }, he = { class: "row" }, Ae = {
   key: 0,
   role: "navigation"
-}, be = { key: 1 }, Ae = { class: "col-xl" }, Se = { key: 0 }, Te = {
+}, Se = { key: 1 }, be = { class: "col-xl" }, Te = { key: 0 }, ve = {
   key: 1,
   class: "col-sm col-xl-3"
-}, ve = { class: "w-100" }, ke = {
+}, we = { class: "w-100" }, Be = {
   key: 0,
   class: "bg-dark text-white py-2 small"
-}, we = { class: "container-xl" }, Pe = { class: "text-white font-weight-light py-3" };
+}, Ie = { class: "container-xl" }, ke = { class: "text-white font-weight-light py-3" };
 function Me(a, e, n, r, c, i) {
   return l(), t("div", {
-    class: b([n.topbarClass + [n.isPreview ? " " : " min-vh-100"], "d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"])
+    class: h([n.topbarClass + [n.isPreview ? " " : " min-vh-100"], "d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"])
   }, [
-    a.$slots.system ? (l(), t("div", de, [
-      s(a.$slots, "system", {}, () => [
-        e[0] || (e[0] = k("System messages", -1))
+    a.$slots.system ? (l(), t("div", se, [
+      f(a.$slots, "system", {}, () => [
+        e[0] || (e[0] = p("System messages", -1))
       ])
-    ])) : C("", !0),
+    ])) : m("", !0),
     o("header", fe, [
-      a.$slots.profile ? (l(), t("div", se, [
-        o("div", me, [
-          s(a.$slots, "profile", {}, () => [
-            e[1] || (e[1] = k("Welcome!", -1))
+      a.$slots.profile ? (l(), t("div", me, [
+        o("div", ye, [
+          f(a.$slots, "profile", {}, () => [
+            e[1] || (e[1] = p("Welcome!", -1))
           ])
         ])
-      ])) : C("", !0),
-      o("div", ye, [
-        o("div", Ce, [
-          a.$slots.navigation ? (l(), t("a", Ne, [...e[2] || (e[2] = [
+      ])) : m("", !0),
+      o("div", Ce, [
+        o("div", Ne, [
+          a.$slots.navigation ? (l(), t("a", Le, [...e[2] || (e[2] = [
             o("i", { class: "bi bi-list fw-bold text-white fs-6" }, null, -1)
-          ])])) : C("", !0),
+          ])])) : m("", !0),
           o("div", {
-            class: b(["d-inline align-middle text-white", [i.mq.xlPlus ? "h2" : "h3"]])
+            class: h(["d-inline align-middle text-white", [i.mq.xlPlus ? "h2" : "h3"]])
           }, [
             o("a", {
               href: n.appRootUrl,
               class: "ff-encode-sans text-white text-decoration-none"
-            }, E(n.appName), 9, Le)
+            }, C(n.appName), 9, Ee)
           ], 2)
         ])
       ])
     ]),
     o("div", {
-      class: b([n.backgroundClass, "w-100 flex-fill text-body"])
+      class: h([n.backgroundClass, "w-100 flex-fill text-body"])
     }, [
-      o("div", Ee, [
-        o("div", pe, [
+      o("div", pe, [
+        o("div", he, [
           a.$slots.navigation ? (l(), t("div", {
             key: 0,
             style: ia(i.mq.xlPlus ? "min-width: 272px; max-width: 272px" : "")
           }, [
             o("div", {
               id: "topbar-nav-collapse",
-              class: b([i.mq.xlPlus ? "collapse.show" : "collapse"])
+              class: h([i.mq.xlPlus ? "collapse.show" : "collapse"])
             }, [
-              a.$slots.navigation ? (l(), t("nav", he, [
-                s(a.$slots, "navigation")
-              ])) : C("", !0),
-              a.$slots.navigation && a.$slots.aside ? (l(), t("aside", be, [
-                s(a.$slots, "aside", {}, () => [
-                  e[3] || (e[3] = k("Aside content", -1))
+              a.$slots.navigation ? (l(), t("nav", Ae, [
+                f(a.$slots, "navigation")
+              ])) : m("", !0),
+              a.$slots.navigation && a.$slots.aside ? (l(), t("aside", Se, [
+                f(a.$slots, "aside", {}, () => [
+                  e[3] || (e[3] = p("Aside content", -1))
                 ])
-              ])) : C("", !0)
+              ])) : m("", !0)
             ], 2)
-          ], 4)) : C("", !0),
-          o("main", Ae, [
-            a.$slots.bar ? (l(), t("div", Se, [
-              s(a.$slots, "bar")
-            ])) : C("", !0),
-            s(a.$slots, "main", {}, () => [
+          ], 4)) : m("", !0),
+          o("main", be, [
+            a.$slots.bar ? (l(), t("div", Te, [
+              f(a.$slots, "bar")
+            ])) : m("", !0),
+            f(a.$slots, "main", {}, () => [
               e[4] || (e[4] = o("div", { style: { outline: "dashed 1px lightgray" } }, [
                 o("h1", null, "Hello world..."),
                 o("p", null, " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa. ")
               ], -1))
             ])
           ]),
-          !a.$slots.navigation && a.$slots.aside ? (l(), t("aside", Te, [
-            s(a.$slots, "aside", {}, () => [
-              e[5] || (e[5] = k("Aside content", -1))
+          !a.$slots.navigation && a.$slots.aside ? (l(), t("aside", ve, [
+            f(a.$slots, "aside", {}, () => [
+              e[5] || (e[5] = p("Aside content", -1))
             ])
-          ])) : C("", !0)
+          ])) : m("", !0)
         ])
       ])
     ], 2),
-    o("footer", ve, [
-      a.$slots.footer ? (l(), t("div", ke, [
-        o("div", we, [
-          s(a.$slots, "footer", {}, () => [
-            o("div", Pe, [
+    o("footer", we, [
+      a.$slots.footer ? (l(), t("div", Be, [
+        o("div", Ie, [
+          f(a.$slots, "footer", {}, () => [
+            o("div", ke, [
               e[6] || (e[6] = ya('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/" class="link-light link-opacity-50 link-opacity-75-hover link-underline-opacity-50 link-underline-opacity-75-hover">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/" class="link-light link-opacity-50 link-opacity-75-hover link-underline-opacity-50 link-underline-opacity-75-hover">Terms</a></li></ul>', 1)),
-              o("div", null, " Copyright © " + E((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
+              o("div", null, " Copyright © " + C((/* @__PURE__ */ new Date()).getFullYear()) + "University of Washington ", 1)
             ])
           ])
         ])
-      ])) : C("", !0)
+      ])) : m("", !0)
     ])
   ], 2);
 }
-const Po = /* @__PURE__ */ R(ge, [["render", Me]]), Ie = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAhCAYAAACbffiEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5QjA3NEU2NTJDQTkxMUU0QTcxOEIwNEIyRTA4NDYxMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5QjA3NEU2NjJDQTkxMUU0QTcxOEIwNEIyRTA4NDYxMyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjlCMDc0RTYzMkNBOTExRTRBNzE4QjA0QjJFMDg0NjEzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjlCMDc0RTY0MkNBOTExRTRBNzE4QjA0QjJFMDg0NjEzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+TGF1VAAAA3RJREFUeNq0mEtPFEEQx2dXQAUPIohE4ysKvpAVBeIDFCNREw8eMTHePHjycxg9e/ATePGgB02MgLK74mNBASUxqBj1YEQMGFxYdsX1P0ltHDvVM1WzayU/Hv2o7pruqq7uSD6fTzmOUw1+OeFkJYiDC0zdPnALLIE8lUVAOTgHnjN9roEeMC8cfxW4WYYf28FqpzjZYik/A7ZZ6rothmwAG5Xjr486pZElS3mHT59jlvLfIcbPl8oQTtaBNp/6JlBfqsGi/1HPQVDjtx3ATqY8EnYCCyAL0mBR2C9D7QsOucC06RLoOWHR7ZDutOf/f7YS1RfGX4wgau3AH8tADtSC26AuYALXwVVQRR/jJ/joqXf1PQMHAvTcB6eZlaomX5kDV8B5o81dcBlU0FgzDgwx6csHyz2mn5dGkBbomQb1PnqiIMn0u2S25fZ2v2BL7AFrfeo7QaVATw05vU22MgEjS6sd6KQpwQQ2WRxV4x8FOR4QoiuMsnfgldSQb4IJHPU56TsUhrQrP0iCy0I4Q2aEq3LEUu46+GaFIS2WMF1pGSOpOUcGBROIWaLbIeVZ4BqxnylvZlKfBa0hSUl+A3Yz5adCnGeHLf5hzu8l+KQxZBR8FUygi0n4mkIY0iH0j0FbLmYzZBY8CeGoMcqxtNJihHN3y7Yy7R6GybWGBBNoo2ygICeZNl8Ed4sa47xoN/S6Mk1bS22I5GCs9Thq1LJFboA3ytXtZOqH6aOoDZkAnxWO2kAnvil3wJjS37qZ+njYNP6731J6pNUTdlcYdR/AiDCc7wJr6EbZyNQPFHMfSQj9pNySkqc8YTPoTaCOVjRG93CvTIJxv85lAcrjwgPtLNjL1PXS79e0Og0Bujot9/8RiqShV8T1k/cBbdz7wEXmkSHjyVIzlocGU3osacmDYq+6s1ymaTnNze3w1tgOAwI9zUy2kJN8BMmdvS/kPT5uvK6kFFfpwLQ9jCFDIQ15bPw/blyHpZKgVSnakDH6KhpJM4bkhMmoKY9K9Rw0T1FDIy8sh+lTpZ4f3LW2mHetfuUEks7ft15zu2UVeiboDCmZIcOO7pHbFqEmKZpJpVfzQCeRUduFhpEpn9QmI90q2q0oNWRRmC8VVm9KEc38cj3pmIEpihk93Be/OZ82VYLtkKBJLnfsL+9VdA5NSyf3R4ABABbMYvghpWrNAAAAAElFTkSuQmCC", Re = {
+const Jo = /* @__PURE__ */ D(de, [["render", Me]]), De = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAhCAYAAACbffiEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5QjA3NEU2NTJDQTkxMUU0QTcxOEIwNEIyRTA4NDYxMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5QjA3NEU2NjJDQTkxMUU0QTcxOEIwNEIyRTA4NDYxMyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjlCMDc0RTYzMkNBOTExRTRBNzE4QjA0QjJFMDg0NjEzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjlCMDc0RTY0MkNBOTExRTRBNzE4QjA0QjJFMDg0NjEzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+TGF1VAAAA3RJREFUeNq0mEtPFEEQx2dXQAUPIohE4ysKvpAVBeIDFCNREw8eMTHePHjycxg9e/ATePGgB02MgLK74mNBASUxqBj1YEQMGFxYdsX1P0ltHDvVM1WzayU/Hv2o7pruqq7uSD6fTzmOUw1+OeFkJYiDC0zdPnALLIE8lUVAOTgHnjN9roEeMC8cfxW4WYYf28FqpzjZYik/A7ZZ6rothmwAG5Xjr486pZElS3mHT59jlvLfIcbPl8oQTtaBNp/6JlBfqsGi/1HPQVDjtx3ATqY8EnYCCyAL0mBR2C9D7QsOucC06RLoOWHR7ZDutOf/f7YS1RfGX4wgau3AH8tADtSC26AuYALXwVVQRR/jJ/joqXf1PQMHAvTcB6eZlaomX5kDV8B5o81dcBlU0FgzDgwx6csHyz2mn5dGkBbomQb1PnqiIMn0u2S25fZ2v2BL7AFrfeo7QaVATw05vU22MgEjS6sd6KQpwQQ2WRxV4x8FOR4QoiuMsnfgldSQb4IJHPU56TsUhrQrP0iCy0I4Q2aEq3LEUu46+GaFIS2WMF1pGSOpOUcGBROIWaLbIeVZ4BqxnylvZlKfBa0hSUl+A3Yz5adCnGeHLf5hzu8l+KQxZBR8FUygi0n4mkIY0iH0j0FbLmYzZBY8CeGoMcqxtNJihHN3y7Yy7R6GybWGBBNoo2ygICeZNl8Ed4sa47xoN/S6Mk1bS22I5GCs9Thq1LJFboA3ytXtZOqH6aOoDZkAnxWO2kAnvil3wJjS37qZ+njYNP6731J6pNUTdlcYdR/AiDCc7wJr6EbZyNQPFHMfSQj9pNySkqc8YTPoTaCOVjRG93CvTIJxv85lAcrjwgPtLNjL1PXS79e0Og0Bujot9/8RiqShV8T1k/cBbdz7wEXmkSHjyVIzlocGU3osacmDYq+6s1ymaTnNze3w1tgOAwI9zUy2kJN8BMmdvS/kPT5uvK6kFFfpwLQ9jCFDIQ15bPw/blyHpZKgVSnakDH6KhpJM4bkhMmoKY9K9Rw0T1FDIy8sh+lTpZ4f3LW2mHetfuUEks7ft15zu2UVeiboDCmZIcOO7pHbFqEmKZpJpVfzQCeRUduFhpEpn9QmI90q2q0oNWRRmC8VVm9KEc38cj3pmIEpihk93Be/OZ82VYLtkKBJLnfsL+9VdA5NSyf3R4ABABbMYvghpWrNAAAAAElFTkSuQmCC", Re = {
   inject: ["mq"],
   props: {
     appName: {
@@ -481,10 +481,10 @@ const Po = /* @__PURE__ */ R(ge, [["render", Me]]), Ie = "data:image/png;base64,
       default: "https://www.washington.edu/online/terms/"
     }
   }
-}, De = { class: "w-100 bg-spirit-purple" }, Fe = { class: "container-xl" }, Be = { class: "d-flex justify-content-between align-items-center" }, Ue = { class: "w-50 d-flex align-items-center my-4" }, Ge = { class: "text-white d-flex flex-column" }, xe = {
+}, Ue = { class: "w-100 bg-spirit-purple" }, Pe = { class: "container-xl" }, Fe = { class: "d-flex justify-content-between align-items-center" }, Ge = { class: "w-50 d-flex align-items-center my-4" }, xe = { class: "text-white d-flex flex-column" }, Ke = {
   key: 0,
   class: "fw-light text-nowrap mb-1 lh-1"
-}, _e = ["href"], Oe = { class: "w-50 d-flex justify-content-end align-items-center" }, Ve = {
+}, We = ["href"], Oe = { class: "w-50 d-flex justify-content-end align-items-center" }, Qe = {
   key: 1,
   class: "ms-1 btn btn-link btn-sm d-xl-none py-0 py-1 text-white",
   "data-bs-toggle": "collapse",
@@ -492,121 +492,121 @@ const Po = /* @__PURE__ */ R(ge, [["render", Me]]), Ie = "data:image/png;base64,
   "aria-controls": "navbarToggler",
   "aria-expanded": "false",
   "aria-label": "Toggle navigation"
-}, ze = {
+}, Ye = {
   key: 0,
   class: "navbar navbar-expand-xl w-100 p-0 py-xl-2 bg-husky-purple"
-}, Ke = { class: "container-xl" }, je = {
+}, je = { class: "container-xl" }, Ve = {
   class: "collapse navbar-collapse",
   id: "navbarToggler"
-}, Ze = {
+}, He = {
   key: 1,
   class: "bg-info-subtle w-100"
-}, $e = { class: "container-xl" }, He = { class: "container-xl flex-fill" }, We = { class: "row" }, qe = { class: "col" }, Je = {
+}, Je = { class: "container-xl" }, ze = { class: "container-xl flex-fill" }, qe = { class: "row" }, Xe = { class: "col" }, Ze = {
   key: 0,
   class: "col-sm-12 col-xl-3"
-}, Ye = { class: "bg-dark w-100" }, Xe = { class: "container-xl" }, Qe = { class: "row" }, an = { class: "col small font-weight-light my-4" }, en = { class: "list-inline m-0" }, nn = { class: "list-inline-item" }, on = ["href"], rn = { class: "list-inline-item" }, cn = ["href"], tn = { class: "text-light" };
-function ln(a, e, n, r, c, i) {
+}, _e = { class: "bg-dark w-100" }, $e = { class: "container-xl" }, an = { class: "row" }, en = { class: "col small font-weight-light my-4" }, nn = { class: "list-inline m-0" }, on = { class: "list-inline-item" }, rn = ["href"], cn = { class: "list-inline-item" }, tn = ["href"], ln = { class: "text-light" };
+function un(a, e, n, r, c, i) {
   return l(), t("div", {
-    class: b([[n.isPreview ? " " : " min-vh-100"], "d-flex align-items-end flex-column sol-topbar-neo"])
+    class: h([[n.isPreview ? " " : " min-vh-100"], "d-flex align-items-end flex-column sol-topbar-neo"])
   }, [
-    o("header", De, [
-      o("div", Fe, [
-        o("div", Be, [
-          o("div", Ue, [
+    o("header", Ue, [
+      o("div", Pe, [
+        o("div", Fe, [
+          o("div", Ge, [
             e[0] || (e[0] = o("div", { class: "border-end border-white border-opacity-25 pe-3 me-3" }, [
               o("img", {
-                src: Ie,
+                src: De,
                 alt: "UW logo",
                 class: "my-1",
                 style: { height: "38px" }
               })
             ], -1)),
-            o("div", Ge, [
-              n.appDeptName ? (l(), t("div", xe, E(n.appDeptName), 1)) : C("", !0),
+            o("div", xe, [
+              n.appDeptName ? (l(), t("div", Ke, C(n.appDeptName), 1)) : m("", !0),
               o("a", {
                 href: n.appRootUrl,
                 class: "ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium lh-1"
-              }, E(n.appName), 9, _e)
+              }, C(n.appName), 9, We)
             ])
           ]),
           o("div", Oe, [
-            a.$slots.settings ? s(a.$slots, "settings", { key: 0 }, () => [
-              e[1] || (e[1] = k("user info", -1))
-            ]) : C("", !0),
-            a.$slots.navigation ? (l(), t("a", Ve, [...e[2] || (e[2] = [
+            a.$slots.settings ? f(a.$slots, "settings", { key: 0 }, () => [
+              e[1] || (e[1] = p("user info", -1))
+            ]) : m("", !0),
+            a.$slots.navigation ? (l(), t("a", Qe, [...e[2] || (e[2] = [
               o("i", { class: "bi bi-list text-light fs-3" }, null, -1)
-            ])])) : C("", !0)
+            ])])) : m("", !0)
           ])
         ])
       ])
     ]),
-    a.$slots.navigation ? (l(), t("nav", ze, [
-      o("div", Ke, [
-        o("div", je, [
-          s(a.$slots, "navigation", {}, () => [
-            e[3] || (e[3] = k("navigation bar", -1))
+    a.$slots.navigation ? (l(), t("nav", Ye, [
+      o("div", je, [
+        o("div", Ve, [
+          f(a.$slots, "navigation", {}, () => [
+            e[3] || (e[3] = p("navigation bar", -1))
           ])
         ])
       ])
-    ])) : C("", !0),
-    a.$slots.system ? (l(), t("div", Ze, [
-      o("div", $e, [
-        s(a.$slots, "system", {}, () => [
-          e[4] || (e[4] = k("system messages", -1))
+    ])) : m("", !0),
+    a.$slots.system ? (l(), t("div", He, [
+      o("div", Je, [
+        f(a.$slots, "system", {}, () => [
+          e[4] || (e[4] = p("system messages", -1))
         ])
       ])
-    ])) : C("", !0),
-    o("div", He, [
-      o("div", We, [
-        o("main", qe, [
-          s(a.$slots, "main", {}, () => [
+    ])) : m("", !0),
+    o("div", ze, [
+      o("div", qe, [
+        o("main", Xe, [
+          f(a.$slots, "main", {}, () => [
             e[5] || (e[5] = o("div", { style: { outline: "dashed 1px lightgray" } }, [
               o("h1", null, "Hello world..."),
               o("p", null, " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa. ")
             ], -1))
           ])
         ]),
-        a.$slots.aside ? (l(), t("aside", Je, [
-          s(a.$slots, "aside", {}, () => [
-            e[6] || (e[6] = k("aside content", -1))
+        a.$slots.aside ? (l(), t("aside", Ze, [
+          f(a.$slots, "aside", {}, () => [
+            e[6] || (e[6] = p("aside content", -1))
           ])
-        ])) : C("", !0)
+        ])) : m("", !0)
       ])
     ]),
-    o("footer", Ye, [
-      o("div", Xe, [
-        a.$slots.footer ? s(a.$slots, "footer", { key: 0 }, () => [
-          o("div", Qe, [
-            o("div", an, [
-              o("ul", en, [
-                o("li", nn, [
+    o("footer", _e, [
+      o("div", $e, [
+        a.$slots.footer ? f(a.$slots, "footer", { key: 0 }, () => [
+          o("div", an, [
+            o("div", en, [
+              o("ul", nn, [
+                o("li", on, [
                   n.privacyURL ? (l(), t("a", {
                     key: 0,
                     href: n.privacyURL,
                     target: "_blank",
                     rel: "noopener",
                     class: "link-light"
-                  }, "Privacy", 8, on)) : C("", !0)
+                  }, "Privacy", 8, rn)) : m("", !0)
                 ]),
-                o("li", rn, [
+                o("li", cn, [
                   n.termsURL ? (l(), t("a", {
                     key: 0,
                     href: n.termsURL,
                     target: "_blank",
                     rel: "noopener",
                     class: "link-light"
-                  }, "Terms", 8, cn)) : C("", !0)
+                  }, "Terms", 8, tn)) : m("", !0)
                 ])
               ]),
-              o("div", tn, " Copyright © " + E((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
+              o("div", ln, " Copyright © " + C((/* @__PURE__ */ new Date()).getFullYear()) + "University of Washington ", 1)
             ])
           ])
-        ]) : C("", !0)
+        ]) : m("", !0)
       ])
     ])
   ], 2);
 }
-const Mo = /* @__PURE__ */ R(Re, [["render", ln]]), un = {
+const zo = /* @__PURE__ */ D(Re, [["render", un]]), gn = {
   props: {
     variant: {
       type: String,
@@ -636,13 +636,13 @@ const Mo = /* @__PURE__ */ R(Re, [["render", ln]]), un = {
       type: String
     }
   },
-  data: function() {
+  data() {
     return {};
   }
-}, gn = {
+}, dn = {
   key: 0,
   class: "d-flex align-items-center"
-}, dn = { class: "flex-fill dropdown" }, fn = {
+}, sn = { class: "flex-fill dropdown" }, fn = {
   key: 0,
   class: "text-white text-decoration-none py-2",
   href: "#",
@@ -650,7 +650,7 @@ const Mo = /* @__PURE__ */ R(Re, [["render", ln]]), un = {
   id: "dropdownMenuButton1",
   "data-bs-toggle": "dropdown",
   "aria-expanded": "false"
-}, sn = { class: "me-1" }, mn = { class: "text-decoration-underline" }, yn = {
+}, mn = { class: "me-1" }, yn = { class: "text-decoration-underline" }, Cn = {
   key: 1,
   class: "text-white text-decoration-none py-2",
   href: "#",
@@ -658,111 +658,119 @@ const Mo = /* @__PURE__ */ R(Re, [["render", ln]]), un = {
   id: "dropdownMenuButton1",
   "data-bs-toggle": "dropdown",
   "aria-expanded": "false"
-}, Cn = {
+}, Nn = {
   class: "dropdown-menu p-3",
   "aria-labelledby": "dropdownMenuButton1",
   style: { width: "220px" }
-}, Nn = {
+}, Ln = {
   key: 0,
   class: "text-danger"
-}, Ln = { class: "" }, En = { class: "" }, pn = ["href"], hn = ["href"], bn = {
+}, En = { class: "" }, pn = { class: "" }, hn = ["href"], An = ["href"], Sn = {
   key: 1,
   class: "d-flex align-items-center text-nowrap"
-}, An = {
+}, bn = {
   key: 0,
   class: "flex-fill text-white"
-}, Sn = { class: "me-1" }, Tn = {
+}, Tn = { class: "me-1" }, vn = {
   key: 1,
   class: "flex-fill text-white"
-}, vn = { class: "flex-fill text-end ms-2" }, kn = ["href"];
-function wn(a, e, n, r, c, i) {
-  return n.variant === "flyout" ? (l(), t("div", gn, [
-    o("div", dn, [
+}, wn = { class: "flex-fill text-end ms-2" }, Bn = ["href"];
+function In(a, e, n, r, c, i) {
+  return n.variant === "flyout" ? (l(), t("div", dn, [
+    o("div", sn, [
       n.userOverride ? (l(), t("a", fn, [
-        o("span", sn, E(n.userNetid), 1),
+        o("span", mn, C(n.userNetid), 1),
         e[0] || (e[0] = o("i", { class: "bi bi-arrow-right text-danger me-1" }, null, -1)),
-        o("span", mn, E(n.userOverride), 1)
-      ])) : (l(), t("a", yn, E(n.userNetid), 1)),
-      o("div", Cn, [
-        n.userOverride ? (l(), t("p", Nn, [
-          e[1] || (e[1] = k(" overriding as ", -1)),
+        o("span", yn, C(n.userOverride), 1)
+      ])) : (l(), t("a", Cn, C(n.userNetid), 1)),
+      o("div", Nn, [
+        n.userOverride ? (l(), t("p", Ln, [
+          e[1] || (e[1] = p(" overriding as ", -1)),
           e[2] || (e[2] = o("i", { class: "bi bi-arrow-right text-danger" }, null, -1)),
-          k(" " + E(n.userOverride), 1)
-        ])) : C("", !0),
-        o("p", Ln, E(n.userOfficialName) + ", " + E(n.userPreferredName) + ", " + E(n.userPronouns), 1),
-        o("p", En, [
-          o("a", { href: n.profileUrl }, "go to profile", 8, pn)
+          p(" " + C(n.userOverride), 1)
+        ])) : m("", !0),
+        o("p", En, C(n.userOfficialName) + ", " + C(n.userPreferredName) + ", " + C(n.userPronouns), 1),
+        o("p", pn, [
+          o("a", { href: n.profileUrl }, "go to profile", 8, hn)
         ]),
         o("div", null, [
-          n.signoutUrl ? s(a.$slots, "default", { key: 0 }, () => [
-            o("a", { href: n.signoutUrl }, "Sign out", 8, hn)
-          ]) : s(a.$slots, "default", { key: 1 }, () => [
+          n.signoutUrl ? f(a.$slots, "default", { key: 0 }, () => [
+            o("a", { href: n.signoutUrl }, "Sign out", 8, An)
+          ]) : f(a.$slots, "default", { key: 1 }, () => [
             e[3] || (e[3] = o("a", { href: "sadkf" }, "sign out test", -1))
           ])
         ])
       ])
     ])
-  ])) : (l(), t("div", bn, [
-    n.userOverride ? (l(), t("div", An, [
-      o("span", Sn, E(n.userNetid), 1),
+  ])) : (l(), t("div", Sn, [
+    n.userOverride ? (l(), t("div", bn, [
+      o("span", Tn, C(n.userNetid), 1),
       e[4] || (e[4] = o("i", { class: "bi bi-arrow-right text-danger" }, null, -1)),
-      k(" " + E(n.userOverride), 1)
-    ])) : (l(), t("div", Tn, E(n.userNetid), 1)),
-    o("div", vn, [
-      n.signoutUrl ? s(a.$slots, "default", { key: 0 }, () => [
+      p(" " + C(n.userOverride), 1)
+    ])) : (l(), t("div", vn, C(n.userNetid), 1)),
+    o("div", wn, [
+      n.signoutUrl ? f(a.$slots, "default", { key: 0 }, () => [
         o("a", {
           href: n.signoutUrl,
           class: "text-white"
-        }, "Sign out", 8, kn)
-      ]) : s(a.$slots, "default", { key: 1 }, () => [
+        }, "Sign out", 8, Bn)
+      ]) : f(a.$slots, "default", { key: 1 }, () => [
         e[5] || (e[5] = o("a", { href: "sadkf" }, "sign out test", -1))
       ])
     ])
   ]));
 }
-const Io = /* @__PURE__ */ R(un, [["render", wn]]);
-function Pn(a) {
-  return Ra() ? (Da(a), !0) : !1;
+const qo = /* @__PURE__ */ D(gn, [["render", In]]);
+function kn(a, e) {
+  return pa() ? (Ua(a, e), !0) : !1;
 }
 const ea = /* @__PURE__ */ new WeakMap(), Mn = /* @__NO_SIDE_EFFECTS__ */ (...a) => {
   var e;
-  const n = a[0], r = (e = ca()) == null ? void 0 : e.proxy;
-  if (r == null && !pa())
-    throw new Error("injectLocal must be called in setup");
-  return r && ea.has(r) && n in ea.get(r) ? ea.get(r)[n] : Fa(...a);
-}, In = typeof window < "u" && typeof document < "u";
+  const n = a[0], r = (e = ta()) === null || e === void 0 ? void 0 : e.proxy, c = r ?? pa();
+  if (c == null && !ha()) throw new Error("injectLocal must be called in setup");
+  return c && ea.has(c) && n in ea.get(c) ? ea.get(c)[n] : Pa(...a);
+}, Dn = typeof window < "u" && typeof document < "u";
 typeof WorkerGlobalScope < "u" && globalThis instanceof WorkerGlobalScope;
-const Rn = Object.prototype.toString, Dn = (a) => Rn.call(a) === "[object Object]", Fn = () => {
+const Rn = Object.prototype.toString, Un = (a) => Rn.call(a) === "[object Object]", Pn = () => {
 };
-function ha(...a) {
-  if (a.length !== 1)
-    return Ma(...a);
+function Aa(...a) {
+  if (a.length !== 1) return Da(...a);
   const e = a[0];
-  return typeof e == "function" ? Ca(Ia(() => ({ get: e, set: Fn }))) : Na(e);
+  return typeof e == "function" ? Ca(Ra(() => ({
+    get: e,
+    set: Pn
+  }))) : Na(e);
 }
-function Bn(a, e) {
+function Fn(a, e) {
   function n(...r) {
     return new Promise((c, i) => {
-      Promise.resolve(a(() => e.apply(this, r), { fn: e, thisArg: this, args: r })).then(c).catch(i);
+      Promise.resolve(a(() => e.apply(this, r), {
+        fn: e,
+        thisArg: this,
+        args: r
+      })).then(c).catch(i);
     });
   }
   return n;
 }
-const ba = (a) => a();
-function Un(a = ba, e = {}) {
-  const {
-    initialState: n = "active"
-  } = e, r = ha(n === "active");
+const Sa = (a) => a();
+function Gn(a = Sa, e = {}) {
+  const { initialState: n = "active" } = e, r = Aa(n === "active");
   function c() {
     r.value = !1;
   }
   function i() {
     r.value = !0;
   }
-  const g = (...f) => {
-    r.value && a(...f);
+  const g = (...d) => {
+    r.value && a(...d);
   };
-  return { isActive: Ca(r), pause: c, resume: i, eventFilter: g };
+  return {
+    isActive: Ca(r),
+    pause: c,
+    resume: i,
+    eventFilter: g
+  };
 }
 function la(a) {
   return a.endsWith("rem") ? Number.parseFloat(a) * 16 : Number.parseFloat(a);
@@ -770,143 +778,113 @@ function la(a) {
 function na(a) {
   return Array.isArray(a) ? a : [a];
 }
-function Gn(a) {
-  return ca();
+function xn(a) {
+  return ta();
 }
-function xn(a, e, n = {}) {
-  const {
-    eventFilter: r = ba,
-    ...c
-  } = n;
-  return X(
-    a,
-    Bn(
-      r,
-      e
-    ),
-    c
-  );
+function Kn(a, e, n = {}) {
+  const { eventFilter: r = Sa, ...c } = n;
+  return _(a, Fn(r, e), c);
 }
-function _n(a, e, n = {}) {
-  const {
-    eventFilter: r,
-    initialState: c = "active",
-    ...i
-  } = n, { eventFilter: g, pause: f, resume: N, isActive: u } = Un(r, { initialState: c });
-  return { stop: xn(
-    a,
-    e,
-    {
+function Wn(a, e, n = {}) {
+  const { eventFilter: r, initialState: c = "active", ...i } = n, { eventFilter: g, pause: d, resume: y, isActive: u } = Gn(r, { initialState: c });
+  return {
+    stop: Kn(a, e, {
       ...i,
       eventFilter: g
-    }
-  ), pause: f, resume: N, isActive: u };
+    }),
+    pause: d,
+    resume: y,
+    isActive: u
+  };
 }
-function Aa(a, e = !0, n) {
-  Gn() ? La(a, n) : e ? a() : Ea(a);
+const On = Wn;
+function ba(a, e = !0, n) {
+  xn() ? La(a, n) : e ? a() : Ea(a);
 }
-function On(a, e, n) {
-  return X(
-    a,
-    e,
-    {
-      ...n,
-      immediate: !0
-    }
-  );
+function Qn(a, e, n) {
+  return _(a, e, {
+    ...n,
+    immediate: !0
+  });
 }
-const $ = In ? window : void 0;
-function Sa(a) {
+const K = Dn ? window : void 0;
+function Ta(a) {
   var e;
-  const n = F(a);
-  return (e = n?.$el) != null ? e : n;
+  const n = U(a);
+  return (e = n?.$el) !== null && e !== void 0 ? e : n;
 }
-function ra(...a) {
+function ca(...a) {
   const e = [], n = () => {
-    e.forEach((f) => f()), e.length = 0;
-  }, r = (f, N, u, m) => (f.addEventListener(N, u, m), () => f.removeEventListener(N, u, m)), c = _(() => {
-    const f = na(F(a[0])).filter((N) => N != null);
-    return f.every((N) => typeof N != "string") ? f : void 0;
-  }), i = On(
-    () => {
-      var f, N;
-      return [
-        (N = (f = c.value) == null ? void 0 : f.map((u) => Sa(u))) != null ? N : [$].filter((u) => u != null),
-        na(F(c.value ? a[1] : a[0])),
-        na(Ua(c.value ? a[2] : a[1])),
-        // @ts-expect-error - TypeScript gets the correct types, but somehow still complains
-        F(c.value ? a[3] : a[2])
-      ];
-    },
-    ([f, N, u, m]) => {
-      if (n(), !f?.length || !N?.length || !u?.length)
-        return;
-      const L = Dn(m) ? { ...m } : m;
-      e.push(
-        ...f.flatMap(
-          (w) => N.flatMap(
-            (p) => u.map((y) => r(w, p, y, L))
-          )
-        )
-      );
-    },
-    { flush: "post" }
-  ), g = () => {
+    e.forEach((d) => d()), e.length = 0;
+  }, r = (d, y, u, L) => (d.addEventListener(y, u, L), () => d.removeEventListener(y, u, L)), c = W(() => {
+    const d = na(U(a[0])).filter((y) => y != null);
+    return d.every((y) => typeof y != "string") ? d : void 0;
+  }), i = Qn(() => {
+    var d, y;
+    return [
+      (d = (y = c.value) === null || y === void 0 ? void 0 : y.map((u) => Ta(u))) !== null && d !== void 0 ? d : [K].filter((u) => u != null),
+      na(U(c.value ? a[1] : a[0])),
+      na(Ga(c.value ? a[2] : a[1])),
+      U(c.value ? a[3] : a[2])
+    ];
+  }, ([d, y, u, L]) => {
+    if (n(), !d?.length || !y?.length || !u?.length) return;
+    const N = Un(L) ? { ...L } : L;
+    e.push(...d.flatMap((B) => y.flatMap((E) => u.map((A) => r(B, E, A, N)))));
+  }, { flush: "post" }), g = () => {
     i(), n();
   };
-  return Pn(n), g;
+  return kn(n), g;
 }
 // @__NO_SIDE_EFFECTS__
-function Vn() {
-  const a = Z(!1), e = ca();
+function Yn() {
+  const a = H(!1), e = ta();
   return e && La(() => {
     a.value = !0;
   }, e), a;
 }
 // @__NO_SIDE_EFFECTS__
-function zn(a) {
-  const e = /* @__PURE__ */ Vn();
-  return _(() => (e.value, !!a()));
+function jn(a) {
+  const e = /* @__PURE__ */ Yn();
+  return W(() => (e.value, !!a()));
 }
-const Kn = Symbol("vueuse-ssr-width");
+const Vn = Symbol("vueuse-ssr-width");
 // @__NO_SIDE_EFFECTS__
-function jn() {
-  const a = pa() ? /* @__PURE__ */ Mn(Kn, null) : null;
+function Hn() {
+  const a = ha() ? /* @__PURE__ */ Mn(Vn, null) : null;
   return typeof a == "number" ? a : void 0;
 }
-function Zn(a, e = {}) {
-  const { window: n = $, ssrWidth: r = /* @__PURE__ */ jn() } = e, c = /* @__PURE__ */ zn(() => n && "matchMedia" in n && typeof n.matchMedia == "function"), i = Z(typeof r == "number"), g = Z(), f = Z(!1), N = (u) => {
-    f.value = u.matches;
+function Jn(a, e = {}) {
+  const { window: n = K, ssrWidth: r = /* @__PURE__ */ Hn() } = e, c = /* @__PURE__ */ jn(() => n && "matchMedia" in n && typeof n.matchMedia == "function"), i = H(typeof r == "number"), g = H(), d = H(!1), y = (u) => {
+    d.value = u.matches;
   };
-  return Ba(() => {
+  return Fa(() => {
     if (i.value) {
-      i.value = !c.value;
-      const u = F(a).split(",");
-      f.value = u.some((m) => {
-        const L = m.includes("not all"), w = m.match(/\(\s*min-width:\s*(-?\d+(?:\.\d*)?[a-z]+\s*)\)/), p = m.match(/\(\s*max-width:\s*(-?\d+(?:\.\d*)?[a-z]+\s*)\)/);
-        let y = !!(w || p);
-        return w && y && (y = r >= la(w[1])), p && y && (y = r <= la(p[1])), L ? !y : y;
+      i.value = !c.value, d.value = U(a).split(",").some((u) => {
+        const L = u.includes("not all"), N = u.match(/\(\s*min-width:\s*(-?\d+(?:\.\d*)?[a-z]+\s*)\)/), B = u.match(/\(\s*max-width:\s*(-?\d+(?:\.\d*)?[a-z]+\s*)\)/);
+        let E = !!(N || B);
+        return N && E && (E = r >= la(N[1])), B && E && (E = r <= la(B[1])), L ? !E : E;
       });
       return;
     }
-    c.value && (g.value = n.matchMedia(F(a)), f.value = g.value.matches);
-  }), ra(g, "change", N, { passive: !0 }), _(() => f.value);
+    c.value && (g.value = n.matchMedia(U(a)), d.value = g.value.matches);
+  }), ca(g, "change", y, { passive: !0 }), W(() => d.value);
 }
-const H = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {}, W = "__vueuse_ssr_handlers__", $n = /* @__PURE__ */ Hn();
-function Hn() {
-  return W in H || (H[W] = H[W] || {}), H[W];
+const J = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {}, z = "__vueuse_ssr_handlers__", zn = /* @__PURE__ */ qn();
+function qn() {
+  return z in J || (J[z] = J[z] || {}), J[z];
 }
-function Ta(a, e) {
-  return $n[a] || e;
+function va(a, e) {
+  return zn[a] || e;
 }
 // @__NO_SIDE_EFFECTS__
-function Wn(a) {
-  return Zn("(prefers-color-scheme: dark)", a);
+function Xn(a) {
+  return Jn("(prefers-color-scheme: dark)", a);
 }
-function qn(a) {
+function Zn(a) {
   return a == null ? "any" : a instanceof Set ? "set" : a instanceof Map ? "map" : a instanceof Date ? "date" : typeof a == "boolean" ? "boolean" : typeof a == "string" ? "string" : typeof a == "object" ? "object" : Number.isNaN(a) ? "any" : "number";
 }
-const Jn = {
+const _n = {
   boolean: {
     read: (a) => a === "true",
     write: (a) => String(a)
@@ -940,170 +918,149 @@ const Jn = {
     write: (a) => a.toISOString()
   }
 }, ua = "vueuse-storage";
-function Yn(a, e, n, r = {}) {
+function $n(a, e, n, r = {}) {
   var c;
-  const {
-    flush: i = "pre",
-    deep: g = !0,
-    listenToStorageChanges: f = !0,
-    writeDefaults: N = !0,
-    mergeDefaults: u = !1,
-    shallow: m,
-    window: L = $,
-    eventFilter: w,
-    onError: p = (d) => {
-      console.error(d);
-    },
-    initOnMounted: y
-  } = r, h = (m ? Z : Na)(typeof e == "function" ? e() : e), A = _(() => F(a));
-  if (!n)
-    try {
-      n = Ta("getDefaultStorage", () => {
-        var d;
-        return (d = $) == null ? void 0 : d.localStorage;
-      })();
-    } catch (d) {
-      p(d);
-    }
-  if (!n)
-    return h;
-  const S = F(e), K = qn(S), B = (c = r.serializer) != null ? c : Jn[K], { pause: P, resume: D } = _n(
-    h,
-    (d) => U(d),
-    { flush: i, deep: g, eventFilter: w }
-  );
-  X(A, () => M(), { flush: i });
+  const { flush: i = "pre", deep: g = !0, listenToStorageChanges: d = !0, writeDefaults: y = !0, mergeDefaults: u = !1, shallow: L, window: N = K, eventFilter: B, onError: E = (s) => {
+    console.error(s);
+  }, initOnMounted: A } = r, S = (L ? H : Na)(typeof e == "function" ? e() : e), b = W(() => U(a));
+  if (!n) try {
+    n = va("getDefaultStorage", () => K?.localStorage)();
+  } catch (s) {
+    E(s);
+  }
+  if (!n) return S;
+  const T = U(e), j = Zn(T), P = (c = r.serializer) !== null && c !== void 0 ? c : _n[j], { pause: I, resume: R } = On(S, (s) => F(s), {
+    flush: i,
+    deep: g,
+    eventFilter: B
+  });
+  _(b, () => k(), { flush: i });
   let O = !1;
-  const V = (d) => {
-    y && !O || M(d);
-  }, j = (d) => {
-    y && !O || x(d);
+  const Q = (s) => {
+    A && !O || k(s);
+  }, V = (s) => {
+    A && !O || x(s);
   };
-  L && f && (n instanceof Storage ? ra(L, "storage", V, { passive: !0 }) : ra(L, ua, j)), y ? Aa(() => {
-    O = !0, M();
-  }) : M();
-  function z(d, T) {
-    if (L) {
-      const I = {
-        key: A.value,
-        oldValue: d,
-        newValue: T,
+  N && d && (n instanceof Storage ? ca(N, "storage", Q, { passive: !0 }) : ca(N, ua, V)), A ? ba(() => {
+    O = !0, k();
+  }) : k();
+  function Y(s, v) {
+    if (N) {
+      const M = {
+        key: b.value,
+        oldValue: s,
+        newValue: v,
         storageArea: n
       };
-      L.dispatchEvent(n instanceof Storage ? new StorageEvent("storage", I) : new CustomEvent(ua, {
-        detail: I
-      }));
+      N.dispatchEvent(n instanceof Storage ? new StorageEvent("storage", M) : new CustomEvent(ua, { detail: M }));
     }
   }
-  function U(d) {
+  function F(s) {
     try {
-      const T = n.getItem(A.value);
-      if (d == null)
-        z(T, null), n.removeItem(A.value);
+      const v = n.getItem(b.value);
+      if (s == null)
+        Y(v, null), n.removeItem(b.value);
       else {
-        const I = B.write(d);
-        T !== I && (n.setItem(A.value, I), z(T, I));
+        const M = P.write(s);
+        v !== M && (n.setItem(b.value, M), Y(v, M));
       }
-    } catch (T) {
-      p(T);
+    } catch (v) {
+      E(v);
     }
   }
-  function G(d) {
-    const T = d ? d.newValue : n.getItem(A.value);
-    if (T == null)
-      return N && S != null && n.setItem(A.value, B.write(S)), S;
-    if (!d && u) {
-      const I = B.read(T);
-      return typeof u == "function" ? u(I, S) : K === "object" && !Array.isArray(I) ? { ...S, ...I } : I;
-    } else return typeof T != "string" ? T : B.read(T);
+  function G(s) {
+    const v = s ? s.newValue : n.getItem(b.value);
+    if (v == null)
+      return y && T != null && n.setItem(b.value, P.write(T)), T;
+    if (!s && u) {
+      const M = P.read(v);
+      return typeof u == "function" ? u(M, T) : j === "object" && !Array.isArray(M) ? {
+        ...T,
+        ...M
+      } : M;
+    } else return typeof v != "string" ? v : P.read(v);
   }
-  function M(d) {
-    if (!(d && d.storageArea !== n)) {
-      if (d && d.key == null) {
-        h.value = S;
+  function k(s) {
+    if (!(s && s.storageArea !== n)) {
+      if (s && s.key == null) {
+        S.value = T;
         return;
       }
-      if (!(d && d.key !== A.value)) {
-        P();
+      if (!(s && s.key !== b.value)) {
+        I();
         try {
-          const T = B.write(h.value);
-          (d === void 0 || d?.newValue !== T) && (h.value = G(d));
-        } catch (T) {
-          p(T);
+          const v = P.write(S.value);
+          (s === void 0 || s?.newValue !== v) && (S.value = G(s));
+        } catch (v) {
+          E(v);
         } finally {
-          d ? Ea(D) : D();
+          s ? Ea(R) : R();
         }
       }
     }
   }
-  function x(d) {
-    M(d.detail);
+  function x(s) {
+    k(s.detail);
   }
-  return h;
+  return S;
 }
-const Xn = "*,*::before,*::after{-webkit-transition:none!important;-moz-transition:none!important;-o-transition:none!important;-ms-transition:none!important;transition:none!important}";
-function Qn(a = {}) {
-  const {
-    selector: e = "html",
-    attribute: n = "class",
-    initialValue: r = "auto",
-    window: c = $,
-    storage: i,
-    storageKey: g = "vueuse-color-scheme",
-    listenToStorageChanges: f = !0,
-    storageRef: N,
-    emitAuto: u,
-    disableTransition: m = !0
-  } = a, L = {
+const ao = "*,*::before,*::after{-webkit-transition:none!important;-moz-transition:none!important;-o-transition:none!important;-ms-transition:none!important;transition:none!important}";
+function eo(a = {}) {
+  const { selector: e = "html", attribute: n = "class", initialValue: r = "auto", window: c = K, storage: i, storageKey: g = "vueuse-color-scheme", listenToStorageChanges: d = !0, storageRef: y, emitAuto: u, disableTransition: L = !0 } = a, N = {
     auto: "",
     light: "light",
     dark: "dark",
     ...a.modes || {}
-  }, w = /* @__PURE__ */ Wn({ window: c }), p = _(() => w.value ? "dark" : "light"), y = N || (g == null ? ha(r) : Yn(g, r, i, { window: c, listenToStorageChanges: f })), h = _(() => y.value === "auto" ? p.value : y.value), A = Ta(
-    "updateHTMLAttrs",
-    (P, D, O) => {
-      const V = typeof P == "string" ? c?.document.querySelector(P) : Sa(P);
-      if (!V)
-        return;
-      const j = /* @__PURE__ */ new Set(), z = /* @__PURE__ */ new Set();
-      let U = null;
-      if (D === "class") {
-        const M = O.split(/\s/g);
-        Object.values(L).flatMap((x) => (x || "").split(/\s/g)).filter(Boolean).forEach((x) => {
-          M.includes(x) ? j.add(x) : z.add(x);
-        });
-      } else
-        U = { key: D, value: O };
-      if (j.size === 0 && z.size === 0 && U === null)
-        return;
-      let G;
-      m && (G = c.document.createElement("style"), G.appendChild(document.createTextNode(Xn)), c.document.head.appendChild(G));
-      for (const M of j)
-        V.classList.add(M);
-      for (const M of z)
-        V.classList.remove(M);
-      U && V.setAttribute(U.key, U.value), m && (c.getComputedStyle(G).opacity, document.head.removeChild(G));
-    }
-  );
-  function S(P) {
-    var D;
-    A(e, n, (D = L[P]) != null ? D : P);
+  }, B = /* @__PURE__ */ Xn({ window: c }), E = W(() => B.value ? "dark" : "light"), A = y || (g == null ? Aa(r) : $n(g, r, i, {
+    window: c,
+    listenToStorageChanges: d
+  })), S = W(() => A.value === "auto" ? E.value : A.value), b = va("updateHTMLAttrs", (I, R, O) => {
+    const Q = typeof I == "string" ? c?.document.querySelector(I) : Ta(I);
+    if (!Q) return;
+    const V = /* @__PURE__ */ new Set(), Y = /* @__PURE__ */ new Set();
+    let F = null;
+    if (R === "class") {
+      const k = O.split(/\s/g);
+      Object.values(N).flatMap((x) => (x || "").split(/\s/g)).filter(Boolean).forEach((x) => {
+        k.includes(x) ? V.add(x) : Y.add(x);
+      });
+    } else F = {
+      key: R,
+      value: O
+    };
+    if (V.size === 0 && Y.size === 0 && F === null) return;
+    let G;
+    L && (G = c.document.createElement("style"), G.appendChild(document.createTextNode(ao)), c.document.head.appendChild(G));
+    for (const k of V) Q.classList.add(k);
+    for (const k of Y) Q.classList.remove(k);
+    F && Q.setAttribute(F.key, F.value), L && (c.getComputedStyle(G).opacity, document.head.removeChild(G));
+  });
+  function T(I) {
+    var R;
+    b(e, n, (R = N[I]) !== null && R !== void 0 ? R : I);
   }
-  function K(P) {
-    a.onChanged ? a.onChanged(P, S) : S(P);
+  function j(I) {
+    a.onChanged ? a.onChanged(I, T) : T(I);
   }
-  X(h, K, { flush: "post", immediate: !0 }), Aa(() => K(h.value));
-  const B = _({
+  _(S, j, {
+    flush: "post",
+    immediate: !0
+  }), ba(() => j(S.value));
+  const P = W({
     get() {
-      return u ? y.value : h.value;
+      return u ? A.value : S.value;
     },
-    set(P) {
-      y.value = P;
+    set(I) {
+      A.value = I;
     }
   });
-  return Object.assign(B, { store: y, system: p, state: h });
+  return Object.assign(P, {
+    store: A,
+    system: E,
+    state: S
+  });
 }
-const ao = {
+const no = {
   props: {
     colorClass: {
       type: String,
@@ -1112,80 +1069,80 @@ const ao = {
   },
   // composition in options api requires setup()
   setup() {
-    return { colorMode: Qn({
+    return { colorMode: eo({
       emitAuto: !0,
       // bootstrap's dark theming attribute
       attribute: "data-bs-theme"
     }) };
   }
-}, eo = { class: "d-flex align-items-center" }, no = { class: "bi bi-brightness-high-fill" }, oo = { class: "bi bi-moon-stars-fill" }, io = { class: "bi bi-circle-half" }, ro = { class: "dropdown-menu p-1" }, co = { class: "mb-1" }, to = { class: "mb-1" };
-function lo(a, e, n, r, c, i) {
-  return l(), t("div", eo, [
+}, oo = { class: "d-flex align-items-center" }, io = { class: "bi bi-brightness-high-fill" }, ro = { class: "bi bi-moon-stars-fill" }, co = { class: "bi bi-circle-half" }, to = { class: "dropdown-menu p-1" }, lo = { class: "mb-1" }, uo = { class: "mb-1" };
+function go(a, e, n, r, c, i) {
+  return l(), t("div", oo, [
     o("div", null, [
       o("button", {
-        class: b(["btn btn-link dropdown-toggle p-1", n.colorClass]),
+        class: h(["btn btn-link dropdown-toggle p-1", n.colorClass]),
         type: "button",
         "data-bs-toggle": "dropdown",
         "aria-expanded": "false",
         "aria-label": "Choose color mode"
       }, [
-        Q(o("i", no, null, 512), [
+        $(o("i", io, null, 512), [
           [aa, r.colorMode == "light"]
         ]),
-        Q(o("i", oo, null, 512), [
+        $(o("i", ro, null, 512), [
           [aa, r.colorMode == "dark"]
         ]),
-        Q(o("i", io, null, 512), [
+        $(o("i", co, null, 512), [
           [aa, r.colorMode == "auto"]
         ])
       ], 2),
-      o("ul", ro, [
-        o("li", co, [
+      o("ul", to, [
+        o("li", lo, [
           o("a", {
-            class: b(["dropdown-item rounded", r.colorMode == "light" ? "active" : ""]),
+            class: h(["dropdown-item rounded", r.colorMode == "light" ? "active" : ""]),
             href: "#",
             role: "button",
             onClick: e[0] || (e[0] = (g) => r.colorMode = "light")
           }, [...e[3] || (e[3] = [
             o("i", { class: "bi bi-brightness-high-fill" }, null, -1),
-            k(" Light", -1)
+            p("Light", -1)
           ])], 2)
         ]),
-        o("li", to, [
+        o("li", uo, [
           o("a", {
-            class: b(["dropdown-item rounded", r.colorMode == "dark" ? "active" : ""]),
+            class: h(["dropdown-item rounded", r.colorMode == "dark" ? "active" : ""]),
             href: "#",
             role: "button",
             onClick: e[1] || (e[1] = (g) => r.colorMode = "dark")
           }, [...e[4] || (e[4] = [
             o("i", { class: "bi bi-moon-stars-fill" }, null, -1),
-            k(" Dark", -1)
+            p("Dark", -1)
           ])], 2)
         ]),
         o("li", null, [
           o("a", {
-            class: b(["dropdown-item rounded", r.colorMode == "auto" ? "active" : ""]),
+            class: h(["dropdown-item rounded", r.colorMode == "auto" ? "active" : ""]),
             href: "#",
             role: "button",
             onClick: e[2] || (e[2] = (g) => r.colorMode = "auto")
           }, [...e[5] || (e[5] = [
             o("i", { class: "bi bi-circle-half" }, null, -1),
-            k(" Auto", -1)
+            p("Auto", -1)
           ])], 2)
         ])
       ])
     ])
   ]);
 }
-const Ro = /* @__PURE__ */ R(ao, [["render", lo]]);
-function uo(a) {
+const Xo = /* @__PURE__ */ D(no, [["render", go]]);
+function so(a) {
   return ga(a[0]) + ga(a[1]);
 }
 function ga(a) {
   return String.fromCodePoint(127397 + a.toUpperCase().charCodeAt(0));
 }
-var v = {}, q = {}, da;
-function go() {
+var w = {}, q = {}, da;
+function fo() {
   if (da) return q;
   da = 1, Object.defineProperty(q, "__esModule", { value: !0 });
   function a(e, n) {
@@ -1196,22 +1153,22 @@ function go() {
   }
   return q.default = a, q;
 }
-var J = {}, fa;
-function fo() {
-  if (fa) return J;
-  fa = 1, Object.defineProperty(J, "__esModule", { value: !0 });
+var X = {}, sa;
+function mo() {
+  if (sa) return X;
+  sa = 1, Object.defineProperty(X, "__esModule", { value: !0 });
   function a(e, n) {
     return e.replace(/{([^{}]*)}/g, (r, c) => {
       const i = n[c];
       return typeof i == "string" || typeof i == "number" ? i.toString() : r;
     });
   }
-  return J.default = a, J;
+  return X.default = a, X;
 }
-var Y = {}, sa;
-function so() {
-  if (sa) return Y;
-  sa = 1, Object.defineProperty(Y, "__esModule", { value: !0 });
+var Z = {}, fa;
+function yo() {
+  if (fa) return Z;
+  fa = 1, Object.defineProperty(Z, "__esModule", { value: !0 });
   const a = [
     {
       countryNameEn: "Andorra",
@@ -5286,68 +5243,68 @@ function so() {
       flag: "🇧🇶"
     }
   ];
-  return Y.default = a, Y;
+  return Z.default = a, Z;
 }
 var ma;
-function mo() {
-  if (ma) return v;
+function Co() {
+  if (ma) return w;
   ma = 1;
-  var a = v && v.__importDefault || function(u) {
+  var a = w && w.__importDefault || function(u) {
     return u && u.__esModule ? u : { default: u };
   };
-  Object.defineProperty(v, "__esModule", { value: !0 }), v.customList = v.customArray = v.findOne = v.filter = v.all = v.utils = void 0;
-  const e = a(go()), n = a(fo()), r = a(so());
-  v.utils = {
+  Object.defineProperty(w, "__esModule", { value: !0 }), w.customList = w.customArray = w.findOne = w.filter = w.all = w.utils = void 0;
+  const e = a(fo()), n = a(mo()), r = a(yo());
+  w.utils = {
     groupBy: e.default
   };
   function c() {
     return r.default;
   }
-  v.all = c;
-  function i(u, m) {
-    return r.default.filter((L) => L[u] === m);
+  w.all = c;
+  function i(u, L) {
+    return r.default.filter((N) => N[u] === L);
   }
-  v.filter = i;
-  function g(u, m) {
-    return r.default.find((L) => L[u] === m);
+  w.filter = i;
+  function g(u, L) {
+    return r.default.find((N) => N[u] === L);
   }
-  v.findOne = g;
-  function f(u = {
+  w.findOne = g;
+  function d(u = {
     name: "{countryNameEn} ({countryCode})",
     value: "{countryCode}"
-  }, { sortBy: m, sortDataBy: L, filter: w } = {}) {
-    const p = [];
-    let y = r.default;
-    if (typeof w == "function" && (y = y.filter(w)), L) {
-      const h = new Intl.Collator([], { sensitivity: "accent" });
-      y.sort((A, S) => h.compare(A[L], S[L]));
+  }, { sortBy: L, sortDataBy: N, filter: B } = {}) {
+    const E = [];
+    let A = r.default;
+    if (typeof B == "function" && (A = A.filter(B)), N) {
+      const S = new Intl.Collator([], { sensitivity: "accent" });
+      A.sort((b, T) => S.compare(b[N], T[N]));
     }
-    if (y.forEach((h) => {
-      const A = {};
-      for (const S in u)
-        A[S] = (0, n.default)(u[S], h);
-      p.push(A);
-    }), m && u[m]) {
-      const h = new Intl.Collator([], { sensitivity: "accent" });
-      p.sort((A, S) => h.compare(A[m], S[m]));
+    if (A.forEach((S) => {
+      const b = {};
+      for (const T in u)
+        b[T] = (0, n.default)(u[T], S);
+      E.push(b);
+    }), L && u[L]) {
+      const S = new Intl.Collator([], { sensitivity: "accent" });
+      E.sort((b, T) => S.compare(b[L], T[L]));
     }
-    return p;
+    return E;
   }
-  v.customArray = f;
-  function N(u = "countryCode", m = "{countryNameEn} ({countryCode})", { filter: L } = {}) {
-    const w = {};
-    let p = r.default;
-    return typeof L == "function" && (p = p.filter(L)), p.forEach((y) => {
-      const h = (0, n.default)(m, y);
-      w[String(y[u])] = h;
-    }), w;
+  w.customArray = d;
+  function y(u = "countryCode", L = "{countryNameEn} ({countryCode})", { filter: N } = {}) {
+    const B = {};
+    let E = r.default;
+    return typeof N == "function" && (E = E.filter(N)), E.forEach((A) => {
+      const S = (0, n.default)(L, A);
+      B[String(A[u])] = S;
+    }), B;
   }
-  return v.customList = N, v;
+  return w.customList = y, w;
 }
-var yo = mo();
-const Co = {
+var No = Co();
+const Lo = {
   emits: ["update:callingCode"],
-  data: function() {
+  data() {
     return {
       countries: [],
       selectedCountry: {
@@ -5358,7 +5315,7 @@ const Co = {
     };
   },
   mounted() {
-    const a = yo.customList(
+    const a = No.customList(
       "countryCode",
       "{countryNameEn}|{countryCallingCode}"
     );
@@ -5374,28 +5331,28 @@ const Co = {
   },
   methods: {
     flag(a) {
-      return uo(a);
+      return so(a);
     },
     selectCountry(a) {
       this.selectedCountry = a, this.$emit("update:callingCode", a.callingCode);
     }
   }
-}, No = {
+}, Eo = {
   id: "countryDropdownMenuButton",
   class: "btn btn-subdued-primary border border-secondary dropdown-toggle",
   type: "button",
   "data-bs-toggle": "dropdown",
   "aria-expanded": "false"
-}, Lo = { class: "me-1" }, Eo = {
+}, po = { class: "me-1" }, ho = {
   class: "dropdown-menu",
   "aria-labelledby": "countryDropdownMenuButton"
-}, po = ["onClick"], ho = { class: "text-secondary" };
+}, Ao = ["onClick"], So = { class: "text-secondary" };
 function bo(a, e, n, r, c, i) {
-  return l(), t(ta, null, [
-    o("button", No, [
-      o("span", Lo, E(i.flag(a.selectedCountry.code)), 1)
+  return l(), t(ra, null, [
+    o("button", Eo, [
+      o("span", po, C(i.flag(c.selectedCountry.code)), 1)
     ]),
-    o("ul", Eo, [
+    o("ul", ho, [
       o("li", null, [
         o("button", {
           type: "button",
@@ -5405,34 +5362,149 @@ function bo(a, e, n, r, c, i) {
             name: "United States of America",
             callingCode: "1"
           }))
-        }, E(i.flag("US")) + " United States of America (+1) ", 1)
+        }, C(i.flag("US")) + "United States of America (+1) ", 1)
       ]),
       e[1] || (e[1] = o("li", null, [
         o("hr", { class: "dropdown-divider" })
       ], -1)),
-      (l(!0), t(ta, null, Ga(a.countries, (g, f) => (l(), t("li", { key: f }, [
+      (l(!0), t(ra, null, xa(c.countries, (g, d) => (l(), t("li", { key: d }, [
         o("button", {
           type: "button",
           class: "dropdown-item",
-          onClick: (N) => i.selectCountry(g)
+          onClick: (y) => i.selectCountry(g)
         }, [
-          k(E(i.flag(g.code)) + " " + E(g.name) + " ", 1),
-          o("span", ho, "+" + E(g.callingCode), 1)
-        ], 8, po)
+          p(C(i.flag(g.code)) + " " + C(g.name) + " ", 1),
+          o("span", So, "+" + C(g.callingCode), 1)
+        ], 8, Ao)
       ]))), 128))
     ])
   ], 64);
 }
-const Do = /* @__PURE__ */ R(Co, [["render", bo]]);
+const Zo = /* @__PURE__ */ D(Lo, [["render", bo]]), wa = "data:image/png;base64,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", To = {
+  props: {
+    userNetid: {
+      type: String,
+      required: !0
+    },
+    userOverride: {
+      type: String,
+      required: !1
+    },
+    photoUrl: {
+      type: String,
+      required: !1
+    },
+    signoutUrl: {
+      type: String,
+      required: !1
+    },
+    clearOverrideUrl: {
+      type: String,
+      required: !1
+    }
+  },
+  data() {
+    return {};
+  }
+}, vo = { class: "flex-fill dropdown" }, wo = ["src"], Bo = { class: "mx-2" }, Io = { class: "mx-2" }, ko = {
+  class: "dropdown-menu dropdown-menu-end p-0",
+  "aria-labelledby": "dropdownMenuButton1",
+  style: { width: "300px" }
+}, Mo = {
+  key: 0,
+  class: "bg-danger-subtle text-danger-emphasis px-3 py-2 rounded-top d-flex justify-content-between"
+}, Do = { class: "p-3" }, Ro = { class: "d-flex justify-content-center" }, Uo = {
+  key: 0,
+  src: wa,
+  alt: "UW logo",
+  class: "img-profile rounded-circle"
+}, Po = ["src"], Fo = { class: "mt-3" }, Go = { class: "mt-3 pt-3 border-top" }, xo = {
+  key: 0,
+  href: "/",
+  class: "link-quiet-danger"
+}, Ko = {
+  key: 1,
+  href: "sadkf",
+  class: "link-quiet-danger"
+};
+function Wo(a, e, n, r, c, i) {
+  return l(), t("div", {
+    class: h(["d-flex align-items-center border border-white p-0 rounded-pill small", { "bg-danger-subtle border-0": n.userOverride }])
+  }, [
+    o("div", vo, [
+      o("a", {
+        class: h(["d-flex text-white text-decoration-none p-1 chevron", n.userOverride ? "text-danger-emphasis" : "text-white"]),
+        href: "#",
+        role: "button",
+        id: "dropdownMenuButton1",
+        "data-bs-toggle": "dropdown",
+        "aria-expanded": "false"
+      }, [
+        o("img", {
+          src: n.photoUrl ? n.photoUrl : "/src/assets/images/placeholder.png",
+          class: "img-tiny rounded-circle",
+          alt: "user avatar"
+        }, null, 8, wo),
+        o("span", Bo, C(n.userNetid), 1),
+        n.userOverride ? (l(), t(ra, { key: 0 }, [
+          e[0] || (e[0] = o("i", { class: "bi bi-arrow-right text-danger-emphasis me-2" }, null, -1)),
+          e[1] || (e[1] = o("img", {
+            src: wa,
+            alt: "UW logo",
+            class: "img-tiny rounded-circle border"
+          }, null, -1)),
+          o("span", Io, C(n.userOverride), 1)
+        ], 64)) : m("", !0),
+        e[2] || (e[2] = o("i", { class: "bi bi-chevron-down me-1" }, null, -1))
+      ], 2),
+      o("div", ko, [
+        n.userOverride ? (l(), t("div", Mo, [
+          e[4] || (e[4] = o("span", null, "Overriding", -1)),
+          o("strong", null, [
+            p(C(n.userNetid) + " ", 1),
+            e[3] || (e[3] = o("i", { class: "bi bi-arrow-right text-danger-emphasis" }, null, -1)),
+            p(" " + C(n.userOverride), 1)
+          ])
+        ])) : m("", !0),
+        o("div", Do, [
+          o("div", Ro, [
+            n.userOverride ? (l(), t("img", Uo)) : (l(), t("img", {
+              key: 1,
+              src: n.photoUrl ? n.photoUrl : "/src/assets/images/placeholder.png",
+              class: "img-profile rounded-circle",
+              alt: "user avatar"
+            }, null, 8, Po))
+          ]),
+          o("div", Fo, [
+            f(a.$slots, "default", {}, () => [
+              e[5] || (e[5] = p(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium hendrerit dui, sit amet dapibus nulla condimentum id. Quisque pulvinar viverra eros, sit amet blandit tellus faucibus at. Maecenas a turpis sed quam vulputate placerat. Duis id eros sit amet turpis dignissim lacinia. Suspendisse molestie vel nisl sit amet convallis. ", -1))
+            ], !0)
+          ]),
+          o("div", Go, [
+            n.userOverride ? (l(), t("a", xo, [...e[6] || (e[6] = [
+              o("i", { class: "bi bi-x-circle me-1" }, null, -1),
+              p("Clear override", -1)
+            ])])) : (l(), t("a", Ko, [...e[7] || (e[7] = [
+              o("i", { class: "bi bi-x-circle me-1" }, null, -1),
+              p("Sign out", -1)
+            ])]))
+          ])
+        ])
+      ])
+    ])
+  ], 2);
+}
+const _o = /* @__PURE__ */ D(To, [["render", Wo], ["__scopeId", "data-v-b812dfb3"]]);
 export {
-  Ro as SColorMode,
-  Do as SCountryCode,
-  Io as SProfile,
-  wo as SSidebar,
-  To as STabsDisplay,
-  vo as STabsItem,
-  So as STabsList,
-  ko as STabsPanel,
-  Po as STopbar,
-  Mo as STopbarNeo
+  Xo as SColorMode,
+  Zo as SCountryCode,
+  qo as SProfile,
+  Ho as SSidebar,
+  Yo as STabsDisplay,
+  jo as STabsItem,
+  Qo as STabsList,
+  Vo as STabsPanel,
+  Jo as STopbar,
+  zo as STopbarNeo,
+  _o as SUser
 };

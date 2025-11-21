@@ -23,35 +23,36 @@
     class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
     @click="$emit('click', $event)"
   >
-    <i v-show="icon" :class="'bi ' + icon" class="me-1"></i><slot></slot>
+    <i v-show="icon" :class="'bi ' + icon" class="me-1"></i>
+    <slot></slot>
   </router-link>
 </template>
 
 <script>
-export default {
-  name: "sol-link",
-  props: {
-    variant: {
-      type: String,
-      required: true,
-      default: "default",
+  export default {
+    name: "sol-link",
+    props: {
+      variant: {
+        type: String,
+        required: true,
+        default: "default",
+      },
+      href: {
+        type: String,
+        required: true,
+        default: "/",
+      },
+      color: {
+        type: String,
+        required: false,
+      },
+      icon: {
+        type: String,
+        required: false,
+      },
     },
-    href: {
-      type: String,
-      required: true,
-      default: "/",
+    data() {
+      return {};
     },
-    color: {
-      type: String,
-      required: false,
-    },
-    icon: {
-      type: String,
-      required: false,
-    },
-  },
-  data: function () {
-    return {};
-  },
-};
+  };
 </script>

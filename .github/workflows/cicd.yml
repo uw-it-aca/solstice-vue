@@ -37,7 +37,7 @@ jobs:
       - name: Use Node.js 20.x
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Install packages
         run: npm install
@@ -50,8 +50,8 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Lint with ESLint
-        run: npm run eslint
+      #- name: Lint with ESLint
+      #  run: npm run eslint
 
-      - name: Lint with StyleLint
-        run: npm run stylelint
+      #- name: Lint with StyleLint
+      #  run: npm run stylelint

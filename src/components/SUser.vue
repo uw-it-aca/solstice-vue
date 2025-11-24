@@ -31,9 +31,9 @@
       >
         <div
           v-if="userOverride"
-          class="bg-danger-subtle text-danger-emphasis px-3 py-2 rounded-top d-flex justify-content-between"
+          class="bg-danger-subtle text-danger-emphasis px-3 py-2 rounded-top small fw-bold"
         >
-          <span>Overriding</span>
+          You are overriding as another user
         </div>
 
         <div class="p-3">

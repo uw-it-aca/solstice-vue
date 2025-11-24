@@ -1,10 +1,10 @@
-import { createElementBlock as t, createCommentVNode as y, openBlock as l, renderSlot as f, createElementVNode as o, withKeys as oa, normalizeClass as p, withModifiers as wa, resolveComponent as ka, normalizeStyle as ia, createVNode as Pa, withCtx as Ma, createTextVNode as h, toDisplayString as L, createStaticVNode as ya, toRef as Ia, readonly as Ca, ref as Na, customRef as Ra, onMounted as La, nextTick as Ea, getCurrentInstance as ca, watch as X, getCurrentScope as pa, onScopeDispose as Ua, hasInjectionContext as ha, inject as Da, computed as O, shallowRef as Z, toValue as D, watchEffect as Fa, unref as Ba, withDirectives as Q, vShow as aa, Fragment as ta, renderList as xa } from "vue";
+import { createElementBlock as t, createCommentVNode as y, openBlock as l, renderSlot as f, createElementVNode as o, withKeys as oa, normalizeClass as p, withModifiers as wa, resolveComponent as ka, normalizeStyle as ia, createVNode as Pa, withCtx as Ma, createTextVNode as h, toDisplayString as L, createStaticVNode as ya, toRef as Ia, readonly as Ca, ref as Na, customRef as Ra, onMounted as La, nextTick as Ea, getCurrentInstance as ca, watch as X, getCurrentScope as pa, onScopeDispose as Ua, hasInjectionContext as ha, inject as Da, computed as O, shallowRef as Z, toValue as D, watchEffect as Fa, unref as Ba, withDirectives as Q, vShow as aa, Fragment as ta, renderList as _a } from "vue";
 const R = (a, e) => {
   const n = a.__vccOpts || a;
   for (const [r, c] of e)
     n[r] = c;
   return n;
-}, _a = {
+}, xa = {
   props: {
     variant: {
       type: String,
@@ -35,7 +35,7 @@ function Va(a, e, n, r, c, i) {
     f(a.$slots, "default")
   ], 8, Oa)) : y("", !0);
 }
-const Oo = /* @__PURE__ */ R(_a, [["render", Va]]), za = {
+const Oo = /* @__PURE__ */ R(xa, [["render", Va]]), za = {
   props: {
     tabsId: {
       // must match tab panelId
@@ -481,7 +481,7 @@ const $o = /* @__PURE__ */ R(ge, [["render", Me]]), Ie = "data:image/png;base64,
       default: "https://www.washington.edu/online/terms/"
     }
   }
-}, Ue = { class: "w-100 bg-spirit-purple" }, De = { class: "container-xl" }, Fe = { class: "d-flex justify-content-between align-items-center" }, Be = { class: "w-50 d-flex align-items-center my-4" }, xe = { class: "text-white d-flex flex-column" }, _e = {
+}, Ue = { class: "w-100 bg-spirit-purple" }, De = { class: "container-xl" }, Fe = { class: "d-flex justify-content-between align-items-center" }, Be = { class: "w-50 d-flex align-items-center my-4" }, _e = { class: "text-white d-flex flex-column" }, xe = {
   key: 0,
   class: "fw-light text-nowrap mb-1 lh-1"
 }, Ge = ["href"], Oe = { class: "w-50 d-flex justify-content-end align-items-center" }, Ve = {
@@ -521,8 +521,8 @@ function ln(a, e, n, r, c, i) {
                 style: { height: "38px" }
               })
             ], -1)),
-            o("div", xe, [
-              n.appDeptName ? (l(), t("div", _e, L(n.appDeptName), 1)) : y("", !0),
+            o("div", _e, [
+              n.appDeptName ? (l(), t("div", xe, L(n.appDeptName), 1)) : y("", !0),
               o("a", {
                 href: n.appRootUrl,
                 class: "ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium lh-1"
@@ -778,17 +778,17 @@ function la(a) {
 function na(a) {
   return Array.isArray(a) ? a : [a];
 }
-function xn(a) {
+function _n(a) {
   return ca();
 }
-function _n(a, e, n = {}) {
+function xn(a, e, n = {}) {
   const { eventFilter: r = Sa, ...c } = n;
   return X(a, Fn(r, e), c);
 }
 function Gn(a, e, n = {}) {
   const { eventFilter: r, initialState: c = "active", ...i } = n, { eventFilter: g, pause: d, resume: m, isActive: u } = Bn(r, { initialState: c });
   return {
-    stop: _n(a, e, {
+    stop: xn(a, e, {
       ...i,
       eventFilter: g
     }),
@@ -799,7 +799,7 @@ function Gn(a, e, n = {}) {
 }
 const On = Gn;
 function Aa(a, e = !0, n) {
-  xn() ? La(a, n) : e ? a() : Ea(a);
+  _n() ? La(a, n) : e ? a() : Ea(a);
 }
 function Vn(a, e, n) {
   return X(a, e, {
@@ -939,7 +939,7 @@ function Xn(a, e, n, r = {}) {
   const z = (s) => {
     b && !V || M(s);
   }, $ = (s) => {
-    b && !V || _(s);
+    b && !V || x(s);
   };
   C && d && (n instanceof Storage ? ra(C, "storage", z, { passive: !0 }) : ra(C, ua, $)), b ? Aa(() => {
     V = !0, M();
@@ -968,7 +968,7 @@ function Xn(a, e, n, r = {}) {
       E(v);
     }
   }
-  function x(s) {
+  function _(s) {
     const v = s ? s.newValue : n.getItem(A.value);
     if (v == null)
       return m && T != null && n.setItem(A.value, F.write(T)), T;
@@ -990,7 +990,7 @@ function Xn(a, e, n, r = {}) {
         P();
         try {
           const v = F.write(S.value);
-          (s === void 0 || s?.newValue !== v) && (S.value = x(s));
+          (s === void 0 || s?.newValue !== v) && (S.value = _(s));
         } catch (v) {
           E(v);
         } finally {
@@ -999,7 +999,7 @@ function Xn(a, e, n, r = {}) {
       }
     }
   }
-  function _(s) {
+  function x(s) {
     M(s.detail);
   }
   return S;
@@ -1021,19 +1021,19 @@ function ao(a = {}) {
     let B = null;
     if (U === "class") {
       const M = V.split(/\s/g);
-      Object.values(C).flatMap((_) => (_ || "").split(/\s/g)).filter(Boolean).forEach((_) => {
-        M.includes(_) ? $.add(_) : K.add(_);
+      Object.values(C).flatMap((x) => (x || "").split(/\s/g)).filter(Boolean).forEach((x) => {
+        M.includes(x) ? $.add(x) : K.add(x);
       });
     } else B = {
       key: U,
       value: V
     };
     if ($.size === 0 && K.size === 0 && B === null) return;
-    let x;
-    N && (x = c.document.createElement("style"), x.appendChild(document.createTextNode(Qn)), c.document.head.appendChild(x));
+    let _;
+    N && (_ = c.document.createElement("style"), _.appendChild(document.createTextNode(Qn)), c.document.head.appendChild(_));
     for (const M of $) z.classList.add(M);
     for (const M of K) z.classList.remove(M);
-    B && z.setAttribute(B.key, B.value), N && (c.getComputedStyle(x).opacity, document.head.removeChild(x));
+    B && z.setAttribute(B.key, B.value), N && (c.getComputedStyle(_).opacity, document.head.removeChild(_));
   });
   function T(P) {
     var U;
@@ -5367,7 +5367,7 @@ function So(a, e, n, r, c, i) {
       e[1] || (e[1] = o("li", null, [
         o("hr", { class: "dropdown-divider" })
       ], -1)),
-      (l(!0), t(ta, null, xa(c.countries, (g, d) => (l(), t("li", { key: d }, [
+      (l(!0), t(ta, null, _a(c.countries, (g, d) => (l(), t("li", { key: d }, [
         o("button", {
           type: "button",
           class: "dropdown-item",
@@ -5418,9 +5418,9 @@ const Wo = /* @__PURE__ */ R(No, [["render", So]]), Ao = {
   style: { width: "300px" }
 }, Mo = {
   key: 0,
-  class: "bg-danger-subtle text-danger-emphasis px-3 py-2 rounded-top d-flex justify-content-between"
-}, Io = { class: "p-3" }, Ro = { class: "d-flex justify-content-center" }, Uo = ["src"], Do = { class: "mt-3" }, Fo = { class: "mt-3 pt-3 border-top" }, Bo = ["href"], xo = ["href"];
-function _o(a, e, n, r, c, i) {
+  class: "bg-danger-subtle text-danger-emphasis px-3 py-2 rounded-top small fw-bold"
+}, Io = { class: "p-3" }, Ro = { class: "d-flex justify-content-center" }, Uo = ["src"], Do = { class: "mt-3" }, Fo = { class: "mt-3 pt-3 border-top" }, Bo = ["href"], _o = ["href"];
+function xo(a, e, n, r, c, i) {
   return l(), t("div", {
     class: p(["d-flex align-items-center border border-white p-0 rounded-pill small", { "bg-danger-subtle border-0": n.userOverride }])
   }, [
@@ -5442,9 +5442,7 @@ function _o(a, e, n, r, c, i) {
         e[0] || (e[0] = o("i", { class: "bi bi-chevron-down me-1" }, null, -1))
       ], 2),
       o("div", Po, [
-        n.userOverride ? (l(), t("div", Mo, [...e[1] || (e[1] = [
-          o("span", null, "Overriding", -1)
-        ])])) : y("", !0),
+        n.userOverride ? (l(), t("div", Mo, " You are overriding as another user ")) : y("", !0),
         o("div", Io, [
           o("div", Ro, [
             o("img", {
@@ -5455,7 +5453,7 @@ function _o(a, e, n, r, c, i) {
           ]),
           o("div", Do, [
             f(a.$slots, "default", {}, () => [
-              e[2] || (e[2] = h(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium hendrerit dui, sit amet dapibus nulla condimentum id. Quisque pulvinar viverra eros, sit amet blandit tellus faucibus at. Maecenas a turpis sed quam vulputate placerat. Duis id eros sit amet turpis dignissim lacinia. Suspendisse molestie vel nisl sit amet convallis. ", -1))
+              e[1] || (e[1] = h(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium hendrerit dui, sit amet dapibus nulla condimentum id. Quisque pulvinar viverra eros, sit amet blandit tellus faucibus at. Maecenas a turpis sed quam vulputate placerat. Duis id eros sit amet turpis dignissim lacinia. Suspendisse molestie vel nisl sit amet convallis. ", -1))
             ], !0)
           ]),
           o("div", Fo, [
@@ -5463,24 +5461,24 @@ function _o(a, e, n, r, c, i) {
               key: 0,
               href: n.clearOverrideUrl,
               class: "link-quiet-danger"
-            }, [...e[3] || (e[3] = [
+            }, [...e[2] || (e[2] = [
               o("i", { class: "bi bi-x-circle me-1" }, null, -1),
               h("Clear override", -1)
             ])], 8, Bo)) : (l(), t("a", {
               key: 1,
               href: n.signoutUrl,
               class: "link-quiet-danger"
-            }, [...e[4] || (e[4] = [
+            }, [...e[3] || (e[3] = [
               o("i", { class: "bi bi-x-circle me-1" }, null, -1),
               h("Sign out", -1)
-            ])], 8, xo))
+            ])], 8, _o))
           ])
         ])
       ])
     ])
   ], 2);
 }
-const Jo = /* @__PURE__ */ R(Ao, [["render", _o], ["__scopeId", "data-v-bd0f861b"]]);
+const Jo = /* @__PURE__ */ R(Ao, [["render", xo], ["__scopeId", "data-v-b4260d87"]]);
 export {
   qo as SColorMode,
   Wo as SCountryCode,

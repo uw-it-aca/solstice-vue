@@ -120,6 +120,7 @@
     },
     methods: {
       clearUserOverride: function () {
+        console.log("Clearing override from SUSer component...");
         return fetch(this.clearOverrideUrl, {
           method: "POST",
           headers: {

@@ -10,32 +10,61 @@
         <SUser
           :user-netid="userNetid"
           :photo-url="'https://randomuser.me/api/portraits/men/66.jpg'"
-          :signout-url="'/signout'"
         >
           <p>user information goes here</p>
+          <template #action>
+            <a :href="signoutUrl" class="link-quiet-danger"
+              ><i class="bi bi-x-circle me-1"></i>Sign out now</a
+            >
+          </template>
+        </SUser>
+        <SUser :user-netid="userNetid" :signout-url="'/signout'">
+          <p>additional user information goes here</p>
+          <template #action>
+            <a :href="signoutUrl" class="link-quiet-danger"
+              ><i class="bi bi-x-circle me-1"></i>Sign out</a
+            >
+          </template>
         </SUser>
         <SUser
           :user-netid="userNetid"
-          :signout-url="'/signout'"
-        >
-          <p>user information goes here</p>
-        </SUser>
-        <SUser
-          :user-netid="userNetid"
-          :user-override="(userOverride = 'billy')"
+          :user-override="'billy'"
           :photo-url="'https://randomuser.me/api/portraits/men/67.jpg'"
-          :signout-url="'/signout'"
-          :clear-override-url="'/support'"
+
         >
           <p>user information goes here</p>
+          <template #action>
+            <a
+              v-if="true"
+              role="button"
+              class="link-quiet-danger"
+              @click="clearUserOverride()"
+              ><i class="bi bi-x-circle me-1"></i>Clear override</a
+            >
+
+            <a v-else :href="signoutUrl" class="link-quiet-danger"
+              ><i class="bi bi-x-circle me-1"></i>Sign out</a
+            >
+          </template>
         </SUser>
         <SUser
           :user-netid="userNetid"
-          :user-override="(userOverride = 'billy')"
-          :signout-url="'/signout'"
-          :clear-override-url="'/support'"
+          :user-override="'billy'"
         >
           <p>user information goes here</p>
+          <template #action>
+            <a
+              v-if="true"
+              role="button"
+              class="link-quiet-danger"
+              @click="clearUserOverride()"
+              ><i class="bi bi-x-circle me-1"></i>Clear override</a
+            >
+
+            <a v-else :href="signoutUrl" class="link-quiet-danger"
+              ><i class="bi bi-x-circle me-1"></i>Sign out</a
+            >
+          </template>
         </SUser>
         <SColorMode :color-class="'text-white'" class="ms-2"/>
       </div>
@@ -71,7 +100,7 @@
             </li>
             <li>
               <a class="dropdown-item" href="#"
-                >Another <span>asdf</span> action</a
+                >Another <span>asdf</span>action</a
               >
             </li>
             <li>
@@ -159,7 +188,7 @@
         appRootUrl: "/",
 
         // login component
-        signOutUrl: "/signout",
+        signoutUrl: "/signout",
         pageTitle: "Home",
         userNetid: "javerage",
         userOverride: "",

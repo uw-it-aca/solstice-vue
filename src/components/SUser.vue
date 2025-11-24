@@ -71,19 +71,7 @@
           </div>
 
           <div class="mt-3 pt-3 border-top">
-            <template v-if="userOverride">
-              <a
-                role="button"
-                class="link-quiet-danger"
-                @click="clearUserOverride()"
-                ><i class="bi bi-x-circle me-1"></i>Clear override</a
-              >
-            </template>
-            <template v-else>
-              <a :href="signoutUrl" class="link-quiet-danger"
-                ><i class="bi bi-x-circle me-1"></i>Sign out</a
-              >
-            </template>
+            <slot name="action">action</slot>
           </div>
         </div>
       </div>
@@ -106,39 +94,11 @@
         type: String,
         required: false,
       },
-      signoutUrl: {
-        type: String,
-        required: false,
-      },
-      clearOverrideUrl: {
-        type: String,
-        required: false,
-      },
     },
     data() {
       return {};
     },
-    methods: {
-      clearUserOverride: function () {
-        console.log("Clearing override from SUSer component...");
-        return fetch(this.clearOverrideUrl, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json;charset=UTF-8",
-          },
-          body: JSON.stringify({ clear_override: true }),
-        })
-          .then((data) => {
-            console.log("Override cleared:", data);
-          })
-          .catch((error) => {
-            console.error("Error clearing override:", error);
-          })
-          .finally(() => {
-            window.location.href = this.clearOverrideUrl;
-          });
-      },
-    },
+    methods: {},
   };
 </script>
 

@@ -13,22 +13,14 @@
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
+
         <img
           :src="photoUrl ? photoUrl : '/src/assets/images/placeholder.png'"
           class="img-tiny rounded-circle"
           alt="user avatar"
         >
-        <span class="mx-2">{{ userNetid }}</span>
+          <span  v-if="userOverride" class="mx-2">{{ userOverride }}</span><span v-else class="mx-2">{{ userNetid }}</span>
 
-        <template v-if="userOverride">
-          <i class="bi bi-arrow-right text-danger-emphasis me-2"></i>
-          <img
-            src="/src/assets/images/placeholder.png"
-            alt="UW logo"
-            class="img-tiny rounded-circle border"
-          >
-          <span class="mx-2">{{ userOverride }}</span>
-        </template>
 
         <i class="bi bi-chevron-down me-1"></i></a
       >
@@ -42,27 +34,17 @@
           class="bg-danger-subtle text-danger-emphasis px-3 py-2 rounded-top d-flex justify-content-between"
         >
           <span>Overriding</span>
-          <strong
-            >{{ userNetid }}
-            <i class="bi bi-arrow-right text-danger-emphasis"></i>
-            {{ userOverride }}</strong
-          >
         </div>
 
         <div class="p-3">
           <div class="d-flex justify-content-center">
-            <img
-              v-if="userOverride"
-              src="/src/assets/images/placeholder.png"
-              alt="UW logo"
-              class="img-profile rounded-circle"
-            >
-            <img
-              v-else
-              :src="photoUrl ? photoUrl : '/src/assets/images/placeholder.png'"
-              class="img-profile rounded-circle"
-              alt="user avatar"
-            >
+
+              <img
+                :src="photoUrl ? photoUrl : '/src/assets/images/placeholder.png'"
+                class="img-profile rounded-circle"
+                alt="user avatar"
+              >
+
           </div>
           <div class="mt-3">
             <slot>

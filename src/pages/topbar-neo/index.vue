@@ -9,17 +9,33 @@
       <div class="d-flex">
         <SUser
           :user-netid="userNetid"
-          :user-override="(userOverride = 'billy')"
           :photo-url="'https://randomuser.me/api/portraits/men/66.jpg'"
+          :signout-url="'/signout'"
+        >
+          <p>user information goes here</p>
+        </SUser>
+        <SUser
+          :user-netid="userNetid"
+          :signout-url="'/signout'"
+        >
+          <p>user information goes here</p>
+        </SUser>
+        <SUser
+          :user-netid="userNetid"
+          :user-override="(userOverride = 'billy')"
+          :photo-url="'https://randomuser.me/api/portraits/men/67.jpg'"
           :signout-url="'/signout'"
           :clear-override-url="'/support'"
         >
-          <template v-if="userOverride !== ''">
-            i am the override in user, here is my info
-          </template>
-          <template v-else>
-            i am the logged in user, here is my info
-          </template>
+          <p>user information goes here</p>
+        </SUser>
+        <SUser
+          :user-netid="userNetid"
+          :user-override="(userOverride = 'billy')"
+          :signout-url="'/signout'"
+          :clear-override-url="'/support'"
+        >
+          <p>user information goes here</p>
         </SUser>
         <SColorMode :color-class="'text-white'" class="ms-2"/>
       </div>

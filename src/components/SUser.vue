@@ -13,15 +13,23 @@
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-
         <img
-          :src="photoUrl ? photoUrl : '/src/assets/images/placeholder.png'"
+          v-if="photoUrl"
+          :src="photoUrl"
           class="img-tiny rounded-circle"
           alt="user avatar"
         >
-          <span  v-if="userOverride" class="mx-2">{{ userOverride }}</span><span v-else class="mx-2">{{ userNetid }}</span>
-
-
+        <img
+          v-else
+          src="/src/assets/images/placeholder.png"
+          class="img-tiny rounded-circle"
+          alt="user avatar"
+        >
+        <span v-if="userOverride" class="mx-2">{{ userOverride }}</span><span
+          v-else
+          class="mx-2"
+          >{{ userNetid }}</span
+        >
         <i class="bi bi-chevron-down me-1"></i></a
       >
       <div
@@ -38,13 +46,18 @@
 
         <div class="p-3">
           <div class="d-flex justify-content-center">
-
-              <img
-                :src="photoUrl ? photoUrl : '/src/assets/images/placeholder.png'"
-                class="img-profile rounded-circle"
-                alt="user avatar"
-              >
-
+            <img
+              v-if="photoUrl"
+              :src="photoUrl"
+              class="img-profile rounded-circle"
+              alt="user avatar"
+            >
+            <img
+              v-else
+              src="/src/assets/images/placeholder.png"
+              class="img-profile rounded-circle"
+              alt="user avatar"
+            >
           </div>
           <div class="mt-3">
             <slot>

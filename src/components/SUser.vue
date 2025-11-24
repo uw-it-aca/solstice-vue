@@ -123,8 +123,9 @@
         return fetch(this.clearOverrideUrl, {
           method: "POST",
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/json;charset=UTF-8",
           },
+          body: JSON.stringify({ clear_override: true }),
         })
           .then((data) => {
             console.log("Override cleared:", data);

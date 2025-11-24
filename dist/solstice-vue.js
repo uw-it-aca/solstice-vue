@@ -1,4 +1,4 @@
-import { createElementBlock as t, createCommentVNode as y, openBlock as l, renderSlot as f, createElementVNode as o, withKeys as oa, normalizeClass as p, withModifiers as Ba, resolveComponent as Ia, normalizeStyle as ia, createVNode as ka, withCtx as Ma, createTextVNode as h, toDisplayString as L, createStaticVNode as ya, toRef as Da, readonly as Ca, ref as Na, customRef as Ra, onMounted as La, nextTick as Ea, getCurrentInstance as ca, watch as _, getCurrentScope as pa, onScopeDispose as Ua, hasInjectionContext as ha, inject as Pa, computed as W, shallowRef as H, toValue as U, watchEffect as Fa, unref as Ga, withDirectives as $, vShow as aa, Fragment as ta, renderList as xa } from "vue";
+import { createElementBlock as t, createCommentVNode as y, openBlock as l, renderSlot as f, createElementVNode as o, withKeys as oa, normalizeClass as p, withModifiers as Ba, resolveComponent as Ia, normalizeStyle as ia, createVNode as ka, withCtx as Ma, createTextVNode as h, toDisplayString as L, createStaticVNode as ya, toRef as Da, readonly as Ca, ref as Na, customRef as Ua, onMounted as La, nextTick as Ea, getCurrentInstance as ca, watch as _, getCurrentScope as pa, onScopeDispose as Ra, hasInjectionContext as ha, inject as Pa, computed as W, shallowRef as H, toValue as R, watchEffect as Fa, unref as Ga, withDirectives as $, vShow as aa, Fragment as ta, renderList as xa } from "vue";
 const D = (a, e) => {
   const n = a.__vccOpts || a;
   for (const [r, c] of e)
@@ -452,7 +452,7 @@ function Me(a, e, n, r, c, i) {
     ])
   ], 2);
 }
-const Jo = /* @__PURE__ */ D(de, [["render", Me]]), De = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAhCAYAAACbffiEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5QjA3NEU2NTJDQTkxMUU0QTcxOEIwNEIyRTA4NDYxMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5QjA3NEU2NjJDQTkxMUU0QTcxOEIwNEIyRTA4NDYxMyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjlCMDc0RTYzMkNBOTExRTRBNzE4QjA0QjJFMDg0NjEzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjlCMDc0RTY0MkNBOTExRTRBNzE4QjA0QjJFMDg0NjEzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+TGF1VAAAA3RJREFUeNq0mEtPFEEQx2dXQAUPIohE4ysKvpAVBeIDFCNREw8eMTHePHjycxg9e/ATePGgB02MgLK74mNBASUxqBj1YEQMGFxYdsX1P0ltHDvVM1WzayU/Hv2o7pruqq7uSD6fTzmOUw1+OeFkJYiDC0zdPnALLIE8lUVAOTgHnjN9roEeMC8cfxW4WYYf28FqpzjZYik/A7ZZ6rothmwAG5Xjr486pZElS3mHT59jlvLfIcbPl8oQTtaBNp/6JlBfqsGi/1HPQVDjtx3ATqY8EnYCCyAL0mBR2C9D7QsOucC06RLoOWHR7ZDutOf/f7YS1RfGX4wgau3AH8tADtSC26AuYALXwVVQRR/jJ/joqXf1PQMHAvTcB6eZlaomX5kDV8B5o81dcBlU0FgzDgwx6csHyz2mn5dGkBbomQb1PnqiIMn0u2S25fZ2v2BL7AFrfeo7QaVATw05vU22MgEjS6sd6KQpwQQ2WRxV4x8FOR4QoiuMsnfgldSQb4IJHPU56TsUhrQrP0iCy0I4Q2aEq3LEUu46+GaFIS2WMF1pGSOpOUcGBROIWaLbIeVZ4BqxnylvZlKfBa0hSUl+A3Yz5adCnGeHLf5hzu8l+KQxZBR8FUygi0n4mkIY0iH0j0FbLmYzZBY8CeGoMcqxtNJihHN3y7Yy7R6GybWGBBNoo2ygICeZNl8Ed4sa47xoN/S6Mk1bS22I5GCs9Thq1LJFboA3ytXtZOqH6aOoDZkAnxWO2kAnvil3wJjS37qZ+njYNP6731J6pNUTdlcYdR/AiDCc7wJr6EbZyNQPFHMfSQj9pNySkqc8YTPoTaCOVjRG93CvTIJxv85lAcrjwgPtLNjL1PXS79e0Og0Bujot9/8RiqShV8T1k/cBbdz7wEXmkSHjyVIzlocGU3osacmDYq+6s1ymaTnNze3w1tgOAwI9zUy2kJN8BMmdvS/kPT5uvK6kFFfpwLQ9jCFDIQ15bPw/blyHpZKgVSnakDH6KhpJM4bkhMmoKY9K9Rw0T1FDIy8sh+lTpZ4f3LW2mHetfuUEks7ft15zu2UVeiboDCmZIcOO7pHbFqEmKZpJpVfzQCeRUduFhpEpn9QmI90q2q0oNWRRmC8VVm9KEc38cj3pmIEpihk93Be/OZ82VYLtkKBJLnfsL+9VdA5NSyf3R4ABABbMYvghpWrNAAAAAElFTkSuQmCC", Re = {
+const Jo = /* @__PURE__ */ D(de, [["render", Me]]), De = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAhCAYAAACbffiEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5QjA3NEU2NTJDQTkxMUU0QTcxOEIwNEIyRTA4NDYxMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5QjA3NEU2NjJDQTkxMUU0QTcxOEIwNEIyRTA4NDYxMyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjlCMDc0RTYzMkNBOTExRTRBNzE4QjA0QjJFMDg0NjEzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjlCMDc0RTY0MkNBOTExRTRBNzE4QjA0QjJFMDg0NjEzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+TGF1VAAAA3RJREFUeNq0mEtPFEEQx2dXQAUPIohE4ysKvpAVBeIDFCNREw8eMTHePHjycxg9e/ATePGgB02MgLK74mNBASUxqBj1YEQMGFxYdsX1P0ltHDvVM1WzayU/Hv2o7pruqq7uSD6fTzmOUw1+OeFkJYiDC0zdPnALLIE8lUVAOTgHnjN9roEeMC8cfxW4WYYf28FqpzjZYik/A7ZZ6rothmwAG5Xjr486pZElS3mHT59jlvLfIcbPl8oQTtaBNp/6JlBfqsGi/1HPQVDjtx3ATqY8EnYCCyAL0mBR2C9D7QsOucC06RLoOWHR7ZDutOf/f7YS1RfGX4wgau3AH8tADtSC26AuYALXwVVQRR/jJ/joqXf1PQMHAvTcB6eZlaomX5kDV8B5o81dcBlU0FgzDgwx6csHyz2mn5dGkBbomQb1PnqiIMn0u2S25fZ2v2BL7AFrfeo7QaVATw05vU22MgEjS6sd6KQpwQQ2WRxV4x8FOR4QoiuMsnfgldSQb4IJHPU56TsUhrQrP0iCy0I4Q2aEq3LEUu46+GaFIS2WMF1pGSOpOUcGBROIWaLbIeVZ4BqxnylvZlKfBa0hSUl+A3Yz5adCnGeHLf5hzu8l+KQxZBR8FUygi0n4mkIY0iH0j0FbLmYzZBY8CeGoMcqxtNJihHN3y7Yy7R6GybWGBBNoo2ygICeZNl8Ed4sa47xoN/S6Mk1bS22I5GCs9Thq1LJFboA3ytXtZOqH6aOoDZkAnxWO2kAnvil3wJjS37qZ+njYNP6731J6pNUTdlcYdR/AiDCc7wJr6EbZyNQPFHMfSQj9pNySkqc8YTPoTaCOVjRG93CvTIJxv85lAcrjwgPtLNjL1PXS79e0Og0Bujot9/8RiqShV8T1k/cBbdz7wEXmkSHjyVIzlocGU3osacmDYq+6s1ymaTnNze3w1tgOAwI9zUy2kJN8BMmdvS/kPT5uvK6kFFfpwLQ9jCFDIQ15bPw/blyHpZKgVSnakDH6KhpJM4bkhMmoKY9K9Rw0T1FDIy8sh+lTpZ4f3LW2mHetfuUEks7ft15zu2UVeiboDCmZIcOO7pHbFqEmKZpJpVfzQCeRUduFhpEpn9QmI90q2q0oNWRRmC8VVm9KEc38cj3pmIEpihk93Be/OZ82VYLtkKBJLnfsL+9VdA5NSyf3R4ABABbMYvghpWrNAAAAAElFTkSuQmCC", Ue = {
   inject: ["mq"],
   props: {
     appName: {
@@ -481,7 +481,7 @@ const Jo = /* @__PURE__ */ D(de, [["render", Me]]), De = "data:image/png;base64,
       default: "https://www.washington.edu/online/terms/"
     }
   }
-}, Ue = { class: "w-100 bg-spirit-purple" }, Pe = { class: "container-xl" }, Fe = { class: "d-flex justify-content-between align-items-center" }, Ge = { class: "w-50 d-flex align-items-center my-4" }, xe = { class: "text-white d-flex flex-column" }, Ke = {
+}, Re = { class: "w-100 bg-spirit-purple" }, Pe = { class: "container-xl" }, Fe = { class: "d-flex justify-content-between align-items-center" }, Ge = { class: "w-50 d-flex align-items-center my-4" }, xe = { class: "text-white d-flex flex-column" }, Ke = {
   key: 0,
   class: "fw-light text-nowrap mb-1 lh-1"
 }, We = ["href"], Oe = { class: "w-50 d-flex justify-content-end align-items-center" }, Qe = {
@@ -509,7 +509,7 @@ function un(a, e, n, r, c, i) {
   return l(), t("div", {
     class: p([[n.isPreview ? " " : " min-vh-100"], "d-flex align-items-end flex-column sol-topbar-neo"])
   }, [
-    o("header", Ue, [
+    o("header", Re, [
       o("div", Pe, [
         o("div", Fe, [
           o("div", Ge, [
@@ -606,7 +606,7 @@ function un(a, e, n, r, c, i) {
     ])
   ], 2);
 }
-const zo = /* @__PURE__ */ D(Re, [["render", un]]), gn = {
+const zo = /* @__PURE__ */ D(Ue, [["render", un]]), gn = {
   props: {
     variant: {
       type: String,
@@ -722,7 +722,7 @@ function In(a, e, n, r, c, i) {
 }
 const qo = /* @__PURE__ */ D(gn, [["render", In]]);
 function kn(a, e) {
-  return pa() ? (Ua(a, e), !0) : !1;
+  return pa() ? (Ra(a, e), !0) : !1;
 }
 const ea = /* @__PURE__ */ new WeakMap(), Mn = /* @__NO_SIDE_EFFECTS__ */ (...a) => {
   var e;
@@ -731,12 +731,12 @@ const ea = /* @__PURE__ */ new WeakMap(), Mn = /* @__NO_SIDE_EFFECTS__ */ (...a)
   return c && ea.has(c) && n in ea.get(c) ? ea.get(c)[n] : Pa(...a);
 }, Dn = typeof window < "u" && typeof document < "u";
 typeof WorkerGlobalScope < "u" && globalThis instanceof WorkerGlobalScope;
-const Rn = Object.prototype.toString, Un = (a) => Rn.call(a) === "[object Object]", Pn = () => {
+const Un = Object.prototype.toString, Rn = (a) => Un.call(a) === "[object Object]", Pn = () => {
 };
 function Aa(...a) {
   if (a.length !== 1) return Da(...a);
   const e = a[0];
-  return typeof e == "function" ? Ca(Ra(() => ({
+  return typeof e == "function" ? Ca(Ua(() => ({
     get: e,
     set: Pn
   }))) : Na(e);
@@ -810,26 +810,26 @@ function Qn(a, e, n) {
 const K = Dn ? window : void 0;
 function Ta(a) {
   var e;
-  const n = U(a);
+  const n = R(a);
   return (e = n?.$el) !== null && e !== void 0 ? e : n;
 }
 function ra(...a) {
   const e = [], n = () => {
     e.forEach((d) => d()), e.length = 0;
   }, r = (d, m, u, N) => (d.addEventListener(m, u, N), () => d.removeEventListener(m, u, N)), c = W(() => {
-    const d = na(U(a[0])).filter((m) => m != null);
+    const d = na(R(a[0])).filter((m) => m != null);
     return d.every((m) => typeof m != "string") ? d : void 0;
   }), i = Qn(() => {
     var d, m;
     return [
       (d = (m = c.value) === null || m === void 0 ? void 0 : m.map((u) => Ta(u))) !== null && d !== void 0 ? d : [K].filter((u) => u != null),
-      na(U(c.value ? a[1] : a[0])),
+      na(R(c.value ? a[1] : a[0])),
       na(Ga(c.value ? a[2] : a[1])),
-      U(c.value ? a[3] : a[2])
+      R(c.value ? a[3] : a[2])
     ];
   }, ([d, m, u, N]) => {
     if (n(), !d?.length || !m?.length || !u?.length) return;
-    const C = Un(N) ? { ...N } : N;
+    const C = Rn(N) ? { ...N } : N;
     e.push(...d.flatMap((B) => m.flatMap((E) => u.map((A) => r(B, E, A, C)))));
   }, { flush: "post" }), g = () => {
     i(), n();
@@ -860,14 +860,14 @@ function Jn(a, e = {}) {
   };
   return Fa(() => {
     if (i.value) {
-      i.value = !c.value, d.value = U(a).split(",").some((u) => {
+      i.value = !c.value, d.value = R(a).split(",").some((u) => {
         const N = u.includes("not all"), C = u.match(/\(\s*min-width:\s*(-?\d+(?:\.\d*)?[a-z]+\s*)\)/), B = u.match(/\(\s*max-width:\s*(-?\d+(?:\.\d*)?[a-z]+\s*)\)/);
         let E = !!(C || B);
         return C && E && (E = r >= la(C[1])), B && E && (E = r <= la(B[1])), N ? !E : E;
       });
       return;
     }
-    c.value && (g.value = n.matchMedia(U(a)), d.value = g.value.matches);
+    c.value && (g.value = n.matchMedia(R(a)), d.value = g.value.matches);
   }), ra(g, "change", m, { passive: !0 }), W(() => d.value);
 }
 const J = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {}, z = "__vueuse_ssr_handlers__", zn = /* @__PURE__ */ qn();
@@ -922,14 +922,14 @@ function $n(a, e, n, r = {}) {
   var c;
   const { flush: i = "pre", deep: g = !0, listenToStorageChanges: d = !0, writeDefaults: m = !0, mergeDefaults: u = !1, shallow: N, window: C = K, eventFilter: B, onError: E = (s) => {
     console.error(s);
-  }, initOnMounted: A } = r, S = (N ? H : Na)(typeof e == "function" ? e() : e), b = W(() => U(a));
+  }, initOnMounted: A } = r, S = (N ? H : Na)(typeof e == "function" ? e() : e), b = W(() => R(a));
   if (!n) try {
     n = va("getDefaultStorage", () => K?.localStorage)();
   } catch (s) {
     E(s);
   }
   if (!n) return S;
-  const T = U(e), j = Zn(T), P = (c = r.serializer) !== null && c !== void 0 ? c : _n[j], { pause: I, resume: R } = On(S, (s) => F(s), {
+  const T = R(e), j = Zn(T), P = (c = r.serializer) !== null && c !== void 0 ? c : _n[j], { pause: I, resume: U } = On(S, (s) => F(s), {
     flush: i,
     deep: g,
     eventFilter: B
@@ -994,7 +994,7 @@ function $n(a, e, n, r = {}) {
         } catch (v) {
           E(v);
         } finally {
-          s ? Ea(R) : R();
+          s ? Ea(U) : U();
         }
       }
     }
@@ -1014,18 +1014,18 @@ function eo(a = {}) {
   }, B = /* @__PURE__ */ Xn({ window: c }), E = W(() => B.value ? "dark" : "light"), A = m || (g == null ? Aa(r) : $n(g, r, i, {
     window: c,
     listenToStorageChanges: d
-  })), S = W(() => A.value === "auto" ? E.value : A.value), b = va("updateHTMLAttrs", (I, R, O) => {
+  })), S = W(() => A.value === "auto" ? E.value : A.value), b = va("updateHTMLAttrs", (I, U, O) => {
     const Q = typeof I == "string" ? c?.document.querySelector(I) : Ta(I);
     if (!Q) return;
     const V = /* @__PURE__ */ new Set(), Y = /* @__PURE__ */ new Set();
     let F = null;
-    if (R === "class") {
+    if (U === "class") {
       const k = O.split(/\s/g);
       Object.values(C).flatMap((x) => (x || "").split(/\s/g)).filter(Boolean).forEach((x) => {
         k.includes(x) ? V.add(x) : Y.add(x);
       });
     } else F = {
-      key: R,
+      key: U,
       value: O
     };
     if (V.size === 0 && Y.size === 0 && F === null) return;
@@ -1036,8 +1036,8 @@ function eo(a = {}) {
     F && Q.setAttribute(F.key, F.value), N && (c.getComputedStyle(G).opacity, document.head.removeChild(G));
   });
   function T(I) {
-    var R;
-    b(e, n, (R = C[I]) !== null && R !== void 0 ? R : I);
+    var U;
+    b(e, n, (U = C[I]) !== null && U !== void 0 ? U : I);
   }
   function j(I) {
     a.onChanged ? a.onChanged(I, T) : T(I);
@@ -5411,8 +5411,9 @@ const Zo = /* @__PURE__ */ D(Lo, [["render", bo]]), wa = "data:image/png;base64,
       return fetch(this.clearOverrideUrl, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
-        }
+          "Content-Type": "application/json;charset=UTF-8"
+        },
+        body: JSON.stringify({ clear_override: !0 })
       }).then((a) => {
         console.log("Override cleared:", a);
       }).catch((a) => {
@@ -5440,7 +5441,7 @@ const Zo = /* @__PURE__ */ D(Lo, [["render", bo]]), wa = "data:image/png;base64,
 }, Do = {
   key: 0,
   class: "bg-danger-subtle text-danger-emphasis px-3 py-2 rounded-top small fw-bold"
-}, Ro = { class: "p-3" }, Uo = { class: "d-flex justify-content-center" }, Po = ["src"], Fo = {
+}, Uo = { class: "p-3" }, Ro = { class: "d-flex justify-content-center" }, Po = ["src"], Fo = {
   key: 1,
   src: wa,
   class: "img-profile rounded-circle",
@@ -5470,8 +5471,8 @@ function Wo(a, e, n, r, c, i) {
       ], 2),
       o("div", Mo, [
         n.userOverride ? (l(), t("div", Do, " You are overriding as another user ")) : y("", !0),
-        o("div", Ro, [
-          o("div", Uo, [
+        o("div", Uo, [
+          o("div", Ro, [
             n.photoUrl ? (l(), t("img", {
               key: 0,
               src: n.photoUrl,
@@ -5507,7 +5508,7 @@ function Wo(a, e, n, r, c, i) {
     ])
   ], 2);
 }
-const _o = /* @__PURE__ */ D(To, [["render", Wo], ["__scopeId", "data-v-f8817e34"]]);
+const _o = /* @__PURE__ */ D(To, [["render", Wo], ["__scopeId", "data-v-80dd77c2"]]);
 export {
   Xo as SColorMode,
   Zo as SCountryCode,

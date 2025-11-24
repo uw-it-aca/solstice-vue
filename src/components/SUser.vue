@@ -72,7 +72,10 @@
 
           <div class="mt-3 pt-3 border-top">
             <template v-if="userOverride">
-              <a :href="clearOverrideUrl" class="link-quiet-danger"
+              <a
+                role="button"
+                class="link-quiet-danger"
+                @click="clearUserOverride()"
                 ><i class="bi bi-x-circle me-1"></i>Clear override</a
               >
             </template>
@@ -114,6 +117,25 @@
     },
     data() {
       return {};
+    },
+    methods: {
+      clearUserOverride: function () {
+        return fetch(this.clearOverrideUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((data) => {
+            console.log("Override cleared:", data);
+          })
+          .catch((error) => {
+            console.error("Error clearing override:", error);
+          })
+          .finally(() => {
+            window.location.href = this.clearOverrideUrl;
+          });
+      },
     },
   };
 </script>

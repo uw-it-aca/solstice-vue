@@ -1972,11 +1972,9 @@
           </div>
 
           <div class="mb-3">
-            <label for="inputPassword5" class="form-label">Phone Number</label>
+            <label for="inputPassword5" class="form-label">Phone Numberr</label>
             <div class="input-group">
-              <SCountryCode
-                @update:calling-code="emergencyCallingCode1 = $event"
-              />
+              <SCountryCode v-model:calling-code="emergencyCallingCode1" />
               <input
                 type="hidden"
                 name="emergencyCallingCode1"
@@ -2075,9 +2073,7 @@
           <div class="mb-3">
             <label for="inputPassword5" class="form-label">Phone Number</label>
             <div class="input-group input-group-sm">
-              <SCountryCode
-                @update:calling-code="emergencyCallingCode2 = $event"
-              />
+              <SCountryCode v-model:calling-code="emergencyCallingCode2" />
               <input
                 type="hidden"
                 name="emergencyCallingCode2"
@@ -2672,35 +2668,56 @@
         <ul class="g-col-6 list-unstyled">
           <li class="border p-2 mb-2">
             Lorem ipsum dolor sit amet,
-            <a href="#" class="link-primary">link-primary</a>consectetur
+            <a href="#" class="link-primary">link-primary</a> consectetur
+            adipiscing elit.
+          </li>
+          <li class="border p-2 mb-2">
+            Lorem ipsum dolor sit amet,
+            <a href="#" class="link-danger">link-danger</a> consectetur
+            adipiscing elit.
+          </li>
+          <li class="border p-2 mb-2">
+            Lorem ipsum dolor sit amet,
+            <a href="#" class="link-body">link-body</a> consectetur
             adipiscing elit.
           </li>
           <li class="bg-husky-purple p-2 text-white mb-2">
             Lorem ipsum dolor sit amet,
-            <a href="#" class="link-light">link-light</a>consectetur adipiscing
+            <a href="#" class="link-light">link-light</a> consectetur adipiscing
             elit.
           </li>
           <li class="bg-spirit-gold text-black p-2">
             Lorem ipsum dolor sit amet,
-            <a href="#" class="link-dark">link-dark</a>consectetur adipiscing
+            <a href="#" class="link-dark">link-dark</a> consectetur adipiscing
             elit.
           </li>
         </ul>
 
+
         <ul class="g-col-6 list-unstyled">
           <li class="border p-2 mb-2">
             <a href="#" class="link-quiet-primary"
-              ><i class="bi bi-emoji-smile"></i>link-quiet-primary</a
+              ><i class="bi bi-emoji-smile me-1"></i>link-quiet-primary</a
+            >
+          </li>
+          <li class="border p-2 mb-2">
+            <a href="#" class="link-quiet-danger"
+              ><i class="bi bi-emoji-smile me-1"></i>link-quiet-danger</a
+            >
+          </li>
+          <li class="border p-2 mb-2">
+            <a href="#" class="link-quiet-body"
+              ><i class="bi bi-emoji-smile me-1"></i>link-quiet-body</a
             >
           </li>
           <li class="bg-husky-purple p-2 text-light mb-2">
             <a href="#" class="link-quiet-light"
-              ><i class="bi bi-emoji-smile"></i>link-quiet-light</a
+              ><i class="bi bi-emoji-smile me-1"></i>link-quiet-light</a
             >
           </li>
           <li class="bg-spirit-gold text-dark p-2">
             <a href="#" class="link-quiet-dark"
-              ><i class="bi bi-emoji-smile"></i>link-quiet-dark</a
+              ><i class="bi bi-emoji-smile me-1"></i>link-quiet-dark</a
             >
           </li>
         </ul>
@@ -3555,7 +3572,7 @@
         pageTitle: "Getting started",
         colorMode: "light",
         modal: false,
-        emergencyCallingCode1: "1", // default to US
+        emergencyCallingCode1: "91", // 86 china OR  91 india
         emergencyCallingCode2: "1", // default to US
       };
     },

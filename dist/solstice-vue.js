@@ -5303,6 +5303,12 @@ function Co() {
 }
 var No = Co();
 const Lo = {
+  props: {
+    callingCode: {
+      type: String,
+      default: "1"
+    }
+  },
   emits: ["update:callingCode"],
   data() {
     return {
@@ -5313,6 +5319,14 @@ const Lo = {
         callingCode: "1"
       }
     };
+  },
+  watch: {
+    callingCode: {
+      immediate: !0,
+      handler(a) {
+        a && this.countries.length > 0 && this.updateSelectedCountry(a);
+      }
+    }
   },
   mounted() {
     const a = No.customList(
@@ -5327,7 +5341,7 @@ const Lo = {
         name: r,
         callingCode: i
       };
-    }).sort((e, n) => e.name.localeCompare(n.name));
+    }).sort((e, n) => e.name.localeCompare(n.name)), this.callingCode && this.updateSelectedCountry(this.callingCode);
   },
   methods: {
     flag(a) {
@@ -5335,6 +5349,20 @@ const Lo = {
     },
     selectCountry(a) {
       this.selectedCountry = a, this.$emit("update:callingCode", a.callingCode);
+    },
+    updateSelectedCountry(a) {
+      if (a === "1") {
+        this.selectedCountry = {
+          code: "US",
+          name: "United States of America",
+          callingCode: "1"
+        };
+        return;
+      }
+      const e = this.countries.find(
+        (n) => n.callingCode === a
+      );
+      e && (this.selectedCountry = e);
     }
   }
 }, Eo = {
@@ -5362,7 +5390,7 @@ function bo(a, e, n, r, c, i) {
             name: "United States of America",
             callingCode: "1"
           }))
-        }, L(i.flag("US")) + "United States of America (+1) ", 1)
+        }, L(i.flag("US")) + " United States of America (+1) ", 1)
       ]),
       e[1] || (e[1] = o("li", null, [
         o("hr", { class: "dropdown-divider" })
@@ -5471,7 +5499,7 @@ function Ko(a, e, n, r, c, i) {
     ])
   ], 2);
 }
-const Zo = /* @__PURE__ */ D(To, [["render", Ko], ["__scopeId", "data-v-93595507"]]);
+const Zo = /* @__PURE__ */ D(To, [["render", Ko], ["__scopeId", "data-v-627c6cf1"]]);
 export {
   qo as SColorMode,
   Xo as SCountryCode,

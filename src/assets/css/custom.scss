@@ -372,27 +372,63 @@
   }
 }
 
-.link-light {
-  opacity: 0.6;
+.link-danger {
+  color: $red2-500 !important;
 
   &:hover {
-    opacity: 0.9;
+    color: $red2-700 !important;
+  }
+}
+
+.link-quiet-danger {
+  color: $red2-500 !important;
+  text-decoration: none;
+
+  &:hover {
+    color: $red2-700 !important;
+    text-decoration: underline;
+  }
+}
+
+.link-body {
+  color: $gray-900 !important;
+
+  &:hover {
+    color: $gray-700 !important;
+  }
+}
+
+.link-quiet-body {
+  color: $gray-900 !important;
+  text-decoration: none;
+
+  &:hover {
+    color: $gray-700 !important;
+    text-decoration: underline;
+  }
+}
+
+.link-light {
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
   }
 }
 
 .link-quiet-light {
   color: $gray-100;
-  opacity: 0.6;
+  opacity: 0.7;
   text-decoration: none;
 
   &:hover {
-    opacity: 0.9;
+    opacity: 1;
     text-decoration: underline;
   }
 }
 
 .link-dark {
-  opacity: 0.7;
+  opacity: 0.8;
 
   &:hover {
     opacity: 1;
@@ -401,7 +437,7 @@
 
 .link-quiet-dark {
   color: $gray-900;
-  opacity: 0.7;
+  opacity: 0.8;
   text-decoration: none;
 
   &:hover {
@@ -492,6 +528,34 @@
     &:hover {
       color: $red2-400 !important;
       text-decoration-color: $red2-400 !important;
+    }
+  }
+
+  .link-quiet-danger {
+    color: $red2-300 !important;
+    text-decoration: none;
+
+    &:hover {
+      color: $red2-400 !important;
+      text-decoration: underline;
+    }
+  }
+
+  .link-body {
+    color: $gray-300 !important;
+
+    &:hover {
+      color: $gray-500 !important;
+    }
+  }
+
+  .link-quiet-body {
+    color: $gray-300 !important;
+    text-decoration: none;
+
+    &:hover {
+      color: $gray-500 !important;
+      text-decoration: underline;
     }
   }
 

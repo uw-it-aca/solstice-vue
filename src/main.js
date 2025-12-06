@@ -1,6 +1,6 @@
-import { createApp } from "vue";
 import { createBootstrap } from "bootstrap-vue-next";
-import { Vue3Mq, MqResponsive } from "vue3-mq";
+import { createApp } from "vue";
+import { MqResponsive, Vue3Mq } from "vue3-mq";
 
 import App from "@/app.vue";
 import router from "@/router";
@@ -10,12 +10,12 @@ import "bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 // solstice bootstrap theme (version release)
-import "solstice-theme/dist/solstice.scss";
+// import "solstice-theme/dist/solstice.scss";
 
 // -OR-
 
 // solstice bootstrap theme (local development for 'custom.scss' file on solstice-theme)
-//import "@/assets/css/solstice.scss";
+import "@/assets/css/solstice.scss";
 
 // solstice-vue comps
 import "solstice-vue/dist/style.css";

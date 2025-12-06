@@ -1,7 +1,7 @@
 <template>
   <div
     class="d-flex align-items-center border border-white p-0 rounded-pill small"
-    :class="{ 'bg-danger-subtle border-0': userOverride }"
+    :class="{ 'bg-danger-subtle border-0' : userOverride }"
   >
     <div class="flex-fill dropdown">
       <a
@@ -25,13 +25,10 @@
           class="img-tiny rounded-circle"
           alt="user avatar"
         >
-        <span v-if="userOverride" class="mx-2">{{ userOverride }}</span><span
-          v-else
-          class="mx-2"
-          >{{ userNetid }}</span
-        >
-        <i class="bi bi-chevron-down me-1"></i></a
-      >
+        <span v-if="userOverride" class="mx-2">{{ userOverride }}</span>
+        <span v-else class="mx-2">{{ userNetid }}</span>
+        <i class="bi bi-chevron-down me-1"></i>
+      </a>
       <div
         class="dropdown-menu dropdown-menu-end p-0"
         aria-labelledby="dropdownMenuButton1"

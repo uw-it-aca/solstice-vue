@@ -18,6 +18,7 @@
             >
           </template>
         </SUser>
+        <!--
         <SUser :user-netid="userNetid" :signout-url="'/signout'">
           <p>additional user information goes here</p>
           <template #action>
@@ -65,7 +66,7 @@
               ><i class="bi bi-x-circle me-1"></i>Sign out</a
             >
           </template>
-        </SUser>
+        </SUser> -->
         <SColorMode :color-class="'text-white'" class="ms-2"/>
       </div>
     </template>

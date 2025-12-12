@@ -1104,7 +1104,7 @@ function go(a, e, n, r, c, i) {
             role: "button",
             onClick: e[0] || (e[0] = (g) => r.colorMode = "light")
           }, [...e[3] || (e[3] = [
-            o("i", { class: "bi bi-brightness-high-fill" }, null, -1),
+            o("i", { class: "bi bi-brightness-high-fill me-2" }, null, -1),
             S("Light", -1)
           ])], 2)
         ]),
@@ -1115,7 +1115,7 @@ function go(a, e, n, r, c, i) {
             role: "button",
             onClick: e[1] || (e[1] = (g) => r.colorMode = "dark")
           }, [...e[4] || (e[4] = [
-            o("i", { class: "bi bi-moon-stars-fill" }, null, -1),
+            o("i", { class: "bi bi-moon-stars-fill me-2" }, null, -1),
             S("Dark", -1)
           ])], 2)
         ]),
@@ -1126,7 +1126,7 @@ function go(a, e, n, r, c, i) {
             role: "button",
             onClick: e[2] || (e[2] = (g) => r.colorMode = "auto")
           }, [...e[5] || (e[5] = [
-            o("i", { class: "bi bi-circle-half" }, null, -1),
+            o("i", { class: "bi bi-circle-half me-2" }, null, -1),
             S("Auto", -1)
           ])], 2)
         ])
@@ -5430,14 +5430,14 @@ const Xo = /* @__PURE__ */ D(Lo, [["render", bo]]), wa = "data:image/png;base64,
 }, vo = { class: "flex-fill dropdown" }, wo = ["src"], Bo = {
   key: 1,
   src: wa,
-  class: "img-tiny rounded-circle",
+  class: "me-2 img-tiny rounded-circle",
   alt: "user avatar"
 }, Io = {
   key: 2,
-  class: "mx-2"
+  class: "me-2 d-none d-md-block"
 }, ko = {
   key: 3,
-  class: "mx-2"
+  class: "me-2 d-none d-md-block"
 }, Mo = {
   class: "dropdown-menu dropdown-menu-end p-0",
   "aria-labelledby": "dropdownMenuButton1",
@@ -5467,7 +5467,7 @@ function Ko(a, e, n, r, c, i) {
         n.photoUrl ? (l(), t("img", {
           key: 0,
           src: n.photoUrl,
-          class: "img-tiny rounded-circle",
+          class: "me-2 img-tiny rounded-circle",
           alt: "user avatar"
         }, null, 8, wo)) : (l(), t("img", Bo)),
         n.userOverride ? (l(), t("span", Io, L(n.userOverride), 1)) : (l(), t("span", ko, L(n.userNetid), 1)),
@@ -5499,7 +5499,7 @@ function Ko(a, e, n, r, c, i) {
     ])
   ], 2);
 }
-const Zo = /* @__PURE__ */ D(To, [["render", Ko], ["__scopeId", "data-v-627c6cf1"]]);
+const Zo = /* @__PURE__ */ D(To, [["render", Ko], ["__scopeId", "data-v-1f995e34"]]);
 export {
   qo as SColorMode,
   Xo as SCountryCode,

@@ -16,17 +16,17 @@
         <img
           v-if="photoUrl"
           :src="photoUrl"
-          class="img-tiny rounded-circle"
+          class="me-2 img-tiny rounded-circle"
           alt="user avatar"
         >
         <img
           v-else
           src="/src/assets/images/placeholder.png"
-          class="img-tiny rounded-circle"
+          class="me-2 img-tiny rounded-circle"
           alt="user avatar"
         >
-        <span v-if="userOverride" class="mx-2">{{ userOverride }}</span>
-        <span v-else class="mx-2">{{ userNetid }}</span>
+        <span v-if="userOverride" class="me-2 d-none d-md-block">{{ userOverride }}</span>
+        <span v-else class="me-2 d-none d-md-block">{{ userNetid }}</span>
         <i class="bi bi-chevron-down me-1"></i>
       </a>
       <div

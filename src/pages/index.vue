@@ -11,8 +11,9 @@
           <a
             href="https://github.com/uw-it-aca/solstice-vue"
             class="link-primary"
-            >solstice-vue</a
           >
+            solstice-vue
+          </a>
           is a VueJs component library. Lorem ipsum dolor sit amet consectetur,
           adipisicing elit. Eius eaque placeat corrupti sequi eveniet aliquam
           dicta harum tempora sed nisi a voluptatem dolorum unde, corporis
@@ -48,7 +49,7 @@
       <ol>
         <li>create a branch</li>
         <li>
-          run the <code>npm run build</code>command
+          run the <code>npm run build</code> command
         </li>
       </ol>
 
@@ -1974,15 +1975,15 @@
           <div class="mb-3">
             <label for="inputPassword5" class="form-label">Phone Numberr</label>
             <div class="input-group">
-              <SCountryCode v-model:calling-code="emergencyCallingCode1" />
+              <SCountryCode v-model:calling-code="emergencyCallingCode1"/>
               <input
                 type="hidden"
                 name="emergencyCallingCode1"
                 :value="'+' + emergencyCallingCode1"
               >
-              <span class="input-group-text border border-secondary"
-                >+{{ emergencyCallingCode1 }}</span
-              >
+              <span class="input-group-text border border-secondary">
+                +{{ emergencyCallingCode1 }}
+              </span>
               <input
                 type="text"
                 class="form-control phone-input flex-shrink-1"
@@ -2073,15 +2074,15 @@
           <div class="mb-3">
             <label for="inputPassword5" class="form-label">Phone Number</label>
             <div class="input-group input-group-sm">
-              <SCountryCode v-model:calling-code="emergencyCallingCode2" />
+              <SCountryCode v-model:calling-code="emergencyCallingCode2"/>
               <input
                 type="hidden"
                 name="emergencyCallingCode2"
                 :value="'+' + emergencyCallingCode2"
               >
-              <span class="input-group-text border border-secondary"
-                >+{{ emergencyCallingCode2 }}</span
-              >
+              <span class="input-group-text border border-secondary">
+                +{{ emergencyCallingCode2 }}
+              </span>
               <input
                 type="text"
                 class="form-control phone-input flex-shrink-1"
@@ -2668,57 +2669,56 @@
         <ul class="g-col-6 list-unstyled">
           <li class="border p-2 mb-2">
             Lorem ipsum dolor sit amet,
-            <a href="#" class="link-primary">link-primary</a> consectetur
+            <a href="#" class="link-primary">link-primary</a>consectetur
             adipiscing elit.
           </li>
           <li class="border p-2 mb-2">
             Lorem ipsum dolor sit amet,
-            <a href="#" class="link-danger">link-danger</a> consectetur
+            <a href="#" class="link-danger">link-danger</a>consectetur
             adipiscing elit.
           </li>
           <li class="border p-2 mb-2">
             Lorem ipsum dolor sit amet,
-            <a href="#" class="link-body">link-body</a> consectetur
-            adipiscing elit.
+            <a href="#" class="link-body">link-body</a>consectetur adipiscing
+            elit.
           </li>
           <li class="bg-husky-purple p-2 text-white mb-2">
             Lorem ipsum dolor sit amet,
-            <a href="#" class="link-light">link-light</a> consectetur adipiscing
+            <a href="#" class="link-light">link-light</a>consectetur adipiscing
             elit.
           </li>
           <li class="bg-spirit-gold text-black p-2">
             Lorem ipsum dolor sit amet,
-            <a href="#" class="link-dark">link-dark</a> consectetur adipiscing
+            <a href="#" class="link-dark">link-dark</a>consectetur adipiscing
             elit.
           </li>
         </ul>
 
-
         <ul class="g-col-6 list-unstyled">
           <li class="border p-2 mb-2">
-            <a href="#" class="link-quiet-primary"
-              ><i class="bi bi-emoji-smile me-1"></i>link-quiet-primary</a
-            >
+            <a href="#" class="link-quiet-primary">
+              <i class="bi bi-emoji-smile me-1"></i>link-quiet-primary
+            </a>
           </li>
           <li class="border p-2 mb-2">
-            <a href="#" class="link-quiet-danger"
-              ><i class="bi bi-emoji-smile me-1"></i>link-quiet-danger</a
-            >
+            <a href="#" class="link-quiet-danger">
+              <i class="bi bi-emoji-smile me-1"></i>link-quiet-danger
+            </a>
           </li>
           <li class="border p-2 mb-2">
-            <a href="#" class="link-quiet-body"
-              ><i class="bi bi-emoji-smile me-1"></i>link-quiet-body</a
-            >
+            <a href="#" class="link-quiet-body">
+              <i class="bi bi-emoji-smile me-1"></i>link-quiet-body
+            </a>
           </li>
           <li class="bg-husky-purple p-2 text-light mb-2">
-            <a href="#" class="link-quiet-light"
-              ><i class="bi bi-emoji-smile me-1"></i>link-quiet-light</a
-            >
+            <a href="#" class="link-quiet-light">
+              <i class="bi bi-emoji-smile me-1"></i>link-quiet-light
+            </a>
           </li>
           <li class="bg-spirit-gold text-dark p-2">
-            <a href="#" class="link-quiet-dark"
-              ><i class="bi bi-emoji-smile me-1"></i>link-quiet-dark</a
-            >
+            <a href="#" class="link-quiet-dark">
+              <i class="bi bi-emoji-smile me-1"></i>link-quiet-dark
+            </a>
           </li>
         </ul>
       </div>
@@ -2814,9 +2814,9 @@
       <div class="mb-5">
         <p>
           Customized from Bootstrap to meet
-          <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabs/"
-            >https://www.w3.org/WAI/ARIA/apg/patterns/tabs/</a
-          >
+          <a href="https://www.w3.org/WAI/ARIA/apg/patterns/tabs/">
+            https://www.w3.org/WAI/ARIA/apg/patterns/tabs/
+          </a>
           specs.
         </p>
 

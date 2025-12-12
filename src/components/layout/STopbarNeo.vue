@@ -105,7 +105,7 @@
       </div>
     </div>
 
-    <footer class="bg-dark w-100">
+    <footer class="bg-body-tertiary w-100">
       <div class="container-xl">
         <template v-if="$slots.footer">
           <slot name="footer">
@@ -118,7 +118,7 @@
                       :href="privacyURL"
                       target="_blank"
                       rel="noopener"
-                      class="link-light"
+                      class="link-body-emphasis"
                       >Privacy</a
                     >
                   </li>
@@ -128,12 +128,12 @@
                       :href="termsURL"
                       target="_blank"
                       rel="noopener"
-                      class="link-light"
+                      class="link-body-emphasis"
                       >Terms</a
                     >
                   </li>
                 </ul>
-                <div class="text-light">
+                <div class="">
                   Copyright &copy; {{ new Date().getFullYear() }}University of
                   Washington
                 </div>

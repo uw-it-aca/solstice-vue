@@ -504,7 +504,7 @@ const Ho = /* @__PURE__ */ D(de, [["render", Me]]), De = "data:image/png;base64,
 }, Je = { class: "container-xl" }, ze = { class: "container-xl flex-fill" }, qe = { class: "row" }, Xe = { class: "col" }, Ze = {
   key: 0,
   class: "col-sm-12 col-xl-3"
-}, _e = { class: "bg-dark w-100" }, $e = { class: "container-xl" }, an = { class: "row" }, en = { class: "col small font-weight-light my-4" }, nn = { class: "list-inline m-0" }, on = { class: "list-inline-item" }, rn = ["href"], cn = { class: "list-inline-item" }, tn = ["href"], ln = { class: "text-light" };
+}, _e = { class: "bg-body-tertiary w-100" }, $e = { class: "container-xl" }, an = { class: "row" }, en = { class: "col small font-weight-light my-4" }, nn = { class: "list-inline m-0" }, on = { class: "list-inline-item" }, rn = ["href"], cn = { class: "list-inline-item" }, tn = ["href"], ln = { class: "" };
 function un(a, e, n, r, c, i) {
   return l(), t("div", {
     class: p([[n.isPreview ? " " : " min-vh-100"], "d-flex align-items-end flex-column sol-topbar-neo"])
@@ -585,7 +585,7 @@ function un(a, e, n, r, c, i) {
                     href: n.privacyURL,
                     target: "_blank",
                     rel: "noopener",
-                    class: "link-light"
+                    class: "link-body-emphasis"
                   }, "Privacy", 8, rn)) : y("", !0)
                 ]),
                 o("li", cn, [
@@ -594,7 +594,7 @@ function un(a, e, n, r, c, i) {
                     href: n.termsURL,
                     target: "_blank",
                     rel: "noopener",
-                    class: "link-light"
+                    class: "link-body-emphasis"
                   }, "Terms", 8, tn)) : y("", !0)
                 ])
               ]),

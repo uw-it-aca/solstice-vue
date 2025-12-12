@@ -481,10 +481,10 @@ const Ho = /* @__PURE__ */ D(de, [["render", Me]]), De = "data:image/png;base64,
       default: "https://www.washington.edu/online/terms/"
     }
   }
-}, Ue = { class: "w-100 bg-spirit-purple" }, Pe = { class: "container-xl" }, Fe = { class: "d-flex justify-content-between align-items-center" }, Ge = { class: "w-50 d-flex align-items-center my-4" }, xe = { class: "text-white d-flex flex-column" }, Ke = {
+}, Ue = { class: "w-100 bg-spirit-purple" }, Pe = { class: "container-xl" }, Fe = { class: "d-flex justify-content-between align-items-center" }, Ge = { class: "d-flex align-items-center my-4" }, xe = { class: "text-white d-flex flex-column" }, Ke = {
   key: 0,
   class: "fw-light text-nowrap mb-1 lh-1"
-}, We = ["href"], Qe = { class: "w-50 d-flex justify-content-end align-items-center" }, Ye = {
+}, We = ["href"], Qe = { class: "d-flex justify-content-end align-items-center" }, Ye = {
   key: 1,
   class: "ms-1 btn btn-link btn-sm d-xl-none py-0 py-1 text-white",
   "data-bs-toggle": "collapse",

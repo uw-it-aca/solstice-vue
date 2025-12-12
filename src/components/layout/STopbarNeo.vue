@@ -6,7 +6,7 @@
     <header class="w-100 bg-spirit-purple">
       <div class="container-xl">
         <div class="d-flex justify-content-between align-items-center">
-          <div class="w-50 d-flex align-items-center my-4">
+          <div class="d-flex align-items-center my-4">
             <!-- MARK: nudge logo for xl only -->
             <div class="border-end border-white border-opacity-25 pe-3 me-3">
               <img
@@ -40,7 +40,7 @@
             </div>
           </div>
 
-          <div class="w-50 d-flex justify-content-end align-items-center">
+          <div class="d-flex justify-content-end align-items-center">
             <!-- MARK: slot for app settings -->
             <template v-if="$slots.settings">
               <slot name="settings">user info</slot>

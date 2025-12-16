@@ -28,19 +28,19 @@
             </div>-->
 
             <div class="text-white d-flex flex-column">
-              <div v-if="appDeptName" class="fw-light text-nowrap mb-1 lh-1">
+              <div v-if="appDeptName" class="fw-light text-nowrap" style="margin-bottom: -7px">
                 {{ appDeptName }}
               </div>
               <a
                 :href="appRootUrl"
-                class="d-block d-sm-none ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium lh-1 text-truncate"
+                class="d-block d-sm-none ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium text-truncate"
                 style="max-width: 150px"
               >
                 {{ appName }}
               </a>
               <a
                 :href="appRootUrl"
-                class="d-none d-sm-block ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium lh-1"
+                class="d-none d-sm-block ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium"
               >
                 {{ appName }}
               </a>

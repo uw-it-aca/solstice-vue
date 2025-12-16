@@ -483,7 +483,8 @@ const Jo = /* @__PURE__ */ D(de, [["render", Me]]), De = "data:image/png;base64,
   }
 }, Ue = { class: "w-100 bg-spirit-purple" }, Pe = { class: "container-xl" }, Fe = { class: "d-flex justify-content-between align-items-center" }, Ge = { class: "d-flex align-items-center my-4" }, xe = { class: "text-white d-flex flex-column" }, Ke = {
   key: 0,
-  class: "fw-light text-nowrap mb-1 lh-1"
+  class: "fw-light text-nowrap",
+  style: { "margin-bottom": "-7px" }
 }, We = ["href"], Qe = ["href"], Ye = { class: "d-flex justify-content-end align-items-center" }, Oe = {
   key: 1,
   class: "ms-1 btn btn-link btn-sm d-xl-none py-0 py-1 text-white",
@@ -525,12 +526,12 @@ function gn(a, e, n, r, c, i) {
               n.appDeptName ? (l(), t("div", Ke, N(n.appDeptName), 1)) : y("", !0),
               o("a", {
                 href: n.appRootUrl,
-                class: "d-block d-sm-none ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium lh-1 text-truncate",
+                class: "d-block d-sm-none ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium text-truncate",
                 style: { "max-width": "150px" }
               }, N(n.appName), 9, We),
               o("a", {
                 href: n.appRootUrl,
-                class: "d-none d-sm-block ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium lh-1"
+                class: "d-none d-sm-block ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium"
               }, N(n.appName), 9, Qe)
             ])
           ]),

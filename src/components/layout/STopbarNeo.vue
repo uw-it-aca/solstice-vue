@@ -1,7 +1,7 @@
 <template>
   <div
     :class="[!isPreview ? ' min-vh-100' : ' ']"
-    class="d-flex align-items-end flex-column sol-topbar-neo"
+    class="d-flex align-items-end flex-column"
   >
     <header class="w-100 bg-spirit-purple">
       <div class="container-xl">
@@ -180,7 +180,5 @@
 </script>
 
 <style lang="css">
-  .sol-topbar-neo {
-    min-width: 430px;
-  }
+
 </style>

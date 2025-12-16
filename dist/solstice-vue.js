@@ -507,7 +507,7 @@ const Ho = /* @__PURE__ */ D(de, [["render", Me]]), De = "data:image/png;base64,
 }, _e = { class: "bg-body-tertiary w-100" }, $e = { class: "container-xl" }, an = { class: "row" }, en = { class: "col small font-weight-light my-4" }, nn = { class: "list-inline m-0" }, on = { class: "list-inline-item" }, rn = ["href"], cn = { class: "list-inline-item" }, tn = ["href"], ln = { class: "" };
 function un(a, e, n, r, c, i) {
   return l(), t("div", {
-    class: p([[n.isPreview ? " " : " min-vh-100"], "d-flex align-items-end flex-column sol-topbar-neo"])
+    class: p([[n.isPreview ? " " : " min-vh-100"], "d-flex align-items-end flex-column"])
   }, [
     o("header", Ue, [
       o("div", Pe, [

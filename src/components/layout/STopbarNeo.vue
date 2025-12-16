@@ -33,7 +33,14 @@
               </div>
               <a
                 :href="appRootUrl"
-                class="ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium lh-1"
+                class="d-block d-sm-none ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium lh-1 text-truncate"
+                style="max-width: 150px"
+              >
+                {{ appName }}
+              </a>
+              <a
+                :href="appRootUrl"
+                class="d-none d-sm-block ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium lh-1"
               >
                 {{ appName }}
               </a>

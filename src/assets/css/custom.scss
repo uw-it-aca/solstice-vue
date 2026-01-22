@@ -453,6 +453,10 @@
   &:hover {
     color: $blue2-800;
   }
+
+  &:focus-visible {
+    outline: solid 4px $blue2-100;
+  }
 }
 
 .btn-subdued-danger {
@@ -460,6 +464,10 @@
 
   &:hover {
     color: $red-800;
+  }
+
+  &:focus-visible {
+    outline: solid 4px $red-100;
   }
 }
 
@@ -475,6 +483,10 @@
   &:active {
     border: solid 1px transparent !important;
   }
+
+  &:focus-visible {
+    outline: solid 4px $blue2-100;
+  }
 }
 
 .btn-quiet-danger {
@@ -487,6 +499,10 @@
 
   &:active {
     border: solid 1px transparent !important;
+  }
+
+  &:focus-visible {
+    outline: solid 4px $red-100;
   }
 }
 

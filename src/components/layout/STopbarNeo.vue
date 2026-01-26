@@ -141,7 +141,7 @@
                   </li>
                 </ul>
                 <div class="">
-                  Copyright &copy; {{ new Date().getFullYear() }}University of
+                  Copyright &copy; {{ new Date().getFullYear() }} University of
                   Washington
                 </div>
               </div>

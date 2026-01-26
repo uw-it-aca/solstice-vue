@@ -604,7 +604,7 @@ function gn(a, e, n, r, c, i) {
                   }, "Terms", 8, ln)) : y("", !0)
                 ])
               ]),
-              o("div", un, " Copyright © " + N((/* @__PURE__ */ new Date()).getFullYear()) + "University of Washington ", 1)
+              o("div", un, " Copyright © " + N((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
             ])
           ])
         ]) : y("", !0)

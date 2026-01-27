@@ -1,12 +1,12 @@
 <template>
   <div
     :class="[!isPreview ? ' min-vh-100' : ' ']"
-    class="d-flex align-items-end flex-column sol-topbar-neo"
+    class="d-flex align-items-end flex-column"
   >
     <header class="w-100 bg-spirit-purple">
       <div class="container-xl">
         <div class="d-flex justify-content-between align-items-center">
-          <div class="w-50 d-flex align-items-center my-4">
+          <div class="d-flex align-items-center my-4">
             <!-- MARK: nudge logo for xl only -->
             <div class="border-end border-white border-opacity-25 pe-3 me-3">
               <img
@@ -14,7 +14,7 @@
                 alt="UW logo"
                 class="my-1"
                 style="height: 38px"
-              />
+              >
             </div>
             <!--<div
               class="d-none d-xl-block border-end border-white border-opacity-25 pe-3 me-3"
@@ -28,19 +28,26 @@
             </div>-->
 
             <div class="text-white d-flex flex-column">
-              <div v-if="appDeptName" class="fw-light text-nowrap mb-1 lh-1">
+              <div v-if="appDeptName" class="fw-light text-nowrap" style="margin-bottom: -7px">
                 {{ appDeptName }}
               </div>
               <a
                 :href="appRootUrl"
-                class="ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium lh-1"
+                class="d-block d-sm-none ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium text-truncate"
+                style="max-width: 150px"
+              >
+                {{ appName }}
+              </a>
+              <a
+                :href="appRootUrl"
+                class="d-none d-sm-block ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium"
               >
                 {{ appName }}
               </a>
             </div>
           </div>
 
-          <div class="w-50 d-flex justify-content-end align-items-center">
+          <div class="d-flex justify-content-end align-items-center">
             <!-- MARK: slot for app settings -->
             <template v-if="$slots.settings">
               <slot name="settings">user info</slot>
@@ -105,7 +112,7 @@
       </div>
     </div>
 
-    <footer class="bg-dark w-100">
+    <footer class="bg-body-tertiary w-100">
       <div class="container-xl">
         <template v-if="$slots.footer">
           <slot name="footer">
@@ -118,7 +125,7 @@
                       :href="privacyURL"
                       target="_blank"
                       rel="noopener"
-                      class="link-light"
+                      class="link-body-emphasis"
                       >Privacy</a
                     >
                   </li>
@@ -128,12 +135,12 @@
                       :href="termsURL"
                       target="_blank"
                       rel="noopener"
-                      class="link-light"
+                      class="link-body-emphasis"
                       >Terms</a
                     >
                   </li>
                 </ul>
-                <div class="text-light">
+                <div class="">
                   Copyright &copy; {{ new Date().getFullYear() }} University of
                   Washington
                 </div>
@@ -147,40 +154,38 @@
 </template>
 
 <script>
-export default {
-  inject: ["mq"],
-  props: {
-    appName: {
-      type: String,
-      default: "appName",
+  export default {
+    inject: ["mq"],
+    props: {
+      appName: {
+        type: String,
+        default: "appName",
+      },
+      appDeptName: {
+        type: String,
+      },
+      appRootUrl: {
+        type: String,
+        default: "#",
+      },
+      isPreview: {
+        type: Boolean,
+        default: false,
+      },
+      privacyURL: {
+        type: String,
+        required: false,
+        default: "https://www.washington.edu/online/privacy/",
+      },
+      termsURL: {
+        type: String,
+        required: false,
+        default: "https://www.washington.edu/online/terms/",
+      },
     },
-    appDeptName: {
-      type: String,
-    },
-    appRootUrl: {
-      type: String,
-      default: "#",
-    },
-    isPreview: {
-      type: Boolean,
-      default: false,
-    },
-    privacyURL: {
-      type: String,
-      required: false,
-      default: "https://www.washington.edu/online/privacy/",
-    },
-    termsURL: {
-      type: String,
-      required: false,
-      default: "https://www.washington.edu/online/terms/",
-    },
-  },
-};
+  };
 </script>
 
-<style lang="scss">
-.sol-topbar-neo {
-  min-width: 430px;
-}
+<style lang="css">
+
 </style>

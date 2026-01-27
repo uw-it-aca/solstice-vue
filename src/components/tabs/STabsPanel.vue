@@ -13,23 +13,23 @@
 </template>
 
 <script>
-export default {
-  props: {
-    panelId: {
-      // must match tab panelId
-      type: [String, Number],
-      required: true,
+  export default {
+    props: {
+      panelId: {
+        // must match tab panelId
+        type: [String, Number],
+        required: true,
+      },
+      activePanel: {
+        type: Boolean,
+        required: false,
+      },
     },
-    activePanel: {
-      type: Boolean,
-      required: false,
+    methods: {
+      setFocus() {
+        // shift-tab will focus current tab selected
+        document.getElementById(this.panelId + "-tab").focus();
+      },
     },
-  },
-  methods: {
-    setFocus() {
-      // shift-tab will focus current tab selected
-      document.getElementById(this.panelId + "-tab").focus();
-    },
-  },
-};
+  };
 </script>

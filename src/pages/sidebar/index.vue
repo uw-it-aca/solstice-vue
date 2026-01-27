@@ -116,8 +116,8 @@
 
         <!-- Modal -->
         <div
-          class="modal fade"
           id="exampleModal"
+          class="modal fade"
           tabindex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
@@ -125,7 +125,7 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                <h1 id="exampleModalLabel" class="modal-title fs-5">
                   Modal title
                 </h1>
                 <button

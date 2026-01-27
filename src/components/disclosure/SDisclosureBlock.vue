@@ -32,34 +32,34 @@
 </template>
 
 <script>
-export default {
-  name: "axdd-disclosure-block",
-  props: {
-    blockId: {
-      type: [String, Number],
-      required: true,
+  export default {
+    name: "axdd-disclosure-block",
+    props: {
+      blockId: {
+        type: [String, Number],
+        required: true,
+      },
+      blockTitle: {
+        type: String,
+        required: true,
+      },
     },
-    blockTitle: {
-      type: String,
-      required: true,
-    },
-  },
-};
+  };
 </script>
 
-<style lang="scss" scoped>
-.chevron i {
-  display: inline-block;
-  transition: transform 0.35s ease;
-  transform-origin: 0.5em 50%;
-  font-weight: bolder;
-}
+<style lang="css" scoped>
+  .chevron i {
+    display: inline-block;
+    transition: transform 0.35s ease;
+    transform-origin: 0.5em 50%;
+    font-weight: bolder;
+  }
 
-.chevron[aria-expanded="true"] i {
-  transform: rotate(90deg);
-}
+  .chevron[aria-expanded='true'] i {
+    transform: rotate(90deg);
+  }
 
-.bi-chevron-right::before {
-  font-weight: bolder !important;
-}
+  .bi-chevron-right::before {
+    font-weight: bolder !important;
+  }
 </style>

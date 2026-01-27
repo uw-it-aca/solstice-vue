@@ -1,6 +1,6 @@
-import { createApp } from "vue";
 import { createBootstrap } from "bootstrap-vue-next";
-import { Vue3Mq, MqResponsive } from "vue3-mq";
+import { createApp } from "vue";
+import { MqResponsive, Vue3Mq } from "vue3-mq";
 
 import App from "@/app.vue";
 import router from "@/router";

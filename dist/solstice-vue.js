@@ -1,10 +1,10 @@
-import { createElementBlock as a, createCommentVNode as m, openBlock as r, renderSlot as u, createElementVNode as n, withKeys as K, normalizeClass as b, withModifiers as he, resolveComponent as be, normalizeStyle as ee, createVNode as ve, withCtx as ye, createTextVNode as w, toDisplayString as v, createStaticVNode as le, toRef as we, readonly as oe, ref as ae, customRef as Se, onMounted as re, nextTick as de, getCurrentInstance as se, watch as J, getCurrentScope as ke, onScopeDispose as xe, hasInjectionContext as ue, inject as _e, computed as B, shallowRef as Z, toValue as E, watchEffect as Ae, unref as Ne, withDirectives as V, vShow as Q } from "vue";
-const C = (e, t) => {
-  const s = e.__vccOpts || e;
-  for (const [i, o] of t)
-    s[i] = o;
-  return s;
-}, Me = {
+import { createElementBlock as t, createCommentVNode as y, openBlock as l, renderSlot as f, createElementVNode as o, withKeys as oa, normalizeClass as p, withModifiers as Ba, resolveComponent as Ia, normalizeStyle as ia, createVNode as ka, withCtx as Ma, createTextVNode as S, toDisplayString as N, createStaticVNode as ya, toRef as Da, readonly as Ca, ref as Na, customRef as Ra, onMounted as La, nextTick as Ea, getCurrentInstance as ca, watch as _, getCurrentScope as pa, onScopeDispose as Ua, hasInjectionContext as ha, inject as Pa, computed as W, shallowRef as H, toValue as U, watchEffect as Fa, unref as Ga, withDirectives as $, vShow as aa, Fragment as ta, renderList as xa } from "vue";
+const D = (a, e) => {
+  const n = a.__vccOpts || a;
+  for (const [r, c] of e)
+    n[r] = c;
+  return n;
+}, Ka = {
   props: {
     variant: {
       type: String,
@@ -17,25 +17,25 @@ const C = (e, t) => {
       required: !0
     }
   }
-}, Te = ["id"], $e = ["id"];
-function Ie(e, t, s, i, o, l) {
-  return s.variant == "underline" ? (r(), a("ul", {
+}, Wa = ["id"], Qa = ["id"];
+function Ya(a, e, n, r, c, i) {
+  return n.variant == "underline" ? (l(), t("ul", {
     key: 0,
     class: "text-body nav nav-underline border-bottom",
-    id: s.tabsId,
+    id: n.tabsId,
     role: "tablist"
   }, [
-    u(e.$slots, "default")
-  ], 8, Te)) : s.variant == "pills" ? (r(), a("ul", {
+    f(a.$slots, "default")
+  ], 8, Wa)) : n.variant == "pills" ? (l(), t("ul", {
     key: 1,
     class: "bg-body-tertiary text-body gap-1 rounded-3 p-1 nav nav-pills border",
-    id: s.tabsId,
+    id: n.tabsId,
     role: "tablist"
   }, [
-    u(e.$slots, "default")
-  ], 8, $e)) : m("", !0);
+    f(a.$slots, "default")
+  ], 8, Qa)) : y("", !0);
 }
-const Xs = /* @__PURE__ */ C(Me, [["render", Ie]]), Ce = {
+const Yo = /* @__PURE__ */ D(Ka, [["render", Ya]]), Oa = {
   props: {
     tabsId: {
       // must match tab panelId
@@ -43,16 +43,16 @@ const Xs = /* @__PURE__ */ C(Me, [["render", Ie]]), Ce = {
       required: !0
     }
   }
-}, Re = ["id"];
-function Ee(e, t, s, i, o, l) {
-  return r(), a("div", {
+}, ja = ["id"];
+function Va(a, e, n, r, c, i) {
+  return l(), t("div", {
     class: "tab-content",
-    id: s.tabsId + "Content"
+    id: n.tabsId + "Content"
   }, [
-    u(e.$slots, "default")
-  ], 8, Re);
+    f(a.$slots, "default")
+  ], 8, ja);
 }
-const Ks = /* @__PURE__ */ C(Ce, [["render", Ee]]), je = {
+const Oo = /* @__PURE__ */ D(Oa, [["render", Va]]), Ha = {
   props: {
     variant: {
       type: String,
@@ -79,60 +79,60 @@ const Ks = /* @__PURE__ */ C(Ce, [["render", Ee]]), je = {
       return document.getElementsByClassName(this.tabsId + "-link");
     },
     classObject() {
-      let e = {};
-      return e[this.tabsId + "-link"] = !0, e.active = this.activeTab, e;
+      let a = {};
+      return a[this.tabsId + "-link"] = !0, a.active = this.activeTab, a;
     }
   },
   methods: {
-    findIndex(e) {
-      return [].findIndex.call(this.elements, (t) => t === e);
+    findIndex(a) {
+      return [].findIndex.call(this.elements, (e) => e === a);
     },
-    moveTab(e) {
-      this.elements[e].click(), this.elements[e].focus(), Array.from(this.elements).forEach((t, s) => {
-        s == e ? t.tabIndex = 0 : t.tabIndex = -1;
+    moveTab(a) {
+      this.elements[a].click(), this.elements[a].focus(), Array.from(this.elements).forEach((e, n) => {
+        n === a ? e.tabIndex = 0 : e.tabIndex = -1;
       });
     },
-    moveNext(e) {
-      const t = this.findIndex(e.target);
-      t < this.elements.length - 1 && this.moveTab(t + 1);
+    moveNext(a) {
+      const e = this.findIndex(a.target);
+      e < this.elements.length - 1 && this.moveTab(e + 1);
     },
-    movePrev(e) {
-      const t = this.findIndex(e.target);
-      t > 0 && this.moveTab(t - 1);
+    movePrev(a) {
+      const e = this.findIndex(a.target);
+      e > 0 && this.moveTab(e - 1);
     },
-    onClick(e) {
-      const t = this.findIndex(e.target);
-      this.moveTab(t);
+    onClick(a) {
+      const e = this.findIndex(a.target);
+      this.moveTab(e);
     }
   }
-}, De = {
+}, Ja = {
   class: "nav-item",
   role: "presentation"
-}, Oe = ["tabindex", "id", "data-bs-target", "aria-controls", "aria-selected"];
-function Ue(e, t, s, i, o, l) {
-  return r(), a("li", De, [
-    n("a", {
-      class: b(["nav-link", l.classObject]),
+}, za = ["tabindex", "id", "data-bs-target", "aria-controls", "aria-selected"];
+function qa(a, e, n, r, c, i) {
+  return l(), t("li", Ja, [
+    o("a", {
+      class: p(["nav-link", i.classObject]),
       href: "#",
-      tabindex: [s.activeTab ? "0" : "-1"],
-      id: s.panelId + "-tab",
+      tabindex: [n.activeTab ? "0" : "-1"],
+      id: n.panelId + "-tab",
       "data-bs-toggle": "tab",
-      "data-bs-target": "#" + s.panelId,
+      "data-bs-target": "#" + n.panelId,
       type: "button",
       role: "tab",
-      "aria-controls": s.panelId,
-      "aria-selected": s.activeTab,
+      "aria-controls": n.panelId,
+      "aria-selected": n.activeTab,
       onKeydown: [
-        t[0] || (t[0] = K((...c) => l.moveNext && l.moveNext(...c), ["right"])),
-        t[1] || (t[1] = K((...c) => l.movePrev && l.movePrev(...c), ["left"]))
+        e[0] || (e[0] = oa((...g) => i.moveNext && i.moveNext(...g), ["right"])),
+        e[1] || (e[1] = oa((...g) => i.movePrev && i.movePrev(...g), ["left"]))
       ],
-      onClick: t[2] || (t[2] = (...c) => l.onClick && l.onClick(...c))
+      onClick: e[2] || (e[2] = (...g) => i.onClick && i.onClick(...g))
     }, [
-      u(e.$slots, "default")
-    ], 42, Oe)
+      f(a.$slots, "default")
+    ], 42, za)
   ]);
 }
-const en = /* @__PURE__ */ C(je, [["render", Ue]]), Be = {
+const jo = /* @__PURE__ */ D(Ha, [["render", qa]]), Xa = {
   props: {
     panelId: {
       // must match tab panelId
@@ -149,20 +149,20 @@ const en = /* @__PURE__ */ C(je, [["render", Ue]]), Be = {
       document.getElementById(this.panelId + "-tab").focus();
     }
   }
-}, Pe = ["id", "aria-labelledby"];
-function Le(e, t, s, i, o, l) {
-  return r(), a("div", {
-    id: s.panelId,
-    class: b(["tab-pane fade", { "show active": s.activePanel }]),
+}, Za = ["id", "aria-labelledby"];
+function _a(a, e, n, r, c, i) {
+  return l(), t("div", {
+    id: n.panelId,
+    class: p(["tab-pane fade", { "show active": n.activePanel }]),
     role: "tabpanel",
-    "aria-labelledby": s.panelId + "-tab",
+    "aria-labelledby": n.panelId + "-tab",
     tabindex: "0",
-    onKeydown: t[0] || (t[0] = K(he((...c) => l.setFocus && l.setFocus(...c), ["shift", "prevent"]), ["tab"]))
+    onKeydown: e[0] || (e[0] = oa(Ba((...g) => i.setFocus && i.setFocus(...g), ["shift", "prevent"]), ["tab"]))
   }, [
-    u(e.$slots, "default")
-  ], 42, Pe);
+    f(a.$slots, "default")
+  ], 42, Za);
 }
-const tn = /* @__PURE__ */ C(Be, [["render", Le]]), Fe = {
+const Vo = /* @__PURE__ */ D(Xa, [["render", _a]]), $a = {
   inject: ["mq"],
   props: {
     appName: {
@@ -195,12 +195,12 @@ const tn = /* @__PURE__ */ C(Be, [["render", Le]]), Fe = {
       default: !1
     }
   },
-  created: function() {
+  created() {
   }
-}, We = {
+}, ae = {
   key: 0,
   class: "py-2 px-3 small bg-black bg-opacity-10"
-}, Ye = { class: "d-flex" }, Ze = { class: "flex-fill text-end" }, qe = ["href"], Ge = {
+}, ee = { class: "d-flex" }, ne = { class: "flex-fill text-end" }, oe = ["href"], ie = {
   key: 0,
   class: "btn btn-link btn-sm border border-1 border-light rounded-3 py-0 px-1 text-light d-lg-none me-2",
   "data-bs-toggle": "collapse",
@@ -209,106 +209,106 @@ const tn = /* @__PURE__ */ C(Be, [["render", Le]]), Fe = {
   "aria-expanded": "false",
   "aria-controls": "sidebar-nav-collapse",
   "aria-label": "Toggle Navigation Menu"
-}, ze = {
+}, re = {
   key: 0,
   role: "navigation"
-}, Je = {
+}, ce = {
   key: 1,
   class: "mb-3 text-light"
-}, Ve = { class: "flex-fill" }, Qe = { key: 0 }, He = { class: "font-weight-light py-3 small" };
-function Xe(e, t, s, i, o, l) {
-  const c = be("router-link");
-  return r(), a("div", {
-    class: b([l.mq.mdMinus ? "" : "d-flex vh-100"]),
-    style: ee([s.isPreview ? "min-height: auto !important;" : ""])
+}, te = { class: "flex-fill" }, le = { key: 0 }, ue = { class: "font-weight-light py-3 small" };
+function ge(a, e, n, r, c, i) {
+  const g = Ia("router-link");
+  return l(), t("div", {
+    class: p([i.mq.mdMinus ? "" : "d-flex vh-100"]),
+    style: ia([n.isPreview ? "min-height: auto !important;" : ""])
   }, [
-    n("div", {
-      class: b([s.sidebarClass + [l.mq.mdMinus ? "" : " overflow-auto"], "sol-sidebar d-flex flex-column"]),
-      style: ee([l.mq.mdMinus ? "" : "min-width: 280px; max-width:280px;"])
+    o("div", {
+      class: p([n.sidebarClass + [i.mq.mdMinus ? "" : " overflow-auto"], "sol-sidebar d-flex flex-column"]),
+      style: ia([i.mq.mdMinus ? "" : "min-width: 280px; max-width:280px;"])
     }, [
-      n("header", null, [
-        e.$slots.profile ? (r(), a("div", We, [
-          u(e.$slots, "profile", {}, () => [
-            n("div", Ye, [
-              t[0] || (t[0] = n("div", { class: "flex-fill" }, "username", -1)),
-              n("div", Ze, [
-                n("a", {
-                  href: s.signOutUrl,
+      o("header", null, [
+        a.$slots.profile ? (l(), t("div", ae, [
+          f(a.$slots, "profile", {}, () => [
+            o("div", ee, [
+              e[0] || (e[0] = o("div", { class: "flex-fill" }, "username", -1)),
+              o("div", ne, [
+                o("a", {
+                  href: n.signOutUrl,
                   class: "text-white"
-                }, "Sign out", 8, qe)
+                }, "Sign out", 8, oe)
               ])
             ])
           ])
-        ])) : m("", !0),
-        n("div", {
-          class: b([[l.mq.lgMinus ? "sol-sidebar-brand-sm" : "sol-sidebar-brand"], "px-3"])
+        ])) : y("", !0),
+        o("div", {
+          class: p([[i.mq.lgMinus ? "sol-sidebar-brand-sm" : "sol-sidebar-brand"], "px-3"])
         }, [
-          e.$slots.navigation ? (r(), a("a", Ge, t[1] || (t[1] = [
-            n("i", { class: "bi bi-list fw-bold fs-6" }, null, -1)
-          ]))) : m("", !0),
-          n("div", {
-            class: b(["d-inline align-middle", [l.mq.mdPlus ? "h2" : "h3"]])
+          a.$slots.navigation ? (l(), t("a", ie, [...e[1] || (e[1] = [
+            o("i", { class: "bi bi-list fw-bold fs-6" }, null, -1)
+          ])])) : y("", !0),
+          o("div", {
+            class: p(["d-inline align-middle", [i.mq.mdPlus ? "h2" : "h3"]])
           }, [
-            ve(c, {
-              to: s.appRootUrl,
+            ka(g, {
+              to: n.appRootUrl,
               class: "ff-encode-sans text-decoration-none text-light"
             }, {
-              default: ye(() => [
-                w(v(s.appName), 1)
+              default: Ma(() => [
+                S(N(n.appName), 1)
               ]),
               _: 1
             }, 8, ["to"])
           ], 2)
         ], 2)
       ]),
-      n("div", {
+      o("div", {
         id: "sidebar-nav-collapse",
-        class: b(["px-3 flex-fill", [
-          l.mq.mdMinus ? "collapse" : "collapse.show d-flex flex-column justify-content-between"
+        class: p(["px-3 flex-fill", [
+          i.mq.mdMinus ? "collapse" : "collapse.show d-flex flex-column justify-content-between"
         ]])
       }, [
-        e.$slots.navigation ? (r(), a("nav", ze, [
-          u(e.$slots, "navigation", {}, () => [
-            t[2] || (t[2] = n("ul", { class: "text-white" }, [
-              n("li", null, "nav 1"),
-              n("li", null, "nav 2"),
-              n("li", null, "nav 3"),
-              n("li", null, "nav 4")
+        a.$slots.navigation ? (l(), t("nav", re, [
+          f(a.$slots, "navigation", {}, () => [
+            e[2] || (e[2] = o("ul", { class: "text-white" }, [
+              o("li", null, "nav 1"),
+              o("li", null, "nav 2"),
+              o("li", null, "nav 3"),
+              o("li", null, "nav 4")
             ], -1))
           ])
-        ])) : m("", !0),
-        e.$slots.aside ? (r(), a("aside", Je, [
-          u(e.$slots, "aside", {}, () => [
-            t[3] || (t[3] = w("this is aside content", -1))
+        ])) : y("", !0),
+        a.$slots.aside ? (l(), t("aside", ce, [
+          f(a.$slots, "aside", {}, () => [
+            e[3] || (e[3] = S("this is aside content", -1))
           ])
-        ])) : m("", !0)
+        ])) : y("", !0)
       ], 2),
-      t[4] || (t[4] = n("div", { class: "sol-sidebar-logo" }, " ", -1))
+      e[4] || (e[4] = o("div", { class: "sol-sidebar-logo" }, " ", -1))
     ], 6),
-    n("div", {
+    o("div", {
       id: "scrollbody",
-      class: b([[l.mq.mdMinus ? "" : "flex-fill overflow-y-scroll"], "d-flex bg-body text-body"]),
+      class: p([[i.mq.mdMinus ? "" : "flex-fill overflow-y-scroll"], "d-flex bg-body text-body"]),
       style: { "padding-top": "37px !important" }
     }, [
-      n("div", {
-        class: b([[l.mq.lgPlus ? "px-5" : ""], "container-xl d-flex flex-column"])
+      o("div", {
+        class: p([[i.mq.lgPlus ? "px-5" : ""], "container-xl d-flex flex-column"])
       }, [
-        n("main", Ve, [
-          u(e.$slots, "main")
+        o("main", te, [
+          f(a.$slots, "main")
         ]),
-        e.$slots.footer ? (r(), a("footer", Qe, [
-          u(e.$slots, "footer", {}, () => [
-            n("div", He, [
-              t[5] || (t[5] = le('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/">Terms</a></li></ul>', 1)),
-              n("div", null, " Copyright © " + v((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
+        a.$slots.footer ? (l(), t("footer", le, [
+          f(a.$slots, "footer", {}, () => [
+            o("div", ue, [
+              e[5] || (e[5] = ya('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/">Terms</a></li></ul>', 1)),
+              o("div", null, " Copyright © " + N((/* @__PURE__ */ new Date()).getFullYear()) + "University of Washington ", 1)
             ])
           ])
-        ])) : m("", !0)
+        ])) : y("", !0)
       ], 2)
     ], 2)
   ], 6);
 }
-const sn = /* @__PURE__ */ C(Fe, [["render", Xe]]), Ke = {
+const Ho = /* @__PURE__ */ D($a, [["render", ge]]), de = {
   inject: ["mq"],
   props: {
     appName: {
@@ -336,15 +336,15 @@ const sn = /* @__PURE__ */ C(Fe, [["render", Xe]]), Ke = {
   data() {
     return {};
   },
-  created: function() {
+  created() {
   }
-}, et = {
+}, se = {
   key: 0,
   class: "w-100"
-}, tt = { class: "w-100" }, st = {
+}, fe = { class: "w-100" }, me = {
   key: 0,
   class: "bg-black bg-opacity-10 text-white py-2 small"
-}, nt = { class: "container-xl" }, it = { class: "axdd-topbar-brand" }, lt = { class: "container-xl axdd-topbar-logo" }, ot = {
+}, ye = { class: "container-xl" }, Ce = { class: "axdd-topbar-brand" }, Ne = { class: "container-xl axdd-topbar-logo" }, Le = {
   key: 0,
   class: "btn btn-link btn-sm d-xl-none border border-1 border-light rounded-3 py-0 px-1 text-white me-2",
   "data-bs-toggle": "collapse",
@@ -353,106 +353,106 @@ const sn = /* @__PURE__ */ C(Fe, [["render", Xe]]), Ke = {
   "aria-expanded": "false",
   "aria-controls": "topbar-nav-collapse",
   "aria-label": "Toggle Navigation Menu"
-}, at = ["href"], rt = { class: "container-xl" }, dt = { class: "row" }, ut = {
+}, Ee = ["href"], pe = { class: "container-xl" }, he = { class: "row" }, Ae = {
   key: 0,
   role: "navigation"
-}, ct = { key: 1 }, ft = { class: "col-xl" }, mt = { key: 0 }, pt = {
+}, Se = { key: 1 }, be = { class: "col-xl" }, Te = { key: 0 }, ve = {
   key: 1,
   class: "col-sm col-xl-3"
-}, gt = { class: "w-100" }, ht = {
+}, we = { class: "w-100" }, Be = {
   key: 0,
   class: "bg-dark text-white py-2 small"
-}, bt = { class: "container-xl" }, vt = { class: "text-white font-weight-light py-3" };
-function yt(e, t, s, i, o, l) {
-  return r(), a("div", {
-    class: b([s.topbarClass + [s.isPreview ? " " : " min-vh-100"], "d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"])
+}, Ie = { class: "container-xl" }, ke = { class: "text-white font-weight-light py-3" };
+function Me(a, e, n, r, c, i) {
+  return l(), t("div", {
+    class: p([n.topbarClass + [n.isPreview ? " " : " min-vh-100"], "d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"])
   }, [
-    e.$slots.system ? (r(), a("div", et, [
-      u(e.$slots, "system", {}, () => [
-        t[0] || (t[0] = w("System messages", -1))
+    a.$slots.system ? (l(), t("div", se, [
+      f(a.$slots, "system", {}, () => [
+        e[0] || (e[0] = S("System messages", -1))
       ])
-    ])) : m("", !0),
-    n("header", tt, [
-      e.$slots.profile ? (r(), a("div", st, [
-        n("div", nt, [
-          u(e.$slots, "profile", {}, () => [
-            t[1] || (t[1] = w("Welcome!", -1))
+    ])) : y("", !0),
+    o("header", fe, [
+      a.$slots.profile ? (l(), t("div", me, [
+        o("div", ye, [
+          f(a.$slots, "profile", {}, () => [
+            e[1] || (e[1] = S("Welcome!", -1))
           ])
         ])
-      ])) : m("", !0),
-      n("div", it, [
-        n("div", lt, [
-          e.$slots.navigation ? (r(), a("a", ot, t[2] || (t[2] = [
-            n("i", { class: "bi bi-list fw-bold text-white fs-6" }, null, -1)
-          ]))) : m("", !0),
-          n("div", {
-            class: b(["d-inline align-middle text-white", [l.mq.xlPlus ? "h2" : "h3"]])
+      ])) : y("", !0),
+      o("div", Ce, [
+        o("div", Ne, [
+          a.$slots.navigation ? (l(), t("a", Le, [...e[2] || (e[2] = [
+            o("i", { class: "bi bi-list fw-bold text-white fs-6" }, null, -1)
+          ])])) : y("", !0),
+          o("div", {
+            class: p(["d-inline align-middle text-white", [i.mq.xlPlus ? "h2" : "h3"]])
           }, [
-            n("a", {
-              href: s.appRootUrl,
+            o("a", {
+              href: n.appRootUrl,
               class: "ff-encode-sans text-white text-decoration-none"
-            }, v(s.appName), 9, at)
+            }, N(n.appName), 9, Ee)
           ], 2)
         ])
       ])
     ]),
-    n("div", {
-      class: b([s.backgroundClass, "w-100 flex-fill text-body"])
+    o("div", {
+      class: p([n.backgroundClass, "w-100 flex-fill text-body"])
     }, [
-      n("div", rt, [
-        n("div", dt, [
-          e.$slots.navigation ? (r(), a("div", {
+      o("div", pe, [
+        o("div", he, [
+          a.$slots.navigation ? (l(), t("div", {
             key: 0,
-            style: ee(l.mq.xlPlus ? "min-width: 272px; max-width: 272px" : "")
+            style: ia(i.mq.xlPlus ? "min-width: 272px; max-width: 272px" : "")
           }, [
-            n("div", {
+            o("div", {
               id: "topbar-nav-collapse",
-              class: b([l.mq.xlPlus ? "collapse.show" : "collapse"])
+              class: p([i.mq.xlPlus ? "collapse.show" : "collapse"])
             }, [
-              e.$slots.navigation ? (r(), a("nav", ut, [
-                u(e.$slots, "navigation")
-              ])) : m("", !0),
-              e.$slots.navigation && e.$slots.aside ? (r(), a("aside", ct, [
-                u(e.$slots, "aside", {}, () => [
-                  t[3] || (t[3] = w("Aside content", -1))
+              a.$slots.navigation ? (l(), t("nav", Ae, [
+                f(a.$slots, "navigation")
+              ])) : y("", !0),
+              a.$slots.navigation && a.$slots.aside ? (l(), t("aside", Se, [
+                f(a.$slots, "aside", {}, () => [
+                  e[3] || (e[3] = S("Aside content", -1))
                 ])
-              ])) : m("", !0)
+              ])) : y("", !0)
             ], 2)
-          ], 4)) : m("", !0),
-          n("main", ft, [
-            e.$slots.bar ? (r(), a("div", mt, [
-              u(e.$slots, "bar")
-            ])) : m("", !0),
-            u(e.$slots, "main", {}, () => [
-              t[4] || (t[4] = n("div", { style: { outline: "dashed 1px lightgray" } }, [
-                n("h1", null, "Hello world..."),
-                n("p", null, " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa. ")
+          ], 4)) : y("", !0),
+          o("main", be, [
+            a.$slots.bar ? (l(), t("div", Te, [
+              f(a.$slots, "bar")
+            ])) : y("", !0),
+            f(a.$slots, "main", {}, () => [
+              e[4] || (e[4] = o("div", { style: { outline: "dashed 1px lightgray" } }, [
+                o("h1", null, "Hello world..."),
+                o("p", null, " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa. ")
               ], -1))
             ])
           ]),
-          !e.$slots.navigation && e.$slots.aside ? (r(), a("aside", pt, [
-            u(e.$slots, "aside", {}, () => [
-              t[5] || (t[5] = w("Aside content", -1))
+          !a.$slots.navigation && a.$slots.aside ? (l(), t("aside", ve, [
+            f(a.$slots, "aside", {}, () => [
+              e[5] || (e[5] = S("Aside content", -1))
             ])
-          ])) : m("", !0)
+          ])) : y("", !0)
         ])
       ])
     ], 2),
-    n("footer", gt, [
-      e.$slots.footer ? (r(), a("div", ht, [
-        n("div", bt, [
-          u(e.$slots, "footer", {}, () => [
-            n("div", vt, [
-              t[6] || (t[6] = le('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/" class="link-light link-opacity-50 link-opacity-75-hover link-underline-opacity-50 link-underline-opacity-75-hover">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/" class="link-light link-opacity-50 link-opacity-75-hover link-underline-opacity-50 link-underline-opacity-75-hover">Terms</a></li></ul>', 1)),
-              n("div", null, " Copyright © " + v((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
+    o("footer", we, [
+      a.$slots.footer ? (l(), t("div", Be, [
+        o("div", Ie, [
+          f(a.$slots, "footer", {}, () => [
+            o("div", ke, [
+              e[6] || (e[6] = ya('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/" class="link-light link-opacity-50 link-opacity-75-hover link-underline-opacity-50 link-underline-opacity-75-hover">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/" class="link-light link-opacity-50 link-opacity-75-hover link-underline-opacity-50 link-underline-opacity-75-hover">Terms</a></li></ul>', 1)),
+              o("div", null, " Copyright © " + N((/* @__PURE__ */ new Date()).getFullYear()) + "University of Washington ", 1)
             ])
           ])
         ])
-      ])) : m("", !0)
+      ])) : y("", !0)
     ])
   ], 2);
 }
-const nn = /* @__PURE__ */ C(Ke, [["render", yt]]), wt = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAhCAYAAACbffiEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5QjA3NEU2NTJDQTkxMUU0QTcxOEIwNEIyRTA4NDYxMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5QjA3NEU2NjJDQTkxMUU0QTcxOEIwNEIyRTA4NDYxMyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjlCMDc0RTYzMkNBOTExRTRBNzE4QjA0QjJFMDg0NjEzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjlCMDc0RTY0MkNBOTExRTRBNzE4QjA0QjJFMDg0NjEzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+TGF1VAAAA3RJREFUeNq0mEtPFEEQx2dXQAUPIohE4ysKvpAVBeIDFCNREw8eMTHePHjycxg9e/ATePGgB02MgLK74mNBASUxqBj1YEQMGFxYdsX1P0ltHDvVM1WzayU/Hv2o7pruqq7uSD6fTzmOUw1+OeFkJYiDC0zdPnALLIE8lUVAOTgHnjN9roEeMC8cfxW4WYYf28FqpzjZYik/A7ZZ6rothmwAG5Xjr486pZElS3mHT59jlvLfIcbPl8oQTtaBNp/6JlBfqsGi/1HPQVDjtx3ATqY8EnYCCyAL0mBR2C9D7QsOucC06RLoOWHR7ZDutOf/f7YS1RfGX4wgau3AH8tADtSC26AuYALXwVVQRR/jJ/joqXf1PQMHAvTcB6eZlaomX5kDV8B5o81dcBlU0FgzDgwx6csHyz2mn5dGkBbomQb1PnqiIMn0u2S25fZ2v2BL7AFrfeo7QaVATw05vU22MgEjS6sd6KQpwQQ2WRxV4x8FOR4QoiuMsnfgldSQb4IJHPU56TsUhrQrP0iCy0I4Q2aEq3LEUu46+GaFIS2WMF1pGSOpOUcGBROIWaLbIeVZ4BqxnylvZlKfBa0hSUl+A3Yz5adCnGeHLf5hzu8l+KQxZBR8FUygi0n4mkIY0iH0j0FbLmYzZBY8CeGoMcqxtNJihHN3y7Yy7R6GybWGBBNoo2ygICeZNl8Ed4sa47xoN/S6Mk1bS22I5GCs9Thq1LJFboA3ytXtZOqH6aOoDZkAnxWO2kAnvil3wJjS37qZ+njYNP6731J6pNUTdlcYdR/AiDCc7wJr6EbZyNQPFHMfSQj9pNySkqc8YTPoTaCOVjRG93CvTIJxv85lAcrjwgPtLNjL1PXS79e0Og0Bujot9/8RiqShV8T1k/cBbdz7wEXmkSHjyVIzlocGU3osacmDYq+6s1ymaTnNze3w1tgOAwI9zUy2kJN8BMmdvS/kPT5uvK6kFFfpwLQ9jCFDIQ15bPw/blyHpZKgVSnakDH6KhpJM4bkhMmoKY9K9Rw0T1FDIy8sh+lTpZ4f3LW2mHetfuUEks7ft15zu2UVeiboDCmZIcOO7pHbFqEmKZpJpVfzQCeRUduFhpEpn9QmI90q2q0oNWRRmC8VVm9KEc38cj3pmIEpihk93Be/OZ82VYLtkKBJLnfsL+9VdA5NSyf3R4ABABbMYvghpWrNAAAAAElFTkSuQmCC", St = {
+const Jo = /* @__PURE__ */ D(de, [["render", Me]]), De = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAhCAYAAACbffiEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5QjA3NEU2NTJDQTkxMUU0QTcxOEIwNEIyRTA4NDYxMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5QjA3NEU2NjJDQTkxMUU0QTcxOEIwNEIyRTA4NDYxMyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjlCMDc0RTYzMkNBOTExRTRBNzE4QjA0QjJFMDg0NjEzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjlCMDc0RTY0MkNBOTExRTRBNzE4QjA0QjJFMDg0NjEzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+TGF1VAAAA3RJREFUeNq0mEtPFEEQx2dXQAUPIohE4ysKvpAVBeIDFCNREw8eMTHePHjycxg9e/ATePGgB02MgLK74mNBASUxqBj1YEQMGFxYdsX1P0ltHDvVM1WzayU/Hv2o7pruqq7uSD6fTzmOUw1+OeFkJYiDC0zdPnALLIE8lUVAOTgHnjN9roEeMC8cfxW4WYYf28FqpzjZYik/A7ZZ6rothmwAG5Xjr486pZElS3mHT59jlvLfIcbPl8oQTtaBNp/6JlBfqsGi/1HPQVDjtx3ATqY8EnYCCyAL0mBR2C9D7QsOucC06RLoOWHR7ZDutOf/f7YS1RfGX4wgau3AH8tADtSC26AuYALXwVVQRR/jJ/joqXf1PQMHAvTcB6eZlaomX5kDV8B5o81dcBlU0FgzDgwx6csHyz2mn5dGkBbomQb1PnqiIMn0u2S25fZ2v2BL7AFrfeo7QaVATw05vU22MgEjS6sd6KQpwQQ2WRxV4x8FOR4QoiuMsnfgldSQb4IJHPU56TsUhrQrP0iCy0I4Q2aEq3LEUu46+GaFIS2WMF1pGSOpOUcGBROIWaLbIeVZ4BqxnylvZlKfBa0hSUl+A3Yz5adCnGeHLf5hzu8l+KQxZBR8FUygi0n4mkIY0iH0j0FbLmYzZBY8CeGoMcqxtNJihHN3y7Yy7R6GybWGBBNoo2ygICeZNl8Ed4sa47xoN/S6Mk1bS22I5GCs9Thq1LJFboA3ytXtZOqH6aOoDZkAnxWO2kAnvil3wJjS37qZ+njYNP6731J6pNUTdlcYdR/AiDCc7wJr6EbZyNQPFHMfSQj9pNySkqc8YTPoTaCOVjRG93CvTIJxv85lAcrjwgPtLNjL1PXS79e0Og0Bujot9/8RiqShV8T1k/cBbdz7wEXmkSHjyVIzlocGU3osacmDYq+6s1ymaTnNze3w1tgOAwI9zUy2kJN8BMmdvS/kPT5uvK6kFFfpwLQ9jCFDIQ15bPw/blyHpZKgVSnakDH6KhpJM4bkhMmoKY9K9Rw0T1FDIy8sh+lTpZ4f3LW2mHetfuUEks7ft15zu2UVeiboDCmZIcOO7pHbFqEmKZpJpVfzQCeRUduFhpEpn9QmI90q2q0oNWRRmC8VVm9KEc38cj3pmIEpihk93Be/OZ82VYLtkKBJLnfsL+9VdA5NSyf3R4ABABbMYvghpWrNAAAAAElFTkSuQmCC", Re = {
   inject: ["mq"],
   props: {
     appName: {
@@ -481,10 +481,11 @@ const nn = /* @__PURE__ */ C(Ke, [["render", yt]]), wt = "data:image/png;base64,
       default: "https://www.washington.edu/online/terms/"
     }
   }
-}, kt = { class: "w-100 bg-spirit-purple" }, xt = { class: "container-xl" }, _t = { class: "d-flex justify-content-between align-items-center" }, At = { class: "w-50 d-flex align-items-center my-4" }, Nt = { class: "text-white d-flex flex-column" }, Mt = {
+}, Ue = { class: "w-100 bg-spirit-purple" }, Pe = { class: "container-xl" }, Fe = { class: "d-flex justify-content-between align-items-center" }, Ge = { class: "d-flex align-items-center my-4" }, xe = { class: "text-white d-flex flex-column" }, Ke = {
   key: 0,
-  class: "fw-light text-nowrap mb-1 lh-1"
-}, Tt = ["href"], $t = { class: "w-50 d-flex justify-content-end align-items-center" }, It = {
+  class: "fw-light text-nowrap",
+  style: { "margin-bottom": "-7px" }
+}, We = ["href"], Qe = ["href"], Ye = { class: "d-flex justify-content-end align-items-center" }, Oe = {
   key: 1,
   class: "ms-1 btn btn-link btn-sm d-xl-none py-0 py-1 text-white",
   "data-bs-toggle": "collapse",
@@ -492,121 +493,126 @@ const nn = /* @__PURE__ */ C(Ke, [["render", yt]]), wt = "data:image/png;base64,
   "aria-controls": "navbarToggler",
   "aria-expanded": "false",
   "aria-label": "Toggle navigation"
-}, Ct = {
+}, je = {
   key: 0,
   class: "navbar navbar-expand-xl w-100 p-0 py-xl-2 bg-husky-purple"
-}, Rt = { class: "container-xl" }, Et = {
+}, Ve = { class: "container-xl" }, He = {
   class: "collapse navbar-collapse",
   id: "navbarToggler"
-}, jt = {
+}, Je = {
   key: 1,
   class: "bg-info-subtle w-100"
-}, Dt = { class: "container-xl" }, Ot = { class: "container-xl flex-fill" }, Ut = { class: "row" }, Bt = { class: "col" }, Pt = {
+}, ze = { class: "container-xl" }, qe = { class: "container-xl flex-fill" }, Xe = { class: "row" }, Ze = { class: "col" }, _e = {
   key: 0,
   class: "col-sm-12 col-xl-3"
-}, Lt = { class: "bg-dark w-100" }, Ft = { class: "container-xl" }, Wt = { class: "row" }, Yt = { class: "col small font-weight-light my-4" }, Zt = { class: "list-inline m-0" }, qt = { class: "list-inline-item" }, Gt = ["href"], zt = { class: "list-inline-item" }, Jt = ["href"], Vt = { class: "text-light" };
-function Qt(e, t, s, i, o, l) {
-  return r(), a("div", {
-    class: b([[s.isPreview ? " " : " min-vh-100"], "d-flex align-items-end flex-column sol-topbar-neo"])
+}, $e = { class: "bg-body-tertiary w-100" }, an = { class: "container-xl" }, en = { class: "row" }, nn = { class: "col small font-weight-light my-4" }, on = { class: "list-inline m-0" }, rn = { class: "list-inline-item" }, cn = ["href"], tn = { class: "list-inline-item" }, ln = ["href"], un = { class: "" };
+function gn(a, e, n, r, c, i) {
+  return l(), t("div", {
+    class: p([[n.isPreview ? " " : " min-vh-100"], "d-flex align-items-end flex-column"])
   }, [
-    n("header", kt, [
-      n("div", xt, [
-        n("div", _t, [
-          n("div", At, [
-            t[0] || (t[0] = n("div", { class: "border-end border-white border-opacity-25 pe-3 me-3" }, [
-              n("img", {
-                src: wt,
+    o("header", Ue, [
+      o("div", Pe, [
+        o("div", Fe, [
+          o("div", Ge, [
+            e[0] || (e[0] = o("div", { class: "border-end border-white border-opacity-25 pe-3 me-3" }, [
+              o("img", {
+                src: De,
                 alt: "UW logo",
                 class: "my-1",
                 style: { height: "38px" }
               })
             ], -1)),
-            n("div", Nt, [
-              s.appDeptName ? (r(), a("div", Mt, v(s.appDeptName), 1)) : m("", !0),
-              n("a", {
-                href: s.appRootUrl,
-                class: "ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium lh-1"
-              }, v(s.appName), 9, Tt)
+            o("div", xe, [
+              n.appDeptName ? (l(), t("div", Ke, N(n.appDeptName), 1)) : y("", !0),
+              o("a", {
+                href: n.appRootUrl,
+                class: "d-block d-sm-none ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium text-truncate",
+                style: { "max-width": "150px" }
+              }, N(n.appName), 9, We),
+              o("a", {
+                href: n.appRootUrl,
+                class: "d-none d-sm-block ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium"
+              }, N(n.appName), 9, Qe)
             ])
           ]),
-          n("div", $t, [
-            e.$slots.settings ? u(e.$slots, "settings", { key: 0 }, () => [
-              t[1] || (t[1] = w("user info", -1))
-            ]) : m("", !0),
-            e.$slots.navigation ? (r(), a("a", It, t[2] || (t[2] = [
-              n("i", { class: "bi bi-list text-light fs-3" }, null, -1)
-            ]))) : m("", !0)
+          o("div", Ye, [
+            a.$slots.settings ? f(a.$slots, "settings", { key: 0 }, () => [
+              e[1] || (e[1] = S("user info", -1))
+            ]) : y("", !0),
+            a.$slots.navigation ? (l(), t("a", Oe, [...e[2] || (e[2] = [
+              o("i", { class: "bi bi-list text-light fs-3" }, null, -1)
+            ])])) : y("", !0)
           ])
         ])
       ])
     ]),
-    e.$slots.navigation ? (r(), a("nav", Ct, [
-      n("div", Rt, [
-        n("div", Et, [
-          u(e.$slots, "navigation", {}, () => [
-            t[3] || (t[3] = w("navigation bar", -1))
+    a.$slots.navigation ? (l(), t("nav", je, [
+      o("div", Ve, [
+        o("div", He, [
+          f(a.$slots, "navigation", {}, () => [
+            e[3] || (e[3] = S("navigation bar", -1))
           ])
         ])
       ])
-    ])) : m("", !0),
-    e.$slots.system ? (r(), a("div", jt, [
-      n("div", Dt, [
-        u(e.$slots, "system", {}, () => [
-          t[4] || (t[4] = w("system messages", -1))
+    ])) : y("", !0),
+    a.$slots.system ? (l(), t("div", Je, [
+      o("div", ze, [
+        f(a.$slots, "system", {}, () => [
+          e[4] || (e[4] = S("system messages", -1))
         ])
       ])
-    ])) : m("", !0),
-    n("div", Ot, [
-      n("div", Ut, [
-        n("main", Bt, [
-          u(e.$slots, "main", {}, () => [
-            t[5] || (t[5] = n("div", { style: { outline: "dashed 1px lightgray" } }, [
-              n("h1", null, "Hello world..."),
-              n("p", null, " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa. ")
+    ])) : y("", !0),
+    o("div", qe, [
+      o("div", Xe, [
+        o("main", Ze, [
+          f(a.$slots, "main", {}, () => [
+            e[5] || (e[5] = o("div", { style: { outline: "dashed 1px lightgray" } }, [
+              o("h1", null, "Hello world..."),
+              o("p", null, " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa. ")
             ], -1))
           ])
         ]),
-        e.$slots.aside ? (r(), a("aside", Pt, [
-          u(e.$slots, "aside", {}, () => [
-            t[6] || (t[6] = w("aside content", -1))
+        a.$slots.aside ? (l(), t("aside", _e, [
+          f(a.$slots, "aside", {}, () => [
+            e[6] || (e[6] = S("aside content", -1))
           ])
-        ])) : m("", !0)
+        ])) : y("", !0)
       ])
     ]),
-    n("footer", Lt, [
-      n("div", Ft, [
-        e.$slots.footer ? u(e.$slots, "footer", { key: 0 }, () => [
-          n("div", Wt, [
-            n("div", Yt, [
-              n("ul", Zt, [
-                n("li", qt, [
-                  s.privacyURL ? (r(), a("a", {
+    o("footer", $e, [
+      o("div", an, [
+        a.$slots.footer ? f(a.$slots, "footer", { key: 0 }, () => [
+          o("div", en, [
+            o("div", nn, [
+              o("ul", on, [
+                o("li", rn, [
+                  n.privacyURL ? (l(), t("a", {
                     key: 0,
-                    href: s.privacyURL,
+                    href: n.privacyURL,
                     target: "_blank",
                     rel: "noopener",
-                    class: "link-light"
-                  }, "Privacy", 8, Gt)) : m("", !0)
+                    class: "link-body-emphasis"
+                  }, "Privacy", 8, cn)) : y("", !0)
                 ]),
-                n("li", zt, [
-                  s.termsURL ? (r(), a("a", {
+                o("li", tn, [
+                  n.termsURL ? (l(), t("a", {
                     key: 0,
-                    href: s.termsURL,
+                    href: n.termsURL,
                     target: "_blank",
                     rel: "noopener",
-                    class: "link-light"
-                  }, "Terms", 8, Jt)) : m("", !0)
+                    class: "link-body-emphasis"
+                  }, "Terms", 8, ln)) : y("", !0)
                 ])
               ]),
-              n("div", Vt, " Copyright © " + v((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
+              o("div", un, " Copyright © " + N((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
             ])
           ])
-        ]) : m("", !0)
+        ]) : y("", !0)
       ])
     ])
   ], 2);
 }
-const ln = /* @__PURE__ */ C(St, [["render", Qt]]), Ht = {
+const zo = /* @__PURE__ */ D(Re, [["render", gn]]), dn = {
   props: {
     variant: {
       type: String,
@@ -636,13 +642,13 @@ const ln = /* @__PURE__ */ C(St, [["render", Qt]]), Ht = {
       type: String
     }
   },
-  data: function() {
+  data() {
     return {};
   }
-}, Xt = {
+}, sn = {
   key: 0,
   class: "d-flex align-items-center"
-}, Kt = { class: "flex-fill dropdown" }, es = {
+}, fn = { class: "flex-fill dropdown" }, mn = {
   key: 0,
   class: "text-white text-decoration-none py-2",
   href: "#",
@@ -650,7 +656,7 @@ const ln = /* @__PURE__ */ C(St, [["render", Qt]]), Ht = {
   id: "dropdownMenuButton1",
   "data-bs-toggle": "dropdown",
   "aria-expanded": "false"
-}, ts = { class: "me-1" }, ss = { class: "text-decoration-underline" }, ns = {
+}, yn = { class: "me-1" }, Cn = { class: "text-decoration-underline" }, Nn = {
   key: 1,
   class: "text-white text-decoration-none py-2",
   href: "#",
@@ -658,451 +664,409 @@ const ln = /* @__PURE__ */ C(St, [["render", Qt]]), Ht = {
   id: "dropdownMenuButton1",
   "data-bs-toggle": "dropdown",
   "aria-expanded": "false"
-}, is = {
+}, Ln = {
   class: "dropdown-menu p-3",
   "aria-labelledby": "dropdownMenuButton1",
   style: { width: "220px" }
-}, ls = {
+}, En = {
   key: 0,
   class: "text-danger"
-}, os = { class: "" }, as = { class: "" }, rs = ["href"], ds = ["href"], us = {
+}, pn = { class: "" }, hn = { class: "" }, An = ["href"], Sn = ["href"], bn = {
   key: 1,
   class: "d-flex align-items-center text-nowrap"
-}, cs = {
+}, Tn = {
   key: 0,
   class: "flex-fill text-white"
-}, fs = { class: "me-1" }, ms = {
+}, vn = { class: "me-1" }, wn = {
   key: 1,
   class: "flex-fill text-white"
-}, ps = { class: "flex-fill text-end ms-2" }, gs = ["href"];
-function hs(e, t, s, i, o, l) {
-  return s.variant === "flyout" ? (r(), a("div", Xt, [
-    n("div", Kt, [
-      s.userOverride ? (r(), a("a", es, [
-        n("span", ts, v(s.userNetid), 1),
-        t[0] || (t[0] = n("i", { class: "bi bi-arrow-right text-danger me-1" }, null, -1)),
-        n("span", ss, v(s.userOverride), 1)
-      ])) : (r(), a("a", ns, v(s.userNetid), 1)),
-      n("div", is, [
-        s.userOverride ? (r(), a("p", ls, [
-          t[1] || (t[1] = w(" overriding as ", -1)),
-          t[2] || (t[2] = n("i", { class: "bi bi-arrow-right text-danger" }, null, -1)),
-          w(" " + v(s.userOverride), 1)
-        ])) : m("", !0),
-        n("p", os, v(s.userOfficialName) + ", " + v(s.userPreferredName) + ", " + v(s.userPronouns), 1),
-        n("p", as, [
-          n("a", { href: s.profileUrl }, "go to profile", 8, rs)
+}, Bn = { class: "flex-fill text-end ms-2" }, In = ["href"];
+function kn(a, e, n, r, c, i) {
+  return n.variant === "flyout" ? (l(), t("div", sn, [
+    o("div", fn, [
+      n.userOverride ? (l(), t("a", mn, [
+        o("span", yn, N(n.userNetid), 1),
+        e[0] || (e[0] = o("i", { class: "bi bi-arrow-right text-danger me-1" }, null, -1)),
+        o("span", Cn, N(n.userOverride), 1)
+      ])) : (l(), t("a", Nn, N(n.userNetid), 1)),
+      o("div", Ln, [
+        n.userOverride ? (l(), t("p", En, [
+          e[1] || (e[1] = S(" overriding as ", -1)),
+          e[2] || (e[2] = o("i", { class: "bi bi-arrow-right text-danger" }, null, -1)),
+          S(" " + N(n.userOverride), 1)
+        ])) : y("", !0),
+        o("p", pn, N(n.userOfficialName) + ", " + N(n.userPreferredName) + ", " + N(n.userPronouns), 1),
+        o("p", hn, [
+          o("a", { href: n.profileUrl }, "go to profile", 8, An)
         ]),
-        n("div", null, [
-          s.signoutUrl ? u(e.$slots, "default", { key: 0 }, () => [
-            n("a", { href: s.signoutUrl }, "Sign out", 8, ds)
-          ]) : u(e.$slots, "default", { key: 1 }, () => [
-            t[3] || (t[3] = n("a", { href: "sadkf" }, "sign out test", -1))
+        o("div", null, [
+          n.signoutUrl ? f(a.$slots, "default", { key: 0 }, () => [
+            o("a", { href: n.signoutUrl }, "Sign out", 8, Sn)
+          ]) : f(a.$slots, "default", { key: 1 }, () => [
+            e[3] || (e[3] = o("a", { href: "sadkf" }, "sign out test", -1))
           ])
         ])
       ])
     ])
-  ])) : (r(), a("div", us, [
-    s.userOverride ? (r(), a("div", cs, [
-      n("span", fs, v(s.userNetid), 1),
-      t[4] || (t[4] = n("i", { class: "bi bi-arrow-right text-danger" }, null, -1)),
-      w(" " + v(s.userOverride), 1)
-    ])) : (r(), a("div", ms, v(s.userNetid), 1)),
-    n("div", ps, [
-      s.signoutUrl ? u(e.$slots, "default", { key: 0 }, () => [
-        n("a", {
-          href: s.signoutUrl,
+  ])) : (l(), t("div", bn, [
+    n.userOverride ? (l(), t("div", Tn, [
+      o("span", vn, N(n.userNetid), 1),
+      e[4] || (e[4] = o("i", { class: "bi bi-arrow-right text-danger" }, null, -1)),
+      S(" " + N(n.userOverride), 1)
+    ])) : (l(), t("div", wn, N(n.userNetid), 1)),
+    o("div", Bn, [
+      n.signoutUrl ? f(a.$slots, "default", { key: 0 }, () => [
+        o("a", {
+          href: n.signoutUrl,
           class: "text-white"
-        }, "Sign out", 8, gs)
-      ]) : u(e.$slots, "default", { key: 1 }, () => [
-        t[5] || (t[5] = n("a", { href: "sadkf" }, "sign out test", -1))
+        }, "Sign out", 8, In)
+      ]) : f(a.$slots, "default", { key: 1 }, () => [
+        e[5] || (e[5] = o("a", { href: "sadkf" }, "sign out test", -1))
       ])
     ])
   ]));
 }
-const on = /* @__PURE__ */ C(Ht, [["render", hs]]);
-function bs(e) {
-  return ke() ? (xe(e), !0) : !1;
+const qo = /* @__PURE__ */ D(dn, [["render", kn]]);
+function Mn(a, e) {
+  return pa() ? (Ua(a, e), !0) : !1;
 }
-const H = /* @__PURE__ */ new WeakMap(), vs = /* @__NO_SIDE_EFFECTS__ */ (...e) => {
-  var t;
-  const s = e[0], i = (t = se()) == null ? void 0 : t.proxy;
-  if (i == null && !ue())
-    throw new Error("injectLocal must be called in setup");
-  return i && H.has(i) && s in H.get(i) ? H.get(i)[s] : _e(...e);
-}, ys = typeof window < "u" && typeof document < "u";
+const ea = /* @__PURE__ */ new WeakMap(), Dn = /* @__NO_SIDE_EFFECTS__ */ (...a) => {
+  var e;
+  const n = a[0], r = (e = ca()) === null || e === void 0 ? void 0 : e.proxy, c = r ?? pa();
+  if (c == null && !ha()) throw new Error("injectLocal must be called in setup");
+  return c && ea.has(c) && n in ea.get(c) ? ea.get(c)[n] : Pa(...a);
+}, Rn = typeof window < "u" && typeof document < "u";
 typeof WorkerGlobalScope < "u" && globalThis instanceof WorkerGlobalScope;
-const ws = Object.prototype.toString, Ss = (e) => ws.call(e) === "[object Object]", ks = () => {
+const Un = Object.prototype.toString, Pn = (a) => Un.call(a) === "[object Object]", Fn = () => {
 };
-function ce(...e) {
-  if (e.length !== 1)
-    return we(...e);
-  const t = e[0];
-  return typeof t == "function" ? oe(Se(() => ({ get: t, set: ks }))) : ae(t);
+function Aa(...a) {
+  if (a.length !== 1) return Da(...a);
+  const e = a[0];
+  return typeof e == "function" ? Ca(Ra(() => ({
+    get: e,
+    set: Fn
+  }))) : Na(e);
 }
-function xs(e, t) {
-  function s(...i) {
-    return new Promise((o, l) => {
-      Promise.resolve(e(() => t.apply(this, i), { fn: t, thisArg: this, args: i })).then(o).catch(l);
+function Gn(a, e) {
+  function n(...r) {
+    return new Promise((c, i) => {
+      Promise.resolve(a(() => e.apply(this, r), {
+        fn: e,
+        thisArg: this,
+        args: r
+      })).then(c).catch(i);
     });
   }
-  return s;
+  return n;
 }
-const fe = (e) => e();
-function _s(e = fe, t = {}) {
-  const {
-    initialState: s = "active"
-  } = t, i = ce(s === "active");
-  function o() {
-    i.value = !1;
+const Sa = (a) => a();
+function xn(a = Sa, e = {}) {
+  const { initialState: n = "active" } = e, r = Aa(n === "active");
+  function c() {
+    r.value = !1;
   }
-  function l() {
-    i.value = !0;
+  function i() {
+    r.value = !0;
   }
-  const c = (...f) => {
-    i.value && e(...f);
+  const g = (...d) => {
+    r.value && a(...d);
   };
-  return { isActive: oe(i), pause: o, resume: l, eventFilter: c };
-}
-function ne(e) {
-  return e.endsWith("rem") ? Number.parseFloat(e) * 16 : Number.parseFloat(e);
-}
-function X(e) {
-  return Array.isArray(e) ? e : [e];
-}
-function As(e) {
-  return se();
-}
-function Ns(e, t, s = {}) {
-  const {
-    eventFilter: i = fe,
-    ...o
-  } = s;
-  return J(
-    e,
-    xs(
-      i,
-      t
-    ),
-    o
-  );
-}
-function Ms(e, t, s = {}) {
-  const {
-    eventFilter: i,
-    initialState: o = "active",
-    ...l
-  } = s, { eventFilter: c, pause: f, resume: g, isActive: p } = _s(i, { initialState: o });
-  return { stop: Ns(
-    e,
-    t,
-    {
-      ...l,
-      eventFilter: c
-    }
-  ), pause: f, resume: g, isActive: p };
-}
-function me(e, t = !0, s) {
-  As() ? re(e, s) : t ? e() : de(e);
-}
-function Ts(e, t, s) {
-  return J(
-    e,
-    t,
-    {
-      ...s,
-      immediate: !0
-    }
-  );
-}
-const q = ys ? window : void 0;
-function pe(e) {
-  var t;
-  const s = E(e);
-  return (t = s?.$el) != null ? t : s;
-}
-function te(...e) {
-  const t = [], s = () => {
-    t.forEach((f) => f()), t.length = 0;
-  }, i = (f, g, p, y) => (f.addEventListener(g, p, y), () => f.removeEventListener(g, p, y)), o = B(() => {
-    const f = X(E(e[0])).filter((g) => g != null);
-    return f.every((g) => typeof g != "string") ? f : void 0;
-  }), l = Ts(
-    () => {
-      var f, g;
-      return [
-        (g = (f = o.value) == null ? void 0 : f.map((p) => pe(p))) != null ? g : [q].filter((p) => p != null),
-        X(E(o.value ? e[1] : e[0])),
-        X(Ne(o.value ? e[2] : e[1])),
-        // @ts-expect-error - TypeScript gets the correct types, but somehow still complains
-        E(o.value ? e[3] : e[2])
-      ];
-    },
-    ([f, g, p, y]) => {
-      if (s(), !f?.length || !g?.length || !p?.length)
-        return;
-      const x = Ss(y) ? { ...y } : y;
-      t.push(
-        ...f.flatMap(
-          (I) => g.flatMap(
-            (_) => p.map((h) => i(I, _, h, x))
-          )
-        )
-      );
-    },
-    { flush: "post" }
-  ), c = () => {
-    l(), s();
+  return {
+    isActive: Ca(r),
+    pause: c,
+    resume: i,
+    eventFilter: g
   };
-  return bs(s), c;
+}
+function la(a) {
+  return a.endsWith("rem") ? Number.parseFloat(a) * 16 : Number.parseFloat(a);
+}
+function na(a) {
+  return Array.isArray(a) ? a : [a];
+}
+function Kn(a) {
+  return ca();
+}
+function Wn(a, e, n = {}) {
+  const { eventFilter: r = Sa, ...c } = n;
+  return _(a, Gn(r, e), c);
+}
+function Qn(a, e, n = {}) {
+  const { eventFilter: r, initialState: c = "active", ...i } = n, { eventFilter: g, pause: d, resume: m, isActive: u } = xn(r, { initialState: c });
+  return {
+    stop: Wn(a, e, {
+      ...i,
+      eventFilter: g
+    }),
+    pause: d,
+    resume: m,
+    isActive: u
+  };
+}
+const Yn = Qn;
+function ba(a, e = !0, n) {
+  Kn() ? La(a, n) : e ? a() : Ea(a);
+}
+function On(a, e, n) {
+  return _(a, e, {
+    ...n,
+    immediate: !0
+  });
+}
+const K = Rn ? window : void 0;
+function Ta(a) {
+  var e;
+  const n = U(a);
+  return (e = n?.$el) !== null && e !== void 0 ? e : n;
+}
+function ra(...a) {
+  const e = [], n = () => {
+    e.forEach((d) => d()), e.length = 0;
+  }, r = (d, m, u, L) => (d.addEventListener(m, u, L), () => d.removeEventListener(m, u, L)), c = W(() => {
+    const d = na(U(a[0])).filter((m) => m != null);
+    return d.every((m) => typeof m != "string") ? d : void 0;
+  }), i = On(() => {
+    var d, m;
+    return [
+      (d = (m = c.value) === null || m === void 0 ? void 0 : m.map((u) => Ta(u))) !== null && d !== void 0 ? d : [K].filter((u) => u != null),
+      na(U(c.value ? a[1] : a[0])),
+      na(Ga(c.value ? a[2] : a[1])),
+      U(c.value ? a[3] : a[2])
+    ];
+  }, ([d, m, u, L]) => {
+    if (n(), !d?.length || !m?.length || !u?.length) return;
+    const C = Pn(L) ? { ...L } : L;
+    e.push(...d.flatMap((B) => m.flatMap((E) => u.map((h) => r(B, E, h, C)))));
+  }, { flush: "post" }), g = () => {
+    i(), n();
+  };
+  return Mn(n), g;
 }
 // @__NO_SIDE_EFFECTS__
-function $s() {
-  const e = Z(!1), t = se();
-  return t && re(() => {
-    e.value = !0;
-  }, t), e;
+function jn() {
+  const a = H(!1), e = ca();
+  return e && La(() => {
+    a.value = !0;
+  }, e), a;
 }
 // @__NO_SIDE_EFFECTS__
-function Is(e) {
-  const t = /* @__PURE__ */ $s();
-  return B(() => (t.value, !!e()));
+function Vn(a) {
+  const e = /* @__PURE__ */ jn();
+  return W(() => (e.value, !!a()));
 }
-const Cs = Symbol("vueuse-ssr-width");
+const Hn = Symbol("vueuse-ssr-width");
 // @__NO_SIDE_EFFECTS__
-function Rs() {
-  const e = ue() ? /* @__PURE__ */ vs(Cs, null) : null;
-  return typeof e == "number" ? e : void 0;
+function Jn() {
+  const a = ha() ? /* @__PURE__ */ Dn(Hn, null) : null;
+  return typeof a == "number" ? a : void 0;
 }
-function Es(e, t = {}) {
-  const { window: s = q, ssrWidth: i = /* @__PURE__ */ Rs() } = t, o = /* @__PURE__ */ Is(() => s && "matchMedia" in s && typeof s.matchMedia == "function"), l = Z(typeof i == "number"), c = Z(), f = Z(!1), g = (p) => {
-    f.value = p.matches;
+function zn(a, e = {}) {
+  const { window: n = K, ssrWidth: r = /* @__PURE__ */ Jn() } = e, c = /* @__PURE__ */ Vn(() => n && "matchMedia" in n && typeof n.matchMedia == "function"), i = H(typeof r == "number"), g = H(), d = H(!1), m = (u) => {
+    d.value = u.matches;
   };
-  return Ae(() => {
-    if (l.value) {
-      l.value = !o.value;
-      const p = E(e).split(",");
-      f.value = p.some((y) => {
-        const x = y.includes("not all"), I = y.match(/\(\s*min-width:\s*(-?\d+(?:\.\d*)?[a-z]+\s*)\)/), _ = y.match(/\(\s*max-width:\s*(-?\d+(?:\.\d*)?[a-z]+\s*)\)/);
-        let h = !!(I || _);
-        return I && h && (h = i >= ne(I[1])), _ && h && (h = i <= ne(_[1])), x ? !h : h;
+  return Fa(() => {
+    if (i.value) {
+      i.value = !c.value, d.value = U(a).split(",").some((u) => {
+        const L = u.includes("not all"), C = u.match(/\(\s*min-width:\s*(-?\d+(?:\.\d*)?[a-z]+\s*)\)/), B = u.match(/\(\s*max-width:\s*(-?\d+(?:\.\d*)?[a-z]+\s*)\)/);
+        let E = !!(C || B);
+        return C && E && (E = r >= la(C[1])), B && E && (E = r <= la(B[1])), L ? !E : E;
       });
       return;
     }
-    o.value && (c.value = s.matchMedia(E(e)), f.value = c.value.matches);
-  }), te(c, "change", g, { passive: !0 }), B(() => f.value);
+    c.value && (g.value = n.matchMedia(U(a)), d.value = g.value.matches);
+  }), ra(g, "change", m, { passive: !0 }), W(() => d.value);
 }
-const G = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {}, z = "__vueuse_ssr_handlers__", js = /* @__PURE__ */ Ds();
-function Ds() {
-  return z in G || (G[z] = G[z] || {}), G[z];
+const J = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {}, z = "__vueuse_ssr_handlers__", qn = /* @__PURE__ */ Xn();
+function Xn() {
+  return z in J || (J[z] = J[z] || {}), J[z];
 }
-function ge(e, t) {
-  return js[e] || t;
+function va(a, e) {
+  return qn[a] || e;
 }
 // @__NO_SIDE_EFFECTS__
-function Os(e) {
-  return Es("(prefers-color-scheme: dark)", e);
+function Zn(a) {
+  return zn("(prefers-color-scheme: dark)", a);
 }
-function Us(e) {
-  return e == null ? "any" : e instanceof Set ? "set" : e instanceof Map ? "map" : e instanceof Date ? "date" : typeof e == "boolean" ? "boolean" : typeof e == "string" ? "string" : typeof e == "object" ? "object" : Number.isNaN(e) ? "any" : "number";
+function _n(a) {
+  return a == null ? "any" : a instanceof Set ? "set" : a instanceof Map ? "map" : a instanceof Date ? "date" : typeof a == "boolean" ? "boolean" : typeof a == "string" ? "string" : typeof a == "object" ? "object" : Number.isNaN(a) ? "any" : "number";
 }
-const Bs = {
+const $n = {
   boolean: {
-    read: (e) => e === "true",
-    write: (e) => String(e)
+    read: (a) => a === "true",
+    write: (a) => String(a)
   },
   object: {
-    read: (e) => JSON.parse(e),
-    write: (e) => JSON.stringify(e)
+    read: (a) => JSON.parse(a),
+    write: (a) => JSON.stringify(a)
   },
   number: {
-    read: (e) => Number.parseFloat(e),
-    write: (e) => String(e)
+    read: (a) => Number.parseFloat(a),
+    write: (a) => String(a)
   },
   any: {
-    read: (e) => e,
-    write: (e) => String(e)
+    read: (a) => a,
+    write: (a) => String(a)
   },
   string: {
-    read: (e) => e,
-    write: (e) => String(e)
+    read: (a) => a,
+    write: (a) => String(a)
   },
   map: {
-    read: (e) => new Map(JSON.parse(e)),
-    write: (e) => JSON.stringify(Array.from(e.entries()))
+    read: (a) => new Map(JSON.parse(a)),
+    write: (a) => JSON.stringify(Array.from(a.entries()))
   },
   set: {
-    read: (e) => new Set(JSON.parse(e)),
-    write: (e) => JSON.stringify(Array.from(e))
+    read: (a) => new Set(JSON.parse(a)),
+    write: (a) => JSON.stringify(Array.from(a))
   },
   date: {
-    read: (e) => new Date(e),
-    write: (e) => e.toISOString()
+    read: (a) => new Date(a),
+    write: (a) => a.toISOString()
   }
-}, ie = "vueuse-storage";
-function Ps(e, t, s, i = {}) {
-  var o;
-  const {
-    flush: l = "pre",
-    deep: c = !0,
-    listenToStorageChanges: f = !0,
-    writeDefaults: g = !0,
-    mergeDefaults: p = !1,
-    shallow: y,
-    window: x = q,
-    eventFilter: I,
-    onError: _ = (d) => {
-      console.error(d);
-    },
-    initOnMounted: h
-  } = i, A = (y ? Z : ae)(typeof t == "function" ? t() : t), T = B(() => E(e));
-  if (!s)
-    try {
-      s = ge("getDefaultStorage", () => {
-        var d;
-        return (d = q) == null ? void 0 : d.localStorage;
-      })();
-    } catch (d) {
-      _(d);
-    }
-  if (!s)
-    return A;
-  const $ = E(t), W = Us($), j = (o = i.serializer) != null ? o : Bs[W], { pause: k, resume: R } = Ms(
-    A,
-    () => D(A.value),
-    { flush: l, deep: c, eventFilter: I }
-  );
-  J(T, () => N(), { flush: l });
-  let P = !1;
-  const L = (d) => {
-    h && !P || N(d);
-  }, Y = (d) => {
-    h && !P || U(d);
+}, ua = "vueuse-storage";
+function ao(a, e, n, r = {}) {
+  var c;
+  const { flush: i = "pre", deep: g = !0, listenToStorageChanges: d = !0, writeDefaults: m = !0, mergeDefaults: u = !1, shallow: L, window: C = K, eventFilter: B, onError: E = (s) => {
+    console.error(s);
+  }, initOnMounted: h } = r, A = (L ? H : Na)(typeof e == "function" ? e() : e), b = W(() => U(a));
+  if (!n) try {
+    n = va("getDefaultStorage", () => K?.localStorage)();
+  } catch (s) {
+    E(s);
+  }
+  if (!n) return A;
+  const T = U(e), j = _n(T), P = (c = r.serializer) !== null && c !== void 0 ? c : $n[j], { pause: I, resume: R } = Yn(A, (s) => F(s), {
+    flush: i,
+    deep: g,
+    eventFilter: B
+  });
+  _(b, () => k(), { flush: i });
+  let Q = !1;
+  const Y = (s) => {
+    h && !Q || k(s);
+  }, V = (s) => {
+    h && !Q || x(s);
   };
-  x && f && (s instanceof Storage ? te(x, "storage", L, { passive: !0 }) : te(x, ie, Y)), h ? me(() => {
-    P = !0, N();
-  }) : N();
-  function F(d, S) {
-    if (x) {
+  C && d && (n instanceof Storage ? ra(C, "storage", Y, { passive: !0 }) : ra(C, ua, V)), h ? ba(() => {
+    Q = !0, k();
+  }) : k();
+  function O(s, v) {
+    if (C) {
       const M = {
-        key: T.value,
-        oldValue: d,
-        newValue: S,
-        storageArea: s
+        key: b.value,
+        oldValue: s,
+        newValue: v,
+        storageArea: n
       };
-      x.dispatchEvent(s instanceof Storage ? new StorageEvent("storage", M) : new CustomEvent(ie, {
-        detail: M
-      }));
+      C.dispatchEvent(n instanceof Storage ? new StorageEvent("storage", M) : new CustomEvent(ua, { detail: M }));
     }
   }
-  function D(d) {
+  function F(s) {
     try {
-      const S = s.getItem(T.value);
-      if (d == null)
-        F(S, null), s.removeItem(T.value);
+      const v = n.getItem(b.value);
+      if (s == null)
+        O(v, null), n.removeItem(b.value);
       else {
-        const M = j.write(d);
-        S !== M && (s.setItem(T.value, M), F(S, M));
+        const M = P.write(s);
+        v !== M && (n.setItem(b.value, M), O(v, M));
       }
-    } catch (S) {
-      _(S);
+    } catch (v) {
+      E(v);
     }
   }
-  function O(d) {
-    const S = d ? d.newValue : s.getItem(T.value);
-    if (S == null)
-      return g && $ != null && s.setItem(T.value, j.write($)), $;
-    if (!d && p) {
-      const M = j.read(S);
-      return typeof p == "function" ? p(M, $) : W === "object" && !Array.isArray(M) ? { ...$, ...M } : M;
-    } else return typeof S != "string" ? S : j.read(S);
+  function G(s) {
+    const v = s ? s.newValue : n.getItem(b.value);
+    if (v == null)
+      return m && T != null && n.setItem(b.value, P.write(T)), T;
+    if (!s && u) {
+      const M = P.read(v);
+      return typeof u == "function" ? u(M, T) : j === "object" && !Array.isArray(M) ? {
+        ...T,
+        ...M
+      } : M;
+    } else return typeof v != "string" ? v : P.read(v);
   }
-  function N(d) {
-    if (!(d && d.storageArea !== s)) {
-      if (d && d.key == null) {
-        A.value = $;
+  function k(s) {
+    if (!(s && s.storageArea !== n)) {
+      if (s && s.key == null) {
+        A.value = T;
         return;
       }
-      if (!(d && d.key !== T.value)) {
-        k();
+      if (!(s && s.key !== b.value)) {
+        I();
         try {
-          d?.newValue !== j.write(A.value) && (A.value = O(d));
-        } catch (S) {
-          _(S);
+          const v = P.write(A.value);
+          (s === void 0 || s?.newValue !== v) && (A.value = G(s));
+        } catch (v) {
+          E(v);
         } finally {
-          d ? de(R) : R();
+          s ? Ea(R) : R();
         }
       }
     }
   }
-  function U(d) {
-    N(d.detail);
+  function x(s) {
+    k(s.detail);
   }
   return A;
 }
-const Ls = "*,*::before,*::after{-webkit-transition:none!important;-moz-transition:none!important;-o-transition:none!important;-ms-transition:none!important;transition:none!important}";
-function Fs(e = {}) {
-  const {
-    selector: t = "html",
-    attribute: s = "class",
-    initialValue: i = "auto",
-    window: o = q,
-    storage: l,
-    storageKey: c = "vueuse-color-scheme",
-    listenToStorageChanges: f = !0,
-    storageRef: g,
-    emitAuto: p,
-    disableTransition: y = !0
-  } = e, x = {
+const eo = "*,*::before,*::after{-webkit-transition:none!important;-moz-transition:none!important;-o-transition:none!important;-ms-transition:none!important;transition:none!important}";
+function no(a = {}) {
+  const { selector: e = "html", attribute: n = "class", initialValue: r = "auto", window: c = K, storage: i, storageKey: g = "vueuse-color-scheme", listenToStorageChanges: d = !0, storageRef: m, emitAuto: u, disableTransition: L = !0 } = a, C = {
     auto: "",
     light: "light",
     dark: "dark",
-    ...e.modes || {}
-  }, I = /* @__PURE__ */ Os({ window: o }), _ = B(() => I.value ? "dark" : "light"), h = g || (c == null ? ce(i) : Ps(c, i, l, { window: o, listenToStorageChanges: f })), A = B(() => h.value === "auto" ? _.value : h.value), T = ge(
-    "updateHTMLAttrs",
-    (k, R, P) => {
-      const L = typeof k == "string" ? o?.document.querySelector(k) : pe(k);
-      if (!L)
-        return;
-      const Y = /* @__PURE__ */ new Set(), F = /* @__PURE__ */ new Set();
-      let D = null;
-      if (R === "class") {
-        const N = P.split(/\s/g);
-        Object.values(x).flatMap((U) => (U || "").split(/\s/g)).filter(Boolean).forEach((U) => {
-          N.includes(U) ? Y.add(U) : F.add(U);
-        });
-      } else
-        D = { key: R, value: P };
-      if (Y.size === 0 && F.size === 0 && D === null)
-        return;
-      let O;
-      y && (O = o.document.createElement("style"), O.appendChild(document.createTextNode(Ls)), o.document.head.appendChild(O));
-      for (const N of Y)
-        L.classList.add(N);
-      for (const N of F)
-        L.classList.remove(N);
-      D && L.setAttribute(D.key, D.value), y && (o.getComputedStyle(O).opacity, document.head.removeChild(O));
-    }
-  );
-  function $(k) {
+    ...a.modes || {}
+  }, B = /* @__PURE__ */ Zn({ window: c }), E = W(() => B.value ? "dark" : "light"), h = m || (g == null ? Aa(r) : ao(g, r, i, {
+    window: c,
+    listenToStorageChanges: d
+  })), A = W(() => h.value === "auto" ? E.value : h.value), b = va("updateHTMLAttrs", (I, R, Q) => {
+    const Y = typeof I == "string" ? c?.document.querySelector(I) : Ta(I);
+    if (!Y) return;
+    const V = /* @__PURE__ */ new Set(), O = /* @__PURE__ */ new Set();
+    let F = null;
+    if (R === "class") {
+      const k = Q.split(/\s/g);
+      Object.values(C).flatMap((x) => (x || "").split(/\s/g)).filter(Boolean).forEach((x) => {
+        k.includes(x) ? V.add(x) : O.add(x);
+      });
+    } else F = {
+      key: R,
+      value: Q
+    };
+    if (V.size === 0 && O.size === 0 && F === null) return;
+    let G;
+    L && (G = c.document.createElement("style"), G.appendChild(document.createTextNode(eo)), c.document.head.appendChild(G));
+    for (const k of V) Y.classList.add(k);
+    for (const k of O) Y.classList.remove(k);
+    F && Y.setAttribute(F.key, F.value), L && (c.getComputedStyle(G).opacity, document.head.removeChild(G));
+  });
+  function T(I) {
     var R;
-    T(t, s, (R = x[k]) != null ? R : k);
+    b(e, n, (R = C[I]) !== null && R !== void 0 ? R : I);
   }
-  function W(k) {
-    e.onChanged ? e.onChanged(k, $) : $(k);
+  function j(I) {
+    a.onChanged ? a.onChanged(I, T) : T(I);
   }
-  J(A, W, { flush: "post", immediate: !0 }), me(() => W(A.value));
-  const j = B({
+  _(A, j, {
+    flush: "post",
+    immediate: !0
+  }), ba(() => j(A.value));
+  const P = W({
     get() {
-      return p ? h.value : A.value;
+      return u ? h.value : A.value;
     },
-    set(k) {
-      h.value = k;
+    set(I) {
+      h.value = I;
     }
   });
-  return Object.assign(j, { store: h, system: _, state: A });
+  return Object.assign(P, {
+    store: h,
+    system: E,
+    state: A
+  });
 }
-const Ws = {
+const oo = {
   props: {
     colorClass: {
       type: String,
@@ -1111,80 +1075,4447 @@ const Ws = {
   },
   // composition in options api requires setup()
   setup() {
-    return { colorMode: Fs({
+    return { colorMode: no({
       emitAuto: !0,
       // bootstrap's dark theming attribute
       attribute: "data-bs-theme"
     }) };
   }
-}, Ys = { class: "d-flex align-items-center" }, Zs = { class: "bi bi-brightness-high-fill" }, qs = { class: "bi bi-moon-stars-fill" }, Gs = { class: "bi bi-circle-half" }, zs = { class: "dropdown-menu p-1" }, Js = { class: "mb-1" }, Vs = { class: "mb-1" };
-function Qs(e, t, s, i, o, l) {
-  return r(), a("div", Ys, [
-    n("div", null, [
-      n("button", {
-        class: b(["btn btn-link dropdown-toggle p-1", s.colorClass]),
+}, io = { class: "d-flex align-items-center" }, ro = { class: "bi bi-brightness-high-fill" }, co = { class: "bi bi-moon-stars-fill" }, to = { class: "bi bi-circle-half" }, lo = { class: "dropdown-menu p-1" }, uo = { class: "mb-1" }, go = { class: "mb-1" };
+function so(a, e, n, r, c, i) {
+  return l(), t("div", io, [
+    o("div", null, [
+      o("button", {
+        class: p(["btn btn-link dropdown-toggle p-1", n.colorClass]),
         type: "button",
         "data-bs-toggle": "dropdown",
         "aria-expanded": "false",
         "aria-label": "Choose color mode"
       }, [
-        V(n("i", Zs, null, 512), [
-          [Q, i.colorMode == "light"]
+        $(o("i", ro, null, 512), [
+          [aa, r.colorMode == "light"]
         ]),
-        V(n("i", qs, null, 512), [
-          [Q, i.colorMode == "dark"]
+        $(o("i", co, null, 512), [
+          [aa, r.colorMode == "dark"]
         ]),
-        V(n("i", Gs, null, 512), [
-          [Q, i.colorMode == "auto"]
+        $(o("i", to, null, 512), [
+          [aa, r.colorMode == "auto"]
         ])
       ], 2),
-      n("ul", zs, [
-        n("li", Js, [
-          n("a", {
-            class: b(["dropdown-item rounded", i.colorMode == "light" ? "active" : ""]),
+      o("ul", lo, [
+        o("li", uo, [
+          o("a", {
+            class: p(["dropdown-item rounded", r.colorMode == "light" ? "active" : ""]),
             href: "#",
             role: "button",
-            onClick: t[0] || (t[0] = (c) => i.colorMode = "light")
-          }, t[3] || (t[3] = [
-            n("i", { class: "bi bi-brightness-high-fill" }, null, -1),
-            w(" Light", -1)
-          ]), 2)
+            onClick: e[0] || (e[0] = (g) => r.colorMode = "light")
+          }, [...e[3] || (e[3] = [
+            o("i", { class: "bi bi-brightness-high-fill me-2" }, null, -1),
+            S("Light", -1)
+          ])], 2)
         ]),
-        n("li", Vs, [
-          n("a", {
-            class: b(["dropdown-item rounded", i.colorMode == "dark" ? "active" : ""]),
+        o("li", go, [
+          o("a", {
+            class: p(["dropdown-item rounded", r.colorMode == "dark" ? "active" : ""]),
             href: "#",
             role: "button",
-            onClick: t[1] || (t[1] = (c) => i.colorMode = "dark")
-          }, t[4] || (t[4] = [
-            n("i", { class: "bi bi-moon-stars-fill" }, null, -1),
-            w(" Dark", -1)
-          ]), 2)
+            onClick: e[1] || (e[1] = (g) => r.colorMode = "dark")
+          }, [...e[4] || (e[4] = [
+            o("i", { class: "bi bi-moon-stars-fill me-2" }, null, -1),
+            S("Dark", -1)
+          ])], 2)
         ]),
-        n("li", null, [
-          n("a", {
-            class: b(["dropdown-item rounded", i.colorMode == "auto" ? "active" : ""]),
+        o("li", null, [
+          o("a", {
+            class: p(["dropdown-item rounded", r.colorMode == "auto" ? "active" : ""]),
             href: "#",
             role: "button",
-            onClick: t[2] || (t[2] = (c) => i.colorMode = "auto")
-          }, t[5] || (t[5] = [
-            n("i", { class: "bi bi-circle-half" }, null, -1),
-            w(" Auto", -1)
-          ]), 2)
+            onClick: e[2] || (e[2] = (g) => r.colorMode = "auto")
+          }, [...e[5] || (e[5] = [
+            o("i", { class: "bi bi-circle-half me-2" }, null, -1),
+            S("Auto", -1)
+          ])], 2)
         ])
       ])
     ])
   ]);
 }
-const an = /* @__PURE__ */ C(Ws, [["render", Qs]]);
+const Xo = /* @__PURE__ */ D(oo, [["render", so]]);
+function fo(a) {
+  return ga(a[0]) + ga(a[1]);
+}
+function ga(a) {
+  return String.fromCodePoint(127397 + a.toUpperCase().charCodeAt(0));
+}
+var w = {}, q = {}, da;
+function mo() {
+  if (da) return q;
+  da = 1, Object.defineProperty(q, "__esModule", { value: !0 });
+  function a(e, n) {
+    return e.reduce((r, c) => {
+      const i = String(c[n]);
+      return r[i] || (r[i] = []), r[i].push(c), r;
+    }, {});
+  }
+  return q.default = a, q;
+}
+var X = {}, sa;
+function yo() {
+  if (sa) return X;
+  sa = 1, Object.defineProperty(X, "__esModule", { value: !0 });
+  function a(e, n) {
+    return e.replace(/{([^{}]*)}/g, (r, c) => {
+      const i = n[c];
+      return typeof i == "string" || typeof i == "number" ? i.toString() : r;
+    });
+  }
+  return X.default = a, X;
+}
+var Z = {}, fa;
+function Co() {
+  if (fa) return Z;
+  fa = 1, Object.defineProperty(Z, "__esModule", { value: !0 });
+  const a = [
+    {
+      countryNameEn: "Andorra",
+      countryNameLocal: "Andorra",
+      countryCode: "AD",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ca",
+      officialLanguageNameEn: "Catalan, Valencian",
+      officialLanguageNameLocal: "Català, Valencià",
+      countryCallingCode: "376",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇦🇩"
+    },
+    {
+      countryNameEn: "Afghanistan",
+      countryNameLocal: "د افغانستان اسلامي دولتدولت اسلامی افغانستان, جمهوری اسلامی افغانستان",
+      countryCode: "AF",
+      currencyCode: "AFN",
+      currencyNameEn: "Afghan afghani",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fa",
+      officialLanguageNameEn: "Persian",
+      officialLanguageNameLocal: "فارسی",
+      countryCallingCode: "93",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇦🇫"
+    },
+    {
+      countryNameEn: "Antigua and Barbuda",
+      countryNameLocal: "Antigua and Barbuda",
+      countryCode: "AG",
+      currencyCode: "XCD",
+      currencyNameEn: "East Caribbean dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1268",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇦🇬"
+    },
+    {
+      countryNameEn: "Anguilla",
+      countryNameLocal: "Anguilla",
+      countryCode: "AI",
+      currencyCode: "XCD",
+      currencyNameEn: "East Caribbean dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1264",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇦🇮"
+    },
+    {
+      countryNameEn: "Albania",
+      countryNameLocal: "Shqipëria",
+      countryCode: "AL",
+      currencyCode: "ALL",
+      currencyNameEn: "Albanian lek",
+      tinType: "NIPT",
+      tinName: "Numri i Identifikimit për Personin e Tatueshëm",
+      officialLanguageCode: "sq",
+      officialLanguageNameEn: "Albanian",
+      officialLanguageNameLocal: "Shqip",
+      countryCallingCode: "355",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇦🇱"
+    },
+    {
+      countryNameEn: "Armenia",
+      countryNameLocal: "Հայաստան",
+      countryCode: "AM",
+      currencyCode: "AMD",
+      currencyNameEn: "Armenian dram",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "hy",
+      officialLanguageNameEn: "Armenian",
+      officialLanguageNameLocal: "Հայերեն",
+      countryCallingCode: "374",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇦🇲"
+    },
+    {
+      countryNameEn: "Angola",
+      countryNameLocal: "Angola",
+      countryCode: "AO",
+      currencyCode: "AOA",
+      currencyNameEn: "Angolan kwanza",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "pt",
+      officialLanguageNameEn: "Portuguese",
+      officialLanguageNameLocal: "Português",
+      countryCallingCode: "244",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇦🇴"
+    },
+    {
+      countryNameEn: "Antarctica",
+      countryNameLocal: "Antarctica, Antártico, Antarctique, Антарктике",
+      countryCode: "AQ",
+      currencyCode: "",
+      currencyNameEn: "",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "672",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇦🇶"
+    },
+    {
+      countryNameEn: "Argentina",
+      countryNameLocal: "Argentina",
+      countryCode: "AR",
+      currencyCode: "ARS",
+      currencyNameEn: "Argentine peso",
+      tinType: "CUIT",
+      tinName: "Código Único de Identificación Tributaria",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "54",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇦🇷"
+    },
+    {
+      countryNameEn: "American Samoa",
+      countryNameLocal: "American Samoa",
+      countryCode: "AS",
+      currencyCode: "USD",
+      currencyNameEn: "United States dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1684",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇦🇸"
+    },
+    {
+      countryNameEn: "Austria",
+      countryNameLocal: "Österreich",
+      countryCode: "AT",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "UID",
+      tinName: "Umsatzsteuer-Identifikationsnummer",
+      officialLanguageCode: "de",
+      officialLanguageNameEn: "German",
+      officialLanguageNameLocal: "Deutsch",
+      countryCallingCode: "43",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇦🇹"
+    },
+    {
+      countryNameEn: "Australia",
+      countryNameLocal: "Australia",
+      countryCode: "AU",
+      currencyCode: "AUD",
+      currencyNameEn: "Australian dollar",
+      tinType: "ABN",
+      tinName: "Australian Business Number",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "61",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇦🇺"
+    },
+    {
+      countryNameEn: "Aruba",
+      countryNameLocal: "Aruba",
+      countryCode: "AW",
+      currencyCode: "AWG",
+      currencyNameEn: "Aruban florin",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "nl",
+      officialLanguageNameEn: "Dutch, Flemish",
+      officialLanguageNameLocal: "Nederlands, Vlaams",
+      countryCallingCode: "297",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇦🇼"
+    },
+    {
+      countryNameEn: "Åland Islands",
+      countryNameLocal: "Åland",
+      countryCode: "AX",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "sv",
+      officialLanguageNameEn: "Swedish",
+      officialLanguageNameLocal: "Svenska",
+      countryCallingCode: "358",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇦🇽"
+    },
+    {
+      countryNameEn: "Azerbaijan",
+      countryNameLocal: "Azərbaycan",
+      countryCode: "AZ",
+      currencyCode: "AZN",
+      currencyNameEn: "Azerbaijani manat",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "az",
+      officialLanguageNameEn: "Azerbaijani",
+      officialLanguageNameLocal: "azərbaycan dili",
+      countryCallingCode: "994",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇦🇿"
+    },
+    {
+      countryNameEn: "Bosnia and Herzegovina",
+      countryNameLocal: "Bosna i Hercegovina",
+      countryCode: "BA",
+      currencyCode: "BAM",
+      currencyNameEn: "Bosnia and Herzegovina convertible mark",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "bs",
+      officialLanguageNameEn: "Bosnian",
+      officialLanguageNameLocal: "bosanski jezik",
+      countryCallingCode: "387",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇧🇦"
+    },
+    {
+      countryNameEn: "Barbados",
+      countryNameLocal: "Barbados",
+      countryCode: "BB",
+      currencyCode: "BBD",
+      currencyNameEn: "Barbados dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1246",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇧🇧"
+    },
+    {
+      countryNameEn: "Bangladesh",
+      countryNameLocal: "গণপ্রজাতন্ত্রী বাংলাদেশ",
+      countryCode: "BD",
+      currencyCode: "BDT",
+      currencyNameEn: "Bangladeshi taka",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "bn",
+      officialLanguageNameEn: "Bengali",
+      officialLanguageNameLocal: "বাংলা",
+      countryCallingCode: "880",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇧🇩"
+    },
+    {
+      countryNameEn: "Belgium",
+      countryNameLocal: "België, Belgique, Belgien",
+      countryCode: "BE",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "n° TVABTW-nr Mwst-nr",
+      tinName: "BTW identificatienummer / Numéro de TVA",
+      officialLanguageCode: "nl",
+      officialLanguageNameEn: "Dutch, Flemish",
+      officialLanguageNameLocal: "Nederlands, Vlaams",
+      countryCallingCode: "32",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇧🇪"
+    },
+    {
+      countryNameEn: "Burkina Faso",
+      countryNameLocal: "Burkina Faso",
+      countryCode: "BF",
+      currencyCode: "XOF",
+      currencyNameEn: "CFA franc BCEAO",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "226",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇧🇫"
+    },
+    {
+      countryNameEn: "Bulgaria",
+      countryNameLocal: "България",
+      countryCode: "BG",
+      currencyCode: "BGN",
+      currencyNameEn: "Bulgarian lev",
+      tinType: "ДДС номер",
+      tinName: "Идентификационен номер по ДДС",
+      officialLanguageCode: "bg",
+      officialLanguageNameEn: "Bulgarian",
+      officialLanguageNameLocal: "български език",
+      countryCallingCode: "359",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇧🇬"
+    },
+    {
+      countryNameEn: "Bahrain",
+      countryNameLocal: "البحرين",
+      countryCode: "BH",
+      currencyCode: "BHD",
+      currencyNameEn: "Bahraini dinar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ar",
+      officialLanguageNameEn: "Arabic",
+      officialLanguageNameLocal: "العربية",
+      countryCallingCode: "973",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇧🇭"
+    },
+    {
+      countryNameEn: "Burundi",
+      countryNameLocal: "Burundi",
+      countryCode: "BI",
+      currencyCode: "BIF",
+      currencyNameEn: "Burundian franc",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "257",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇧🇮"
+    },
+    {
+      countryNameEn: "Benin",
+      countryNameLocal: "Bénin",
+      countryCode: "BJ",
+      currencyCode: "XOF",
+      currencyNameEn: "CFA franc BCEAO",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "229",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇧🇯"
+    },
+    {
+      countryNameEn: "Saint Barthélemy",
+      countryNameLocal: "Saint-Barthélemy",
+      countryCode: "BL",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "590",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇧🇱"
+    },
+    {
+      countryNameEn: "Bermuda",
+      countryNameLocal: "Bermuda",
+      countryCode: "BM",
+      currencyCode: "BMD",
+      currencyNameEn: "Bermudian dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1441",
+      areaCodes: [],
+      region: "North America",
+      flag: "🇧🇲"
+    },
+    {
+      countryNameEn: "Brunei Darussalam",
+      countryNameLocal: "Brunei Darussalam",
+      countryCode: "BN",
+      currencyCode: "BND",
+      currencyNameEn: "Brunei dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ms",
+      officialLanguageNameEn: "Malay",
+      officialLanguageNameLocal: "Bahasa Melayu, بهاس ملايو‎",
+      countryCallingCode: "673",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇧🇳"
+    },
+    {
+      countryNameEn: "Bolivia (Plurinational State of)",
+      countryNameLocal: "Bolivia, Bulibiya, Volívia, Wuliwya",
+      countryCode: "BO",
+      currencyCode: "BOP",
+      currencyNameEn: "",
+      tinType: "NIT",
+      tinName: "Número de Identificación Tributaria",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "591",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇧🇴"
+    },
+    {
+      countryNameEn: "Bonaire, Sint Eustatius and Saba",
+      countryNameLocal: "Caribisch Nederland",
+      countryCode: "BQ",
+      currencyCode: "USD",
+      currencyNameEn: "United States dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "nl",
+      officialLanguageNameEn: "Dutch, Flemish",
+      officialLanguageNameLocal: "Nederlands, Vlaams",
+      countryCallingCode: "5997",
+      areaCodes: [],
+      region: "Unknown",
+      flag: "🇧🇶"
+    },
+    {
+      countryNameEn: "Brazil",
+      countryNameLocal: "Brasil",
+      countryCode: "BR",
+      currencyCode: "BRL",
+      currencyNameEn: "Brazilian real",
+      tinType: "CNPJ",
+      tinName: "Cadastro Nacional de Pessoa Jurídica",
+      officialLanguageCode: "pt",
+      officialLanguageNameEn: "Portuguese",
+      officialLanguageNameLocal: "Português",
+      countryCallingCode: "55",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇧🇷"
+    },
+    {
+      countryNameEn: "Bhutan",
+      countryNameLocal: "འབྲུག་ཡུལ",
+      countryCode: "BT",
+      currencyCode: "BTN",
+      currencyNameEn: "Bhutanese ngultrum",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "dz",
+      officialLanguageNameEn: "Dzongkha",
+      officialLanguageNameLocal: "རྫོང་ཁ",
+      countryCallingCode: "975",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇧🇹"
+    },
+    {
+      countryNameEn: "Bouvet Island",
+      countryNameLocal: "Bouvetøya",
+      countryCode: "BV",
+      currencyCode: "NOK",
+      currencyNameEn: "Norwegian krone",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "no",
+      officialLanguageNameEn: "Norwegian",
+      officialLanguageNameLocal: "Norsk",
+      countryCallingCode: "47",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇧🇻"
+    },
+    {
+      countryNameEn: "Botswana",
+      countryNameLocal: "Botswana",
+      countryCode: "BW",
+      currencyCode: "BWP",
+      currencyNameEn: "Botswana pula",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "267",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇧🇼"
+    },
+    {
+      countryNameEn: "Belarus",
+      countryNameLocal: "Беларусь",
+      countryCode: "BY",
+      currencyCode: "BYR",
+      currencyNameEn: "",
+      tinType: "УНП (UNP)",
+      tinName: "Учетный номер плательщика",
+      officialLanguageCode: "be",
+      officialLanguageNameEn: "Belarusian",
+      officialLanguageNameLocal: "беларуская мова",
+      countryCallingCode: "375",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇧🇾"
+    },
+    {
+      countryNameEn: "Belize",
+      countryNameLocal: "Belize",
+      countryCode: "BZ",
+      currencyCode: "BZD",
+      currencyNameEn: "Belize dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "501",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇧🇿"
+    },
+    {
+      countryNameEn: "Canada",
+      countryNameLocal: "Canada",
+      countryCode: "CA",
+      currencyCode: "CAD",
+      currencyNameEn: "Canadian dollar",
+      tinType: "BN / NE",
+      tinName: "Business Number",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1",
+      areaCodes: [
+        "403",
+        "587",
+        "780",
+        "825",
+        "236",
+        "250",
+        "604",
+        "672",
+        "778",
+        "204",
+        "431",
+        "506",
+        "709",
+        "782",
+        "902",
+        "226",
+        "249",
+        "289",
+        "343",
+        "365",
+        "416",
+        "437",
+        "519",
+        "548",
+        "613",
+        "647",
+        "705",
+        "807",
+        "905",
+        "367",
+        "418",
+        "438",
+        "450",
+        "514",
+        "579",
+        "581",
+        "819",
+        "873",
+        "306",
+        "639",
+        "867"
+      ],
+      region: "North America",
+      flag: "🇨🇦"
+    },
+    {
+      countryNameEn: "Switzerland",
+      countryNameLocal: "Schweiz, Suisse, Svizzera, Svizra",
+      countryCode: "CH",
+      currencyCode: "CHF",
+      currencyNameEn: "Swiss franc",
+      tinType: "MWST/TVA/IVA",
+      tinName: "Mehrwertsteuernummer",
+      officialLanguageCode: "de",
+      officialLanguageNameEn: "German",
+      officialLanguageNameLocal: "Deutsch",
+      countryCallingCode: "41",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇨🇭"
+    },
+    {
+      countryNameEn: "Côte d'Ivoire",
+      countryNameLocal: "Côte d'Ivoire",
+      countryCode: "CI",
+      currencyCode: "XOF",
+      currencyNameEn: "CFA franc BCEAO",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "225",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇨🇮"
+    },
+    {
+      countryNameEn: "Chile",
+      countryNameLocal: "Chile",
+      countryCode: "CL",
+      currencyCode: "CLP",
+      currencyNameEn: "Chilean peso",
+      tinType: "RUT",
+      tinName: "Rol Único Tributario",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "56",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇨🇱"
+    },
+    {
+      countryNameEn: "Cameroon",
+      countryNameLocal: "Cameroun, Cameroon",
+      countryCode: "CM",
+      currencyCode: "XAF",
+      currencyNameEn: "CFA franc BEAC",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "237",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇨🇲"
+    },
+    {
+      countryNameEn: "China",
+      countryNameLocal: "中国",
+      countryCode: "CN",
+      currencyCode: "CNY",
+      currencyNameEn: "Renminbi (Chinese) yuan",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "zh-hans",
+      officialLanguageNameEn: "",
+      officialLanguageNameLocal: "",
+      countryCallingCode: "86",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇨🇳"
+    },
+    {
+      countryNameEn: "Colombia",
+      countryNameLocal: "Colombia",
+      countryCode: "CO",
+      currencyCode: "COP",
+      currencyNameEn: "Colombian peso",
+      tinType: "NIT",
+      tinName: "Número De Identificación Tributaria",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "57",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇨🇴"
+    },
+    {
+      countryNameEn: "Costa Rica",
+      countryNameLocal: "Costa Rica",
+      countryCode: "CR",
+      currencyCode: "CRC",
+      currencyNameEn: "Costa Rican colon",
+      tinType: "",
+      tinName: "Cédula Jurídica",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "506",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇨🇷"
+    },
+    {
+      countryNameEn: "Cuba",
+      countryNameLocal: "Cuba",
+      countryCode: "CU",
+      currencyCode: "CUC",
+      currencyNameEn: "Cuban convertible peso",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "53",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇨🇺"
+    },
+    {
+      countryNameEn: "Cabo Verde",
+      countryNameLocal: "Cabo Verde",
+      countryCode: "CV",
+      currencyCode: "CVE",
+      currencyNameEn: "Cape Verdean escudo",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "pt",
+      officialLanguageNameEn: "Portuguese",
+      officialLanguageNameLocal: "Português",
+      countryCallingCode: "238",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇨🇻"
+    },
+    {
+      countryNameEn: "Curaçao",
+      countryNameLocal: "Curaçao",
+      countryCode: "CW",
+      currencyCode: "ANG",
+      currencyNameEn: "Netherlands Antillean guilder",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "nl",
+      officialLanguageNameEn: "Dutch, Flemish",
+      officialLanguageNameLocal: "Nederlands, Vlaams",
+      countryCallingCode: "599",
+      areaCodes: [],
+      region: "Unknown",
+      flag: "🇨🇼"
+    },
+    {
+      countryNameEn: "Christmas Island",
+      countryNameLocal: "Christmas Island",
+      countryCode: "CX",
+      currencyCode: "AUD",
+      currencyNameEn: "Australian dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "61",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇨🇽"
+    },
+    {
+      countryNameEn: "Cyprus",
+      countryNameLocal: "Κύπρος, Kibris",
+      countryCode: "CY",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "ΦΠΑ",
+      tinName: "Αριθμός Εγγραφής Φ.Π.Α.",
+      officialLanguageCode: "el",
+      officialLanguageNameEn: "Greek, Modern (1453-)",
+      officialLanguageNameLocal: "ελληνικά",
+      countryCallingCode: "357",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇨🇾"
+    },
+    {
+      countryNameEn: "Germany",
+      countryNameLocal: "Deutschland",
+      countryCode: "DE",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "USt-IdNr.",
+      tinName: "Umsatzsteuer-Identifikationsnummer",
+      officialLanguageCode: "de",
+      officialLanguageNameEn: "German",
+      officialLanguageNameLocal: "Deutsch",
+      countryCallingCode: "49",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇩🇪"
+    },
+    {
+      countryNameEn: "Djibouti",
+      countryNameLocal: "Djibouti, جيبوتي, Jabuuti, Gabuutih",
+      countryCode: "DJ",
+      currencyCode: "DJF",
+      currencyNameEn: "Djiboutian franc",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "253",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇩🇯"
+    },
+    {
+      countryNameEn: "Denmark",
+      countryNameLocal: "Danmark",
+      countryCode: "DK",
+      currencyCode: "DKK",
+      currencyNameEn: "Danish krone",
+      tinType: "CVR",
+      tinName: "Momsregistreringsnummer",
+      officialLanguageCode: "da",
+      officialLanguageNameEn: "Danish",
+      officialLanguageNameLocal: "dansk",
+      countryCallingCode: "45",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇩🇰"
+    },
+    {
+      countryNameEn: "Dominica",
+      countryNameLocal: "Dominica",
+      countryCode: "DM",
+      currencyCode: "XCD",
+      currencyNameEn: "East Caribbean dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "767",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇩🇲"
+    },
+    {
+      countryNameEn: "Algeria",
+      countryNameLocal: "الجزائر",
+      countryCode: "DZ",
+      currencyCode: "DZD",
+      currencyNameEn: "Algerian dinar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ar",
+      officialLanguageNameEn: "Arabic",
+      officialLanguageNameLocal: "العربية",
+      countryCallingCode: "213",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇩🇿"
+    },
+    {
+      countryNameEn: "Ecuador",
+      countryNameLocal: "Ecuador",
+      countryCode: "EC",
+      currencyCode: "USD",
+      currencyNameEn: "United States dollar",
+      tinType: "RUC",
+      tinName: "Número de Registro Unico de Contribuyentes",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "593",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇪🇨"
+    },
+    {
+      countryNameEn: "Estonia",
+      countryNameLocal: "Eesti",
+      countryCode: "EE",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "KMKR",
+      tinName: "Käibemaksukohustuslase number",
+      officialLanguageCode: "et",
+      officialLanguageNameEn: "Estonian",
+      officialLanguageNameLocal: "eesti, eesti keel",
+      countryCallingCode: "372",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇪🇪"
+    },
+    {
+      countryNameEn: "Egypt",
+      countryNameLocal: "مصر",
+      countryCode: "EG",
+      currencyCode: "EGP",
+      currencyNameEn: "Egyptian pound",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ar",
+      officialLanguageNameEn: "Arabic",
+      officialLanguageNameLocal: "العربية",
+      countryCallingCode: "20",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇪🇬"
+    },
+    {
+      countryNameEn: "Western Sahara",
+      countryNameLocal: "Sahara Occidental",
+      countryCode: "EH",
+      currencyCode: "MAD",
+      currencyNameEn: "Moroccan dirham",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ar",
+      officialLanguageNameEn: "Arabic",
+      officialLanguageNameLocal: "العربية",
+      countryCallingCode: "212",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇪🇭"
+    },
+    {
+      countryNameEn: "Eritrea",
+      countryNameLocal: "ኤርትራ, إرتريا, Eritrea",
+      countryCode: "ER",
+      currencyCode: "ERN",
+      currencyNameEn: "Eritrean nakfa",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ti",
+      officialLanguageNameEn: "Tigrinya",
+      officialLanguageNameLocal: "ትግርኛ",
+      countryCallingCode: "291",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇪🇷"
+    },
+    {
+      countryNameEn: "Spain",
+      countryNameLocal: "España",
+      countryCode: "ES",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "NIF (CIF)",
+      tinName: "Número de Identificación Fiscal (formerly named Código de Identificación Fiscal)",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "34",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇪🇸"
+    },
+    {
+      countryNameEn: "Ethiopia",
+      countryNameLocal: "ኢትዮጵያ, Itoophiyaa",
+      countryCode: "ET",
+      currencyCode: "ETB",
+      currencyNameEn: "Ethiopian birr",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "am",
+      officialLanguageNameEn: "Amharic",
+      officialLanguageNameLocal: "አማርኛ",
+      countryCallingCode: "251",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇪🇹"
+    },
+    {
+      countryNameEn: "Finland",
+      countryNameLocal: "Suomi",
+      countryCode: "FI",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "ALV nro",
+      tinName: "Arvonlisäveronumero",
+      officialLanguageCode: "fi",
+      officialLanguageNameEn: "Finnish",
+      officialLanguageNameLocal: "suomi, suomen kieli",
+      countryCallingCode: "358",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇫🇮"
+    },
+    {
+      countryNameEn: "Fiji",
+      countryNameLocal: "Fiji",
+      countryCode: "FJ",
+      currencyCode: "FJD",
+      currencyNameEn: "Fiji dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "679",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇫🇯"
+    },
+    {
+      countryNameEn: "Micronesia (Federated States of)",
+      countryNameLocal: "Micronesia",
+      countryCode: "FM",
+      currencyCode: "USD",
+      currencyNameEn: "United States dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "691",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇫🇲"
+    },
+    {
+      countryNameEn: "France",
+      countryNameLocal: "France",
+      countryCode: "FR",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "n° TVA",
+      tinName: "Numéro d'identification à la taxe sur la valeur ajoutée / Numéro de TVA intracommunautaire",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "33",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇫🇷"
+    },
+    {
+      countryNameEn: "Gabon",
+      countryNameLocal: "Gabon",
+      countryCode: "GA",
+      currencyCode: "XAF",
+      currencyNameEn: "CFA franc BEAC",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "241",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇬🇦"
+    },
+    {
+      countryNameEn: "Grenada",
+      countryNameLocal: "Grenada",
+      countryCode: "GD",
+      currencyCode: "XCD",
+      currencyNameEn: "East Caribbean dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1473",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇬🇩"
+    },
+    {
+      countryNameEn: "Georgia",
+      countryNameLocal: "საქართველო",
+      countryCode: "GE",
+      currencyCode: "GEL",
+      currencyNameEn: "Georgian lari",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ka",
+      officialLanguageNameEn: "Georgian",
+      officialLanguageNameLocal: "ქართული",
+      countryCallingCode: "995",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇬🇪"
+    },
+    {
+      countryNameEn: "French Guiana",
+      countryNameLocal: "Guyane française",
+      countryCode: "GF",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "594",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇬🇫"
+    },
+    {
+      countryNameEn: "Guernsey",
+      countryNameLocal: "Guernsey",
+      countryCode: "GG",
+      currencyCode: "GBP",
+      currencyNameEn: "Pound sterling",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "44",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇬🇬"
+    },
+    {
+      countryNameEn: "Ghana",
+      countryNameLocal: "Ghana",
+      countryCode: "GH",
+      currencyCode: "GHS",
+      currencyNameEn: "Ghanaian cedi",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "233",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇬🇭"
+    },
+    {
+      countryNameEn: "Gibraltar",
+      countryNameLocal: "Gibraltar",
+      countryCode: "GI",
+      currencyCode: "GIP",
+      currencyNameEn: "Gibraltar pound",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "350",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇬🇮"
+    },
+    {
+      countryNameEn: "Greenland",
+      countryNameLocal: "Kalaallit Nunaat, Grønland",
+      countryCode: "GL",
+      currencyCode: "DKK",
+      currencyNameEn: "Danish krone",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "kl",
+      officialLanguageNameEn: "Kalaallisut, Greenlandic",
+      officialLanguageNameLocal: "kalaallisut, kalaallit oqaasii",
+      countryCallingCode: "299",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇬🇱"
+    },
+    {
+      countryNameEn: "Guinea",
+      countryNameLocal: "Guinée",
+      countryCode: "GN",
+      currencyCode: "GNF",
+      currencyNameEn: "Guinean franc",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "224",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇬🇳"
+    },
+    {
+      countryNameEn: "Guadeloupe",
+      countryNameLocal: "Guadeloupe",
+      countryCode: "GP",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "590",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇬🇵"
+    },
+    {
+      countryNameEn: "Equatorial Guinea",
+      countryNameLocal: "Guiena ecuatorial, Guinée équatoriale, Guiné Equatorial",
+      countryCode: "GQ",
+      currencyCode: "XAF",
+      currencyNameEn: "CFA franc BEAC",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "240",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇬🇶"
+    },
+    {
+      countryNameEn: "Greece",
+      countryNameLocal: "Ελλάδα",
+      countryCode: "GR",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "el",
+      officialLanguageNameEn: "Greek, Modern (1453-)",
+      officialLanguageNameLocal: "ελληνικά",
+      countryCallingCode: "30",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇬🇷"
+    },
+    {
+      countryNameEn: "South Georgia and the South Sandwich Islands",
+      countryNameLocal: "South Georgia and the South Sandwich Islands",
+      countryCode: "GS",
+      currencyCode: "",
+      currencyNameEn: "",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "500",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇬🇸"
+    },
+    {
+      countryNameEn: "Guatemala",
+      countryNameLocal: "Guatemala",
+      countryCode: "GT",
+      currencyCode: "GTQ",
+      currencyNameEn: "Guatemalan quetzal",
+      tinType: "NIT",
+      tinName: "Número de Identificación Tributaria",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "502",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇬🇹"
+    },
+    {
+      countryNameEn: "Guam",
+      countryNameLocal: "Guam, Guåhån",
+      countryCode: "GU",
+      currencyCode: "USD",
+      currencyNameEn: "United States dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇬🇺"
+    },
+    {
+      countryNameEn: "Guinea-Bissau",
+      countryNameLocal: "Guiné-Bissau",
+      countryCode: "GW",
+      currencyCode: "XOF",
+      currencyNameEn: "CFA franc BCEAO",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "pt",
+      officialLanguageNameEn: "Portuguese",
+      officialLanguageNameLocal: "Português",
+      countryCallingCode: "245",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇬🇼"
+    },
+    {
+      countryNameEn: "Guyana",
+      countryNameLocal: "Guyana",
+      countryCode: "GY",
+      currencyCode: "GYD",
+      currencyNameEn: "Guyanese dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "592",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇬🇾"
+    },
+    {
+      countryNameEn: "Hong Kong",
+      countryNameLocal: "香港, Hong Kong",
+      countryCode: "HK",
+      currencyCode: "HKD",
+      currencyNameEn: "Hong Kong dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "zh-hant",
+      officialLanguageNameEn: "",
+      officialLanguageNameLocal: "",
+      countryCallingCode: "852",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇭🇰"
+    },
+    {
+      countryNameEn: "Honduras",
+      countryNameLocal: "Honduras",
+      countryCode: "HN",
+      currencyCode: "HNL",
+      currencyNameEn: "Honduran lempira",
+      tinType: "RTN",
+      tinName: "Registro Tributario Nacional",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "504",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇭🇳"
+    },
+    {
+      countryNameEn: "Croatia",
+      countryNameLocal: "Hrvatska",
+      countryCode: "HR",
+      currencyCode: "HRK",
+      currencyNameEn: "Croatian kuna",
+      tinType: "PDV-ID; OIB",
+      tinName: "PDV Id. Broj OIB",
+      officialLanguageCode: "hr",
+      officialLanguageNameEn: "Croatian",
+      officialLanguageNameLocal: "hrvatski jezik",
+      countryCallingCode: "385",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇭🇷"
+    },
+    {
+      countryNameEn: "Haiti",
+      countryNameLocal: "Haïti, Ayiti",
+      countryCode: "HT",
+      currencyCode: "HTG",
+      currencyNameEn: "Haitian gourde",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "509",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇭🇹"
+    },
+    {
+      countryNameEn: "Hungary",
+      countryNameLocal: "Magyarország",
+      countryCode: "HU",
+      currencyCode: "HUF",
+      currencyNameEn: "Hungarian forint",
+      tinType: "ANUM",
+      tinName: "Közösségi adószám",
+      officialLanguageCode: "hu",
+      officialLanguageNameEn: "Hungarian",
+      officialLanguageNameLocal: "magyar",
+      countryCallingCode: "36",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇭🇺"
+    },
+    {
+      countryNameEn: "Indonesia",
+      countryNameLocal: "Indonesia",
+      countryCode: "ID",
+      currencyCode: "IDR",
+      currencyNameEn: "Indonesian rupiah",
+      tinType: "NPWP",
+      tinName: "Nomor Pokok Wajib Pajak",
+      officialLanguageCode: "id",
+      officialLanguageNameEn: "Indonesian",
+      officialLanguageNameLocal: "Bahasa Indonesia",
+      countryCallingCode: "62",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇮🇩"
+    },
+    {
+      countryNameEn: "Ireland",
+      countryNameLocal: "Ireland, Éire",
+      countryCode: "IE",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "VAT or CBL",
+      tinName: "Value added tax identification no.",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "353",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇮🇪"
+    },
+    {
+      countryNameEn: "Israel",
+      countryNameLocal: "ישראל",
+      countryCode: "IL",
+      currencyCode: "ILS",
+      currencyNameEn: "Israeli new shekel",
+      tinType: "",
+      tinName: `מס' עוסק מורשה / ח"פ`,
+      officialLanguageCode: "he",
+      officialLanguageNameEn: "Hebrew",
+      officialLanguageNameLocal: "עברית",
+      countryCallingCode: "972",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇮🇱"
+    },
+    {
+      countryNameEn: "Isle of Man",
+      countryNameLocal: "Isle of Man",
+      countryCode: "IM",
+      currencyCode: "GBP",
+      currencyNameEn: "Pound sterling",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "44",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇮🇲"
+    },
+    {
+      countryNameEn: "India",
+      countryNameLocal: "भारत, India",
+      countryCode: "IN",
+      currencyCode: "INR",
+      currencyNameEn: "Indian rupee",
+      tinType: "VAT TIN / CST TIN",
+      tinName: "Value Added Tax - Taxpayer Identification Number / Central Sales Tax - Taxpayer Identification Number (In most states)Not applicable",
+      officialLanguageCode: "hi",
+      officialLanguageNameEn: "Hindi",
+      officialLanguageNameLocal: "हिन्दी, हिंदी",
+      countryCallingCode: "91",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇮🇳"
+    },
+    {
+      countryNameEn: "British Indian Ocean Territories",
+      countryNameLocal: "British Indian Ocean Territories",
+      countryCode: "IO",
+      currencyCode: "USD",
+      currencyNameEn: "United States dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "246",
+      areaCodes: [],
+      region: "Indian Ocean",
+      flag: "🇮🇴"
+    },
+    {
+      countryNameEn: "Iraq",
+      countryNameLocal: "العراق, Iraq",
+      countryCode: "IQ",
+      currencyCode: "IQD",
+      currencyNameEn: "Iraqi dinar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ar",
+      officialLanguageNameEn: "Arabic",
+      officialLanguageNameLocal: "العربية",
+      countryCallingCode: "964",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇮🇶"
+    },
+    {
+      countryNameEn: "Iran (Islamic Republic of)",
+      countryNameLocal: "ایران",
+      countryCode: "IR",
+      currencyCode: "IRR",
+      currencyNameEn: "Iranian rial",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fa",
+      officialLanguageNameEn: "Persian",
+      officialLanguageNameLocal: "فارسی",
+      countryCallingCode: "98",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇮🇷"
+    },
+    {
+      countryNameEn: "Iceland",
+      countryNameLocal: "Ísland",
+      countryCode: "IS",
+      currencyCode: "ISK",
+      currencyNameEn: "Icelandic króna",
+      tinType: "VSK / VASK",
+      tinName: "Virðisaukaskattsnúmer",
+      officialLanguageCode: "is",
+      officialLanguageNameEn: "Icelandic",
+      officialLanguageNameLocal: "Íslenska",
+      countryCallingCode: "354",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇮🇸"
+    },
+    {
+      countryNameEn: "Italy",
+      countryNameLocal: "Italia",
+      countryCode: "IT",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "P.IVA",
+      tinName: "Partita IVA(IVA = Imposta sul Valore Aggiunto)",
+      officialLanguageCode: "it",
+      officialLanguageNameEn: "Italian",
+      officialLanguageNameLocal: "Italiano",
+      countryCallingCode: "39",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇮🇹"
+    },
+    {
+      countryNameEn: "Jersey",
+      countryNameLocal: "Jersey",
+      countryCode: "JE",
+      currencyCode: "GBP",
+      currencyNameEn: "Pound sterling",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "44",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇯🇪"
+    },
+    {
+      countryNameEn: "Jamaica",
+      countryNameLocal: "Jamaica",
+      countryCode: "JM",
+      currencyCode: "JMD",
+      currencyNameEn: "Jamaican dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "876",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇯🇲"
+    },
+    {
+      countryNameEn: "Jordan",
+      countryNameLocal: "الأُرْدُن",
+      countryCode: "JO",
+      currencyCode: "JOD",
+      currencyNameEn: "Jordanian dinar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ar",
+      officialLanguageNameEn: "Arabic",
+      officialLanguageNameLocal: "العربية",
+      countryCallingCode: "962",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇯🇴"
+    },
+    {
+      countryNameEn: "Japan",
+      countryNameLocal: "日本",
+      countryCode: "JP",
+      currencyCode: "JPY",
+      currencyNameEn: "Japanese yen",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ja",
+      officialLanguageNameEn: "Japanese",
+      officialLanguageNameLocal: "日本語 (にほんご)",
+      countryCallingCode: "81",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇯🇵"
+    },
+    {
+      countryNameEn: "Kenya",
+      countryNameLocal: "Kenya",
+      countryCode: "KE",
+      currencyCode: "KES",
+      currencyNameEn: "Kenyan shilling",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "sw",
+      officialLanguageNameEn: "Swahili",
+      officialLanguageNameLocal: "Kiswahili",
+      countryCallingCode: "254",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇰🇪"
+    },
+    {
+      countryNameEn: "Kyrgyzstan",
+      countryNameLocal: "Кыргызстан, Киргизия",
+      countryCode: "KG",
+      currencyCode: "KGS",
+      currencyNameEn: "Kyrgyzstani som",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ky",
+      officialLanguageNameEn: "Kirghiz, Kyrgyz",
+      officialLanguageNameLocal: "Кыргызча, Кыргыз тили",
+      countryCallingCode: "996",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇰🇬"
+    },
+    {
+      countryNameEn: "Cambodia",
+      countryNameLocal: "កម្ពុជា",
+      countryCode: "KH",
+      currencyCode: "KHR",
+      currencyNameEn: "Cambodian riel",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "km",
+      officialLanguageNameEn: "Central Khmer",
+      officialLanguageNameLocal: "ខ្មែរ, ខេមរភាសា, ភាសាខ្មែរ",
+      countryCallingCode: "855",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇰🇭"
+    },
+    {
+      countryNameEn: "North Korea",
+      countryNameLocal: "조선민주주의인민공화국",
+      countryCode: "KP",
+      currencyCode: "KPW",
+      currencyNameEn: "North Korean won",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ko",
+      officialLanguageNameEn: "Korean",
+      officialLanguageNameLocal: "조선어",
+      countryCallingCode: "850",
+      areaCodes: [],
+      region: "Asia",
+      flag: "🇰🇵"
+    },
+    {
+      countryNameEn: "South Korea",
+      countryNameLocal: "대한민국",
+      countryCode: "KR",
+      currencyCode: "KRW",
+      currencyNameEn: "South Korean won",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ko",
+      officialLanguageNameEn: "Korean",
+      officialLanguageNameLocal: "한국어",
+      countryCallingCode: "82",
+      areaCodes: [],
+      region: "Asia",
+      flag: "🇰🇷"
+    },
+    {
+      countryNameEn: "Kiribati",
+      countryNameLocal: "Kiribati",
+      countryCode: "KI",
+      currencyCode: "AUD",
+      currencyNameEn: "Australian dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "686",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇰🇮"
+    },
+    {
+      countryNameEn: "Saint Kitts and Nevis",
+      countryNameLocal: "Saint Kitts and Nevis",
+      countryCode: "KN",
+      currencyCode: "XCD",
+      currencyNameEn: "East Caribbean dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1869",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇰🇳"
+    },
+    {
+      countryNameEn: "Kuwait",
+      countryNameLocal: "الكويت",
+      countryCode: "KW",
+      currencyCode: "KWD",
+      currencyNameEn: "Kuwaiti dinar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ar",
+      officialLanguageNameEn: "Arabic",
+      officialLanguageNameLocal: "العربية",
+      countryCallingCode: "965",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇰🇼"
+    },
+    {
+      countryNameEn: "Kazakhstan",
+      countryNameLocal: "Қазақстан, Казахстан",
+      countryCode: "KZ",
+      currencyCode: "KZT",
+      currencyNameEn: "Kazakhstani tenge",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "kk",
+      officialLanguageNameEn: "Kazakh",
+      officialLanguageNameLocal: "қазақ тілі",
+      countryCallingCode: "7",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇰🇿"
+    },
+    {
+      countryNameEn: "Lebanon",
+      countryNameLocal: "لبنان, Liban",
+      countryCode: "LB",
+      currencyCode: "LBP",
+      currencyNameEn: "Lebanese pound",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ar",
+      officialLanguageNameEn: "Arabic",
+      officialLanguageNameLocal: "العربية",
+      countryCallingCode: "961",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇱🇧"
+    },
+    {
+      countryNameEn: "Saint Lucia",
+      countryNameLocal: "Saint Lucia",
+      countryCode: "LC",
+      currencyCode: "XCD",
+      currencyNameEn: "East Caribbean dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1758",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇱🇨"
+    },
+    {
+      countryNameEn: "Liechtenstein",
+      countryNameLocal: "Liechtenstein",
+      countryCode: "LI",
+      currencyCode: "CHF",
+      currencyNameEn: "Swiss franc",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "de",
+      officialLanguageNameEn: "German",
+      officialLanguageNameLocal: "Deutsch",
+      countryCallingCode: "423",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇱🇮"
+    },
+    {
+      countryNameEn: "Sri Lanka",
+      countryNameLocal: "ශ්‍රී ලංකා, இலங்கை",
+      countryCode: "LK",
+      currencyCode: "LKR",
+      currencyNameEn: "Sri Lankan rupee",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "si",
+      officialLanguageNameEn: "Sinhala, Sinhalese",
+      officialLanguageNameLocal: "සිංහල",
+      countryCallingCode: "94",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇱🇰"
+    },
+    {
+      countryNameEn: "Liberia",
+      countryNameLocal: "Liberia",
+      countryCode: "LR",
+      currencyCode: "LRD",
+      currencyNameEn: "Liberian dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "231",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇱🇷"
+    },
+    {
+      countryNameEn: "Lesotho",
+      countryNameLocal: "Lesotho",
+      countryCode: "LS",
+      currencyCode: "LSL",
+      currencyNameEn: "Lesotho loti",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "266",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇱🇸"
+    },
+    {
+      countryNameEn: "Lithuania",
+      countryNameLocal: "Lietuva",
+      countryCode: "LT",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "PVM kodas",
+      tinName: "PVM (abbrev. Pridėtinės vertės mokestis) mokėtojo kodas",
+      officialLanguageCode: "lt",
+      officialLanguageNameEn: "Lithuanian",
+      officialLanguageNameLocal: "lietuvių kalba",
+      countryCallingCode: "370",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇱🇹"
+    },
+    {
+      countryNameEn: "Luxembourg",
+      countryNameLocal: "Lëtzebuerg, Luxembourg, Luxemburg",
+      countryCode: "LU",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "No. TVA",
+      tinName: "Numéro d'identification à la taxe sur la valeur ajoutée",
+      officialLanguageCode: "lb",
+      officialLanguageNameEn: "Luxembourgish, Letzeburgesch",
+      officialLanguageNameLocal: "Lëtzebuergesch",
+      countryCallingCode: "352",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇱🇺"
+    },
+    {
+      countryNameEn: "Latvia",
+      countryNameLocal: "Latvija",
+      countryCode: "LV",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "PVN",
+      tinName: "Pievienotās vērtības nodokļa (PVN) reģistrācijas numurs",
+      officialLanguageCode: "lv",
+      officialLanguageNameEn: "Latvian",
+      officialLanguageNameLocal: "latviešu valoda",
+      countryCallingCode: "371",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇱🇻"
+    },
+    {
+      countryNameEn: "Libya",
+      countryNameLocal: "ليبيا",
+      countryCode: "LY",
+      currencyCode: "LYD",
+      currencyNameEn: "Libyan dinar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ar",
+      officialLanguageNameEn: "Arabic",
+      officialLanguageNameLocal: "العربية",
+      countryCallingCode: "218",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇱🇾"
+    },
+    {
+      countryNameEn: "Morocco",
+      countryNameLocal: "Maroc, ⵍⵎⵖⵔⵉⴱ, المغرب",
+      countryCode: "MA",
+      currencyCode: "MAD",
+      currencyNameEn: "Moroccan dirham",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "212",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇲🇦"
+    },
+    {
+      countryNameEn: "Monaco",
+      countryNameLocal: "Monaco",
+      countryCode: "MC",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "377",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇲🇨"
+    },
+    {
+      countryNameEn: "Montenegro",
+      countryNameLocal: "Crna Gora, Црна Гора",
+      countryCode: "ME",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "srp",
+      officialLanguageNameEn: "српски језик",
+      officialLanguageNameLocal: "",
+      countryCallingCode: "382",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇲🇪"
+    },
+    {
+      countryNameEn: "Saint Martin (French part)",
+      countryNameLocal: "Saint-Martin",
+      countryCode: "MF",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "590",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇲🇫"
+    },
+    {
+      countryNameEn: "Madagascar",
+      countryNameLocal: "Madagasikara, Madagascar",
+      countryCode: "MG",
+      currencyCode: "MGA",
+      currencyNameEn: "Malagasy ariary",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "mg",
+      officialLanguageNameEn: "Malagasy",
+      officialLanguageNameLocal: "fiteny malagasy",
+      countryCallingCode: "261",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇲🇬"
+    },
+    {
+      countryNameEn: "Mali",
+      countryNameLocal: "Mali",
+      countryCode: "ML",
+      currencyCode: "XOF",
+      currencyNameEn: "CFA franc BCEAO",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "223",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇲🇱"
+    },
+    {
+      countryNameEn: "Myanmar",
+      countryNameLocal: "မြန်မာ",
+      countryCode: "MM",
+      currencyCode: "MMK",
+      currencyNameEn: "Myanmar kyat",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "my",
+      officialLanguageNameEn: "Burmese",
+      officialLanguageNameLocal: "ဗမာစာ",
+      countryCallingCode: "95",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇲🇲"
+    },
+    {
+      countryNameEn: "Mongolia",
+      countryNameLocal: "Монгол Улс",
+      countryCode: "MN",
+      currencyCode: "MNT",
+      currencyNameEn: "Mongolian tögrög",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "mn",
+      officialLanguageNameEn: "Mongolian",
+      officialLanguageNameLocal: "Монгол хэл",
+      countryCallingCode: "976",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇲🇳"
+    },
+    {
+      countryNameEn: "Macao",
+      countryNameLocal: "澳門, Macau",
+      countryCode: "MO",
+      currencyCode: "MOP",
+      currencyNameEn: "Macanese pataca",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "zh-hant",
+      officialLanguageNameEn: "",
+      officialLanguageNameLocal: "",
+      countryCallingCode: "853",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇲🇴"
+    },
+    {
+      countryNameEn: "Martinique",
+      countryNameLocal: "Martinique",
+      countryCode: "MQ",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "596",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇲🇶"
+    },
+    {
+      countryNameEn: "Mauritania",
+      countryNameLocal: "موريتانيا, Mauritanie",
+      countryCode: "MR",
+      currencyCode: "MRU",
+      currencyNameEn: "",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ar",
+      officialLanguageNameEn: "Arabic",
+      officialLanguageNameLocal: "العربية",
+      countryCallingCode: "222",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇲🇷"
+    },
+    {
+      countryNameEn: "Montserrat",
+      countryNameLocal: "Montserrat",
+      countryCode: "MS",
+      currencyCode: "XCD",
+      currencyNameEn: "East Caribbean dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1664",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇲🇸"
+    },
+    {
+      countryNameEn: "Malta",
+      countryNameLocal: "Malta",
+      countryCode: "MT",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "Vat No.",
+      tinName: "Vat reg. no.",
+      officialLanguageCode: "mt",
+      officialLanguageNameEn: "Maltese",
+      officialLanguageNameLocal: "Malti",
+      countryCallingCode: "356",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇲🇹"
+    },
+    {
+      countryNameEn: "Mauritius",
+      countryNameLocal: "Maurice, Mauritius",
+      countryCode: "MU",
+      currencyCode: "MUR",
+      currencyNameEn: "Mauritian rupee",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "mfe",
+      officialLanguageNameEn: "",
+      officialLanguageNameLocal: "",
+      countryCallingCode: "230",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇲🇺"
+    },
+    {
+      countryNameEn: "Maldives",
+      countryNameLocal: "",
+      countryCode: "MV",
+      currencyCode: "MVR",
+      currencyNameEn: "Maldivian rufiyaa",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "dv",
+      officialLanguageNameEn: "Divehi, Dhivehi, Maldivian",
+      officialLanguageNameLocal: "ދިވެހި",
+      countryCallingCode: "960",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇲🇻"
+    },
+    {
+      countryNameEn: "Malawi",
+      countryNameLocal: "Malawi",
+      countryCode: "MW",
+      currencyCode: "MWK",
+      currencyNameEn: "Malawian kwacha",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "265",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇲🇼"
+    },
+    {
+      countryNameEn: "Mexico",
+      countryNameLocal: "México",
+      countryCode: "MX",
+      currencyCode: "MXN",
+      currencyNameEn: "Mexican peso",
+      tinType: "RFC",
+      tinName: "Registro Federal de Contribuyentes",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "52",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇲🇽"
+    },
+    {
+      countryNameEn: "Malaysia",
+      countryNameLocal: "",
+      countryCode: "MY",
+      currencyCode: "MYR",
+      currencyNameEn: "Malaysian ringgit",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ms",
+      officialLanguageNameEn: "Malay",
+      officialLanguageNameLocal: "Bahasa Melayu, بهاس ملايو‎",
+      countryCallingCode: "60",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇲🇾"
+    },
+    {
+      countryNameEn: "Mozambique",
+      countryNameLocal: "Mozambique",
+      countryCode: "MZ",
+      currencyCode: "MZN",
+      currencyNameEn: "Mozambican metical",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "pt",
+      officialLanguageNameEn: "Portuguese",
+      officialLanguageNameLocal: "Português",
+      countryCallingCode: "258",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇲🇿"
+    },
+    {
+      countryNameEn: "Namibia",
+      countryNameLocal: "Namibia",
+      countryCode: "NA",
+      currencyCode: "NAD",
+      currencyNameEn: "Namibian dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "264",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇳🇦"
+    },
+    {
+      countryNameEn: "New Caledonia",
+      countryNameLocal: "Nouvelle-Calédonie",
+      countryCode: "NC",
+      currencyCode: "XPF",
+      currencyNameEn: "CFP franc (franc Pacifique)",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "687",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇳🇨"
+    },
+    {
+      countryNameEn: "Norfolk Island",
+      countryNameLocal: "Norfolk Island",
+      countryCode: "NF",
+      currencyCode: "AUD",
+      currencyNameEn: "Australian dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "672",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇳🇫"
+    },
+    {
+      countryNameEn: "Nigeria",
+      countryNameLocal: "Nigeria",
+      countryCode: "NG",
+      currencyCode: "NGN",
+      currencyNameEn: "Nigerian naira",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "234",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇳🇬"
+    },
+    {
+      countryNameEn: "Nicaragua",
+      countryNameLocal: "Nicaragua",
+      countryCode: "NI",
+      currencyCode: "NIO",
+      currencyNameEn: "Nicaraguan córdoba",
+      tinType: "RUC",
+      tinName: "Registro Unico de Contribuyentes",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "505",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇳🇮"
+    },
+    {
+      countryNameEn: "Norway",
+      countryNameLocal: "Norge, Noreg",
+      countryCode: "NO",
+      currencyCode: "NOK",
+      currencyNameEn: "Norwegian krone",
+      tinType: "Orgnr",
+      tinName: "Organisasjonsnummer",
+      officialLanguageCode: "nb",
+      officialLanguageNameEn: "Norwegian Bokmål",
+      officialLanguageNameLocal: "Norsk Bokmål",
+      countryCallingCode: "47",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇳🇴"
+    },
+    {
+      countryNameEn: "Nepal",
+      countryNameLocal: "",
+      countryCode: "NP",
+      currencyCode: "NPR",
+      currencyNameEn: "Nepalese rupee",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ne",
+      officialLanguageNameEn: "Nepali",
+      officialLanguageNameLocal: "नेपाली",
+      countryCallingCode: "977",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇳🇵"
+    },
+    {
+      countryNameEn: "Nauru",
+      countryNameLocal: "Nauru",
+      countryCode: "NR",
+      currencyCode: "AUD",
+      currencyNameEn: "Australian dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "na",
+      officialLanguageNameEn: "Nauru",
+      officialLanguageNameLocal: "Dorerin Naoero",
+      countryCallingCode: "674",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇳🇷"
+    },
+    {
+      countryNameEn: "Niue",
+      countryNameLocal: "Niue",
+      countryCode: "NU",
+      currencyCode: "NZD",
+      currencyNameEn: "New Zealand dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "niu",
+      officialLanguageNameEn: "",
+      officialLanguageNameLocal: "",
+      countryCallingCode: "683",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇳🇺"
+    },
+    {
+      countryNameEn: "New Zealand",
+      countryNameLocal: "New Zealand",
+      countryCode: "NZ",
+      currencyCode: "NZD",
+      currencyNameEn: "New Zealand dollar",
+      tinType: "NZBN",
+      tinName: "NZ Business Number",
+      officialLanguageCode: "mi",
+      officialLanguageNameEn: "Maori",
+      officialLanguageNameLocal: "te reo Māori",
+      countryCallingCode: "64",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇳🇿"
+    },
+    {
+      countryNameEn: "Oman",
+      countryNameLocal: "سلطنة عُمان",
+      countryCode: "OM",
+      currencyCode: "OMR",
+      currencyNameEn: "Omani rial",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ar",
+      officialLanguageNameEn: "Arabic",
+      officialLanguageNameLocal: "العربية",
+      countryCallingCode: "968",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇴🇲"
+    },
+    {
+      countryNameEn: "Panama",
+      countryNameLocal: "Panama",
+      countryCode: "PA",
+      currencyCode: "PAB",
+      currencyNameEn: "Panamanian balboa",
+      tinType: "RUC",
+      tinName: "Registro Unico de Contribuyentes",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "507",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇵🇦"
+    },
+    {
+      countryNameEn: "Peru",
+      countryNameLocal: "Perú",
+      countryCode: "PE",
+      currencyCode: "PEN",
+      currencyNameEn: "Peruvian sol",
+      tinType: "RUC",
+      tinName: "Registro Unico de Contribuyentes",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "51",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇵🇪"
+    },
+    {
+      countryNameEn: "French Polynesia",
+      countryNameLocal: "Polynésie française",
+      countryCode: "PF",
+      currencyCode: "XPF",
+      currencyNameEn: "CFP franc (franc Pacifique)",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "689",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇵🇫"
+    },
+    {
+      countryNameEn: "Papua New Guinea",
+      countryNameLocal: "Papua New Guinea",
+      countryCode: "PG",
+      currencyCode: "PGK",
+      currencyNameEn: "Papua New Guinean kina",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "675",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇵🇬"
+    },
+    {
+      countryNameEn: "Pakistan",
+      countryNameLocal: "پاکستان",
+      countryCode: "PK",
+      currencyCode: "PKR",
+      currencyNameEn: "Pakistani rupee",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "92",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇵🇰"
+    },
+    {
+      countryNameEn: "Poland",
+      countryNameLocal: "Polska",
+      countryCode: "PL",
+      currencyCode: "PLN",
+      currencyNameEn: "Polish złoty",
+      tinType: "NIP",
+      tinName: "numer identyfikacji podatkowej",
+      officialLanguageCode: "pl",
+      officialLanguageNameEn: "Polish",
+      officialLanguageNameLocal: "język polski, polszczyzna",
+      countryCallingCode: "48",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇵🇱"
+    },
+    {
+      countryNameEn: "Saint Pierre and Miquelon",
+      countryNameLocal: "Saint-Pierre-et-Miquelon",
+      countryCode: "PM",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "508",
+      areaCodes: [],
+      region: "North America",
+      flag: "🇵🇲"
+    },
+    {
+      countryNameEn: "Pitcairn",
+      countryNameLocal: "Pitcairn",
+      countryCode: "PN",
+      currencyCode: "NZD",
+      currencyNameEn: "New Zealand dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "64",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇵🇳"
+    },
+    {
+      countryNameEn: "Puerto Rico",
+      countryNameLocal: "Puerto Rico",
+      countryCode: "PR",
+      currencyCode: "USD",
+      currencyNameEn: "United States dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "1",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇵🇷"
+    },
+    {
+      countryNameEn: "Palestine, State of",
+      countryNameLocal: "Palestinian Territory",
+      countryCode: "PS",
+      currencyCode: "",
+      currencyNameEn: "",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ar",
+      officialLanguageNameEn: "Arabic",
+      officialLanguageNameLocal: "العربية",
+      countryCallingCode: "970",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇵🇸"
+    },
+    {
+      countryNameEn: "Portugal",
+      countryNameLocal: "Portugal",
+      countryCode: "PT",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "NIPC",
+      tinName: "Número de Identificação de Pessoa Coletiva (NIPC)",
+      officialLanguageCode: "pt",
+      officialLanguageNameEn: "Portuguese",
+      officialLanguageNameLocal: "Português",
+      countryCallingCode: "351",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇵🇹"
+    },
+    {
+      countryNameEn: "Palau",
+      countryNameLocal: "Palau",
+      countryCode: "PW",
+      currencyCode: "USD",
+      currencyNameEn: "United States dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "680",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇵🇼"
+    },
+    {
+      countryNameEn: "Paraguay",
+      countryNameLocal: "Paraguay",
+      countryCode: "PY",
+      currencyCode: "PYG",
+      currencyNameEn: "Paraguayan guaraní",
+      tinType: "RUC",
+      tinName: "Registro Unico de Contribuyentes",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "595",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇵🇾"
+    },
+    {
+      countryNameEn: "Qatar",
+      countryNameLocal: "قطر",
+      countryCode: "QA",
+      currencyCode: "QAR",
+      currencyNameEn: "Qatari riyal",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ar",
+      officialLanguageNameEn: "Arabic",
+      officialLanguageNameLocal: "العربية",
+      countryCallingCode: "974",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇶🇦"
+    },
+    {
+      countryNameEn: "Réunion",
+      countryNameLocal: "La Réunion",
+      countryCode: "RE",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "262",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇷🇪"
+    },
+    {
+      countryNameEn: "Romania",
+      countryNameLocal: "România",
+      countryCode: "RO",
+      currencyCode: "RON",
+      currencyNameEn: "Romanian leu",
+      tinType: "CIF",
+      tinName: "Codul de identificare fiscală",
+      officialLanguageCode: "ro",
+      officialLanguageNameEn: "Romanian, Moldavian, Moldovan",
+      officialLanguageNameLocal: "Română",
+      countryCallingCode: "40",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇷🇴"
+    },
+    {
+      countryNameEn: "Serbia",
+      countryNameLocal: "Србија",
+      countryCode: "RS",
+      currencyCode: "RSD",
+      currencyNameEn: "Serbian dinar",
+      tinType: "PIB",
+      tinName: "Poreski identifikacioni broj",
+      officialLanguageCode: "sr",
+      officialLanguageNameEn: "Serbian",
+      officialLanguageNameLocal: "српски језик",
+      countryCallingCode: "381",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇷🇸"
+    },
+    {
+      countryNameEn: "Russia",
+      countryNameLocal: "Россия",
+      countryCode: "RU",
+      currencyCode: "RUB",
+      currencyNameEn: "Russian ruble",
+      tinType: "ИНН",
+      tinName: "Идентификационный номер налогоплательщика",
+      officialLanguageCode: "ru",
+      officialLanguageNameEn: "Russian",
+      officialLanguageNameLocal: "русский",
+      countryCallingCode: "7",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇷🇺"
+    },
+    {
+      countryNameEn: "Rwanda",
+      countryNameLocal: "Rwanda",
+      countryCode: "RW",
+      currencyCode: "RWF",
+      currencyNameEn: "Rwandan franc",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "rw",
+      officialLanguageNameEn: "Kinyarwanda",
+      officialLanguageNameLocal: "Ikinyarwanda",
+      countryCallingCode: "250",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇷🇼"
+    },
+    {
+      countryNameEn: "Saudi Arabia",
+      countryNameLocal: "السعودية",
+      countryCode: "SA",
+      currencyCode: "SAR",
+      currencyNameEn: "Saudi riyal",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ar",
+      officialLanguageNameEn: "Arabic",
+      officialLanguageNameLocal: "العربية",
+      countryCallingCode: "966",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇸🇦"
+    },
+    {
+      countryNameEn: "Solomon Islands",
+      countryNameLocal: "Solomon Islands",
+      countryCode: "SB",
+      currencyCode: "SBD",
+      currencyNameEn: "Solomon Islands dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "677",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇸🇧"
+    },
+    {
+      countryNameEn: "Seychelles",
+      countryNameLocal: "Seychelles",
+      countryCode: "SC",
+      currencyCode: "SCR",
+      currencyNameEn: "Seychelles rupee",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "248",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇸🇨"
+    },
+    {
+      countryNameEn: "Sweden",
+      countryNameLocal: "Sverige",
+      countryCode: "SE",
+      currencyCode: "SEK",
+      currencyNameEn: "Swedish krona/kronor",
+      tinType: "Momsnr.",
+      tinName: "VAT-nummer",
+      officialLanguageCode: "sv",
+      officialLanguageNameEn: "Swedish",
+      officialLanguageNameLocal: "Svenska",
+      countryCallingCode: "46",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇸🇪"
+    },
+    {
+      countryNameEn: "Singapore",
+      countryNameLocal: "Singapore",
+      countryCode: "SG",
+      currencyCode: "SGD",
+      currencyNameEn: "Singapore dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "zh-hans",
+      officialLanguageNameEn: "",
+      officialLanguageNameLocal: "",
+      countryCallingCode: "65",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇸🇬"
+    },
+    {
+      countryNameEn: "Saint Helena, Ascension and Tristan da Cunha",
+      countryNameLocal: "Saint Helena",
+      countryCode: "SH",
+      currencyCode: "SHP",
+      currencyNameEn: "Saint Helena pound",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "290",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇸🇭"
+    },
+    {
+      countryNameEn: "Slovenia",
+      countryNameLocal: "Slovenija",
+      countryCode: "SI",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "ID za DDV",
+      tinName: "Davčna številka",
+      officialLanguageCode: "sl",
+      officialLanguageNameEn: "Slovenian",
+      officialLanguageNameLocal: "Slovenski Jezik, Slovenščina",
+      countryCallingCode: "386",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇸🇮"
+    },
+    {
+      countryNameEn: "Svalbard and Jan Mayen",
+      countryNameLocal: "Svalbard and Jan Mayen",
+      countryCode: "SJ",
+      currencyCode: "NOK",
+      currencyNameEn: "Norwegian krone",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "no",
+      officialLanguageNameEn: "Norwegian",
+      officialLanguageNameLocal: "Norsk",
+      countryCallingCode: "4779",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇸🇯"
+    },
+    {
+      countryNameEn: "Slovakia",
+      countryNameLocal: "Slovensko",
+      countryCode: "SK",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "IČ DPH",
+      tinName: "Identifikačné číslo pre daň z pridanej hodnoty",
+      officialLanguageCode: "sk",
+      officialLanguageNameEn: "Slovak",
+      officialLanguageNameLocal: "Slovenčina, Slovenský Jazyk",
+      countryCallingCode: "421",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇸🇰"
+    },
+    {
+      countryNameEn: "Sierra Leone",
+      countryNameLocal: "Sierra Leone",
+      countryCode: "SL",
+      currencyCode: "SLL",
+      currencyNameEn: "Sierra Leonean leone",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "232",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇸🇱"
+    },
+    {
+      countryNameEn: "Republic of San Marino",
+      countryNameLocal: "Repubblica di San Marino",
+      countryCode: "SM",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "C.O.E.",
+      tinName: "Codice operatore economico",
+      officialLanguageCode: "it",
+      officialLanguageNameEn: "Italian",
+      officialLanguageNameLocal: "Italiano",
+      countryCallingCode: "378",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇸🇲"
+    },
+    {
+      countryNameEn: "Senegal",
+      countryNameLocal: "Sénégal",
+      countryCode: "SN",
+      currencyCode: "XOF",
+      currencyNameEn: "CFA franc BCEAO",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "221",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇸🇳"
+    },
+    {
+      countryNameEn: "Somalia",
+      countryNameLocal: "Somalia, الصومال",
+      countryCode: "SO",
+      currencyCode: "SOS",
+      currencyNameEn: "Somali shilling",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "so",
+      officialLanguageNameEn: "Somali",
+      officialLanguageNameLocal: "Soomaaliga, af Soomaali",
+      countryCallingCode: "252",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇸🇴"
+    },
+    {
+      countryNameEn: "Suriname",
+      countryNameLocal: "Suriname",
+      countryCode: "SR",
+      currencyCode: "SRD",
+      currencyNameEn: "Surinamese dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "nl",
+      officialLanguageNameEn: "Dutch, Flemish",
+      officialLanguageNameLocal: "Nederlands, Vlaams",
+      countryCallingCode: "597",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇸🇷"
+    },
+    {
+      countryNameEn: "South Sudan",
+      countryNameLocal: "South Sudan",
+      countryCode: "SS",
+      currencyCode: "SSP",
+      currencyNameEn: "South Sudanese pound",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "211",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇸🇸"
+    },
+    {
+      countryNameEn: "Sao Tome and Principe",
+      countryNameLocal: "São Tomé e Príncipe",
+      countryCode: "ST",
+      currencyCode: "STN",
+      currencyNameEn: "",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "pt",
+      officialLanguageNameEn: "Portuguese",
+      officialLanguageNameLocal: "Português",
+      countryCallingCode: "239",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇸🇹"
+    },
+    {
+      countryNameEn: "El Salvador",
+      countryNameLocal: "El Salvador",
+      countryCode: "SV",
+      currencyCode: "SVC",
+      currencyNameEn: "Salvadoran colón",
+      tinType: "NIT",
+      tinName: "Número de Identificación Tributaria",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "503",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇸🇻"
+    },
+    {
+      countryNameEn: "Sint Maarten (Dutch part)",
+      countryNameLocal: "Sint Maarten",
+      countryCode: "SX",
+      currencyCode: "ANG",
+      currencyNameEn: "Netherlands Antillean guilder",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "nl",
+      officialLanguageNameEn: "Dutch, Flemish",
+      officialLanguageNameLocal: "Nederlands, Vlaams",
+      countryCallingCode: "1721",
+      areaCodes: [],
+      region: "Unknown",
+      flag: "🇸🇽"
+    },
+    {
+      countryNameEn: "Syrian Arab Republic",
+      countryNameLocal: "سوريا, Sūriyya",
+      countryCode: "SY",
+      currencyCode: "SYP",
+      currencyNameEn: "Syrian pound",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ar",
+      officialLanguageNameEn: "Arabic",
+      officialLanguageNameLocal: "العربية",
+      countryCallingCode: "963",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇸🇾"
+    },
+    {
+      countryNameEn: "Chad",
+      countryNameLocal: "Tchad, تشاد",
+      countryCode: "TD",
+      currencyCode: "XAF",
+      currencyNameEn: "CFA franc BEAC",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "235",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇹🇩"
+    },
+    {
+      countryNameEn: "Togo",
+      countryNameLocal: "Togo",
+      countryCode: "TG",
+      currencyCode: "XOF",
+      currencyNameEn: "CFA franc BCEAO",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "228",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇹🇬"
+    },
+    {
+      countryNameEn: "Thailand",
+      countryNameLocal: "ประเทศไทย",
+      countryCode: "TH",
+      currencyCode: "THB",
+      currencyNameEn: "Thai baht",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "th",
+      officialLanguageNameEn: "Thai",
+      officialLanguageNameLocal: "ไทย",
+      countryCallingCode: "66",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇹🇭"
+    },
+    {
+      countryNameEn: "Tajikistan",
+      countryNameLocal: ",",
+      countryCode: "TJ",
+      currencyCode: "TJS",
+      currencyNameEn: "Tajikistani somoni",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "tg",
+      officialLanguageNameEn: "Tajik",
+      officialLanguageNameLocal: "тоҷикӣ, toçikī, تاجیکی‎",
+      countryCallingCode: "992",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇹🇯"
+    },
+    {
+      countryNameEn: "Tokelau",
+      countryNameLocal: "Tokelau",
+      countryCode: "TK",
+      currencyCode: "NZD",
+      currencyNameEn: "New Zealand dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "tkl",
+      officialLanguageNameEn: "",
+      officialLanguageNameLocal: "",
+      countryCallingCode: "690",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇹🇰"
+    },
+    {
+      countryNameEn: "Timor-Leste",
+      countryNameLocal: "Timor-Leste, Timor Lorosa'e",
+      countryCode: "TL",
+      currencyCode: "USD",
+      currencyNameEn: "United States dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "pt",
+      officialLanguageNameEn: "Portuguese",
+      officialLanguageNameLocal: "Português",
+      countryCallingCode: "670",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇹🇱"
+    },
+    {
+      countryNameEn: "Turkmenistan",
+      countryNameLocal: "Türkmenistan",
+      countryCode: "TM",
+      currencyCode: "TMT",
+      currencyNameEn: "Turkmenistan manat",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "tk",
+      officialLanguageNameEn: "Turkmen",
+      officialLanguageNameLocal: "Türkmen, Түркмен",
+      countryCallingCode: "993",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇹🇲"
+    },
+    {
+      countryNameEn: "Tunisia",
+      countryNameLocal: "تونس, Tunisie",
+      countryCode: "TN",
+      currencyCode: "TND",
+      currencyNameEn: "Tunisian dinar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ar",
+      officialLanguageNameEn: "Arabic",
+      officialLanguageNameLocal: "العربية",
+      countryCallingCode: "216",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇹🇳"
+    },
+    {
+      countryNameEn: "Tonga",
+      countryNameLocal: "Tonga",
+      countryCode: "TO",
+      currencyCode: "TOP",
+      currencyNameEn: "Tongan paʻanga",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "676",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇹🇴"
+    },
+    {
+      countryNameEn: "Turkey",
+      countryNameLocal: "Türkiye",
+      countryCode: "TR",
+      currencyCode: "TRY",
+      currencyNameEn: "Turkish lira",
+      tinType: "KDV",
+      tinName: "Vergi Kimlik Numarası",
+      officialLanguageCode: "tr",
+      officialLanguageNameEn: "Turkish",
+      officialLanguageNameLocal: "Türkçe",
+      countryCallingCode: "90",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇹🇷"
+    },
+    {
+      countryNameEn: "Trinidad and Tobago",
+      countryNameLocal: "Trinidad and Tobago",
+      countryCode: "TT",
+      currencyCode: "TTD",
+      currencyNameEn: "Trinidad and Tobago dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "868",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇹🇹"
+    },
+    {
+      countryNameEn: "Tuvalu",
+      countryNameLocal: "Tuvalu",
+      countryCode: "TV",
+      currencyCode: "AUD",
+      currencyNameEn: "Australian dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "688",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇹🇻"
+    },
+    {
+      countryNameEn: "United Republic of Tanzania",
+      countryNameLocal: "Tanzania",
+      countryCode: "TZ",
+      currencyCode: "TZS",
+      currencyNameEn: "Tanzanian shilling",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "sw",
+      officialLanguageNameEn: "Swahili",
+      officialLanguageNameLocal: "Kiswahili",
+      countryCallingCode: "255",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇹🇿"
+    },
+    {
+      countryNameEn: "Ukraine",
+      countryNameLocal: "Україна",
+      countryCode: "UA",
+      currencyCode: "UAH",
+      currencyNameEn: "Ukrainian hryvnia",
+      tinType: "ІНПП",
+      tinName: "Ідентифікаційний номер платника податків",
+      officialLanguageCode: "uk",
+      officialLanguageNameEn: "Ukrainian",
+      officialLanguageNameLocal: "Українська",
+      countryCallingCode: "380",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇺🇦"
+    },
+    {
+      countryNameEn: "Uganda",
+      countryNameLocal: "Uganda",
+      countryCode: "UG",
+      currencyCode: "UGX",
+      currencyNameEn: "Ugandan shilling",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "256",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇺🇬"
+    },
+    {
+      countryNameEn: "United States of America",
+      countryNameLocal: "United States of America",
+      countryCode: "US",
+      currencyCode: "USD",
+      currencyNameEn: "United States dollar",
+      tinType: "EIN",
+      tinName: "Tax Identification Number",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1",
+      areaCodes: [],
+      region: "North America",
+      flag: "🇺🇸"
+    },
+    {
+      countryNameEn: "Uruguay",
+      countryNameLocal: "Uruguay",
+      countryCode: "UY",
+      currencyCode: "UYU",
+      currencyNameEn: "Uruguayan peso",
+      tinType: "RUT",
+      tinName: "Registro Único Tributario",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "598",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇺🇾"
+    },
+    {
+      countryNameEn: "Uzbekistan",
+      countryNameLocal: "",
+      countryCode: "UZ",
+      currencyCode: "UZS",
+      currencyNameEn: "Uzbekistan som",
+      tinType: "СТИР",
+      tinName: "Солиқ тўловчиларнинг идентификация рақами",
+      officialLanguageCode: "uz",
+      officialLanguageNameEn: "Uzbek",
+      officialLanguageNameLocal: "Oʻzbek, Ўзбек, أۇزبېك‎",
+      countryCallingCode: "998",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇺🇿"
+    },
+    {
+      countryNameEn: "Saint Vincent and the Grenadines",
+      countryNameLocal: "Saint Vincent and the Grenadines",
+      countryCode: "VC",
+      currencyCode: "XCD",
+      currencyNameEn: "East Caribbean dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1784",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇻🇨"
+    },
+    {
+      countryNameEn: "Venezuela (Bolivarian Republic of)",
+      countryNameLocal: "Venezuela",
+      countryCode: "VE",
+      currencyCode: "VES",
+      currencyNameEn: "",
+      tinType: "RIF",
+      tinName: "Registro de Informacion Fiscal",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "58",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇻🇪"
+    },
+    {
+      countryNameEn: "Virgin Islands (British)",
+      countryNameLocal: "British Virgin Islands",
+      countryCode: "VG",
+      currencyCode: "USD",
+      currencyNameEn: "United States dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1284",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇻🇬"
+    },
+    {
+      countryNameEn: "Virgin Islands (U.S.)",
+      countryNameLocal: "United States Virgin Islands",
+      countryCode: "VI",
+      currencyCode: "USD",
+      currencyNameEn: "United States dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1340",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇻🇮"
+    },
+    {
+      countryNameEn: "Vietnam",
+      countryNameLocal: "Việt Nam",
+      countryCode: "VN",
+      currencyCode: "VND",
+      currencyNameEn: "Vietnamese đồng",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "vi",
+      officialLanguageNameEn: "Vietnamese",
+      officialLanguageNameLocal: "Tiếng Việt",
+      countryCallingCode: "84",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇻🇳"
+    },
+    {
+      countryNameEn: "Vanuatu",
+      countryNameLocal: "Vanuatu",
+      countryCode: "VU",
+      currencyCode: "VUV",
+      currencyNameEn: "Vanuatu vatu",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "bi",
+      officialLanguageNameEn: "Bislama",
+      officialLanguageNameLocal: "Bislama",
+      countryCallingCode: "678",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇻🇺"
+    },
+    {
+      countryNameEn: "Wallis and Futuna",
+      countryNameLocal: "Wallis-et-Futuna",
+      countryCode: "WF",
+      currencyCode: "XPF",
+      currencyNameEn: "CFP franc (franc Pacifique)",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "681",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇼🇫"
+    },
+    {
+      countryNameEn: "Samoa",
+      countryNameLocal: "Samoa",
+      countryCode: "WS",
+      currencyCode: "WST",
+      currencyNameEn: "Samoan tala",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "sm",
+      officialLanguageNameEn: "Samoan",
+      officialLanguageNameLocal: "gagana fa'a Samoa",
+      countryCallingCode: "685",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇼🇸"
+    },
+    {
+      countryNameEn: "Yemen",
+      countryNameLocal: "اليَمَن",
+      countryCode: "YE",
+      currencyCode: "YER",
+      currencyNameEn: "Yemeni rial",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ar",
+      officialLanguageNameEn: "Arabic",
+      officialLanguageNameLocal: "العربية",
+      countryCallingCode: "967",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇾🇪"
+    },
+    {
+      countryNameEn: "Mayotte",
+      countryNameLocal: "Mayotte",
+      countryCode: "YT",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "262",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇾🇹"
+    },
+    {
+      countryNameEn: "South Africa",
+      countryNameLocal: "South Africa",
+      countryCode: "ZA",
+      currencyCode: "ZAR",
+      currencyNameEn: "South African rand",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "27",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇿🇦"
+    },
+    {
+      countryNameEn: "Zambia",
+      countryNameLocal: "Zambia",
+      countryCode: "ZM",
+      currencyCode: "ZMW",
+      currencyNameEn: "Zambian kwacha",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "260",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇿🇲"
+    },
+    {
+      countryNameEn: "Zimbabwe",
+      countryNameLocal: "Zimbabwe",
+      countryCode: "ZW",
+      currencyCode: "ZWL",
+      currencyNameEn: "Zimbabwean dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "263",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇿🇼"
+    },
+    {
+      countryNameEn: "Eswatini",
+      countryNameLocal: "Swaziland",
+      countryCode: "SZ",
+      currencyCode: "SZL",
+      currencyNameEn: "Swazi lilangeni",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "268",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇸🇿"
+    },
+    {
+      countryNameEn: "North Macedonia",
+      countryNameLocal: "Македонија",
+      countryCode: "MK",
+      currencyCode: "MKD",
+      currencyNameEn: "Macedonian denar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "mk",
+      officialLanguageNameEn: "Macedonian",
+      officialLanguageNameLocal: "македонски јазик",
+      countryCallingCode: "389",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇲🇰"
+    },
+    {
+      countryNameEn: "Philippines",
+      countryNameLocal: "Philippines",
+      countryCode: "PH",
+      currencyCode: "PHP",
+      currencyNameEn: "Philippine peso",
+      tinType: "TIN",
+      tinName: "Tax Identification Number",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "63",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇵🇭"
+    },
+    {
+      countryNameEn: "Netherlands",
+      countryNameLocal: "Nederland",
+      countryCode: "NL",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "Btw-nr.",
+      tinName: "Btw-nummer",
+      officialLanguageCode: "nl",
+      officialLanguageNameEn: "Dutch, Flemish",
+      officialLanguageNameLocal: "Nederlands, Vlaams",
+      countryCallingCode: "31",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇳🇱"
+    },
+    {
+      countryNameEn: "United Arab Emirates",
+      countryNameLocal: "دولة الإمارات العربيّة المتّحدة",
+      countryCode: "AE",
+      currencyCode: "AED",
+      currencyNameEn: "United Arab Emirates dirham",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ar",
+      officialLanguageNameEn: "Arabic",
+      officialLanguageNameLocal: "العربية",
+      countryCallingCode: "971",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇦🇪"
+    },
+    {
+      countryNameEn: "Republic of Moldova",
+      countryNameLocal: "Moldova, Молдавия",
+      countryCode: "MD",
+      currencyCode: "MDL",
+      currencyNameEn: "Moldovan leu",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ro",
+      officialLanguageNameEn: "Romanian, Moldavian, Moldovan",
+      officialLanguageNameLocal: "Română",
+      countryCallingCode: "373",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇲🇩"
+    },
+    {
+      countryNameEn: "Gambia",
+      countryNameLocal: "The Gambia",
+      countryCode: "GM",
+      currencyCode: "GMD",
+      currencyNameEn: "Gambian dalasi",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "220",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇬🇲"
+    },
+    {
+      countryNameEn: "Dominican Republic",
+      countryNameLocal: "República Dominicana",
+      countryCode: "DO",
+      currencyCode: "DOP",
+      currencyNameEn: "Dominican peso",
+      tinType: "RNC",
+      tinName: "Registro Nacional del Contribuyente",
+      officialLanguageCode: "es",
+      officialLanguageNameEn: "Spanish, Castilian",
+      officialLanguageNameLocal: "Español",
+      countryCallingCode: "1",
+      areaCodes: [],
+      region: "South/Latin America",
+      flag: "🇩🇴"
+    },
+    {
+      countryNameEn: "Sudan",
+      countryNameLocal: "السودان",
+      countryCode: "SD",
+      currencyCode: "SDG",
+      currencyNameEn: "Sudanese pound",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "ar",
+      officialLanguageNameEn: "Arabic",
+      officialLanguageNameLocal: "العربية",
+      countryCallingCode: "249",
+      areaCodes: [],
+      region: "Arab States",
+      flag: "🇸🇩"
+    },
+    {
+      countryNameEn: "Lao People's Democratic Republic",
+      countryNameLocal: "ປະຊາຊົນລາວ",
+      countryCode: "LA",
+      currencyCode: "LAK",
+      currencyNameEn: "Lao kip",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "lo",
+      officialLanguageNameEn: "Lao",
+      officialLanguageNameLocal: "ພາສາລາວ",
+      countryCallingCode: "856",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇱🇦"
+    },
+    {
+      countryNameEn: "Taiwan, Province of China",
+      countryNameLocal: "Taiwan",
+      countryCode: "TW",
+      currencyCode: "TWD",
+      currencyNameEn: "New Taiwan dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "zh-hant",
+      officialLanguageNameEn: "",
+      officialLanguageNameLocal: "",
+      countryCallingCode: "886",
+      areaCodes: [],
+      region: "Asia & Pacific",
+      flag: "🇹🇼"
+    },
+    {
+      countryNameEn: "Republic of the Congo",
+      countryNameLocal: "République du Congo",
+      countryCode: "CG",
+      currencyCode: "XAF",
+      currencyNameEn: "CFA franc BEAC",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "242",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇨🇬"
+    },
+    {
+      countryNameEn: "Czechia",
+      countryNameLocal: "Česká republika",
+      countryCode: "CZ",
+      currencyCode: "CZK",
+      currencyNameEn: "Czech koruna",
+      tinType: "DIČ",
+      tinName: "Daňové identifikační číslo",
+      officialLanguageCode: "cs",
+      officialLanguageNameEn: "Czech",
+      officialLanguageNameLocal: "Čeština",
+      countryCallingCode: "420",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇨🇿"
+    },
+    {
+      countryNameEn: "United Kingdom",
+      countryNameLocal: "Great Britain",
+      countryCode: "GB",
+      currencyCode: "GBP",
+      currencyNameEn: "Pound sterling",
+      tinType: "VAT Reg No",
+      tinName: "Value added tax registration number",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "44",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇬🇧"
+    },
+    {
+      countryNameEn: "Niger",
+      countryNameLocal: "Niger",
+      countryCode: "NE",
+      currencyCode: "XOF",
+      currencyNameEn: "CFA franc BCEAO",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "227",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇳🇪"
+    },
+    {
+      countryNameEn: "Democratic Republic of the Congo",
+      countryNameLocal: "Democratic Republic of the Congo",
+      countryCode: "CD",
+      currencyCode: "CDF",
+      currencyNameEn: "Congolese franc",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "243",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇨🇩"
+    },
+    {
+      countryNameEn: "Commonwealth of The Bahamas",
+      countryNameLocal: "Commonwealth of The Bahamas",
+      countryCode: "BS",
+      currencyCode: "BSD",
+      currencyNameEn: "Bahamian dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1 242",
+      areaCodes: [],
+      region: "Caribbean",
+      flag: "🇧🇸"
+    },
+    {
+      countryNameEn: "Cocos (Keeling) Islands",
+      countryNameLocal: "Pulu Kokos (Keeling)",
+      countryCode: "CC",
+      currencyCode: "AUD",
+      currencyNameEn: "Australian dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "61 891",
+      areaCodes: [],
+      region: "Australia",
+      flag: "🇨🇨"
+    },
+    {
+      countryNameEn: "Central African Republic",
+      countryNameLocal: "République centrafricaine",
+      countryCode: "CF",
+      currencyCode: "XAF",
+      currencyNameEn: "Central African CFA",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "236",
+      areaCodes: [],
+      region: "Africa",
+      flag: "🇨🇫"
+    },
+    {
+      countryNameEn: "Cook Islands",
+      countryNameLocal: "Kūki 'Āirani",
+      countryCode: "CK",
+      currencyCode: "NZD",
+      currencyNameEn: "New Zealand dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "682",
+      areaCodes: [],
+      region: "South Pacific Ocean",
+      flag: "🇨🇰"
+    },
+    {
+      countryNameEn: "Falkland Islands",
+      countryNameLocal: "Falkland Islands",
+      countryCode: "FK",
+      currencyCode: "FKP",
+      currencyNameEn: "Falklands pound",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "500",
+      areaCodes: [],
+      region: "South Atlantic Ocean",
+      flag: "🇫🇰"
+    },
+    {
+      countryNameEn: "Faroe Islands",
+      countryNameLocal: "Færøerne",
+      countryCode: "FO",
+      currencyCode: "DKK",
+      currencyNameEn: "Faroese króna",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "da",
+      officialLanguageNameEn: "Danish",
+      officialLanguageNameLocal: "dansk",
+      countryCallingCode: "298",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇫🇴"
+    },
+    {
+      countryNameEn: "Territory of Heard Island and McDonald Islands",
+      countryNameLocal: "Territory of Heard Island and McDonald Islands",
+      countryCode: "HM",
+      currencyCode: "AUD",
+      currencyNameEn: "Australian dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "672",
+      areaCodes: [],
+      region: "Indian Ocean",
+      flag: "🇭🇲"
+    },
+    {
+      countryNameEn: "British Indian Ocean Territory",
+      countryNameLocal: "British Indian Ocean Territory",
+      countryCode: "IO",
+      currencyCode: "USD",
+      currencyNameEn: "United States Dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "246",
+      areaCodes: [],
+      region: "Indian Ocean",
+      flag: "🇮🇴"
+    },
+    {
+      countryNameEn: "Comoros",
+      countryNameLocal: "Umoja wa Komori",
+      countryCode: "KM",
+      currencyCode: "KMF",
+      currencyNameEn: "Comorian franc",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "269",
+      areaCodes: [],
+      region: "Indian Ocean",
+      flag: "🇰🇲"
+    },
+    {
+      countryNameEn: "Cayman Islands",
+      countryNameLocal: "Cayman Islands",
+      countryCode: "KY",
+      currencyCode: "KYD",
+      currencyNameEn: "Cayman Islands dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1 345",
+      areaCodes: [],
+      region: "Caribbean Sea",
+      flag: "🇰🇾"
+    },
+    {
+      countryNameEn: "Republic of the Marshall Islands",
+      countryNameLocal: "Aolepān Aorōkin Ṃajeḷ",
+      countryCode: "MH",
+      currencyCode: "USD",
+      currencyNameEn: "United States dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "692",
+      areaCodes: [],
+      region: "Pacific Ocean",
+      flag: "🇲🇭"
+    },
+    {
+      countryNameEn: "Commonwealth of the Northern Mariana Islands",
+      countryNameLocal: "Sankattan Siha Na Islas Mariånas",
+      countryCode: "MP",
+      currencyCode: "USD",
+      currencyNameEn: "United States dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1 670",
+      areaCodes: [],
+      region: "Pacific Ocean",
+      flag: "🇲🇵"
+    },
+    {
+      countryNameEn: "Turks and Caicos Islands",
+      countryNameLocal: "Turks and Caicos Islands",
+      countryCode: "TC",
+      currencyCode: "USD",
+      currencyNameEn: "United States dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1 649",
+      areaCodes: [],
+      region: "Atlantic Ocean",
+      flag: "🇹🇨"
+    },
+    {
+      countryNameEn: "French Southern and Antarctic Lands",
+      countryNameLocal: "Terres australes et antarctiques françaises",
+      countryCode: "TF",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "fr",
+      officialLanguageNameEn: "French",
+      officialLanguageNameLocal: "Français",
+      countryCallingCode: "672",
+      areaCodes: [],
+      region: "Indian Ocean",
+      flag: "🇹🇫"
+    },
+    {
+      countryNameEn: "United States Minor Outlying Islands",
+      countryNameLocal: "United States Minor Outlying Islands",
+      countryCode: "UM",
+      currencyCode: "USD",
+      currencyNameEn: "United States dollar",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "en",
+      officialLanguageNameEn: "English",
+      officialLanguageNameLocal: "English",
+      countryCallingCode: "1",
+      areaCodes: [],
+      region: "Pacific Ocean",
+      flag: "🇺🇲"
+    },
+    {
+      countryNameEn: "Holy See",
+      countryNameLocal: "Sancta Sedes",
+      countryCode: "VA",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "la",
+      officialLanguageNameEn: "Latin",
+      officialLanguageNameLocal: "lingua latīna",
+      countryCallingCode: "39",
+      areaCodes: [],
+      region: "Europe",
+      flag: "🇻🇦"
+    },
+    {
+      countryNameEn: "Republic of Kosovo",
+      countryNameLocal: "Republika e Kosovës",
+      countryCode: "XK",
+      currencyCode: "EUR",
+      currencyNameEn: "Euro",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "sq",
+      officialLanguageNameEn: "Albanian",
+      officialLanguageNameLocal: "Shqip",
+      countryCallingCode: "383",
+      region: "Europe",
+      flag: "🇽🇰"
+    },
+    {
+      countryNameEn: "Netherlands Antilles",
+      countryNameLocal: "Nederlandse Antillen",
+      countryCode: "AN",
+      currencyCode: "ANG",
+      currencyNameEn: "Netherlands Antillean guilder",
+      tinType: "",
+      tinName: "",
+      officialLanguageCode: "nl",
+      officialLanguageNameEn: "Dutch, Flemish",
+      officialLanguageNameLocal: "Nederlands, Vlaams",
+      countryCallingCode: "599",
+      region: "Europe",
+      flag: "🇧🇶"
+    }
+  ];
+  return Z.default = a, Z;
+}
+var ma;
+function No() {
+  if (ma) return w;
+  ma = 1;
+  var a = w && w.__importDefault || function(u) {
+    return u && u.__esModule ? u : { default: u };
+  };
+  Object.defineProperty(w, "__esModule", { value: !0 }), w.customList = w.customArray = w.findOne = w.filter = w.all = w.utils = void 0;
+  const e = a(mo()), n = a(yo()), r = a(Co());
+  w.utils = {
+    groupBy: e.default
+  };
+  function c() {
+    return r.default;
+  }
+  w.all = c;
+  function i(u, L) {
+    return r.default.filter((C) => C[u] === L);
+  }
+  w.filter = i;
+  function g(u, L) {
+    return r.default.find((C) => C[u] === L);
+  }
+  w.findOne = g;
+  function d(u = {
+    name: "{countryNameEn} ({countryCode})",
+    value: "{countryCode}"
+  }, { sortBy: L, sortDataBy: C, filter: B } = {}) {
+    const E = [];
+    let h = r.default;
+    if (typeof B == "function" && (h = h.filter(B)), C) {
+      const A = new Intl.Collator([], { sensitivity: "accent" });
+      h.sort((b, T) => A.compare(b[C], T[C]));
+    }
+    if (h.forEach((A) => {
+      const b = {};
+      for (const T in u)
+        b[T] = (0, n.default)(u[T], A);
+      E.push(b);
+    }), L && u[L]) {
+      const A = new Intl.Collator([], { sensitivity: "accent" });
+      E.sort((b, T) => A.compare(b[L], T[L]));
+    }
+    return E;
+  }
+  w.customArray = d;
+  function m(u = "countryCode", L = "{countryNameEn} ({countryCode})", { filter: C } = {}) {
+    const B = {};
+    let E = r.default;
+    return typeof C == "function" && (E = E.filter(C)), E.forEach((h) => {
+      const A = (0, n.default)(L, h);
+      B[String(h[u])] = A;
+    }), B;
+  }
+  return w.customList = m, w;
+}
+var Lo = No();
+const Eo = {
+  props: {
+    callingCode: {
+      type: String,
+      default: "1"
+    }
+  },
+  emits: ["update:callingCode"],
+  data() {
+    return {
+      countries: [],
+      selectedCountry: {
+        code: "US",
+        name: "United States of America",
+        callingCode: "1"
+      }
+    };
+  },
+  watch: {
+    callingCode: {
+      immediate: !0,
+      handler(a) {
+        a && this.countries.length > 0 && this.updateSelectedCountry(a);
+      }
+    }
+  },
+  mounted() {
+    const a = Lo.customList(
+      "countryCode",
+      "{countryNameEn}|{countryCallingCode}"
+    );
+    this.countries = Object.entries(a).map(([e, n]) => {
+      const [r, c] = n.split("|");
+      let i = c.split(" ")[0];
+      return i === "5997" ? i = "599" : /^\d{4}$/.test(i) && (i = i[0]), {
+        code: e,
+        name: r,
+        callingCode: i
+      };
+    }).sort((e, n) => e.name.localeCompare(n.name)), this.callingCode && this.updateSelectedCountry(this.callingCode);
+  },
+  methods: {
+    flag(a) {
+      return fo(a);
+    },
+    selectCountry(a) {
+      this.selectedCountry = a, this.$emit("update:callingCode", a.callingCode);
+    },
+    updateSelectedCountry(a) {
+      if (a === "1") {
+        this.selectedCountry = {
+          code: "US",
+          name: "United States of America",
+          callingCode: "1"
+        };
+        return;
+      }
+      const e = this.countries.find(
+        (n) => n.callingCode === a
+      );
+      e && (this.selectedCountry = e);
+    }
+  }
+}, po = {
+  id: "countryDropdownMenuButton",
+  class: "btn btn-subdued-primary border border-secondary dropdown-toggle",
+  type: "button",
+  "data-bs-toggle": "dropdown",
+  "aria-expanded": "false"
+}, ho = { class: "me-1" }, Ao = {
+  class: "dropdown-menu",
+  "aria-labelledby": "countryDropdownMenuButton"
+}, So = ["onClick"], bo = { class: "text-secondary" };
+function To(a, e, n, r, c, i) {
+  return l(), t(ta, null, [
+    o("button", po, [
+      o("span", ho, N(i.flag(c.selectedCountry.code)), 1)
+    ]),
+    o("ul", Ao, [
+      o("li", null, [
+        o("button", {
+          type: "button",
+          class: "dropdown-item",
+          onClick: e[0] || (e[0] = (g) => i.selectCountry({
+            code: "US",
+            name: "United States of America",
+            callingCode: "1"
+          }))
+        }, N(i.flag("US")) + " United States of America (+1) ", 1)
+      ]),
+      e[1] || (e[1] = o("li", null, [
+        o("hr", { class: "dropdown-divider" })
+      ], -1)),
+      (l(!0), t(ta, null, xa(c.countries, (g, d) => (l(), t("li", { key: d }, [
+        o("button", {
+          type: "button",
+          class: "dropdown-item",
+          onClick: (m) => i.selectCountry(g)
+        }, [
+          S(N(i.flag(g.code)) + " " + N(g.name) + " ", 1),
+          o("span", bo, "+" + N(g.callingCode), 1)
+        ], 8, So)
+      ]))), 128))
+    ])
+  ], 64);
+}
+const Zo = /* @__PURE__ */ D(Eo, [["render", To]]), wa = "data:image/png;base64,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", vo = {
+  props: {
+    userNetid: {
+      type: String,
+      required: !0
+    },
+    userOverride: {
+      type: String,
+      required: !1
+    },
+    photoUrl: {
+      type: String,
+      required: !1
+    }
+  },
+  data() {
+    return {};
+  },
+  methods: {}
+}, wo = { class: "flex-fill dropdown" }, Bo = ["src"], Io = {
+  key: 1,
+  src: wa,
+  class: "me-2 img-tiny rounded-circle",
+  alt: "user avatar"
+}, ko = {
+  key: 2,
+  class: "me-2 d-none d-md-block"
+}, Mo = {
+  key: 3,
+  class: "me-2 d-none d-md-block"
+}, Do = {
+  class: "dropdown-menu dropdown-menu-end p-0",
+  "aria-labelledby": "dropdownMenuButton1",
+  style: { width: "300px" }
+}, Ro = {
+  key: 0,
+  class: "bg-danger-subtle text-danger-emphasis px-3 py-2 rounded-top small fw-bold"
+}, Uo = { class: "p-3" }, Po = { class: "d-flex justify-content-center" }, Fo = ["src"], Go = {
+  key: 1,
+  src: wa,
+  class: "img-profile rounded-circle",
+  alt: "user avatar"
+}, xo = { class: "mt-3" }, Ko = { class: "mt-3 pt-3 border-top" };
+function Wo(a, e, n, r, c, i) {
+  return l(), t("div", {
+    class: p(["d-flex align-items-center border border-white p-0 rounded-pill small", { "bg-danger-subtle border-0": n.userOverride }])
+  }, [
+    o("div", wo, [
+      o("a", {
+        class: p(["d-flex text-white text-decoration-none p-1 chevron", n.userOverride ? "text-danger-emphasis" : "text-white"]),
+        href: "#",
+        role: "button",
+        id: "dropdownMenuButton1",
+        "data-bs-toggle": "dropdown",
+        "aria-expanded": "false"
+      }, [
+        n.photoUrl ? (l(), t("img", {
+          key: 0,
+          src: n.photoUrl,
+          class: "me-2 img-tiny rounded-circle",
+          alt: "user avatar"
+        }, null, 8, Bo)) : (l(), t("img", Io)),
+        n.userOverride ? (l(), t("span", ko, N(n.userOverride), 1)) : (l(), t("span", Mo, N(n.userNetid), 1)),
+        e[0] || (e[0] = o("i", { class: "bi bi-chevron-down me-1" }, null, -1))
+      ], 2),
+      o("div", Do, [
+        n.userOverride ? (l(), t("div", Ro, " You are overriding as another user ")) : y("", !0),
+        o("div", Uo, [
+          o("div", Po, [
+            n.photoUrl ? (l(), t("img", {
+              key: 0,
+              src: n.photoUrl,
+              class: "img-profile rounded-circle",
+              alt: "user avatar"
+            }, null, 8, Fo)) : (l(), t("img", Go))
+          ]),
+          o("div", xo, [
+            f(a.$slots, "default", {}, () => [
+              e[1] || (e[1] = S(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium hendrerit dui, sit amet dapibus nulla condimentum id. Quisque pulvinar viverra eros, sit amet blandit tellus faucibus at. Maecenas a turpis sed quam vulputate placerat. Duis id eros sit amet turpis dignissim lacinia. Suspendisse molestie vel nisl sit amet convallis. ", -1))
+            ], !0)
+          ]),
+          o("div", Ko, [
+            f(a.$slots, "action", {}, () => [
+              e[2] || (e[2] = S("action", -1))
+            ], !0)
+          ])
+        ])
+      ])
+    ])
+  ], 2);
+}
+const _o = /* @__PURE__ */ D(vo, [["render", Wo], ["__scopeId", "data-v-1f995e34"]]);
 export {
-  an as SColorMode,
-  on as SProfile,
-  sn as SSidebar,
-  Ks as STabsDisplay,
-  en as STabsItem,
-  Xs as STabsList,
-  tn as STabsPanel,
-  nn as STopbar,
-  ln as STopbarNeo
+  Xo as SColorMode,
+  Zo as SCountryCode,
+  qo as SProfile,
+  Ho as SSidebar,
+  Oo as STabsDisplay,
+  jo as STabsItem,
+  Yo as STabsList,
+  Vo as STabsPanel,
+  Jo as STopbar,
+  zo as STopbarNeo,
+  _o as SUser
 };

@@ -5,10 +5,10 @@
 </template>
 
 <script>
-export default {
-  name: "axdd-panel",
-  data: function () {
-    return {};
-  },
-};
+  export default {
+    name: "axdd-panel",
+    data() {
+      return {};
+    },
+  };
 </script>

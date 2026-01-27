@@ -7,15 +7,67 @@
   >
     <template #settings>
       <div class="d-flex">
-        <SProfile
-          :variant="'standard'"
+        <SUser
           :user-netid="userNetid"
-          :user-official-name="userOfficial"
-          :user-preferred-name="userPreferred"
-          :profile-url="'https://identity.uw.edu'"
-          :signout-url="signOutUrl"
-        />
-        <SColorMode :color-class="'text-deco-violet'" class="ms-3" />
+          :photo-url="'https://randomuser.me/api/portraits/men/66.jpg'"
+        >
+          <p>user information goes here</p>
+          <template #action>
+            <a :href="signoutUrl" class="link-quiet-danger"
+              ><i class="bi bi-x-circle me-1"></i>Sign out now</a
+            >
+          </template>
+        </SUser>
+        <!--
+        <SUser :user-netid="userNetid" :signout-url="'/signout'">
+          <p>additional user information goes here</p>
+          <template #action>
+            <a :href="signoutUrl" class="link-quiet-danger"
+              ><i class="bi bi-x-circle me-1"></i>Sign out</a
+            >
+          </template>
+        </SUser>
+        <SUser
+          :user-netid="userNetid"
+          :user-override="'billy'"
+          :photo-url="'https://randomuser.me/api/portraits/men/67.jpg'"
+
+        >
+          <p>user information goes here</p>
+          <template #action>
+            <a
+              v-if="true"
+              role="button"
+              class="link-quiet-danger"
+              @click="clearUserOverride()"
+              ><i class="bi bi-x-circle me-1"></i>Clear override</a
+            >
+
+            <a v-else :href="signoutUrl" class="link-quiet-danger"
+              ><i class="bi bi-x-circle me-1"></i>Sign out</a
+            >
+          </template>
+        </SUser>
+        <SUser
+          :user-netid="userNetid"
+          :user-override="'billy'"
+        >
+          <p>user information goes here</p>
+          <template #action>
+            <a
+              v-if="true"
+              role="button"
+              class="link-quiet-danger"
+              @click="clearUserOverride()"
+              ><i class="bi bi-x-circle me-1"></i>Clear override</a
+            >
+
+            <a v-else :href="signoutUrl" class="link-quiet-danger"
+              ><i class="bi bi-x-circle me-1"></i>Sign out</a
+            >
+          </template>
+        </SUser> -->
+        <SColorMode :color-class="'text-white'" class="ms-2"/>
       </div>
     </template>
 
@@ -44,10 +96,20 @@
             Dropdown
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+              <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                >Another <span>asdf</span>action</a
+              >
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
           </ul>
         </li>
       </ul>
@@ -58,7 +120,7 @@
             type="search"
             placeholder="Search"
             aria-label="Search"
-          />
+          >
           <button class="btn btn-sm btn-outline-secondary" type="submit">
             Search
           </button>
@@ -111,32 +173,34 @@
 </template>
 
 <script>
-import STopbarNeo from "@/components/layout/STopbarNeo.vue";
-import SColorMode from "@/components/SColorMode.vue";
-import SProfile from "@/components/SProfile.vue";
+  import STopbarNeo from "@/components/layout/STopbarNeo.vue";
+  import SColorMode from "@/components/SColorMode.vue";
+  import SProfile from "@/components/SProfile.vue";
+  import SUser from "@/components/SUser.vue";
 
-export default {
-  name: "DocsSandboxTopbarIndex",
-  components: { STopbarNeo, SColorMode, SProfile },
-  data() {
-    return {
-      // layout component
-      appName: "MyApp SoCoool",
-      deptName: "Dept of Coolness",
-      appRootUrl: "/",
+  export default {
+    name: "DocsSandboxTopbarIndex",
+    components: { STopbarNeo, SColorMode, SProfile, SUser },
+    data() {
+      return {
+        // layout component
+        appName: "MyApp SoCoool",
+        deptName: "Dept of Coolness",
+        appRootUrl: "/",
 
-      // login component
-      signOutUrl: "/signout",
-      pageTitle: "Home",
-      userNetid: "myusername",
-      userOfficial: "MYOFFICAL NAME",
-      userPreferred: "Preferred Name",
-      currentYear: new Date().getFullYear(),
-    };
-  },
-  created: function () {
-    // constructs page title in the following format "Page Title - AppName"
-    document.title = this.pageTitle + " - " + this.appName;
-  },
-};
+        // login component
+        signoutUrl: "/signout",
+        pageTitle: "Home",
+        userNetid: "javerage",
+        userOverride: "",
+        userOfficial: "MYOFFICAL NAME",
+        userPreferred: "Preferred Name",
+        currentYear: new Date().getFullYear(),
+      };
+    },
+    created: function () {
+      // constructs page title in the following format "Page Title - AppName"
+      document.title = this.pageTitle + " - " + this.appName;
+    },
+  };
 </script>

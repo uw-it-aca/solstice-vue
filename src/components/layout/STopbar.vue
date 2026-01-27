@@ -119,7 +119,7 @@
                 </li>
               </ul>
               <div>
-                Copyright &copy; {{ new Date().getFullYear() }} University of
+                Copyright &copy; {{ new Date().getFullYear() }}University of
                 Washington
               </div>
             </div>
@@ -131,54 +131,54 @@
 </template>
 
 <script>
-export default {
-  inject: ["mq"],
-  props: {
-    appName: {
-      type: String,
-      default: "appName",
+  export default {
+    inject: ["mq"],
+    props: {
+      appName: {
+        type: String,
+        default: "appName",
+      },
+      appRootUrl: {
+        type: String,
+        default: "#",
+      },
+      topbarClass: {
+        type: String,
+        default: "bg-spirit-purple",
+      },
+      isPreview: {
+        type: Boolean,
+        default: false,
+      },
+      backgroundClass: {
+        type: String,
+        default: "bg-body",
+      },
     },
-    appRootUrl: {
-      type: String,
-      default: "#",
+    components: {},
+    data() {
+      return {};
     },
-    topbarClass: {
-      type: String,
-      default: "bg-spirit-purple",
+    created() {
+      // constructs page title in the following format "Page Title - AppName"
+      // document.title = this.pageTitle + " - " + this.appName;
     },
-    isPreview: {
-      type: Boolean,
-      default: false,
-    },
-    backgroundClass: {
-      type: String,
-      default: "bg-body",
-    },
-  },
-  components: {},
-  data() {
-    return {};
-  },
-  created: function () {
-    // constructs page title in the following format "Page Title - AppName"
-    // document.title = this.pageTitle + " - " + this.appName;
-  },
-};
+  };
 </script>
 
-<style lang="scss">
-.axdd-topbar {
-  min-width: 320px;
-}
+<style lang="css">
+  .axdd-topbar {
+    min-width: 320px;
+  }
 
-.axdd-topbar-brand {
-  line-height: 75px;
-}
+  .axdd-topbar-brand {
+    line-height: 75px;
+  }
 
-.axdd-topbar-logo {
-  background-image: url("../../assets/images/w-logo-white.png");
-  background-repeat: no-repeat;
-  background-size: 45px;
-  background-position: right 20px bottom;
-}
+  .axdd-topbar-logo {
+    background-image: url('../../assets/images/w-logo-white.png');
+    background-repeat: no-repeat;
+    background-size: 45px;
+    background-position: right 20px bottom;
+  }
 </style>

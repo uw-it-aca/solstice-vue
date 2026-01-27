@@ -30,37 +30,37 @@
 </template>
 
 <script>
-export default {
-  name: "axdd-disclosure-action",
-  props: {
-    disclosureId: {
-      // must match tab panelId
-      type: [String, Number],
-      required: true,
+  export default {
+    name: "axdd-disclosure-action",
+    props: {
+      disclosureId: {
+        // must match tab panelId
+        type: [String, Number],
+        required: true,
+      },
+      isLink: {
+        type: Boolean,
+      },
+      hasIndicator: {
+        type: Boolean,
+      },
     },
-    isLink: {
-      type: Boolean,
-    },
-    hasIndicator: {
-      type: Boolean,
-    },
-  },
-};
+  };
 </script>
 
-<style lang="scss" scoped>
-.chevron i {
-  display: inline-block;
-  transition: transform 0.35s ease;
-  transform-origin: 0.5em 50%;
-  font-weight: bolder;
-}
+<style lang="css" scoped>
+  .chevron i {
+    display: inline-block;
+    transition: transform 0.35s ease;
+    transform-origin: 0.5em 50%;
+    font-weight: bolder;
+  }
 
-.chevron[aria-expanded="true"] i {
-  transform: rotate(90deg);
-}
+  .chevron[aria-expanded='true'] i {
+    transform: rotate(90deg);
+  }
 
-.bi-chevron-right::after {
-  font-weight: bolder !important;
-}
+  .bi-chevron-right::after {
+    font-weight: bolder !important;
+  }
 </style>

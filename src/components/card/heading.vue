@@ -1,6 +1,6 @@
 <template>
   <!-- MARK: https://vuejs.org/guide/essentials/component-basics.html#dynamic-components -->
-  <component :is="`h${checkedLevel}`" class="h6 m-0 fw-bold">
+  <component :is="`h${checkedLevel}`" class="h6 fw-bold m-0">
     <slot></slot>
   </component>
 </template>

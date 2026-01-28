@@ -28,7 +28,7 @@ function Qa(a, e, n, r, c, i) {
     s(a.$slots, "default")
   ], 8, Ka)) : n.variant == "pills" ? (t(), l("ul", {
     key: 1,
-    class: "bg-body-tertiary text-body gap-1 rounded-3 p-1 nav nav-pills border",
+    class: "bg-body-tertiary text-body rounded-3 nav nav-pills gap-1 border p-1",
     id: n.tabsId,
     role: "tablist"
   }, [
@@ -199,10 +199,10 @@ const Oo = /* @__PURE__ */ R(qa, [["render", Za]]), _a = {
   }
 }, $a = {
   key: 0,
-  class: "py-2 px-3 small bg-black bg-opacity-10"
+  class: "small bg-opacity-10 bg-black px-3 py-2"
 }, ae = { class: "d-flex" }, ee = { class: "flex-fill text-end" }, ne = ["href"], oe = {
   key: 0,
-  class: "btn btn-link btn-sm border border-1 border-light rounded-3 py-0 px-1 text-light d-lg-none me-2",
+  class: "btn btn-link btn-sm border-light rounded-3 text-light d-lg-none me-2 border border-1 px-1 py-0",
   "data-bs-toggle": "collapse",
   "data-bs-target": "#sidebar-nav-collapse",
   role: "button",
@@ -214,8 +214,8 @@ const Oo = /* @__PURE__ */ R(qa, [["render", Za]]), _a = {
   role: "navigation"
 }, re = {
   key: 1,
-  class: "mb-3 text-light"
-}, ce = { class: "flex-fill" }, te = { key: 0 }, le = { class: "font-weight-light py-3 small" };
+  class: "text-light mb-3"
+}, ce = { class: "flex-fill" }, te = { key: 0 }, le = { class: "font-weight-light small py-3" };
 function ue(a, e, n, r, c, i) {
   const u = Ba("router-link");
   return t(), l("div", {
@@ -223,7 +223,7 @@ function ue(a, e, n, r, c, i) {
     style: ia([n.isPreview ? "min-height: auto !important;" : ""])
   }, [
     o("div", {
-      class: N([n.sidebarClass + [i.mq.mdMinus ? "" : " overflow-auto"], "sol-sidebar d-flex flex-column"]),
+      class: N([n.sidebarClass + [i.mq.mdMinus ? "" : "overflow-auto"], "sol-sidebar d-flex flex-column"]),
       style: ia([i.mq.mdMinus ? "" : "min-width: 280px; max-width:280px;"])
     }, [
       o("header", null, [
@@ -263,7 +263,7 @@ function ue(a, e, n, r, c, i) {
       ]),
       o("div", {
         id: "sidebar-nav-collapse",
-        class: N(["px-3 flex-fill", [
+        class: N(["flex-fill px-3", [
           i.mq.mdMinus ? "collapse" : "collapse.show d-flex flex-column justify-content-between"
         ]])
       }, [
@@ -343,10 +343,10 @@ const jo = /* @__PURE__ */ R(_a, [["render", ue]]), ge = {
   class: "w-100"
 }, se = { class: "w-100" }, fe = {
   key: 0,
-  class: "bg-black bg-opacity-10 text-white py-2 small"
+  class: "bg-opacity-10 small bg-black py-2 text-white"
 }, me = { class: "container-xl" }, ye = { class: "axdd-topbar-brand" }, Ce = { class: "container-xl axdd-topbar-logo" }, Ne = {
   key: 0,
-  class: "btn btn-link btn-sm d-xl-none border border-1 border-light rounded-3 py-0 px-1 text-white me-2",
+  class: "btn btn-link btn-sm d-xl-none border-light rounded-3 me-2 border border-1 px-1 py-0 text-white",
   "data-bs-toggle": "collapse",
   "data-bs-target": "#topbar-nav-collapse",
   role: "button",
@@ -361,11 +361,11 @@ const jo = /* @__PURE__ */ R(_a, [["render", ue]]), ge = {
   class: "col-sm col-xl-3"
 }, ve = { class: "w-100" }, we = {
   key: 0,
-  class: "bg-dark text-white py-2 small"
-}, Be = { class: "container-xl" }, Ie = { class: "text-white font-weight-light py-3" };
+  class: "bg-dark small py-2 text-white"
+}, Be = { class: "container-xl" }, Ie = { class: "font-weight-light py-3 text-white" };
 function ke(a, e, n, r, c, i) {
   return t(), l("div", {
-    class: N([n.topbarClass + [n.isPreview ? " " : " min-vh-100"], "d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"])
+    class: N([n.topbarClass + [n.isPreview ? " " : "min-vh-100"], "d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"])
   }, [
     a.$slots.system ? (t(), l("div", de, [
       s(a.$slots, "system", {}, () => [
@@ -383,21 +383,21 @@ function ke(a, e, n, r, c, i) {
       o("div", ye, [
         o("div", Ce, [
           a.$slots.navigation ? (t(), l("a", Ne, [...e[2] || (e[2] = [
-            o("i", { class: "bi bi-list fw-bold text-white fs-6" }, null, -1)
+            o("i", { class: "bi bi-list fw-bold fs-6 text-white" }, null, -1)
           ])])) : m("", !0),
           o("div", {
             class: N(["d-inline align-middle text-white", [i.mq.xlPlus ? "h2" : "h3"]])
           }, [
             o("a", {
               href: n.appRootUrl,
-              class: "ff-encode-sans text-white text-decoration-none"
+              class: "ff-encode-sans text-decoration-none text-white"
             }, y(n.appName), 9, Le)
           ], 2)
         ])
       ])
     ]),
     o("div", {
-      class: N([n.backgroundClass, "w-100 flex-fill text-body"])
+      class: N([n.backgroundClass, "flex-fill text-body w-100"])
     }, [
       o("div", Ee, [
         o("div", pe, [
@@ -481,13 +481,13 @@ const Vo = /* @__PURE__ */ R(ge, [["render", ke]]), Me = "data:image/png;base64,
       default: "https://www.washington.edu/online/terms/"
     }
   }
-}, De = { class: "w-100 bg-spirit-purple" }, Ue = { class: "container-xl" }, Pe = { class: "d-flex justify-content-between align-items-center" }, Fe = { class: "d-flex align-items-center my-4" }, Ge = { class: "text-white d-flex flex-column" }, xe = {
+}, De = { class: "bg-spirit-purple w-100" }, Ue = { class: "container-xl" }, Pe = { class: "d-flex justify-content-between align-items-center" }, Fe = { class: "d-flex align-items-center my-4" }, Ge = { class: "d-flex flex-column text-white" }, xe = {
   key: 0,
   class: "fw-light text-nowrap",
   style: { "margin-bottom": "-7px" }
 }, Ke = ["href"], We = ["href"], Qe = { class: "d-flex justify-content-end align-items-center" }, Ye = {
   key: 1,
-  class: "ms-1 btn btn-link btn-sm d-xl-none py-0 py-1 text-white",
+  class: "btn btn-link btn-sm d-xl-none ms-1 py-0 py-1 text-white",
   "data-bs-toggle": "collapse",
   "data-bs-target": "#navbarToggler",
   "aria-controls": "navbarToggler",
@@ -495,9 +495,9 @@ const Vo = /* @__PURE__ */ R(ge, [["render", ke]]), Me = "data:image/png;base64,
   "aria-label": "Toggle navigation"
 }, Oe = {
   key: 0,
-  class: "navbar navbar-expand-xl w-100 p-0 py-xl-2 bg-husky-purple"
+  class: "navbar navbar-expand-xl py-xl-2 bg-husky-purple w-100 p-0"
 }, je = { class: "container-xl" }, Ve = {
-  class: "collapse navbar-collapse",
+  class: "navbar-collapse collapse",
   id: "navbarToggler"
 }, He = {
   key: 1,
@@ -508,13 +508,13 @@ const Vo = /* @__PURE__ */ R(ge, [["render", ke]]), Me = "data:image/png;base64,
 }, _e = { class: "bg-body-tertiary w-100" }, $e = { class: "container-xl" }, an = { class: "row" }, en = { class: "col small font-weight-light my-4" }, nn = { class: "list-inline m-0" }, on = { class: "list-inline-item" }, rn = ["href"], cn = { class: "list-inline-item" }, tn = ["href"], ln = { class: "" };
 function un(a, e, n, r, c, i) {
   return t(), l("div", {
-    class: N([[n.isPreview ? " " : " min-vh-100"], "d-flex align-items-end flex-column"])
+    class: N([[n.isPreview ? " " : "min-vh-100"], "d-flex align-items-end flex-column"])
   }, [
     o("header", De, [
       o("div", Ue, [
         o("div", Pe, [
           o("div", Fe, [
-            e[0] || (e[0] = o("div", { class: "border-end border-white border-opacity-25 pe-3 me-3" }, [
+            e[0] || (e[0] = o("div", { class: "border-end border-opacity-25 me-3 border-white pe-3" }, [
               o("img", {
                 src: Me,
                 alt: "UW logo",
@@ -526,12 +526,12 @@ function un(a, e, n, r, c, i) {
               n.appDeptName ? (t(), l("div", xe, y(n.appDeptName), 1)) : m("", !0),
               o("a", {
                 href: n.appRootUrl,
-                class: "d-block d-sm-none ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium text-truncate",
+                class: "d-block d-sm-none ff-encode-sans text-decoration-none fs-3 fw-medium text-truncate text-nowrap text-white",
                 style: { "max-width": "150px" }
               }, y(n.appName), 9, Ke),
               o("a", {
                 href: n.appRootUrl,
-                class: "d-none d-sm-block ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium"
+                class: "d-none d-sm-block ff-encode-sans text-decoration-none fs-3 fw-medium text-nowrap text-white"
               }, y(n.appName), 9, We)
             ])
           ]),
@@ -650,7 +650,7 @@ const Ho = /* @__PURE__ */ R(Re, [["render", un]]), gn = {
   class: "d-flex align-items-center"
 }, sn = { class: "flex-fill dropdown" }, fn = {
   key: 0,
-  class: "text-white text-decoration-none py-2",
+  class: "text-decoration-none py-2 text-white",
   href: "#",
   role: "button",
   id: "dropdownMenuButton1",
@@ -658,7 +658,7 @@ const Ho = /* @__PURE__ */ R(Re, [["render", un]]), gn = {
   "aria-expanded": "false"
 }, mn = { class: "me-1" }, yn = { class: "text-decoration-underline" }, Cn = {
   key: 1,
-  class: "text-white text-decoration-none py-2",
+  class: "text-decoration-none py-2 text-white",
   href: "#",
   role: "button",
   id: "dropdownMenuButton1",
@@ -680,7 +680,7 @@ const Ho = /* @__PURE__ */ R(Re, [["render", un]]), gn = {
 }, Tn = { class: "me-1" }, vn = {
   key: 1,
   class: "flex-fill text-white"
-}, wn = { class: "flex-fill text-end ms-2" }, Bn = ["href"];
+}, wn = { class: "flex-fill ms-2 text-end" }, Bn = ["href"];
 function In(a, e, n, r, c, i) {
   return n.variant === "flyout" ? (t(), l("div", dn, [
     o("div", sn, [
@@ -5367,7 +5367,7 @@ const No = {
   }
 }, Lo = {
   id: "countryDropdownMenuButton",
-  class: "btn btn-subdued-primary border border-secondary dropdown-toggle",
+  class: "btn btn-subdued-primary border-secondary dropdown-toggle border",
   type: "button",
   "data-bs-toggle": "dropdown",
   "aria-expanded": "false"
@@ -5430,34 +5430,34 @@ const qo = /* @__PURE__ */ R(No, [["render", So]]), va = "data:image/png;base64,
 }, To = { class: "flex-fill dropdown" }, vo = ["src"], wo = {
   key: 1,
   src: va,
-  class: "me-2 img-tiny rounded-circle",
+  class: "img-tiny rounded-circle me-2",
   alt: "user avatar"
 }, Bo = {
   key: 2,
-  class: "me-2 d-none d-md-block"
+  class: "d-none d-md-block me-2"
 }, Io = {
   key: 3,
-  class: "me-2 d-none d-md-block"
+  class: "d-none d-md-block me-2"
 }, ko = {
   class: "dropdown-menu dropdown-menu-end p-0",
   "aria-labelledby": "dropdownMenuButton1",
   style: { width: "300px" }
 }, Mo = {
   key: 0,
-  class: "bg-danger-subtle text-danger-emphasis px-3 py-2 rounded-top small fw-bold"
+  class: "bg-danger-subtle text-danger-emphasis rounded-top small fw-bold px-3 py-2"
 }, Ro = { class: "p-3" }, Do = { class: "d-flex justify-content-center" }, Uo = ["src"], Po = {
   key: 1,
   src: va,
   class: "img-profile rounded-circle",
   alt: "user avatar"
-}, Fo = { class: "mt-3" }, Go = { class: "mt-3 pt-3 border-top" };
+}, Fo = { class: "mt-3" }, Go = { class: "border-top mt-3 pt-3" };
 function xo(a, e, n, r, c, i) {
   return t(), l("div", {
-    class: N(["d-flex align-items-center border border-white p-0 rounded-pill small", { "bg-danger-subtle border-0": n.userOverride }])
+    class: N(["d-flex align-items-center rounded-pill small border border-white p-0", { "bg-danger-subtle border-0": n.userOverride }])
   }, [
     o("div", To, [
       o("a", {
-        class: N(["d-flex text-white text-decoration-none p-1 chevron", n.userOverride ? "text-danger-emphasis" : "text-white"]),
+        class: N(["d-flex text-decoration-none chevron p-1 text-white", n.userOverride ? "text-danger-emphasis" : "text-white"]),
         href: "#",
         role: "button",
         id: "dropdownMenuButton1",
@@ -5467,7 +5467,7 @@ function xo(a, e, n, r, c, i) {
         n.photoUrl ? (t(), l("img", {
           key: 0,
           src: n.photoUrl,
-          class: "me-2 img-tiny rounded-circle",
+          class: "img-tiny rounded-circle me-2",
           alt: "user avatar"
         }, null, 8, vo)) : (t(), l("img", wo)),
         n.userOverride ? (t(), l("span", Bo, y(n.userOverride), 1)) : (t(), l("span", Io, y(n.userNetid), 1)),
@@ -5499,7 +5499,7 @@ function xo(a, e, n, r, c, i) {
     ])
   ], 2);
 }
-const Xo = /* @__PURE__ */ R(bo, [["render", xo], ["__scopeId", "data-v-1f995e34"]]);
+const Xo = /* @__PURE__ */ R(bo, [["render", xo], ["__scopeId", "data-v-1b1ef1d7"]]);
 export {
   zo as SColorMode,
   qo as SCountryCode,

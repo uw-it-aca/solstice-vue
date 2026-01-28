@@ -4,7 +4,7 @@
       <div class="vh-100 bg-body-tertiary p-3">
         <header class="d-flex justify-content-between align-items-center">
           <div class="h4 flex-fill">
-            <i class="bi bi-box-fill me-2 text-brand"></i>
+            <i class="bi bi-box-fill text-brand me-2"></i>
             <a href="/" class="text-reset text-decoration-none">{{
               appName
             }}</a>
@@ -30,11 +30,11 @@
             </h1>
 
             <slot name="description" />
-            <hr class="mb-5 w-25 d-inline-block" />
+            <hr class="d-inline-block mb-5 w-25" />
             <slot name="content" />
           </main>
 
-          <footer class="pt-2 mt-5 mb-3 text-muted border-top">
+          <footer class="text-muted border-top mt-5 mb-3 pt-2">
             Copyright &copy; {{ new Date().getFullYear() }} University of
             Washington
           </footer>
@@ -44,26 +44,26 @@
   </div>
 </template>
 <script>
-import SColorMode from "@/components/SColorMode.vue";
+  import SColorMode from "@/components/SColorMode.vue";
 
-export default {
-  name: "SolsticeVue",
-  components: { SColorMode },
-  props: {
-    pageTitle: {
-      type: String,
-      required: true,
+  export default {
+    name: "SolsticeVue",
+    components: { SColorMode },
+    props: {
+      pageTitle: {
+        type: String,
+        required: true,
+      },
     },
-  },
-  data() {
-    return {
-      // minimum application setup overrides
-      appName: "Solstice Vue",
-    };
-  },
-  created: function () {
-    // constructs page title in the following format "Page Title - AppName"
-    document.title = this.pageTitle + " - " + this.appName;
-  },
-};
+    data() {
+      return {
+        // minimum application setup overrides
+        appName: "Solstice Vue",
+      };
+    },
+    created: function () {
+      // constructs page title in the following format "Page Title - AppName"
+      document.title = this.pageTitle + " - " + this.appName;
+    },
+  };
 </script>

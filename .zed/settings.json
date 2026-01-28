@@ -1,45 +1,47 @@
 {
   // ignore eslint
-  "language_servers": ["!eslint", "biome"],
-  "buffer_font_features": {
-    "calt": false
-  },
+  "language_servers": ["oxlint", "oxfmt"],
   "lsp": {
-    "biome": {
-      "settings": {
-        "require_config_file": true
-      }
-    }
+    "oxlint": {
+      "initialization_options": {
+        "settings": {
+          "configPath": null,
+          "run": "onType",
+          "disableNestedConfig": false,
+          "fixKind": "safe_fix",
+          "typeAware": true,
+          "unusedDisableDirectives": "deny",
+        },
+      },
+    },
+    "oxfmt": {
+      "initialization_options": {
+        "settings": {
+          "configPath": null,
+          //"run": "onSave",
+        },
+      },
+    },
   },
   // ... other settings
   "languages": {
+    "CSS": {
+      "formatter": { "language_server": { "name": "oxfmt" } },
+      "format_on_save": "off",
+    },
+    "SCSS": {
+      "formatter": { "language_server": { "name": "oxfmt" } },
+      "format_on_save": "off",
+    },
     "Vue.js": {
-      "formatter": {
-        "external": {
-          // use biome
-          "command": "./node_modules/.bin/biome",
-          "arguments": ["format", "--write", "--stdin-file-path={buffer_path}"]
-        }
-      },
-      "format_on_save": "off"
-      // set line length more than default 80
-      // "preferred_line_length": 100
-      // "language_servers": ["biome"]
+      "formatter": { "language_server": { "name": "oxfmt" } },
+      "format_on_save": "off",
     },
     "JavaScript": {
-      "formatter": { "language_server": { "name": "biome" } },
-      "code_actions_on_format": {
-        "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      }
-      // "language_servers": ["biome"]
+      "formatter": { "language_server": { "name": "oxfmt" } },
     },
     "TypeScript": {
-      "formatter": { "language_server": { "name": "biome" } },
-      "code_actions_on_format": {
-        "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      }
-    }
-  }
+      "formatter": { "language_server": { "name": "oxfmt" } },
+    },
+  },
 }

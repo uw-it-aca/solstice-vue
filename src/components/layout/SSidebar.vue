@@ -4,14 +4,14 @@
     :style="[isPreview ? 'min-height: auto !important;' : '']"
   >
     <div
-      :class="sidebarClass + [!mq.mdMinus ? ' overflow-auto' : '']"
+      :class="sidebarClass + [!mq.mdMinus ? 'overflow-auto' : '']"
       class="sol-sidebar d-flex flex-column"
       :style="[!mq.mdMinus ? 'min-width: 280px; max-width:280px;' : '']"
     >
       <header>
         <div
           v-if="$slots['profile']"
-          class="py-2 px-3 small bg-black bg-opacity-10"
+          class="small bg-opacity-10 bg-black px-3 py-2"
         >
           <slot name="profile">
             <div class="d-flex">
@@ -29,7 +29,7 @@
         >
           <a
             v-if="$slots['navigation']"
-            class="btn btn-link btn-sm border border-1 border-light rounded-3 py-0 px-1 text-light d-lg-none me-2"
+            class="btn btn-link btn-sm border-light rounded-3 text-light d-lg-none me-2 border border-1 px-1 py-0"
             data-bs-toggle="collapse"
             data-bs-target="#sidebar-nav-collapse"
             role="button"
@@ -52,7 +52,7 @@
 
       <div
         id="sidebar-nav-collapse"
-        class="px-3 flex-fill"
+        class="flex-fill px-3"
         :class="[
           !mq.mdMinus
             ? 'collapse.show d-flex flex-column justify-content-between'
@@ -70,7 +70,7 @@
             </ul>
           </slot>
         </nav>
-        <aside v-if="$slots['aside']" class="mb-3 text-light">
+        <aside v-if="$slots['aside']" class="text-light mb-3">
           <slot name="aside">this is aside content</slot>
         </aside>
       </div>
@@ -94,7 +94,7 @@
 
         <footer v-if="$slots['footer']">
           <slot name="footer">
-            <div class="font-weight-light py-3 small">
+            <div class="font-weight-light small py-3">
               <ul class="list-inline m-0">
                 <li class="list-inline-item">
                   <a href="http://www.washington.edu/online/privacy/"
@@ -168,7 +168,7 @@
   }
 
   .sol-sidebar-logo {
-    background-image: url('../../assets/images/w-logo-white.png');
+    background-image: url("../../assets/images/w-logo-white.png");
     background-repeat: no-repeat;
     background-size: 45px;
     background-position: right 20px bottom;
@@ -176,7 +176,7 @@
   }
 
   .sol-sidebar-logo-light {
-    background-image: url('../../assets/images/w-logo-purple.png');
+    background-image: url("../../assets/images/w-logo-purple.png");
     background-repeat: no-repeat;
     background-size: 45px;
     background-position: right 20px bottom;

@@ -76,7 +76,7 @@
 
     <template #bar>
       <div
-        class="alert alert-warning alert-dismissible m-0 fade show border-0 border-warning border-start border-5 rounded-0"
+        class="alert alert-warning alert-dismissible fade show border-warning border-start rounded-0 m-0 border-0 border-5"
         role="alert"
       >
         <p>
@@ -128,29 +128,29 @@
 </template>
 
 <script>
-import STopbar from "@/components/layout/STopbar.vue";
-import SColorMode from "@/components/SColorMode.vue";
-import SProfile from "@/components/SProfile.vue";
+  import STopbar from "@/components/layout/STopbar.vue";
+  import SColorMode from "@/components/SColorMode.vue";
+  import SProfile from "@/components/SProfile.vue";
 
-export default {
-  name: "DocsSandboxTopbarIndex",
-  components: { STopbar, SColorMode, SProfile },
-  data() {
-    return {
-      // minimum application setup overrides
-      appName: "MyApp",
-      appRootUrl: "/",
-      signOutUrl: "/signout",
-      pageTitle: "Home",
-      userNetid: "myusername",
-      userOfficial: "MYOFFICAL NAME",
-      userPreferred: "Preferred Name",
-      currentYear: new Date().getFullYear(),
-    };
-  },
-  created: function () {
-    // constructs page title in the following format "Page Title - AppName"
-    document.title = this.pageTitle + " - " + this.appName;
-  },
-};
+  export default {
+    name: "DocsSandboxTopbarIndex",
+    components: { STopbar, SColorMode, SProfile },
+    data() {
+      return {
+        // minimum application setup overrides
+        appName: "MyApp",
+        appRootUrl: "/",
+        signOutUrl: "/signout",
+        pageTitle: "Home",
+        userNetid: "myusername",
+        userOfficial: "MYOFFICAL NAME",
+        userPreferred: "Preferred Name",
+        currentYear: new Date().getFullYear(),
+      };
+    },
+    created: function () {
+      // constructs page title in the following format "Page Title - AppName"
+      document.title = this.pageTitle + " - " + this.appName;
+    },
+  };
 </script>

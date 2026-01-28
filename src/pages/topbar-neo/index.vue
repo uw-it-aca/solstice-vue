@@ -67,27 +67,27 @@
             >
           </template>
         </SUser> -->
-        <SColorMode :color-class="'text-white'" class="ms-2"/>
+        <SColorMode :color-class="'text-white'" class="ms-2" />
       </div>
     </template>
 
     <template #navigation>
       <!-- Bootstrap navbar-nav classes -->
-      <ul class="navbar-nav text-white me-auto my-2 my-xl-0">
+      <ul class="navbar-nav my-xl-0 my-2 me-auto text-white">
         <li class="nav-item me-5">
           <a
-            class="nav-link px-0 text-white active"
+            class="nav-link active px-0 text-white"
             aria-current="page"
             href="#"
             >Home</a
           >
         </li>
         <li class="nav-item me-5">
-          <a class="nav-link text-white px-0" href="#">Link</a>
+          <a class="nav-link px-0 text-white" href="#">Link</a>
         </li>
         <li class="nav-item dropdown me-5">
           <a
-            class="nav-link px-0 text-white dropdown-toggle"
+            class="nav-link dropdown-toggle px-0 text-white"
             href="#"
             role="button"
             data-bs-toggle="dropdown"
@@ -105,7 +105,7 @@
               >
             </li>
             <li>
-              <hr class="dropdown-divider">
+              <hr class="dropdown-divider" />
             </li>
             <li>
               <a class="dropdown-item" href="#">Something else here</a>
@@ -113,14 +113,14 @@
           </ul>
         </li>
       </ul>
-      <div class="mb-3 mb-xl-0">
+      <div class="mb-xl-0 mb-3">
         <form class="d-flex" role="search">
           <input
-            class="form-control form-control-sm me-2 bg-opacity-25"
+            class="form-control form-control-sm bg-opacity-25 me-2"
             type="search"
             placeholder="Search"
             aria-label="Search"
-          >
+          />
           <button class="btn btn-sm btn-outline-secondary" type="submit">
             Search
           </button>
@@ -131,7 +131,7 @@
     <template #system>
       <div class="row">
         <div class="col">
-          <div class="text-center text-info-emphasis p-2 small">
+          <div class="text-info-emphasis small p-2 text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
             nostrum iste! Commodi magni natus provident mollitia. Illum officiis
             molestiae optio distinctio! Repellendus quod minima recusandae

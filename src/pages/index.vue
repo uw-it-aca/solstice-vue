@@ -6,7 +6,7 @@
     <template #title>{{ pageTitle }}</template>
 
     <template #description>
-      <div class="p-0 col-md-8 lead">
+      <div class="col-md-8 lead p-0">
         <p>
           <a
             href="https://github.com/uw-it-aca/solstice-vue"
@@ -48,9 +48,7 @@
 
       <ol>
         <li>create a branch</li>
-        <li>
-          run the <code>npm run build</code> command
-        </li>
+        <li>run the <code>npm run build</code> command</li>
       </ol>
 
       <h2 class="fw-bold">Foundations</h2>
@@ -69,401 +67,401 @@
       <h3>Color</h3>
 
       <h4>Brand Swatches</h4>
-      <div class="grid mb-5" style="--bs-columns: 8">
+      <div class="mb-5 grid" style="--bs-columns: 8">
         <div>
-          <div class="p-3 mb-2 position-relative bg-purple3-500 text-white">
+          <div class="position-relative bg-purple3-500 mb-2 p-3 text-white">
             <strong class="d-block">$purple3</strong>
             #32006e
           </div>
-          <div class="p-3 bg-purple3-100 text-black small">
+          <div class="bg-purple3-100 small p-3 text-black">
             $purple3-100 #d6cce2
           </div>
-          <div class="p-3 bg-purple3-200 text-black small">
+          <div class="bg-purple3-200 small p-3 text-black">
             $purple3-200 #ad99c5
           </div>
-          <div class="p-3 bg-purple3-300 text-white small">
+          <div class="bg-purple3-300 small p-3 text-white">
             $purple3-300 #8466a8
           </div>
-          <div class="p-3 bg-purple3-400 text-white small">
+          <div class="bg-purple3-400 small p-3 text-white">
             $purple3-400 #5b338b
           </div>
-          <div class="p-3 bg-purple3-500 text-white small">
+          <div class="bg-purple3-500 small p-3 text-white">
             $purple3-500 #32006e
           </div>
-          <div class="p-3 bg-purple3-600 text-white small">
+          <div class="bg-purple3-600 small p-3 text-white">
             $purple3-600 #280058
           </div>
-          <div class="p-3 bg-purple3-700 text-white small">
+          <div class="bg-purple3-700 small p-3 text-white">
             $purple3-700 #1e0042
           </div>
-          <div class="p-3 bg-purple3-800 text-white small">
+          <div class="bg-purple3-800 small p-3 text-white">
             $purple3-800 #14002c
           </div>
-          <div class="p-3 bg-purple3-900 text-white small">
+          <div class="bg-purple3-900 small p-3 text-white">
             $purple3-900 #0a0016
           </div>
         </div>
         <div>
-          <div class="p-3 mb-2 position-relative bg-purple2-500 text-white">
+          <div class="position-relative bg-purple2-500 mb-2 p-3 text-white">
             <strong class="d-block">$purple2</strong>
             #4b2e83
           </div>
-          <div class="p-3 bg-purple2-100 text-black small">$purple2-100</div>
-          <div class="p-3 bg-purple2-200 text-black small">$purple2-200</div>
-          <div class="p-3 bg-purple2-300 text-black small">$purple2-300</div>
-          <div class="p-3 bg-purple2-400 text-white small">$purple2-400</div>
-          <div class="p-3 bg-purple2-500 text-white small">$purple2-500</div>
-          <div class="p-3 bg-purple2-600 text-white small">$purple2-600</div>
-          <div class="p-3 bg-purple2-700 text-white small">$purple2-700</div>
-          <div class="p-3 bg-purple2-800 text-white small">$purple2-800</div>
-          <div class="p-3 bg-purple2-900 text-white small">$purple2-900</div>
+          <div class="bg-purple2-100 small p-3 text-black">$purple2-100</div>
+          <div class="bg-purple2-200 small p-3 text-black">$purple2-200</div>
+          <div class="bg-purple2-300 small p-3 text-black">$purple2-300</div>
+          <div class="bg-purple2-400 small p-3 text-white">$purple2-400</div>
+          <div class="bg-purple2-500 small p-3 text-white">$purple2-500</div>
+          <div class="bg-purple2-600 small p-3 text-white">$purple2-600</div>
+          <div class="bg-purple2-700 small p-3 text-white">$purple2-700</div>
+          <div class="bg-purple2-800 small p-3 text-white">$purple2-800</div>
+          <div class="bg-purple2-900 small p-3 text-white">$purple2-900</div>
         </div>
         <div>
-          <div class="p-3 mb-2 position-relative bg-beige2-500 text-white">
+          <div class="position-relative bg-beige2-500 mb-2 p-3 text-white">
             <strong class="d-block">$beige2</strong>
             #85754d
           </div>
-          <div class="p-3 bg-beige2-100 text-black small">$beige2-100</div>
-          <div class="p-3 bg-beige2-200 text-black small">$beige2-200</div>
-          <div class="p-3 bg-beige2-300 text-black small">$beige2-300</div>
-          <div class="p-3 bg-beige2-400 text-black small">$beige2-400</div>
-          <div class="p-3 bg-beige2-500 text-black small">$beige2-500</div>
-          <div class="p-3 bg-beige2-600 text-white small">$beige2-600</div>
-          <div class="p-3 bg-beige2-700 text-white small">$beige2-700</div>
-          <div class="p-3 bg-beige2-800 text-white small">$beige2-800</div>
-          <div class="p-3 bg-beige2-900 text-white small">$beige2-900</div>
+          <div class="bg-beige2-100 small p-3 text-black">$beige2-100</div>
+          <div class="bg-beige2-200 small p-3 text-black">$beige2-200</div>
+          <div class="bg-beige2-300 small p-3 text-black">$beige2-300</div>
+          <div class="bg-beige2-400 small p-3 text-black">$beige2-400</div>
+          <div class="bg-beige2-500 small p-3 text-black">$beige2-500</div>
+          <div class="bg-beige2-600 small p-3 text-white">$beige2-600</div>
+          <div class="bg-beige2-700 small p-3 text-white">$beige2-700</div>
+          <div class="bg-beige2-800 small p-3 text-white">$beige2-800</div>
+          <div class="bg-beige2-900 small p-3 text-white">$beige2-900</div>
         </div>
         <div>
-          <div class="p-3 mb-2 position-relative bg-beige-500 text-black">
+          <div class="position-relative bg-beige-500 mb-2 p-3 text-black">
             <strong class="d-block">$beige</strong>
             #b7a57a
           </div>
-          <div class="p-3 bg-beige-100 text-black small">$beige-100</div>
-          <div class="p-3 bg-beige-200 text-black small">$beige-200</div>
-          <div class="p-3 bg-beige-300 text-black small">$beige-300</div>
-          <div class="p-3 bg-beige-400 text-black small">$beige-400</div>
-          <div class="p-3 bg-beige-500 text-black small">$beige-500</div>
-          <div class="p-3 bg-beige-600 text-black small">$beige-600</div>
-          <div class="p-3 bg-beige-700 text-white small">$beige-700</div>
-          <div class="p-3 bg-beige-800 text-white small">$beige-800</div>
-          <div class="p-3 bg-beige-900 text-white small">$beige-900</div>
+          <div class="bg-beige-100 small p-3 text-black">$beige-100</div>
+          <div class="bg-beige-200 small p-3 text-black">$beige-200</div>
+          <div class="bg-beige-300 small p-3 text-black">$beige-300</div>
+          <div class="bg-beige-400 small p-3 text-black">$beige-400</div>
+          <div class="bg-beige-500 small p-3 text-black">$beige-500</div>
+          <div class="bg-beige-600 small p-3 text-black">$beige-600</div>
+          <div class="bg-beige-700 small p-3 text-white">$beige-700</div>
+          <div class="bg-beige-800 small p-3 text-white">$beige-800</div>
+          <div class="bg-beige-900 small p-3 text-white">$beige-900</div>
         </div>
 
         <div>
-          <div class="p-3 mb-2 position-relative bg-gold-500 text-black">
+          <div class="position-relative bg-gold-500 mb-2 p-3 text-black">
             <strong class="d-block">$gold</strong>
             #ffc700
           </div>
-          <div class="p-3 bg-gold-100 text-black small">$gold-100</div>
-          <div class="p-3 bg-gold-200 text-black small">$gold-200</div>
-          <div class="p-3 bg-gold-300 text-black small">$gold-300</div>
-          <div class="p-3 bg-gold-400 text-black small">$gold-400</div>
-          <div class="p-3 bg-gold-500 text-black small">$gold-500</div>
-          <div class="p-3 bg-gold-600 text-black small">$gold-600</div>
-          <div class="p-3 bg-gold-700 text-black small">$gold-700</div>
-          <div class="p-3 bg-gold-800 text-white small">$gold-800</div>
-          <div class="p-3 bg-gold-900 text-white small">$gold-900</div>
+          <div class="bg-gold-100 small p-3 text-black">$gold-100</div>
+          <div class="bg-gold-200 small p-3 text-black">$gold-200</div>
+          <div class="bg-gold-300 small p-3 text-black">$gold-300</div>
+          <div class="bg-gold-400 small p-3 text-black">$gold-400</div>
+          <div class="bg-gold-500 small p-3 text-black">$gold-500</div>
+          <div class="bg-gold-600 small p-3 text-black">$gold-600</div>
+          <div class="bg-gold-700 small p-3 text-black">$gold-700</div>
+          <div class="bg-gold-800 small p-3 text-white">$gold-800</div>
+          <div class="bg-gold-900 small p-3 text-white">$gold-900</div>
         </div>
       </div>
 
       <h4>Bootstrap Theme / Semantic (overrides included)</h4>
-      <div class="grid mb-5" style="--bs-columns: 8">
+      <div class="mb-5 grid" style="--bs-columns: 8">
         <div>
-          <div class="p-3 mb-2 position-relative bg-blue2-500 text-white">
+          <div class="position-relative bg-blue2-500 mb-2 p-3 text-white">
             <strong class="d-block">$blue2</strong>
             #2f68cb
           </div>
-          <div class="p-3 bg-blue2-100 text-black small">$blue2-100</div>
-          <div class="p-3 bg-blue2-200 text-black small">$blue2-200</div>
-          <div class="p-3 bg-blue2-300 text-black small">$blue2-300</div>
-          <div class="p-3 bg-blue2-400 text-black small">$blue2-400</div>
-          <div class="p-3 bg-blue2-500 text-white small">$blue2-500</div>
-          <div class="p-3 bg-blue2-600 text-white small">$blue2-600</div>
-          <div class="p-3 bg-blue2-700 text-white small">$blue2-700</div>
-          <div class="p-3 bg-blue2-800 text-white small">$blue2-800</div>
-          <div class="p-3 bg-blue2-900 text-white small">$blue2-900</div>
+          <div class="bg-blue2-100 small p-3 text-black">$blue2-100</div>
+          <div class="bg-blue2-200 small p-3 text-black">$blue2-200</div>
+          <div class="bg-blue2-300 small p-3 text-black">$blue2-300</div>
+          <div class="bg-blue2-400 small p-3 text-black">$blue2-400</div>
+          <div class="bg-blue2-500 small p-3 text-white">$blue2-500</div>
+          <div class="bg-blue2-600 small p-3 text-white">$blue2-600</div>
+          <div class="bg-blue2-700 small p-3 text-white">$blue2-700</div>
+          <div class="bg-blue2-800 small p-3 text-white">$blue2-800</div>
+          <div class="bg-blue2-900 small p-3 text-white">$blue2-900</div>
         </div>
         <div>
-          <div class="p-3 mb-2 position-relative bg-red2-500 text-white">
+          <div class="position-relative bg-red2-500 mb-2 p-3 text-white">
             <strong class="d-block">$red2</strong>
             #cb444a
           </div>
-          <div class="p-3 bg-red2-100 text-black small">$red2-100</div>
-          <div class="p-3 bg-red2-200 text-black small">$red2-200</div>
-          <div class="p-3 bg-red2-300 text-black small">$red2-300</div>
-          <div class="p-3 bg-red2-400 text-black small">$red2-400</div>
-          <div class="p-3 bg-red2-500 text-white small">$red2-500</div>
-          <div class="p-3 bg-red2-600 text-white small">$red2-600</div>
-          <div class="p-3 bg-red2-700 text-white small">$red2-700</div>
-          <div class="p-3 bg-red2-800 text-white small">$red2-800</div>
-          <div class="p-3 bg-red2-900 text-white small">$red2-900</div>
+          <div class="bg-red2-100 small p-3 text-black">$red2-100</div>
+          <div class="bg-red2-200 small p-3 text-black">$red2-200</div>
+          <div class="bg-red2-300 small p-3 text-black">$red2-300</div>
+          <div class="bg-red2-400 small p-3 text-black">$red2-400</div>
+          <div class="bg-red2-500 small p-3 text-white">$red2-500</div>
+          <div class="bg-red2-600 small p-3 text-white">$red2-600</div>
+          <div class="bg-red2-700 small p-3 text-white">$red2-700</div>
+          <div class="bg-red2-800 small p-3 text-white">$red2-800</div>
+          <div class="bg-red2-900 small p-3 text-white">$red2-900</div>
         </div>
         <div>
-          <div class="p-3 mb-2 position-relative bg-yellow-500 text-black">
+          <div class="position-relative mb-2 bg-yellow-500 p-3 text-black">
             <strong class="d-block">$yellow</strong>
             #ffc107
           </div>
-          <div class="p-3 bg-yellow-100 text-black small">$yellow-100</div>
-          <div class="p-3 bg-yellow-200 text-black small">$yellow-200</div>
-          <div class="p-3 bg-yellow-300 text-black small">$yellow-300</div>
-          <div class="p-3 bg-yellow-400 text-black small">$yellow-400</div>
-          <div class="p-3 bg-yellow-500 text-black small">$yellow-500</div>
-          <div class="p-3 bg-yellow-600 text-black small">$yellow-600</div>
-          <div class="p-3 bg-yellow-700 text-black small">$yellow-700</div>
-          <div class="p-3 bg-yellow-800 text-white small">$yellow-800</div>
-          <div class="p-3 bg-yellow-900 text-white small">$yellow-900</div>
+          <div class="small bg-yellow-100 p-3 text-black">$yellow-100</div>
+          <div class="small bg-yellow-200 p-3 text-black">$yellow-200</div>
+          <div class="small bg-yellow-300 p-3 text-black">$yellow-300</div>
+          <div class="small bg-yellow-400 p-3 text-black">$yellow-400</div>
+          <div class="small bg-yellow-500 p-3 text-black">$yellow-500</div>
+          <div class="small bg-yellow-600 p-3 text-black">$yellow-600</div>
+          <div class="small bg-yellow-700 p-3 text-black">$yellow-700</div>
+          <div class="small bg-yellow-800 p-3 text-white">$yellow-800</div>
+          <div class="small bg-yellow-900 p-3 text-white">$yellow-900</div>
         </div>
 
         <div>
-          <div class="p-3 mb-2 position-relative bg-green-500 text-white">
+          <div class="position-relative mb-2 bg-green-500 p-3 text-white">
             <strong class="d-block">$green</strong>
             #198754
           </div>
-          <div class="p-3 bg-green-100 text-black small">$green-100</div>
-          <div class="p-3 bg-green-200 text-black small">$green-200</div>
-          <div class="p-3 bg-green-300 text-black small">$green-300</div>
-          <div class="p-3 bg-green-400 text-black small">$green-400</div>
-          <div class="p-3 bg-green-500 text-white small">$green-500</div>
-          <div class="p-3 bg-green-600 text-white small">$green-600</div>
-          <div class="p-3 bg-green-700 text-white small">$green-700</div>
-          <div class="p-3 bg-green-800 text-white small">$green-800</div>
-          <div class="p-3 bg-green-900 text-white small">$green-900</div>
+          <div class="small bg-green-100 p-3 text-black">$green-100</div>
+          <div class="small bg-green-200 p-3 text-black">$green-200</div>
+          <div class="small bg-green-300 p-3 text-black">$green-300</div>
+          <div class="small bg-green-400 p-3 text-black">$green-400</div>
+          <div class="small bg-green-500 p-3 text-white">$green-500</div>
+          <div class="small bg-green-600 p-3 text-white">$green-600</div>
+          <div class="small bg-green-700 p-3 text-white">$green-700</div>
+          <div class="small bg-green-800 p-3 text-white">$green-800</div>
+          <div class="small bg-green-900 p-3 text-white">$green-900</div>
         </div>
         <div>
-          <div class="p-3 mb-2 position-relative bg-cyan-500 text-black">
+          <div class="position-relative mb-2 bg-cyan-500 p-3 text-black">
             <strong class="d-block">$cyan</strong>
             #0dcaf0
           </div>
-          <div class="p-3 bg-cyan-100 text-black small">$cyan-100</div>
-          <div class="p-3 bg-cyan-200 text-black small">$cyan-200</div>
-          <div class="p-3 bg-cyan-300 text-black small">$cyan-300</div>
-          <div class="p-3 bg-cyan-400 text-black small">$cyan-400</div>
-          <div class="p-3 bg-cyan-500 text-black small">$cyan-500</div>
-          <div class="p-3 bg-cyan-600 text-black small">$cyan-600</div>
-          <div class="p-3 bg-cyan-700 text-white small">$cyan-700</div>
-          <div class="p-3 bg-cyan-800 text-white small">$cyan-800</div>
-          <div class="p-3 bg-cyan-900 text-white small">$cyan-900</div>
+          <div class="small bg-cyan-100 p-3 text-black">$cyan-100</div>
+          <div class="small bg-cyan-200 p-3 text-black">$cyan-200</div>
+          <div class="small bg-cyan-300 p-3 text-black">$cyan-300</div>
+          <div class="small bg-cyan-400 p-3 text-black">$cyan-400</div>
+          <div class="small bg-cyan-500 p-3 text-black">$cyan-500</div>
+          <div class="small bg-cyan-600 p-3 text-black">$cyan-600</div>
+          <div class="small bg-cyan-700 p-3 text-white">$cyan-700</div>
+          <div class="small bg-cyan-800 p-3 text-white">$cyan-800</div>
+          <div class="small bg-cyan-900 p-3 text-white">$cyan-900</div>
         </div>
         <div>
-          <div class="p-3 mb-2 position-relative bg-gray-500 text-black">
+          <div class="position-relative mb-2 bg-gray-500 p-3 text-black">
             <strong class="d-block">$gray</strong>
             #adb5bd
           </div>
-          <div class="p-3 bg-gray-100 text-black small">$gray-100</div>
-          <div class="p-3 bg-gray-200 text-black small">$gray-200</div>
-          <div class="p-3 bg-gray-300 text-black small">$gray-300</div>
-          <div class="p-3 bg-gray-400 text-black small">$gray-400</div>
-          <div class="p-3 bg-gray-500 text-black small">$gray-500</div>
-          <div class="p-3 bg-gray-600 text-white small">$gray-600</div>
-          <div class="p-3 bg-gray-700 text-white small">$gray-700</div>
-          <div class="p-3 bg-gray-800 text-white small">$gray-800</div>
-          <div class="p-3 bg-gray-900 text-white small">$gray-900</div>
+          <div class="small bg-gray-100 p-3 text-black">$gray-100</div>
+          <div class="small bg-gray-200 p-3 text-black">$gray-200</div>
+          <div class="small bg-gray-300 p-3 text-black">$gray-300</div>
+          <div class="small bg-gray-400 p-3 text-black">$gray-400</div>
+          <div class="small bg-gray-500 p-3 text-black">$gray-500</div>
+          <div class="small bg-gray-600 p-3 text-white">$gray-600</div>
+          <div class="small bg-gray-700 p-3 text-white">$gray-700</div>
+          <div class="small bg-gray-800 p-3 text-white">$gray-800</div>
+          <div class="small bg-gray-900 p-3 text-white">$gray-900</div>
         </div>
       </div>
 
       <h4>Academic swatches</h4>
-      <div class="grid mb-5" style="--bs-columns: 8">
+      <div class="mb-5 grid" style="--bs-columns: 8">
         <div>
-          <div class="p-3 mb-2 position-relative bg-scarlet-500 text-black">
+          <div class="position-relative bg-scarlet-500 mb-2 p-3 text-black">
             <strong class="d-block">$scarlet</strong>
             #ff812c
           </div>
-          <div class="p-3 bg-scarlet-100 text-black small">$scarlet-100</div>
-          <div class="p-3 bg-scarlet-200 text-black small">$scarlet-200</div>
-          <div class="p-3 bg-scarlet-300 text-black small">$scarlet-300</div>
-          <div class="p-3 bg-scarlet-400 text-black small">$scarlet-400</div>
-          <div class="p-3 bg-scarlet-500 text-black small">$scarlet-500</div>
-          <div class="p-3 bg-scarlet-600 text-black small">$scarlet-600</div>
-          <div class="p-3 bg-scarlet-700 text-white small">$scarlet-700</div>
-          <div class="p-3 bg-scarlet-800 text-white small">$scarlet-800</div>
-          <div class="p-3 bg-scarlet-900 text-white small">$scarlet-900</div>
+          <div class="bg-scarlet-100 small p-3 text-black">$scarlet-100</div>
+          <div class="bg-scarlet-200 small p-3 text-black">$scarlet-200</div>
+          <div class="bg-scarlet-300 small p-3 text-black">$scarlet-300</div>
+          <div class="bg-scarlet-400 small p-3 text-black">$scarlet-400</div>
+          <div class="bg-scarlet-500 small p-3 text-black">$scarlet-500</div>
+          <div class="bg-scarlet-600 small p-3 text-black">$scarlet-600</div>
+          <div class="bg-scarlet-700 small p-3 text-white">$scarlet-700</div>
+          <div class="bg-scarlet-800 small p-3 text-white">$scarlet-800</div>
+          <div class="bg-scarlet-900 small p-3 text-white">$scarlet-900</div>
         </div>
         <div>
-          <div class="p-3 mb-2 position-relative bg-icicle-500 text-black">
+          <div class="position-relative bg-icicle-500 mb-2 p-3 text-black">
             <strong class="d-block">$icicle</strong>
             #00d2ff
           </div>
-          <div class="p-3 bg-icicle-100 text-black small">$icicle-100</div>
-          <div class="p-3 bg-icicle-200 text-black small">$icicle-200</div>
-          <div class="p-3 bg-icicle-300 text-black small">$icicle-300</div>
-          <div class="p-3 bg-icicle-400 text-black small">$icicle-400</div>
-          <div class="p-3 bg-icicle-500 text-black small">$icicle-500</div>
-          <div class="p-3 bg-icicle-600 text-black small">$icicle-600</div>
-          <div class="p-3 bg-icicle-700 text-white small">$icicle-700</div>
-          <div class="p-3 bg-icicle-800 text-white small">$icicle-800</div>
-          <div class="p-3 bg-icicle-900 text-white small">$icicle-900</div>
+          <div class="bg-icicle-100 small p-3 text-black">$icicle-100</div>
+          <div class="bg-icicle-200 small p-3 text-black">$icicle-200</div>
+          <div class="bg-icicle-300 small p-3 text-black">$icicle-300</div>
+          <div class="bg-icicle-400 small p-3 text-black">$icicle-400</div>
+          <div class="bg-icicle-500 small p-3 text-black">$icicle-500</div>
+          <div class="bg-icicle-600 small p-3 text-black">$icicle-600</div>
+          <div class="bg-icicle-700 small p-3 text-white">$icicle-700</div>
+          <div class="bg-icicle-800 small p-3 text-white">$icicle-800</div>
+          <div class="bg-icicle-900 small p-3 text-white">$icicle-900</div>
         </div>
         <div>
-          <div class="p-3 mb-2 position-relative bg-lime-500 text-black">
+          <div class="position-relative mb-2 bg-lime-500 p-3 text-black">
             <strong class="d-block">$lime</strong>
             #70e83f
           </div>
-          <div class="p-3 bg-lime-100 text-black small">$lime-100</div>
-          <div class="p-3 bg-lime-200 text-black small">$lime-200</div>
-          <div class="p-3 bg-lime-300 text-black small">$lime-300</div>
-          <div class="p-3 bg-lime-400 text-black small">$lime-400</div>
-          <div class="p-3 bg-lime-500 text-black small">$lime-500</div>
-          <div class="p-3 bg-lime-600 text-black small">$lime-600</div>
-          <div class="p-3 bg-lime-700 text-black small">$lime-700</div>
-          <div class="p-3 bg-lime-800 text-white small">$lime-800</div>
-          <div class="p-3 bg-lime-900 text-white small">$lime-900</div>
+          <div class="small bg-lime-100 p-3 text-black">$lime-100</div>
+          <div class="small bg-lime-200 p-3 text-black">$lime-200</div>
+          <div class="small bg-lime-300 p-3 text-black">$lime-300</div>
+          <div class="small bg-lime-400 p-3 text-black">$lime-400</div>
+          <div class="small bg-lime-500 p-3 text-black">$lime-500</div>
+          <div class="small bg-lime-600 p-3 text-black">$lime-600</div>
+          <div class="small bg-lime-700 p-3 text-black">$lime-700</div>
+          <div class="small bg-lime-800 p-3 text-white">$lime-800</div>
+          <div class="small bg-lime-900 p-3 text-white">$lime-900</div>
         </div>
         <div>
-          <div class="p-3 mb-2 position-relative bg-amber-500 text-black">
+          <div class="position-relative mb-2 bg-amber-500 p-3 text-black">
             <strong class="d-block">$amber</strong>
             #ffc901
           </div>
-          <div class="p-3 bg-amber-100 text-black small">$amber-100</div>
-          <div class="p-3 bg-amber-200 text-black small">$amber-200</div>
-          <div class="p-3 bg-amber-300 text-black small">$amber-300</div>
-          <div class="p-3 bg-amber-400 text-black small">$amber-400</div>
-          <div class="p-3 bg-amber-500 text-black small">$amber-500</div>
-          <div class="p-3 bg-amber-600 text-black small">$amber-600</div>
-          <div class="p-3 bg-amber-700 text-black small">$amber-700</div>
-          <div class="p-3 bg-amber-800 text-white small">$amber-800</div>
-          <div class="p-3 bg-amber-900 text-white small">$amber-900</div>
+          <div class="small bg-amber-100 p-3 text-black">$amber-100</div>
+          <div class="small bg-amber-200 p-3 text-black">$amber-200</div>
+          <div class="small bg-amber-300 p-3 text-black">$amber-300</div>
+          <div class="small bg-amber-400 p-3 text-black">$amber-400</div>
+          <div class="small bg-amber-500 p-3 text-black">$amber-500</div>
+          <div class="small bg-amber-600 p-3 text-black">$amber-600</div>
+          <div class="small bg-amber-700 p-3 text-black">$amber-700</div>
+          <div class="small bg-amber-800 p-3 text-white">$amber-800</div>
+          <div class="small bg-amber-900 p-3 text-white">$amber-900</div>
         </div>
       </div>
 
       <h4>Decorative swatches</h4>
-      <div class="grid mb-5" style="--bs-columns: 8">
+      <div class="mb-5 grid" style="--bs-columns: 8">
         <div>
-          <div class="p-3 mb-2 position-relative bg-violet-500 text-white">
+          <div class="position-relative mb-2 bg-violet-500 p-3 text-white">
             <strong class="d-block">$violet</strong>
             #cb444a
           </div>
-          <div class="p-3 bg-violet-100 text-black small">$violet-100</div>
-          <div class="p-3 bg-violet-200 text-black small">$violet-200</div>
-          <div class="p-3 bg-violet-300 text-black small">$violet-300</div>
-          <div class="p-3 bg-violet-400 text-black small">$violet-400</div>
-          <div class="p-3 bg-violet-500 text-white small">$violet-500</div>
-          <div class="p-3 bg-violet-600 text-white small">$violet-600</div>
-          <div class="p-3 bg-violet-700 text-white small">$violet-700</div>
-          <div class="p-3 bg-violet-800 text-white small">$violet-800</div>
-          <div class="p-3 bg-violet-900 text-white small">$violet-900</div>
+          <div class="small bg-violet-100 p-3 text-black">$violet-100</div>
+          <div class="small bg-violet-200 p-3 text-black">$violet-200</div>
+          <div class="small bg-violet-300 p-3 text-black">$violet-300</div>
+          <div class="small bg-violet-400 p-3 text-black">$violet-400</div>
+          <div class="small bg-violet-500 p-3 text-white">$violet-500</div>
+          <div class="small bg-violet-600 p-3 text-white">$violet-600</div>
+          <div class="small bg-violet-700 p-3 text-white">$violet-700</div>
+          <div class="small bg-violet-800 p-3 text-white">$violet-800</div>
+          <div class="small bg-violet-900 p-3 text-white">$violet-900</div>
         </div>
         <div>
-          <div class="p-3 mb-2 position-relative bg-turquoise-500 text-white">
+          <div class="position-relative bg-turquoise-500 mb-2 p-3 text-white">
             <strong class="d-block">$turquoise</strong>
             #2f68cb
           </div>
-          <div class="p-3 bg-turquoise-100 text-black small">
+          <div class="bg-turquoise-100 small p-3 text-black">
             $turquoise-100
           </div>
-          <div class="p-3 bg-turquoise-200 text-black small">
+          <div class="bg-turquoise-200 small p-3 text-black">
             $turquoise-200
           </div>
-          <div class="p-3 bg-turquoise-300 text-black small">
+          <div class="bg-turquoise-300 small p-3 text-black">
             $turquoise-300
           </div>
-          <div class="p-3 bg-turquoise-400 text-black small">
+          <div class="bg-turquoise-400 small p-3 text-black">
             $turquoise-400
           </div>
-          <div class="p-3 bg-turquoise-500 text-white small">
+          <div class="bg-turquoise-500 small p-3 text-white">
             $turquoise-500
           </div>
-          <div class="p-3 bg-turquoise-600 text-white small">
+          <div class="bg-turquoise-600 small p-3 text-white">
             $turquoise-600
           </div>
-          <div class="p-3 bg-turquoise-700 text-white small">
+          <div class="bg-turquoise-700 small p-3 text-white">
             $turquoise-700
           </div>
-          <div class="p-3 bg-turquoise-800 text-white small">
+          <div class="bg-turquoise-800 small p-3 text-white">
             $turquoise-800
           </div>
-          <div class="p-3 bg-turquoise-900 text-white small">
+          <div class="bg-turquoise-900 small p-3 text-white">
             $turquoise-900
           </div>
         </div>
         <div>
-          <div class="p-3 mb-2 position-relative bg-burnt-500 text-white">
+          <div class="position-relative bg-burnt-500 mb-2 p-3 text-white">
             <strong class="d-block">$burnt</strong>
             #2f68cb
           </div>
-          <div class="p-3 bg-burnt-100 text-black small">$burnt-100</div>
-          <div class="p-3 bg-burnt-200 text-black small">$burnt-200</div>
-          <div class="p-3 bg-burnt-300 text-black small">$burnt-300</div>
-          <div class="p-3 bg-burnt-400 text-black small">$burnt-400</div>
-          <div class="p-3 bg-burnt-500 text-white small">$burnt-500</div>
-          <div class="p-3 bg-burnt-600 text-white small">$burnt-600</div>
-          <div class="p-3 bg-burnt-700 text-white small">$burnt-700</div>
-          <div class="p-3 bg-burnt-800 text-white small">$burnt-800</div>
-          <div class="p-3 bg-burnt-900 text-white small">$burnt-900</div>
+          <div class="bg-burnt-100 small p-3 text-black">$burnt-100</div>
+          <div class="bg-burnt-200 small p-3 text-black">$burnt-200</div>
+          <div class="bg-burnt-300 small p-3 text-black">$burnt-300</div>
+          <div class="bg-burnt-400 small p-3 text-black">$burnt-400</div>
+          <div class="bg-burnt-500 small p-3 text-white">$burnt-500</div>
+          <div class="bg-burnt-600 small p-3 text-white">$burnt-600</div>
+          <div class="bg-burnt-700 small p-3 text-white">$burnt-700</div>
+          <div class="bg-burnt-800 small p-3 text-white">$burnt-800</div>
+          <div class="bg-burnt-900 small p-3 text-white">$burnt-900</div>
         </div>
         <div>
-          <div class="p-3 mb-2 position-relative bg-olive-500 text-white">
+          <div class="position-relative bg-olive-500 mb-2 p-3 text-white">
             <strong class="d-block">$olive</strong>
             #2f68cb
           </div>
-          <div class="p-3 bg-olive-100 text-black small">$olive-100</div>
-          <div class="p-3 bg-olive-200 text-black small">$olive-200</div>
-          <div class="p-3 bg-olive-300 text-black small">$olive-300</div>
-          <div class="p-3 bg-olive-400 text-black small">$olive-400</div>
-          <div class="p-3 bg-olive-500 text-white small">$olive-500</div>
-          <div class="p-3 bg-olive-600 text-white small">$olive-600</div>
-          <div class="p-3 bg-olive-700 text-white small">$olive-700</div>
-          <div class="p-3 bg-olive-800 text-white small">$olive-800</div>
-          <div class="p-3 bg-olive-900 text-white small">$olive-900</div>
+          <div class="bg-olive-100 small p-3 text-black">$olive-100</div>
+          <div class="bg-olive-200 small p-3 text-black">$olive-200</div>
+          <div class="bg-olive-300 small p-3 text-black">$olive-300</div>
+          <div class="bg-olive-400 small p-3 text-black">$olive-400</div>
+          <div class="bg-olive-500 small p-3 text-white">$olive-500</div>
+          <div class="bg-olive-600 small p-3 text-white">$olive-600</div>
+          <div class="bg-olive-700 small p-3 text-white">$olive-700</div>
+          <div class="bg-olive-800 small p-3 text-white">$olive-800</div>
+          <div class="bg-olive-900 small p-3 text-white">$olive-900</div>
         </div>
         <div>
-          <div class="p-3 mb-2 position-relative bg-rose-500 text-white">
+          <div class="position-relative mb-2 bg-rose-500 p-3 text-white">
             <strong class="d-block">$rose</strong>
             #2f68cb
           </div>
-          <div class="p-3 bg-rose-100 text-black small">$rose-100</div>
-          <div class="p-3 bg-rose-200 text-black small">$rose-200</div>
-          <div class="p-3 bg-rose-300 text-black small">$rose-300</div>
-          <div class="p-3 bg-rose-400 text-black small">$rose-400</div>
-          <div class="p-3 bg-rose-500 text-white small">$rose-500</div>
-          <div class="p-3 bg-rose-600 text-white small">$rose-600</div>
-          <div class="p-3 bg-rose-700 text-white small">$rose-700</div>
-          <div class="p-3 bg-rose-800 text-white small">$rose-800</div>
-          <div class="p-3 bg-rose-900 text-white small">$rose-900</div>
+          <div class="small bg-rose-100 p-3 text-black">$rose-100</div>
+          <div class="small bg-rose-200 p-3 text-black">$rose-200</div>
+          <div class="small bg-rose-300 p-3 text-black">$rose-300</div>
+          <div class="small bg-rose-400 p-3 text-black">$rose-400</div>
+          <div class="small bg-rose-500 p-3 text-white">$rose-500</div>
+          <div class="small bg-rose-600 p-3 text-white">$rose-600</div>
+          <div class="small bg-rose-700 p-3 text-white">$rose-700</div>
+          <div class="small bg-rose-800 p-3 text-white">$rose-800</div>
+          <div class="small bg-rose-900 p-3 text-white">$rose-900</div>
         </div>
         <div>
-          <div class="p-3 mb-2 position-relative bg-lavender-500 text-white">
+          <div class="position-relative bg-lavender-500 mb-2 p-3 text-white">
             <strong class="d-block">$lavendar</strong>
             #8060a4
           </div>
-          <div class="p-3 bg-lavender-100 text-black small">$lavender-100</div>
-          <div class="p-3 bg-lavender-200 text-black small">$lavender-200</div>
-          <div class="p-3 bg-lavender-300 text-black small">$lavender-300</div>
-          <div class="p-3 bg-lavender-400 text-black small">$lavender-400</div>
-          <div class="p-3 bg-lavender-500 text-white small">$lavender-500</div>
-          <div class="p-3 bg-lavender-600 text-white small">$lavender-600</div>
-          <div class="p-3 bg-lavender-700 text-white small">$lavender-700</div>
-          <div class="p-3 bg-lavender-800 text-white small">$lavender-800</div>
-          <div class="p-3 bg-lavender-900 text-white small">$lavender-900</div>
+          <div class="bg-lavender-100 small p-3 text-black">$lavender-100</div>
+          <div class="bg-lavender-200 small p-3 text-black">$lavender-200</div>
+          <div class="bg-lavender-300 small p-3 text-black">$lavender-300</div>
+          <div class="bg-lavender-400 small p-3 text-black">$lavender-400</div>
+          <div class="bg-lavender-500 small p-3 text-white">$lavender-500</div>
+          <div class="bg-lavender-600 small p-3 text-white">$lavender-600</div>
+          <div class="bg-lavender-700 small p-3 text-white">$lavender-700</div>
+          <div class="bg-lavender-800 small p-3 text-white">$lavender-800</div>
+          <div class="bg-lavender-900 small p-3 text-white">$lavender-900</div>
         </div>
         <div>
-          <div class="p-3 mb-2 position-relative bg-russet-500 text-white">
+          <div class="position-relative bg-russet-500 mb-2 p-3 text-white">
             <strong class="d-block">$russet</strong>
             #2f68cb
           </div>
-          <div class="p-3 bg-russet-100 text-black small">$russet-100</div>
-          <div class="p-3 bg-russet-200 text-black small">$russet-200</div>
-          <div class="p-3 bg-russet-300 text-black small">$russet-300</div>
-          <div class="p-3 bg-russet-400 text-black small">$russet-400</div>
-          <div class="p-3 bg-russet-500 text-white small">$russet-500</div>
-          <div class="p-3 bg-russet-600 text-white small">$russet-600</div>
-          <div class="p-3 bg-russet-700 text-white small">$russet-700</div>
-          <div class="p-3 bg-russet-800 text-white small">$russet-800</div>
-          <div class="p-3 bg-russet-900 text-white small">$russet-900</div>
+          <div class="bg-russet-100 small p-3 text-black">$russet-100</div>
+          <div class="bg-russet-200 small p-3 text-black">$russet-200</div>
+          <div class="bg-russet-300 small p-3 text-black">$russet-300</div>
+          <div class="bg-russet-400 small p-3 text-black">$russet-400</div>
+          <div class="bg-russet-500 small p-3 text-white">$russet-500</div>
+          <div class="bg-russet-600 small p-3 text-white">$russet-600</div>
+          <div class="bg-russet-700 small p-3 text-white">$russet-700</div>
+          <div class="bg-russet-800 small p-3 text-white">$russet-800</div>
+          <div class="bg-russet-900 small p-3 text-white">$russet-900</div>
         </div>
         <div>
-          <div class="p-3 mb-2 position-relative bg-ultra-500 text-white">
+          <div class="position-relative bg-ultra-500 mb-2 p-3 text-white">
             <strong class="d-block">$ultra</strong>
             #5B6ecd
           </div>
-          <div class="p-3 bg-ultra-100 text-black small">$ultra-100</div>
-          <div class="p-3 bg-ultra-200 text-black small">$ultra-200</div>
-          <div class="p-3 bg-ultra-300 text-black small">$ultra-300</div>
-          <div class="p-3 bg-ultra-400 text-black small">$ultra-400</div>
-          <div class="p-3 bg-ultra-500 text-white small">$ultra-500</div>
-          <div class="p-3 bg-ultra-600 text-white small">$ultra-600</div>
-          <div class="p-3 bg-ultra-700 text-white small">$ultra-700</div>
-          <div class="p-3 bg-ultra-800 text-white small">$ultra-800</div>
-          <div class="p-3 bg-ultra-900 text-white small">$ultra-900</div>
+          <div class="bg-ultra-100 small p-3 text-black">$ultra-100</div>
+          <div class="bg-ultra-200 small p-3 text-black">$ultra-200</div>
+          <div class="bg-ultra-300 small p-3 text-black">$ultra-300</div>
+          <div class="bg-ultra-400 small p-3 text-black">$ultra-400</div>
+          <div class="bg-ultra-500 small p-3 text-white">$ultra-500</div>
+          <div class="bg-ultra-600 small p-3 text-white">$ultra-600</div>
+          <div class="bg-ultra-700 small p-3 text-white">$ultra-700</div>
+          <div class="bg-ultra-800 small p-3 text-white">$ultra-800</div>
+          <div class="bg-ultra-900 small p-3 text-white">$ultra-900</div>
         </div>
       </div>
 
@@ -717,7 +715,7 @@
           </tr>
         </tbody>
       </table>
-      <table class="table mb-5">
+      <table class="mb-5 table">
         <thead>
           <tr>
             <th scope="col" style="width: 70px">Color</th>
@@ -819,7 +817,7 @@
       </table>
 
       <h4>Surfaces (body- and -subtle)</h4>
-      <table class="table mb-5">
+      <table class="mb-5 table">
         <thead>
           <tr>
             <th scope="col" style="width: 70px">Color</th>
@@ -941,7 +939,7 @@
         <tbody>
           <tr>
             <td>
-              <i class="fs-2 bi bi-cc-square text-white lh-1"></i>
+              <i class="fs-2 bi bi-cc-square lh-1 text-white"></i>
             </td>
             <td>
               <span class="d-inline-block" style="width: 100px">#ffffff</span>
@@ -954,7 +952,7 @@
           </tr>
           <tr>
             <td>
-              <i class="fs-2 bi bi-cc-square text-black lh-1"></i>
+              <i class="fs-2 bi bi-cc-square lh-1 text-black"></i>
             </td>
             <td>
               <span class="d-inline-block" style="width: 100px">#000000</span>
@@ -968,7 +966,7 @@
         </tbody>
       </table>
 
-      <table class="table mb-5">
+      <table class="mb-5 table">
         <thead>
           <tr>
             <th scope="col" style="width: 70px">Color</th>
@@ -1031,7 +1029,7 @@
 
       <h4>Borders and Dividers</h4>
       <p>These colors change based on color mode.</p>
-      <table class="table mb-5">
+      <table class="mb-5 table">
         <thead>
           <tr>
             <th scope="col" style="width: 70px">Color</th>
@@ -1287,7 +1285,7 @@
           </tr>
         </tbody>
       </table>
-      <table class="table mb-5">
+      <table class="mb-5 table">
         <thead>
           <tr>
             <th scope="col" style="width: 70px">Color</th>
@@ -1749,7 +1747,7 @@
           </tr>
         </tbody>
       </table>
-      <table class="table mb-5">
+      <table class="mb-5 table">
         <thead>
           <tr>
             <th scope="col" style="width: 70px">Color</th>
@@ -1898,11 +1896,11 @@
         </tbody>
       </table>
 
-      <hr>
+      <hr />
       <h2 class="fw-bold mb-5">Form Elements</h2>
 
       <h3>Input Group</h3>
-      <div class="grid mb-5">
+      <div class="mb-5 grid">
         <div class="g-col-6">
           <div class="input-group mb-3">
             <span id="basic-addon1" class="input-group-text">@</span>
@@ -1912,7 +1910,7 @@
               placeholder="Username"
               aria-label="Username"
               aria-describedby="basic-addon1"
-            >
+            />
           </div>
           <div class="input-group mb-3">
             <span class="input-group-text">$</span>
@@ -1920,7 +1918,7 @@
               type="text"
               class="form-control"
               aria-label="Amount (to the nearest dollar)"
-            >
+            />
             <span class="input-group-text">.00</span>
           </div>
           <div class="input-group mb-3">
@@ -1930,10 +1928,10 @@
               placeholder="Recipient's username"
               aria-label="Recipient's username"
               aria-describedby="button-addon2"
-            >
+            />
             <button
               id="button-addon2"
-              class="btn btn-subdued-primary border border-secondary"
+              class="btn btn-subdued-primary border-secondary border"
               type="button"
             >
               Button
@@ -1944,9 +1942,9 @@
               type="text"
               class="form-control"
               aria-label="Text input with dropdown button"
-            >
+            />
             <button
-              class="btn btn-subdued-primary border border-secondary dropdown-toggle"
+              class="btn btn-subdued-primary border-secondary dropdown-toggle border"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
@@ -1964,7 +1962,7 @@
                 <a class="dropdown-item" href="#">Something else here</a>
               </li>
               <li>
-                <hr class="dropdown-divider">
+                <hr class="dropdown-divider" />
               </li>
               <li>
                 <a class="dropdown-item" href="#">Separated link</a>
@@ -1975,13 +1973,13 @@
           <div class="mb-3">
             <label for="inputPassword5" class="form-label">Phone Numberr</label>
             <div class="input-group">
-              <SCountryCode v-model:calling-code="emergencyCallingCode1"/>
+              <SCountryCode v-model:calling-code="emergencyCallingCode1" />
               <input
                 type="hidden"
                 name="emergencyCallingCode1"
                 :value="'+' + emergencyCallingCode1"
-              >
-              <span class="input-group-text border border-secondary">
+              />
+              <span class="input-group-text border-secondary border">
                 +{{ emergencyCallingCode1 }}
               </span>
               <input
@@ -1993,9 +1991,9 @@
                 minlength="10"
                 maxlength="12"
                 title="Enter a valid mobile number"
-              >
+              />
             </div>
-            <input type="hidden" class="country-code-input">
+            <input type="hidden" class="country-code-input" />
             <div id="passwordHelpBlock" class="form-text">
               Your area code and phone number must be 10-12 characters. Example
               format: xxx-xxx-xxxx
@@ -2011,7 +2009,7 @@
               placeholder="Username"
               aria-label="Username"
               aria-describedby="basic-addon1"
-            >
+            />
           </div>
           <div class="input-group input-group-sm mb-3">
             <span class="input-group-text">$</span>
@@ -2019,7 +2017,7 @@
               type="text"
               class="form-control"
               aria-label="Amount (to the nearest dollar)"
-            >
+            />
             <span class="input-group-text">.00</span>
           </div>
           <div class="input-group input-group-sm mb-3">
@@ -2029,10 +2027,10 @@
               placeholder="Recipient's username"
               aria-label="Recipient's username"
               aria-describedby="button-addon2"
-            >
+            />
             <button
               id="button-addon2"
-              class="btn btn-subdued-primary border border-secondary"
+              class="btn btn-subdued-primary border-secondary border"
               type="button"
             >
               Button
@@ -2043,9 +2041,9 @@
               type="text"
               class="form-control"
               aria-label="Text input with dropdown button"
-            >
+            />
             <button
-              class="btn btn-subdued-primary border border-secondary dropdown-toggle"
+              class="btn btn-subdued-primary border-secondary dropdown-toggle border"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
@@ -2063,7 +2061,7 @@
                 <a class="dropdown-item" href="#">Something else here</a>
               </li>
               <li>
-                <hr class="dropdown-divider">
+                <hr class="dropdown-divider" />
               </li>
               <li>
                 <a class="dropdown-item" href="#">Separated link</a>
@@ -2074,13 +2072,13 @@
           <div class="mb-3">
             <label for="inputPassword5" class="form-label">Phone Number</label>
             <div class="input-group input-group-sm">
-              <SCountryCode v-model:calling-code="emergencyCallingCode2"/>
+              <SCountryCode v-model:calling-code="emergencyCallingCode2" />
               <input
                 type="hidden"
                 name="emergencyCallingCode2"
                 :value="'+' + emergencyCallingCode2"
-              >
-              <span class="input-group-text border border-secondary">
+              />
+              <span class="input-group-text border-secondary border">
                 +{{ emergencyCallingCode2 }}
               </span>
               <input
@@ -2092,9 +2090,9 @@
                 minlength="10"
                 maxlength="12"
                 title="Enter a valid mobile number"
-              >
+              />
             </div>
-            <input type="hidden" class="country-code-input">
+            <input type="hidden" class="country-code-input" />
             <div id="passwordHelpBlock" class="form-text">
               Your area code and phone number must be 10-12 characters. Example
               format: xxx-xxx-xxxx
@@ -2111,7 +2109,7 @@
             class="form-check-input"
             type="checkbox"
             value=""
-          >
+          />
           <label class="form-check-label" for="flexCheckDefault">
             Default checkbox
           </label>
@@ -2123,7 +2121,7 @@
             type="checkbox"
             value=""
             checked
-          >
+          />
           <label class="form-check-label" for="flexCheckChecked">
             Checked checkbox
           </label>
@@ -2134,7 +2132,7 @@
             class="form-check-input"
             type="radio"
             name="flexRadioDefault"
-          >
+          />
           <label class="form-check-label" for="flexRadioDefault1">
             Default radio
           </label>
@@ -2146,7 +2144,7 @@
             type="radio"
             name="flexRadioDefault"
             checked
-          >
+          />
           <label class="form-check-label" for="flexRadioDefault2">
             Default checked radio
           </label>
@@ -2174,7 +2172,7 @@
 
       <h3>Muli-Select</h3>
 
-      <div class="grid mb-5">
+      <div class="mb-5 grid">
         <div class="g-col-6">
           <p>Default styling and behavior</p>
           <select
@@ -2202,9 +2200,9 @@
               data-bs-auto-close="outside"
               aria-expanded="false"
               value="Open this select menu"
-            >
+            />
             <div
-              class="dropdown-menu p-2 w-100"
+              class="dropdown-menu w-100 p-2"
               aria-labelledby="dropdownMenuButton1"
             >
               <div
@@ -2216,7 +2214,7 @@
                   type="checkbox"
                   value=""
                   style="margin-left: -1.25em !important"
-                >
+                />
                 <label class="form-check-label d-block" for="flexCheckDefault1">
                   Checkbox 1
                 </label>
@@ -2230,7 +2228,7 @@
                   type="checkbox"
                   value=""
                   style="margin-left: -1.25em !important"
-                >
+                />
                 <label class="form-check-label d-block" for="flexCheckDefault2">
                   Checkbox 2
                 </label>
@@ -2244,7 +2242,7 @@
                   type="checkbox"
                   value=""
                   style="margin-left: -1.25em !important"
-                >
+                />
                 <label class="form-check-label d-block" for="flexCheckDefault3">
                   Checkbox 3
                 </label>
@@ -2266,16 +2264,16 @@
         ></textarea>
       </div>
 
-      <hr>
+      <hr />
       <h2 class="fw-bold mb-5">Elements</h2>
 
       <h3 class="mt-4">Badge</h3>
 
-      <div class="grid mb-5">
+      <div class="mb-5 grid">
         <div class="g-col-3">
           <p>
             Semantic palette:
-            <br>
+            <br />
             Messaging / Workflow States
           </p>
           <ul class="list-unstyled">
@@ -2667,27 +2665,27 @@
       <h3 class="mt-4">Links</h3>
       <div class="mb-5 grid">
         <ul class="g-col-6 list-unstyled">
-          <li class="border p-2 mb-2">
+          <li class="mb-2 border p-2">
             Lorem ipsum dolor sit amet,
             <a href="#" class="link-primary">link-primary</a>consectetur
             adipiscing elit.
           </li>
-          <li class="border p-2 mb-2">
+          <li class="mb-2 border p-2">
             Lorem ipsum dolor sit amet,
             <a href="#" class="link-danger">link-danger</a>consectetur
             adipiscing elit.
           </li>
-          <li class="border p-2 mb-2">
+          <li class="mb-2 border p-2">
             Lorem ipsum dolor sit amet,
             <a href="#" class="link-body">link-body</a>consectetur adipiscing
             elit.
           </li>
-          <li class="bg-husky-purple p-2 text-white mb-2">
+          <li class="bg-husky-purple mb-2 p-2 text-white">
             Lorem ipsum dolor sit amet,
             <a href="#" class="link-light">link-light</a>consectetur adipiscing
             elit.
           </li>
-          <li class="bg-spirit-gold text-black p-2">
+          <li class="bg-spirit-gold p-2 text-black">
             Lorem ipsum dolor sit amet,
             <a href="#" class="link-dark">link-dark</a>consectetur adipiscing
             elit.
@@ -2695,22 +2693,22 @@
         </ul>
 
         <ul class="g-col-6 list-unstyled">
-          <li class="border p-2 mb-2">
+          <li class="mb-2 border p-2">
             <a href="#" class="link-quiet-primary">
               <i class="bi bi-emoji-smile me-1"></i>link-quiet-primary
             </a>
           </li>
-          <li class="border p-2 mb-2">
+          <li class="mb-2 border p-2">
             <a href="#" class="link-quiet-danger">
               <i class="bi bi-emoji-smile me-1"></i>link-quiet-danger
             </a>
           </li>
-          <li class="border p-2 mb-2">
+          <li class="mb-2 border p-2">
             <a href="#" class="link-quiet-body">
               <i class="bi bi-emoji-smile me-1"></i>link-quiet-body
             </a>
           </li>
-          <li class="bg-husky-purple p-2 text-light mb-2">
+          <li class="bg-husky-purple text-light mb-2 p-2">
             <a href="#" class="link-quiet-light">
               <i class="bi bi-emoji-smile me-1"></i>link-quiet-light
             </a>
@@ -2723,10 +2721,10 @@
         </ul>
       </div>
 
-      <hr>
+      <hr />
       <h2 class="fw-bold mb-5">Tables</h2>
 
-      <div class="grid mb-5">
+      <div class="mb-5 grid">
         <div class="g-col-6">
           <h3>Normal</h3>
           <table class="table">
@@ -2768,7 +2766,7 @@
         </div>
         <div class="g-col-6">
           <h3>Striped</h3>
-          <table class="table table-striped">
+          <table class="table-striped table">
             <thead class="table-body-secondary">
               <tr>
                 <th scope="col">#</th>
@@ -2807,7 +2805,7 @@
         </div>
       </div>
 
-      <hr>
+      <hr />
       <h2 class="fw-bold mb-5">Patterns</h2>
 
       <h3>Tabs</h3>
@@ -2905,34 +2903,34 @@
       </div>
 
       <h3>Cards</h3>
-      <div class="grid mb-5">
+      <div class="mb-5 grid">
         <div class="g-col-4">
           <h4>Elevated</h4>
-          <BCard class="shadow border-0 mb-3">card 1 w/ shadow </BCard>
-          <BCard class="shadow border-0 mb-3">card 2 w/ shadow</BCard>
+          <BCard class="mb-3 border-0 shadow">card 1 w/ shadow </BCard>
+          <BCard class="mb-3 border-0 shadow">card 2 w/ shadow</BCard>
         </div>
 
         <div class="g-col-4">
           <h4>Filled</h4>
-          <BCard bg-variant="body-tertiary" class="border-0 mb-3">
+          <BCard bg-variant="body-tertiary" class="mb-3 border-0">
             body-tertiary
           </BCard>
           <BCard
             bg-variant="body-secondary"
-            class="bg-opacity-50 border-0 mb-3"
+            class="bg-opacity-50 mb-3 border-0"
           >
             body-secondary, bg-opacity-50
           </BCard>
           <BCard
             bg-variant="spirit-purple-subtle"
-            class="bg-opacity-25 border-0 mb-3"
+            class="bg-opacity-25 mb-3 border-0"
           >
             bg-spirit-purple-subtle, bg-opacity-25
           </BCard>
 
           <BCard
             bg-variant="husky-gold-subtle"
-            class="bg-opacity-50 border-0 mb-3"
+            class="bg-opacity-50 mb-3 border-0"
           >
             bg-husky-gold-subtle, bg-opacity-50
           </BCard>
@@ -2940,18 +2938,18 @@
         <div class="g-col-4">
           <h4>Outline</h4>
           <BCard class="mb-3">default card border</BCard>
-          <BCard class="mb-3 border border-secondary-subtle">
+          <BCard class="border-secondary-subtle mb-3 border">
             border-secondary-subtle
           </BCard>
         </div>
       </div>
 
-      <hr>
+      <hr />
       <h2 class="fw-bold mb-5">Kitchen Sink</h2>
 
-      <div class="grid mb-5">
+      <div class="mb-5 grid">
         <div class="g-col-6">
-          <BCard class="shadow border-0 mb-3">
+          <BCard class="mb-3 border-0 shadow">
             <div class="d-flex justify-content-between mb-3">
               <h3 class="fw-bold">Heading</h3>
               <BButton
@@ -3030,14 +3028,14 @@
               </li>
             </ul>
 
-            <div class="text-end mt-4">
+            <div class="mt-4 text-end">
               <BButton variant="outline-primary" class="me-2">Cancel</BButton>
               <BButton variant="primary" class="me-1">Submit</BButton>
             </div>
           </BCard>
         </div>
         <div class="g-col-6">
-          <BCard class="shadow border-0 mb-3">
+          <BCard class="mb-3 border-0 shadow">
             <div class="d-flex justify-content-between mb-3">
               <h3 class="fw-bold">Heading</h3>
               <BButton variant="subdued-primary" size="sm" class="me-1">
@@ -3111,7 +3109,7 @@
               </li>
             </ul>
 
-            <div class="text-end mt-4">
+            <div class="mt-4 text-end">
               <BButton variant="outline-primary" class="me-2">Cancel</BButton>
               <BButton variant="primary" class="me-1">Submit</BButton>
             </div>
@@ -3119,7 +3117,7 @@
         </div>
 
         <div class="g-col-6">
-          <BCard bg-variant="body-tertiary" class="border-0 mb-3">
+          <BCard bg-variant="body-tertiary" class="mb-3 border-0">
             <div class="d-flex justify-content-between mb-3">
               <h3 class="fw-bold">Heading</h3>
               <BButton variant="quiet-primary" size="sm" class="me-1">
@@ -3193,7 +3191,7 @@
               </li>
             </ul>
 
-            <div class="text-end mt-4">
+            <div class="mt-4 text-end">
               <BButton variant="outline-primary" class="me-2">Cancel</BButton>
               <BButton variant="primary" class="me-1">Submit</BButton>
             </div>
@@ -3203,7 +3201,7 @@
         <div class="g-col-6">
           <BCard
             bg-variant="body-secondary"
-            class="bg-opacity-50 border-0 mb-3"
+            class="bg-opacity-50 mb-3 border-0"
           >
             <div class="d-flex justify-content-between mb-3">
               <h3 class="fw-bold">Heading</h3>
@@ -3278,7 +3276,7 @@
               </li>
             </ul>
 
-            <div class="text-end mt-4">
+            <div class="mt-4 text-end">
               <BButton variant="outline-primary" class="me-2">Cancel</BButton>
               <BButton variant="primary" class="me-1">Submit</BButton>
             </div>
@@ -3288,7 +3286,7 @@
         <div class="g-col-6">
           <BCard
             bg-variant="spirit-purple-subtle"
-            class="bg-opacity-25 border-0 mb-3"
+            class="bg-opacity-25 mb-3 border-0"
           >
             <div class="d-flex justify-content-between mb-3">
               <h3 class="fw-bold">Heading</h3>
@@ -3363,7 +3361,7 @@
               </li>
             </ul>
 
-            <div class="text-end mt-4">
+            <div class="mt-4 text-end">
               <BButton variant="outline-primary" class="me-2">Cancel</BButton>
               <BButton variant="primary" class="me-1">Submit</BButton>
             </div>
@@ -3373,7 +3371,7 @@
         <div class="g-col-6">
           <BCard
             bg-variant="husky-gold-subtle"
-            class="bg-opacity-50 border-0 mb-3"
+            class="bg-opacity-50 mb-3 border-0"
           >
             <div class="d-flex justify-content-between mb-3">
               <h3 class="fw-bold">Heading</h3>
@@ -3448,7 +3446,7 @@
               </li>
             </ul>
 
-            <div class="text-end mt-4">
+            <div class="mt-4 text-end">
               <BButton variant="outline-primary" class="me-2">Cancel</BButton>
               <BButton variant="primary" class="me-1">Submit</BButton>
             </div>
@@ -3468,7 +3466,7 @@
         </div>
       </BModal>
 
-      <div class="d-flex justify-content-between bg-dark p-3 mt-5">
+      <div class="d-flex justify-content-between bg-dark mt-5 p-3">
         <div class="flex-fill">xxx</div>
         <div class="me-3">
           <SUser
@@ -3492,8 +3490,8 @@
         </div>
       </div>
 
-      <hr>
-      <h2 class="mb-5 fw-bold">Custom Utilities (solstice.scss)</h2>
+      <hr />
+      <h2 class="fw-bold mb-5">Custom Utilities (solstice.scss)</h2>
 
       <h3>Hover</h3>
 
@@ -3507,29 +3505,29 @@
 
       <p class="fw-bold">bg-xxxxx-hover</p>
       <ul class="list-unstyled">
-        <li class="bg-danger bg-primary-hover mb-2 p-3 rounded text-white">
+        <li class="bg-danger bg-primary-hover mb-2 rounded p-3 text-white">
           Bootstrap themes
         </li>
-        <li class="bg-danger-subtle bg-primary-subtle-hover mb-2 p-3 rounded">
+        <li class="bg-danger-subtle bg-primary-subtle-hover mb-2 rounded p-3">
           Bootstrap themes (subtle)
         </li>
         <li
-          class="bg-spirit-purple bg-husky-gold-hover text-black-hover mb-2 p-3 rounded text-white"
+          class="bg-spirit-purple bg-husky-gold-hover text-black-hover mb-2 rounded p-3 text-white"
         >
           UW Brand
         </li>
         <li
-          class="bg-spirit-purple-subtle bg-spirit-gold-subtle-hover mb-2 p-3 rounded"
+          class="bg-spirit-purple-subtle bg-spirit-gold-subtle-hover mb-2 rounded p-3"
         >
           UW Brand (subtle)
         </li>
         <li
-          class="bg-deco-violet bg-deco-burnt-hover mb-2 p-3 rounded text-white"
+          class="bg-deco-violet bg-deco-burnt-hover mb-2 rounded p-3 text-white"
         >
           Decorative
         </li>
         <li
-          class="bg-deco-violet-subtle bg-deco-burnt-subtle-hover mb-2 p-3 rounded"
+          class="bg-deco-violet-subtle bg-deco-burnt-subtle-hover mb-2 rounded p-3"
         >
           Decorative (subtle)
         </li>

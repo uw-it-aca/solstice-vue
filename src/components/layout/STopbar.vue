@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="topbarClass + [!isPreview ? 'min-vh-100' : ' ']"
+    :class="[topbarClass, !isPreview ? 'min-vh-100' : '']"
     class="d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"
   >
     <div v-if="$slots.system" class="w-100">

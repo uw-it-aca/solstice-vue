@@ -1,6 +1,6 @@
 {
-  // ignore eslint
-  "language_servers": ["oxlint", "oxfmt"],
+  // ignore eslint and biome
+  "language_servers": ["!eslint", "!biome", "oxlint", "oxfmt"],
   "lsp": {
     "oxlint": {
       "initialization_options": {
@@ -33,6 +33,14 @@
       "formatter": { "language_server": { "name": "oxfmt" } },
       "format_on_save": "off",
     },
+    "JSON": {
+      "formatter": { "language_server": { "name": "oxfmt" } },
+      "format_on_save": "off",
+    },
+    "JSONC": {
+      "formatter": { "language_server": { "name": "oxfmt" } },
+      "format_on_save": "off",
+    },
     "Vue.js": {
       "formatter": { "language_server": { "name": "oxfmt" } },
       "format_on_save": "off",
@@ -42,6 +50,9 @@
     },
     "TypeScript": {
       "formatter": { "language_server": { "name": "oxfmt" } },
+    },
+    "Python": {
+      "formatter": { "language_server": { "name": "ruff" } },
     },
   },
 }

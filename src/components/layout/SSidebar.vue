@@ -4,7 +4,7 @@
     :style="[isPreview ? 'min-height: auto !important;' : '']"
   >
     <div
-      :class="sidebarClass + [!mq.mdMinus ? 'overflow-auto' : '']"
+      :class="sidebarClass,  [!mq.mdMinus ? '' : '']"
       class="sol-sidebar d-flex flex-column"
       :style="[!mq.mdMinus ? 'min-width: 280px; max-width:280px;' : '']"
     >

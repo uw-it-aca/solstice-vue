@@ -1,4 +1,5 @@
-// working theme file - sync with custom.scss on solstice-theme repo
+// DEVELOPMENT: this is the working custom.scss file used for theme development
+// RELEASE: copy this custom.scss to the solstice-theme repository and generate new theme version
 
 // semantic palette
 @each $key, $value in $yellows {

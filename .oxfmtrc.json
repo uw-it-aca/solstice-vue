@@ -3,7 +3,8 @@
   "ignorePatterns": [],
   "printWidth": 80, // default 100 (prettier uses 80)
   "vueIndentScriptAndStyle": true,
-  "experimentalTailwindcss": {}
+  "experimentalTailwindcss": {},
+  "ignorePatterns": [".vscode", ".zed", "*.d.ts", "/dist"]
   /*
   "experimentalSortImports": {
     "groups": [

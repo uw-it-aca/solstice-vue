@@ -1,10 +1,7 @@
 {
   "name": "solstice-vue",
-  "type": "module",
   "version": "1.1.5",
   "private": true,
-  "main": "./dist/solstice-vue.umd.cjs",
-  "module": "./dist/solstice-vue.js",
   "files": [
     "dist",
     "components.d.ts",
@@ -12,6 +9,9 @@
     "package.json",
     "README.md"
   ],
+  "type": "module",
+  "main": "./dist/solstice-vue.umd.cjs",
+  "module": "./dist/solstice-vue.js",
   "types": "./components.d.ts",
   "exports": {
     ".": {

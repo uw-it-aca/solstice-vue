@@ -1,20 +1,20 @@
 <template>
   <div
-    :class="[!isPreview ? ' min-vh-100' : ' ']"
+    :class="[!isPreview ? 'min-vh-100' : ' ']"
     class="d-flex align-items-end flex-column"
   >
-    <header class="w-100 bg-spirit-purple">
+    <header class="bg-spirit-purple w-100">
       <div class="container-xl">
         <div class="d-flex justify-content-between align-items-center">
           <div class="d-flex align-items-center my-4">
             <!-- MARK: nudge logo for xl only -->
-            <div class="border-end border-white border-opacity-25 pe-3 me-3">
+            <div class="border-end border-opacity-25 me-3 border-white pe-3">
               <img
                 src="/src/assets/images/w-logo-white.png"
                 alt="UW logo"
                 class="my-1"
                 style="height: 38px"
-              >
+              />
             </div>
             <!--<div
               class="d-none d-xl-block border-end border-white border-opacity-25 pe-3 me-3"
@@ -27,20 +27,24 @@
               />
             </div>-->
 
-            <div class="text-white d-flex flex-column">
-              <div v-if="appDeptName" class="fw-light text-nowrap" style="margin-bottom: -7px">
+            <div class="d-flex flex-column text-white">
+              <div
+                v-if="appDeptName"
+                class="fw-light text-nowrap"
+                style="margin-bottom: -7px"
+              >
                 {{ appDeptName }}
               </div>
               <a
                 :href="appRootUrl"
-                class="d-block d-sm-none ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium text-truncate"
+                class="d-block d-sm-none ff-encode-sans text-decoration-none fs-3 fw-medium text-truncate text-nowrap text-white"
                 style="max-width: 150px"
               >
                 {{ appName }}
               </a>
               <a
                 :href="appRootUrl"
-                class="d-none d-sm-block ff-encode-sans text-white text-nowrap text-decoration-none fs-3 fw-medium"
+                class="d-none d-sm-block ff-encode-sans text-decoration-none fs-3 fw-medium text-nowrap text-white"
               >
                 {{ appName }}
               </a>
@@ -55,7 +59,7 @@
             <!-- MARK: navigation toggler -->
             <a
               v-if="$slots.navigation"
-              class="ms-1 btn btn-link btn-sm d-xl-none py-0 py-1 text-white"
+              class="btn btn-link btn-sm d-xl-none ms-1 py-0 py-1 text-white"
               data-bs-toggle="collapse"
               data-bs-target="#navbarToggler"
               aria-controls="navbarToggler"
@@ -70,9 +74,9 @@
     </header>
 
     <template v-if="$slots.navigation">
-      <nav class="navbar navbar-expand-xl w-100 p-0 py-xl-2 bg-husky-purple">
+      <nav class="navbar navbar-expand-xl py-xl-2 bg-husky-purple w-100 p-0">
         <div class="container-xl">
-          <div class="collapse navbar-collapse" id="navbarToggler">
+          <div class="navbar-collapse collapse" id="navbarToggler">
             <slot name="navigation">navigation bar</slot>
           </div>
         </div>
@@ -186,6 +190,4 @@
   };
 </script>
 
-<style lang="css">
-
-</style>
+<style lang="css"></style>

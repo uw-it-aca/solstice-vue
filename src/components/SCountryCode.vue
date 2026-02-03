@@ -1,7 +1,7 @@
 <template>
   <button
     id="countryDropdownMenuButton"
-    class="btn btn-subdued-primary border border-secondary dropdown-toggle"
+    class="btn btn-subdued-primary border-secondary dropdown-toggle border"
     type="button"
     data-bs-toggle="dropdown"
     aria-expanded="false"
@@ -25,7 +25,7 @@
       </button>
     </li>
     <li>
-      <hr class="dropdown-divider">
+      <hr class="dropdown-divider" />
     </li>
     <li v-for="(country, index) in countries" :key="index">
       <button
@@ -122,7 +122,7 @@
 
         // Find country matching the calling code
         const matchingCountry = this.countries.find(
-          (country) => country.callingCode === callingCode
+          (country) => country.callingCode === callingCode,
         );
 
         if (matchingCountry) {

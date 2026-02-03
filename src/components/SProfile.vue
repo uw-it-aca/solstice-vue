@@ -3,7 +3,7 @@
     <div class="flex-fill dropdown">
       <a
         v-if="userOverride"
-        class="text-white text-decoration-none py-2"
+        class="text-decoration-none py-2 text-white"
         href="#"
         role="button"
         id="dropdownMenuButton1"
@@ -16,7 +16,7 @@
 
       <a
         v-else
-        class="text-white text-decoration-none py-2"
+        class="text-decoration-none py-2 text-white"
         href="#"
         role="button"
         id="dropdownMenuButton1"
@@ -59,7 +59,7 @@
     </div>
     <div v-else class="flex-fill text-white">{{ userNetid }}</div>
 
-    <div class="flex-fill text-end ms-2">
+    <div class="flex-fill ms-2 text-end">
       <slot v-if="signoutUrl">
         <a :href="signoutUrl" class="text-white">Sign out</a>
       </slot>

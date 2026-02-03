@@ -1,19 +1,21 @@
 [![Coverage Status](https://coveralls.io/repos/github/uw-it-aca/solstice-vue/badge.svg?branch=main)](https://coveralls.io/github/uw-it-aca/solstice-vue?branch=main)
 
 # solstice-vue
+
 Solstice Vue Component Library
 
-* Vue 3
-* Bootstrap 5
-* Vite 4 (library packaging)
+- Vue 3
+- Bootstrap 5
+- Vite 4 (library packaging)
 
 Note: This repo does not currently deploy to any host.
 
 ## Requirements
+
 Install or update the following applications:
 
-* [VS Code](https://code.visualstudio.com/)
-* [Node.js (LTS)](https://nodejs.org/en)
+- [VS Code](https://code.visualstudio.com/)
+- [Node.js (LTS)](https://nodejs.org/en)
 
 ## Project Setup
 

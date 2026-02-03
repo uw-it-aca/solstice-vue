@@ -43,5 +43,5 @@ export {
   SColorMode,
   SProfile,
   SCountryCode,
-  SUser
+  SUser,
 };

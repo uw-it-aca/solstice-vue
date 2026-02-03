@@ -300,7 +300,7 @@ function ue(a, e, n, i, c, r) {
           s(a.$slots, "footer", {}, () => [
             o("div", le, [
               e[5] || (e[5] = ya('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/">Terms</a></li></ul>', 1)),
-              o("div", null, " Copyright © " + y((/* @__PURE__ */ new Date()).getFullYear()) + "University of Washington ", 1)
+              o("div", null, " Copyright © " + y((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
             ])
           ])
         ])) : m("", !0)
@@ -444,7 +444,7 @@ function ke(a, e, n, i, c, r) {
           s(a.$slots, "footer", {}, () => [
             o("div", Ie, [
               e[6] || (e[6] = ya('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/" class="link-light link-opacity-50 link-opacity-75-hover link-underline-opacity-50 link-underline-opacity-75-hover">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/" class="link-light link-opacity-50 link-opacity-75-hover link-underline-opacity-50 link-underline-opacity-75-hover">Terms</a></li></ul>', 1)),
-              o("div", null, " Copyright © " + y((/* @__PURE__ */ new Date()).getFullYear()) + "University of Washington ", 1)
+              o("div", null, " Copyright © " + y((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
             ])
           ])
         ])

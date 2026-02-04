@@ -45,7 +45,7 @@
     "country-flag-icons": "^1.6.12",
     "solstice-theme": "github:uw-it-aca/solstice-theme#1.0.7",
     "vue": "^3.5.27",
-    "vue-router": "^4.6.0",
+    "vue-router": "^4.6.4",
     "vue3-mq": "^4.1.0"
   },
   "devDependencies": {

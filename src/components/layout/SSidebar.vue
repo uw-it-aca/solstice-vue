@@ -5,7 +5,7 @@
   >
     <div
       :class="sidebarClass"
-      class="sol-sidebar d-flex flex-column"
+      class="overflow-auto sol-sidebar d-flex flex-column"
       :style="[!mq.mdMinus ? 'min-width: 280px; max-width:280px;' : '']"
     >
       <header>

@@ -223,7 +223,7 @@ function ue(a, e, n, i, c, r) {
     style: ia([n.isPreview ? "min-height: auto !important;" : ""])
   }, [
     o("div", {
-      class: N([n.sidebarClass, "sol-sidebar d-flex flex-column"]),
+      class: N([n.sidebarClass, "overflow-auto sol-sidebar d-flex flex-column"]),
       style: ia([r.mq.mdMinus ? "" : "min-width: 280px; max-width:280px;"])
     }, [
       o("header", null, [

@@ -5,7 +5,6 @@
     :page-title="pageTitle"
     :user-name="userNetid"
     :sign-out-url="signOutUrl"
-    :sidebar-class="'bg-brand'"
   >
     <template #profile>
       <SProfile
@@ -60,7 +59,7 @@
       </ul>
     </template>
     <template #aside>
-      <div class="bg-opacity-10 small rounded-3 mt-3 border-0 bg-black p-3">
+      <div class="bg-husky-purple small rounded-3 mt-3 border-0 p-3">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex voluptates
         molestias hic. Esse ab inventore rerum, ipsa cupiditate quo. Aliquid
         optio, commodi sit fugit harum perspiciatis quia sunt fuga. Aliquam?

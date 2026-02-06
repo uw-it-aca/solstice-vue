@@ -1,11 +1,11 @@
 <template>
   <div
-    :class="[!mq.mdMinus ? 'd-flex vh-100' : '']"
+    :class="[!mq.mdMinus ? 'd-flex vh-100 gap-3' : '']"
     :style="[isPreview ? 'min-height: auto !important;' : '']"
   >
     <div
       :class="sidebarClass"
-      class="overflow-auto sol-sidebar d-flex flex-column"
+      class="sol-sidebar d-flex flex-column overflow-auto"
       :style="[!mq.mdMinus ? 'min-width: 280px; max-width:280px;' : '']"
     >
       <header>
@@ -82,12 +82,8 @@
       id="scrollbody"
       :class="[!mq.mdMinus ? 'flex-fill overflow-y-scroll' : '']"
       class="d-flex bg-body text-body"
-      style="padding-top: 37px !important"
     >
-      <div
-        :class="[mq.lgPlus ? 'px-5' : '']"
-        class="container-xl d-flex flex-column"
-      >
+      <div class="container-xl d-flex flex-column">
         <main class="flex-fill">
           <slot name="main"></slot>
         </main>
@@ -139,7 +135,7 @@
       },
       sidebarClass: {
         type: String,
-        default: "bg-brand",
+        default: "bg-spirit-purple",
       },
       signOutUrl: {
         type: String,

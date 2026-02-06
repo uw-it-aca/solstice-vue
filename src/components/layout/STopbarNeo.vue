@@ -6,28 +6,19 @@
     <header class="bg-spirit-purple w-100">
       <div class="container-xl">
         <div class="d-flex justify-content-between align-items-center">
-          <div class="d-flex align-items-center my-4">
-            <!-- MARK: nudge logo for xl only -->
-            <div class="border-end border-opacity-25 me-3 border-white pe-3">
-              <img
-                src="/src/assets/images/w-logo-white.png"
-                alt="UW logo"
-                class="my-1"
-                style="height: 38px"
-              />
-            </div>
-            <!--<div
-              class="d-none d-xl-block border-end border-white border-opacity-25 pe-3 me-3"
+          <div class="d-flex flex-fill align-items-center my-4">
+            <div
+              class="d-none d-md-block border-end border-opacity-25 me-3 border-white pe-3"
             >
               <img
                 src="/src/assets/images/w-logo-white.png"
                 alt="UW logo"
                 class="my-1"
-                style="height: 38px"
+                style="height: 30px"
               />
-            </div>-->
+            </div>
 
-            <div class="d-flex flex-column text-white">
+            <div class="d-flex flex-fill flex-column text-white">
               <div
                 v-if="appDeptName"
                 class="fw-light text-nowrap"
@@ -38,7 +29,7 @@
               <a
                 :href="appRootUrl"
                 class="d-block d-sm-none ff-encode-sans text-decoration-none fs-3 fw-medium text-truncate text-nowrap text-white"
-                style="max-width: 150px"
+                style="max-width: 180px"
               >
                 {{ appName }}
               </a>

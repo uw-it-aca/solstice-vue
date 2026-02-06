@@ -184,7 +184,7 @@
     data() {
       return {
         // layout component
-        appName: "MyApp SoCoool",
+        appName: "MyApp SoCoooooooool",
         deptName: "Dept of Coolness",
         appRootUrl: "/",
 

@@ -481,7 +481,7 @@ const jo = /* @__PURE__ */ R(ge, [["render", ke]]), Me = "data:image/png;base64,
       default: "https://www.washington.edu/online/terms/"
     }
   }
-}, De = { class: "bg-spirit-purple w-100" }, Ue = { class: "container-xl" }, Pe = { class: "d-flex justify-content-between align-items-center" }, Fe = { class: "d-flex align-items-center my-4" }, Ge = { class: "d-flex flex-column text-white" }, xe = {
+}, De = { class: "bg-spirit-purple w-100" }, Ue = { class: "container-xl" }, Pe = { class: "d-flex justify-content-between align-items-center" }, Fe = { class: "d-flex flex-fill align-items-center my-4" }, Ge = { class: "d-flex flex-fill flex-column text-white" }, xe = {
   key: 0,
   class: "fw-light text-nowrap",
   style: { "margin-bottom": "-7px" }
@@ -514,12 +514,12 @@ function un(a, e, n, i, c, r) {
       o("div", Ue, [
         o("div", Pe, [
           o("div", Fe, [
-            e[0] || (e[0] = o("div", { class: "border-end border-opacity-25 me-3 border-white pe-3" }, [
+            e[0] || (e[0] = o("div", { class: "d-none d-md-block border-end border-opacity-25 me-3 border-white pe-3" }, [
               o("img", {
                 src: Me,
                 alt: "UW logo",
                 class: "my-1",
-                style: { height: "38px" }
+                style: { height: "30px" }
               })
             ], -1)),
             o("div", Ge, [
@@ -527,7 +527,7 @@ function un(a, e, n, i, c, r) {
               o("a", {
                 href: n.appRootUrl,
                 class: "d-block d-sm-none ff-encode-sans text-decoration-none fs-3 fw-medium text-truncate text-nowrap text-white",
-                style: { "max-width": "150px" }
+                style: { "max-width": "180px" }
               }, y(n.appName), 9, Ke),
               o("a", {
                 href: n.appRootUrl,

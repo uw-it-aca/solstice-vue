@@ -1903,23 +1903,22 @@
         <div class="g-col-6">
           <p>Documentation</p>
           <ul class="list-unstyled">
-            <li><SHeading level="1" class="">Heading 1</SHeading></li>
-            <li><SHeading level="2" class="">Heading 2</SHeading></li>
-            <li><SHeading level="3">Heading 3</SHeading></li>
-            <li><SHeading level="4">Heading 4</SHeading></li>
-            <li><SHeading level="5">Heading 5</SHeading></li>
-            <li><SHeading level="6">Heading 6</SHeading></li>
+            <li><SHeading level="1" class="">Heading 1 - 48</SHeading></li>
+            <li><SHeading level="2" class="">Heading 2- 40</SHeading></li>
+            <li><SHeading level="3">Heading 3 - 28</SHeading></li>
+            <li><SHeading level="4">Heading 4 - 24</SHeading></li>
+            <li><SHeading level="5">Heading 5 - 20</SHeading></li>
+            <li><SHeading level="6">Heading 6 - 16</SHeading></li>
           </ul>
         </div>
         <div class="g-col-6">
           <p>Applications</p>
           <ul class="list-unstyled">
-            <li><SHeading level="1" system="app">Heading 1</SHeading></li>
-            <li><SHeading level="2" system="app">Heading 2</SHeading></li>
-            <li><SHeading level="3" system="app">Heading 3</SHeading></li>
-            <li><SHeading level="4" system="app">Heading 4</SHeading></li>
-            <li><SHeading level="5" system="app">Heading 5</SHeading></li>
-            <li><SHeading level="6" system="app">Heading 6</SHeading></li>
+            <li><SHeading level="1" system="app">Heading 1 - 32</SHeading></li>
+            <li><SHeading level="2" system="app">Heading 2 - 28</SHeading></li>
+            <li><SHeading level="3" system="app">Heading 3 - 24</SHeading></li>
+            <li><SHeading level="4" system="app">Heading 4 - 20</SHeading></li>
+            <li><SHeading level="5" system="app">Heading 5 - 16</SHeading></li>
           </ul>
         </div>
       </div>

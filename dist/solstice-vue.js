@@ -1,4 +1,4 @@
-import { openBlock as t, createElementBlock as l, renderSlot as f, createCommentVNode as g, createElementVNode as o, withKeys as ra, normalizeClass as E, withModifiers as Ba, resolveComponent as Ia, normalizeStyle as ca, createVNode as ka, withCtx as Ma, createTextVNode as p, toDisplayString as y, createStaticVNode as Ca, toRef as Ra, readonly as Na, customRef as Da, ref as La, onMounted as Ea, nextTick as pa, getCurrentInstance as la, watch as aa, getCurrentScope as Ua, hasInjectionContext as ha, inject as Pa, computed as Q, shallowRef as J, toValue as P, watchEffect as Fa, unref as Ga, withDirectives as ea, vShow as na, Fragment as $, renderList as xa, mergeProps as D } from "vue";
+import { openBlock as t, createElementBlock as l, renderSlot as u, createCommentVNode as d, createElementVNode as o, withKeys as ra, normalizeClass as E, withModifiers as Ba, resolveComponent as Ia, normalizeStyle as ca, createVNode as ka, withCtx as Ma, createTextVNode as p, toDisplayString as y, createStaticVNode as Ca, toRef as Ra, readonly as Na, customRef as Da, ref as La, onMounted as Ea, nextTick as pa, getCurrentInstance as la, watch as aa, getCurrentScope as Ua, hasInjectionContext as ha, inject as Pa, computed as Q, shallowRef as J, toValue as P, watchEffect as Fa, unref as Ga, withDirectives as ea, vShow as na, Fragment as $, renderList as xa, mergeProps as D } from "vue";
 const k = (a, e) => {
   const n = a.__vccOpts || a;
   for (const [i, c] of e)
@@ -25,15 +25,15 @@ function Ya(a, e, n, i, c, r) {
     id: n.tabsId,
     role: "tablist"
   }, [
-    f(a.$slots, "default")
+    u(a.$slots, "default")
   ], 8, Wa)) : n.variant == "pills" ? (t(), l("ul", {
     key: 1,
     class: "bg-body-tertiary text-body rounded-3 nav nav-pills gap-1 border p-1",
     id: n.tabsId,
     role: "tablist"
   }, [
-    f(a.$slots, "default")
-  ], 8, Qa)) : g("", !0);
+    u(a.$slots, "default")
+  ], 8, Qa)) : d("", !0);
 }
 const Oo = /* @__PURE__ */ k(Ka, [["render", Ya]]), Oa = {
   props: {
@@ -44,15 +44,15 @@ const Oo = /* @__PURE__ */ k(Ka, [["render", Ya]]), Oa = {
     }
   }
 }, ja = ["id"];
-function Ha(a, e, n, i, c, r) {
+function Va(a, e, n, i, c, r) {
   return t(), l("div", {
     class: "tab-content",
     id: n.tabsId + "Content"
   }, [
-    f(a.$slots, "default")
+    u(a.$slots, "default")
   ], 8, ja);
 }
-const jo = /* @__PURE__ */ k(Oa, [["render", Ha]]), Va = {
+const jo = /* @__PURE__ */ k(Oa, [["render", Va]]), Ha = {
   props: {
     variant: {
       type: String,
@@ -123,16 +123,16 @@ function qa(a, e, n, i, c, r) {
       "aria-controls": n.panelId,
       "aria-selected": n.activeTab,
       onKeydown: [
-        e[0] || (e[0] = ra((...u) => r.moveNext && r.moveNext(...u), ["right"])),
-        e[1] || (e[1] = ra((...u) => r.movePrev && r.movePrev(...u), ["left"]))
+        e[0] || (e[0] = ra((...g) => r.moveNext && r.moveNext(...g), ["right"])),
+        e[1] || (e[1] = ra((...g) => r.movePrev && r.movePrev(...g), ["left"]))
       ],
-      onClick: e[2] || (e[2] = (...u) => r.onClick && r.onClick(...u))
+      onClick: e[2] || (e[2] = (...g) => r.onClick && r.onClick(...g))
     }, [
-      f(a.$slots, "default")
+      u(a.$slots, "default")
     ], 42, za)
   ]);
 }
-const Ho = /* @__PURE__ */ k(Va, [["render", qa]]), Xa = {
+const Vo = /* @__PURE__ */ k(Ha, [["render", qa]]), Xa = {
   props: {
     panelId: {
       // must match tab panelId
@@ -157,12 +157,12 @@ function _a(a, e, n, i, c, r) {
     role: "tabpanel",
     "aria-labelledby": n.panelId + "-tab",
     tabindex: "0",
-    onKeydown: e[0] || (e[0] = ra(Ba((...u) => r.setFocus && r.setFocus(...u), ["shift", "prevent"]), ["tab"]))
+    onKeydown: e[0] || (e[0] = ra(Ba((...g) => r.setFocus && r.setFocus(...g), ["shift", "prevent"]), ["tab"]))
   }, [
-    f(a.$slots, "default")
+    u(a.$slots, "default")
   ], 42, Za);
 }
-const Vo = /* @__PURE__ */ k(Xa, [["render", _a]]), $a = {
+const Ho = /* @__PURE__ */ k(Xa, [["render", _a]]), $a = {
   inject: ["mq"],
   props: {
     appName: {
@@ -217,7 +217,7 @@ const Vo = /* @__PURE__ */ k(Xa, [["render", _a]]), $a = {
   class: "text-light mb-3"
 }, te = { class: "container-xl d-flex flex-column" }, le = { class: "flex-fill" }, ue = { key: 0 }, ge = { class: "font-weight-light small py-3" };
 function de(a, e, n, i, c, r) {
-  const u = Ia("router-link");
+  const g = Ia("router-link");
   return t(), l("div", {
     class: E([r.mq.mdMinus ? "" : "d-flex vh-100 gap-3"]),
     style: ca([n.isPreview ? "min-height: auto !important;" : ""])
@@ -228,7 +228,7 @@ function de(a, e, n, i, c, r) {
     }, [
       o("header", null, [
         a.$slots.profile ? (t(), l("div", ae, [
-          f(a.$slots, "profile", {}, () => [
+          u(a.$slots, "profile", {}, () => [
             o("div", ee, [
               e[0] || (e[0] = o("div", { class: "flex-fill" }, "username", -1)),
               o("div", ne, [
@@ -239,17 +239,17 @@ function de(a, e, n, i, c, r) {
               ])
             ])
           ])
-        ])) : g("", !0),
+        ])) : d("", !0),
         o("div", {
           class: E([[r.mq.lgMinus ? "sol-sidebar-brand-sm" : "sol-sidebar-brand"], "px-3"])
         }, [
           a.$slots.navigation ? (t(), l("a", ie, [...e[1] || (e[1] = [
             o("i", { class: "bi bi-list fw-bold fs-6" }, null, -1)
-          ])])) : g("", !0),
+          ])])) : d("", !0),
           o("div", {
             class: E(["d-inline align-middle", [r.mq.mdPlus ? "h2" : "h3"]])
           }, [
-            ka(u, {
+            ka(g, {
               to: n.appRootUrl,
               class: "ff-encode-sans text-decoration-none text-light"
             }, {
@@ -268,7 +268,7 @@ function de(a, e, n, i, c, r) {
         ]])
       }, [
         a.$slots.navigation ? (t(), l("nav", re, [
-          f(a.$slots, "navigation", {}, () => [
+          u(a.$slots, "navigation", {}, () => [
             e[2] || (e[2] = o("ul", { class: "text-white" }, [
               o("li", null, "nav 1"),
               o("li", null, "nav 2"),
@@ -276,12 +276,12 @@ function de(a, e, n, i, c, r) {
               o("li", null, "nav 4")
             ], -1))
           ])
-        ])) : g("", !0),
+        ])) : d("", !0),
         a.$slots.aside ? (t(), l("aside", ce, [
-          f(a.$slots, "aside", {}, () => [
+          u(a.$slots, "aside", {}, () => [
             e[3] || (e[3] = p("this is aside content", -1))
           ])
-        ])) : g("", !0)
+        ])) : d("", !0)
       ], 2),
       e[4] || (e[4] = o("div", { class: "sol-sidebar-logo" }, " ", -1))
     ], 6),
@@ -291,16 +291,16 @@ function de(a, e, n, i, c, r) {
     }, [
       o("div", te, [
         o("main", le, [
-          f(a.$slots, "main")
+          u(a.$slots, "main")
         ]),
         a.$slots.footer ? (t(), l("footer", ue, [
-          f(a.$slots, "footer", {}, () => [
+          u(a.$slots, "footer", {}, () => [
             o("div", ge, [
               e[5] || (e[5] = Ca('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/">Terms</a></li></ul>', 1)),
               o("div", null, " Copyright © " + y((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
             ])
           ])
-        ])) : g("", !0)
+        ])) : d("", !0)
       ])
     ], 2)
   ], 6);
@@ -365,23 +365,23 @@ function Re(a, e, n, i, c, r) {
     class: E([[n.topbarClass, n.isPreview ? "" : "min-vh-100"], "d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"])
   }, [
     a.$slots.system ? (t(), l("div", fe, [
-      f(a.$slots, "system", {}, () => [
+      u(a.$slots, "system", {}, () => [
         e[0] || (e[0] = p("System messages", -1))
       ])
-    ])) : g("", !0),
+    ])) : d("", !0),
     o("header", me, [
       a.$slots.profile ? (t(), l("div", ye, [
         o("div", Ce, [
-          f(a.$slots, "profile", {}, () => [
+          u(a.$slots, "profile", {}, () => [
             e[1] || (e[1] = p("Welcome!", -1))
           ])
         ])
-      ])) : g("", !0),
+      ])) : d("", !0),
       o("div", Ne, [
         o("div", Le, [
           a.$slots.navigation ? (t(), l("a", Ee, [...e[2] || (e[2] = [
             o("i", { class: "bi bi-list fw-bold fs-6 text-white" }, null, -1)
-          ])])) : g("", !0),
+          ])])) : d("", !0),
           o("div", {
             class: E(["d-inline align-middle text-white", [r.mq.xlPlus ? "h2" : "h3"]])
           }, [
@@ -407,20 +407,20 @@ function Re(a, e, n, i, c, r) {
               class: E([r.mq.xlPlus ? "collapse.show" : "collapse"])
             }, [
               a.$slots.navigation ? (t(), l("nav", Se, [
-                f(a.$slots, "navigation")
-              ])) : g("", !0),
+                u(a.$slots, "navigation")
+              ])) : d("", !0),
               a.$slots.navigation && a.$slots.aside ? (t(), l("aside", be, [
-                f(a.$slots, "aside", {}, () => [
+                u(a.$slots, "aside", {}, () => [
                   e[3] || (e[3] = p("Aside content", -1))
                 ])
-              ])) : g("", !0)
+              ])) : d("", !0)
             ], 2)
-          ], 4)) : g("", !0),
+          ], 4)) : d("", !0),
           o("main", Te, [
             a.$slots.bar ? (t(), l("div", ve, [
-              f(a.$slots, "bar")
-            ])) : g("", !0),
-            f(a.$slots, "main", {}, () => [
+              u(a.$slots, "bar")
+            ])) : d("", !0),
+            u(a.$slots, "main", {}, () => [
               e[4] || (e[4] = o("div", { style: { outline: "dashed 1px lightgray" } }, [
                 o("h1", null, "Hello world..."),
                 o("p", null, " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa. ")
@@ -428,24 +428,24 @@ function Re(a, e, n, i, c, r) {
             ])
           ]),
           !a.$slots.navigation && a.$slots.aside ? (t(), l("aside", we, [
-            f(a.$slots, "aside", {}, () => [
+            u(a.$slots, "aside", {}, () => [
               e[5] || (e[5] = p("Aside content", -1))
             ])
-          ])) : g("", !0)
+          ])) : d("", !0)
         ])
       ])
     ], 2),
     o("footer", Be, [
       a.$slots.footer ? (t(), l("div", Ie, [
         o("div", ke, [
-          f(a.$slots, "footer", {}, () => [
+          u(a.$slots, "footer", {}, () => [
             o("div", Me, [
               e[6] || (e[6] = Ca('<ul class="list-inline m-0"><li class="list-inline-item"><a href="http://www.washington.edu/online/privacy/" class="link-light link-opacity-50 link-opacity-75-hover link-underline-opacity-50 link-underline-opacity-75-hover">Privacy</a></li><li class="list-inline-item"><a href="http://www.washington.edu/online/terms/" class="link-light link-opacity-50 link-opacity-75-hover link-underline-opacity-50 link-underline-opacity-75-hover">Terms</a></li></ul>', 1)),
               o("div", null, " Copyright © " + y((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
             ])
           ])
         ])
-      ])) : g("", !0)
+      ])) : d("", !0)
     ])
   ], 2);
 }
@@ -490,10 +490,10 @@ const zo = /* @__PURE__ */ k(se, [["render", Re]]), De = "data:image/png;base64,
   "aria-controls": "navbarToggler",
   "aria-expanded": "false",
   "aria-label": "Toggle navigation"
-}, He = {
+}, Ve = {
   key: 0,
   class: "navbar navbar-expand-xl py-xl-2 bg-husky-purple w-100 p-0"
-}, Ve = { class: "container-xl" }, Je = {
+}, He = { class: "container-xl" }, Je = {
   class: "navbar-collapse collapse",
   id: "navbarToggler"
 }, ze = {
@@ -520,7 +520,7 @@ function dn(a, e, n, i, c, r) {
               })
             ], -1)),
             o("div", Ke, [
-              n.appDeptName ? (t(), l("div", We, y(n.appDeptName), 1)) : g("", !0),
+              n.appDeptName ? (t(), l("div", We, y(n.appDeptName), 1)) : d("", !0),
               o("a", {
                 href: n.appRootUrl,
                 class: "d-block d-sm-none ff-encode-sans text-decoration-none fs-3 fw-medium text-truncate text-nowrap text-white",
@@ -533,36 +533,36 @@ function dn(a, e, n, i, c, r) {
             ])
           ]),
           o("div", Oe, [
-            a.$slots.settings ? f(a.$slots, "settings", { key: 0 }, () => [
+            a.$slots.settings ? u(a.$slots, "settings", { key: 0 }, () => [
               e[1] || (e[1] = p("user info", -1))
-            ]) : g("", !0),
+            ]) : d("", !0),
             a.$slots.navigation ? (t(), l("a", je, [...e[2] || (e[2] = [
               o("i", { class: "bi bi-list text-light fs-3" }, null, -1)
-            ])])) : g("", !0)
+            ])])) : d("", !0)
           ])
         ])
       ])
     ]),
-    a.$slots.navigation ? (t(), l("nav", He, [
-      o("div", Ve, [
+    a.$slots.navigation ? (t(), l("nav", Ve, [
+      o("div", He, [
         o("div", Je, [
-          f(a.$slots, "navigation", {}, () => [
+          u(a.$slots, "navigation", {}, () => [
             e[3] || (e[3] = p("navigation bar", -1))
           ])
         ])
       ])
-    ])) : g("", !0),
+    ])) : d("", !0),
     a.$slots.system ? (t(), l("div", ze, [
       o("div", qe, [
-        f(a.$slots, "system", {}, () => [
+        u(a.$slots, "system", {}, () => [
           e[4] || (e[4] = p("system messages", -1))
         ])
       ])
-    ])) : g("", !0),
+    ])) : d("", !0),
     o("div", Xe, [
       o("div", Ze, [
         o("main", _e, [
-          f(a.$slots, "main", {}, () => [
+          u(a.$slots, "main", {}, () => [
             e[5] || (e[5] = o("div", { style: { outline: "dashed 1px lightgray" } }, [
               o("h1", null, "Hello world..."),
               o("p", null, " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa. ")
@@ -570,15 +570,15 @@ function dn(a, e, n, i, c, r) {
           ])
         ]),
         a.$slots.aside ? (t(), l("aside", $e, [
-          f(a.$slots, "aside", {}, () => [
+          u(a.$slots, "aside", {}, () => [
             e[6] || (e[6] = p("aside content", -1))
           ])
-        ])) : g("", !0)
+        ])) : d("", !0)
       ])
     ]),
     o("footer", an, [
       o("div", en, [
-        a.$slots.footer ? f(a.$slots, "footer", { key: 0 }, () => [
+        a.$slots.footer ? u(a.$slots, "footer", { key: 0 }, () => [
           o("div", nn, [
             o("div", on, [
               o("ul", rn, [
@@ -589,7 +589,7 @@ function dn(a, e, n, i, c, r) {
                     target: "_blank",
                     rel: "noopener",
                     class: "link-body-emphasis"
-                  }, "Privacy", 8, tn)) : g("", !0)
+                  }, "Privacy", 8, tn)) : d("", !0)
                 ]),
                 o("li", ln, [
                   n.termsURL ? (t(), l("a", {
@@ -598,13 +598,13 @@ function dn(a, e, n, i, c, r) {
                     target: "_blank",
                     rel: "noopener",
                     class: "link-body-emphasis"
-                  }, "Terms", 8, un)) : g("", !0)
+                  }, "Terms", 8, un)) : d("", !0)
                 ])
               ]),
               o("div", gn, " Copyright © " + y((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)
             ])
           ])
-        ]) : g("", !0)
+        ]) : d("", !0)
       ])
     ])
   ], 2);
@@ -691,15 +691,15 @@ function Mn(a, e, n, i, c, r) {
           e[1] || (e[1] = p(" overriding as ", -1)),
           e[2] || (e[2] = o("i", { class: "bi bi-arrow-right text-danger" }, null, -1)),
           p(" " + y(n.userOverride), 1)
-        ])) : g("", !0),
+        ])) : d("", !0),
         o("p", hn, y(n.userOfficialName) + ", " + y(n.userPreferredName) + ", " + y(n.userPronouns), 1),
         o("p", An, [
           o("a", { href: n.profileUrl }, "go to profile", 8, Sn)
         ]),
         o("div", null, [
-          n.signoutUrl ? f(a.$slots, "default", { key: 0 }, () => [
+          n.signoutUrl ? u(a.$slots, "default", { key: 0 }, () => [
             o("a", { href: n.signoutUrl }, "Sign out", 8, bn)
-          ]) : f(a.$slots, "default", { key: 1 }, () => [
+          ]) : u(a.$slots, "default", { key: 1 }, () => [
             e[3] || (e[3] = o("a", { href: "sadkf" }, "sign out test", -1))
           ])
         ])
@@ -712,12 +712,12 @@ function Mn(a, e, n, i, c, r) {
       p(" " + y(n.userOverride), 1)
     ])) : (t(), l("div", Bn, y(n.userNetid), 1)),
     o("div", In, [
-      n.signoutUrl ? f(a.$slots, "default", { key: 0 }, () => [
+      n.signoutUrl ? u(a.$slots, "default", { key: 0 }, () => [
         o("a", {
           href: n.signoutUrl,
           class: "text-white"
         }, "Sign out", 8, kn)
-      ]) : f(a.$slots, "default", { key: 1 }, () => [
+      ]) : u(a.$slots, "default", { key: 1 }, () => [
         e[5] || (e[5] = o("a", { href: "sadkf" }, "sign out test", -1))
       ])
     ])
@@ -761,14 +761,14 @@ function xn(a = Sa, e = {}) {
   function r() {
     i.value = !0;
   }
-  const u = (...h) => {
+  const g = (...h) => {
     i.value && a(...h);
   };
   return {
     isActive: Na(i),
     pause: c,
     resume: r,
-    eventFilter: u
+    eventFilter: g
   };
 }
 function ua(a) {
@@ -785,15 +785,15 @@ function Wn(a, e, n = {}) {
   return aa(a, Gn(i, e), c);
 }
 function Qn(a, e, n = {}) {
-  const { eventFilter: i, initialState: c = "active", ...r } = n, { eventFilter: u, pause: h, resume: I, isActive: s } = xn(i, { initialState: c });
+  const { eventFilter: i, initialState: c = "active", ...r } = n, { eventFilter: g, pause: h, resume: I, isActive: f } = xn(i, { initialState: c });
   return {
     stop: Wn(a, e, {
       ...r,
-      eventFilter: u
+      eventFilter: g
     }),
     pause: h,
     resume: I,
-    isActive: s
+    isActive: f
   };
 }
 function ba(a, e = !0, n) {
@@ -812,7 +812,7 @@ function Ta(a) {
   return (e = n?.$el) !== null && e !== void 0 ? e : n;
 }
 function ta(...a) {
-  const e = (i, c, r, u) => (i.addEventListener(c, r, u), () => i.removeEventListener(c, r, u)), n = Q(() => {
+  const e = (i, c, r, g) => (i.addEventListener(c, r, g), () => i.removeEventListener(c, r, g)), n = Q(() => {
     const i = ia(P(a[0])).filter((c) => c != null);
     return i.every((c) => typeof c != "string") ? i : void 0;
   });
@@ -824,9 +824,9 @@ function ta(...a) {
       ia(Ga(n.value ? a[2] : a[1])),
       P(n.value ? a[3] : a[2])
     ];
-  }, ([i, c, r, u], h, I) => {
+  }, ([i, c, r, g], h, I) => {
     if (!i?.length || !c?.length || !r?.length) return;
-    const s = Pn(u) ? { ...u } : u, N = i.flatMap((m) => c.flatMap((w) => r.map((C) => e(m, w, C, s))));
+    const f = Pn(g) ? { ...g } : g, N = i.flatMap((m) => c.flatMap((w) => r.map((C) => e(m, w, C, f))));
     I(() => {
       N.forEach((m) => m());
     });
@@ -844,27 +844,27 @@ function jn(a) {
   const e = /* @__PURE__ */ On();
   return Q(() => (e.value, !!a()));
 }
-const Hn = /* @__PURE__ */ Symbol("vueuse-ssr-width");
+const Vn = /* @__PURE__ */ Symbol("vueuse-ssr-width");
 // @__NO_SIDE_EFFECTS__
-function Vn() {
-  const a = ha() ? /* @__PURE__ */ Rn(Hn, null) : null;
+function Hn() {
+  const a = ha() ? /* @__PURE__ */ Rn(Vn, null) : null;
   return typeof a == "number" ? a : void 0;
 }
 function Jn(a, e = {}) {
-  const { window: n = W, ssrWidth: i = /* @__PURE__ */ Vn() } = e, c = /* @__PURE__ */ jn(() => n && "matchMedia" in n && typeof n.matchMedia == "function"), r = J(typeof i == "number"), u = J(), h = J(!1), I = (s) => {
-    h.value = s.matches;
+  const { window: n = W, ssrWidth: i = /* @__PURE__ */ Hn() } = e, c = /* @__PURE__ */ jn(() => n && "matchMedia" in n && typeof n.matchMedia == "function"), r = J(typeof i == "number"), g = J(), h = J(!1), I = (f) => {
+    h.value = f.matches;
   };
   return Fa(() => {
     if (r.value) {
-      r.value = !c.value, h.value = P(a).split(",").some((s) => {
-        const N = s.includes("not all"), m = s.match(/\(\s*min-width:\s*(-?\d+(?:\.\d*)?[a-z]+\s*)\)/), w = s.match(/\(\s*max-width:\s*(-?\d+(?:\.\d*)?[a-z]+\s*)\)/);
+      r.value = !c.value, h.value = P(a).split(",").some((f) => {
+        const N = f.includes("not all"), m = f.match(/\(\s*min-width:\s*(-?\d+(?:\.\d*)?[a-z]+\s*)\)/), w = f.match(/\(\s*max-width:\s*(-?\d+(?:\.\d*)?[a-z]+\s*)\)/);
         let C = !!(m || w);
         return m && C && (C = i >= ua(m[1])), w && C && (C = i <= ua(w[1])), N ? !C : C;
       });
       return;
     }
-    c.value && (u.value = n.matchMedia(P(a)), h.value = u.value.matches);
-  }), ta(u, "change", I, { passive: !0 }), Q(() => h.value);
+    c.value && (g.value = n.matchMedia(P(a)), h.value = g.value.matches);
+  }), ta(g, "change", I, { passive: !0 }), Q(() => h.value);
 }
 const z = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {}, q = "__vueuse_ssr_handlers__", zn = /* @__PURE__ */ qn();
 function qn() {
@@ -916,118 +916,118 @@ const _n = {
 }, ga = "vueuse-storage";
 function $n(a, e, n, i = {}) {
   var c;
-  const { flush: r = "pre", deep: u = !0, listenToStorageChanges: h = !0, writeDefaults: I = !0, mergeDefaults: s = !1, shallow: N, window: m = W, eventFilter: w, onError: C = (d) => {
-    console.error(d);
+  const { flush: r = "pre", deep: g = !0, listenToStorageChanges: h = !0, writeDefaults: I = !0, mergeDefaults: f = !1, shallow: N, window: m = W, eventFilter: w, onError: C = (s) => {
+    console.error(s);
   }, initOnMounted: A } = i, L = (N ? J : La)(typeof e == "function" ? e() : e), S = Q(() => P(a));
   if (!n) try {
     n = va("getDefaultStorage", () => W?.localStorage)();
-  } catch (d) {
-    C(d);
+  } catch (s) {
+    C(s);
   }
   if (!n) return L;
-  const b = P(e), H = Zn(b), F = (c = i.serializer) !== null && c !== void 0 ? c : _n[H], { pause: B, resume: U } = Qn(L, (d) => G(d), {
+  const b = P(e), V = Zn(b), F = (c = i.serializer) !== null && c !== void 0 ? c : _n[V], { pause: B, resume: U } = Qn(L, (s) => G(s), {
     flush: r,
-    deep: u,
+    deep: g,
     eventFilter: w
   });
   aa(S, () => M(), { flush: r });
   let Y = !1;
-  const O = (d) => {
-    A && !Y || M(d);
-  }, V = (d) => {
-    A && !Y || K(d);
+  const O = (s) => {
+    A && !Y || M(s);
+  }, H = (s) => {
+    A && !Y || K(s);
   };
-  m && h && (n instanceof Storage ? ta(m, "storage", O, { passive: !0 }) : ta(m, ga, V)), A ? ba(() => {
+  m && h && (n instanceof Storage ? ta(m, "storage", O, { passive: !0 }) : ta(m, ga, H)), A ? ba(() => {
     Y = !0, M();
   }) : M();
-  function j(d, T) {
+  function j(s, T) {
     if (m) {
       const R = {
         key: S.value,
-        oldValue: d,
+        oldValue: s,
         newValue: T,
         storageArea: n
       };
       m.dispatchEvent(n instanceof Storage ? new StorageEvent("storage", R) : new CustomEvent(ga, { detail: R }));
     }
   }
-  function G(d) {
+  function G(s) {
     try {
       const T = n.getItem(S.value);
-      if (d == null)
+      if (s == null)
         j(T, null), n.removeItem(S.value);
       else {
-        const R = F.write(d);
+        const R = F.write(s);
         T !== R && (n.setItem(S.value, R), j(T, R));
       }
     } catch (T) {
       C(T);
     }
   }
-  function x(d) {
-    const T = d ? d.newValue : n.getItem(S.value);
+  function x(s) {
+    const T = s ? s.newValue : n.getItem(S.value);
     if (T == null)
       return I && b != null && n.setItem(S.value, F.write(b)), b;
-    if (!d && s) {
+    if (!s && f) {
       const R = F.read(T);
-      return typeof s == "function" ? s(R, b) : H === "object" && !Array.isArray(R) ? {
+      return typeof f == "function" ? f(R, b) : V === "object" && !Array.isArray(R) ? {
         ...b,
         ...R
       } : R;
     } else return typeof T != "string" ? T : F.read(T);
   }
-  function M(d) {
-    if (!(d && d.storageArea !== n)) {
-      if (d && d.key == null) {
+  function M(s) {
+    if (!(s && s.storageArea !== n)) {
+      if (s && s.key == null) {
         L.value = b;
         return;
       }
-      if (!(d && d.key !== S.value)) {
+      if (!(s && s.key !== S.value)) {
         B();
         try {
           const T = F.write(L.value);
-          (d === void 0 || d?.newValue !== T) && (L.value = x(d));
+          (s === void 0 || s?.newValue !== T) && (L.value = x(s));
         } catch (T) {
           C(T);
         } finally {
-          d ? pa(U) : U();
+          s ? pa(U) : U();
         }
       }
     }
   }
-  function K(d) {
-    M(d.detail);
+  function K(s) {
+    M(s.detail);
   }
   return L;
 }
 const ao = "*,*::before,*::after{-webkit-transition:none!important;-moz-transition:none!important;-o-transition:none!important;-ms-transition:none!important;transition:none!important}";
 function eo(a = {}) {
-  const { selector: e = "html", attribute: n = "class", initialValue: i = "auto", window: c = W, storage: r, storageKey: u = "vueuse-color-scheme", listenToStorageChanges: h = !0, storageRef: I, emitAuto: s, disableTransition: N = !0 } = a, m = {
+  const { selector: e = "html", attribute: n = "class", initialValue: i = "auto", window: c = W, storage: r, storageKey: g = "vueuse-color-scheme", listenToStorageChanges: h = !0, storageRef: I, emitAuto: f, disableTransition: N = !0 } = a, m = {
     auto: "",
     light: "light",
     dark: "dark",
     ...a.modes || {}
-  }, w = /* @__PURE__ */ Xn({ window: c }), C = Q(() => w.value ? "dark" : "light"), A = I || (u == null ? Aa(i) : $n(u, i, r, {
+  }, w = /* @__PURE__ */ Xn({ window: c }), C = Q(() => w.value ? "dark" : "light"), A = I || (g == null ? Aa(i) : $n(g, i, r, {
     window: c,
     listenToStorageChanges: h
   })), L = Q(() => A.value === "auto" ? C.value : A.value), S = va("updateHTMLAttrs", (B, U, Y) => {
     const O = typeof B == "string" ? c?.document.querySelector(B) : Ta(B);
     if (!O) return;
-    const V = /* @__PURE__ */ new Set(), j = /* @__PURE__ */ new Set();
+    const H = /* @__PURE__ */ new Set(), j = /* @__PURE__ */ new Set();
     let G = null;
     if (U === "class") {
       const M = Y.split(/\s/g);
       Object.values(m).flatMap((K) => (K || "").split(/\s/g)).filter(Boolean).forEach((K) => {
-        M.includes(K) ? V.add(K) : j.add(K);
+        M.includes(K) ? H.add(K) : j.add(K);
       });
     } else G = {
       key: U,
       value: Y
     };
-    if (V.size === 0 && j.size === 0 && G === null) return;
+    if (H.size === 0 && j.size === 0 && G === null) return;
     let x;
     N && (x = c.document.createElement("style"), x.appendChild(document.createTextNode(ao)), c.document.head.appendChild(x));
-    for (const M of V) O.classList.add(M);
+    for (const M of H) O.classList.add(M);
     for (const M of j) O.classList.remove(M);
     G && O.setAttribute(G.key, G.value), N && (c.getComputedStyle(x).opacity, document.head.removeChild(x));
   });
@@ -1035,16 +1035,16 @@ function eo(a = {}) {
     var U;
     S(e, n, (U = m[B]) !== null && U !== void 0 ? U : B);
   }
-  function H(B) {
+  function V(B) {
     a.onChanged ? a.onChanged(B, b) : b(B);
   }
-  aa(L, H, {
+  aa(L, V, {
     flush: "post",
     immediate: !0
-  }), ba(() => H(L.value));
+  }), ba(() => V(L.value));
   const F = Q({
     get() {
-      return s ? A.value : L.value;
+      return f ? A.value : L.value;
     },
     set(B) {
       A.value = B;
@@ -1098,7 +1098,7 @@ function go(a, e, n, i, c, r) {
             class: E(["dropdown-item rounded", i.colorMode == "light" ? "active" : ""]),
             href: "#",
             role: "button",
-            onClick: e[0] || (e[0] = (u) => i.colorMode = "light")
+            onClick: e[0] || (e[0] = (g) => i.colorMode = "light")
           }, [...e[3] || (e[3] = [
             o("i", { class: "bi bi-brightness-high-fill me-2" }, null, -1),
             p("Light", -1)
@@ -1109,7 +1109,7 @@ function go(a, e, n, i, c, r) {
             class: E(["dropdown-item rounded", i.colorMode == "dark" ? "active" : ""]),
             href: "#",
             role: "button",
-            onClick: e[1] || (e[1] = (u) => i.colorMode = "dark")
+            onClick: e[1] || (e[1] = (g) => i.colorMode = "dark")
           }, [...e[4] || (e[4] = [
             o("i", { class: "bi bi-moon-stars-fill me-2" }, null, -1),
             p("Dark", -1)
@@ -1120,7 +1120,7 @@ function go(a, e, n, i, c, r) {
             class: E(["dropdown-item rounded", i.colorMode == "auto" ? "active" : ""]),
             href: "#",
             role: "button",
-            onClick: e[2] || (e[2] = (u) => i.colorMode = "auto")
+            onClick: e[2] || (e[2] = (g) => i.colorMode = "auto")
           }, [...e[5] || (e[5] = [
             o("i", { class: "bi bi-circle-half me-2" }, null, -1),
             p("Auto", -1)
@@ -5245,8 +5245,8 @@ var ya;
 function Co() {
   if (ya) return v;
   ya = 1;
-  var a = v && v.__importDefault || function(s) {
-    return s && s.__esModule ? s : { default: s };
+  var a = v && v.__importDefault || function(f) {
+    return f && f.__esModule ? f : { default: f };
   };
   Object.defineProperty(v, "__esModule", { value: !0 }), v.customList = v.customArray = v.findOne = v.filter = v.all = v.utils = void 0;
   const e = a(fo()), n = a(mo()), i = a(yo());
@@ -5257,15 +5257,15 @@ function Co() {
     return i.default;
   }
   v.all = c;
-  function r(s, N) {
-    return i.default.filter((m) => m[s] === N);
+  function r(f, N) {
+    return i.default.filter((m) => m[f] === N);
   }
   v.filter = r;
-  function u(s, N) {
-    return i.default.find((m) => m[s] === N);
+  function g(f, N) {
+    return i.default.find((m) => m[f] === N);
   }
-  v.findOne = u;
-  function h(s = {
+  v.findOne = g;
+  function h(f = {
     name: "{countryNameEn} ({countryCode})",
     value: "{countryCode}"
   }, { sortBy: N, sortDataBy: m, filter: w } = {}) {
@@ -5277,22 +5277,22 @@ function Co() {
     }
     if (A.forEach((L) => {
       const S = {};
-      for (const b in s)
-        S[b] = (0, n.default)(s[b], L);
+      for (const b in f)
+        S[b] = (0, n.default)(f[b], L);
       C.push(S);
-    }), N && s[N]) {
+    }), N && f[N]) {
       const L = new Intl.Collator([], { sensitivity: "accent" });
       C.sort((S, b) => L.compare(S[N], b[N]));
     }
     return C;
   }
   v.customArray = h;
-  function I(s = "countryCode", N = "{countryNameEn} ({countryCode})", { filter: m } = {}) {
+  function I(f = "countryCode", N = "{countryNameEn} ({countryCode})", { filter: m } = {}) {
     const w = {};
     let C = i.default;
     return typeof m == "function" && (C = C.filter(m)), C.forEach((A) => {
       const L = (0, n.default)(N, A);
-      w[String(A[s])] = L;
+      w[String(A[f])] = L;
     }), w;
   }
   return v.customList = I, v;
@@ -5381,7 +5381,7 @@ function bo(a, e, n, i, c, r) {
         o("button", {
           type: "button",
           class: "dropdown-item",
-          onClick: e[0] || (e[0] = (u) => r.selectCountry({
+          onClick: e[0] || (e[0] = (g) => r.selectCountry({
             code: "US",
             name: "United States of America",
             callingCode: "1"
@@ -5391,14 +5391,14 @@ function bo(a, e, n, i, c, r) {
       e[1] || (e[1] = o("li", null, [
         o("hr", { class: "dropdown-divider" })
       ], -1)),
-      (t(!0), l($, null, xa(c.countries, (u, h) => (t(), l("li", { key: h }, [
+      (t(!0), l($, null, xa(c.countries, (g, h) => (t(), l("li", { key: h }, [
         o("button", {
           type: "button",
           class: "dropdown-item",
-          onClick: (I) => r.selectCountry(u)
+          onClick: (I) => r.selectCountry(g)
         }, [
-          p(y(r.flag(u.code)) + " " + y(u.name) + " ", 1),
-          o("span", So, "+" + y(u.callingCode), 1)
+          p(y(r.flag(g.code)) + " " + y(g.name) + " ", 1),
+          o("span", So, "+" + y(g.callingCode), 1)
         ], 8, Ao)
       ]))), 128))
     ])
@@ -5470,7 +5470,7 @@ function Ko(a, e, n, i, c, r) {
         e[0] || (e[0] = o("i", { class: "bi bi-chevron-down me-1" }, null, -1))
       ], 2),
       o("div", Mo, [
-        n.userOverride ? (t(), l("div", Ro, " You are overriding as another user ")) : g("", !0),
+        n.userOverride ? (t(), l("div", Ro, " You are overriding as another user ")) : d("", !0),
         o("div", Do, [
           o("div", Uo, [
             n.photoUrl ? (t(), l("img", {
@@ -5481,12 +5481,12 @@ function Ko(a, e, n, i, c, r) {
             }, null, 8, Po)) : (t(), l("img", Fo))
           ]),
           o("div", Go, [
-            f(a.$slots, "default", {}, () => [
+            u(a.$slots, "default", {}, () => [
               e[1] || (e[1] = p(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium hendrerit dui, sit amet dapibus nulla condimentum id. Quisque pulvinar viverra eros, sit amet blandit tellus faucibus at. Maecenas a turpis sed quam vulputate placerat. Duis id eros sit amet turpis dignissim lacinia. Suspendisse molestie vel nisl sit amet convallis. ", -1))
             ], !0)
           ]),
           o("div", xo, [
-            f(a.$slots, "action", {}, () => [
+            u(a.$slots, "action", {}, () => [
               e[2] || (e[2] = p("action", -1))
             ], !0)
           ])
@@ -5517,49 +5517,70 @@ function Qo(a, e, n, i, c, r) {
     n.level === "1" ? (t(), l("h1", D({
       key: 0,
       class: "display-5 fw-bold ff-encode-sans"
-    }, a.$attrs), "Heading 1 - 48", 16)) : g("", !0),
+    }, a.$attrs), [
+      u(a.$slots, "default")
+    ], 16)) : d("", !0),
     n.level === "2" ? (t(), l("h2", D({
       key: 1,
       class: "display-6 fw-light ff-encode-sans"
-    }, a.$attrs), "Heading 2 - 40", 16)) : g("", !0),
+    }, a.$attrs), [
+      u(a.$slots, "default")
+    ], 16)) : d("", !0),
     n.level === "3" ? (t(), l("h3", D({
       key: 2,
       class: "fw-medium ff-encode-sans"
-    }, a.$attrs), "Heading 3 - 28", 16)) : g("", !0),
+    }, a.$attrs), [
+      u(a.$slots, "default")
+    ], 16)) : d("", !0),
     n.level === "4" ? (t(), l("h4", D({
       key: 3,
       class: "fw-bold ff-open-sans"
-    }, a.$attrs), "Heading 4 - 24", 16)) : g("", !0),
+    }, a.$attrs), [
+      u(a.$slots, "default")
+    ], 16)) : d("", !0),
     n.level === "5" ? (t(), l("h5", D({
       key: 4,
       class: "fw-bold ff-open-sans"
-    }, a.$attrs), "Heading 5 - 20", 16)) : g("", !0),
+    }, a.$attrs), [
+      u(a.$slots, "default")
+    ], 16)) : d("", !0),
     n.level === "6" ? (t(), l("h6", D({
       key: 5,
       class: "fw-bold ff-open-sans"
-    }, a.$attrs), "Heading 6 - 16", 16)) : g("", !0)
+    }, a.$attrs), [
+      u(a.$slots, "default")
+    ], 16)) : d("", !0)
   ], 64)) : (t(), l($, { key: 1 }, [
     n.level === "1" ? (t(), l("h1", D({
       key: 0,
       class: "fs-2 fw-bold ff-encode-sans"
-    }, a.$attrs), "Heading 1 - 32", 16)) : g("", !0),
+    }, a.$attrs), [
+      u(a.$slots, "default")
+    ], 16)) : d("", !0),
     n.level === "2" ? (t(), l("h2", D({
       key: 1,
-      class: "fs-3 fw-light ff-encode-sans",
-      '"': ""
-    }, a.$attrs), "Heading 2 - 28", 16)) : g("", !0),
+      class: "fs-3 fw-light ff-encode-sans"
+    }, a.$attrs), [
+      u(a.$slots, "default")
+    ], 16)) : d("", !0),
     n.level === "3" ? (t(), l("h3", D({
       key: 2,
       class: "fs-4 fw-medium ff-encode-sans"
-    }, a.$attrs), "Heading 3 - 24", 16)) : g("", !0),
+    }, a.$attrs), [
+      u(a.$slots, "default")
+    ], 16)) : d("", !0),
     n.level === "4" ? (t(), l("h4", D({
       key: 3,
       class: "fs-5 fw-bold ff-open-sans"
-    }, a.$attrs), "Heading 4 - 20", 16)) : g("", !0),
+    }, a.$attrs), [
+      u(a.$slots, "default")
+    ], 16)) : d("", !0),
     n.level === "5" ? (t(), l("h5", D({
       key: 4,
       class: "fs-6 fw-bold ff-open-sans"
-    }, a.$attrs), "Heading 5 - 16", 16)) : g("", !0)
+    }, a.$attrs), [
+      u(a.$slots, "default")
+    ], 16)) : d("", !0)
   ], 64));
 }
 const ai = /* @__PURE__ */ k(Wo, [["render", Qo]]);
@@ -5570,9 +5591,9 @@ export {
   Xo as SProfile,
   Jo as SSidebar,
   jo as STabsDisplay,
-  Ho as STabsItem,
+  Vo as STabsItem,
   Oo as STabsList,
-  Vo as STabsPanel,
+  Ho as STabsPanel,
   zo as STopbar,
   qo as STopbarNeo,
   $o as SUser

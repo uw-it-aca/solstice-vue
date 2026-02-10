@@ -5514,7 +5514,7 @@ function Qo(a, e, n, i, c, r) {
   return n.system === "doc" ? (t(), l($, { key: 0 }, [
     n.level === "1" ? (t(), l("h1", D({
       key: 0,
-      class: "display-5 fw-bold ff-encode-sans"
+      class: "display-5 fw-semibold ff-encode-sans"
     }, a.$attrs), [
       u(a.$slots, "default")
     ], 16)) : d("", !0),
@@ -5551,7 +5551,7 @@ function Qo(a, e, n, i, c, r) {
   ], 64)) : (t(), l($, { key: 1 }, [
     n.level === "1" ? (t(), l("h1", D({
       key: 0,
-      class: "fs-2 fw-bold ff-encode-sans"
+      class: "display-6 fw-semibold ff-encode-sans"
     }, a.$attrs), [
       u(a.$slots, "default")
     ], 16)) : d("", !0),

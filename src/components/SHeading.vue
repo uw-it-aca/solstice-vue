@@ -2,7 +2,7 @@
   <template v-if="system === 'doc'">
     <h1
       v-if="level === '1'"
-      class="display-5 fw-bold ff-encode-sans"
+      class="display-5 fw-semibold ff-encode-sans"
       v-bind="$attrs"
     >
       <slot />
@@ -31,7 +31,7 @@
   <template v-else>
     <h1
       v-if="level === '1'"
-      class="fs-2 fw-bold ff-encode-sans"
+      class="display-6 fw-semibold ff-encode-sans"
       v-bind="$attrs"
     >
       <slot />

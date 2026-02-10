@@ -5499,13 +5499,11 @@ const $o = /* @__PURE__ */ k(To, [["render", Ko], ["__scopeId", "data-v-1b1ef1d7
   props: {
     level: {
       type: String,
-      default: "standard",
       required: !0
     },
     system: {
       type: String,
-      default: "doc",
-      required: !0
+      default: "doc"
     }
   },
   data() {

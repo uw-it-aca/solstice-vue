@@ -64,13 +64,11 @@
     props: {
       level: {
         type: String,
-        default: "standard",
         required: true,
       },
       system: {
         type: String,
         default: "doc",
-        required: true,
       },
     },
     data() {

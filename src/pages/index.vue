@@ -1897,6 +1897,34 @@
       </table>
 
       <hr />
+      <h2 class="fw-bold mb-5">Headings</h2>
+
+      <div class="grid">
+        <div class="g-col-6">
+          <p>Documentation</p>
+          <ul class="list-unstyled">
+            <li><SHeading level="1" class="">Heading 1</SHeading></li>
+            <li><SHeading level="2" class="">Heading 2</SHeading></li>
+            <li><SHeading level="3">Heading 3</SHeading></li>
+            <li><SHeading level="4">Heading 4</SHeading></li>
+            <li><SHeading level="5">Heading 5</SHeading></li>
+            <li><SHeading level="6">Heading 6</SHeading></li>
+          </ul>
+        </div>
+        <div class="g-col-6">
+          <p>Applications</p>
+          <ul class="list-unstyled">
+            <li><SHeading level="1" system="app">Heading 1</SHeading></li>
+            <li><SHeading level="2" system="app">Heading 2</SHeading></li>
+            <li><SHeading level="3" system="app">Heading 3</SHeading></li>
+            <li><SHeading level="4" system="app">Heading 4</SHeading></li>
+            <li><SHeading level="5" system="app">Heading 5</SHeading></li>
+            <li><SHeading level="6" system="app">Heading 6</SHeading></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr />
       <h2 class="fw-bold mb-5">Form Elements</h2>
 
       <h3>Input Group</h3>

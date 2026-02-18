@@ -2,19 +2,19 @@
   <template v-if="system === 'doc'">
     <h1
       v-if="level === '1'"
-      class="display-5 fw-semibold ff-encode-sans"
+      class="display-5 fw-semibold ff-encode-sans my-5"
       v-bind="$attrs"
     >
       <slot />
     </h1>
     <h2
       v-if="level === '2'"
-      class="display-6 fw-light ff-encode-sans"
+      class="display-6 fw-light ff-encode-sans my-4"
       v-bind="$attrs"
     >
       <slot />
     </h2>
-    <h3 v-if="level === '3'" class="fw-medium ff-encode-sans" v-bind="$attrs">
+    <h3 v-if="level === '3'" class="fw-medium ff-encode-sans my-3" v-bind="$attrs">
       <slot />
     </h3>
     <h4 v-if="level === '4'" class="fw-bold ff-open-sans" v-bind="$attrs">

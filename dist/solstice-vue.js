@@ -5514,19 +5514,19 @@ function Qo(a, e, n, i, c, r) {
   return n.system === "doc" ? (t(), l($, { key: 0 }, [
     n.level === "1" ? (t(), l("h1", D({
       key: 0,
-      class: "display-5 fw-semibold ff-encode-sans"
+      class: "display-5 fw-semibold ff-encode-sans my-5"
     }, a.$attrs), [
       u(a.$slots, "default")
     ], 16)) : d("", !0),
     n.level === "2" ? (t(), l("h2", D({
       key: 1,
-      class: "display-6 fw-light ff-encode-sans"
+      class: "display-6 fw-light ff-encode-sans my-4"
     }, a.$attrs), [
       u(a.$slots, "default")
     ], 16)) : d("", !0),
     n.level === "3" ? (t(), l("h3", D({
       key: 2,
-      class: "fw-medium ff-encode-sans"
+      class: "fw-medium ff-encode-sans my-3"
     }, a.$attrs), [
       u(a.$slots, "default")
     ], 16)) : d("", !0),

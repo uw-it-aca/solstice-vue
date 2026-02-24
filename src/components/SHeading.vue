@@ -31,7 +31,7 @@
   <template v-else>
     <h1
       v-if="level === '1'"
-      class="display-6 fw-semibold ff-encode-sans"
+      class="fs-2 fw-semibold ff-encode-sans"
       v-bind="$attrs"
     >
       <slot />

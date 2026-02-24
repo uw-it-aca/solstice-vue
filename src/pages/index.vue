@@ -1914,11 +1914,21 @@
         <div class="g-col-6">
           <p>Applications</p>
           <ul class="list-unstyled">
-            <li><SHeading level="1" system="app">Heading 1 - 40px</SHeading></li>
-            <li><SHeading level="2" system="app">Heading 2 - 28px</SHeading></li>
-            <li><SHeading level="3" system="app">Heading 3 - 24px</SHeading></li>
-            <li><SHeading level="4" system="app">Heading 4 - 20px</SHeading></li>
-            <li><SHeading level="5" system="app">Heading 5 - 16px</SHeading></li>
+            <li>
+              <SHeading level="1" system="app">Heading 1 - 32px</SHeading>
+            </li>
+            <li>
+              <SHeading level="2" system="app">Heading 2 - 28px</SHeading>
+            </li>
+            <li>
+              <SHeading level="3" system="app">Heading 3 - 24px</SHeading>
+            </li>
+            <li>
+              <SHeading level="4" system="app">Heading 4 - 20px</SHeading>
+            </li>
+            <li>
+              <SHeading level="5" system="app">Heading 5 - 16px</SHeading>
+            </li>
           </ul>
         </div>
       </div>
@@ -2933,23 +2943,33 @@
       <div class="mb-5 grid">
         <div class="g-col-4">
           <h4>Elevated</h4>
-          <BCard class="mb-3 border-0 shadow">card 1 w/ shadow </BCard>
-          <BCard class="mb-3 border-0 shadow">card 2 w/ shadow</BCard>
+          <BCard body-class="p-4" class="mb-3 border-0 shadow"
+            >card 1 w/ shadow
+          </BCard>
+          <BCard body-class="p-4" class="mb-3 border-0 shadow"
+            >card 2 w/ shadow</BCard
+          >
         </div>
 
         <div class="g-col-4">
           <h4>Filled</h4>
-          <BCard bg-variant="body-tertiary" class="mb-3 border-0">
+          <BCard
+            bg-variant="body-tertiary"
+            body-class="p-4"
+            class="mb-3 border-0"
+          >
             body-tertiary
           </BCard>
           <BCard
             bg-variant="body-secondary"
+            body-class="p-4"
             class="bg-opacity-50 mb-3 border-0"
           >
             body-secondary, bg-opacity-50
           </BCard>
           <BCard
             bg-variant="spirit-purple-subtle"
+            body-class="p-4"
             class="bg-opacity-25 mb-3 border-0"
           >
             bg-spirit-purple-subtle, bg-opacity-25
@@ -2957,6 +2977,7 @@
 
           <BCard
             bg-variant="husky-gold-subtle"
+            body-class="p-4"
             class="bg-opacity-50 mb-3 border-0"
           >
             bg-husky-gold-subtle, bg-opacity-50
@@ -2964,8 +2985,8 @@
         </div>
         <div class="g-col-4">
           <h4>Outline</h4>
-          <BCard class="mb-3">default card border</BCard>
-          <BCard class="border-secondary-subtle mb-3 border">
+          <BCard body-class="p-4" class="mb-3">default card border</BCard>
+          <BCard body-class="p-4" class="border-secondary-subtle mb-3 border">
             border-secondary-subtle
           </BCard>
         </div>
@@ -2976,7 +2997,7 @@
 
       <div class="mb-5 grid">
         <div class="g-col-6">
-          <BCard class="mb-3 border-0 shadow">
+          <BCard body-class="p-4" class="mb-3 border-0 shadow">
             <div class="d-flex justify-content-between mb-3">
               <h3 class="fw-bold">Heading</h3>
               <BButton
@@ -3062,7 +3083,7 @@
           </BCard>
         </div>
         <div class="g-col-6">
-          <BCard class="mb-3 border-0 shadow">
+          <BCard body-class="p-4" class="mb-3 border-0 shadow">
             <div class="d-flex justify-content-between mb-3">
               <h3 class="fw-bold">Heading</h3>
               <BButton variant="subdued-primary" size="sm" class="me-1">

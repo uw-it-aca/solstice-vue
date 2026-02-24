@@ -2999,7 +2999,7 @@
         <div class="g-col-6">
           <BCard body-class="p-4" class="mb-3 border-0 shadow">
             <div class="d-flex justify-content-between mb-3">
-              <h3 class="fw-bold">Heading</h3>
+              <SHeading level="3" system="app">Heading 3 - 24px</SHeading>
               <BButton
                 variant="quiet-primary"
                 size="sm"
@@ -3085,7 +3085,7 @@
         <div class="g-col-6">
           <BCard body-class="p-4" class="mb-3 border-0 shadow">
             <div class="d-flex justify-content-between mb-3">
-              <h3 class="fw-bold">Heading</h3>
+              <SHeading level="3" system="app">Heading 3 - 24px</SHeading>
               <BButton variant="subdued-primary" size="sm" class="me-1">
                 <i class="bi bi-three-dots-vertical"></i>Manage settings
               </BButton>

@@ -14,7 +14,7 @@
     >
       <slot />
     </h2>
-    <h3 v-if="level === '3'" class="fw-medium ff-encode-sans my-3" v-bind="$attrs">
+    <h3 v-if="level === '3'" class="fw-semibold ff-encode-sans my-3" v-bind="$attrs">
       <slot />
     </h3>
     <h4 v-if="level === '4'" class="fw-bold ff-open-sans" v-bind="$attrs">
@@ -45,7 +45,7 @@
     </h2>
     <h3
       v-if="level === '3'"
-      class="fs-4 fw-medium ff-encode-sans"
+      class="fs-4 fw-semibold ff-encode-sans"
       v-bind="$attrs"
     >
       <slot />

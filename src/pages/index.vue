@@ -3165,9 +3165,13 @@
         </div>
 
         <div class="g-col-6">
-          <BCard bg-variant="body-tertiary" class="mb-3 border-0">
+          <BCard
+            body-class="p-4"
+            bg-variant="body-tertiary"
+            class="mb-3 border-0"
+          >
             <div class="d-flex justify-content-between mb-3">
-              <h3 class="fw-bold">Heading</h3>
+              <SHeading level="3" system="app">Heading 3 - 24px</SHeading>
               <BButton variant="quiet-primary" size="sm" class="me-1">
                 <i class="bi bi-three-dots-vertical"></i>Manage settings
               </BButton>
@@ -3248,11 +3252,12 @@
 
         <div class="g-col-6">
           <BCard
+            body-class="p-4"
             bg-variant="body-secondary"
             class="bg-opacity-50 mb-3 border-0"
           >
             <div class="d-flex justify-content-between mb-3">
-              <h3 class="fw-bold">Heading</h3>
+              <SHeading level="3" system="app">Heading 3 - 24px</SHeading>
               <BButton variant="quiet-primary" size="sm" class="me-1">
                 <i class="bi bi-three-dots-vertical"></i>Manage settings
               </BButton>
@@ -3333,11 +3338,12 @@
 
         <div class="g-col-6">
           <BCard
+            body-class="p-4"
             bg-variant="spirit-purple-subtle"
             class="bg-opacity-25 mb-3 border-0"
           >
             <div class="d-flex justify-content-between mb-3">
-              <h3 class="fw-bold">Heading</h3>
+              <SHeading level="3" system="app">Heading 3 - 24px</SHeading>
               <BButton variant="quiet-primary" size="sm" class="me-1">
                 <i class="bi bi-three-dots-vertical"></i>Manage settings
               </BButton>
@@ -3418,11 +3424,12 @@
 
         <div class="g-col-6">
           <BCard
+            body-class="p-4"
             bg-variant="husky-gold-subtle"
             class="bg-opacity-50 mb-3 border-0"
           >
             <div class="d-flex justify-content-between mb-3">
-              <h3 class="fw-bold">Heading</h3>
+              <SHeading level="3" system="app">Heading 3 - 24px</SHeading>
               <BButton variant="quiet-primary" size="sm" class="me-1">
                 <i class="bi bi-three-dots-vertical"></i>Manage settings
               </BButton>

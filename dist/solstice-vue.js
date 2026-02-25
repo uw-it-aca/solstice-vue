@@ -5532,50 +5532,50 @@ function Qo(a, e, n, i, c, r) {
     ], 16)) : d("", !0),
     n.level === "4" ? (t(), l("h4", D({
       key: 3,
-      class: "fw-bold ff-open-sans"
+      class: "fw-bold ff-open-sans mb-3"
     }, a.$attrs), [
       u(a.$slots, "default")
     ], 16)) : d("", !0),
     n.level === "5" ? (t(), l("h5", D({
       key: 4,
-      class: "fw-bold ff-open-sans"
+      class: "fw-bold ff-open-sans mb-3"
     }, a.$attrs), [
       u(a.$slots, "default")
     ], 16)) : d("", !0),
     n.level === "6" ? (t(), l("h6", D({
       key: 5,
-      class: "fw-bold ff-open-sans"
+      class: "fw-bold ff-open-sans mb-3"
     }, a.$attrs), [
       u(a.$slots, "default")
     ], 16)) : d("", !0)
   ], 64)) : (t(), l($, { key: 1 }, [
     n.level === "1" ? (t(), l("h1", D({
       key: 0,
-      class: "fs-2 fw-semibold ff-encode-sans"
+      class: "fs-2 fw-semibold ff-encode-sans mb-3"
     }, a.$attrs), [
       u(a.$slots, "default")
     ], 16)) : d("", !0),
     n.level === "2" ? (t(), l("h2", D({
       key: 1,
-      class: "fs-3 fw-light ff-encode-sans"
+      class: "fs-3 fw-light ff-encode-sans mb-3"
     }, a.$attrs), [
       u(a.$slots, "default")
     ], 16)) : d("", !0),
     n.level === "3" ? (t(), l("h3", D({
       key: 2,
-      class: "fs-4 fw-semibold ff-encode-sans"
+      class: "fs-4 fw-semibold ff-encode-sans mb-3"
     }, a.$attrs), [
       u(a.$slots, "default")
     ], 16)) : d("", !0),
     n.level === "4" ? (t(), l("h4", D({
       key: 3,
-      class: "fs-5 fw-bold ff-open-sans"
+      class: "fs-5 fw-bold ff-open-sans mb-3"
     }, a.$attrs), [
       u(a.$slots, "default")
     ], 16)) : d("", !0),
     n.level === "5" ? (t(), l("h5", D({
       key: 4,
-      class: "fs-6 fw-bold ff-open-sans"
+      class: "fs-6 fw-bold ff-open-sans mb-3"
     }, a.$attrs), [
       u(a.$slots, "default")
     ], 16)) : d("", !0)

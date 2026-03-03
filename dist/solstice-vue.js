@@ -5500,10 +5500,6 @@ const $o = /* @__PURE__ */ k(To, [["render", Ko], ["__scopeId", "data-v-1b1ef1d7
     level: {
       type: String,
       required: !0
-    },
-    system: {
-      type: String,
-      default: "doc"
     }
   },
   data() {

@@ -1,10 +1,10 @@
 <template>
-  <div class="rounded-3 p-3 mb-2">
+  <div class="rounded-3 mb-2 p-3">
     <div class="d-flex">
       <div class="me-3" style="width: 330px">
         <a
           href="#"
-          class="chevron d-block text-start btn-link text-reset rounded text-decoration-none py-1 ps-0 collapsed"
+          class="chevron d-block btn-link text-reset text-decoration-none collapsed rounded py-1 ps-0 text-start"
           type="button"
           data-bs-toggle="collapse"
           :data-bs-target="'#' + blockId + '-panel'"
@@ -55,7 +55,7 @@
     font-weight: bolder;
   }
 
-  .chevron[aria-expanded='true'] i {
+  .chevron[aria-expanded="true"] i {
     transform: rotate(90deg);
   }
 

@@ -56,7 +56,7 @@
     font-weight: bolder;
   }
 
-  .chevron[aria-expanded='true'] i {
+  .chevron[aria-expanded="true"] i {
     transform: rotate(90deg);
   }
 

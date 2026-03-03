@@ -1,11 +1,11 @@
 <template>
   <div
-    class="d-flex align-items-center border border-white p-0 rounded-pill small"
-    :class="{ 'bg-danger-subtle border-0' : userOverride }"
+    class="d-flex align-items-center rounded-pill small border border-white p-0"
+    :class="{ 'bg-danger-subtle border-0': userOverride }"
   >
     <div class="flex-fill dropdown">
       <a
-        class="d-flex text-white text-decoration-none p-1 chevron"
+        class="d-flex text-decoration-none chevron p-1 text-white"
         :class="userOverride ? 'text-danger-emphasis' : 'text-white'"
         href="#"
         role="button"
@@ -16,27 +16,29 @@
         <img
           v-if="photoUrl"
           :src="photoUrl"
-          class="me-2 img-tiny rounded-circle"
+          class="img-tiny rounded-circle me-2"
           alt="user avatar"
-        >
+        />
         <img
           v-else
           src="/src/assets/images/placeholder.png"
-          class="me-2 img-tiny rounded-circle"
+          class="img-tiny rounded-circle me-2"
           alt="user avatar"
-        >
-        <span v-if="userOverride" class="me-2 d-none d-md-block">{{ userOverride }}</span>
-        <span v-else class="me-2 d-none d-md-block">{{ userNetid }}</span>
+        />
+        <span v-if="userOverride" class="d-none d-md-block me-2">{{
+          userOverride
+        }}</span>
+        <span v-else class="d-none d-md-block me-2">{{ userNetid }}</span>
         <i class="bi bi-chevron-down me-1"></i>
       </a>
       <div
         class="dropdown-menu dropdown-menu-end p-0"
         aria-labelledby="dropdownMenuButton1"
-        style="width: 300px;"
+        style="width: 300px"
       >
         <div
           v-if="userOverride"
-          class="bg-danger-subtle text-danger-emphasis px-3 py-2 rounded-top small fw-bold"
+          class="bg-danger-subtle text-danger-emphasis rounded-top small fw-bold px-3 py-2"
         >
           You are overriding as another user
         </div>
@@ -48,13 +50,13 @@
               :src="photoUrl"
               class="img-profile rounded-circle"
               alt="user avatar"
-            >
+            />
             <img
               v-else
               src="/src/assets/images/placeholder.png"
               class="img-profile rounded-circle"
               alt="user avatar"
-            >
+            />
           </div>
           <div class="mt-3">
             <slot>
@@ -67,7 +69,7 @@
             </slot>
           </div>
 
-          <div class="mt-3 pt-3 border-top">
+          <div class="border-top mt-3 pt-3">
             <slot name="action">action</slot>
           </div>
         </div>
@@ -120,7 +122,7 @@
     font-weight: bolder;
   }
 
-  .chevron[aria-expanded='true'] .bi-chevron-down {
+  .chevron[aria-expanded="true"] .bi-chevron-down {
     transform: rotate(-180deg);
   }
 

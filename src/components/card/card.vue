@@ -1,14 +1,14 @@
 <template>
-  <div class="card shadow-sm rounded-3 mb-4">
+  <div class="card rounded-3 mb-4 shadow-sm">
     <div
       v-if="$slots['heading']"
-      class="card-header bg-transparent border-0 rounded-top p-3"
+      class="card-header rounded-top border-0 bg-transparent p-3"
     >
       <slot name="heading"></slot>
     </div>
     <div
       v-if="$slots['heading-action']"
-      class="card-header bg-transparent rounded-top border-0 p-3 d-flex align-items-center justify-content-between"
+      class="card-header rounded-top d-flex align-items-center justify-content-between border-0 bg-transparent p-3"
     >
       <slot name="heading-action"></slot>
     </div>
@@ -18,7 +18,7 @@
 
     <div
       v-if="$slots['footer']"
-      class="card-footer bg-black bg-opacity-10 border-0 rounded-bottom"
+      class="card-footer bg-opacity-10 rounded-bottom border-0 bg-black"
     >
       <slot name="footer"></slot>
     </div>

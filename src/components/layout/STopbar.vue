@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="topbarClass + [!isPreview ? ' min-vh-100' : ' ']"
+    :class="[topbarClass, !isPreview ? 'min-vh-100' : '']"
     class="d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"
   >
     <div v-if="$slots.system" class="w-100">
@@ -10,7 +10,7 @@
     <header class="w-100">
       <div
         v-if="$slots.profile"
-        class="bg-black bg-opacity-10 text-white py-2 small"
+        class="bg-opacity-10 small bg-black py-2 text-white"
       >
         <div class="container-xl">
           <slot name="profile">Welcome!</slot>
@@ -21,7 +21,7 @@
         <div class="container-xl axdd-topbar-logo">
           <a
             v-if="$slots.navigation"
-            class="btn btn-link btn-sm d-xl-none border border-1 border-light rounded-3 py-0 px-1 text-white me-2"
+            class="btn btn-link btn-sm d-xl-none border-light rounded-3 me-2 border border-1 px-1 py-0 text-white"
             data-bs-toggle="collapse"
             data-bs-target="#topbar-nav-collapse"
             role="button"
@@ -29,7 +29,7 @@
             aria-controls="topbar-nav-collapse"
             aria-label="Toggle Navigation Menu"
           >
-            <i class="bi bi-list fw-bold text-white fs-6"></i>
+            <i class="bi bi-list fw-bold fs-6 text-white"></i>
           </a>
           <div
             class="d-inline align-middle text-white"
@@ -37,7 +37,7 @@
           >
             <a
               :href="appRootUrl"
-              class="ff-encode-sans text-white text-decoration-none"
+              class="ff-encode-sans text-decoration-none text-white"
             >
               {{ appName }}
             </a>
@@ -46,7 +46,7 @@
       </div>
     </header>
 
-    <div :class="backgroundClass" class="w-100 flex-fill text-body">
+    <div :class="backgroundClass" class="flex-fill text-body w-100">
       <div class="container-xl">
         <div class="row">
           <div
@@ -98,10 +98,10 @@
       </div>
     </div>
     <footer class="w-100">
-      <div v-if="$slots.footer" class="bg-dark text-white py-2 small">
+      <div v-if="$slots.footer" class="bg-dark small py-2 text-white">
         <div class="container-xl">
           <slot name="footer">
-            <div class="text-white font-weight-light py-3">
+            <div class="font-weight-light py-3 text-white">
               <ul class="list-inline m-0">
                 <li class="list-inline-item">
                   <a
@@ -119,7 +119,7 @@
                 </li>
               </ul>
               <div>
-                Copyright &copy; {{ new Date().getFullYear() }}University of
+                Copyright &copy; {{ new Date().getFullYear() }} University of
                 Washington
               </div>
             </div>
@@ -176,7 +176,7 @@
   }
 
   .axdd-topbar-logo {
-    background-image: url('../../assets/images/w-logo-white.png');
+    background-image: url("../../assets/images/w-logo-white.png");
     background-repeat: no-repeat;
     background-size: 45px;
     background-position: right 20px bottom;

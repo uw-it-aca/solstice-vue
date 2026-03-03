@@ -41,7 +41,7 @@
             href="#"
             role="button"
             @click="colorMode = 'auto'"
-              ><i class="bi bi-circle-half me-2"></i>Auto</a
+            ><i class="bi bi-circle-half me-2"></i>Auto</a
           >
         </li>
       </ul>

@@ -2,23 +2,20 @@ $utilities: map-merge(
   $utilities,
   (
     // extend existing bg/text classes for hover state
-    "background-color":
-      map-merge(
+    "background-color": map-merge(
         map-get($utilities, "background-color"),
         (
           state: hover focus,
         )
       ),
-    "color":
-      map-merge(
+    "color": map-merge(
         map-get($utilities, "color"),
         (
           state: hover focus,
-        ),
+        )
       ),
     // 25, 50, 75, 100
-    "text-opacity":
-      map-merge(
+    "text-opacity": map-merge(
         //
         map-get($utilities, "text-opacity"),
         (
@@ -26,8 +23,7 @@ $utilities: map-merge(
         )
       ),
     // 10, 25, 50, 75, 100
-    "bg-opacity":
-      map-merge(
+    "bg-opacity": map-merge(
         //
         map-get($utilities, "bg-opacity"),
         (
@@ -35,8 +31,7 @@ $utilities: map-merge(
         )
       ),
     // ff-xxxx
-    "font-family":
-      (
+    "font-family": (
         property: font-family,
         class: ff,
         values: (

@@ -59,18 +59,18 @@
 </template>
 
 <script>
-import Layout from "@/layout.vue";
+  import Layout from "@/layout.vue";
 
-export default {
-  name: "PagesLink",
-  components: {
-    Layout,
-  },
-  data() {
-    return {
-      pageTitle: "Link",
-    };
-  },
-  methods: {},
-};
+  export default {
+    name: "PagesLink",
+    components: {
+      Layout,
+    },
+    data() {
+      return {
+        pageTitle: "Link",
+      };
+    },
+    methods: {},
+  };
 </script>

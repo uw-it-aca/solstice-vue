@@ -9,7 +9,7 @@
     </h1>
     <h2
       v-if="level === '2'"
-      class="fs-3 fw-regular ff-open-sans"
+      class="fs-3 fw-normal ff-open-sans"
       v-bind="$attrs"
     >
       <slot />

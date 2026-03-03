@@ -5520,7 +5520,7 @@ function Qo(a, e, n, i, c, r) {
     ], 16)) : s("", !0),
     n.level === "2" ? (t(), l("h2", H({
       key: 1,
-      class: "fs-3 fw-regular ff-open-sans"
+      class: "fs-3 fw-normal ff-open-sans"
     }, a.$attrs), [
       g(a.$slots, "default")
     ], 16)) : s("", !0),

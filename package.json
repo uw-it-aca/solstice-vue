@@ -1,6 +1,6 @@
 {
   "name": "solstice-vue",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "private": true,
   "files": [
     "dist",
@@ -40,7 +40,7 @@
     "@vueuse/core": "^14.2.1",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
-    "bootstrap-vue-next": "^0.42.0",
+    "bootstrap-vue-next": "^0.43.8",
     "country-codes-list": "^2.0.0",
     "country-flag-icons": "^1.6.15",
     "solstice-theme": "github:uw-it-aca/solstice-theme#1.0.7",

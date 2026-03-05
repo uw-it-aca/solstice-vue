@@ -1,4 +1,4 @@
-import { openBlock as t, createElementBlock as l, renderSlot as g, createCommentVNode as s, createElementVNode as o, withKeys as ia, normalizeClass as E, withModifiers as Ba, resolveComponent as Ia, normalizeStyle as ra, createVNode as ka, withCtx as Ma, createTextVNode as p, toDisplayString as y, createStaticVNode as Ca, toRef as Ra, readonly as Na, customRef as Da, ref as La, onMounted as Ea, nextTick as pa, getCurrentInstance as la, watch as $, getCurrentScope as Ua, hasInjectionContext as ha, inject as Pa, computed as W, shallowRef as J, toValue as U, watchEffect as Fa, unref as Ga, withDirectives as aa, vShow as ea, Fragment as ca, renderList as xa, mergeProps as H } from "vue";
+import { openBlock as t, createElementBlock as l, renderSlot as g, createCommentVNode as s, createElementVNode as o, withKeys as ia, normalizeClass as E, withModifiers as Ba, resolveComponent as Ia, normalizeStyle as ra, createVNode as ka, withCtx as Ma, createTextVNode as p, toDisplayString as y, createStaticVNode as Ca, toRef as Ra, readonly as Na, customRef as Da, ref as La, onMounted as Ea, nextTick as pa, getCurrentInstance as la, watch as $, getCurrentScope as Ua, hasInjectionContext as ha, inject as Pa, computed as W, shallowRef as J, toValue as U, watchEffect as Fa, unref as Ga, withDirectives as aa, vShow as ea, Fragment as ca, renderList as xa, mergeProps as j } from "vue";
 const k = (a, e) => {
   const n = a.__vccOpts || a;
   for (const [i, c] of e)
@@ -925,7 +925,7 @@ function $n(a, e, n, i = {}) {
     C(d);
   }
   if (!n) return L;
-  const b = U(e), j = Zn(b), P = (c = i.serializer) !== null && c !== void 0 ? c : _n[j], { pause: B, resume: D } = Qn(L, (d) => F(d), {
+  const b = U(e), V = Zn(b), P = (c = i.serializer) !== null && c !== void 0 ? c : _n[V], { pause: B, resume: D } = Qn(L, (d) => F(d), {
     flush: r,
     deep: u,
     eventFilter: w
@@ -934,10 +934,10 @@ function $n(a, e, n, i = {}) {
   let Q = !1;
   const Y = (d) => {
     A && !Q || M(d);
-  }, V = (d) => {
+  }, H = (d) => {
     A && !Q || x(d);
   };
-  m && h && (n instanceof Storage ? ta(m, "storage", Y, { passive: !0 }) : ta(m, ga, V)), A ? ba(() => {
+  m && h && (n instanceof Storage ? ta(m, "storage", Y, { passive: !0 }) : ta(m, ga, H)), A ? ba(() => {
     Q = !0, M();
   }) : M();
   function O(d, T) {
@@ -970,7 +970,7 @@ function $n(a, e, n, i = {}) {
       return I && b != null && n.setItem(S.value, P.write(b)), b;
     if (!d && f) {
       const R = P.read(T);
-      return typeof f == "function" ? f(R, b) : j === "object" && !Array.isArray(R) ? {
+      return typeof f == "function" ? f(R, b) : V === "object" && !Array.isArray(R) ? {
         ...b,
         ...R
       } : R;
@@ -1013,21 +1013,21 @@ function eo(a = {}) {
   })), L = W(() => A.value === "auto" ? C.value : A.value), S = va("updateHTMLAttrs", (B, D, Q) => {
     const Y = typeof B == "string" ? c?.document.querySelector(B) : Ta(B);
     if (!Y) return;
-    const V = /* @__PURE__ */ new Set(), O = /* @__PURE__ */ new Set();
+    const H = /* @__PURE__ */ new Set(), O = /* @__PURE__ */ new Set();
     let F = null;
     if (D === "class") {
       const M = Q.split(/\s/g);
       Object.values(m).flatMap((x) => (x || "").split(/\s/g)).filter(Boolean).forEach((x) => {
-        M.includes(x) ? V.add(x) : O.add(x);
+        M.includes(x) ? H.add(x) : O.add(x);
       });
     } else F = {
       key: D,
       value: Q
     };
-    if (V.size === 0 && O.size === 0 && F === null) return;
+    if (H.size === 0 && O.size === 0 && F === null) return;
     let G;
     N && (G = c.document.createElement("style"), G.appendChild(document.createTextNode(ao)), c.document.head.appendChild(G));
-    for (const M of V) Y.classList.add(M);
+    for (const M of H) Y.classList.add(M);
     for (const M of O) Y.classList.remove(M);
     F && Y.setAttribute(F.key, F.value), N && (c.getComputedStyle(G).opacity, document.head.removeChild(G));
   });
@@ -1035,13 +1035,13 @@ function eo(a = {}) {
     var D;
     S(e, n, (D = m[B]) !== null && D !== void 0 ? D : B);
   }
-  function j(B) {
+  function V(B) {
     a.onChanged ? a.onChanged(B, b) : b(B);
   }
-  $(L, j, {
+  $(L, V, {
     flush: "post",
     immediate: !0
-  }), ba(() => j(L.value));
+  }), ba(() => V(L.value));
   const P = W({
     get() {
       return f ? A.value : L.value;
@@ -5508,33 +5508,39 @@ const $o = /* @__PURE__ */ k(To, [["render", Ko], ["__scopeId", "data-v-1b1ef1d7
 };
 function Qo(a, e, n, i, c, r) {
   return t(), l(ca, null, [
-    n.level === "1" ? (t(), l("h1", H({
+    n.level === "1" ? (t(), l("h1", j({
       key: 0,
-      class: "fs-2 fw-bold ff-encode-sans"
+      class: "fw-bold ff-encode-sans"
     }, a.$attrs), [
       g(a.$slots, "default")
     ], 16)) : s("", !0),
-    n.level === "2" ? (t(), l("h2", H({
+    n.level === "2" ? (t(), l("h2", j({
       key: 1,
-      class: "fs-3 fw-normal ff-open-sans"
+      class: "fw-normal ff-open-sans"
     }, a.$attrs), [
       g(a.$slots, "default")
     ], 16)) : s("", !0),
-    n.level === "3" ? (t(), l("h3", H({
+    n.level === "3" ? (t(), l("h3", j({
       key: 2,
-      class: "fs-4 fw-semibold ff-open-sans"
+      class: "fw-semibold ff-open-sans"
     }, a.$attrs), [
       g(a.$slots, "default")
     ], 16)) : s("", !0),
-    n.level === "4" ? (t(), l("h4", H({
+    n.level === "4" ? (t(), l("h4", j({
       key: 3,
-      class: "fs-5 fw-bold ff-open-sans"
+      class: "fw-bold ff-open-sans"
     }, a.$attrs), [
       g(a.$slots, "default")
     ], 16)) : s("", !0),
-    n.level === "5" ? (t(), l("h5", H({
+    n.level === "5" ? (t(), l("h5", j({
       key: 4,
-      class: "fs-6 fw-bold ff-open-sans"
+      class: "fw-bold ff-open-sans"
+    }, a.$attrs), [
+      g(a.$slots, "default")
+    ], 16)) : s("", !0),
+    n.level === "6" ? (t(), l("h6", j({
+      key: 5,
+      class: "fw-bold ff-open-sans"
     }, a.$attrs), [
       g(a.$slots, "default")
     ], 16)) : s("", !0)

@@ -5435,9 +5435,9 @@ const _o = /* @__PURE__ */ k(Lo, [["render", bo]]), wa = "data:image/png;base64,
   key: 3,
   class: "d-none d-md-block me-2"
 }, Mo = {
-  class: "dropdown-menu dropdown-menu-end p-0",
+  class: "dropdown-menu p-0",
   "aria-labelledby": "dropdownMenuButton1",
-  style: { width: "300px" }
+  style: { width: "250px" }
 }, Ro = {
   key: 0,
   class: "bg-danger-subtle text-danger-emphasis rounded-top small fw-bold px-3 py-2"
@@ -5495,7 +5495,7 @@ function Ko(a, e, n, i, c, r) {
     ])
   ], 2);
 }
-const $o = /* @__PURE__ */ k(To, [["render", Ko], ["__scopeId", "data-v-1b1ef1d7"]]), Wo = {
+const $o = /* @__PURE__ */ k(To, [["render", Ko], ["__scopeId", "data-v-bedf3866"]]), Wo = {
   props: {
     level: {
       type: String,

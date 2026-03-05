@@ -32,9 +32,9 @@
         <i class="bi bi-chevron-down me-1"></i>
       </a>
       <div
-        class="dropdown-menu dropdown-menu-end p-0"
+        class="dropdown-menu p-0"
         aria-labelledby="dropdownMenuButton1"
-        style="width: 300px"
+        style="width: 250px"
       >
         <div
           v-if="userOverride"

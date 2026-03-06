@@ -3,7 +3,7 @@
     class="d-flex align-items-center rounded-pill small border border-white p-0"
     :class="{ 'bg-danger-subtle border-0': userOverride }"
   >
-    <div class="flex-fill dropdown">
+    <div class="flex-fill">
       <a
         class="d-flex text-decoration-none chevron p-1 text-white"
         :class="userOverride ? 'text-danger-emphasis' : 'text-white'"
@@ -34,7 +34,7 @@
       <div
         class="dropdown-menu p-0"
         aria-labelledby="dropdownMenuButton1"
-        style="width: 250px"
+        style="width: 280px"
       >
         <div
           v-if="userOverride"

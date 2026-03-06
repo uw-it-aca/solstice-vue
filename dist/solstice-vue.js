@@ -5423,7 +5423,7 @@ const _o = /* @__PURE__ */ k(Lo, [["render", bo]]), wa = "data:image/png;base64,
     return {};
   },
   methods: {}
-}, vo = { class: "flex-fill dropdown" }, wo = ["src"], Bo = {
+}, vo = { class: "flex-fill" }, wo = ["src"], Bo = {
   key: 1,
   src: wa,
   class: "img-tiny rounded-circle me-2",
@@ -5437,7 +5437,7 @@ const _o = /* @__PURE__ */ k(Lo, [["render", bo]]), wa = "data:image/png;base64,
 }, Mo = {
   class: "dropdown-menu p-0",
   "aria-labelledby": "dropdownMenuButton1",
-  style: { width: "250px" }
+  style: { width: "280px" }
 }, Ro = {
   key: 0,
   class: "bg-danger-subtle text-danger-emphasis rounded-top small fw-bold px-3 py-2"
@@ -5495,7 +5495,7 @@ function Ko(a, e, n, i, c, r) {
     ])
   ], 2);
 }
-const $o = /* @__PURE__ */ k(To, [["render", Ko], ["__scopeId", "data-v-bedf3866"]]), Wo = {
+const $o = /* @__PURE__ */ k(To, [["render", Ko], ["__scopeId", "data-v-6364356f"]]), Wo = {
   props: {
     level: {
       type: String,

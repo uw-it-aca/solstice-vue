@@ -144,15 +144,7 @@
     <template #main>
       <!-- main section override -->
       <slot name="content">
-        <h1>
-          <slot name="title">{{ pageTitle }}</slot>
-        </h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem, quas similique voluptatum illum molestias excepturi
-          mollitia saepe minima facere eius? Provident amet laboriosam ducimus
-          et illum temporibus autem est blanditiis.
-        </p>
+        <KitchenSink />
       </slot>
     </template>
 
@@ -178,9 +170,11 @@
   import SProfile from "@/components/SProfile.vue";
   import SUser from "@/components/SUser.vue";
 
+  import KitchenSink from "@/content/kitchenSink.vue";
+
   export default {
     name: "DocsSandboxTopbarIndex",
-    components: { STopbarNeo, SColorMode, SProfile, SUser },
+    components: { STopbarNeo, SColorMode, SProfile, SUser, KitchenSink },
     data() {
       return {
         // layout component

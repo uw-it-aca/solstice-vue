@@ -6,16 +6,6 @@
     :user-name="userNetid"
     :sign-out-url="signOutUrl"
   >
-    <template #profile>
-      <SProfile
-        :user-netid="userNetid"
-        :user-official-name="userOfficial"
-        :user-preferred-name="userPreferred"
-        :profile-url="'https://identity.uw.edu'"
-        :signout-url="signOutUrl"
-      ></SProfile>
-    </template>
-
     <template #navigation>
       <ul class="nav flex-column mb-5">
         <li class="nav-item bg-opacity-10 rounded-3 mb-1 bg-white">
@@ -66,41 +56,7 @@
       </div>
     </template>
     <template #main>
-      <div class="row">
-        <div class="col">
-          <h1>{{ pageTitle }}</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-            laborum nostrum saepe enim natus voluptates animi numquam molestiae
-            a accusamus totam, doloribus exercitationem delectus soluta
-            consectetur ab magni fugit eius.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-            laborum nostrum saepe enim natus voluptates animi numquam molestiae
-            a accusamus totam, doloribus exercitationem delectus soluta
-            consectetur ab magni fugit eius.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-            laborum nostrum saepe enim natus voluptates animi numquam molestiae
-            a accusamus totam, doloribus exercitationem delectus soluta
-            consectetur ab magni fugit eius.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-            laborum nostrum saepe enim natus voluptates animi numquam molestiae
-            a accusamus totam, doloribus exercitationem delectus soluta
-            consectetur ab magni fugit eius.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-            laborum nostrum saepe enim natus voluptates animi numquam molestiae
-            a accusamus totam, doloribus exercitationem delectus soluta
-            consectetur ab magni fugit eius.
-          </p>
-
-          <p>
+        <KitchenSink />
             <!-- Button trigger modal -->
             <button
               type="button"
@@ -110,8 +66,7 @@
             >
               Launch demo modal
             </button>
-          </p>
-        </div>
+
 
         <!-- Modal -->
         <div
@@ -150,7 +105,7 @@
             </div>
           </div>
         </div>
-      </div>
+
     </template>
     <template #footer>
       <div class="d-flex justify-content-between">
@@ -185,10 +140,11 @@
   import SColorMode from "@/components/SColorMode.vue";
   import SProfile from "@/components/SProfile.vue";
   import SSidebar from "@/components/layout/SSidebar.vue";
+  import KitchenSink from "@/content/kitchenSink.vue";
 
   export default {
     name: "DocsSandboxSidebarIndex",
-    components: { SSidebar, SColorMode, SProfile },
+    components: { SSidebar, SColorMode, SProfile, KitchenSink },
     props: {},
     data: function () {
       return {

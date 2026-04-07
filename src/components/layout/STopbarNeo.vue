@@ -50,7 +50,7 @@
             <!-- MARK: navigation toggler -->
             <a
               v-if="$slots.navigation"
-              class="btn btn-link btn-sm d-xl-none ms-1 py-0 py-1 text-white"
+              class="btn btn-link btn-sm d-md-none ms-1 py-0 py-1 text-white"
               data-bs-toggle="collapse"
               data-bs-target="#navbarToggler"
               aria-controls="navbarToggler"
@@ -65,7 +65,7 @@
     </header>
 
     <template v-if="$slots.navigation">
-      <nav class="navbar navbar-expand-xl py-xl-2 bg-husky-purple w-100 p-0">
+      <nav class="navbar navbar-expand-md py-xl-2 bg-husky-purple w-100 p-0">
         <div class="container-xl">
           <div class="navbar-collapse collapse" id="navbarToggler">
             <slot name="navigation">navigation bar</slot>

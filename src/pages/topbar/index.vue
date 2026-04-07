@@ -75,44 +75,12 @@
     </template>-->
 
     <template #bar>
-      <div
-        class="alert alert-warning alert-dismissible fade show border-warning border-start rounded-0 m-0 border-0 border-5"
-        role="alert"
-      >
-        <p>
-          <strong>Holy guacamole!</strong> You should check in on some of those
-          fields below.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-          fuga, voluptatem ad corrupti nobis eveniet tempore nam magni
-          consequuntur iste unde corporis! Eum molestias nulla perspiciatis
-          impedit alias hic veritatis.
-        </p>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="alert"
-          aria-label="Close"
-        ></button>
-      </div>
+
     </template>
     <template #main>
-      <div class="row">
-        <!-- main section override -->
-        <h1>
-          <slot name="title">{{ pageTitle }}</slot>
-        </h1>
-        <slot name="content"
-          ><div class="col-9">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Exercitationem, quas similique voluptatum illum molestias excepturi
-            mollitia saepe minima facere eius? Provident amet laboriosam ducimus
-            et illum temporibus autem est blanditiis.
-          </div>
-        </slot>
-        <div class="col-3">dasflkjasdlkf</div>
-      </div>
+
+        <KitchenSink />
+
     </template>
     <!--<template #aside>
       <div
@@ -131,10 +99,11 @@
   import STopbar from "@/components/layout/STopbar.vue";
   import SColorMode from "@/components/SColorMode.vue";
   import SProfile from "@/components/SProfile.vue";
+  import KitchenSink from "@/content/kitchenSink.vue";
 
   export default {
     name: "DocsSandboxTopbarIndex",
-    components: { STopbar, SColorMode, SProfile },
+    components: { STopbar, SColorMode, SProfile, KitchenSink },
     data() {
       return {
         // minimum application setup overrides

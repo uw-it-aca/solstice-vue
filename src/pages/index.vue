@@ -51,19 +51,20 @@
         <li>run the <code>npm run build</code> command</li>
       </ol>
 
-      <h2 class="fw-bold">Foundations</h2>
+      <h2>Foundations</h2>
       <h3>Layout</h3>
       <ul>
         <li>
-          <RouterLink to="/topbar-neo">Topbar (Neo)</RouterLink>
+          <RouterLink to="/topbar">Topbar (deprecated)</RouterLink>
         </li>
         <li>
-          <RouterLink to="/topbar">Topbar</RouterLink>
+          <RouterLink to="/topbar-neo">Topbar (Neo)</RouterLink>
         </li>
         <li>
           <RouterLink to="/sidebar">Sidebar</RouterLink>
         </li>
       </ul>
+
       <h3>Color</h3>
 
       <h4>Brand Swatches</h4>
@@ -2335,10 +2336,133 @@
       </div>
 
       <hr />
-      <h2 class="fw-bold mb-5">Elements</h2>
+      <h2 class="fw-bold mb-5">Actions</h2>
 
+
+
+      <h3 class="mt-4">Buttons</h3>
+      <div class="mb-3">
+        <BButton variant="primary" class="me-1">Primary</BButton>
+        <BButton variant="outline-primary" class="me-1">Outline</BButton>
+        <BButton variant="subdued-primary" class="me-1">Subdued</BButton>
+        <BButton variant="quiet-primary">Quiet</BButton>
+      </div>
+      <div class="mb-3">
+        <BButton variant="primary" size="sm" class="me-1" aria-label="Settings">
+          <i class="bi bi-gear-wide-connected"></i>
+        </BButton>
+        <BButton
+          variant="outline-primary"
+          size="sm"
+          class="me-1"
+          aria-label="Settings"
+        >
+          <i class="bi bi-gear-wide-connected"></i>
+        </BButton>
+        <BButton
+          variant="subdued-primary"
+          size="sm"
+          class="me-1"
+          aria-label="Settings"
+        >
+          <i class="bi bi-gear-wide-connected"></i>
+        </BButton>
+
+        <BButton
+          variant="quiet-primary"
+          size="sm"
+          class=""
+          aria-label="Settings"
+        >
+          <i class="bi bi-gear-wide-connected"></i>
+        </BButton>
+      </div>
+      <div class="mb-5">
+        <BButton variant="danger" size="sm" class="me-1" aria-label="Trash">
+          <i class="bi bi-trash"></i>
+        </BButton>
+        <BButton
+          variant="outline-danger"
+          size="sm"
+          class="me-1"
+          aria-label="Trash"
+        >
+          <i class="bi bi-trash"></i>
+        </BButton>
+        <BButton
+          variant="subdued-danger"
+          size="sm"
+          class="me-1"
+          aria-label="Trash"
+        >
+          <i class="bi bi-trash"></i>
+        </BButton>
+        <BButton variant="quiet-danger" size="sm" aria-label="Trash">
+          <i class="bi bi-trash"></i>
+        </BButton>
+      </div>
+
+      <h3 class="mt-4">Links</h3>
+      <div class="mb-5 grid">
+        <ul class="g-col-6 list-unstyled">
+          <li class="mb-2 border p-2">
+            Lorem ipsum dolor sit amet,
+            <a href="#" class="link-primary">link-primary</a>consectetur
+            adipiscing elit.
+          </li>
+          <li class="mb-2 border p-2">
+            Lorem ipsum dolor sit amet,
+            <a href="#" class="link-danger">link-danger</a>consectetur
+            adipiscing elit.
+          </li>
+          <li class="mb-2 border p-2">
+            Lorem ipsum dolor sit amet,
+            <a href="#" class="link-body">link-body</a>consectetur adipiscing
+            elit.
+          </li>
+          <li class="bg-husky-purple mb-2 p-2 text-white">
+            Lorem ipsum dolor sit amet,
+            <a href="#" class="link-light">link-light</a>consectetur adipiscing
+            elit.
+          </li>
+          <li class="bg-spirit-gold p-2 text-black">
+            Lorem ipsum dolor sit amet,
+            <a href="#" class="link-dark">link-dark</a>consectetur adipiscing
+            elit.
+          </li>
+        </ul>
+
+        <ul class="g-col-6 list-unstyled">
+          <li class="mb-2 border p-2">
+            <a href="#" class="link-quiet-primary">
+              <i class="bi bi-emoji-smile me-1"></i>link-quiet-primary
+            </a>
+          </li>
+          <li class="mb-2 border p-2">
+            <a href="#" class="link-quiet-danger">
+              <i class="bi bi-emoji-smile me-1"></i>link-quiet-danger
+            </a>
+          </li>
+          <li class="mb-2 border p-2">
+            <a href="#" class="link-quiet-body">
+              <i class="bi bi-emoji-smile me-1"></i>link-quiet-body
+            </a>
+          </li>
+          <li class="bg-husky-purple text-light mb-2 p-2">
+            <a href="#" class="link-quiet-light">
+              <i class="bi bi-emoji-smile me-1"></i>link-quiet-light
+            </a>
+          </li>
+          <li class="bg-spirit-gold text-dark p-2">
+            <a href="#" class="link-quiet-dark">
+              <i class="bi bi-emoji-smile me-1"></i>link-quiet-dark
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <hr></hr>
       <h3 class="mt-4">Badge</h3>
-
       <div class="mb-5 grid">
         <div class="g-col-3">
           <p>
@@ -2668,127 +2792,6 @@
           </ul>
           <p>subtle set at swatch -100 (default)</p>
         </div>
-      </div>
-
-      <h3 class="mt-4">Buttons</h3>
-      <div class="mb-3">
-        <BButton variant="primary" class="me-1">Primary</BButton>
-        <BButton variant="outline-primary" class="me-1">Outline</BButton>
-        <BButton variant="subdued-primary" class="me-1">Subdued</BButton>
-        <BButton variant="quiet-primary">Quiet</BButton>
-      </div>
-      <div class="mb-3">
-        <BButton variant="primary" size="sm" class="me-1" aria-label="Settings">
-          <i class="bi bi-gear-wide-connected"></i>
-        </BButton>
-        <BButton
-          variant="outline-primary"
-          size="sm"
-          class="me-1"
-          aria-label="Settings"
-        >
-          <i class="bi bi-gear-wide-connected"></i>
-        </BButton>
-        <BButton
-          variant="subdued-primary"
-          size="sm"
-          class="me-1"
-          aria-label="Settings"
-        >
-          <i class="bi bi-gear-wide-connected"></i>
-        </BButton>
-
-        <BButton
-          variant="quiet-primary"
-          size="sm"
-          class=""
-          aria-label="Settings"
-        >
-          <i class="bi bi-gear-wide-connected"></i>
-        </BButton>
-      </div>
-      <div class="mb-5">
-        <BButton variant="danger" size="sm" class="me-1" aria-label="Trash">
-          <i class="bi bi-trash"></i>
-        </BButton>
-        <BButton
-          variant="outline-danger"
-          size="sm"
-          class="me-1"
-          aria-label="Trash"
-        >
-          <i class="bi bi-trash"></i>
-        </BButton>
-        <BButton
-          variant="subdued-danger"
-          size="sm"
-          class="me-1"
-          aria-label="Trash"
-        >
-          <i class="bi bi-trash"></i>
-        </BButton>
-        <BButton variant="quiet-danger" size="sm" aria-label="Trash">
-          <i class="bi bi-trash"></i>
-        </BButton>
-      </div>
-
-      <h3 class="mt-4">Links</h3>
-      <div class="mb-5 grid">
-        <ul class="g-col-6 list-unstyled">
-          <li class="mb-2 border p-2">
-            Lorem ipsum dolor sit amet,
-            <a href="#" class="link-primary">link-primary</a>consectetur
-            adipiscing elit.
-          </li>
-          <li class="mb-2 border p-2">
-            Lorem ipsum dolor sit amet,
-            <a href="#" class="link-danger">link-danger</a>consectetur
-            adipiscing elit.
-          </li>
-          <li class="mb-2 border p-2">
-            Lorem ipsum dolor sit amet,
-            <a href="#" class="link-body">link-body</a>consectetur adipiscing
-            elit.
-          </li>
-          <li class="bg-husky-purple mb-2 p-2 text-white">
-            Lorem ipsum dolor sit amet,
-            <a href="#" class="link-light">link-light</a>consectetur adipiscing
-            elit.
-          </li>
-          <li class="bg-spirit-gold p-2 text-black">
-            Lorem ipsum dolor sit amet,
-            <a href="#" class="link-dark">link-dark</a>consectetur adipiscing
-            elit.
-          </li>
-        </ul>
-
-        <ul class="g-col-6 list-unstyled">
-          <li class="mb-2 border p-2">
-            <a href="#" class="link-quiet-primary">
-              <i class="bi bi-emoji-smile me-1"></i>link-quiet-primary
-            </a>
-          </li>
-          <li class="mb-2 border p-2">
-            <a href="#" class="link-quiet-danger">
-              <i class="bi bi-emoji-smile me-1"></i>link-quiet-danger
-            </a>
-          </li>
-          <li class="mb-2 border p-2">
-            <a href="#" class="link-quiet-body">
-              <i class="bi bi-emoji-smile me-1"></i>link-quiet-body
-            </a>
-          </li>
-          <li class="bg-husky-purple text-light mb-2 p-2">
-            <a href="#" class="link-quiet-light">
-              <i class="bi bi-emoji-smile me-1"></i>link-quiet-light
-            </a>
-          </li>
-          <li class="bg-spirit-gold text-dark p-2">
-            <a href="#" class="link-quiet-dark">
-              <i class="bi bi-emoji-smile me-1"></i>link-quiet-dark
-            </a>
-          </li>
-        </ul>
       </div>
 
       <hr />

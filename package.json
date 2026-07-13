@@ -37,27 +37,27 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "@vueuse/core": "^14.2.1",
+    "@vueuse/core": "^14.3.0",
     "bootstrap": "^5.3.8",
     "bootstrap-icons": "^1.13.1",
-    "bootstrap-vue-next": "^0.44.2",
-    "country-codes-list": "^2.0.0",
-    "country-flag-icons": "^1.6.15",
+    "bootstrap-vue-next": "^0.45.8",
+    "country-codes-list": "^2.1.0",
+    "country-flag-icons": "^1.6.20",
     "solstice-theme": "github:uw-it-aca/solstice-theme#1.0.7",
-    "vue": "^3.5.32",
-    "vue-router": "^5.0.4",
+    "vue": "^3.5.39",
+    "vue-router": "^5.1.0",
     "vue3-mq": "^4.1.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^6.0.5",
-    "@vitest/coverage-v8": "^4.1.3",
-    "@vue/test-utils": "^2.4.6",
-    "jsdom": "^29.0.2",
-    "oxfmt": "^0.44.0",
-    "oxlint": "^1.59.0",
-    "sass": "^1.99.0",
-    "unplugin-vue-components": "^32.0.0",
-    "vite": "^8.0.7",
-    "vitest": "^4.1.3"
+    "@vitejs/plugin-vue": "^6.0.7",
+    "@vitest/coverage-v8": "^4.1.10",
+    "@vue/test-utils": "^2.4.11",
+    "jsdom": "^29.1.1",
+    "oxfmt": "^0.58.0",
+    "oxlint": "^1.73.0",
+    "sass": "^1.101.0",
+    "unplugin-vue-components": "^32.1.0",
+    "vite": "^8.1.4",
+    "vitest": "^4.1.10"
   }
 }

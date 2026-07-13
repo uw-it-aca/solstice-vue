@@ -91,11 +91,12 @@
         <footer v-if="$slots['footer']">
           <slot name="footer">
             <div class="font-weight-light small py-3">
-              <ul class="list-inline m-0">
+              <ul class="list-inline sol-middot-list m-0">
                 <li class="list-inline-item">
                   <a
                     href="https://www.washington.edu/accessibility/"
                     class="link-body-emphasis"
+                    target="_blank"
                     >Accessibility</a
                   >
                 </li>
@@ -103,6 +104,7 @@
                   <a
                     href="http://www.washington.edu/online/privacy/"
                     class="link-body-emphasis"
+                    target="_blank"
                     >Privacy</a
                   >
                 </li>
@@ -110,6 +112,7 @@
                   <a
                     href="http://www.washington.edu/online/terms/"
                     class="link-body-emphasis"
+                    target="_blank"
                     >Terms</a
                   >
                 </li>
@@ -190,5 +193,11 @@
     background-size: 45px;
     background-position: right 20px bottom;
     line-height: 30px;
+  }
+
+  .sol-middot-list li:not(:last-child)::after {
+    content: "·";
+    margin-left: 0.5rem;
+    font-weight: bold;
   }
 </style>

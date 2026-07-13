@@ -233,7 +233,7 @@ function Re(e, t, c, l, u, d) {
 	], 6), i("div", {
 		id: "scrollbody",
 		class: h([[d.mq.mdMinus ? "" : "flex-fill overflow-y-scroll"], "d-flex bg-body text-body"])
-	}, [i("div", Pe, [i("main", Fe, [S(e.$slots, "main")]), e.$slots.footer ? (v(), r("footer", Ie, [S(e.$slots, "footer", {}, () => [i("div", Le, [t[5] ||= a("<ul class=\"list-inline m-0\"><li class=\"list-inline-item\"><a href=\"https://www.washington.edu/accessibility/\" class=\"link-body-emphasis\">Accessibility</a></li><li class=\"list-inline-item\"><a href=\"http://www.washington.edu/online/privacy/\" class=\"link-body-emphasis\">Privacy</a></li><li class=\"list-inline-item\"><a href=\"http://www.washington.edu/online/terms/\" class=\"link-body-emphasis\">Terms</a></li></ul>", 1), i("div", null, " Copyright © " + T((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)])])])) : n("", !0)])], 2)], 6);
+	}, [i("div", Pe, [i("main", Fe, [S(e.$slots, "main")]), e.$slots.footer ? (v(), r("footer", Ie, [S(e.$slots, "footer", {}, () => [i("div", Le, [t[5] ||= a("<ul class=\"list-inline sol-middot-list m-0\"><li class=\"list-inline-item\"><a href=\"https://www.washington.edu/accessibility/\" class=\"link-body-emphasis\" target=\"_blank\">Accessibility</a></li><li class=\"list-inline-item\"><a href=\"http://www.washington.edu/online/privacy/\" class=\"link-body-emphasis\" target=\"_blank\">Privacy</a></li><li class=\"list-inline-item\"><a href=\"http://www.washington.edu/online/terms/\" class=\"link-body-emphasis\" target=\"_blank\">Terms</a></li></ul>", 1), i("div", null, " Copyright © " + T((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)])])])) : n("", !0)])], 2)], 6);
 }
 var ze = /* @__PURE__ */ L(Ee, [["render", Re]]), Be = {
 	inject: ["mq"],
@@ -307,7 +307,7 @@ function ot(e, t, s, c, l, u) {
 			i("main", $e, [e.$slots.bar ? (v(), r("div", et, [S(e.$slots, "bar")])) : n("", !0), S(e.$slots, "main", {}, () => [t[4] ||= i("div", { style: { outline: "dashed 1px lightgray" } }, [i("h1", null, "Hello world..."), i("p", null, " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa. ")], -1)])]),
 			!e.$slots.navigation && e.$slots.aside ? (v(), r("aside", tt, [S(e.$slots, "aside", {}, () => [t[5] ||= o("Aside content", -1)])])) : n("", !0)
 		])])], 2),
-		i("footer", nt, [e.$slots.footer ? (v(), r("div", rt, [i("div", it, [S(e.$slots, "footer", {}, () => [i("div", at, [t[6] ||= a("<ul class=\"list-inline m-0\"><li class=\"list-inline-item\"><a href=\"https://www.washington.edu/accessibility/\" class=\"link-body-emphasis\">Accessibility</a></li><li class=\"list-inline-item\"><a href=\"http://www.washington.edu/online/privacy/\" class=\"link-body-emphasis\">Privacy</a></li><li class=\"list-inline-item\"><a href=\"http://www.washington.edu/online/terms/\" class=\"link-body-emphasis\">Terms</a></li></ul>", 1), i("div", null, " Copyright © " + T((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)])])])])) : n("", !0)])
+		i("footer", nt, [e.$slots.footer ? (v(), r("div", rt, [i("div", it, [S(e.$slots, "footer", {}, () => [i("div", at, [t[6] ||= a("<ul class=\"list-inline sol-middot-list m-0\"><li class=\"list-inline-item\"><a href=\"https://www.washington.edu/accessibility/\" class=\"link-body-emphasis\" target=\"_blank\">Accessibility</a></li><li class=\"list-inline-item\"><a href=\"http://www.washington.edu/online/privacy/\" class=\"link-body-emphasis\" target=\"_blank\">Privacy</a></li><li class=\"list-inline-item\"><a href=\"http://www.washington.edu/online/terms/\" class=\"link-body-emphasis\" target=\"_blank\">Terms</a></li></ul>", 1), i("div", null, " Copyright © " + T((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)])])])])) : n("", !0)])
 	], 2);
 }
 var st = /* @__PURE__ */ L(Be, [["render", ot]]), ct = {
@@ -366,7 +366,7 @@ var st = /* @__PURE__ */ L(Be, [["render", ot]]), ct = {
 }, Ct = { class: "container-xl" }, wt = { class: "container-xl flex-fill" }, Tt = { class: "row" }, Et = { class: "col" }, Dt = {
 	key: 0,
 	class: "col-sm-12 col-xl-3"
-}, Ot = { class: "bg-body-tertiary w-100" }, kt = { class: "container-xl" }, At = { class: "row" }, jt = { class: "col small font-weight-light my-4" }, Mt = { class: "list-inline m-0" }, Nt = { class: "list-inline-item" }, Pt = ["href"], Ft = { class: "list-inline-item" }, It = ["href"], Lt = { class: "list-inline-item" }, Rt = ["href"], zt = { class: "" };
+}, Ot = { class: "bg-body-tertiary w-100" }, kt = { class: "container-xl" }, At = { class: "row" }, jt = { class: "col small font-weight-light my-4" }, Mt = { class: "list-inline sol-middot-list m-0" }, Nt = { class: "list-inline-item" }, Pt = ["href"], Ft = { class: "list-inline-item" }, It = ["href"], Lt = { class: "list-inline-item" }, Rt = ["href"], zt = { class: "" };
 function Bt(e, t, a, s, c, l) {
 	return v(), r("div", { class: h([[a.isPreview ? " " : "min-vh-100"], "d-flex align-items-end flex-column"]) }, [
 		i("header", lt, [i("div", ut, [i("div", dt, [i("div", ft, [t[0] ||= i("div", { class: "d-none d-md-block border-end border-opacity-25 me-3 border-white pe-3" }, [i("img", {

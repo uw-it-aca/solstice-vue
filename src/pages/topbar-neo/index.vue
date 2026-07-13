@@ -157,9 +157,7 @@
     </template>-->
 
     <template #footer>
-      <!--<div class="row">
-        <div class="col text-white py-3">my custom footer</div>
-      </div>-->
+      <!-- insert custom footer override here -->
     </template>
   </STopbarNeo>
 </template>

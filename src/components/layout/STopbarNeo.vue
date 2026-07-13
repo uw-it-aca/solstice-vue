@@ -116,6 +116,16 @@
                 <ul class="list-inline m-0">
                   <li class="list-inline-item">
                     <a
+                      v-if="accessibilityURL"
+                      :href="accessibilityURL"
+                      target="_blank"
+                      rel="noopener"
+                      class="link-body-emphasis"
+                      >Accessibility</a
+                    >
+                  </li>
+                  <li class="list-inline-item">
+                    <a
                       v-if="privacyURL"
                       :href="privacyURL"
                       target="_blank"
@@ -166,6 +176,11 @@
       isPreview: {
         type: Boolean,
         default: false,
+      },
+      accessibilityURL: {
+        type: String,
+        required: false,
+        default: "https://www.washington.edu/accessibility/",
       },
       privacyURL: {
         type: String,

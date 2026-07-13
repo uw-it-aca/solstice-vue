@@ -91,7 +91,9 @@
         optio, commodi sit fugit harum perspiciatis quia sunt fuga. Aliquam?
       </div>
     </template>-->
-    <template #footer></template>
+    <template #footer>
+      <!-- insert custom footer override here -->
+    </template>
   </STopbar>
 </template>
 

@@ -56,82 +56,57 @@
       </div>
     </template>
     <template #main>
-        <KitchenSink />
-            <!-- Button trigger modal -->
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-            >
-              Launch demo modal
-            </button>
+      <KitchenSink />
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Launch demo modal
+      </button>
 
-
-        <!-- Modal -->
-        <div
-          id="exampleModal"
-          class="modal fade"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 id="exampleModalLabel" class="modal-title fs-5">
-                  Modal title
-                </h1>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">...</div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-                <button type="button" class="btn btn-primary">
-                  Save changes
-                </button>
-              </div>
+      <!-- Modal -->
+      <div
+        id="exampleModal"
+        class="modal fade"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 id="exampleModalLabel" class="modal-title fs-5">
+                Modal title
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">...</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">
+                Save changes
+              </button>
             </div>
           </div>
         </div>
-
+      </div>
     </template>
     <template #footer>
-      <div class="d-flex justify-content-between">
-        <div class="font-weight-light small py-3">
-          <ul class="list-inline m-0">
-            <ul class="list-inline m-0">
-              <li class="list-inline-item">
-                <a
-                  href="http://www.washington.edu/online/privacy/"
-                  class="link-primary"
-                  >Privacy</a
-                >
-              </li>
-              <li class="list-inline-item">
-                <a
-                  href="http://www.washington.edu/online/terms/"
-                  class="link-primary"
-                  >Terms</a
-                >
-              </li>
-            </ul>
-          </ul>
-          <div>Copyright © 2023 University of Washington</div>
-        </div>
-        <div><SColorMode></SColorMode></div>
-      </div>
+      <!-- insert custom footer override here -->
     </template>
   </SSidebar>
 </template>

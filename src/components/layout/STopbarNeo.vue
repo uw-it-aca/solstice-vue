@@ -113,7 +113,17 @@
           <slot name="footer">
             <div class="row">
               <div class="col small font-weight-light my-4">
-                <ul class="list-inline m-0">
+                <ul class="list-inline sol-middot-list m-0">
+                  <li class="list-inline-item">
+                    <a
+                      v-if="accessibilityURL"
+                      :href="accessibilityURL"
+                      target="_blank"
+                      rel="noopener"
+                      class="link-body-emphasis"
+                      >Accessibility</a
+                    >
+                  </li>
                   <li class="list-inline-item">
                     <a
                       v-if="privacyURL"
@@ -167,6 +177,11 @@
         type: Boolean,
         default: false,
       },
+      accessibilityURL: {
+        type: String,
+        required: false,
+        default: "https://www.washington.edu/accessibility/",
+      },
       privacyURL: {
         type: String,
         required: false,
@@ -181,4 +196,10 @@
   };
 </script>
 
-<style lang="css"></style>
+<style lang="css">
+  .sol-middot-list li:not(:last-child)::after {
+    content: "·";
+    margin-left: 0.5rem;
+    font-weight: bold;
+  }
+</style>

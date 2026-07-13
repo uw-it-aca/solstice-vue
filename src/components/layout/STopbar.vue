@@ -98,22 +98,32 @@
       </div>
     </div>
     <footer class="w-100">
-      <div v-if="$slots.footer" class="bg-dark small py-2 text-white">
+      <div v-if="$slots.footer" class="bg-body-tertiary small py-2">
         <div class="container-xl">
           <slot name="footer">
-            <div class="font-weight-light py-3 text-white">
-              <ul class="list-inline m-0">
+            <div class="font-weight-light py-3">
+              <ul class="list-inline sol-middot-list m-0">
+                <li class="list-inline-item">
+                  <a
+                    href="https://www.washington.edu/accessibility/"
+                    class="link-body-emphasis"
+                    target="_blank"
+                    >Accessibility</a
+                  >
+                </li>
                 <li class="list-inline-item">
                   <a
                     href="http://www.washington.edu/online/privacy/"
-                    class="link-light link-opacity-50 link-opacity-75-hover link-underline-opacity-50 link-underline-opacity-75-hover"
+                    class="link-body-emphasis"
+                    target="_blank"
                     >Privacy</a
                   >
                 </li>
                 <li class="list-inline-item">
                   <a
                     href="http://www.washington.edu/online/terms/"
-                    class="link-light link-opacity-50 link-opacity-75-hover link-underline-opacity-50 link-underline-opacity-75-hover"
+                    class="link-body-emphasis"
+                    target="_blank"
                     >Terms</a
                   >
                 </li>
@@ -180,5 +190,11 @@
     background-repeat: no-repeat;
     background-size: 45px;
     background-position: right 20px bottom;
+  }
+
+  .sol-middot-list li:not(:last-child)::after {
+    content: "·";
+    margin-left: 0.5rem;
+    font-weight: bold;
   }
 </style>

@@ -14,6 +14,7 @@ import STabsPanel from "./tabs/STabsPanel.vue";
 
 import SSidebar from "./layout/SSidebar.vue";
 import STopbar from "./layout/STopbar.vue";
+import STopbarBlanco from "./layout/STopbarBlanco.vue";
 import STopbarNeo from "./layout/STopbarNeo.vue";
 import SProfile from "./SProfile.vue";
 import SColorMode from "./SColorMode.vue";
@@ -40,6 +41,7 @@ export {
   STabsPanel,
   SSidebar,
   STopbar,
+  STopbarBlanco,
   STopbarNeo,
   SColorMode,
   SProfile,

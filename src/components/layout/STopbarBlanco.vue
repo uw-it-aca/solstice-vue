@@ -11,7 +11,7 @@
               class=" border-end border-opacity-25 me-3 border-black pe-3"
             >
               <img
-                :src="isDark ? '/src/assets/images/w-logo-white.png' : '/src/assets/images/w-logo-purple.png'"
+                :src="logoSrc"
                 alt="UW logo"
                 class="my-1"
                 style="height: 30px"
@@ -160,6 +160,8 @@
 
 <script>
   import { useColorMode, usePreferredDark } from "@vueuse/core";
+  import logoWhite from "@/assets/images/w-logo-white.png";
+  import logoPurple from "@/assets/images/w-logo-purple.png";
 
   export default {
     inject: ["mq"],
@@ -216,6 +218,10 @@
           return false;
         }
         return this.prefersDark;
+      },
+      // Bundled asset URLs (imported so the library build emits them).
+      logoSrc() {
+        return this.isDark ? logoWhite : logoPurple;
       },
     },
   };

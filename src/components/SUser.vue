@@ -21,7 +21,7 @@
         />
         <img
           v-else
-          src="/src/assets/images/placeholder.png"
+          :src="placeholderImg"
           class="img-tiny rounded-circle me-2"
           alt="user avatar"
         />
@@ -53,7 +53,7 @@
             />
             <img
               v-else
-              src="/src/assets/images/placeholder.png"
+              :src="placeholderImg"
               class="img-profile rounded-circle"
               alt="user avatar"
             />
@@ -80,6 +80,7 @@
 
 <script>
   import { useColorMode, usePreferredDark } from "@vueuse/core";
+  import placeholderImg from "@/assets/images/placeholder.png";
 
   export default {
     setup() {
@@ -142,7 +143,10 @@
       },
     },
     data() {
-      return {};
+      return {
+        // Bundled asset URL (imported so the library build emits it).
+        placeholderImg,
+      };
     },
     methods: {},
   };

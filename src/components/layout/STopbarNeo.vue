@@ -11,7 +11,7 @@
               class="border-end border-opacity-25 me-3 border-white pe-3"
             >
               <img
-                src="/src/assets/images/w-logo-white.png"
+                :src="logoSrc"
                 alt="UW logo"
                 class="my-1"
                 style="height: 30px"
@@ -159,8 +159,16 @@
 </template>
 
 <script>
+  import logoWhite from "@/assets/images/w-logo-white.png";
+
   export default {
     inject: ["mq"],
+    data() {
+      return {
+        // Bundled asset URL (imported so the library build emits it).
+        logoSrc: logoWhite,
+      };
+    },
     props: {
       appName: {
         type: String,

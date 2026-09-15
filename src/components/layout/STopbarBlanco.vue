@@ -3,22 +3,22 @@
     :class="[!isPreview ? 'min-vh-100' : ' ']"
     class="d-flex align-items-end flex-column"
   >
-    <header class="bg-spirit-purple w-100">
+    <header class="w-100">
       <div class="container-xl">
         <div class="d-flex justify-content-between align-items-center">
           <div class="d-flex flex-fill align-items-center my-4">
             <div
-              class="border-end border-opacity-25 me-3 border-white pe-3"
+              class=" border-end border-opacity-25 me-3 border-black pe-3"
             >
               <img
-                src="/src/assets/images/w-logo-white.png"
+                :src="isDark ? '/src/assets/images/w-logo-white.png' : '/src/assets/images/w-logo-purple.png'"
                 alt="UW logo"
                 class="my-1"
                 style="height: 30px"
               />
             </div>
 
-            <div class="flex-fill flex-column text-white">
+            <div class="flex-fill flex-column text-body">
               <div
                 v-if="appDeptName"
                 class="fw-light text-nowrap"
@@ -28,14 +28,14 @@
               </div>
               <a
                 :href="appRootUrl"
-                class="d-inline-block d-sm-none ff-encode-sans text-decoration-none fs-3 fw-medium text-truncate text-nowrap text-white"
+                class="d-inline-block d-sm-none ff-encode-sans text-decoration-none fs-3 fw-medium text-truncate text-nowrap text-body"
                 style="max-width: 180px"
               >
                 {{ appName }}
               </a>
               <a
                 :href="appRootUrl"
-                class="d-none d-sm-inline-block ff-encode-sans text-decoration-none fs-3 fw-medium text-nowrap text-white"
+                class="d-none d-sm-inline-block ff-encode-sans text-decoration-none fs-3 fw-medium text-nowrap text-body"
               >
                 {{ appName }}
               </a>
@@ -50,7 +50,7 @@
             <!-- MARK: navigation toggler -->
             <a
               v-if="$slots.navigation"
-              class="btn btn-link btn-sm d-md-none ms-1 py-0 py-1 text-white"
+              class="btn btn-link btn-sm d-md-none ms-1 py-0 py-1 text-body"
               data-bs-toggle="collapse"
               data-bs-target="#navbarToggler"
               aria-controls="navbarToggler"
@@ -65,7 +65,7 @@
     </header>
 
     <template v-if="$slots.navigation">
-      <nav class="navbar navbar-expand-md py-xl-2 bg-husky-purple w-100 p-0">
+      <nav class="navbar navbar-expand-md py-xl-2 bg-body-secondary w-100 p-0">
         <div class="container-xl">
           <div class="navbar-collapse collapse" id="navbarToggler">
             <slot name="navigation">navigation bar</slot>
@@ -159,8 +159,19 @@
 </template>
 
 <script>
+  import { useColorMode, usePreferredDark } from "@vueuse/core";
+
   export default {
     inject: ["mq"],
+    setup() {
+      const colorMode = useColorMode({
+        emitAuto: true,
+        attribute: "data-bs-theme",
+      });
+      // Reactive OS-level preference; resolves "auto" to the effective theme.
+      const prefersDark = usePreferredDark();
+      return { colorMode, prefersDark };
+    },
     props: {
       appName: {
         type: String,
@@ -191,6 +202,20 @@
         type: String,
         required: false,
         default: "https://www.washington.edu/online/terms/",
+      },
+    },
+    computed: {
+      // Resolve the effective theme. useColorMode with emitAuto exposes the
+      // user selection ("light" | "dark" | "auto"); when it is "auto" we fall
+      // back to the reactive OS preference so the logo matches what renders.
+      isDark() {
+        if (this.colorMode === "dark") {
+          return true;
+        }
+        if (this.colorMode === "light") {
+          return false;
+        }
+        return this.prefersDark;
       },
     },
   };

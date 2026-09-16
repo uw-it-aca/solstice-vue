@@ -1008,23 +1008,21 @@ function Or(e) {
 //#endregion
 //#region node_modules/country-codes-list/dist/utils/groupBy.js
 var kr = /* @__PURE__ */ L(((e) => {
-	Object.defineProperty(e, "__esModule", { value: !0 });
+	Object.defineProperty(e, "__esModule", { value: !0 }), e.default = t;
 	function t(e, t) {
 		return e.reduce((e, n) => {
 			let r = String(n[t]);
 			return e[r] || (e[r] = []), e[r].push(n), e;
 		}, {});
 	}
-	e.default = t;
 })), Ar = /* @__PURE__ */ L(((e) => {
-	Object.defineProperty(e, "__esModule", { value: !0 });
+	Object.defineProperty(e, "__esModule", { value: !0 }), e.default = t;
 	function t(e, t) {
 		return e.replace(/{([^{}]*)}/g, (e, n) => {
 			let r = t[n];
 			return typeof r == "string" || typeof r == "number" ? r.toString() : e;
 		});
 	}
-	e.default = t;
 })), jr = /* @__PURE__ */ L(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.default = [
 		{
@@ -1042,7 +1040,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "376",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇦🇩"
+			flag: "🇦🇩",
+			countryCodeNumeric: "020",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [6, 9]
 		},
 		{
 			countryNameEn: "Afghanistan",
@@ -1059,7 +1062,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "93",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇦🇫"
+			flag: "🇦🇫",
+			countryCodeNumeric: "004",
+			currencyNumeric: "971",
+			currencyDecimals: 2,
+			currencySymbol: "؋",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Antigua and Barbuda",
@@ -1073,10 +1081,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1268",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["268"],
 			region: "South/Latin America",
-			flag: "🇦🇬"
+			flag: "🇦🇬",
+			countryCodeNumeric: "028",
+			currencyNumeric: "951",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Anguilla",
@@ -1090,10 +1103,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1264",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["264"],
 			region: "South/Latin America",
-			flag: "🇦🇮"
+			flag: "🇦🇮",
+			countryCodeNumeric: "660",
+			currencyNumeric: "951",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Albania",
@@ -1110,7 +1128,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "355",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇦🇱"
+			flag: "🇦🇱",
+			countryCodeNumeric: "008",
+			currencyNumeric: "008",
+			currencyDecimals: 2,
+			currencySymbol: "ALL",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Armenia",
@@ -1127,7 +1150,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "374",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇦🇲"
+			flag: "🇦🇲",
+			countryCodeNumeric: "051",
+			currencyNumeric: "051",
+			currencyDecimals: 2,
+			currencySymbol: "֏",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Angola",
@@ -1144,7 +1172,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "244",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇦🇴"
+			flag: "🇦🇴",
+			countryCodeNumeric: "024",
+			currencyNumeric: "973",
+			currencyDecimals: 2,
+			currencySymbol: "Kz",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Antarctica",
@@ -1161,7 +1194,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "672",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇦🇶"
+			flag: "🇦🇶",
+			countryCodeNumeric: "010",
+			currencyNumeric: "",
+			currencyDecimals: null,
+			currencySymbol: "",
+			nationalNumberLengths: []
 		},
 		{
 			countryNameEn: "Argentina",
@@ -1178,7 +1216,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "54",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇦🇷"
+			flag: "🇦🇷",
+			countryCodeNumeric: "032",
+			currencyNumeric: "032",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10, 11]
 		},
 		{
 			countryNameEn: "American Samoa",
@@ -1192,10 +1235,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1684",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["684"],
 			region: "Asia & Pacific",
-			flag: "🇦🇸"
+			flag: "🇦🇸",
+			countryCodeNumeric: "016",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Austria",
@@ -1212,7 +1260,23 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "43",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇦🇹"
+			flag: "🇦🇹",
+			countryCodeNumeric: "040",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			]
 		},
 		{
 			countryNameEn: "Australia",
@@ -1229,7 +1293,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "61",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇦🇺"
+			flag: "🇦🇺",
+			countryCodeNumeric: "036",
+			currencyNumeric: "036",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Aruba",
@@ -1246,7 +1315,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "297",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇦🇼"
+			flag: "🇦🇼",
+			countryCodeNumeric: "533",
+			currencyNumeric: "533",
+			currencyDecimals: 2,
+			currencySymbol: "AWG",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Åland Islands",
@@ -1263,7 +1337,18 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "358",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇦🇽"
+			flag: "🇦🇽",
+			countryCodeNumeric: "248",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				6,
+				7,
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Azerbaijan",
@@ -1280,7 +1365,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "994",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇦🇿"
+			flag: "🇦🇿",
+			countryCodeNumeric: "031",
+			currencyNumeric: "944",
+			currencyDecimals: 2,
+			currencySymbol: "₼",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Bosnia and Herzegovina",
@@ -1297,7 +1387,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "387",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇧🇦"
+			flag: "🇧🇦",
+			countryCodeNumeric: "070",
+			currencyNumeric: "977",
+			currencyDecimals: 2,
+			currencySymbol: "KM",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Barbados",
@@ -1311,10 +1406,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1246",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["246"],
 			region: "South/Latin America",
-			flag: "🇧🇧"
+			flag: "🇧🇧",
+			countryCodeNumeric: "052",
+			currencyNumeric: "052",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Bangladesh",
@@ -1331,7 +1431,18 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "880",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇧🇩"
+			flag: "🇧🇩",
+			countryCodeNumeric: "050",
+			currencyNumeric: "050",
+			currencyDecimals: 2,
+			currencySymbol: "৳",
+			nationalNumberLengths: [
+				6,
+				7,
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Belgium",
@@ -1340,7 +1451,7 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCodeAlpha3: "BEL",
 			currencyCode: "EUR",
 			currencyNameEn: "Euro",
-			tinType: "n° TVABTW-nr Mwst-nr",
+			tinType: "n° TVA / BTW-nr / MwSt-nr",
 			tinName: "BTW identificatienummer / Numéro de TVA",
 			officialLanguageCode: "nl",
 			officialLanguageNameEn: "Dutch, Flemish",
@@ -1348,7 +1459,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "32",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇧🇪"
+			flag: "🇧🇪",
+			countryCodeNumeric: "056",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Burkina Faso",
@@ -1359,21 +1475,26 @@ var kr = /* @__PURE__ */ L(((e) => {
 			currencyNameEn: "CFA franc BCEAO",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "fr",
-			officialLanguageNameEn: "French",
-			officialLanguageNameLocal: "Français",
+			officialLanguageCode: "mos",
+			officialLanguageNameEn: "Mooré",
+			officialLanguageNameLocal: "Mòoré",
 			countryCallingCode: "226",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇧🇫"
+			flag: "🇧🇫",
+			countryCodeNumeric: "854",
+			currencyNumeric: "952",
+			currencyDecimals: 0,
+			currencySymbol: "F CFA",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Bulgaria",
 			countryNameLocal: "България",
 			countryCode: "BG",
 			countryCodeAlpha3: "BGR",
-			currencyCode: "BGN",
-			currencyNameEn: "Bulgarian lev",
+			currencyCode: "EUR",
+			currencyNameEn: "Euro",
 			tinType: "ДДС номер",
 			tinName: "Идентификационен номер по ДДС",
 			officialLanguageCode: "bg",
@@ -1382,7 +1503,17 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "359",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇧🇬"
+			flag: "🇧🇬",
+			countryCodeNumeric: "100",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				6,
+				7,
+				8,
+				9
+			]
 		},
 		{
 			countryNameEn: "Bahrain",
@@ -1399,7 +1530,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "973",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇧🇭"
+			flag: "🇧🇭",
+			countryCodeNumeric: "048",
+			currencyNumeric: "048",
+			currencyDecimals: 3,
+			currencySymbol: "BHD",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Burundi",
@@ -1416,7 +1552,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "257",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇧🇮"
+			flag: "🇧🇮",
+			countryCodeNumeric: "108",
+			currencyNumeric: "108",
+			currencyDecimals: 0,
+			currencySymbol: "BIF",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Benin",
@@ -1433,7 +1574,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "229",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇧🇯"
+			flag: "🇧🇯",
+			countryCodeNumeric: "204",
+			currencyNumeric: "952",
+			currencyDecimals: 0,
+			currencySymbol: "F CFA",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Saint Barthélemy",
@@ -1450,7 +1596,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "590",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇧🇱"
+			flag: "🇧🇱",
+			countryCodeNumeric: "652",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Bermuda",
@@ -1464,10 +1615,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1441",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["441"],
 			region: "North America",
-			flag: "🇧🇲"
+			flag: "🇧🇲",
+			countryCodeNumeric: "060",
+			currencyNumeric: "060",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Brunei Darussalam",
@@ -1484,7 +1640,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "673",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇧🇳"
+			flag: "🇧🇳",
+			countryCodeNumeric: "096",
+			currencyNumeric: "096",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Bolivia (Plurinational State of)",
@@ -1492,7 +1653,7 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCode: "BO",
 			countryCodeAlpha3: "BOL",
 			currencyCode: "BOB",
-			currencyNameEn: "",
+			currencyNameEn: "Boliviano",
 			tinType: "NIT",
 			tinName: "Número de Identificación Tributaria",
 			officialLanguageCode: "es",
@@ -1501,7 +1662,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "591",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇧🇴"
+			flag: "🇧🇴",
+			countryCodeNumeric: "068",
+			currencyNumeric: "068",
+			currencyDecimals: 2,
+			currencySymbol: "Bs",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Bonaire, Sint Eustatius and Saba",
@@ -1515,10 +1681,19 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "nl",
 			officialLanguageNameEn: "Dutch, Flemish",
 			officialLanguageNameLocal: "Nederlands, Vlaams",
-			countryCallingCode: "5997",
-			areaCodes: [],
-			region: "Unknown",
-			flag: "🇧🇶"
+			countryCallingCode: "599",
+			areaCodes: [
+				"7",
+				"4",
+				"3"
+			],
+			region: "South/Latin America",
+			flag: "🇧🇶",
+			countryCodeNumeric: "535",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Brazil",
@@ -1535,7 +1710,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "55",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇧🇷"
+			flag: "🇧🇷",
+			countryCodeNumeric: "076",
+			currencyNumeric: "986",
+			currencyDecimals: 2,
+			currencySymbol: "R$",
+			nationalNumberLengths: [10, 11]
 		},
 		{
 			countryNameEn: "Bhutan",
@@ -1552,7 +1732,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "975",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇧🇹"
+			flag: "🇧🇹",
+			countryCodeNumeric: "064",
+			currencyNumeric: "064",
+			currencyDecimals: 2,
+			currencySymbol: "BTN",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Bouvet Island",
@@ -1569,7 +1754,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "47",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇧🇻"
+			flag: "🇧🇻",
+			countryCodeNumeric: "074",
+			currencyNumeric: "578",
+			currencyDecimals: 2,
+			currencySymbol: "kr",
+			nationalNumberLengths: []
 		},
 		{
 			countryNameEn: "Botswana",
@@ -1586,7 +1776,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "267",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇧🇼"
+			flag: "🇧🇼",
+			countryCodeNumeric: "072",
+			currencyNumeric: "072",
+			currencyDecimals: 2,
+			currencySymbol: "P",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Belarus",
@@ -1594,7 +1789,7 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCode: "BY",
 			countryCodeAlpha3: "BLR",
 			currencyCode: "BYN",
-			currencyNameEn: "",
+			currencyNameEn: "Belarusian ruble",
 			tinType: "УНП (UNP)",
 			tinName: "Учетный номер плательщика",
 			officialLanguageCode: "be",
@@ -1603,7 +1798,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "375",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇧🇾"
+			flag: "🇧🇾",
+			countryCodeNumeric: "112",
+			currencyNumeric: "933",
+			currencyDecimals: 2,
+			currencySymbol: "BYN",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Belize",
@@ -1620,7 +1820,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "501",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇧🇿"
+			flag: "🇧🇿",
+			countryCodeNumeric: "084",
+			currencyNumeric: "084",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Canada",
@@ -1635,9 +1840,14 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
 			countryCallingCode: "1",
-			areaCodes: /* @__PURE__ */ "403.587.780.825.236.250.604.672.778.204.431.506.709.782.902.226.249.289.343.365.416.437.519.548.613.647.705.807.905.367.418.438.450.514.579.581.819.873.306.639.867".split("."),
+			areaCodes: /* @__PURE__ */ "204.226.236.249.250.257.263.289.306.343.354.365.367.368.382.403.416.418.428.431.437.438.450.468.474.506.514.519.548.579.581.584.587.604.613.639.647.672.683.705.709.742.753.778.780.782.807.819.825.867.873.879.902.905.942".split("."),
 			region: "North America",
-			flag: "🇨🇦"
+			flag: "🇨🇦",
+			countryCodeNumeric: "124",
+			currencyNumeric: "124",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Switzerland",
@@ -1654,7 +1864,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "41",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇨🇭"
+			flag: "🇨🇭",
+			countryCodeNumeric: "756",
+			currencyNumeric: "756",
+			currencyDecimals: 2,
+			currencySymbol: "CHF",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Côte d'Ivoire",
@@ -1671,7 +1886,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "225",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇨🇮"
+			flag: "🇨🇮",
+			countryCodeNumeric: "384",
+			currencyNumeric: "952",
+			currencyDecimals: 0,
+			currencySymbol: "F CFA",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Chile",
@@ -1688,7 +1908,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "56",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇨🇱"
+			flag: "🇨🇱",
+			countryCodeNumeric: "152",
+			currencyNumeric: "152",
+			currencyDecimals: 0,
+			currencySymbol: "$",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Cameroon",
@@ -1705,7 +1930,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "237",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇨🇲"
+			flag: "🇨🇲",
+			countryCodeNumeric: "120",
+			currencyNumeric: "950",
+			currencyDecimals: 0,
+			currencySymbol: "FCFA",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "China",
@@ -1716,13 +1946,24 @@ var kr = /* @__PURE__ */ L(((e) => {
 			currencyNameEn: "Renminbi (Chinese) yuan",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "zh-hans",
-			officialLanguageNameEn: "",
-			officialLanguageNameLocal: "",
+			officialLanguageCode: "zh",
+			officialLanguageNameEn: "Chinese",
+			officialLanguageNameLocal: "中文",
 			countryCallingCode: "86",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇨🇳"
+			flag: "🇨🇳",
+			countryCodeNumeric: "156",
+			currencyNumeric: "156",
+			currencyDecimals: 2,
+			currencySymbol: "¥",
+			nationalNumberLengths: [
+				7,
+				8,
+				9,
+				10,
+				11
+			]
 		},
 		{
 			countryNameEn: "Colombia",
@@ -1739,7 +1980,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "57",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇨🇴"
+			flag: "🇨🇴",
+			countryCodeNumeric: "170",
+			currencyNumeric: "170",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [8, 10]
 		},
 		{
 			countryNameEn: "Costa Rica",
@@ -1756,15 +2002,20 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "506",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇨🇷"
+			flag: "🇨🇷",
+			countryCodeNumeric: "188",
+			currencyNumeric: "188",
+			currencyDecimals: 2,
+			currencySymbol: "₡",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Cuba",
 			countryNameLocal: "Cuba",
 			countryCode: "CU",
 			countryCodeAlpha3: "CUB",
-			currencyCode: "CUC",
-			currencyNameEn: "Cuban convertible peso",
+			currencyCode: "CUP",
+			currencyNameEn: "Cuban peso",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "es",
@@ -1773,7 +2024,17 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "53",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇨🇺"
+			flag: "🇨🇺",
+			countryCodeNumeric: "192",
+			currencyNumeric: "192",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [
+				6,
+				7,
+				8,
+				10
+			]
 		},
 		{
 			countryNameEn: "Cabo Verde",
@@ -1790,24 +2051,34 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "238",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇨🇻"
+			flag: "🇨🇻",
+			countryCodeNumeric: "132",
+			currencyNumeric: "132",
+			currencyDecimals: 2,
+			currencySymbol: "CVE",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Curaçao",
 			countryNameLocal: "Curaçao",
 			countryCode: "CW",
 			countryCodeAlpha3: "CUW",
-			currencyCode: "ANG",
-			currencyNameEn: "Netherlands Antillean guilder",
+			currencyCode: "XCG",
+			currencyNameEn: "Caribbean guilder",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "nl",
 			officialLanguageNameEn: "Dutch, Flemish",
 			officialLanguageNameLocal: "Nederlands, Vlaams",
 			countryCallingCode: "599",
-			areaCodes: [],
-			region: "Unknown",
-			flag: "🇨🇼"
+			areaCodes: ["9"],
+			region: "South/Latin America",
+			flag: "🇨🇼",
+			countryCodeNumeric: "531",
+			currencyNumeric: "532",
+			currencyDecimals: 2,
+			currencySymbol: "Cg.",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Christmas Island",
@@ -1822,9 +2093,14 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
 			countryCallingCode: "61",
-			areaCodes: [],
+			areaCodes: ["8"],
 			region: "Asia & Pacific",
-			flag: "🇨🇽"
+			flag: "🇨🇽",
+			countryCodeNumeric: "162",
+			currencyNumeric: "036",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Cyprus",
@@ -1841,7 +2117,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "357",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇨🇾"
+			flag: "🇨🇾",
+			countryCodeNumeric: "196",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Germany",
@@ -1858,7 +2139,24 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "49",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇩🇪"
+			flag: "🇩🇪",
+			countryCodeNumeric: "276",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			]
 		},
 		{
 			countryNameEn: "Djibouti",
@@ -1875,7 +2173,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "253",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇩🇯"
+			flag: "🇩🇯",
+			countryCodeNumeric: "262",
+			currencyNumeric: "262",
+			currencyDecimals: 0,
+			currencySymbol: "DJF",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Denmark",
@@ -1892,7 +2195,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "45",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇩🇰"
+			flag: "🇩🇰",
+			countryCodeNumeric: "208",
+			currencyNumeric: "208",
+			currencyDecimals: 2,
+			currencySymbol: "kr",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Dominica",
@@ -1906,10 +2214,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "767",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["767"],
 			region: "South/Latin America",
-			flag: "🇩🇲"
+			flag: "🇩🇲",
+			countryCodeNumeric: "212",
+			currencyNumeric: "951",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Algeria",
@@ -1926,7 +2239,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "213",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇩🇿"
+			flag: "🇩🇿",
+			countryCodeNumeric: "012",
+			currencyNumeric: "012",
+			currencyDecimals: 2,
+			currencySymbol: "DZD",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Ecuador",
@@ -1943,7 +2261,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "593",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇪🇨"
+			flag: "🇪🇨",
+			countryCodeNumeric: "218",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Estonia",
@@ -1960,7 +2283,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "372",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇪🇪"
+			flag: "🇪🇪",
+			countryCodeNumeric: "233",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Egypt",
@@ -1977,7 +2305,16 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "20",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇪🇬"
+			flag: "🇪🇬",
+			countryCodeNumeric: "818",
+			currencyNumeric: "818",
+			currencyDecimals: 2,
+			currencySymbol: "E£",
+			nationalNumberLengths: [
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Western Sahara",
@@ -1994,7 +2331,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "212",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇪🇭"
+			flag: "🇪🇭",
+			countryCodeNumeric: "732",
+			currencyNumeric: "504",
+			currencyDecimals: 2,
+			currencySymbol: "MAD",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Eritrea",
@@ -2011,7 +2353,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "291",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇪🇷"
+			flag: "🇪🇷",
+			countryCodeNumeric: "232",
+			currencyNumeric: "232",
+			currencyDecimals: 2,
+			currencySymbol: "ERN",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Spain",
@@ -2028,7 +2375,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "34",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇪🇸"
+			flag: "🇪🇸",
+			countryCodeNumeric: "724",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Ethiopia",
@@ -2045,7 +2397,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "251",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇪🇹"
+			flag: "🇪🇹",
+			countryCodeNumeric: "231",
+			currencyNumeric: "230",
+			currencyDecimals: 2,
+			currencySymbol: "ETB",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Finland",
@@ -2062,7 +2419,19 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "358",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇫🇮"
+			flag: "🇫🇮",
+			countryCodeNumeric: "246",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Fiji",
@@ -2079,7 +2448,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "679",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇫🇯"
+			flag: "🇫🇯",
+			countryCodeNumeric: "242",
+			currencyNumeric: "242",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Micronesia (Federated States of)",
@@ -2096,7 +2470,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "691",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇫🇲"
+			flag: "🇫🇲",
+			countryCodeNumeric: "583",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "France",
@@ -2113,7 +2492,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "33",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇫🇷"
+			flag: "🇫🇷",
+			countryCodeNumeric: "250",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Gabon",
@@ -2130,7 +2514,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "241",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇬🇦"
+			flag: "🇬🇦",
+			countryCodeNumeric: "266",
+			currencyNumeric: "950",
+			currencyDecimals: 0,
+			currencySymbol: "FCFA",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Grenada",
@@ -2144,10 +2533,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1473",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["473"],
 			region: "South/Latin America",
-			flag: "🇬🇩"
+			flag: "🇬🇩",
+			countryCodeNumeric: "308",
+			currencyNumeric: "951",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Georgia",
@@ -2164,7 +2558,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "995",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇬🇪"
+			flag: "🇬🇪",
+			countryCodeNumeric: "268",
+			currencyNumeric: "981",
+			currencyDecimals: 2,
+			currencySymbol: "₾",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "French Guiana",
@@ -2181,7 +2580,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "594",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇬🇫"
+			flag: "🇬🇫",
+			countryCodeNumeric: "254",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Guernsey",
@@ -2198,7 +2602,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "44",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇬🇬"
+			flag: "🇬🇬",
+			countryCodeNumeric: "831",
+			currencyNumeric: "826",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Ghana",
@@ -2215,7 +2624,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "233",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇬🇭"
+			flag: "🇬🇭",
+			countryCodeNumeric: "288",
+			currencyNumeric: "936",
+			currencyDecimals: 2,
+			currencySymbol: "GH₵",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Gibraltar",
@@ -2232,7 +2646,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "350",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇬🇮"
+			flag: "🇬🇮",
+			countryCodeNumeric: "292",
+			currencyNumeric: "292",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Greenland",
@@ -2249,7 +2668,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "299",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇬🇱"
+			flag: "🇬🇱",
+			countryCodeNumeric: "304",
+			currencyNumeric: "208",
+			currencyDecimals: 2,
+			currencySymbol: "kr",
+			nationalNumberLengths: [6]
 		},
 		{
 			countryNameEn: "Guinea",
@@ -2266,7 +2690,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "224",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇬🇳"
+			flag: "🇬🇳",
+			countryCodeNumeric: "324",
+			currencyNumeric: "324",
+			currencyDecimals: 0,
+			currencySymbol: "FG",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Guadeloupe",
@@ -2283,7 +2712,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "590",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇬🇵"
+			flag: "🇬🇵",
+			countryCodeNumeric: "312",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Equatorial Guinea",
@@ -2300,13 +2734,19 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "240",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇬🇶"
+			flag: "🇬🇶",
+			countryCodeNumeric: "226",
+			currencyNumeric: "950",
+			currencyDecimals: 0,
+			currencySymbol: "FCFA",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Greece",
 			countryNameLocal: "Ελλάδα",
 			countryCode: "GR",
 			countryCodeAlpha3: "GRC",
+			altCodes: ["EL"],
 			currencyCode: "EUR",
 			currencyNameEn: "Euro",
 			tinType: "",
@@ -2317,15 +2757,20 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "30",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇬🇷"
+			flag: "🇬🇷",
+			countryCodeNumeric: "300",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "South Georgia and the South Sandwich Islands",
 			countryNameLocal: "South Georgia and the South Sandwich Islands",
 			countryCode: "GS",
 			countryCodeAlpha3: "SGS",
-			currencyCode: "",
-			currencyNameEn: "",
+			currencyCode: "GBP",
+			currencyNameEn: "Pound sterling",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "en",
@@ -2334,7 +2779,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "500",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇬🇸"
+			flag: "🇬🇸",
+			countryCodeNumeric: "239",
+			currencyNumeric: "826",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: []
 		},
 		{
 			countryNameEn: "Guatemala",
@@ -2351,7 +2801,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "502",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇬🇹"
+			flag: "🇬🇹",
+			countryCodeNumeric: "320",
+			currencyNumeric: "320",
+			currencyDecimals: 2,
+			currencySymbol: "Q",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Guam",
@@ -2366,9 +2821,14 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
 			countryCallingCode: "1",
-			areaCodes: [],
+			areaCodes: ["671"],
 			region: "Asia & Pacific",
-			flag: "🇬🇺"
+			flag: "🇬🇺",
+			countryCodeNumeric: "316",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Guinea-Bissau",
@@ -2385,7 +2845,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "245",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇬🇼"
+			flag: "🇬🇼",
+			countryCodeNumeric: "624",
+			currencyNumeric: "952",
+			currencyDecimals: 0,
+			currencySymbol: "F CFA",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Guyana",
@@ -2402,7 +2867,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "592",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇬🇾"
+			flag: "🇬🇾",
+			countryCodeNumeric: "328",
+			currencyNumeric: "328",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Hong Kong",
@@ -2413,13 +2883,18 @@ var kr = /* @__PURE__ */ L(((e) => {
 			currencyNameEn: "Hong Kong dollar",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "zh-hant",
-			officialLanguageNameEn: "",
-			officialLanguageNameLocal: "",
+			officialLanguageCode: "zh",
+			officialLanguageNameEn: "Chinese",
+			officialLanguageNameLocal: "中文",
 			countryCallingCode: "852",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇭🇰"
+			flag: "🇭🇰",
+			countryCodeNumeric: "344",
+			currencyNumeric: "344",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Honduras",
@@ -2436,15 +2911,20 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "504",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇭🇳"
+			flag: "🇭🇳",
+			countryCodeNumeric: "340",
+			currencyNumeric: "340",
+			currencyDecimals: 2,
+			currencySymbol: "L",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Croatia",
 			countryNameLocal: "Hrvatska",
 			countryCode: "HR",
 			countryCodeAlpha3: "HRV",
-			currencyCode: "HRK",
-			currencyNameEn: "Croatian kuna",
+			currencyCode: "EUR",
+			currencyNameEn: "Euro",
 			tinType: "PDV-ID; OIB",
 			tinName: "PDV Id. Broj OIB",
 			officialLanguageCode: "hr",
@@ -2453,7 +2933,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "385",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇭🇷"
+			flag: "🇭🇷",
+			countryCodeNumeric: "191",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Haiti",
@@ -2470,7 +2955,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "509",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇭🇹"
+			flag: "🇭🇹",
+			countryCodeNumeric: "332",
+			currencyNumeric: "332",
+			currencyDecimals: 2,
+			currencySymbol: "HTG",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Hungary",
@@ -2487,7 +2977,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "36",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇭🇺"
+			flag: "🇭🇺",
+			countryCodeNumeric: "348",
+			currencyNumeric: "348",
+			currencyDecimals: 2,
+			currencySymbol: "Ft",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Indonesia",
@@ -2504,7 +2999,19 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "62",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇮🇩"
+			flag: "🇮🇩",
+			countryCodeNumeric: "360",
+			currencyNumeric: "360",
+			currencyDecimals: 2,
+			currencySymbol: "Rp",
+			nationalNumberLengths: [
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			]
 		},
 		{
 			countryNameEn: "Ireland",
@@ -2521,7 +3028,17 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "353",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇮🇪"
+			flag: "🇮🇪",
+			countryCodeNumeric: "372",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				7,
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Israel",
@@ -2538,7 +3055,17 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "972",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇮🇱"
+			flag: "🇮🇱",
+			countryCodeNumeric: "376",
+			currencyNumeric: "376",
+			currencyDecimals: 2,
+			currencySymbol: "₪",
+			nationalNumberLengths: [
+				8,
+				9,
+				11,
+				12
+			]
 		},
 		{
 			countryNameEn: "Isle of Man",
@@ -2555,7 +3082,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "44",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇮🇲"
+			flag: "🇮🇲",
+			countryCodeNumeric: "833",
+			currencyNumeric: "826",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "India",
@@ -2564,15 +3096,20 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCodeAlpha3: "IND",
 			currencyCode: "INR",
 			currencyNameEn: "Indian rupee",
-			tinType: "VAT TIN / CST TIN",
-			tinName: "Value Added Tax - Taxpayer Identification Number / Central Sales Tax - Taxpayer Identification Number (In most states)Not applicable",
+			tinType: "GSTIN",
+			tinName: "Goods and Services Tax Identification Number",
 			officialLanguageCode: "hi",
 			officialLanguageNameEn: "Hindi",
 			officialLanguageNameLocal: "हिन्दी, हिंदी",
 			countryCallingCode: "91",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇮🇳"
+			flag: "🇮🇳",
+			countryCodeNumeric: "356",
+			currencyNumeric: "356",
+			currencyDecimals: 2,
+			currencySymbol: "₹",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Iraq",
@@ -2589,7 +3126,16 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "964",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇮🇶"
+			flag: "🇮🇶",
+			countryCodeNumeric: "368",
+			currencyNumeric: "368",
+			currencyDecimals: 3,
+			currencySymbol: "IQD",
+			nationalNumberLengths: [
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Iran (Islamic Republic of)",
@@ -2606,7 +3152,16 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "98",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇮🇷"
+			flag: "🇮🇷",
+			countryCodeNumeric: "364",
+			currencyNumeric: "364",
+			currencyDecimals: 2,
+			currencySymbol: "IRR",
+			nationalNumberLengths: [
+				6,
+				7,
+				10
+			]
 		},
 		{
 			countryNameEn: "Iceland",
@@ -2623,7 +3178,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "354",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇮🇸"
+			flag: "🇮🇸",
+			countryCodeNumeric: "352",
+			currencyNumeric: "352",
+			currencyDecimals: 0,
+			currencySymbol: "kr",
+			nationalNumberLengths: [7, 9]
 		},
 		{
 			countryNameEn: "Italy",
@@ -2640,7 +3200,20 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "39",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇮🇹"
+			flag: "🇮🇹",
+			countryCodeNumeric: "380",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			]
 		},
 		{
 			countryNameEn: "Jersey",
@@ -2657,7 +3230,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "44",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇯🇪"
+			flag: "🇯🇪",
+			countryCodeNumeric: "832",
+			currencyNumeric: "826",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Jamaica",
@@ -2671,10 +3249,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "876",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["876", "658"],
 			region: "South/Latin America",
-			flag: "🇯🇲"
+			flag: "🇯🇲",
+			countryCodeNumeric: "388",
+			currencyNumeric: "388",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Jordan",
@@ -2691,7 +3274,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "962",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇯🇴"
+			flag: "🇯🇴",
+			countryCodeNumeric: "400",
+			currencyNumeric: "400",
+			currencyDecimals: 3,
+			currencySymbol: "JOD",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Japan",
@@ -2708,7 +3296,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "81",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇯🇵"
+			flag: "🇯🇵",
+			countryCodeNumeric: "392",
+			currencyNumeric: "392",
+			currencyDecimals: 0,
+			currencySymbol: "¥",
+			nationalNumberLengths: [9, 10]
 		},
 		{
 			countryNameEn: "Kenya",
@@ -2725,7 +3318,16 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "254",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇰🇪"
+			flag: "🇰🇪",
+			countryCodeNumeric: "404",
+			currencyNumeric: "404",
+			currencyDecimals: 2,
+			currencySymbol: "KES",
+			nationalNumberLengths: [
+				7,
+				8,
+				9
+			]
 		},
 		{
 			countryNameEn: "Kyrgyzstan",
@@ -2742,7 +3344,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "996",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇰🇬"
+			flag: "🇰🇬",
+			countryCodeNumeric: "417",
+			currencyNumeric: "417",
+			currencyDecimals: 2,
+			currencySymbol: "⃀",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Cambodia",
@@ -2759,7 +3366,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "855",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇰🇭"
+			flag: "🇰🇭",
+			countryCodeNumeric: "116",
+			currencyNumeric: "116",
+			currencyDecimals: 2,
+			currencySymbol: "៛",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "North Korea",
@@ -2775,8 +3387,13 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageNameLocal: "조선어",
 			countryCallingCode: "850",
 			areaCodes: [],
-			region: "Asia",
-			flag: "🇰🇵"
+			region: "Asia & Pacific",
+			flag: "🇰🇵",
+			countryCodeNumeric: "408",
+			currencyNumeric: "408",
+			currencyDecimals: 2,
+			currencySymbol: "₩",
+			nationalNumberLengths: [8, 10]
 		},
 		{
 			countryNameEn: "South Korea",
@@ -2792,8 +3409,19 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageNameLocal: "한국어",
 			countryCallingCode: "82",
 			areaCodes: [],
-			region: "Asia",
-			flag: "🇰🇷"
+			region: "Asia & Pacific",
+			flag: "🇰🇷",
+			countryCodeNumeric: "410",
+			currencyNumeric: "410",
+			currencyDecimals: 0,
+			currencySymbol: "₩",
+			nationalNumberLengths: [
+				5,
+				6,
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Kiribati",
@@ -2810,7 +3438,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "686",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇰🇮"
+			flag: "🇰🇮",
+			countryCodeNumeric: "296",
+			currencyNumeric: "036",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [5, 8]
 		},
 		{
 			countryNameEn: "Saint Kitts and Nevis",
@@ -2824,10 +3457,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1869",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["869"],
 			region: "South/Latin America",
-			flag: "🇰🇳"
+			flag: "🇰🇳",
+			countryCodeNumeric: "659",
+			currencyNumeric: "951",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Kuwait",
@@ -2844,7 +3482,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "965",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇰🇼"
+			flag: "🇰🇼",
+			countryCodeNumeric: "414",
+			currencyNumeric: "414",
+			currencyDecimals: 3,
+			currencySymbol: "KWD",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Kazakhstan",
@@ -2861,7 +3504,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "7",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇰🇿"
+			flag: "🇰🇿",
+			countryCodeNumeric: "398",
+			currencyNumeric: "398",
+			currencyDecimals: 2,
+			currencySymbol: "₸",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Lebanon",
@@ -2878,7 +3526,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "961",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇱🇧"
+			flag: "🇱🇧",
+			countryCodeNumeric: "422",
+			currencyNumeric: "422",
+			currencyDecimals: 2,
+			currencySymbol: "L£",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Saint Lucia",
@@ -2892,10 +3545,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1758",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["758"],
 			region: "South/Latin America",
-			flag: "🇱🇨"
+			flag: "🇱🇨",
+			countryCodeNumeric: "662",
+			currencyNumeric: "951",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Liechtenstein",
@@ -2912,7 +3570,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "423",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇱🇮"
+			flag: "🇱🇮",
+			countryCodeNumeric: "438",
+			currencyNumeric: "756",
+			currencyDecimals: 2,
+			currencySymbol: "CHF",
+			nationalNumberLengths: [7, 9]
 		},
 		{
 			countryNameEn: "Sri Lanka",
@@ -2929,7 +3592,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "94",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇱🇰"
+			flag: "🇱🇰",
+			countryCodeNumeric: "144",
+			currencyNumeric: "144",
+			currencyDecimals: 2,
+			currencySymbol: "Rs",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Liberia",
@@ -2946,7 +3614,16 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "231",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇱🇷"
+			flag: "🇱🇷",
+			countryCodeNumeric: "430",
+			currencyNumeric: "430",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [
+				7,
+				8,
+				9
+			]
 		},
 		{
 			countryNameEn: "Lesotho",
@@ -2963,7 +3640,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "266",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇱🇸"
+			flag: "🇱🇸",
+			countryCodeNumeric: "426",
+			currencyNumeric: "426",
+			currencyDecimals: 2,
+			currencySymbol: "LSL",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Lithuania",
@@ -2980,7 +3662,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "370",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇱🇹"
+			flag: "🇱🇹",
+			countryCodeNumeric: "440",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Luxembourg",
@@ -2997,7 +3684,21 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "352",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇱🇺"
+			flag: "🇱🇺",
+			countryCodeNumeric: "442",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11
+			]
 		},
 		{
 			countryNameEn: "Latvia",
@@ -3014,7 +3715,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "371",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇱🇻"
+			flag: "🇱🇻",
+			countryCodeNumeric: "428",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Libya",
@@ -3031,7 +3737,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "218",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇱🇾"
+			flag: "🇱🇾",
+			countryCodeNumeric: "434",
+			currencyNumeric: "434",
+			currencyDecimals: 3,
+			currencySymbol: "LYD",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Morocco",
@@ -3042,13 +3753,18 @@ var kr = /* @__PURE__ */ L(((e) => {
 			currencyNameEn: "Moroccan dirham",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "fr",
-			officialLanguageNameEn: "French",
-			officialLanguageNameLocal: "Français",
+			officialLanguageCode: "ar",
+			officialLanguageNameEn: "Arabic",
+			officialLanguageNameLocal: "العربية",
 			countryCallingCode: "212",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇲🇦"
+			flag: "🇲🇦",
+			countryCodeNumeric: "504",
+			currencyNumeric: "504",
+			currencyDecimals: 2,
+			currencySymbol: "MAD",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Monaco",
@@ -3065,7 +3781,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "377",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇲🇨"
+			flag: "🇲🇨",
+			countryCodeNumeric: "492",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Montenegro",
@@ -3076,13 +3797,18 @@ var kr = /* @__PURE__ */ L(((e) => {
 			currencyNameEn: "Euro",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "srp",
-			officialLanguageNameEn: "српски језик",
-			officialLanguageNameLocal: "",
+			officialLanguageCode: "cnr",
+			officialLanguageNameEn: "Montenegrin",
+			officialLanguageNameLocal: "crnogorski, црногорски",
 			countryCallingCode: "382",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇲🇪"
+			flag: "🇲🇪",
+			countryCodeNumeric: "499",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Saint Martin (French part)",
@@ -3099,7 +3825,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "590",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇲🇫"
+			flag: "🇲🇫",
+			countryCodeNumeric: "663",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Madagascar",
@@ -3116,7 +3847,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "261",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇲🇬"
+			flag: "🇲🇬",
+			countryCodeNumeric: "450",
+			currencyNumeric: "969",
+			currencyDecimals: 2,
+			currencySymbol: "Ar",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Mali",
@@ -3127,13 +3863,18 @@ var kr = /* @__PURE__ */ L(((e) => {
 			currencyNameEn: "CFA franc BCEAO",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "fr",
-			officialLanguageNameEn: "French",
-			officialLanguageNameLocal: "Français",
+			officialLanguageCode: "bm",
+			officialLanguageNameEn: "Bambara",
+			officialLanguageNameLocal: "Bamanankan",
 			countryCallingCode: "223",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇲🇱"
+			flag: "🇲🇱",
+			countryCodeNumeric: "466",
+			currencyNumeric: "952",
+			currencyDecimals: 0,
+			currencySymbol: "F CFA",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Myanmar",
@@ -3150,7 +3891,18 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "95",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇲🇲"
+			flag: "🇲🇲",
+			countryCodeNumeric: "104",
+			currencyNumeric: "104",
+			currencyDecimals: 2,
+			currencySymbol: "K",
+			nationalNumberLengths: [
+				6,
+				7,
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Mongolia",
@@ -3167,7 +3919,16 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "976",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇲🇳"
+			flag: "🇲🇳",
+			countryCodeNumeric: "496",
+			currencyNumeric: "496",
+			currencyDecimals: 2,
+			currencySymbol: "₮",
+			nationalNumberLengths: [
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Macao",
@@ -3178,13 +3939,18 @@ var kr = /* @__PURE__ */ L(((e) => {
 			currencyNameEn: "Macanese pataca",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "zh-hant",
-			officialLanguageNameEn: "",
-			officialLanguageNameLocal: "",
+			officialLanguageCode: "zh",
+			officialLanguageNameEn: "Chinese",
+			officialLanguageNameLocal: "中文",
 			countryCallingCode: "853",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇲🇴"
+			flag: "🇲🇴",
+			countryCodeNumeric: "446",
+			currencyNumeric: "446",
+			currencyDecimals: 2,
+			currencySymbol: "MOP",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Martinique",
@@ -3201,7 +3967,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "596",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇲🇶"
+			flag: "🇲🇶",
+			countryCodeNumeric: "474",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Mauritania",
@@ -3209,7 +3980,7 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCode: "MR",
 			countryCodeAlpha3: "MRT",
 			currencyCode: "MRU",
-			currencyNameEn: "",
+			currencyNameEn: "Mauritanian ouguiya",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "ar",
@@ -3218,7 +3989,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "222",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇲🇷"
+			flag: "🇲🇷",
+			countryCodeNumeric: "478",
+			currencyNumeric: "929",
+			currencyDecimals: 2,
+			currencySymbol: "MRU",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Montserrat",
@@ -3232,10 +4008,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1664",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["664"],
 			region: "South/Latin America",
-			flag: "🇲🇸"
+			flag: "🇲🇸",
+			countryCodeNumeric: "500",
+			currencyNumeric: "951",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Malta",
@@ -3252,7 +4033,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "356",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇲🇹"
+			flag: "🇲🇹",
+			countryCodeNumeric: "470",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Mauritius",
@@ -3263,17 +4049,22 @@ var kr = /* @__PURE__ */ L(((e) => {
 			currencyNameEn: "Mauritian rupee",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "mfe",
-			officialLanguageNameEn: "",
-			officialLanguageNameLocal: "",
+			officialLanguageCode: "en",
+			officialLanguageNameEn: "English",
+			officialLanguageNameLocal: "English",
 			countryCallingCode: "230",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇲🇺"
+			flag: "🇲🇺",
+			countryCodeNumeric: "480",
+			currencyNumeric: "480",
+			currencyDecimals: 2,
+			currencySymbol: "Rs",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Maldives",
-			countryNameLocal: "",
+			countryNameLocal: "ދިވެހިރާއްޖެ",
 			countryCode: "MV",
 			countryCodeAlpha3: "MDV",
 			currencyCode: "MVR",
@@ -3286,7 +4077,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "960",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇲🇻"
+			flag: "🇲🇻",
+			countryCodeNumeric: "462",
+			currencyNumeric: "462",
+			currencyDecimals: 2,
+			currencySymbol: "MVR",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Malawi",
@@ -3303,7 +4099,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "265",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇲🇼"
+			flag: "🇲🇼",
+			countryCodeNumeric: "454",
+			currencyNumeric: "454",
+			currencyDecimals: 2,
+			currencySymbol: "MWK",
+			nationalNumberLengths: [7, 9]
 		},
 		{
 			countryNameEn: "Mexico",
@@ -3320,11 +4121,16 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "52",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇲🇽"
+			flag: "🇲🇽",
+			countryCodeNumeric: "484",
+			currencyNumeric: "484",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Malaysia",
-			countryNameLocal: "",
+			countryNameLocal: "Malaysia",
 			countryCode: "MY",
 			countryCodeAlpha3: "MYS",
 			currencyCode: "MYR",
@@ -3337,7 +4143,16 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "60",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇲🇾"
+			flag: "🇲🇾",
+			countryCodeNumeric: "458",
+			currencyNumeric: "458",
+			currencyDecimals: 2,
+			currencySymbol: "RM",
+			nationalNumberLengths: [
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Mozambique",
@@ -3354,7 +4169,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "258",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇲🇿"
+			flag: "🇲🇿",
+			countryCodeNumeric: "508",
+			currencyNumeric: "943",
+			currencyDecimals: 2,
+			currencySymbol: "MZN",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Namibia",
@@ -3371,7 +4191,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "264",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇳🇦"
+			flag: "🇳🇦",
+			countryCodeNumeric: "516",
+			currencyNumeric: "516",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "New Caledonia",
@@ -3388,7 +4213,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "687",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇳🇨"
+			flag: "🇳🇨",
+			countryCodeNumeric: "540",
+			currencyNumeric: "953",
+			currencyDecimals: 0,
+			currencySymbol: "CFPF",
+			nationalNumberLengths: [6]
 		},
 		{
 			countryNameEn: "Norfolk Island",
@@ -3405,7 +4235,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "672",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇳🇫"
+			flag: "🇳🇫",
+			countryCodeNumeric: "574",
+			currencyNumeric: "036",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [6]
 		},
 		{
 			countryNameEn: "Nigeria",
@@ -3422,7 +4257,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "234",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇳🇬"
+			flag: "🇳🇬",
+			countryCodeNumeric: "566",
+			currencyNumeric: "566",
+			currencyDecimals: 2,
+			currencySymbol: "₦",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Nicaragua",
@@ -3439,7 +4279,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "505",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇳🇮"
+			flag: "🇳🇮",
+			countryCodeNumeric: "558",
+			currencyNumeric: "558",
+			currencyDecimals: 2,
+			currencySymbol: "C$",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Norway",
@@ -3456,11 +4301,16 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "47",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇳🇴"
+			flag: "🇳🇴",
+			countryCodeNumeric: "578",
+			currencyNumeric: "578",
+			currencyDecimals: 2,
+			currencySymbol: "kr",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Nepal",
-			countryNameLocal: "",
+			countryNameLocal: "नेपाल",
 			countryCode: "NP",
 			countryCodeAlpha3: "NPL",
 			currencyCode: "NPR",
@@ -3473,7 +4323,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "977",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇳🇵"
+			flag: "🇳🇵",
+			countryCodeNumeric: "524",
+			currencyNumeric: "524",
+			currencyDecimals: 2,
+			currencySymbol: "Rs",
+			nationalNumberLengths: [8, 10]
 		},
 		{
 			countryNameEn: "Nauru",
@@ -3490,7 +4345,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "674",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇳🇷"
+			flag: "🇳🇷",
+			countryCodeNumeric: "520",
+			currencyNumeric: "036",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Niue",
@@ -3502,12 +4362,17 @@ var kr = /* @__PURE__ */ L(((e) => {
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "niu",
-			officialLanguageNameEn: "",
-			officialLanguageNameLocal: "",
+			officialLanguageNameEn: "Niuean",
+			officialLanguageNameLocal: "Vagahau Niuē",
 			countryCallingCode: "683",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇳🇺"
+			flag: "🇳🇺",
+			countryCodeNumeric: "570",
+			currencyNumeric: "554",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [4, 7]
 		},
 		{
 			countryNameEn: "New Zealand",
@@ -3524,7 +4389,16 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "64",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇳🇿"
+			flag: "🇳🇿",
+			countryCodeNumeric: "554",
+			currencyNumeric: "554",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Oman",
@@ -3541,7 +4415,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "968",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇴🇲"
+			flag: "🇴🇲",
+			countryCodeNumeric: "512",
+			currencyNumeric: "512",
+			currencyDecimals: 3,
+			currencySymbol: "OMR",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Panama",
@@ -3558,7 +4437,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "507",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇵🇦"
+			flag: "🇵🇦",
+			countryCodeNumeric: "591",
+			currencyNumeric: "590",
+			currencyDecimals: 2,
+			currencySymbol: "PAB",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Peru",
@@ -3575,7 +4459,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "51",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇵🇪"
+			flag: "🇵🇪",
+			countryCodeNumeric: "604",
+			currencyNumeric: "604",
+			currencyDecimals: 2,
+			currencySymbol: "PEN",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "French Polynesia",
@@ -3592,7 +4481,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "689",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇵🇫"
+			flag: "🇵🇫",
+			countryCodeNumeric: "258",
+			currencyNumeric: "953",
+			currencyDecimals: 0,
+			currencySymbol: "CFPF",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Papua New Guinea",
@@ -3609,7 +4503,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "675",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇵🇬"
+			flag: "🇵🇬",
+			countryCodeNumeric: "598",
+			currencyNumeric: "598",
+			currencyDecimals: 2,
+			currencySymbol: "PGK",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Pakistan",
@@ -3620,13 +4519,18 @@ var kr = /* @__PURE__ */ L(((e) => {
 			currencyNameEn: "Pakistani rupee",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "en",
-			officialLanguageNameEn: "English",
-			officialLanguageNameLocal: "English",
+			officialLanguageCode: "ur",
+			officialLanguageNameEn: "Urdu",
+			officialLanguageNameLocal: "اردو",
 			countryCallingCode: "92",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇵🇰"
+			flag: "🇵🇰",
+			countryCodeNumeric: "586",
+			currencyNumeric: "586",
+			currencyDecimals: 2,
+			currencySymbol: "Rs",
+			nationalNumberLengths: [9, 10]
 		},
 		{
 			countryNameEn: "Poland",
@@ -3643,7 +4547,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "48",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇵🇱"
+			flag: "🇵🇱",
+			countryCodeNumeric: "616",
+			currencyNumeric: "985",
+			currencyDecimals: 2,
+			currencySymbol: "zł",
+			nationalNumberLengths: [7, 9]
 		},
 		{
 			countryNameEn: "Saint Pierre and Miquelon",
@@ -3660,7 +4569,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "508",
 			areaCodes: [],
 			region: "North America",
-			flag: "🇵🇲"
+			flag: "🇵🇲",
+			countryCodeNumeric: "666",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [6, 9]
 		},
 		{
 			countryNameEn: "Pitcairn",
@@ -3677,7 +4591,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "64",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇵🇳"
+			flag: "🇵🇳",
+			countryCodeNumeric: "612",
+			currencyNumeric: "554",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: []
 		},
 		{
 			countryNameEn: "Puerto Rico",
@@ -3692,17 +4611,22 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageNameEn: "Spanish, Castilian",
 			officialLanguageNameLocal: "Español",
 			countryCallingCode: "1",
-			areaCodes: [],
+			areaCodes: ["787", "939"],
 			region: "South/Latin America",
-			flag: "🇵🇷"
+			flag: "🇵🇷",
+			countryCodeNumeric: "630",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Palestine, State of",
 			countryNameLocal: "Palestinian Territory",
 			countryCode: "PS",
 			countryCodeAlpha3: "PSE",
-			currencyCode: "",
-			currencyNameEn: "",
+			currencyCode: "ILS",
+			currencyNameEn: "Israeli new shekel",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "ar",
@@ -3711,7 +4635,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "970",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇵🇸"
+			flag: "🇵🇸",
+			countryCodeNumeric: "275",
+			currencyNumeric: "376",
+			currencyDecimals: 2,
+			currencySymbol: "₪",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Portugal",
@@ -3728,7 +4657,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "351",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇵🇹"
+			flag: "🇵🇹",
+			countryCodeNumeric: "620",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Palau",
@@ -3745,7 +4679,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "680",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇵🇼"
+			flag: "🇵🇼",
+			countryCodeNumeric: "585",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Paraguay",
@@ -3762,7 +4701,16 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "595",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇵🇾"
+			flag: "🇵🇾",
+			countryCodeNumeric: "600",
+			currencyNumeric: "600",
+			currencyDecimals: 0,
+			currencySymbol: "₲",
+			nationalNumberLengths: [
+				7,
+				8,
+				9
+			]
 		},
 		{
 			countryNameEn: "Qatar",
@@ -3779,7 +4727,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "974",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇶🇦"
+			flag: "🇶🇦",
+			countryCodeNumeric: "634",
+			currencyNumeric: "634",
+			currencyDecimals: 2,
+			currencySymbol: "QAR",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Réunion",
@@ -3796,7 +4749,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "262",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇷🇪"
+			flag: "🇷🇪",
+			countryCodeNumeric: "638",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Romania",
@@ -3813,7 +4771,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "40",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇷🇴"
+			flag: "🇷🇴",
+			countryCodeNumeric: "642",
+			currencyNumeric: "946",
+			currencyDecimals: 2,
+			currencySymbol: "lei",
+			nationalNumberLengths: [6, 9]
 		},
 		{
 			countryNameEn: "Serbia",
@@ -3830,7 +4793,19 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "381",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇷🇸"
+			flag: "🇷🇸",
+			countryCodeNumeric: "688",
+			currencyNumeric: "941",
+			currencyDecimals: 2,
+			currencySymbol: "RSD",
+			nationalNumberLengths: [
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			]
 		},
 		{
 			countryNameEn: "Russia",
@@ -3847,7 +4822,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "7",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇷🇺"
+			flag: "🇷🇺",
+			countryCodeNumeric: "643",
+			currencyNumeric: "643",
+			currencyDecimals: 2,
+			currencySymbol: "₽",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Rwanda",
@@ -3864,7 +4844,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "250",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇷🇼"
+			flag: "🇷🇼",
+			countryCodeNumeric: "646",
+			currencyNumeric: "646",
+			currencyDecimals: 0,
+			currencySymbol: "RF",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Saudi Arabia",
@@ -3881,7 +4866,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "966",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇸🇦"
+			flag: "🇸🇦",
+			countryCodeNumeric: "682",
+			currencyNumeric: "682",
+			currencyDecimals: 2,
+			currencySymbol: "SAR",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Solomon Islands",
@@ -3898,7 +4888,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "677",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇸🇧"
+			flag: "🇸🇧",
+			countryCodeNumeric: "090",
+			currencyNumeric: "090",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [5, 7]
 		},
 		{
 			countryNameEn: "Seychelles",
@@ -3915,7 +4910,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "248",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇸🇨"
+			flag: "🇸🇨",
+			countryCodeNumeric: "690",
+			currencyNumeric: "690",
+			currencyDecimals: 2,
+			currencySymbol: "SCR",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Sweden",
@@ -3932,7 +4932,16 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "46",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇸🇪"
+			flag: "🇸🇪",
+			countryCodeNumeric: "752",
+			currencyNumeric: "752",
+			currencyDecimals: 2,
+			currencySymbol: "kr",
+			nationalNumberLengths: [
+				7,
+				8,
+				9
+			]
 		},
 		{
 			countryNameEn: "Singapore",
@@ -3943,13 +4952,18 @@ var kr = /* @__PURE__ */ L(((e) => {
 			currencyNameEn: "Singapore dollar",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "zh-hans",
-			officialLanguageNameEn: "",
-			officialLanguageNameLocal: "",
+			officialLanguageCode: "en",
+			officialLanguageNameEn: "English",
+			officialLanguageNameLocal: "English",
 			countryCallingCode: "65",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇸🇬"
+			flag: "🇸🇬",
+			countryCodeNumeric: "702",
+			currencyNumeric: "702",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Saint Helena, Ascension and Tristan da Cunha",
@@ -3966,7 +4980,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "290",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇸🇭"
+			flag: "🇸🇭",
+			countryCodeNumeric: "654",
+			currencyNumeric: "654",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: [4, 5]
 		},
 		{
 			countryNameEn: "Slovenia",
@@ -3983,7 +5002,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "386",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇸🇮"
+			flag: "🇸🇮",
+			countryCodeNumeric: "705",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Svalbard and Jan Mayen",
@@ -3997,10 +5021,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "no",
 			officialLanguageNameEn: "Norwegian",
 			officialLanguageNameLocal: "Norsk",
-			countryCallingCode: "4779",
-			areaCodes: [],
+			countryCallingCode: "47",
+			areaCodes: ["79"],
 			region: "Europe",
-			flag: "🇸🇯"
+			flag: "🇸🇯",
+			countryCodeNumeric: "744",
+			currencyNumeric: "578",
+			currencyDecimals: 2,
+			currencySymbol: "kr",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Slovakia",
@@ -4017,14 +5046,23 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "421",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇸🇰"
+			flag: "🇸🇰",
+			countryCodeNumeric: "703",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				6,
+				7,
+				9
+			]
 		},
 		{
 			countryNameEn: "Sierra Leone",
 			countryNameLocal: "Sierra Leone",
 			countryCode: "SL",
 			countryCodeAlpha3: "SLE",
-			currencyCode: "SLL",
+			currencyCode: "SLE",
 			currencyNameEn: "Sierra Leonean leone",
 			tinType: "",
 			tinName: "",
@@ -4034,7 +5072,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "232",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇸🇱"
+			flag: "🇸🇱",
+			countryCodeNumeric: "694",
+			currencyNumeric: "925",
+			currencyDecimals: 2,
+			currencySymbol: "SLE",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Republic of San Marino",
@@ -4051,7 +5094,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "378",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇸🇲"
+			flag: "🇸🇲",
+			countryCodeNumeric: "674",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8, 10]
 		},
 		{
 			countryNameEn: "Senegal",
@@ -4068,7 +5116,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "221",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇸🇳"
+			flag: "🇸🇳",
+			countryCodeNumeric: "686",
+			currencyNumeric: "952",
+			currencyDecimals: 0,
+			currencySymbol: "F CFA",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Somalia",
@@ -4085,7 +5138,17 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "252",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇸🇴"
+			flag: "🇸🇴",
+			countryCodeNumeric: "706",
+			currencyNumeric: "706",
+			currencyDecimals: 2,
+			currencySymbol: "SOS",
+			nationalNumberLengths: [
+				6,
+				7,
+				8,
+				9
+			]
 		},
 		{
 			countryNameEn: "Suriname",
@@ -4102,7 +5165,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "597",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇸🇷"
+			flag: "🇸🇷",
+			countryCodeNumeric: "740",
+			currencyNumeric: "968",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [6, 7]
 		},
 		{
 			countryNameEn: "South Sudan",
@@ -4119,7 +5187,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "211",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇸🇸"
+			flag: "🇸🇸",
+			countryCodeNumeric: "728",
+			currencyNumeric: "728",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Sao Tome and Principe",
@@ -4127,7 +5200,7 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCode: "ST",
 			countryCodeAlpha3: "STP",
 			currencyCode: "STN",
-			currencyNameEn: "",
+			currencyNameEn: "São Tomé and Príncipe dobra",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "pt",
@@ -4136,15 +5209,20 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "239",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇸🇹"
+			flag: "🇸🇹",
+			countryCodeNumeric: "678",
+			currencyNumeric: "930",
+			currencyDecimals: 2,
+			currencySymbol: "Db",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "El Salvador",
 			countryNameLocal: "El Salvador",
 			countryCode: "SV",
 			countryCodeAlpha3: "SLV",
-			currencyCode: "SVC",
-			currencyNameEn: "Salvadoran colón",
+			currencyCode: "USD",
+			currencyNameEn: "United States dollar",
 			tinType: "NIT",
 			tinName: "Número de Identificación Tributaria",
 			officialLanguageCode: "es",
@@ -4153,24 +5231,34 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "503",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇸🇻"
+			flag: "🇸🇻",
+			countryCodeNumeric: "222",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Sint Maarten (Dutch part)",
 			countryNameLocal: "Sint Maarten",
 			countryCode: "SX",
 			countryCodeAlpha3: "SXM",
-			currencyCode: "ANG",
-			currencyNameEn: "Netherlands Antillean guilder",
+			currencyCode: "XCG",
+			currencyNameEn: "Caribbean guilder",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "nl",
 			officialLanguageNameEn: "Dutch, Flemish",
 			officialLanguageNameLocal: "Nederlands, Vlaams",
-			countryCallingCode: "1721",
-			areaCodes: [],
-			region: "Unknown",
-			flag: "🇸🇽"
+			countryCallingCode: "1",
+			areaCodes: ["721"],
+			region: "South/Latin America",
+			flag: "🇸🇽",
+			countryCodeNumeric: "534",
+			currencyNumeric: "532",
+			currencyDecimals: 2,
+			currencySymbol: "Cg.",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Syrian Arab Republic",
@@ -4186,8 +5274,13 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageNameLocal: "العربية",
 			countryCallingCode: "963",
 			areaCodes: [],
-			region: "Asia & Pacific",
-			flag: "🇸🇾"
+			region: "Arab States",
+			flag: "🇸🇾",
+			countryCodeNumeric: "760",
+			currencyNumeric: "760",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Chad",
@@ -4204,7 +5297,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "235",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇹🇩"
+			flag: "🇹🇩",
+			countryCodeNumeric: "148",
+			currencyNumeric: "950",
+			currencyDecimals: 0,
+			currencySymbol: "FCFA",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Togo",
@@ -4221,7 +5319,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "228",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇹🇬"
+			flag: "🇹🇬",
+			countryCodeNumeric: "768",
+			currencyNumeric: "952",
+			currencyDecimals: 0,
+			currencySymbol: "F CFA",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Thailand",
@@ -4238,11 +5341,16 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "66",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇹🇭"
+			flag: "🇹🇭",
+			countryCodeNumeric: "764",
+			currencyNumeric: "764",
+			currencyDecimals: 2,
+			currencySymbol: "฿",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Tajikistan",
-			countryNameLocal: ",",
+			countryNameLocal: "Тоҷикистон",
 			countryCode: "TJ",
 			countryCodeAlpha3: "TJK",
 			currencyCode: "TJS",
@@ -4255,7 +5363,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "992",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇹🇯"
+			flag: "🇹🇯",
+			countryCodeNumeric: "762",
+			currencyNumeric: "972",
+			currencyDecimals: 2,
+			currencySymbol: "TJS",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Tokelau",
@@ -4267,12 +5380,22 @@ var kr = /* @__PURE__ */ L(((e) => {
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "tkl",
-			officialLanguageNameEn: "",
-			officialLanguageNameLocal: "",
+			officialLanguageNameEn: "Tokelauan",
+			officialLanguageNameLocal: "Gagana Tokelau",
 			countryCallingCode: "690",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇹🇰"
+			flag: "🇹🇰",
+			countryCodeNumeric: "772",
+			currencyNumeric: "554",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [
+				4,
+				5,
+				6,
+				7
+			]
 		},
 		{
 			countryNameEn: "Timor-Leste",
@@ -4289,7 +5412,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "670",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇹🇱"
+			flag: "🇹🇱",
+			countryCodeNumeric: "626",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Turkmenistan",
@@ -4306,7 +5434,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "993",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇹🇲"
+			flag: "🇹🇲",
+			countryCodeNumeric: "795",
+			currencyNumeric: "934",
+			currencyDecimals: 2,
+			currencySymbol: "TMT",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Tunisia",
@@ -4323,7 +5456,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "216",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇹🇳"
+			flag: "🇹🇳",
+			countryCodeNumeric: "788",
+			currencyNumeric: "788",
+			currencyDecimals: 3,
+			currencySymbol: "TND",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Tonga",
@@ -4340,10 +5478,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "676",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇹🇴"
+			flag: "🇹🇴",
+			countryCodeNumeric: "776",
+			currencyNumeric: "776",
+			currencyDecimals: 2,
+			currencySymbol: "T$",
+			nationalNumberLengths: [5, 7]
 		},
 		{
-			countryNameEn: "Turkey",
+			countryNameEn: "Türkiye",
 			countryNameLocal: "Türkiye",
 			countryCode: "TR",
 			countryCodeAlpha3: "TUR",
@@ -4357,7 +5500,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "90",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇹🇷"
+			flag: "🇹🇷",
+			countryCodeNumeric: "792",
+			currencyNumeric: "949",
+			currencyDecimals: 2,
+			currencySymbol: "₺",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Trinidad and Tobago",
@@ -4371,10 +5519,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "868",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["868"],
 			region: "South/Latin America",
-			flag: "🇹🇹"
+			flag: "🇹🇹",
+			countryCodeNumeric: "780",
+			currencyNumeric: "780",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Tuvalu",
@@ -4391,7 +5544,16 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "688",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇹🇻"
+			flag: "🇹🇻",
+			countryCodeNumeric: "798",
+			currencyNumeric: "036",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [
+				5,
+				6,
+				7
+			]
 		},
 		{
 			countryNameEn: "United Republic of Tanzania",
@@ -4408,7 +5570,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "255",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇹🇿"
+			flag: "🇹🇿",
+			countryCodeNumeric: "834",
+			currencyNumeric: "834",
+			currencyDecimals: 2,
+			currencySymbol: "TZS",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Ukraine",
@@ -4425,7 +5592,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "380",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇺🇦"
+			flag: "🇺🇦",
+			countryCodeNumeric: "804",
+			currencyNumeric: "980",
+			currencyDecimals: 2,
+			currencySymbol: "₴",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Uganda",
@@ -4442,7 +5614,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "256",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇺🇬"
+			flag: "🇺🇬",
+			countryCodeNumeric: "800",
+			currencyNumeric: "800",
+			currencyDecimals: 0,
+			currencySymbol: "UGX",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "United States of America",
@@ -4459,7 +5636,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "1",
 			areaCodes: [],
 			region: "North America",
-			flag: "🇺🇸"
+			flag: "🇺🇸",
+			countryCodeNumeric: "840",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Uruguay",
@@ -4476,11 +5658,16 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "598",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇺🇾"
+			flag: "🇺🇾",
+			countryCodeNumeric: "858",
+			currencyNumeric: "858",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Uzbekistan",
-			countryNameLocal: "",
+			countryNameLocal: "Oʻzbekiston",
 			countryCode: "UZ",
 			countryCodeAlpha3: "UZB",
 			currencyCode: "UZS",
@@ -4493,7 +5680,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "998",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇺🇿"
+			flag: "🇺🇿",
+			countryCodeNumeric: "860",
+			currencyNumeric: "860",
+			currencyDecimals: 2,
+			currencySymbol: "UZS",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Saint Vincent and the Grenadines",
@@ -4507,10 +5699,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1784",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["784"],
 			region: "South/Latin America",
-			flag: "🇻🇨"
+			flag: "🇻🇨",
+			countryCodeNumeric: "670",
+			currencyNumeric: "951",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Venezuela (Bolivarian Republic of)",
@@ -4518,7 +5715,7 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCode: "VE",
 			countryCodeAlpha3: "VEN",
 			currencyCode: "VES",
-			currencyNameEn: "",
+			currencyNameEn: "Venezuelan bolívar",
 			tinType: "RIF",
 			tinName: "Registro de Informacion Fiscal",
 			officialLanguageCode: "es",
@@ -4527,7 +5724,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "58",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇻🇪"
+			flag: "🇻🇪",
+			countryCodeNumeric: "862",
+			currencyNumeric: "928",
+			currencyDecimals: 2,
+			currencySymbol: "VES",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Virgin Islands (British)",
@@ -4541,10 +5743,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1284",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["284"],
 			region: "South/Latin America",
-			flag: "🇻🇬"
+			flag: "🇻🇬",
+			countryCodeNumeric: "092",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Virgin Islands (U.S.)",
@@ -4558,10 +5765,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1340",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["340"],
 			region: "South/Latin America",
-			flag: "🇻🇮"
+			flag: "🇻🇮",
+			countryCodeNumeric: "850",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Vietnam",
@@ -4578,7 +5790,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "84",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇻🇳"
+			flag: "🇻🇳",
+			countryCodeNumeric: "704",
+			currencyNumeric: "704",
+			currencyDecimals: 0,
+			currencySymbol: "₫",
+			nationalNumberLengths: [9, 10]
 		},
 		{
 			countryNameEn: "Vanuatu",
@@ -4595,7 +5812,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "678",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇻🇺"
+			flag: "🇻🇺",
+			countryCodeNumeric: "548",
+			currencyNumeric: "548",
+			currencyDecimals: 0,
+			currencySymbol: "VUV",
+			nationalNumberLengths: [5, 7]
 		},
 		{
 			countryNameEn: "Wallis and Futuna",
@@ -4612,7 +5834,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "681",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇼🇫"
+			flag: "🇼🇫",
+			countryCodeNumeric: "876",
+			currencyNumeric: "953",
+			currencyDecimals: 0,
+			currencySymbol: "CFPF",
+			nationalNumberLengths: [6]
 		},
 		{
 			countryNameEn: "Samoa",
@@ -4629,7 +5856,17 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "685",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇼🇸"
+			flag: "🇼🇸",
+			countryCodeNumeric: "882",
+			currencyNumeric: "882",
+			currencyDecimals: 2,
+			currencySymbol: "WST",
+			nationalNumberLengths: [
+				5,
+				6,
+				7,
+				10
+			]
 		},
 		{
 			countryNameEn: "Yemen",
@@ -4646,7 +5883,16 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "967",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇾🇪"
+			flag: "🇾🇪",
+			countryCodeNumeric: "887",
+			currencyNumeric: "886",
+			currencyDecimals: 2,
+			currencySymbol: "YER",
+			nationalNumberLengths: [
+				7,
+				8,
+				9
+			]
 		},
 		{
 			countryNameEn: "Mayotte",
@@ -4663,7 +5909,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "262",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇾🇹"
+			flag: "🇾🇹",
+			countryCodeNumeric: "175",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "South Africa",
@@ -4680,7 +5931,18 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "27",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇿🇦"
+			flag: "🇿🇦",
+			countryCodeNumeric: "710",
+			currencyNumeric: "710",
+			currencyDecimals: 2,
+			currencySymbol: "R",
+			nationalNumberLengths: [
+				5,
+				6,
+				7,
+				8,
+				9
+			]
 		},
 		{
 			countryNameEn: "Zambia",
@@ -4697,15 +5959,20 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "260",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇿🇲"
+			flag: "🇿🇲",
+			countryCodeNumeric: "894",
+			currencyNumeric: "967",
+			currencyDecimals: 2,
+			currencySymbol: "ZK",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Zimbabwe",
 			countryNameLocal: "Zimbabwe",
 			countryCode: "ZW",
 			countryCodeAlpha3: "ZWE",
-			currencyCode: "ZWL",
-			currencyNameEn: "Zimbabwean dollar",
+			currencyCode: "ZWG",
+			currencyNameEn: "Zimbabwe Gold",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "en",
@@ -4714,11 +5981,23 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "263",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇿🇼"
+			flag: "🇿🇼",
+			countryCodeNumeric: "716",
+			currencyNumeric: "924",
+			currencyDecimals: 2,
+			currencySymbol: "ZWG",
+			nationalNumberLengths: [
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Eswatini",
-			countryNameLocal: "Swaziland",
+			countryNameLocal: "eSwatini",
 			countryCode: "SZ",
 			countryCodeAlpha3: "SWZ",
 			currencyCode: "SZL",
@@ -4731,7 +6010,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "268",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇸🇿"
+			flag: "🇸🇿",
+			countryCodeNumeric: "748",
+			currencyNumeric: "748",
+			currencyDecimals: 2,
+			currencySymbol: "SZL",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "North Macedonia",
@@ -4748,7 +6032,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "389",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇲🇰"
+			flag: "🇲🇰",
+			countryCodeNumeric: "807",
+			currencyNumeric: "807",
+			currencyDecimals: 2,
+			currencySymbol: "MKD",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Philippines",
@@ -4765,7 +6054,17 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "63",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇵🇭"
+			flag: "🇵🇭",
+			countryCodeNumeric: "608",
+			currencyNumeric: "608",
+			currencyDecimals: 2,
+			currencySymbol: "₱",
+			nationalNumberLengths: [
+				6,
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Netherlands",
@@ -4782,7 +6081,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "31",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇳🇱"
+			flag: "🇳🇱",
+			countryCodeNumeric: "528",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9, 11]
 		},
 		{
 			countryNameEn: "United Arab Emirates",
@@ -4799,7 +6103,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "971",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇦🇪"
+			flag: "🇦🇪",
+			countryCodeNumeric: "784",
+			currencyNumeric: "784",
+			currencyDecimals: 2,
+			currencySymbol: "AED",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Republic of Moldova",
@@ -4816,7 +6125,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "373",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇲🇩"
+			flag: "🇲🇩",
+			countryCodeNumeric: "498",
+			currencyNumeric: "498",
+			currencyDecimals: 2,
+			currencySymbol: "MDL",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Gambia",
@@ -4833,7 +6147,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "220",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇬🇲"
+			flag: "🇬🇲",
+			countryCodeNumeric: "270",
+			currencyNumeric: "270",
+			currencyDecimals: 2,
+			currencySymbol: "GMD",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Dominican Republic",
@@ -4848,9 +6167,18 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageNameEn: "Spanish, Castilian",
 			officialLanguageNameLocal: "Español",
 			countryCallingCode: "1",
-			areaCodes: [],
+			areaCodes: [
+				"809",
+				"829",
+				"849"
+			],
 			region: "South/Latin America",
-			flag: "🇩🇴"
+			flag: "🇩🇴",
+			countryCodeNumeric: "214",
+			currencyNumeric: "214",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Sudan",
@@ -4867,7 +6195,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "249",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇸🇩"
+			flag: "🇸🇩",
+			countryCodeNumeric: "729",
+			currencyNumeric: "938",
+			currencyDecimals: 2,
+			currencySymbol: "SDG",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Lao People's Democratic Republic",
@@ -4884,7 +6217,16 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "856",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇱🇦"
+			flag: "🇱🇦",
+			countryCodeNumeric: "418",
+			currencyNumeric: "418",
+			currencyDecimals: 2,
+			currencySymbol: "₭",
+			nationalNumberLengths: [
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Taiwan, Province of China",
@@ -4895,13 +6237,18 @@ var kr = /* @__PURE__ */ L(((e) => {
 			currencyNameEn: "New Taiwan dollar",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "zh-hant",
-			officialLanguageNameEn: "",
-			officialLanguageNameLocal: "",
+			officialLanguageCode: "zh",
+			officialLanguageNameEn: "Chinese",
+			officialLanguageNameLocal: "中文",
 			countryCallingCode: "886",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇹🇼"
+			flag: "🇹🇼",
+			countryCodeNumeric: "158",
+			currencyNumeric: "901",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Republic of the Congo",
@@ -4918,7 +6265,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "242",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇨🇬"
+			flag: "🇨🇬",
+			countryCodeNumeric: "178",
+			currencyNumeric: "950",
+			currencyDecimals: 0,
+			currencySymbol: "FCFA",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Czechia",
@@ -4935,13 +6287,19 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "420",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇨🇿"
+			flag: "🇨🇿",
+			countryCodeNumeric: "203",
+			currencyNumeric: "203",
+			currencyDecimals: 2,
+			currencySymbol: "Kč",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "United Kingdom",
-			countryNameLocal: "Great Britain",
+			countryNameLocal: "United Kingdom",
 			countryCode: "GB",
 			countryCodeAlpha3: "GBR",
+			altCodes: ["UK"],
 			currencyCode: "GBP",
 			currencyNameEn: "Pound sterling",
 			tinType: "VAT Reg No",
@@ -4952,7 +6310,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "44",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇬🇧"
+			flag: "🇬🇧",
+			countryCodeNumeric: "826",
+			currencyNumeric: "826",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: [9, 10]
 		},
 		{
 			countryNameEn: "Niger",
@@ -4963,13 +6326,18 @@ var kr = /* @__PURE__ */ L(((e) => {
 			currencyNameEn: "CFA franc BCEAO",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "fr",
-			officialLanguageNameEn: "French",
-			officialLanguageNameLocal: "Français",
+			officialLanguageCode: "ha",
+			officialLanguageNameEn: "Hausa",
+			officialLanguageNameLocal: "Harshen Hausa",
 			countryCallingCode: "227",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇳🇪"
+			flag: "🇳🇪",
+			countryCodeNumeric: "562",
+			currencyNumeric: "952",
+			currencyDecimals: 0,
+			currencySymbol: "F CFA",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Democratic Republic of the Congo",
@@ -4986,7 +6354,17 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "243",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇨🇩"
+			flag: "🇨🇩",
+			countryCodeNumeric: "180",
+			currencyNumeric: "976",
+			currencyDecimals: 2,
+			currencySymbol: "CDF",
+			nationalNumberLengths: [
+				7,
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Commonwealth of The Bahamas",
@@ -5000,10 +6378,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1 242",
-			areaCodes: [],
-			region: "Caribbean",
-			flag: "🇧🇸"
+			countryCallingCode: "1",
+			areaCodes: ["242"],
+			region: "South/Latin America",
+			flag: "🇧🇸",
+			countryCodeNumeric: "044",
+			currencyNumeric: "044",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Cocos (Keeling) Islands",
@@ -5017,10 +6400,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "61 891",
-			areaCodes: [],
-			region: "Australia",
-			flag: "🇨🇨"
+			countryCallingCode: "61",
+			areaCodes: ["8"],
+			region: "Asia & Pacific",
+			flag: "🇨🇨",
+			countryCodeNumeric: "166",
+			currencyNumeric: "036",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Central African Republic",
@@ -5028,7 +6416,7 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCode: "CF",
 			countryCodeAlpha3: "CAF",
 			currencyCode: "XAF",
-			currencyNameEn: "Central African CFA",
+			currencyNameEn: "CFA franc BEAC",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "fr",
@@ -5037,7 +6425,12 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "236",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇨🇫"
+			flag: "🇨🇫",
+			countryCodeNumeric: "140",
+			currencyNumeric: "950",
+			currencyDecimals: 0,
+			currencySymbol: "FCFA",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Cook Islands",
@@ -5053,8 +6446,13 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageNameLocal: "English",
 			countryCallingCode: "682",
 			areaCodes: [],
-			region: "South Pacific Ocean",
-			flag: "🇨🇰"
+			region: "Asia & Pacific",
+			flag: "🇨🇰",
+			countryCodeNumeric: "184",
+			currencyNumeric: "554",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [5]
 		},
 		{
 			countryNameEn: "Falkland Islands",
@@ -5062,7 +6460,7 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCode: "FK",
 			countryCodeAlpha3: "FLK",
 			currencyCode: "FKP",
-			currencyNameEn: "Falklands pound",
+			currencyNameEn: "Falkland Islands pound",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "en",
@@ -5070,8 +6468,13 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageNameLocal: "English",
 			countryCallingCode: "500",
 			areaCodes: [],
-			region: "South Atlantic Ocean",
-			flag: "🇫🇰"
+			region: "South/Latin America",
+			flag: "🇫🇰",
+			countryCodeNumeric: "238",
+			currencyNumeric: "238",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: [5]
 		},
 		{
 			countryNameEn: "Faroe Islands",
@@ -5079,16 +6482,21 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCode: "FO",
 			countryCodeAlpha3: "FRO",
 			currencyCode: "DKK",
-			currencyNameEn: "Faroese króna",
+			currencyNameEn: "Danish krone",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "da",
-			officialLanguageNameEn: "Danish",
-			officialLanguageNameLocal: "dansk",
+			officialLanguageCode: "fo",
+			officialLanguageNameEn: "Faroese",
+			officialLanguageNameLocal: "Føroyskt",
 			countryCallingCode: "298",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇫🇴"
+			flag: "🇫🇴",
+			countryCodeNumeric: "234",
+			currencyNumeric: "208",
+			currencyDecimals: 2,
+			currencySymbol: "kr",
+			nationalNumberLengths: [6]
 		},
 		{
 			countryNameEn: "Territory of Heard Island and McDonald Islands",
@@ -5104,8 +6512,13 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageNameLocal: "English",
 			countryCallingCode: "672",
 			areaCodes: [],
-			region: "Indian Ocean",
-			flag: "🇭🇲"
+			region: "Asia & Pacific",
+			flag: "🇭🇲",
+			countryCodeNumeric: "334",
+			currencyNumeric: "036",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: []
 		},
 		{
 			countryNameEn: "British Indian Ocean Territory",
@@ -5113,7 +6526,7 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCode: "IO",
 			countryCodeAlpha3: "IOT",
 			currencyCode: "USD",
-			currencyNameEn: "United States Dollar",
+			currencyNameEn: "United States dollar",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "en",
@@ -5121,8 +6534,13 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageNameLocal: "English",
 			countryCallingCode: "246",
 			areaCodes: [],
-			region: "Indian Ocean",
-			flag: "🇮🇴"
+			region: "Asia & Pacific",
+			flag: "🇮🇴",
+			countryCodeNumeric: "086",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Comoros",
@@ -5138,8 +6556,13 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageNameLocal: "Français",
 			countryCallingCode: "269",
 			areaCodes: [],
-			region: "Indian Ocean",
-			flag: "🇰🇲"
+			region: "Arab States",
+			flag: "🇰🇲",
+			countryCodeNumeric: "174",
+			currencyNumeric: "174",
+			currencyDecimals: 0,
+			currencySymbol: "CF",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Cayman Islands",
@@ -5153,10 +6576,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1 345",
-			areaCodes: [],
-			region: "Caribbean Sea",
-			flag: "🇰🇾"
+			countryCallingCode: "1",
+			areaCodes: ["345"],
+			region: "South/Latin America",
+			flag: "🇰🇾",
+			countryCodeNumeric: "136",
+			currencyNumeric: "136",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Republic of the Marshall Islands",
@@ -5172,8 +6600,13 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageNameLocal: "English",
 			countryCallingCode: "692",
 			areaCodes: [],
-			region: "Pacific Ocean",
-			flag: "🇲🇭"
+			region: "Asia & Pacific",
+			flag: "🇲🇭",
+			countryCodeNumeric: "584",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Commonwealth of the Northern Mariana Islands",
@@ -5187,10 +6620,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1 670",
-			areaCodes: [],
-			region: "Pacific Ocean",
-			flag: "🇲🇵"
+			countryCallingCode: "1",
+			areaCodes: ["670"],
+			region: "Asia & Pacific",
+			flag: "🇲🇵",
+			countryCodeNumeric: "580",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Turks and Caicos Islands",
@@ -5204,10 +6642,15 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1 649",
-			areaCodes: [],
-			region: "Atlantic Ocean",
-			flag: "🇹🇨"
+			countryCallingCode: "1",
+			areaCodes: ["649"],
+			region: "South/Latin America",
+			flag: "🇹🇨",
+			countryCodeNumeric: "796",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "French Southern and Antarctic Lands",
@@ -5223,8 +6666,13 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageNameLocal: "Français",
 			countryCallingCode: "672",
 			areaCodes: [],
-			region: "Indian Ocean",
-			flag: "🇹🇫"
+			region: "Asia & Pacific",
+			flag: "🇹🇫",
+			countryCodeNumeric: "260",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: []
 		},
 		{
 			countryNameEn: "United States Minor Outlying Islands",
@@ -5240,8 +6688,13 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageNameLocal: "English",
 			countryCallingCode: "1",
 			areaCodes: [],
-			region: "Pacific Ocean",
-			flag: "🇺🇲"
+			region: "Asia & Pacific",
+			flag: "🇺🇲",
+			countryCodeNumeric: "581",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: []
 		},
 		{
 			countryNameEn: "Holy See",
@@ -5258,7 +6711,19 @@ var kr = /* @__PURE__ */ L(((e) => {
 			countryCallingCode: "39",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇻🇦"
+			flag: "🇻🇦",
+			countryCodeNumeric: "336",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				6,
+				7,
+				8,
+				9,
+				10,
+				11
+			]
 		},
 		{
 			countryNameEn: "Republic of Kosovo",
@@ -5273,73 +6738,36 @@ var kr = /* @__PURE__ */ L(((e) => {
 			officialLanguageNameEn: "Albanian",
 			officialLanguageNameLocal: "Shqip",
 			countryCallingCode: "383",
+			areaCodes: [],
 			region: "Europe",
-			flag: "🇽🇰"
-		},
-		{
-			countryNameEn: "Netherlands Antilles",
-			countryNameLocal: "Nederlandse Antillen",
-			countryCode: "AN",
-			countryCodeAlpha3: "ANT",
-			currencyCode: "ANG",
-			currencyNameEn: "Netherlands Antillean guilder",
-			tinType: "",
-			tinName: "",
-			officialLanguageCode: "nl",
-			officialLanguageNameEn: "Dutch, Flemish",
-			officialLanguageNameLocal: "Nederlands, Vlaams",
-			countryCallingCode: "599",
-			region: "Europe",
-			flag: "🇧🇶"
+			flag: "🇽🇰",
+			countryCodeNumeric: "",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				8,
+				9,
+				10,
+				11,
+				12
+			]
 		}
 	];
 })), Mr = /* @__PURE__ */ se((/* @__PURE__ */ L(((e) => {
 	var t = e && e.__importDefault || function(e) {
 		return e && e.__esModule ? e : { default: e };
 	};
-	Object.defineProperty(e, "__esModule", { value: !0 }), e.customList = e.customArray = e.findOne = e.filter = e.all = e.utils = void 0;
+	Object.defineProperty(e, "__esModule", { value: !0 }), e.utils = void 0, e.customList = a;
 	var n = t(kr()), r = t(Ar()), i = t(jr());
 	e.utils = { groupBy: n.default };
-	function a() {
-		return i.default;
-	}
-	e.all = a;
-	function o(e, t) {
-		return i.default.filter((n) => n[e] === t);
-	}
-	e.filter = o;
-	function s(e, t) {
-		return i.default.find((n) => n[e] === t);
-	}
-	e.findOne = s;
-	function c(e = {
-		name: "{countryNameEn} ({countryCode})",
-		value: "{countryCode}"
-	}, { sortBy: t, sortDataBy: n, filter: a } = {}) {
-		let o = [], s = i.default;
-		if (typeof a == "function" && (s = s.filter(a)), n) {
-			let e = new Intl.Collator([], { sensitivity: "accent" });
-			s.sort((t, r) => e.compare(t[n], r[n]));
-		}
-		if (s.forEach((t) => {
-			let n = {};
-			for (let i in e) n[i] = (0, r.default)(e[i], t);
-			o.push(n);
-		}), t && e[t]) {
-			let e = new Intl.Collator([], { sensitivity: "accent" });
-			o.sort((n, r) => e.compare(n[t], r[t]));
-		}
-		return o;
-	}
-	e.customArray = c;
-	function l(e = "countryCode", t = "{countryNameEn} ({countryCode})", { filter: n } = {}) {
+	function a(e = "countryCode", t = "{countryNameEn} ({countryCode})", { filter: n } = {}) {
 		let a = {}, o = i.default;
 		return typeof n == "function" && (o = o.filter(n)), o.forEach((n) => {
 			let i = (0, r.default)(t, n);
 			a[String(n[e])] = i;
 		}), a;
 	}
-	e.customList = l;
 })))()), Nr = {
 	props: { callingCode: {
 		type: String,

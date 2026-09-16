@@ -140,5 +140,5 @@
     "builtin": true
   },
   "globals": {},
-  "ignorePatterns": []
+  "ignorePatterns": [".vscode", ".zed", "*.d.ts", "/dist"]
 }

@@ -48,7 +48,7 @@ This command will produce a /dist directory that will be imported by other apps.
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
 
 ```sh
-npm run test:unit
+npm run test
 ```
 
 ### Run Unit Tests with Coverage report
@@ -57,10 +57,10 @@ npm run test:unit
 npm run coverage
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Lint with [Oxlint](https://oxc.rs/docs/guide/usage/linter.html/)
 
 ```sh
-npm run eslint
+npm run oxlint
 ```
 
 ### Lint with [Stylelint](https://stylelint.io/)

@@ -8,7 +8,8 @@
         <div class="d-flex justify-content-between align-items-center">
           <div class="d-flex flex-fill align-items-center my-4">
             <div
-              class=" border-end border-opacity-25 me-3 border-black pe-3"
+              class="border-end border-opacity-25 me-3 pe-3"
+              :class="borderColorClass"
             >
               <img
                 :src="logoSrc"
@@ -222,6 +223,11 @@
       // Bundled asset URLs (imported so the library build emits them).
       logoSrc() {
         return this.isDark ? logoWhite : logoPurple;
+      },
+      // Border color mirrors the logo/text logic: white in dark mode, black
+      // in light mode so the divider stays visible against the background.
+      borderColorClass() {
+        return this.isDark ? "border-white" : "border-black";
       },
     },
   };

@@ -1,19 +1,19 @@
-import { Fragment as e, computed as t, createCommentVNode as n, createElementBlock as r, createElementVNode as i, createStaticVNode as a, createTextVNode as o, createVNode as s, customRef as c, getCurrentInstance as l, getCurrentScope as u, hasInjectionContext as d, inject as f, mergeProps as p, nextTick as m, normalizeClass as h, normalizeStyle as g, onMounted as _, openBlock as v, readonly as y, ref as b, renderList as x, renderSlot as S, resolveComponent as C, shallowReadonly as w, shallowRef as T, toDisplayString as E, toRef as D, toValue as O, unref as k, vShow as A, watch as j, watchEffect as M, withCtx as ee, withDirectives as N, withKeys as P, withModifiers as te } from "vue";
+import { Fragment as e, computed as t, createCommentVNode as n, createElementBlock as r, createElementVNode as i, createStaticVNode as a, createTextVNode as o, createVNode as s, customRef as c, getCurrentInstance as l, getCurrentScope as u, hasInjectionContext as d, inject as f, mergeProps as p, nextTick as m, normalizeClass as h, normalizeProps as g, normalizeStyle as _, onMounted as v, openBlock as y, readonly as b, ref as ee, renderList as x, renderSlot as S, resolveComponent as C, shallowReadonly as w, shallowRef as T, toDisplayString as E, toRef as D, toValue as O, unref as k, vShow as A, watch as j, watchEffect as te, withCtx as ne, withDirectives as M, withKeys as N, withModifiers as re } from "vue";
 //#region \0rolldown/runtime.js
-var ne = Object.create, F = Object.defineProperty, re = Object.getOwnPropertyDescriptor, ie = Object.getOwnPropertyNames, ae = Object.getPrototypeOf, oe = Object.prototype.hasOwnProperty, I = (e, t) => () => (t || (e((t = { exports: {} }).exports, t), e = null), t.exports), se = (e, t, n, r) => {
-	if (t && typeof t == "object" || typeof t == "function") for (var i = ie(t), a = 0, o = i.length, s; a < o; a++) s = i[a], !oe.call(e, s) && s !== n && F(e, s, {
+var ie = Object.create, P = Object.defineProperty, ae = Object.getOwnPropertyDescriptor, oe = Object.getOwnPropertyNames, se = Object.getPrototypeOf, F = Object.prototype.hasOwnProperty, I = (e, t) => () => (t || (e((t = { exports: {} }).exports, t), e = null), t.exports), ce = (e, t, n, r) => {
+	if (t && typeof t == "object" || typeof t == "function") for (var i = oe(t), a = 0, o = i.length, s; a < o; a++) s = i[a], !F.call(e, s) && s !== n && P(e, s, {
 		get: ((e) => t[e]).bind(null, s),
-		enumerable: !(r = re(t, s)) || r.enumerable
+		enumerable: !(r = ae(t, s)) || r.enumerable
 	});
 	return e;
-}, ce = (e, t, n) => (n = e == null ? {} : ne(ae(e)), se(t || !e || !e.__esModule ? F(n, "default", {
+}, le = (e, t, n) => (n = e == null ? {} : ie(se(e)), ce(t || !e || !e.__esModule || !F.call(e, "default") ? P(n, "default", {
 	value: e,
 	enumerable: !0
 }) : n, e)), L = (e, t) => {
 	let n = e.__vccOpts || e;
 	for (let [e, r] of t) n[e] = r;
 	return n;
-}, le = { props: {
+}, ue = { props: {
 	variant: {
 		type: String,
 		required: !1,
@@ -23,31 +23,31 @@ var ne = Object.create, F = Object.defineProperty, re = Object.getOwnPropertyDes
 		type: [String, Number],
 		required: !0
 	}
-} }, ue = ["id"], de = ["id"];
-function fe(e, t, i, a, o, s) {
-	return i.variant == "underline" ? (v(), r("ul", {
+} }, de = ["id"], fe = ["id"];
+function pe(e, t, i, a, o, s) {
+	return i.variant == "underline" ? (y(), r("ul", {
 		key: 0,
 		class: "text-body nav nav-underline border-bottom",
 		id: i.tabsId,
 		role: "tablist"
-	}, [S(e.$slots, "default")], 8, ue)) : i.variant == "pills" ? (v(), r("ul", {
+	}, [S(e.$slots, "default")], 8, de)) : i.variant == "pills" ? (y(), r("ul", {
 		key: 1,
 		class: "bg-body-tertiary text-body rounded-3 nav nav-pills gap-1 border p-1",
 		id: i.tabsId,
 		role: "tablist"
-	}, [S(e.$slots, "default")], 8, de)) : n("", !0);
+	}, [S(e.$slots, "default")], 8, fe)) : n("", !0);
 }
-var pe = /*#__PURE__*/ L(le, [["render", fe]]), me = { props: { tabsId: {
+var me = /*#__PURE__*/ L(ue, [["render", pe]]), he = { props: { tabsId: {
 	type: [String, Number],
 	required: !0
-} } }, he = ["id"];
-function ge(e, t, n, i, a, o) {
-	return v(), r("div", {
+} } }, ge = ["id"];
+function _e(e, t, n, i, a, o) {
+	return y(), r("div", {
 		class: "tab-content",
 		id: n.tabsId + "Content"
-	}, [S(e.$slots, "default")], 8, he);
+	}, [S(e.$slots, "default")], 8, ge);
 }
-var _e = /*#__PURE__*/ L(me, [["render", ge]]), ve = {
+var ve = /*#__PURE__*/ L(he, [["render", _e]]), ye = {
 	props: {
 		variant: {
 			type: String,
@@ -82,7 +82,7 @@ var _e = /*#__PURE__*/ L(me, [["render", ge]]), ve = {
 		},
 		moveTab(e) {
 			this.elements[e].click(), this.elements[e].focus(), Array.from(this.elements).forEach((t, n) => {
-				n === e ? t.tabIndex = 0 : t.tabIndex = -1;
+				t.tabIndex = n === e ? 0 : -1;
 			});
 		},
 		moveNext(e) {
@@ -98,18 +98,18 @@ var _e = /*#__PURE__*/ L(me, [["render", ge]]), ve = {
 			this.moveTab(t);
 		}
 	}
-}, ye = {
+}, be = {
 	class: "nav-item",
 	role: "presentation"
-}, be = [
+}, xe = [
 	"tabindex",
 	"id",
 	"data-bs-target",
 	"aria-controls",
 	"aria-selected"
 ];
-function xe(e, t, n, a, o, s) {
-	return v(), r("li", ye, [i("a", {
+function Se(e, t, n, a, o, s) {
+	return y(), r("li", be, [i("a", {
 		class: h(["nav-link", s.classObject]),
 		href: "#",
 		tabindex: [n.activeTab ? "0" : "-1"],
@@ -120,11 +120,11 @@ function xe(e, t, n, a, o, s) {
 		role: "tab",
 		"aria-controls": n.panelId,
 		"aria-selected": n.activeTab,
-		onKeydown: [t[0] ||= P((...e) => s.moveNext && s.moveNext(...e), ["right"]), t[1] ||= P((...e) => s.movePrev && s.movePrev(...e), ["left"])],
+		onKeydown: [t[0] ||= N((...e) => s.moveNext && s.moveNext(...e), ["right"]), t[1] ||= N((...e) => s.movePrev && s.movePrev(...e), ["left"])],
 		onClick: t[2] ||= (...e) => s.onClick && s.onClick(...e)
-	}, [S(e.$slots, "default")], 42, be)]);
+	}, [S(e.$slots, "default")], 42, xe)]);
 }
-var Se = /*#__PURE__*/ L(ve, [["render", xe]]), Ce = {
+var Ce = /*#__PURE__*/ L(ye, [["render", Se]]), we = {
 	props: {
 		panelId: {
 			type: [String, Number],
@@ -138,18 +138,18 @@ var Se = /*#__PURE__*/ L(ve, [["render", xe]]), Ce = {
 	methods: { setFocus() {
 		document.getElementById(this.panelId + "-tab").focus();
 	} }
-}, we = ["id", "aria-labelledby"];
-function Te(e, t, n, i, a, o) {
-	return v(), r("div", {
+}, Te = ["id", "aria-labelledby"];
+function Ee(e, t, n, i, a, o) {
+	return y(), r("div", {
 		id: n.panelId,
 		class: h(["tab-pane fade", { "show active": n.activePanel }]),
 		role: "tabpanel",
 		"aria-labelledby": n.panelId + "-tab",
 		tabindex: "0",
-		onKeydown: t[0] ||= P(te((...e) => o.setFocus && o.setFocus(...e), ["shift", "prevent"]), ["tab"])
-	}, [S(e.$slots, "default")], 42, we);
+		onKeydown: t[0] ||= N(re((...e) => o.setFocus && o.setFocus(...e), ["shift", "prevent"]), ["tab"])
+	}, [S(e.$slots, "default")], 42, Te);
 }
-var Ee = /*#__PURE__*/ L(Ce, [["render", Te]]), De = {
+var De = /*#__PURE__*/ L(we, [["render", Ee]]), Oe = {
 	inject: ["mq"],
 	props: {
 		appName: {
@@ -182,10 +182,10 @@ var Ee = /*#__PURE__*/ L(Ce, [["render", Te]]), De = {
 		}
 	},
 	created() {}
-}, Oe = {
+}, ke = {
 	key: 0,
 	class: "small bg-opacity-10 bg-black px-3 py-2"
-}, ke = { class: "d-flex" }, Ae = { class: "flex-fill text-end" }, je = ["href"], Me = {
+}, Ae = { class: "d-flex" }, je = { class: "flex-fill text-end" }, Me = ["href"], Ne = {
 	key: 0,
 	class: "btn btn-link btn-sm border-light rounded-3 text-light d-lg-none me-2 border border-1 px-1 py-0",
 	"data-bs-toggle": "collapse",
@@ -194,48 +194,48 @@ var Ee = /*#__PURE__*/ L(Ce, [["render", Te]]), De = {
 	"aria-expanded": "false",
 	"aria-controls": "sidebar-nav-collapse",
 	"aria-label": "Toggle Navigation Menu"
-}, Ne = {
+}, Pe = {
 	key: 0,
 	role: "navigation"
-}, Pe = {
+}, Fe = {
 	key: 1,
 	class: "text-light mb-3"
-}, Fe = { class: "container-xl d-flex flex-column" }, Ie = { class: "flex-fill" }, Le = { key: 0 }, Re = { class: "font-weight-light small py-3" };
-function ze(e, t, c, l, u, d) {
+}, Ie = { class: "container-xl d-flex flex-column" }, Le = { class: "flex-fill" }, Re = { key: 0 }, ze = { class: "font-weight-light small py-3" };
+function Be(e, t, c, l, u, d) {
 	let f = C("router-link");
-	return v(), r("div", {
+	return y(), r("div", {
 		class: h([d.mq.mdMinus ? "" : "d-flex vh-100 gap-3"]),
-		style: g([c.isPreview ? "min-height: auto !important;" : ""])
+		style: _([c.isPreview ? "min-height: auto !important;" : ""])
 	}, [i("div", {
 		class: h([c.sidebarClass, "sol-sidebar d-flex flex-column overflow-auto"]),
-		style: g([d.mq.mdMinus ? "" : "min-width: 280px; max-width:280px;"])
+		style: _([d.mq.mdMinus ? "" : "min-width: 280px; max-width:280px;"])
 	}, [
-		i("header", null, [e.$slots.profile ? (v(), r("div", Oe, [S(e.$slots, "profile", {}, () => [i("div", ke, [t[0] ||= i("div", { class: "flex-fill" }, "username", -1), i("div", Ae, [i("a", {
+		i("header", null, [e.$slots.profile ? (y(), r("div", ke, [S(e.$slots, "profile", {}, () => [i("div", Ae, [t[0] ||= i("div", { class: "flex-fill" }, "username", -1), i("div", je, [i("a", {
 			href: c.signOutUrl,
 			class: "text-white"
-		}, "Sign out", 8, je)])])])])) : n("", !0), i("div", { class: h([[d.mq.lgMinus ? "sol-sidebar-brand-sm" : "sol-sidebar-brand"], "px-3"]) }, [e.$slots.navigation ? (v(), r("a", Me, [...t[1] ||= [i("i", { class: "bi bi-list fw-bold fs-6" }, null, -1)]])) : n("", !0), i("div", { class: h(["d-inline align-middle", [d.mq.mdPlus ? "h2" : "h3"]]) }, [s(f, {
+		}, "Sign out", 8, Me)])])])])) : n("", !0), i("div", { class: h([[d.mq.lgMinus ? "sol-sidebar-brand-sm" : "sol-sidebar-brand"], "px-3"]) }, [e.$slots.navigation ? (y(), r("a", Ne, [...t[1] ||= [i("i", { class: "bi bi-list fw-bold fs-6" }, null, -1)]])) : n("", !0), i("div", { class: h(["d-inline align-middle", [d.mq.mdPlus ? "h2" : "h3"]]) }, [s(f, {
 			to: c.appRootUrl,
 			class: "ff-encode-sans text-decoration-none text-light"
 		}, {
-			default: ee(() => [o(E(c.appName), 1)]),
+			default: ne(() => [o(E(c.appName), 1)]),
 			_: 1
 		}, 8, ["to"])], 2)], 2)]),
 		i("div", {
 			id: "sidebar-nav-collapse",
 			class: h(["flex-fill px-3", [d.mq.mdMinus ? "collapse" : "collapse.show d-flex flex-column justify-content-between"]])
-		}, [e.$slots.navigation ? (v(), r("nav", Ne, [S(e.$slots, "navigation", {}, () => [t[2] ||= i("ul", { class: "text-white" }, [
+		}, [e.$slots.navigation ? (y(), r("nav", Pe, [S(e.$slots, "navigation", {}, () => [t[2] ||= i("ul", { class: "text-white" }, [
 			i("li", null, "nav 1"),
 			i("li", null, "nav 2"),
 			i("li", null, "nav 3"),
 			i("li", null, "nav 4")
-		], -1)])])) : n("", !0), e.$slots.aside ? (v(), r("aside", Pe, [S(e.$slots, "aside", {}, () => [t[3] ||= o("this is aside content", -1)])])) : n("", !0)], 2),
+		], -1)])])) : n("", !0), e.$slots.aside ? (y(), r("aside", Fe, [S(e.$slots, "aside", {}, () => [t[3] ||= o("this is aside content", -1)])])) : n("", !0)], 2),
 		t[4] ||= i("div", { class: "sol-sidebar-logo" }, "\xA0", -1)
 	], 6), i("div", {
 		id: "scrollbody",
 		class: h([[d.mq.mdMinus ? "" : "flex-fill overflow-y-scroll"], "d-flex bg-body text-body"])
-	}, [i("div", Fe, [i("main", Ie, [S(e.$slots, "main")]), e.$slots.footer ? (v(), r("footer", Le, [S(e.$slots, "footer", {}, () => [i("div", Re, [t[5] ||= a("<ul class=\"list-inline sol-middot-list m-0\"><li class=\"list-inline-item\"><a href=\"https://www.washington.edu/accessibility/\" class=\"link-body-emphasis\" target=\"_blank\">Accessibility</a></li><li class=\"list-inline-item\"><a href=\"http://www.washington.edu/online/privacy/\" class=\"link-body-emphasis\" target=\"_blank\">Privacy</a></li><li class=\"list-inline-item\"><a href=\"http://www.washington.edu/online/terms/\" class=\"link-body-emphasis\" target=\"_blank\">Terms</a></li></ul>", 1), i("div", null, " Copyright © " + E((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)])])])) : n("", !0)])], 2)], 6);
+	}, [i("div", Ie, [i("main", Le, [S(e.$slots, "main")]), e.$slots.footer ? (y(), r("footer", Re, [S(e.$slots, "footer", {}, () => [i("div", ze, [t[5] ||= a("<ul class=\"list-inline sol-middot-list m-0\"><li class=\"list-inline-item\"><a href=\"https://www.washington.edu/accessibility/\" class=\"link-body-emphasis\" target=\"_blank\">Accessibility</a></li><li class=\"list-inline-item\"><a href=\"http://www.washington.edu/online/privacy/\" class=\"link-body-emphasis\" target=\"_blank\">Privacy</a></li><li class=\"list-inline-item\"><a href=\"http://www.washington.edu/online/terms/\" class=\"link-body-emphasis\" target=\"_blank\">Terms</a></li></ul>", 1), i("div", null, " Copyright © " + E((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)])])])) : n("", !0)])], 2)], 6);
 }
-var Be = /*#__PURE__*/ L(De, [["render", ze]]), Ve = {
+var Ve = /*#__PURE__*/ L(Oe, [["render", Be]]), He = {
 	inject: ["mq"],
 	props: {
 		appName: {
@@ -264,13 +264,13 @@ var Be = /*#__PURE__*/ L(De, [["render", ze]]), Ve = {
 		return {};
 	},
 	created() {}
-}, He = {
+}, Ue = {
 	key: 0,
 	class: "w-100"
-}, Ue = { class: "w-100" }, We = {
+}, We = { class: "w-100" }, Ge = {
 	key: 0,
 	class: "bg-opacity-10 small bg-black py-2 text-white"
-}, Ge = { class: "container-xl" }, Ke = { class: "axdd-topbar-brand" }, qe = { class: "container-xl axdd-topbar-logo" }, Je = {
+}, Ke = { class: "container-xl" }, qe = { class: "axdd-topbar-brand" }, Je = { class: "container-xl axdd-topbar-logo" }, Ye = {
 	key: 0,
 	class: "btn btn-link btn-sm d-xl-none border-light rounded-3 me-2 border border-1 px-1 py-0 text-white",
 	"data-bs-toggle": "collapse",
@@ -279,239 +279,53 @@ var Be = /*#__PURE__*/ L(De, [["render", ze]]), Ve = {
 	"aria-expanded": "false",
 	"aria-controls": "topbar-nav-collapse",
 	"aria-label": "Toggle Navigation Menu"
-}, Ye = ["href"], Xe = { class: "container-xl" }, Ze = { class: "row" }, Qe = {
+}, Xe = ["href"], Ze = { class: "container-xl" }, Qe = { class: "row" }, $e = {
 	key: 0,
 	role: "navigation"
-}, $e = { key: 1 }, et = { class: "col-xl" }, tt = { key: 0 }, nt = {
+}, et = { key: 1 }, tt = { class: "col-xl" }, nt = { key: 0 }, rt = {
 	key: 1,
 	class: "col-sm col-xl-3"
-}, rt = { class: "w-100" }, it = {
+}, it = { class: "w-100" }, at = {
 	key: 0,
 	class: "bg-body-tertiary small py-2"
-}, at = { class: "container-xl" }, ot = { class: "font-weight-light py-3" };
-function st(e, t, s, c, l, u) {
-	return v(), r("div", { class: h([[s.topbarClass, s.isPreview ? "" : "min-vh-100"], "d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"]) }, [
-		e.$slots.system ? (v(), r("div", He, [S(e.$slots, "system", {}, () => [t[0] ||= o("System messages", -1)])])) : n("", !0),
-		i("header", Ue, [e.$slots.profile ? (v(), r("div", We, [i("div", Ge, [S(e.$slots, "profile", {}, () => [t[1] ||= o("Welcome!", -1)])])])) : n("", !0), i("div", Ke, [i("div", qe, [e.$slots.navigation ? (v(), r("a", Je, [...t[2] ||= [i("i", { class: "bi bi-list fw-bold fs-6 text-white" }, null, -1)]])) : n("", !0), i("div", { class: h(["d-inline align-middle text-white", [u.mq.xlPlus ? "h2" : "h3"]]) }, [i("a", {
+}, ot = { class: "container-xl" }, st = { class: "font-weight-light py-3" };
+function ct(e, t, s, c, l, u) {
+	return y(), r("div", { class: h([[s.topbarClass, s.isPreview ? "" : "min-vh-100"], "d-flex align-items-end flex-column axdd-topbar axdd-font-open-sans"]) }, [
+		e.$slots.system ? (y(), r("div", Ue, [S(e.$slots, "system", {}, () => [t[0] ||= o("System messages", -1)])])) : n("", !0),
+		i("header", We, [e.$slots.profile ? (y(), r("div", Ge, [i("div", Ke, [S(e.$slots, "profile", {}, () => [t[1] ||= o("Welcome!", -1)])])])) : n("", !0), i("div", qe, [i("div", Je, [e.$slots.navigation ? (y(), r("a", Ye, [...t[2] ||= [i("i", { class: "bi bi-list fw-bold fs-6 text-white" }, null, -1)]])) : n("", !0), i("div", { class: h(["d-inline align-middle text-white", [u.mq.xlPlus ? "h2" : "h3"]]) }, [i("a", {
 			href: s.appRootUrl,
 			class: "ff-encode-sans text-decoration-none text-white"
-		}, E(s.appName), 9, Ye)], 2)])])]),
-		i("div", { class: h([s.backgroundClass, "flex-fill text-body w-100"]) }, [i("div", Xe, [i("div", Ze, [
-			e.$slots.navigation ? (v(), r("div", {
+		}, E(s.appName), 9, Xe)], 2)])])]),
+		i("div", { class: h([s.backgroundClass, "flex-fill text-body w-100"]) }, [i("div", Ze, [i("div", Qe, [
+			e.$slots.navigation ? (y(), r("div", {
 				key: 0,
-				style: g(u.mq.xlPlus ? "min-width: 272px; max-width: 272px" : "")
+				style: _(u.mq.xlPlus ? "min-width: 272px; max-width: 272px" : "")
 			}, [i("div", {
 				id: "topbar-nav-collapse",
 				class: h([u.mq.xlPlus ? "collapse.show" : "collapse"])
-			}, [e.$slots.navigation ? (v(), r("nav", Qe, [S(e.$slots, "navigation")])) : n("", !0), e.$slots.navigation && e.$slots.aside ? (v(), r("aside", $e, [S(e.$slots, "aside", {}, () => [t[3] ||= o("Aside content", -1)])])) : n("", !0)], 2)], 4)) : n("", !0),
-			i("main", et, [e.$slots.bar ? (v(), r("div", tt, [S(e.$slots, "bar")])) : n("", !0), S(e.$slots, "main", {}, () => [t[4] ||= i("div", { style: { outline: "dashed 1px lightgray" } }, [i("h1", null, "Hello world..."), i("p", null, " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa. ")], -1)])]),
-			!e.$slots.navigation && e.$slots.aside ? (v(), r("aside", nt, [S(e.$slots, "aside", {}, () => [t[5] ||= o("Aside content", -1)])])) : n("", !0)
+			}, [e.$slots.navigation ? (y(), r("nav", $e, [S(e.$slots, "navigation")])) : n("", !0), e.$slots.navigation && e.$slots.aside ? (y(), r("aside", et, [S(e.$slots, "aside", {}, () => [t[3] ||= o("Aside content", -1)])])) : n("", !0)], 2)], 4)) : n("", !0),
+			i("main", tt, [e.$slots.bar ? (y(), r("div", nt, [S(e.$slots, "bar")])) : n("", !0), S(e.$slots, "main", {}, () => [t[4] ||= i("div", { style: { outline: "dashed 1px lightgray" } }, [i("h1", null, "Hello world..."), i("p", null, " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa. ")], -1)])]),
+			!e.$slots.navigation && e.$slots.aside ? (y(), r("aside", rt, [S(e.$slots, "aside", {}, () => [t[5] ||= o("Aside content", -1)])])) : n("", !0)
 		])])], 2),
-		i("footer", rt, [e.$slots.footer ? (v(), r("div", it, [i("div", at, [S(e.$slots, "footer", {}, () => [i("div", ot, [t[6] ||= a("<ul class=\"list-inline sol-middot-list m-0\"><li class=\"list-inline-item\"><a href=\"https://www.washington.edu/accessibility/\" class=\"link-body-emphasis\" target=\"_blank\">Accessibility</a></li><li class=\"list-inline-item\"><a href=\"http://www.washington.edu/online/privacy/\" class=\"link-body-emphasis\" target=\"_blank\">Privacy</a></li><li class=\"list-inline-item\"><a href=\"http://www.washington.edu/online/terms/\" class=\"link-body-emphasis\" target=\"_blank\">Terms</a></li></ul>", 1), i("div", null, " Copyright © " + E((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)])])])])) : n("", !0)])
+		i("footer", it, [e.$slots.footer ? (y(), r("div", at, [i("div", ot, [S(e.$slots, "footer", {}, () => [i("div", st, [t[6] ||= a("<ul class=\"list-inline sol-middot-list m-0\"><li class=\"list-inline-item\"><a href=\"https://www.washington.edu/accessibility/\" class=\"link-body-emphasis\" target=\"_blank\">Accessibility</a></li><li class=\"list-inline-item\"><a href=\"http://www.washington.edu/online/privacy/\" class=\"link-body-emphasis\" target=\"_blank\">Privacy</a></li><li class=\"list-inline-item\"><a href=\"http://www.washington.edu/online/terms/\" class=\"link-body-emphasis\" target=\"_blank\">Terms</a></li></ul>", 1), i("div", null, " Copyright © " + E((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)])])])])) : n("", !0)])
 	], 2);
 }
-var ct = /*#__PURE__*/ L(Ve, [["render", st]]), lt = {
-	inject: ["mq"],
-	props: {
-		appName: {
-			type: String,
-			default: "appName"
-		},
-		appDeptName: { type: String },
-		appRootUrl: {
-			type: String,
-			default: "#"
-		},
-		isPreview: {
-			type: Boolean,
-			default: !1
-		},
-		accessibilityURL: {
-			type: String,
-			required: !1,
-			default: "https://www.washington.edu/accessibility/"
-		},
-		privacyURL: {
-			type: String,
-			required: !1,
-			default: "https://www.washington.edu/online/privacy/"
-		},
-		termsURL: {
-			type: String,
-			required: !1,
-			default: "https://www.washington.edu/online/terms/"
-		}
-	}
-}, ut = { class: "bg-spirit-purple w-100" }, dt = { class: "container-xl" }, ft = { class: "d-flex justify-content-between align-items-center" }, pt = { class: "d-flex flex-fill align-items-center my-4" }, mt = { class: "d-flex flex-fill flex-column text-white" }, ht = {
-	key: 0,
-	class: "fw-light text-nowrap",
-	style: { "margin-bottom": "-7px" }
-}, gt = ["href"], _t = ["href"], vt = { class: "d-flex justify-content-end align-items-center" }, yt = {
-	key: 1,
-	class: "btn btn-link btn-sm d-md-none ms-1 py-0 py-1 text-white",
-	"data-bs-toggle": "collapse",
-	"data-bs-target": "#navbarToggler",
-	"aria-controls": "navbarToggler",
-	"aria-expanded": "false",
-	"aria-label": "Toggle navigation"
-}, bt = {
-	key: 0,
-	class: "navbar navbar-expand-md py-xl-2 bg-husky-purple w-100 p-0"
-}, xt = { class: "container-xl" }, St = {
-	class: "navbar-collapse collapse",
-	id: "navbarToggler"
-}, Ct = {
-	key: 1,
-	class: "bg-info-subtle w-100"
-}, wt = { class: "container-xl" }, Tt = { class: "container-xl flex-fill" }, Et = { class: "row" }, Dt = { class: "col" }, Ot = {
-	key: 0,
-	class: "col-sm-12 col-xl-3"
-}, kt = { class: "bg-body-tertiary w-100" }, At = { class: "container-xl" }, jt = { class: "row" }, Mt = { class: "col small font-weight-light my-4" }, Nt = { class: "list-inline sol-middot-list m-0" }, Pt = { class: "list-inline-item" }, Ft = ["href"], It = { class: "list-inline-item" }, Lt = ["href"], Rt = { class: "list-inline-item" }, zt = ["href"], Bt = { class: "" };
-function Vt(e, t, a, s, c, l) {
-	return v(), r("div", { class: h([[a.isPreview ? " " : "min-vh-100"], "d-flex align-items-end flex-column"]) }, [
-		i("header", ut, [i("div", dt, [i("div", ft, [i("div", pt, [t[0] ||= i("div", { class: "d-none d-md-block border-end border-opacity-25 me-3 border-white pe-3" }, [i("img", {
-			src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAhCAYAAACbffiEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5QjA3NEU2NTJDQTkxMUU0QTcxOEIwNEIyRTA4NDYxMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5QjA3NEU2NjJDQTkxMUU0QTcxOEIwNEIyRTA4NDYxMyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjlCMDc0RTYzMkNBOTExRTRBNzE4QjA0QjJFMDg0NjEzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjlCMDc0RTY0MkNBOTExRTRBNzE4QjA0QjJFMDg0NjEzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+TGF1VAAAA3RJREFUeNq0mEtPFEEQx2dXQAUPIohE4ysKvpAVBeIDFCNREw8eMTHePHjycxg9e/ATePGgB02MgLK74mNBASUxqBj1YEQMGFxYdsX1P0ltHDvVM1WzayU/Hv2o7pruqq7uSD6fTzmOUw1+OeFkJYiDC0zdPnALLIE8lUVAOTgHnjN9roEeMC8cfxW4WYYf28FqpzjZYik/A7ZZ6rothmwAG5Xjr486pZElS3mHT59jlvLfIcbPl8oQTtaBNp/6JlBfqsGi/1HPQVDjtx3ATqY8EnYCCyAL0mBR2C9D7QsOucC06RLoOWHR7ZDutOf/f7YS1RfGX4wgau3AH8tADtSC26AuYALXwVVQRR/jJ/joqXf1PQMHAvTcB6eZlaomX5kDV8B5o81dcBlU0FgzDgwx6csHyz2mn5dGkBbomQb1PnqiIMn0u2S25fZ2v2BL7AFrfeo7QaVATw05vU22MgEjS6sd6KQpwQQ2WRxV4x8FOR4QoiuMsnfgldSQb4IJHPU56TsUhrQrP0iCy0I4Q2aEq3LEUu46+GaFIS2WMF1pGSOpOUcGBROIWaLbIeVZ4BqxnylvZlKfBa0hSUl+A3Yz5adCnGeHLf5hzu8l+KQxZBR8FUygi0n4mkIY0iH0j0FbLmYzZBY8CeGoMcqxtNJihHN3y7Yy7R6GybWGBBNoo2ygICeZNl8Ed4sa47xoN/S6Mk1bS22I5GCs9Thq1LJFboA3ytXtZOqH6aOoDZkAnxWO2kAnvil3wJjS37qZ+njYNP6731J6pNUTdlcYdR/AiDCc7wJr6EbZyNQPFHMfSQj9pNySkqc8YTPoTaCOVjRG93CvTIJxv85lAcrjwgPtLNjL1PXS79e0Og0Bujot9/8RiqShV8T1k/cBbdz7wEXmkSHjyVIzlocGU3osacmDYq+6s1ymaTnNze3w1tgOAwI9zUy2kJN8BMmdvS/kPT5uvK6kFFfpwLQ9jCFDIQ15bPw/blyHpZKgVSnakDH6KhpJM4bkhMmoKY9K9Rw0T1FDIy8sh+lTpZ4f3LW2mHetfuUEks7ft15zu2UVeiboDCmZIcOO7pHbFqEmKZpJpVfzQCeRUduFhpEpn9QmI90q2q0oNWRRmC8VVm9KEc38cj3pmIEpihk93Be/OZ82VYLtkKBJLnfsL+9VdA5NSyf3R4ABABbMYvghpWrNAAAAAElFTkSuQmCC",
-			alt: "UW logo",
-			class: "my-1",
-			style: { height: "30px" }
-		})], -1), i("div", mt, [
-			a.appDeptName ? (v(), r("div", ht, E(a.appDeptName), 1)) : n("", !0),
-			i("a", {
-				href: a.appRootUrl,
-				class: "d-block d-sm-none ff-encode-sans text-decoration-none fs-3 fw-medium text-truncate text-nowrap text-white",
-				style: { "max-width": "180px" }
-			}, E(a.appName), 9, gt),
-			i("a", {
-				href: a.appRootUrl,
-				class: "d-none d-sm-block ff-encode-sans text-decoration-none fs-3 fw-medium text-nowrap text-white"
-			}, E(a.appName), 9, _t)
-		])]), i("div", vt, [e.$slots.settings ? S(e.$slots, "settings", { key: 0 }, () => [t[1] ||= o("user info", -1)]) : n("", !0), e.$slots.navigation ? (v(), r("a", yt, [...t[2] ||= [i("i", { class: "bi bi-list text-light fs-3" }, null, -1)]])) : n("", !0)])])])]),
-		e.$slots.navigation ? (v(), r("nav", bt, [i("div", xt, [i("div", St, [S(e.$slots, "navigation", {}, () => [t[3] ||= o("navigation bar", -1)])])])])) : n("", !0),
-		e.$slots.system ? (v(), r("div", Ct, [i("div", wt, [S(e.$slots, "system", {}, () => [t[4] ||= o("system messages", -1)])])])) : n("", !0),
-		i("div", Tt, [i("div", Et, [i("main", Dt, [S(e.$slots, "main", {}, () => [t[5] ||= i("div", { style: { outline: "dashed 1px lightgray" } }, [i("h1", null, "Hello world..."), i("p", null, " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa. ")], -1)])]), e.$slots.aside ? (v(), r("aside", Ot, [S(e.$slots, "aside", {}, () => [t[6] ||= o("aside content", -1)])])) : n("", !0)])]),
-		i("footer", kt, [i("div", At, [e.$slots.footer ? S(e.$slots, "footer", { key: 0 }, () => [i("div", jt, [i("div", Mt, [i("ul", Nt, [
-			i("li", Pt, [a.accessibilityURL ? (v(), r("a", {
-				key: 0,
-				href: a.accessibilityURL,
-				target: "_blank",
-				rel: "noopener",
-				class: "link-body-emphasis"
-			}, "Accessibility", 8, Ft)) : n("", !0)]),
-			i("li", It, [a.privacyURL ? (v(), r("a", {
-				key: 0,
-				href: a.privacyURL,
-				target: "_blank",
-				rel: "noopener",
-				class: "link-body-emphasis"
-			}, "Privacy", 8, Lt)) : n("", !0)]),
-			i("li", Rt, [a.termsURL ? (v(), r("a", {
-				key: 0,
-				href: a.termsURL,
-				target: "_blank",
-				rel: "noopener",
-				class: "link-body-emphasis"
-			}, "Terms", 8, zt)) : n("", !0)])
-		]), i("div", Bt, " Copyright © " + E((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)])])]) : n("", !0)])])
-	], 2);
-}
-var Ht = /*#__PURE__*/ L(lt, [["render", Vt]]), Ut = {
-	props: {
-		variant: {
-			type: String,
-			default: "standard"
-		},
-		userNetid: {
-			type: String,
-			required: !0
-		},
-		userOverride: {
-			type: String,
-			required: !1
-		},
-		userOfficialName: { type: String },
-		userPreferredName: { type: String },
-		userPronouns: { type: String },
-		signoutUrl: { type: String },
-		profileUrl: { type: String }
-	},
-	data() {
-		return {};
-	}
-}, Wt = {
-	key: 0,
-	class: "d-flex align-items-center"
-}, Gt = { class: "flex-fill dropdown" }, Kt = {
-	key: 0,
-	class: "text-decoration-none py-2 text-white",
-	href: "#",
-	role: "button",
-	id: "dropdownMenuButton1",
-	"data-bs-toggle": "dropdown",
-	"aria-expanded": "false"
-}, qt = { class: "me-1" }, Jt = { class: "text-decoration-underline" }, Yt = {
-	key: 1,
-	class: "text-decoration-none py-2 text-white",
-	href: "#",
-	role: "button",
-	id: "dropdownMenuButton1",
-	"data-bs-toggle": "dropdown",
-	"aria-expanded": "false"
-}, Xt = {
-	class: "dropdown-menu p-3",
-	"aria-labelledby": "dropdownMenuButton1",
-	style: { width: "220px" }
-}, Zt = {
-	key: 0,
-	class: "text-danger"
-}, Qt = { class: "" }, $t = { class: "" }, en = ["href"], tn = ["href"], nn = {
-	key: 1,
-	class: "d-flex align-items-center text-nowrap"
-}, rn = {
-	key: 0,
-	class: "flex-fill text-white"
-}, an = { class: "me-1" }, on = {
-	key: 1,
-	class: "flex-fill text-white"
-}, sn = { class: "flex-fill ms-2 text-end" }, cn = ["href"];
-function ln(e, t, a, s, c, l) {
-	return a.variant === "flyout" ? (v(), r("div", Wt, [i("div", Gt, [a.userOverride ? (v(), r("a", Kt, [
-		i("span", qt, E(a.userNetid), 1),
-		t[0] ||= i("i", { class: "bi bi-arrow-right text-danger me-1" }, null, -1),
-		i("span", Jt, E(a.userOverride), 1)
-	])) : (v(), r("a", Yt, E(a.userNetid), 1)), i("div", Xt, [
-		a.userOverride ? (v(), r("p", Zt, [
-			t[1] ||= o(" overriding as ", -1),
-			t[2] ||= i("i", { class: "bi bi-arrow-right text-danger" }, null, -1),
-			o(" " + E(a.userOverride), 1)
-		])) : n("", !0),
-		i("p", Qt, E(a.userOfficialName) + ", " + E(a.userPreferredName) + ", " + E(a.userPronouns), 1),
-		i("p", $t, [i("a", { href: a.profileUrl }, "go to profile", 8, en)]),
-		i("div", null, [a.signoutUrl ? S(e.$slots, "default", { key: 0 }, () => [i("a", { href: a.signoutUrl }, "Sign out", 8, tn)]) : S(e.$slots, "default", { key: 1 }, () => [t[3] ||= i("a", { href: "sadkf" }, "sign out test", -1)])])
-	])])])) : (v(), r("div", nn, [a.userOverride ? (v(), r("div", rn, [
-		i("span", an, E(a.userNetid), 1),
-		t[4] ||= i("i", { class: "bi bi-arrow-right text-danger" }, null, -1),
-		o(" " + E(a.userOverride), 1)
-	])) : (v(), r("div", on, E(a.userNetid), 1)), i("div", sn, [a.signoutUrl ? S(e.$slots, "default", { key: 0 }, () => [i("a", {
-		href: a.signoutUrl,
-		class: "text-white"
-	}, "Sign out", 8, cn)]) : S(e.$slots, "default", { key: 1 }, () => [t[5] ||= i("a", { href: "sadkf" }, "sign out test", -1)])])]));
-}
-var un = /*#__PURE__*/ L(Ut, [["render", ln]]), R = /* @__PURE__ */ new WeakMap(), dn = (...e) => {
+var lt = /*#__PURE__*/ L(He, [["render", ct]]), R = /* @__PURE__ */ new WeakMap(), ut = (...e) => {
 	let t = e[0], n = l()?.proxy ?? u();
 	if (n == null && !d()) throw Error("injectLocal must be called in setup");
 	return n && R.has(n) && t in R.get(n) ? R.get(n)[t] : f(...e);
 }, z = typeof window < "u" && typeof document < "u";
 typeof WorkerGlobalScope < "u" && globalThis instanceof WorkerGlobalScope;
-var fn = Object.prototype.toString, pn = (e) => fn.call(e) === "[object Object]", mn = () => {};
+var dt = Object.prototype.toString, ft = (e) => dt.call(e) === "[object Object]", pt = () => {};
 function B(...e) {
 	if (e.length !== 1) return D(...e);
 	let t = e[0];
-	return typeof t == "function" ? y(c(() => ({
+	return typeof t == "function" ? b(c(() => ({
 		get: t,
-		set: mn
-	}))) : b(t);
+		set: pt
+	}))) : ee(t);
 }
-function hn(e, t) {
+function mt(e, t) {
 	function n(...n) {
 		return new Promise((r, i) => {
 			Promise.resolve(e(() => t.apply(this, n), {
@@ -521,10 +335,14 @@ function hn(e, t) {
 			})).then(r).catch(i);
 		});
 	}
-	return n;
+	return "cancel" in e && Object.assign(n, {
+		cancel: e.cancel,
+		flush: e.flush,
+		isPending: e.isPending
+	}), n;
 }
 var V = (e) => e();
-function gn(e = V, t = {}) {
+function ht(e = V, t = {}) {
 	let { initialState: n = "active" } = t, r = B(n === "active");
 	function i() {
 		r.value = !1;
@@ -547,17 +365,17 @@ function H(e) {
 function U(e) {
 	return Array.isArray(e) ? e : [e];
 }
-function _n(e) {
+function gt(e) {
 	return e || l();
 }
-function vn(e, t, n = {}) {
+function _t(e, t, n = {}) {
 	let { eventFilter: r = V, ...i } = n;
-	return j(e, hn(r, t), i);
+	return j(e, mt(r, t), i);
 }
-function yn(e, t, n = {}) {
-	let { eventFilter: r, initialState: i = "active", ...a } = n, { eventFilter: o, pause: s, resume: c, isActive: l } = gn(r, { initialState: i });
+function vt(e, t, n = {}) {
+	let { eventFilter: r, initialState: i = "active", ...a } = n, { eventFilter: o, pause: s, resume: c, isActive: l } = ht(r, { initialState: i });
 	return {
-		stop: vn(e, t, {
+		stop: _t(e, t, {
 			...a,
 			eventFilter: o
 		}),
@@ -567,16 +385,16 @@ function yn(e, t, n = {}) {
 	};
 }
 function W(e, t = !0, n) {
-	_n(n) ? _(e, n) : t ? e() : m(e);
+	gt(n) ? v(e, n) : t ? e() : m(e);
 }
-function bn(e, t, n) {
+function yt(e, t, n) {
 	return j(e, t, {
 		...n,
 		immediate: !0
 	});
 }
 //#endregion
-//#region node_modules/.pnpm/@vueuse+core@14.3.0_vue@3.5.39/node_modules/@vueuse/core/dist/index.js
+//#region node_modules/@vueuse/core/dist/index.js
 var G = z ? window : void 0;
 z && window.document, z && window.navigator, z && window.location;
 function K(e) {
@@ -588,41 +406,43 @@ function q(...e) {
 		let t = U(O(e[0])).filter((e) => e != null);
 		return t.every((e) => typeof e != "string") ? t : void 0;
 	});
-	return bn(() => [
+	return yt(() => [
 		r.value?.map((e) => K(e)) ?? [G].filter((e) => e != null),
 		U(O(r.value ? e[1] : e[0])),
 		U(k(r.value ? e[2] : e[1])),
 		O(r.value ? e[3] : e[2])
 	], ([e, t, r, i], a, o) => {
 		if (!e?.length || !t?.length || !r?.length) return;
-		let s = pn(i) ? { ...i } : i, c = e.flatMap((e) => t.flatMap((t) => r.map((r) => n(e, t, r, s))));
+		let s = ft(i) ? { ...i } : i, c = e.flatMap((e) => t.flatMap((t) => r.map((r) => n(e, t, r, s))));
 		o(() => {
 			c.forEach((e) => e());
 		});
 	}, { flush: "post" });
 }
-function xn() {
+function bt() {
 	let e = T(!1), t = l();
-	return t && _(() => {
+	return t && v(() => {
 		e.value = !0;
 	}, t), e;
 }
 /* @__NO_SIDE_EFFECTS__ */
-function Sn(e) {
-	let n = xn();
+function xt(e) {
+	let n = bt();
 	return t(() => (n.value, !!e()));
 }
-var Cn = Symbol("vueuse-ssr-width");
+var St = Symbol("vueuse-ssr-width");
 /* @__NO_SIDE_EFFECTS__ */
-function wn() {
-	let e = d() ? dn(Cn, null) : null;
+function Ct() {
+	let e = d() ? ut(St, null) : null;
 	return typeof e == "number" ? e : void 0;
 }
-function Tn(e, n = {}) {
-	let { window: r = G, ssrWidth: i = /* @__PURE__ */ wn() } = n, a = /* @__PURE__ */ Sn(() => r && "matchMedia" in r && typeof r.matchMedia == "function"), o = T(typeof i == "number"), s = T(), c = T(!1);
-	return M(() => {
+function wt(e, n = {}) {
+	let { window: r = G, ssrWidth: i = /* @__PURE__ */ Ct() } = n, a = /* @__PURE__ */ xt(() => r && "matchMedia" in r && typeof r.matchMedia == "function"), o = T(typeof i == "number"), s = T(), c = T(!1);
+	return te(() => {
 		if (o.value) {
-			o.value = !a.value, c.value = O(e).split(",").some((e) => {
+			o.value = !a.value;
+			let t = O(e).split(",");
+			c.value = t.some((e) => {
 				let t = e.includes("not all"), n = e.match(/\(\s*min-width:\s*(-?\d+(?:\.\d*)?[a-z]+\s*)\)/), r = e.match(/\(\s*max-width:\s*(-?\d+(?:\.\d*)?[a-z]+\s*)\)/), a = !!(n || r);
 				return n && a && (a = i >= H(n[1])), r && a && (a = i <= H(r[1])), t ? !a : a;
 			});
@@ -633,20 +453,20 @@ function Tn(e, n = {}) {
 		c.value = e.matches;
 	}, { passive: !0 }), t(() => c.value);
 }
-var J = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {}, Y = "__vueuse_ssr_handlers__", En = /* @__PURE__ */ Dn();
-function Dn() {
+var J = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {}, Y = "__vueuse_ssr_handlers__", Tt = /* #__PURE__ */ Et();
+function Et() {
 	return Y in J || (J[Y] = J[Y] || {}), J[Y];
 }
 function X(e, t) {
-	return En[e] || t;
+	return Tt[e] || t;
 }
-function On(e) {
-	return Tn("(prefers-color-scheme: dark)", e);
+function Z(e) {
+	return wt("(prefers-color-scheme: dark)", e);
 }
-function kn(e) {
+function Dt(e) {
 	return e == null ? "any" : e instanceof Set ? "set" : e instanceof Map ? "map" : e instanceof Date ? "date" : typeof e == "boolean" ? "boolean" : typeof e == "string" ? "string" : typeof e == "object" ? "object" : Number.isNaN(e) ? "any" : "number";
 }
-var An = {
+var Ot = {
 	boolean: {
 		read: (e) => e === "true",
 		write: (e) => String(e)
@@ -679,32 +499,32 @@ var An = {
 		read: (e) => new Date(e),
 		write: (e) => e.toISOString()
 	}
-}, Z = "vueuse-storage";
-function jn(e, n, r, i = {}) {
+}, Q = "vueuse-storage";
+function kt(e, n, r, i = {}) {
 	let { flush: a = "pre", deep: o = !0, listenToStorageChanges: s = !0, writeDefaults: c = !0, mergeDefaults: l = !1, shallow: u, window: d = G, eventFilter: f, onError: p = (e) => {
 		console.error(e);
-	}, initOnMounted: h } = i, g = (u ? T : b)(typeof n == "function" ? n() : n), _ = t(() => O(e));
+	}, initOnMounted: h } = i, g = (u ? T : ee)(typeof n == "function" ? n() : n), _ = t(() => O(e));
 	if (!r) try {
 		r = X("getDefaultStorage", () => G?.localStorage)();
 	} catch (e) {
 		p(e);
 	}
 	if (!r) return g;
-	let v = O(n), y = kn(v), x = i.serializer ?? An[y], { pause: S, resume: C } = yn(g, (e) => D(e), {
+	let v = O(n), y = Dt(v), b = i.serializer ?? Ot[y], { pause: x, resume: S } = vt(g, (e) => E(e), {
 		flush: a,
 		deep: o,
 		eventFilter: f
 	});
-	j(_, () => A(), { flush: a });
-	let w = !1;
+	j(_, () => k(), { flush: a });
+	let C = !1;
 	d && s && (r instanceof Storage ? q(d, "storage", (e) => {
-		h && !w || A(e);
-	}, { passive: !0 }) : q(d, Z, (e) => {
-		h && !w || M(e);
+		(!h || C) && k(e);
+	}, { passive: !0 }) : q(d, Q, (e) => {
+		(!h || C) && A(e);
 	})), h ? W(() => {
-		w = !0, A();
-	}) : A();
-	function E(e, t) {
+		C = !0, k();
+	}) : k();
+	function w(e, t) {
 		if (d) {
 			let n = {
 				key: _.value,
@@ -712,65 +532,65 @@ function jn(e, n, r, i = {}) {
 				newValue: t,
 				storageArea: r
 			};
-			d.dispatchEvent(r instanceof Storage ? new StorageEvent("storage", n) : new CustomEvent(Z, { detail: n }));
+			d.dispatchEvent(r instanceof Storage ? new StorageEvent("storage", n) : new CustomEvent(Q, { detail: n }));
 		}
 	}
-	function D(e) {
+	function E(e) {
 		try {
 			let t = r.getItem(_.value);
-			if (e == null) E(t, null), r.removeItem(_.value);
+			if (e == null) w(t, null), r.removeItem(_.value);
 			else {
-				let n = x.write(e);
-				t !== n && (r.setItem(_.value, n), E(t, n));
+				let n = b.write(e);
+				t !== n && (r.setItem(_.value, n), w(t, n));
 			}
 		} catch (e) {
 			p(e);
 		}
 	}
-	function k(e) {
+	function D(e) {
 		let t = e ? e.newValue : r.getItem(_.value);
-		if (t == null) return c && v != null && r.setItem(_.value, x.write(v)), v;
+		if (t == null) return c && v != null && r.setItem(_.value, b.write(v)), v;
 		if (!e && l) {
-			let e = x.read(t);
+			let e = b.read(t);
 			return typeof l == "function" ? l(e, v) : y === "object" && !Array.isArray(e) ? {
 				...v,
 				...e
 			} : e;
-		} else if (typeof t != "string") return t;
-		else return x.read(t);
+		}
+		return typeof t == "string" ? b.read(t) : t;
 	}
-	function A(e) {
+	function k(e) {
 		if (!(e && e.storageArea !== r)) {
 			if (e && e.key == null) {
 				g.value = v;
 				return;
 			}
 			if (!(e && e.key !== _.value)) {
-				S();
+				x();
 				try {
-					let t = x.write(g.value);
-					(e === void 0 || e?.newValue !== t) && (g.value = k(e));
+					let t = b.write(g.value);
+					(e === void 0 || e?.newValue !== t) && (g.value = D(e));
 				} catch (e) {
 					p(e);
 				} finally {
-					e ? m(C) : C();
+					e ? m(S) : S();
 				}
 			}
 		}
 	}
-	function M(e) {
-		A(e.detail);
+	function A(e) {
+		k(e.detail);
 	}
 	return g;
 }
-var Mn = "*,*::before,*::after{-webkit-transition:none!important;-moz-transition:none!important;-o-transition:none!important;-ms-transition:none!important;transition:none!important}";
-function Nn(e = {}) {
+var At = "*,*::before,*::after{-webkit-transition:none!important;-moz-transition:none!important;-o-transition:none!important;-ms-transition:none!important;transition:none!important}";
+function $(e = {}) {
 	let { selector: n = "html", attribute: r = "class", initialValue: i = "auto", window: a = G, storage: o, storageKey: s = "vueuse-color-scheme", listenToStorageChanges: c = !0, storageRef: l, emitAuto: u, disableTransition: d = !0 } = e, f = {
 		auto: "",
 		light: "light",
 		dark: "dark",
 		...e.modes || {}
-	}, p = On({ window: a }), m = t(() => p.value ? "dark" : "light"), h = l || (s == null ? B(i) : jn(s, i, o, {
+	}, p = Z({ window: a }), m = t(() => p.value ? "dark" : "light"), h = l || (s == null ? B(i) : kt(s, i, o, {
 		window: a,
 		listenToStorageChanges: c
 	})), g = t(() => h.value === "auto" ? m.value : h.value), _ = X("updateHTMLAttrs", (e, t, n) => {
@@ -788,7 +608,7 @@ function Nn(e = {}) {
 		};
 		if (i.size === 0 && o.size === 0 && s === null) return;
 		let c;
-		d && (c = a.document.createElement("style"), c.appendChild(document.createTextNode(Mn)), a.document.head.appendChild(c));
+		d && (c = a.document.createElement("style"), c.appendChild(document.createTextNode(At)), a.document.head.appendChild(c));
 		for (let e of i) r.classList.add(e);
 		for (let e of o) r.classList.remove(e);
 		s && r.setAttribute(s.key, s.value), d && (a.getComputedStyle(c).opacity, document.head.removeChild(c));
@@ -818,38 +638,351 @@ function Nn(e = {}) {
 	});
 }
 //#endregion
-//#region src/components/SColorMode.vue
-var Pn = {
+//#region src/assets/images/w-logo-white.png
+var jt = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAhCAYAAACbffiEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5QjA3NEU2NTJDQTkxMUU0QTcxOEIwNEIyRTA4NDYxMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5QjA3NEU2NjJDQTkxMUU0QTcxOEIwNEIyRTA4NDYxMyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjlCMDc0RTYzMkNBOTExRTRBNzE4QjA0QjJFMDg0NjEzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjlCMDc0RTY0MkNBOTExRTRBNzE4QjA0QjJFMDg0NjEzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+TGF1VAAAA3RJREFUeNq0mEtPFEEQx2dXQAUPIohE4ysKvpAVBeIDFCNREw8eMTHePHjycxg9e/ATePGgB02MgLK74mNBASUxqBj1YEQMGFxYdsX1P0ltHDvVM1WzayU/Hv2o7pruqq7uSD6fTzmOUw1+OeFkJYiDC0zdPnALLIE8lUVAOTgHnjN9roEeMC8cfxW4WYYf28FqpzjZYik/A7ZZ6rothmwAG5Xjr486pZElS3mHT59jlvLfIcbPl8oQTtaBNp/6JlBfqsGi/1HPQVDjtx3ATqY8EnYCCyAL0mBR2C9D7QsOucC06RLoOWHR7ZDutOf/f7YS1RfGX4wgau3AH8tADtSC26AuYALXwVVQRR/jJ/joqXf1PQMHAvTcB6eZlaomX5kDV8B5o81dcBlU0FgzDgwx6csHyz2mn5dGkBbomQb1PnqiIMn0u2S25fZ2v2BL7AFrfeo7QaVATw05vU22MgEjS6sd6KQpwQQ2WRxV4x8FOR4QoiuMsnfgldSQb4IJHPU56TsUhrQrP0iCy0I4Q2aEq3LEUu46+GaFIS2WMF1pGSOpOUcGBROIWaLbIeVZ4BqxnylvZlKfBa0hSUl+A3Yz5adCnGeHLf5hzu8l+KQxZBR8FUygi0n4mkIY0iH0j0FbLmYzZBY8CeGoMcqxtNJihHN3y7Yy7R6GybWGBBNoo2ygICeZNl8Ed4sa47xoN/S6Mk1bS22I5GCs9Thq1LJFboA3ytXtZOqH6aOoDZkAnxWO2kAnvil3wJjS37qZ+njYNP6731J6pNUTdlcYdR/AiDCc7wJr6EbZyNQPFHMfSQj9pNySkqc8YTPoTaCOVjRG93CvTIJxv85lAcrjwgPtLNjL1PXS79e0Og0Bujot9/8RiqShV8T1k/cBbdz7wEXmkSHjyVIzlocGU3osacmDYq+6s1ymaTnNze3w1tgOAwI9zUy2kJN8BMmdvS/kPT5uvK6kFFfpwLQ9jCFDIQ15bPw/blyHpZKgVSnakDH6KhpJM4bkhMmoKY9K9Rw0T1FDIy8sh+lTpZ4f3LW2mHetfuUEks7ft15zu2UVeiboDCmZIcOO7pHbFqEmKZpJpVfzQCeRUduFhpEpn9QmI90q2q0oNWRRmC8VVm9KEc38cj3pmIEpihk93Be/OZ82VYLtkKBJLnfsL+9VdA5NSyf3R4ABABbMYvghpWrNAAAAAElFTkSuQmCC", Mt = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAhCAYAAACbffiEAAAEsmlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICB4bWxuczpleGlmPSJodHRwOi8vbnMuYWRvYmUuY29tL2V4aWYvMS4wLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMzMiCiAgIHRpZmY6SW1hZ2VXaWR0aD0iNTAiCiAgIHRpZmY6UmVzb2x1dGlvblVuaXQ9IjIiCiAgIHRpZmY6WFJlc29sdXRpb249IjMwMC8xIgogICB0aWZmOllSZXNvbHV0aW9uPSIzMDAvMSIKICAgZXhpZjpQaXhlbFhEaW1lbnNpb249IjUwIgogICBleGlmOlBpeGVsWURpbWVuc2lvbj0iMzMiCiAgIGV4aWY6Q29sb3JTcGFjZT0iMSIKICAgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIKICAgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIgogICB4bXA6TW9kaWZ5RGF0ZT0iMjAyMi0x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", Nt = {
+	inject: ["mq"],
+	setup() {
+		return {
+			colorMode: $({
+				emitAuto: !0,
+				attribute: "data-bs-theme"
+			}),
+			prefersDark: Z()
+		};
+	},
+	props: {
+		appName: {
+			type: String,
+			default: "appName"
+		},
+		appDeptName: { type: String },
+		appRootUrl: {
+			type: String,
+			default: "#"
+		},
+		isPreview: {
+			type: Boolean,
+			default: !1
+		},
+		accessibilityURL: {
+			type: String,
+			required: !1,
+			default: "https://www.washington.edu/accessibility/"
+		},
+		privacyURL: {
+			type: String,
+			required: !1,
+			default: "https://www.washington.edu/online/privacy/"
+		},
+		termsURL: {
+			type: String,
+			required: !1,
+			default: "https://www.washington.edu/online/terms/"
+		}
+	},
+	computed: {
+		isDark() {
+			return this.colorMode === "dark" || this.colorMode !== "light" && this.prefersDark;
+		},
+		logoSrc() {
+			return this.isDark ? jt : Mt;
+		},
+		borderColorClass() {
+			return this.isDark ? "border-white" : "border-black";
+		}
+	}
+}, Pt = { class: "w-100" }, Ft = { class: "container-xl" }, It = { class: "d-flex justify-content-between align-items-center" }, Lt = { class: "d-flex flex-fill align-items-center my-4" }, Rt = ["src"], zt = { class: "flex-fill flex-column text-body" }, Bt = {
+	key: 0,
+	class: "fw-light text-nowrap",
+	style: { "margin-bottom": "-7px" }
+}, Vt = ["href"], Ht = ["href"], Ut = { class: "d-flex justify-content-end align-items-center" }, Wt = {
+	key: 1,
+	class: "btn btn-link btn-sm d-md-none ms-1 py-0 py-1 text-body",
+	"data-bs-toggle": "collapse",
+	"data-bs-target": "#navbarToggler",
+	"aria-controls": "navbarToggler",
+	"aria-expanded": "false",
+	"aria-label": "Toggle navigation"
+}, Gt = {
+	key: 0,
+	class: "navbar navbar-expand-md py-xl-2 bg-body-secondary w-100 p-0"
+}, Kt = { class: "container-xl" }, qt = {
+	class: "navbar-collapse collapse",
+	id: "navbarToggler"
+}, Jt = {
+	key: 1,
+	class: "bg-info-subtle w-100"
+}, Yt = { class: "container-xl" }, Xt = { class: "container-xl flex-fill" }, Zt = { class: "row" }, Qt = { class: "col" }, $t = {
+	key: 0,
+	class: "col-sm-12 col-xl-3"
+}, en = { class: "bg-body-tertiary w-100" }, tn = { class: "container-xl" }, nn = { class: "row" }, rn = { class: "col small font-weight-light my-4" }, an = { class: "list-inline sol-middot-list m-0" }, on = { class: "list-inline-item" }, sn = ["href"], cn = { class: "list-inline-item" }, ln = ["href"], un = { class: "list-inline-item" }, dn = ["href"], fn = { class: "" };
+function pn(e, t, a, s, c, l) {
+	return y(), r("div", { class: h([[a.isPreview ? " " : "min-vh-100"], "d-flex align-items-end flex-column"]) }, [
+		i("header", Pt, [i("div", Ft, [i("div", It, [i("div", Lt, [i("div", { class: h(["border-end border-opacity-25 me-3 pe-3", l.borderColorClass]) }, [i("img", {
+			src: l.logoSrc,
+			alt: "UW logo",
+			class: "my-1",
+			style: { height: "30px" }
+		}, null, 8, Rt)], 2), i("div", zt, [
+			a.appDeptName ? (y(), r("div", Bt, E(a.appDeptName), 1)) : n("", !0),
+			i("a", {
+				href: a.appRootUrl,
+				class: "d-inline-block d-sm-none ff-encode-sans text-decoration-none fs-3 fw-medium text-truncate text-nowrap text-body",
+				style: { "max-width": "180px" }
+			}, E(a.appName), 9, Vt),
+			i("a", {
+				href: a.appRootUrl,
+				class: "d-none d-sm-inline-block ff-encode-sans text-decoration-none fs-3 fw-medium text-nowrap text-body"
+			}, E(a.appName), 9, Ht)
+		])]), i("div", Ut, [e.$slots.settings ? S(e.$slots, "settings", {}, () => [t[0] ||= o("user info", -1)], void 0, 0) : n("", !0), e.$slots.navigation ? (y(), r("a", Wt, [...t[1] ||= [i("i", { class: "bi bi-list fs-3" }, null, -1)]])) : n("", !0)])])])]),
+		e.$slots.navigation ? (y(), r("nav", Gt, [i("div", Kt, [i("div", qt, [S(e.$slots, "navigation", {}, () => [t[2] ||= o("navigation bar", -1)])])])])) : n("", !0),
+		e.$slots.system ? (y(), r("div", Jt, [i("div", Yt, [S(e.$slots, "system", {}, () => [t[3] ||= o("system messages", -1)])])])) : n("", !0),
+		i("div", Xt, [i("div", Zt, [i("main", Qt, [S(e.$slots, "main", {}, () => [t[4] ||= i("div", { style: { outline: "dashed 1px lightgray" } }, [i("h1", null, "Hello world..."), i("p", null, " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa. ")], -1)])]), e.$slots.aside ? (y(), r("aside", $t, [S(e.$slots, "aside", {}, () => [t[5] ||= o("aside content", -1)])])) : n("", !0)])]),
+		i("footer", en, [i("div", tn, [e.$slots.footer ? S(e.$slots, "footer", {}, () => [i("div", nn, [i("div", rn, [i("ul", an, [
+			i("li", on, [a.accessibilityURL ? (y(), r("a", {
+				key: 0,
+				href: a.accessibilityURL,
+				target: "_blank",
+				rel: "noopener",
+				class: "link-body-emphasis"
+			}, "Accessibility", 8, sn)) : n("", !0)]),
+			i("li", cn, [a.privacyURL ? (y(), r("a", {
+				key: 0,
+				href: a.privacyURL,
+				target: "_blank",
+				rel: "noopener",
+				class: "link-body-emphasis"
+			}, "Privacy", 8, ln)) : n("", !0)]),
+			i("li", un, [a.termsURL ? (y(), r("a", {
+				key: 0,
+				href: a.termsURL,
+				target: "_blank",
+				rel: "noopener",
+				class: "link-body-emphasis"
+			}, "Terms", 8, dn)) : n("", !0)])
+		]), i("div", fn, " Copyright © " + E((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)])])], void 0, 0) : n("", !0)])])
+	], 2);
+}
+var mn = /*#__PURE__*/ L(Nt, [["render", pn]]), hn = {
+	inject: ["mq"],
+	data() {
+		return { logoSrc: jt };
+	},
+	props: {
+		appName: {
+			type: String,
+			default: "appName"
+		},
+		appDeptName: { type: String },
+		appRootUrl: {
+			type: String,
+			default: "#"
+		},
+		isPreview: {
+			type: Boolean,
+			default: !1
+		},
+		accessibilityURL: {
+			type: String,
+			required: !1,
+			default: "https://www.washington.edu/accessibility/"
+		},
+		privacyURL: {
+			type: String,
+			required: !1,
+			default: "https://www.washington.edu/online/privacy/"
+		},
+		termsURL: {
+			type: String,
+			required: !1,
+			default: "https://www.washington.edu/online/terms/"
+		}
+	}
+}, gn = { class: "bg-spirit-purple w-100" }, _n = { class: "container-xl" }, vn = { class: "d-flex justify-content-between align-items-center" }, yn = { class: "d-flex flex-fill align-items-center my-4" }, bn = { class: "border-end border-opacity-25 me-3 border-white pe-3" }, xn = ["src"], Sn = { class: "flex-fill flex-column text-white" }, Cn = {
+	key: 0,
+	class: "fw-light text-nowrap",
+	style: { "margin-bottom": "-7px" }
+}, wn = ["href"], Tn = ["href"], En = { class: "d-flex justify-content-end align-items-center" }, Dn = {
+	key: 1,
+	class: "btn btn-link btn-sm d-md-none ms-1 py-0 py-1 text-white",
+	"data-bs-toggle": "collapse",
+	"data-bs-target": "#navbarToggler",
+	"aria-controls": "navbarToggler",
+	"aria-expanded": "false",
+	"aria-label": "Toggle navigation"
+}, On = {
+	key: 0,
+	class: "navbar navbar-expand-md py-xl-2 bg-husky-purple w-100 p-0"
+}, kn = { class: "container-xl" }, An = {
+	class: "navbar-collapse collapse",
+	id: "navbarToggler"
+}, jn = {
+	key: 1,
+	class: "bg-info-subtle w-100"
+}, Mn = { class: "container-xl" }, Nn = { class: "container-xl flex-fill" }, Pn = { class: "row" }, Fn = { class: "col" }, In = {
+	key: 0,
+	class: "col-sm-12 col-xl-3"
+}, Ln = { class: "bg-body-tertiary w-100" }, Rn = { class: "container-xl" }, zn = { class: "row" }, Bn = { class: "col small font-weight-light my-4" }, Vn = { class: "list-inline sol-middot-list m-0" }, Hn = { class: "list-inline-item" }, Un = ["href"], Wn = { class: "list-inline-item" }, Gn = ["href"], Kn = { class: "list-inline-item" }, qn = ["href"], Jn = { class: "" };
+function Yn(e, t, a, s, c, l) {
+	return y(), r("div", { class: h([[a.isPreview ? " " : "min-vh-100"], "d-flex align-items-end flex-column"]) }, [
+		i("header", gn, [i("div", _n, [i("div", vn, [i("div", yn, [i("div", bn, [i("img", {
+			src: c.logoSrc,
+			alt: "UW logo",
+			class: "my-1",
+			style: { height: "30px" }
+		}, null, 8, xn)]), i("div", Sn, [
+			a.appDeptName ? (y(), r("div", Cn, E(a.appDeptName), 1)) : n("", !0),
+			i("a", {
+				href: a.appRootUrl,
+				class: "d-inline-block d-sm-none ff-encode-sans text-decoration-none fs-3 fw-medium text-truncate text-nowrap text-white",
+				style: { "max-width": "180px" }
+			}, E(a.appName), 9, wn),
+			i("a", {
+				href: a.appRootUrl,
+				class: "d-none d-sm-inline-block ff-encode-sans text-decoration-none fs-3 fw-medium text-nowrap text-white"
+			}, E(a.appName), 9, Tn)
+		])]), i("div", En, [e.$slots.settings ? S(e.$slots, "settings", {}, () => [t[0] ||= o("user info", -1)], void 0, 0) : n("", !0), e.$slots.navigation ? (y(), r("a", Dn, [...t[1] ||= [i("i", { class: "bi bi-list fs-3" }, null, -1)]])) : n("", !0)])])])]),
+		e.$slots.navigation ? (y(), r("nav", On, [i("div", kn, [i("div", An, [S(e.$slots, "navigation", {}, () => [t[2] ||= o("navigation bar", -1)])])])])) : n("", !0),
+		e.$slots.system ? (y(), r("div", jn, [i("div", Mn, [S(e.$slots, "system", {}, () => [t[3] ||= o("system messages", -1)])])])) : n("", !0),
+		i("div", Nn, [i("div", Pn, [i("main", Fn, [S(e.$slots, "main", {}, () => [t[4] ||= i("div", { style: { outline: "dashed 1px lightgray" } }, [i("h1", null, "Hello world..."), i("p", null, " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam, soluta omnis repudiandae aliquam nesciunt nisi nulla, ducimus eligendi natus voluptatum iusto reiciendis deserunt tempora praesentium laboriosam ullam facilis velit culpa. ")], -1)])]), e.$slots.aside ? (y(), r("aside", In, [S(e.$slots, "aside", {}, () => [t[5] ||= o("aside content", -1)])])) : n("", !0)])]),
+		i("footer", Ln, [i("div", Rn, [e.$slots.footer ? S(e.$slots, "footer", {}, () => [i("div", zn, [i("div", Bn, [i("ul", Vn, [
+			i("li", Hn, [a.accessibilityURL ? (y(), r("a", {
+				key: 0,
+				href: a.accessibilityURL,
+				target: "_blank",
+				rel: "noopener",
+				class: "link-body-emphasis"
+			}, "Accessibility", 8, Un)) : n("", !0)]),
+			i("li", Wn, [a.privacyURL ? (y(), r("a", {
+				key: 0,
+				href: a.privacyURL,
+				target: "_blank",
+				rel: "noopener",
+				class: "link-body-emphasis"
+			}, "Privacy", 8, Gn)) : n("", !0)]),
+			i("li", Kn, [a.termsURL ? (y(), r("a", {
+				key: 0,
+				href: a.termsURL,
+				target: "_blank",
+				rel: "noopener",
+				class: "link-body-emphasis"
+			}, "Terms", 8, qn)) : n("", !0)])
+		]), i("div", Jn, " Copyright © " + E((/* @__PURE__ */ new Date()).getFullYear()) + " University of Washington ", 1)])])], void 0, 0) : n("", !0)])])
+	], 2);
+}
+var Xn = /*#__PURE__*/ L(hn, [["render", Yn]]), Zn = {
+	props: {
+		variant: {
+			type: String,
+			default: "standard"
+		},
+		userNetid: {
+			type: String,
+			required: !0
+		},
+		userOverride: {
+			type: String,
+			required: !1
+		},
+		userOfficialName: { type: String },
+		userPreferredName: { type: String },
+		userPronouns: { type: String },
+		signoutUrl: { type: String },
+		profileUrl: { type: String }
+	},
+	data() {
+		return {};
+	}
+}, Qn = {
+	key: 0,
+	class: "d-flex align-items-center"
+}, $n = { class: "flex-fill dropdown" }, er = {
+	key: 0,
+	class: "text-decoration-none py-2 text-white",
+	href: "#",
+	role: "button",
+	id: "dropdownMenuButton1",
+	"data-bs-toggle": "dropdown",
+	"aria-expanded": "false"
+}, tr = { class: "me-1" }, nr = { class: "text-decoration-underline" }, rr = {
+	key: 1,
+	class: "text-decoration-none py-2 text-white",
+	href: "#",
+	role: "button",
+	id: "dropdownMenuButton1",
+	"data-bs-toggle": "dropdown",
+	"aria-expanded": "false"
+}, ir = {
+	class: "dropdown-menu p-3",
+	"aria-labelledby": "dropdownMenuButton1",
+	style: { width: "220px" }
+}, ar = {
+	key: 0,
+	class: "text-danger"
+}, or = { class: "" }, sr = { class: "" }, cr = ["href"], lr = ["href"], ur = {
+	key: 1,
+	class: "d-flex align-items-center text-nowrap"
+}, dr = {
+	key: 0,
+	class: "flex-fill text-white"
+}, fr = { class: "me-1" }, pr = {
+	key: 1,
+	class: "flex-fill text-white"
+}, mr = { class: "flex-fill ms-2 text-end" }, hr = ["href"];
+function gr(e, t, a, s, c, l) {
+	return a.variant === "flyout" ? (y(), r("div", Qn, [i("div", $n, [a.userOverride ? (y(), r("a", er, [
+		i("span", tr, E(a.userNetid), 1),
+		t[0] ||= i("i", { class: "bi bi-arrow-right text-danger me-1" }, null, -1),
+		i("span", nr, E(a.userOverride), 1)
+	])) : (y(), r("a", rr, E(a.userNetid), 1)), i("div", ir, [
+		a.userOverride ? (y(), r("p", ar, [
+			t[1] ||= o(" overriding as ", -1),
+			t[2] ||= i("i", { class: "bi bi-arrow-right text-danger" }, null, -1),
+			o(" " + E(a.userOverride), 1)
+		])) : n("", !0),
+		i("p", or, E(a.userOfficialName) + ", " + E(a.userPreferredName) + ", " + E(a.userPronouns), 1),
+		i("p", sr, [i("a", { href: a.profileUrl }, "go to profile", 8, cr)]),
+		i("div", null, [a.signoutUrl ? S(e.$slots, "default", {}, () => [i("a", { href: a.signoutUrl }, "Sign out", 8, lr)], void 0, 0) : S(e.$slots, "default", {}, () => [t[3] ||= i("a", { href: "sadkf" }, "sign out test", -1)], void 0, 1)])
+	])])])) : (y(), r("div", ur, [a.userOverride ? (y(), r("div", dr, [
+		i("span", fr, E(a.userNetid), 1),
+		t[4] ||= i("i", { class: "bi bi-arrow-right text-danger" }, null, -1),
+		o(" " + E(a.userOverride), 1)
+	])) : (y(), r("div", pr, E(a.userNetid), 1)), i("div", mr, [a.signoutUrl ? S(e.$slots, "default", {}, () => [i("a", {
+		href: a.signoutUrl,
+		class: "text-white"
+	}, "Sign out", 8, hr)], void 0, 0) : S(e.$slots, "default", {}, () => [t[5] ||= i("a", { href: "sadkf" }, "sign out test", -1)], void 0, 1)])]));
+}
+var _r = /*#__PURE__*/ L(Zn, [["render", gr]]), vr = {
 	props: { colorClass: {
 		type: String,
 		default: "text-body"
 	} },
 	setup() {
-		return { colorMode: Nn({
+		return { colorMode: $({
 			emitAuto: !0,
 			attribute: "data-bs-theme"
 		}) };
 	}
-}, Fn = { class: "d-flex align-items-center" }, In = { class: "bi bi-brightness-high-fill" }, Ln = { class: "bi bi-moon-stars-fill" }, Rn = { class: "bi bi-circle-half" }, zn = { class: "dropdown-menu p-1" }, Bn = { class: "mb-1" }, Vn = { class: "mb-1" };
-function Hn(e, t, n, a, s, c) {
-	return v(), r("div", Fn, [i("div", null, [i("button", {
+}, yr = { class: "d-flex align-items-center" }, br = { class: "bi bi-brightness-high-fill" }, xr = { class: "bi bi-moon-stars-fill" }, Sr = { class: "bi bi-circle-half" }, Cr = { class: "dropdown-menu p-1" }, wr = { class: "mb-1" }, Tr = { class: "mb-1" };
+function Er(e, t, n, a, s, c) {
+	return y(), r("div", yr, [i("div", null, [i("button", {
 		class: h(["btn btn-link dropdown-toggle p-1", n.colorClass]),
 		type: "button",
 		"data-bs-toggle": "dropdown",
 		"aria-expanded": "false",
 		"aria-label": "Choose color mode"
 	}, [
-		N(i("i", In, null, 512), [[A, a.colorMode == "light"]]),
-		N(i("i", Ln, null, 512), [[A, a.colorMode == "dark"]]),
-		N(i("i", Rn, null, 512), [[A, a.colorMode == "auto"]])
-	], 2), i("ul", zn, [
-		i("li", Bn, [i("a", {
+		M(i("i", br, null, 512), [[A, a.colorMode == "light"]]),
+		M(i("i", xr, null, 512), [[A, a.colorMode == "dark"]]),
+		M(i("i", Sr, null, 512), [[A, a.colorMode == "auto"]])
+	], 2), i("ul", Cr, [
+		i("li", wr, [i("a", {
 			class: h(["dropdown-item rounded", a.colorMode == "light" ? "active" : ""]),
 			href: "#",
 			role: "button",
 			onClick: t[0] ||= (e) => a.colorMode = "light"
 		}, [...t[3] ||= [i("i", { class: "bi bi-brightness-high-fill me-2" }, null, -1), o("Light", -1)]], 2)]),
-		i("li", Vn, [i("a", {
+		i("li", Tr, [i("a", {
 			class: h(["dropdown-item rounded", a.colorMode == "dark" ? "active" : ""]),
 			href: "#",
 			role: "button",
@@ -863,36 +996,34 @@ function Hn(e, t, n, a, s, c) {
 		}, [...t[5] ||= [i("i", { class: "bi bi-circle-half me-2" }, null, -1), o("Auto", -1)]], 2)])
 	])])]);
 }
-var Un = /*#__PURE__*/ L(Pn, [["render", Hn]]);
+var Dr = /*#__PURE__*/ L(vr, [["render", Er]]);
 //#endregion
-//#region node_modules/.pnpm/country-flag-icons@1.6.20/node_modules/country-flag-icons/modules/unicode.js
-function Wn(e) {
-	return Q(e[0]) + Q(e[1]);
+//#region node_modules/country-flag-icons/modules/unicode.js
+function Or(e) {
+	return kr(e[0]) + kr(e[1]);
 }
-function Q(e) {
+function kr(e) {
 	return String.fromCodePoint(127397 + e.toUpperCase().charCodeAt(0));
 }
 //#endregion
-//#region node_modules/.pnpm/country-codes-list@2.1.0/node_modules/country-codes-list/dist/utils/groupBy.js
-var Gn = /* @__PURE__ */ I(((e) => {
-	Object.defineProperty(e, "__esModule", { value: !0 });
+//#region node_modules/country-codes-list/dist/utils/groupBy.js
+var Ar = /* @__PURE__ */ I(((e) => {
+	Object.defineProperty(e, "__esModule", { value: !0 }), e.default = t;
 	function t(e, t) {
 		return e.reduce((e, n) => {
 			let r = String(n[t]);
 			return e[r] || (e[r] = []), e[r].push(n), e;
 		}, {});
 	}
-	e.default = t;
-})), Kn = /* @__PURE__ */ I(((e) => {
-	Object.defineProperty(e, "__esModule", { value: !0 });
+})), jr = /* @__PURE__ */ I(((e) => {
+	Object.defineProperty(e, "__esModule", { value: !0 }), e.default = t;
 	function t(e, t) {
 		return e.replace(/{([^{}]*)}/g, (e, n) => {
 			let r = t[n];
 			return typeof r == "string" || typeof r == "number" ? r.toString() : e;
 		});
 	}
-	e.default = t;
-})), qn = /* @__PURE__ */ I(((e) => {
+})), Mr = /* @__PURE__ */ I(((e) => {
 	Object.defineProperty(e, "__esModule", { value: !0 }), e.default = [
 		{
 			countryNameEn: "Andorra",
@@ -909,7 +1040,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "376",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇦🇩"
+			flag: "🇦🇩",
+			countryCodeNumeric: "020",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [6, 9]
 		},
 		{
 			countryNameEn: "Afghanistan",
@@ -926,7 +1062,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "93",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇦🇫"
+			flag: "🇦🇫",
+			countryCodeNumeric: "004",
+			currencyNumeric: "971",
+			currencyDecimals: 2,
+			currencySymbol: "؋",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Antigua and Barbuda",
@@ -940,10 +1081,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1268",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["268"],
 			region: "South/Latin America",
-			flag: "🇦🇬"
+			flag: "🇦🇬",
+			countryCodeNumeric: "028",
+			currencyNumeric: "951",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Anguilla",
@@ -957,10 +1103,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1264",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["264"],
 			region: "South/Latin America",
-			flag: "🇦🇮"
+			flag: "🇦🇮",
+			countryCodeNumeric: "660",
+			currencyNumeric: "951",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Albania",
@@ -977,7 +1128,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "355",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇦🇱"
+			flag: "🇦🇱",
+			countryCodeNumeric: "008",
+			currencyNumeric: "008",
+			currencyDecimals: 2,
+			currencySymbol: "ALL",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Armenia",
@@ -994,7 +1150,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "374",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇦🇲"
+			flag: "🇦🇲",
+			countryCodeNumeric: "051",
+			currencyNumeric: "051",
+			currencyDecimals: 2,
+			currencySymbol: "֏",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Angola",
@@ -1011,7 +1172,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "244",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇦🇴"
+			flag: "🇦🇴",
+			countryCodeNumeric: "024",
+			currencyNumeric: "973",
+			currencyDecimals: 2,
+			currencySymbol: "Kz",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Antarctica",
@@ -1028,7 +1194,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "672",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇦🇶"
+			flag: "🇦🇶",
+			countryCodeNumeric: "010",
+			currencyNumeric: "",
+			currencyDecimals: null,
+			currencySymbol: "",
+			nationalNumberLengths: []
 		},
 		{
 			countryNameEn: "Argentina",
@@ -1045,7 +1216,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "54",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇦🇷"
+			flag: "🇦🇷",
+			countryCodeNumeric: "032",
+			currencyNumeric: "032",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10, 11]
 		},
 		{
 			countryNameEn: "American Samoa",
@@ -1059,10 +1235,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1684",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["684"],
 			region: "Asia & Pacific",
-			flag: "🇦🇸"
+			flag: "🇦🇸",
+			countryCodeNumeric: "016",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Austria",
@@ -1079,7 +1260,23 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "43",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇦🇹"
+			flag: "🇦🇹",
+			countryCodeNumeric: "040",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13
+			]
 		},
 		{
 			countryNameEn: "Australia",
@@ -1096,7 +1293,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "61",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇦🇺"
+			flag: "🇦🇺",
+			countryCodeNumeric: "036",
+			currencyNumeric: "036",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Aruba",
@@ -1113,7 +1315,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "297",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇦🇼"
+			flag: "🇦🇼",
+			countryCodeNumeric: "533",
+			currencyNumeric: "533",
+			currencyDecimals: 2,
+			currencySymbol: "AWG",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Åland Islands",
@@ -1130,7 +1337,18 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "358",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇦🇽"
+			flag: "🇦🇽",
+			countryCodeNumeric: "248",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				6,
+				7,
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Azerbaijan",
@@ -1147,7 +1365,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "994",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇦🇿"
+			flag: "🇦🇿",
+			countryCodeNumeric: "031",
+			currencyNumeric: "944",
+			currencyDecimals: 2,
+			currencySymbol: "₼",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Bosnia and Herzegovina",
@@ -1164,7 +1387,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "387",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇧🇦"
+			flag: "🇧🇦",
+			countryCodeNumeric: "070",
+			currencyNumeric: "977",
+			currencyDecimals: 2,
+			currencySymbol: "KM",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Barbados",
@@ -1178,10 +1406,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1246",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["246"],
 			region: "South/Latin America",
-			flag: "🇧🇧"
+			flag: "🇧🇧",
+			countryCodeNumeric: "052",
+			currencyNumeric: "052",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Bangladesh",
@@ -1198,7 +1431,18 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "880",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇧🇩"
+			flag: "🇧🇩",
+			countryCodeNumeric: "050",
+			currencyNumeric: "050",
+			currencyDecimals: 2,
+			currencySymbol: "৳",
+			nationalNumberLengths: [
+				6,
+				7,
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Belgium",
@@ -1207,7 +1451,7 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCodeAlpha3: "BEL",
 			currencyCode: "EUR",
 			currencyNameEn: "Euro",
-			tinType: "n° TVABTW-nr Mwst-nr",
+			tinType: "n° TVA / BTW-nr / MwSt-nr",
 			tinName: "BTW identificatienummer / Numéro de TVA",
 			officialLanguageCode: "nl",
 			officialLanguageNameEn: "Dutch, Flemish",
@@ -1215,7 +1459,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "32",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇧🇪"
+			flag: "🇧🇪",
+			countryCodeNumeric: "056",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Burkina Faso",
@@ -1226,21 +1475,26 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			currencyNameEn: "CFA franc BCEAO",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "fr",
-			officialLanguageNameEn: "French",
-			officialLanguageNameLocal: "Français",
+			officialLanguageCode: "mos",
+			officialLanguageNameEn: "Mooré",
+			officialLanguageNameLocal: "Mòoré",
 			countryCallingCode: "226",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇧🇫"
+			flag: "🇧🇫",
+			countryCodeNumeric: "854",
+			currencyNumeric: "952",
+			currencyDecimals: 0,
+			currencySymbol: "F CFA",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Bulgaria",
 			countryNameLocal: "България",
 			countryCode: "BG",
 			countryCodeAlpha3: "BGR",
-			currencyCode: "BGN",
-			currencyNameEn: "Bulgarian lev",
+			currencyCode: "EUR",
+			currencyNameEn: "Euro",
 			tinType: "ДДС номер",
 			tinName: "Идентификационен номер по ДДС",
 			officialLanguageCode: "bg",
@@ -1249,7 +1503,17 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "359",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇧🇬"
+			flag: "🇧🇬",
+			countryCodeNumeric: "100",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				6,
+				7,
+				8,
+				9
+			]
 		},
 		{
 			countryNameEn: "Bahrain",
@@ -1266,7 +1530,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "973",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇧🇭"
+			flag: "🇧🇭",
+			countryCodeNumeric: "048",
+			currencyNumeric: "048",
+			currencyDecimals: 3,
+			currencySymbol: "BHD",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Burundi",
@@ -1283,7 +1552,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "257",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇧🇮"
+			flag: "🇧🇮",
+			countryCodeNumeric: "108",
+			currencyNumeric: "108",
+			currencyDecimals: 0,
+			currencySymbol: "BIF",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Benin",
@@ -1300,7 +1574,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "229",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇧🇯"
+			flag: "🇧🇯",
+			countryCodeNumeric: "204",
+			currencyNumeric: "952",
+			currencyDecimals: 0,
+			currencySymbol: "F CFA",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Saint Barthélemy",
@@ -1317,7 +1596,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "590",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇧🇱"
+			flag: "🇧🇱",
+			countryCodeNumeric: "652",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Bermuda",
@@ -1331,10 +1615,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1441",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["441"],
 			region: "North America",
-			flag: "🇧🇲"
+			flag: "🇧🇲",
+			countryCodeNumeric: "060",
+			currencyNumeric: "060",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Brunei Darussalam",
@@ -1351,7 +1640,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "673",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇧🇳"
+			flag: "🇧🇳",
+			countryCodeNumeric: "096",
+			currencyNumeric: "096",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Bolivia (Plurinational State of)",
@@ -1359,7 +1653,7 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCode: "BO",
 			countryCodeAlpha3: "BOL",
 			currencyCode: "BOB",
-			currencyNameEn: "",
+			currencyNameEn: "Boliviano",
 			tinType: "NIT",
 			tinName: "Número de Identificación Tributaria",
 			officialLanguageCode: "es",
@@ -1368,7 +1662,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "591",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇧🇴"
+			flag: "🇧🇴",
+			countryCodeNumeric: "068",
+			currencyNumeric: "068",
+			currencyDecimals: 2,
+			currencySymbol: "Bs",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Bonaire, Sint Eustatius and Saba",
@@ -1382,10 +1681,19 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "nl",
 			officialLanguageNameEn: "Dutch, Flemish",
 			officialLanguageNameLocal: "Nederlands, Vlaams",
-			countryCallingCode: "5997",
-			areaCodes: [],
-			region: "Unknown",
-			flag: "🇧🇶"
+			countryCallingCode: "599",
+			areaCodes: [
+				"7",
+				"4",
+				"3"
+			],
+			region: "South/Latin America",
+			flag: "🇧🇶",
+			countryCodeNumeric: "535",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Brazil",
@@ -1402,7 +1710,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "55",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇧🇷"
+			flag: "🇧🇷",
+			countryCodeNumeric: "076",
+			currencyNumeric: "986",
+			currencyDecimals: 2,
+			currencySymbol: "R$",
+			nationalNumberLengths: [10, 11]
 		},
 		{
 			countryNameEn: "Bhutan",
@@ -1419,7 +1732,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "975",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇧🇹"
+			flag: "🇧🇹",
+			countryCodeNumeric: "064",
+			currencyNumeric: "064",
+			currencyDecimals: 2,
+			currencySymbol: "BTN",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Bouvet Island",
@@ -1436,7 +1754,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "47",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇧🇻"
+			flag: "🇧🇻",
+			countryCodeNumeric: "074",
+			currencyNumeric: "578",
+			currencyDecimals: 2,
+			currencySymbol: "kr",
+			nationalNumberLengths: []
 		},
 		{
 			countryNameEn: "Botswana",
@@ -1453,7 +1776,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "267",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇧🇼"
+			flag: "🇧🇼",
+			countryCodeNumeric: "072",
+			currencyNumeric: "072",
+			currencyDecimals: 2,
+			currencySymbol: "P",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Belarus",
@@ -1461,7 +1789,7 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCode: "BY",
 			countryCodeAlpha3: "BLR",
 			currencyCode: "BYN",
-			currencyNameEn: "",
+			currencyNameEn: "Belarusian ruble",
 			tinType: "УНП (UNP)",
 			tinName: "Учетный номер плательщика",
 			officialLanguageCode: "be",
@@ -1470,7 +1798,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "375",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇧🇾"
+			flag: "🇧🇾",
+			countryCodeNumeric: "112",
+			currencyNumeric: "933",
+			currencyDecimals: 2,
+			currencySymbol: "BYN",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Belize",
@@ -1487,7 +1820,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "501",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇧🇿"
+			flag: "🇧🇿",
+			countryCodeNumeric: "084",
+			currencyNumeric: "084",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Canada",
@@ -1502,9 +1840,14 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
 			countryCallingCode: "1",
-			areaCodes: /* @__PURE__ */ "403.587.780.825.236.250.604.672.778.204.431.506.709.782.902.226.249.289.343.365.416.437.519.548.613.647.705.807.905.367.418.438.450.514.579.581.819.873.306.639.867".split("."),
+			areaCodes: /* @__PURE__ */ "204.226.236.249.250.257.263.289.306.343.354.365.367.368.382.403.416.418.428.431.437.438.450.468.474.506.514.519.548.579.581.584.587.604.613.639.647.672.683.705.709.742.753.778.780.782.807.819.825.867.873.879.902.905.942".split("."),
 			region: "North America",
-			flag: "🇨🇦"
+			flag: "🇨🇦",
+			countryCodeNumeric: "124",
+			currencyNumeric: "124",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Switzerland",
@@ -1521,7 +1864,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "41",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇨🇭"
+			flag: "🇨🇭",
+			countryCodeNumeric: "756",
+			currencyNumeric: "756",
+			currencyDecimals: 2,
+			currencySymbol: "CHF",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Côte d'Ivoire",
@@ -1538,7 +1886,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "225",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇨🇮"
+			flag: "🇨🇮",
+			countryCodeNumeric: "384",
+			currencyNumeric: "952",
+			currencyDecimals: 0,
+			currencySymbol: "F CFA",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Chile",
@@ -1555,7 +1908,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "56",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇨🇱"
+			flag: "🇨🇱",
+			countryCodeNumeric: "152",
+			currencyNumeric: "152",
+			currencyDecimals: 0,
+			currencySymbol: "$",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Cameroon",
@@ -1572,7 +1930,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "237",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇨🇲"
+			flag: "🇨🇲",
+			countryCodeNumeric: "120",
+			currencyNumeric: "950",
+			currencyDecimals: 0,
+			currencySymbol: "FCFA",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "China",
@@ -1583,13 +1946,24 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			currencyNameEn: "Renminbi (Chinese) yuan",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "zh-hans",
-			officialLanguageNameEn: "",
-			officialLanguageNameLocal: "",
+			officialLanguageCode: "zh",
+			officialLanguageNameEn: "Chinese",
+			officialLanguageNameLocal: "中文",
 			countryCallingCode: "86",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇨🇳"
+			flag: "🇨🇳",
+			countryCodeNumeric: "156",
+			currencyNumeric: "156",
+			currencyDecimals: 2,
+			currencySymbol: "¥",
+			nationalNumberLengths: [
+				7,
+				8,
+				9,
+				10,
+				11
+			]
 		},
 		{
 			countryNameEn: "Colombia",
@@ -1606,7 +1980,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "57",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇨🇴"
+			flag: "🇨🇴",
+			countryCodeNumeric: "170",
+			currencyNumeric: "170",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [8, 10]
 		},
 		{
 			countryNameEn: "Costa Rica",
@@ -1623,15 +2002,20 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "506",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇨🇷"
+			flag: "🇨🇷",
+			countryCodeNumeric: "188",
+			currencyNumeric: "188",
+			currencyDecimals: 2,
+			currencySymbol: "₡",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Cuba",
 			countryNameLocal: "Cuba",
 			countryCode: "CU",
 			countryCodeAlpha3: "CUB",
-			currencyCode: "CUC",
-			currencyNameEn: "Cuban convertible peso",
+			currencyCode: "CUP",
+			currencyNameEn: "Cuban peso",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "es",
@@ -1640,7 +2024,17 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "53",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇨🇺"
+			flag: "🇨🇺",
+			countryCodeNumeric: "192",
+			currencyNumeric: "192",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [
+				6,
+				7,
+				8,
+				10
+			]
 		},
 		{
 			countryNameEn: "Cabo Verde",
@@ -1657,24 +2051,34 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "238",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇨🇻"
+			flag: "🇨🇻",
+			countryCodeNumeric: "132",
+			currencyNumeric: "132",
+			currencyDecimals: 2,
+			currencySymbol: "CVE",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Curaçao",
 			countryNameLocal: "Curaçao",
 			countryCode: "CW",
 			countryCodeAlpha3: "CUW",
-			currencyCode: "ANG",
-			currencyNameEn: "Netherlands Antillean guilder",
+			currencyCode: "XCG",
+			currencyNameEn: "Caribbean guilder",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "nl",
 			officialLanguageNameEn: "Dutch, Flemish",
 			officialLanguageNameLocal: "Nederlands, Vlaams",
 			countryCallingCode: "599",
-			areaCodes: [],
-			region: "Unknown",
-			flag: "🇨🇼"
+			areaCodes: ["9"],
+			region: "South/Latin America",
+			flag: "🇨🇼",
+			countryCodeNumeric: "531",
+			currencyNumeric: "532",
+			currencyDecimals: 2,
+			currencySymbol: "Cg.",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Christmas Island",
@@ -1689,9 +2093,14 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
 			countryCallingCode: "61",
-			areaCodes: [],
+			areaCodes: ["8"],
 			region: "Asia & Pacific",
-			flag: "🇨🇽"
+			flag: "🇨🇽",
+			countryCodeNumeric: "162",
+			currencyNumeric: "036",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Cyprus",
@@ -1708,7 +2117,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "357",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇨🇾"
+			flag: "🇨🇾",
+			countryCodeNumeric: "196",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Germany",
@@ -1725,7 +2139,24 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "49",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇩🇪"
+			flag: "🇩🇪",
+			countryCodeNumeric: "276",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15
+			]
 		},
 		{
 			countryNameEn: "Djibouti",
@@ -1742,7 +2173,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "253",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇩🇯"
+			flag: "🇩🇯",
+			countryCodeNumeric: "262",
+			currencyNumeric: "262",
+			currencyDecimals: 0,
+			currencySymbol: "DJF",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Denmark",
@@ -1759,7 +2195,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "45",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇩🇰"
+			flag: "🇩🇰",
+			countryCodeNumeric: "208",
+			currencyNumeric: "208",
+			currencyDecimals: 2,
+			currencySymbol: "kr",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Dominica",
@@ -1773,10 +2214,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "767",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["767"],
 			region: "South/Latin America",
-			flag: "🇩🇲"
+			flag: "🇩🇲",
+			countryCodeNumeric: "212",
+			currencyNumeric: "951",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Algeria",
@@ -1793,7 +2239,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "213",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇩🇿"
+			flag: "🇩🇿",
+			countryCodeNumeric: "012",
+			currencyNumeric: "012",
+			currencyDecimals: 2,
+			currencySymbol: "DZD",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Ecuador",
@@ -1810,7 +2261,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "593",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇪🇨"
+			flag: "🇪🇨",
+			countryCodeNumeric: "218",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Estonia",
@@ -1827,7 +2283,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "372",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇪🇪"
+			flag: "🇪🇪",
+			countryCodeNumeric: "233",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Egypt",
@@ -1844,7 +2305,16 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "20",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇪🇬"
+			flag: "🇪🇬",
+			countryCodeNumeric: "818",
+			currencyNumeric: "818",
+			currencyDecimals: 2,
+			currencySymbol: "E£",
+			nationalNumberLengths: [
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Western Sahara",
@@ -1861,7 +2331,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "212",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇪🇭"
+			flag: "🇪🇭",
+			countryCodeNumeric: "732",
+			currencyNumeric: "504",
+			currencyDecimals: 2,
+			currencySymbol: "MAD",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Eritrea",
@@ -1878,7 +2353,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "291",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇪🇷"
+			flag: "🇪🇷",
+			countryCodeNumeric: "232",
+			currencyNumeric: "232",
+			currencyDecimals: 2,
+			currencySymbol: "ERN",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Spain",
@@ -1895,7 +2375,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "34",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇪🇸"
+			flag: "🇪🇸",
+			countryCodeNumeric: "724",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Ethiopia",
@@ -1912,7 +2397,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "251",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇪🇹"
+			flag: "🇪🇹",
+			countryCodeNumeric: "231",
+			currencyNumeric: "230",
+			currencyDecimals: 2,
+			currencySymbol: "ETB",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Finland",
@@ -1929,7 +2419,19 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "358",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇫🇮"
+			flag: "🇫🇮",
+			countryCodeNumeric: "246",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Fiji",
@@ -1946,7 +2448,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "679",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇫🇯"
+			flag: "🇫🇯",
+			countryCodeNumeric: "242",
+			currencyNumeric: "242",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Micronesia (Federated States of)",
@@ -1963,7 +2470,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "691",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇫🇲"
+			flag: "🇫🇲",
+			countryCodeNumeric: "583",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "France",
@@ -1980,7 +2492,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "33",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇫🇷"
+			flag: "🇫🇷",
+			countryCodeNumeric: "250",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Gabon",
@@ -1997,7 +2514,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "241",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇬🇦"
+			flag: "🇬🇦",
+			countryCodeNumeric: "266",
+			currencyNumeric: "950",
+			currencyDecimals: 0,
+			currencySymbol: "FCFA",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Grenada",
@@ -2011,10 +2533,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1473",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["473"],
 			region: "South/Latin America",
-			flag: "🇬🇩"
+			flag: "🇬🇩",
+			countryCodeNumeric: "308",
+			currencyNumeric: "951",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Georgia",
@@ -2031,7 +2558,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "995",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇬🇪"
+			flag: "🇬🇪",
+			countryCodeNumeric: "268",
+			currencyNumeric: "981",
+			currencyDecimals: 2,
+			currencySymbol: "₾",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "French Guiana",
@@ -2048,7 +2580,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "594",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇬🇫"
+			flag: "🇬🇫",
+			countryCodeNumeric: "254",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Guernsey",
@@ -2065,7 +2602,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "44",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇬🇬"
+			flag: "🇬🇬",
+			countryCodeNumeric: "831",
+			currencyNumeric: "826",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Ghana",
@@ -2082,7 +2624,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "233",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇬🇭"
+			flag: "🇬🇭",
+			countryCodeNumeric: "288",
+			currencyNumeric: "936",
+			currencyDecimals: 2,
+			currencySymbol: "GH₵",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Gibraltar",
@@ -2099,7 +2646,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "350",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇬🇮"
+			flag: "🇬🇮",
+			countryCodeNumeric: "292",
+			currencyNumeric: "292",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Greenland",
@@ -2116,7 +2668,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "299",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇬🇱"
+			flag: "🇬🇱",
+			countryCodeNumeric: "304",
+			currencyNumeric: "208",
+			currencyDecimals: 2,
+			currencySymbol: "kr",
+			nationalNumberLengths: [6]
 		},
 		{
 			countryNameEn: "Guinea",
@@ -2133,7 +2690,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "224",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇬🇳"
+			flag: "🇬🇳",
+			countryCodeNumeric: "324",
+			currencyNumeric: "324",
+			currencyDecimals: 0,
+			currencySymbol: "FG",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Guadeloupe",
@@ -2150,7 +2712,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "590",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇬🇵"
+			flag: "🇬🇵",
+			countryCodeNumeric: "312",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Equatorial Guinea",
@@ -2167,13 +2734,19 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "240",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇬🇶"
+			flag: "🇬🇶",
+			countryCodeNumeric: "226",
+			currencyNumeric: "950",
+			currencyDecimals: 0,
+			currencySymbol: "FCFA",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Greece",
 			countryNameLocal: "Ελλάδα",
 			countryCode: "GR",
 			countryCodeAlpha3: "GRC",
+			altCodes: ["EL"],
 			currencyCode: "EUR",
 			currencyNameEn: "Euro",
 			tinType: "",
@@ -2184,15 +2757,20 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "30",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇬🇷"
+			flag: "🇬🇷",
+			countryCodeNumeric: "300",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "South Georgia and the South Sandwich Islands",
 			countryNameLocal: "South Georgia and the South Sandwich Islands",
 			countryCode: "GS",
 			countryCodeAlpha3: "SGS",
-			currencyCode: "",
-			currencyNameEn: "",
+			currencyCode: "GBP",
+			currencyNameEn: "Pound sterling",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "en",
@@ -2201,7 +2779,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "500",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇬🇸"
+			flag: "🇬🇸",
+			countryCodeNumeric: "239",
+			currencyNumeric: "826",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: []
 		},
 		{
 			countryNameEn: "Guatemala",
@@ -2218,7 +2801,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "502",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇬🇹"
+			flag: "🇬🇹",
+			countryCodeNumeric: "320",
+			currencyNumeric: "320",
+			currencyDecimals: 2,
+			currencySymbol: "Q",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Guam",
@@ -2233,9 +2821,14 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
 			countryCallingCode: "1",
-			areaCodes: [],
+			areaCodes: ["671"],
 			region: "Asia & Pacific",
-			flag: "🇬🇺"
+			flag: "🇬🇺",
+			countryCodeNumeric: "316",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Guinea-Bissau",
@@ -2252,7 +2845,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "245",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇬🇼"
+			flag: "🇬🇼",
+			countryCodeNumeric: "624",
+			currencyNumeric: "952",
+			currencyDecimals: 0,
+			currencySymbol: "F CFA",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Guyana",
@@ -2269,7 +2867,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "592",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇬🇾"
+			flag: "🇬🇾",
+			countryCodeNumeric: "328",
+			currencyNumeric: "328",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Hong Kong",
@@ -2280,13 +2883,18 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			currencyNameEn: "Hong Kong dollar",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "zh-hant",
-			officialLanguageNameEn: "",
-			officialLanguageNameLocal: "",
+			officialLanguageCode: "zh",
+			officialLanguageNameEn: "Chinese",
+			officialLanguageNameLocal: "中文",
 			countryCallingCode: "852",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇭🇰"
+			flag: "🇭🇰",
+			countryCodeNumeric: "344",
+			currencyNumeric: "344",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Honduras",
@@ -2303,15 +2911,20 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "504",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇭🇳"
+			flag: "🇭🇳",
+			countryCodeNumeric: "340",
+			currencyNumeric: "340",
+			currencyDecimals: 2,
+			currencySymbol: "L",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Croatia",
 			countryNameLocal: "Hrvatska",
 			countryCode: "HR",
 			countryCodeAlpha3: "HRV",
-			currencyCode: "HRK",
-			currencyNameEn: "Croatian kuna",
+			currencyCode: "EUR",
+			currencyNameEn: "Euro",
 			tinType: "PDV-ID; OIB",
 			tinName: "PDV Id. Broj OIB",
 			officialLanguageCode: "hr",
@@ -2320,7 +2933,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "385",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇭🇷"
+			flag: "🇭🇷",
+			countryCodeNumeric: "191",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Haiti",
@@ -2337,7 +2955,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "509",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇭🇹"
+			flag: "🇭🇹",
+			countryCodeNumeric: "332",
+			currencyNumeric: "332",
+			currencyDecimals: 2,
+			currencySymbol: "HTG",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Hungary",
@@ -2354,7 +2977,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "36",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇭🇺"
+			flag: "🇭🇺",
+			countryCodeNumeric: "348",
+			currencyNumeric: "348",
+			currencyDecimals: 2,
+			currencySymbol: "Ft",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Indonesia",
@@ -2371,7 +2999,19 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "62",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇮🇩"
+			flag: "🇮🇩",
+			countryCodeNumeric: "360",
+			currencyNumeric: "360",
+			currencyDecimals: 2,
+			currencySymbol: "Rp",
+			nationalNumberLengths: [
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			]
 		},
 		{
 			countryNameEn: "Ireland",
@@ -2388,7 +3028,17 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "353",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇮🇪"
+			flag: "🇮🇪",
+			countryCodeNumeric: "372",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				7,
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Israel",
@@ -2405,7 +3055,17 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "972",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇮🇱"
+			flag: "🇮🇱",
+			countryCodeNumeric: "376",
+			currencyNumeric: "376",
+			currencyDecimals: 2,
+			currencySymbol: "₪",
+			nationalNumberLengths: [
+				8,
+				9,
+				11,
+				12
+			]
 		},
 		{
 			countryNameEn: "Isle of Man",
@@ -2422,7 +3082,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "44",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇮🇲"
+			flag: "🇮🇲",
+			countryCodeNumeric: "833",
+			currencyNumeric: "826",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "India",
@@ -2431,15 +3096,20 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCodeAlpha3: "IND",
 			currencyCode: "INR",
 			currencyNameEn: "Indian rupee",
-			tinType: "VAT TIN / CST TIN",
-			tinName: "Value Added Tax - Taxpayer Identification Number / Central Sales Tax - Taxpayer Identification Number (In most states)Not applicable",
+			tinType: "GSTIN",
+			tinName: "Goods and Services Tax Identification Number",
 			officialLanguageCode: "hi",
 			officialLanguageNameEn: "Hindi",
 			officialLanguageNameLocal: "हिन्दी, हिंदी",
 			countryCallingCode: "91",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇮🇳"
+			flag: "🇮🇳",
+			countryCodeNumeric: "356",
+			currencyNumeric: "356",
+			currencyDecimals: 2,
+			currencySymbol: "₹",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Iraq",
@@ -2456,7 +3126,16 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "964",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇮🇶"
+			flag: "🇮🇶",
+			countryCodeNumeric: "368",
+			currencyNumeric: "368",
+			currencyDecimals: 3,
+			currencySymbol: "IQD",
+			nationalNumberLengths: [
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Iran (Islamic Republic of)",
@@ -2473,7 +3152,16 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "98",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇮🇷"
+			flag: "🇮🇷",
+			countryCodeNumeric: "364",
+			currencyNumeric: "364",
+			currencyDecimals: 2,
+			currencySymbol: "IRR",
+			nationalNumberLengths: [
+				6,
+				7,
+				10
+			]
 		},
 		{
 			countryNameEn: "Iceland",
@@ -2490,7 +3178,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "354",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇮🇸"
+			flag: "🇮🇸",
+			countryCodeNumeric: "352",
+			currencyNumeric: "352",
+			currencyDecimals: 0,
+			currencySymbol: "kr",
+			nationalNumberLengths: [7, 9]
 		},
 		{
 			countryNameEn: "Italy",
@@ -2507,7 +3200,20 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "39",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇮🇹"
+			flag: "🇮🇹",
+			countryCodeNumeric: "380",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			]
 		},
 		{
 			countryNameEn: "Jersey",
@@ -2524,7 +3230,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "44",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇯🇪"
+			flag: "🇯🇪",
+			countryCodeNumeric: "832",
+			currencyNumeric: "826",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Jamaica",
@@ -2538,10 +3249,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "876",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["876", "658"],
 			region: "South/Latin America",
-			flag: "🇯🇲"
+			flag: "🇯🇲",
+			countryCodeNumeric: "388",
+			currencyNumeric: "388",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Jordan",
@@ -2558,7 +3274,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "962",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇯🇴"
+			flag: "🇯🇴",
+			countryCodeNumeric: "400",
+			currencyNumeric: "400",
+			currencyDecimals: 3,
+			currencySymbol: "JOD",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Japan",
@@ -2575,7 +3296,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "81",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇯🇵"
+			flag: "🇯🇵",
+			countryCodeNumeric: "392",
+			currencyNumeric: "392",
+			currencyDecimals: 0,
+			currencySymbol: "¥",
+			nationalNumberLengths: [9, 10]
 		},
 		{
 			countryNameEn: "Kenya",
@@ -2592,7 +3318,16 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "254",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇰🇪"
+			flag: "🇰🇪",
+			countryCodeNumeric: "404",
+			currencyNumeric: "404",
+			currencyDecimals: 2,
+			currencySymbol: "KES",
+			nationalNumberLengths: [
+				7,
+				8,
+				9
+			]
 		},
 		{
 			countryNameEn: "Kyrgyzstan",
@@ -2609,7 +3344,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "996",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇰🇬"
+			flag: "🇰🇬",
+			countryCodeNumeric: "417",
+			currencyNumeric: "417",
+			currencyDecimals: 2,
+			currencySymbol: "⃀",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Cambodia",
@@ -2626,7 +3366,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "855",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇰🇭"
+			flag: "🇰🇭",
+			countryCodeNumeric: "116",
+			currencyNumeric: "116",
+			currencyDecimals: 2,
+			currencySymbol: "៛",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "North Korea",
@@ -2642,8 +3387,13 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageNameLocal: "조선어",
 			countryCallingCode: "850",
 			areaCodes: [],
-			region: "Asia",
-			flag: "🇰🇵"
+			region: "Asia & Pacific",
+			flag: "🇰🇵",
+			countryCodeNumeric: "408",
+			currencyNumeric: "408",
+			currencyDecimals: 2,
+			currencySymbol: "₩",
+			nationalNumberLengths: [8, 10]
 		},
 		{
 			countryNameEn: "South Korea",
@@ -2659,8 +3409,19 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageNameLocal: "한국어",
 			countryCallingCode: "82",
 			areaCodes: [],
-			region: "Asia",
-			flag: "🇰🇷"
+			region: "Asia & Pacific",
+			flag: "🇰🇷",
+			countryCodeNumeric: "410",
+			currencyNumeric: "410",
+			currencyDecimals: 0,
+			currencySymbol: "₩",
+			nationalNumberLengths: [
+				5,
+				6,
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Kiribati",
@@ -2677,7 +3438,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "686",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇰🇮"
+			flag: "🇰🇮",
+			countryCodeNumeric: "296",
+			currencyNumeric: "036",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [5, 8]
 		},
 		{
 			countryNameEn: "Saint Kitts and Nevis",
@@ -2691,10 +3457,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1869",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["869"],
 			region: "South/Latin America",
-			flag: "🇰🇳"
+			flag: "🇰🇳",
+			countryCodeNumeric: "659",
+			currencyNumeric: "951",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Kuwait",
@@ -2711,7 +3482,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "965",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇰🇼"
+			flag: "🇰🇼",
+			countryCodeNumeric: "414",
+			currencyNumeric: "414",
+			currencyDecimals: 3,
+			currencySymbol: "KWD",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Kazakhstan",
@@ -2728,7 +3504,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "7",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇰🇿"
+			flag: "🇰🇿",
+			countryCodeNumeric: "398",
+			currencyNumeric: "398",
+			currencyDecimals: 2,
+			currencySymbol: "₸",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Lebanon",
@@ -2745,7 +3526,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "961",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇱🇧"
+			flag: "🇱🇧",
+			countryCodeNumeric: "422",
+			currencyNumeric: "422",
+			currencyDecimals: 2,
+			currencySymbol: "L£",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Saint Lucia",
@@ -2759,10 +3545,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1758",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["758"],
 			region: "South/Latin America",
-			flag: "🇱🇨"
+			flag: "🇱🇨",
+			countryCodeNumeric: "662",
+			currencyNumeric: "951",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Liechtenstein",
@@ -2779,7 +3570,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "423",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇱🇮"
+			flag: "🇱🇮",
+			countryCodeNumeric: "438",
+			currencyNumeric: "756",
+			currencyDecimals: 2,
+			currencySymbol: "CHF",
+			nationalNumberLengths: [7, 9]
 		},
 		{
 			countryNameEn: "Sri Lanka",
@@ -2796,7 +3592,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "94",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇱🇰"
+			flag: "🇱🇰",
+			countryCodeNumeric: "144",
+			currencyNumeric: "144",
+			currencyDecimals: 2,
+			currencySymbol: "Rs",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Liberia",
@@ -2813,7 +3614,16 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "231",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇱🇷"
+			flag: "🇱🇷",
+			countryCodeNumeric: "430",
+			currencyNumeric: "430",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [
+				7,
+				8,
+				9
+			]
 		},
 		{
 			countryNameEn: "Lesotho",
@@ -2830,7 +3640,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "266",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇱🇸"
+			flag: "🇱🇸",
+			countryCodeNumeric: "426",
+			currencyNumeric: "426",
+			currencyDecimals: 2,
+			currencySymbol: "LSL",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Lithuania",
@@ -2847,7 +3662,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "370",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇱🇹"
+			flag: "🇱🇹",
+			countryCodeNumeric: "440",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Luxembourg",
@@ -2864,7 +3684,21 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "352",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇱🇺"
+			flag: "🇱🇺",
+			countryCodeNumeric: "442",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11
+			]
 		},
 		{
 			countryNameEn: "Latvia",
@@ -2881,7 +3715,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "371",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇱🇻"
+			flag: "🇱🇻",
+			countryCodeNumeric: "428",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Libya",
@@ -2898,7 +3737,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "218",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇱🇾"
+			flag: "🇱🇾",
+			countryCodeNumeric: "434",
+			currencyNumeric: "434",
+			currencyDecimals: 3,
+			currencySymbol: "LYD",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Morocco",
@@ -2909,13 +3753,18 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			currencyNameEn: "Moroccan dirham",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "fr",
-			officialLanguageNameEn: "French",
-			officialLanguageNameLocal: "Français",
+			officialLanguageCode: "ar",
+			officialLanguageNameEn: "Arabic",
+			officialLanguageNameLocal: "العربية",
 			countryCallingCode: "212",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇲🇦"
+			flag: "🇲🇦",
+			countryCodeNumeric: "504",
+			currencyNumeric: "504",
+			currencyDecimals: 2,
+			currencySymbol: "MAD",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Monaco",
@@ -2932,7 +3781,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "377",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇲🇨"
+			flag: "🇲🇨",
+			countryCodeNumeric: "492",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Montenegro",
@@ -2943,13 +3797,18 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			currencyNameEn: "Euro",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "srp",
-			officialLanguageNameEn: "српски језик",
-			officialLanguageNameLocal: "",
+			officialLanguageCode: "cnr",
+			officialLanguageNameEn: "Montenegrin",
+			officialLanguageNameLocal: "crnogorski, црногорски",
 			countryCallingCode: "382",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇲🇪"
+			flag: "🇲🇪",
+			countryCodeNumeric: "499",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Saint Martin (French part)",
@@ -2966,7 +3825,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "590",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇲🇫"
+			flag: "🇲🇫",
+			countryCodeNumeric: "663",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Madagascar",
@@ -2983,7 +3847,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "261",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇲🇬"
+			flag: "🇲🇬",
+			countryCodeNumeric: "450",
+			currencyNumeric: "969",
+			currencyDecimals: 2,
+			currencySymbol: "Ar",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Mali",
@@ -2994,13 +3863,18 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			currencyNameEn: "CFA franc BCEAO",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "fr",
-			officialLanguageNameEn: "French",
-			officialLanguageNameLocal: "Français",
+			officialLanguageCode: "bm",
+			officialLanguageNameEn: "Bambara",
+			officialLanguageNameLocal: "Bamanankan",
 			countryCallingCode: "223",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇲🇱"
+			flag: "🇲🇱",
+			countryCodeNumeric: "466",
+			currencyNumeric: "952",
+			currencyDecimals: 0,
+			currencySymbol: "F CFA",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Myanmar",
@@ -3017,7 +3891,18 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "95",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇲🇲"
+			flag: "🇲🇲",
+			countryCodeNumeric: "104",
+			currencyNumeric: "104",
+			currencyDecimals: 2,
+			currencySymbol: "K",
+			nationalNumberLengths: [
+				6,
+				7,
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Mongolia",
@@ -3034,7 +3919,16 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "976",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇲🇳"
+			flag: "🇲🇳",
+			countryCodeNumeric: "496",
+			currencyNumeric: "496",
+			currencyDecimals: 2,
+			currencySymbol: "₮",
+			nationalNumberLengths: [
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Macao",
@@ -3045,13 +3939,18 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			currencyNameEn: "Macanese pataca",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "zh-hant",
-			officialLanguageNameEn: "",
-			officialLanguageNameLocal: "",
+			officialLanguageCode: "zh",
+			officialLanguageNameEn: "Chinese",
+			officialLanguageNameLocal: "中文",
 			countryCallingCode: "853",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇲🇴"
+			flag: "🇲🇴",
+			countryCodeNumeric: "446",
+			currencyNumeric: "446",
+			currencyDecimals: 2,
+			currencySymbol: "MOP",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Martinique",
@@ -3068,7 +3967,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "596",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇲🇶"
+			flag: "🇲🇶",
+			countryCodeNumeric: "474",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Mauritania",
@@ -3076,7 +3980,7 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCode: "MR",
 			countryCodeAlpha3: "MRT",
 			currencyCode: "MRU",
-			currencyNameEn: "",
+			currencyNameEn: "Mauritanian ouguiya",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "ar",
@@ -3085,7 +3989,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "222",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇲🇷"
+			flag: "🇲🇷",
+			countryCodeNumeric: "478",
+			currencyNumeric: "929",
+			currencyDecimals: 2,
+			currencySymbol: "MRU",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Montserrat",
@@ -3099,10 +4008,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1664",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["664"],
 			region: "South/Latin America",
-			flag: "🇲🇸"
+			flag: "🇲🇸",
+			countryCodeNumeric: "500",
+			currencyNumeric: "951",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Malta",
@@ -3119,7 +4033,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "356",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇲🇹"
+			flag: "🇲🇹",
+			countryCodeNumeric: "470",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Mauritius",
@@ -3130,17 +4049,22 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			currencyNameEn: "Mauritian rupee",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "mfe",
-			officialLanguageNameEn: "",
-			officialLanguageNameLocal: "",
+			officialLanguageCode: "en",
+			officialLanguageNameEn: "English",
+			officialLanguageNameLocal: "English",
 			countryCallingCode: "230",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇲🇺"
+			flag: "🇲🇺",
+			countryCodeNumeric: "480",
+			currencyNumeric: "480",
+			currencyDecimals: 2,
+			currencySymbol: "Rs",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Maldives",
-			countryNameLocal: "",
+			countryNameLocal: "ދިވެހިރާއްޖެ",
 			countryCode: "MV",
 			countryCodeAlpha3: "MDV",
 			currencyCode: "MVR",
@@ -3153,7 +4077,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "960",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇲🇻"
+			flag: "🇲🇻",
+			countryCodeNumeric: "462",
+			currencyNumeric: "462",
+			currencyDecimals: 2,
+			currencySymbol: "MVR",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Malawi",
@@ -3170,7 +4099,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "265",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇲🇼"
+			flag: "🇲🇼",
+			countryCodeNumeric: "454",
+			currencyNumeric: "454",
+			currencyDecimals: 2,
+			currencySymbol: "MWK",
+			nationalNumberLengths: [7, 9]
 		},
 		{
 			countryNameEn: "Mexico",
@@ -3187,11 +4121,16 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "52",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇲🇽"
+			flag: "🇲🇽",
+			countryCodeNumeric: "484",
+			currencyNumeric: "484",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Malaysia",
-			countryNameLocal: "",
+			countryNameLocal: "Malaysia",
 			countryCode: "MY",
 			countryCodeAlpha3: "MYS",
 			currencyCode: "MYR",
@@ -3204,7 +4143,16 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "60",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇲🇾"
+			flag: "🇲🇾",
+			countryCodeNumeric: "458",
+			currencyNumeric: "458",
+			currencyDecimals: 2,
+			currencySymbol: "RM",
+			nationalNumberLengths: [
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Mozambique",
@@ -3221,7 +4169,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "258",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇲🇿"
+			flag: "🇲🇿",
+			countryCodeNumeric: "508",
+			currencyNumeric: "943",
+			currencyDecimals: 2,
+			currencySymbol: "MZN",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Namibia",
@@ -3238,7 +4191,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "264",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇳🇦"
+			flag: "🇳🇦",
+			countryCodeNumeric: "516",
+			currencyNumeric: "516",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "New Caledonia",
@@ -3255,7 +4213,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "687",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇳🇨"
+			flag: "🇳🇨",
+			countryCodeNumeric: "540",
+			currencyNumeric: "953",
+			currencyDecimals: 0,
+			currencySymbol: "CFPF",
+			nationalNumberLengths: [6]
 		},
 		{
 			countryNameEn: "Norfolk Island",
@@ -3272,7 +4235,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "672",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇳🇫"
+			flag: "🇳🇫",
+			countryCodeNumeric: "574",
+			currencyNumeric: "036",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [6]
 		},
 		{
 			countryNameEn: "Nigeria",
@@ -3289,7 +4257,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "234",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇳🇬"
+			flag: "🇳🇬",
+			countryCodeNumeric: "566",
+			currencyNumeric: "566",
+			currencyDecimals: 2,
+			currencySymbol: "₦",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Nicaragua",
@@ -3306,7 +4279,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "505",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇳🇮"
+			flag: "🇳🇮",
+			countryCodeNumeric: "558",
+			currencyNumeric: "558",
+			currencyDecimals: 2,
+			currencySymbol: "C$",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Norway",
@@ -3323,11 +4301,16 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "47",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇳🇴"
+			flag: "🇳🇴",
+			countryCodeNumeric: "578",
+			currencyNumeric: "578",
+			currencyDecimals: 2,
+			currencySymbol: "kr",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Nepal",
-			countryNameLocal: "",
+			countryNameLocal: "नेपाल",
 			countryCode: "NP",
 			countryCodeAlpha3: "NPL",
 			currencyCode: "NPR",
@@ -3340,7 +4323,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "977",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇳🇵"
+			flag: "🇳🇵",
+			countryCodeNumeric: "524",
+			currencyNumeric: "524",
+			currencyDecimals: 2,
+			currencySymbol: "Rs",
+			nationalNumberLengths: [8, 10]
 		},
 		{
 			countryNameEn: "Nauru",
@@ -3357,7 +4345,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "674",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇳🇷"
+			flag: "🇳🇷",
+			countryCodeNumeric: "520",
+			currencyNumeric: "036",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Niue",
@@ -3369,12 +4362,17 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "niu",
-			officialLanguageNameEn: "",
-			officialLanguageNameLocal: "",
+			officialLanguageNameEn: "Niuean",
+			officialLanguageNameLocal: "Vagahau Niuē",
 			countryCallingCode: "683",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇳🇺"
+			flag: "🇳🇺",
+			countryCodeNumeric: "570",
+			currencyNumeric: "554",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [4, 7]
 		},
 		{
 			countryNameEn: "New Zealand",
@@ -3391,7 +4389,16 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "64",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇳🇿"
+			flag: "🇳🇿",
+			countryCodeNumeric: "554",
+			currencyNumeric: "554",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Oman",
@@ -3408,7 +4415,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "968",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇴🇲"
+			flag: "🇴🇲",
+			countryCodeNumeric: "512",
+			currencyNumeric: "512",
+			currencyDecimals: 3,
+			currencySymbol: "OMR",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Panama",
@@ -3425,7 +4437,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "507",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇵🇦"
+			flag: "🇵🇦",
+			countryCodeNumeric: "591",
+			currencyNumeric: "590",
+			currencyDecimals: 2,
+			currencySymbol: "PAB",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Peru",
@@ -3442,7 +4459,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "51",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇵🇪"
+			flag: "🇵🇪",
+			countryCodeNumeric: "604",
+			currencyNumeric: "604",
+			currencyDecimals: 2,
+			currencySymbol: "PEN",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "French Polynesia",
@@ -3459,7 +4481,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "689",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇵🇫"
+			flag: "🇵🇫",
+			countryCodeNumeric: "258",
+			currencyNumeric: "953",
+			currencyDecimals: 0,
+			currencySymbol: "CFPF",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Papua New Guinea",
@@ -3476,7 +4503,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "675",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇵🇬"
+			flag: "🇵🇬",
+			countryCodeNumeric: "598",
+			currencyNumeric: "598",
+			currencyDecimals: 2,
+			currencySymbol: "PGK",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Pakistan",
@@ -3487,13 +4519,18 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			currencyNameEn: "Pakistani rupee",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "en",
-			officialLanguageNameEn: "English",
-			officialLanguageNameLocal: "English",
+			officialLanguageCode: "ur",
+			officialLanguageNameEn: "Urdu",
+			officialLanguageNameLocal: "اردو",
 			countryCallingCode: "92",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇵🇰"
+			flag: "🇵🇰",
+			countryCodeNumeric: "586",
+			currencyNumeric: "586",
+			currencyDecimals: 2,
+			currencySymbol: "Rs",
+			nationalNumberLengths: [9, 10]
 		},
 		{
 			countryNameEn: "Poland",
@@ -3510,7 +4547,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "48",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇵🇱"
+			flag: "🇵🇱",
+			countryCodeNumeric: "616",
+			currencyNumeric: "985",
+			currencyDecimals: 2,
+			currencySymbol: "zł",
+			nationalNumberLengths: [7, 9]
 		},
 		{
 			countryNameEn: "Saint Pierre and Miquelon",
@@ -3527,7 +4569,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "508",
 			areaCodes: [],
 			region: "North America",
-			flag: "🇵🇲"
+			flag: "🇵🇲",
+			countryCodeNumeric: "666",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [6, 9]
 		},
 		{
 			countryNameEn: "Pitcairn",
@@ -3544,7 +4591,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "64",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇵🇳"
+			flag: "🇵🇳",
+			countryCodeNumeric: "612",
+			currencyNumeric: "554",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: []
 		},
 		{
 			countryNameEn: "Puerto Rico",
@@ -3559,17 +4611,22 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageNameEn: "Spanish, Castilian",
 			officialLanguageNameLocal: "Español",
 			countryCallingCode: "1",
-			areaCodes: [],
+			areaCodes: ["787", "939"],
 			region: "South/Latin America",
-			flag: "🇵🇷"
+			flag: "🇵🇷",
+			countryCodeNumeric: "630",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Palestine, State of",
 			countryNameLocal: "Palestinian Territory",
 			countryCode: "PS",
 			countryCodeAlpha3: "PSE",
-			currencyCode: "",
-			currencyNameEn: "",
+			currencyCode: "ILS",
+			currencyNameEn: "Israeli new shekel",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "ar",
@@ -3578,7 +4635,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "970",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇵🇸"
+			flag: "🇵🇸",
+			countryCodeNumeric: "275",
+			currencyNumeric: "376",
+			currencyDecimals: 2,
+			currencySymbol: "₪",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Portugal",
@@ -3595,7 +4657,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "351",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇵🇹"
+			flag: "🇵🇹",
+			countryCodeNumeric: "620",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Palau",
@@ -3612,7 +4679,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "680",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇵🇼"
+			flag: "🇵🇼",
+			countryCodeNumeric: "585",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Paraguay",
@@ -3629,7 +4701,16 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "595",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇵🇾"
+			flag: "🇵🇾",
+			countryCodeNumeric: "600",
+			currencyNumeric: "600",
+			currencyDecimals: 0,
+			currencySymbol: "₲",
+			nationalNumberLengths: [
+				7,
+				8,
+				9
+			]
 		},
 		{
 			countryNameEn: "Qatar",
@@ -3646,7 +4727,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "974",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇶🇦"
+			flag: "🇶🇦",
+			countryCodeNumeric: "634",
+			currencyNumeric: "634",
+			currencyDecimals: 2,
+			currencySymbol: "QAR",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Réunion",
@@ -3663,7 +4749,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "262",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇷🇪"
+			flag: "🇷🇪",
+			countryCodeNumeric: "638",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Romania",
@@ -3680,7 +4771,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "40",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇷🇴"
+			flag: "🇷🇴",
+			countryCodeNumeric: "642",
+			currencyNumeric: "946",
+			currencyDecimals: 2,
+			currencySymbol: "lei",
+			nationalNumberLengths: [6, 9]
 		},
 		{
 			countryNameEn: "Serbia",
@@ -3697,7 +4793,19 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "381",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇷🇸"
+			flag: "🇷🇸",
+			countryCodeNumeric: "688",
+			currencyNumeric: "941",
+			currencyDecimals: 2,
+			currencySymbol: "RSD",
+			nationalNumberLengths: [
+				7,
+				8,
+				9,
+				10,
+				11,
+				12
+			]
 		},
 		{
 			countryNameEn: "Russia",
@@ -3714,7 +4822,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "7",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇷🇺"
+			flag: "🇷🇺",
+			countryCodeNumeric: "643",
+			currencyNumeric: "643",
+			currencyDecimals: 2,
+			currencySymbol: "₽",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Rwanda",
@@ -3731,7 +4844,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "250",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇷🇼"
+			flag: "🇷🇼",
+			countryCodeNumeric: "646",
+			currencyNumeric: "646",
+			currencyDecimals: 0,
+			currencySymbol: "RF",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Saudi Arabia",
@@ -3748,7 +4866,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "966",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇸🇦"
+			flag: "🇸🇦",
+			countryCodeNumeric: "682",
+			currencyNumeric: "682",
+			currencyDecimals: 2,
+			currencySymbol: "SAR",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Solomon Islands",
@@ -3765,7 +4888,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "677",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇸🇧"
+			flag: "🇸🇧",
+			countryCodeNumeric: "090",
+			currencyNumeric: "090",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [5, 7]
 		},
 		{
 			countryNameEn: "Seychelles",
@@ -3782,7 +4910,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "248",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇸🇨"
+			flag: "🇸🇨",
+			countryCodeNumeric: "690",
+			currencyNumeric: "690",
+			currencyDecimals: 2,
+			currencySymbol: "SCR",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Sweden",
@@ -3799,7 +4932,16 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "46",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇸🇪"
+			flag: "🇸🇪",
+			countryCodeNumeric: "752",
+			currencyNumeric: "752",
+			currencyDecimals: 2,
+			currencySymbol: "kr",
+			nationalNumberLengths: [
+				7,
+				8,
+				9
+			]
 		},
 		{
 			countryNameEn: "Singapore",
@@ -3810,13 +4952,18 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			currencyNameEn: "Singapore dollar",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "zh-hans",
-			officialLanguageNameEn: "",
-			officialLanguageNameLocal: "",
+			officialLanguageCode: "en",
+			officialLanguageNameEn: "English",
+			officialLanguageNameLocal: "English",
 			countryCallingCode: "65",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇸🇬"
+			flag: "🇸🇬",
+			countryCodeNumeric: "702",
+			currencyNumeric: "702",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Saint Helena, Ascension and Tristan da Cunha",
@@ -3833,7 +4980,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "290",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇸🇭"
+			flag: "🇸🇭",
+			countryCodeNumeric: "654",
+			currencyNumeric: "654",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: [4, 5]
 		},
 		{
 			countryNameEn: "Slovenia",
@@ -3850,7 +5002,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "386",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇸🇮"
+			flag: "🇸🇮",
+			countryCodeNumeric: "705",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Svalbard and Jan Mayen",
@@ -3864,10 +5021,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "no",
 			officialLanguageNameEn: "Norwegian",
 			officialLanguageNameLocal: "Norsk",
-			countryCallingCode: "4779",
-			areaCodes: [],
+			countryCallingCode: "47",
+			areaCodes: ["79"],
 			region: "Europe",
-			flag: "🇸🇯"
+			flag: "🇸🇯",
+			countryCodeNumeric: "744",
+			currencyNumeric: "578",
+			currencyDecimals: 2,
+			currencySymbol: "kr",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Slovakia",
@@ -3884,14 +5046,23 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "421",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇸🇰"
+			flag: "🇸🇰",
+			countryCodeNumeric: "703",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				6,
+				7,
+				9
+			]
 		},
 		{
 			countryNameEn: "Sierra Leone",
 			countryNameLocal: "Sierra Leone",
 			countryCode: "SL",
 			countryCodeAlpha3: "SLE",
-			currencyCode: "SLL",
+			currencyCode: "SLE",
 			currencyNameEn: "Sierra Leonean leone",
 			tinType: "",
 			tinName: "",
@@ -3901,7 +5072,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "232",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇸🇱"
+			flag: "🇸🇱",
+			countryCodeNumeric: "694",
+			currencyNumeric: "925",
+			currencyDecimals: 2,
+			currencySymbol: "SLE",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Republic of San Marino",
@@ -3918,7 +5094,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "378",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇸🇲"
+			flag: "🇸🇲",
+			countryCodeNumeric: "674",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [8, 10]
 		},
 		{
 			countryNameEn: "Senegal",
@@ -3935,7 +5116,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "221",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇸🇳"
+			flag: "🇸🇳",
+			countryCodeNumeric: "686",
+			currencyNumeric: "952",
+			currencyDecimals: 0,
+			currencySymbol: "F CFA",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Somalia",
@@ -3952,7 +5138,17 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "252",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇸🇴"
+			flag: "🇸🇴",
+			countryCodeNumeric: "706",
+			currencyNumeric: "706",
+			currencyDecimals: 2,
+			currencySymbol: "SOS",
+			nationalNumberLengths: [
+				6,
+				7,
+				8,
+				9
+			]
 		},
 		{
 			countryNameEn: "Suriname",
@@ -3969,7 +5165,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "597",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇸🇷"
+			flag: "🇸🇷",
+			countryCodeNumeric: "740",
+			currencyNumeric: "968",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [6, 7]
 		},
 		{
 			countryNameEn: "South Sudan",
@@ -3986,7 +5187,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "211",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇸🇸"
+			flag: "🇸🇸",
+			countryCodeNumeric: "728",
+			currencyNumeric: "728",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Sao Tome and Principe",
@@ -3994,7 +5200,7 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCode: "ST",
 			countryCodeAlpha3: "STP",
 			currencyCode: "STN",
-			currencyNameEn: "",
+			currencyNameEn: "São Tomé and Príncipe dobra",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "pt",
@@ -4003,15 +5209,20 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "239",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇸🇹"
+			flag: "🇸🇹",
+			countryCodeNumeric: "678",
+			currencyNumeric: "930",
+			currencyDecimals: 2,
+			currencySymbol: "Db",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "El Salvador",
 			countryNameLocal: "El Salvador",
 			countryCode: "SV",
 			countryCodeAlpha3: "SLV",
-			currencyCode: "SVC",
-			currencyNameEn: "Salvadoran colón",
+			currencyCode: "USD",
+			currencyNameEn: "United States dollar",
 			tinType: "NIT",
 			tinName: "Número de Identificación Tributaria",
 			officialLanguageCode: "es",
@@ -4020,24 +5231,34 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "503",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇸🇻"
+			flag: "🇸🇻",
+			countryCodeNumeric: "222",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Sint Maarten (Dutch part)",
 			countryNameLocal: "Sint Maarten",
 			countryCode: "SX",
 			countryCodeAlpha3: "SXM",
-			currencyCode: "ANG",
-			currencyNameEn: "Netherlands Antillean guilder",
+			currencyCode: "XCG",
+			currencyNameEn: "Caribbean guilder",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "nl",
 			officialLanguageNameEn: "Dutch, Flemish",
 			officialLanguageNameLocal: "Nederlands, Vlaams",
-			countryCallingCode: "1721",
-			areaCodes: [],
-			region: "Unknown",
-			flag: "🇸🇽"
+			countryCallingCode: "1",
+			areaCodes: ["721"],
+			region: "South/Latin America",
+			flag: "🇸🇽",
+			countryCodeNumeric: "534",
+			currencyNumeric: "532",
+			currencyDecimals: 2,
+			currencySymbol: "Cg.",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Syrian Arab Republic",
@@ -4053,8 +5274,13 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageNameLocal: "العربية",
 			countryCallingCode: "963",
 			areaCodes: [],
-			region: "Asia & Pacific",
-			flag: "🇸🇾"
+			region: "Arab States",
+			flag: "🇸🇾",
+			countryCodeNumeric: "760",
+			currencyNumeric: "760",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Chad",
@@ -4071,7 +5297,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "235",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇹🇩"
+			flag: "🇹🇩",
+			countryCodeNumeric: "148",
+			currencyNumeric: "950",
+			currencyDecimals: 0,
+			currencySymbol: "FCFA",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Togo",
@@ -4088,7 +5319,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "228",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇹🇬"
+			flag: "🇹🇬",
+			countryCodeNumeric: "768",
+			currencyNumeric: "952",
+			currencyDecimals: 0,
+			currencySymbol: "F CFA",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Thailand",
@@ -4105,11 +5341,16 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "66",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇹🇭"
+			flag: "🇹🇭",
+			countryCodeNumeric: "764",
+			currencyNumeric: "764",
+			currencyDecimals: 2,
+			currencySymbol: "฿",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Tajikistan",
-			countryNameLocal: ",",
+			countryNameLocal: "Тоҷикистон",
 			countryCode: "TJ",
 			countryCodeAlpha3: "TJK",
 			currencyCode: "TJS",
@@ -4122,7 +5363,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "992",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇹🇯"
+			flag: "🇹🇯",
+			countryCodeNumeric: "762",
+			currencyNumeric: "972",
+			currencyDecimals: 2,
+			currencySymbol: "TJS",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Tokelau",
@@ -4134,12 +5380,22 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "tkl",
-			officialLanguageNameEn: "",
-			officialLanguageNameLocal: "",
+			officialLanguageNameEn: "Tokelauan",
+			officialLanguageNameLocal: "Gagana Tokelau",
 			countryCallingCode: "690",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇹🇰"
+			flag: "🇹🇰",
+			countryCodeNumeric: "772",
+			currencyNumeric: "554",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [
+				4,
+				5,
+				6,
+				7
+			]
 		},
 		{
 			countryNameEn: "Timor-Leste",
@@ -4156,7 +5412,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "670",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇹🇱"
+			flag: "🇹🇱",
+			countryCodeNumeric: "626",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7, 8]
 		},
 		{
 			countryNameEn: "Turkmenistan",
@@ -4173,7 +5434,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "993",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇹🇲"
+			flag: "🇹🇲",
+			countryCodeNumeric: "795",
+			currencyNumeric: "934",
+			currencyDecimals: 2,
+			currencySymbol: "TMT",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Tunisia",
@@ -4190,7 +5456,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "216",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇹🇳"
+			flag: "🇹🇳",
+			countryCodeNumeric: "788",
+			currencyNumeric: "788",
+			currencyDecimals: 3,
+			currencySymbol: "TND",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Tonga",
@@ -4207,10 +5478,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "676",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇹🇴"
+			flag: "🇹🇴",
+			countryCodeNumeric: "776",
+			currencyNumeric: "776",
+			currencyDecimals: 2,
+			currencySymbol: "T$",
+			nationalNumberLengths: [5, 7]
 		},
 		{
-			countryNameEn: "Turkey",
+			countryNameEn: "Türkiye",
 			countryNameLocal: "Türkiye",
 			countryCode: "TR",
 			countryCodeAlpha3: "TUR",
@@ -4224,7 +5500,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "90",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇹🇷"
+			flag: "🇹🇷",
+			countryCodeNumeric: "792",
+			currencyNumeric: "949",
+			currencyDecimals: 2,
+			currencySymbol: "₺",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Trinidad and Tobago",
@@ -4238,10 +5519,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "868",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["868"],
 			region: "South/Latin America",
-			flag: "🇹🇹"
+			flag: "🇹🇹",
+			countryCodeNumeric: "780",
+			currencyNumeric: "780",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Tuvalu",
@@ -4258,7 +5544,16 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "688",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇹🇻"
+			flag: "🇹🇻",
+			countryCodeNumeric: "798",
+			currencyNumeric: "036",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [
+				5,
+				6,
+				7
+			]
 		},
 		{
 			countryNameEn: "United Republic of Tanzania",
@@ -4275,7 +5570,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "255",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇹🇿"
+			flag: "🇹🇿",
+			countryCodeNumeric: "834",
+			currencyNumeric: "834",
+			currencyDecimals: 2,
+			currencySymbol: "TZS",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Ukraine",
@@ -4292,7 +5592,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "380",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇺🇦"
+			flag: "🇺🇦",
+			countryCodeNumeric: "804",
+			currencyNumeric: "980",
+			currencyDecimals: 2,
+			currencySymbol: "₴",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Uganda",
@@ -4309,7 +5614,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "256",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇺🇬"
+			flag: "🇺🇬",
+			countryCodeNumeric: "800",
+			currencyNumeric: "800",
+			currencyDecimals: 0,
+			currencySymbol: "UGX",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "United States of America",
@@ -4326,7 +5636,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "1",
 			areaCodes: [],
 			region: "North America",
-			flag: "🇺🇸"
+			flag: "🇺🇸",
+			countryCodeNumeric: "840",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Uruguay",
@@ -4343,11 +5658,16 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "598",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇺🇾"
+			flag: "🇺🇾",
+			countryCodeNumeric: "858",
+			currencyNumeric: "858",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Uzbekistan",
-			countryNameLocal: "",
+			countryNameLocal: "Oʻzbekiston",
 			countryCode: "UZ",
 			countryCodeAlpha3: "UZB",
 			currencyCode: "UZS",
@@ -4360,7 +5680,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "998",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇺🇿"
+			flag: "🇺🇿",
+			countryCodeNumeric: "860",
+			currencyNumeric: "860",
+			currencyDecimals: 2,
+			currencySymbol: "UZS",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Saint Vincent and the Grenadines",
@@ -4374,10 +5699,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1784",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["784"],
 			region: "South/Latin America",
-			flag: "🇻🇨"
+			flag: "🇻🇨",
+			countryCodeNumeric: "670",
+			currencyNumeric: "951",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Venezuela (Bolivarian Republic of)",
@@ -4385,7 +5715,7 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCode: "VE",
 			countryCodeAlpha3: "VEN",
 			currencyCode: "VES",
-			currencyNameEn: "",
+			currencyNameEn: "Venezuelan bolívar",
 			tinType: "RIF",
 			tinName: "Registro de Informacion Fiscal",
 			officialLanguageCode: "es",
@@ -4394,7 +5724,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "58",
 			areaCodes: [],
 			region: "South/Latin America",
-			flag: "🇻🇪"
+			flag: "🇻🇪",
+			countryCodeNumeric: "862",
+			currencyNumeric: "928",
+			currencyDecimals: 2,
+			currencySymbol: "VES",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Virgin Islands (British)",
@@ -4408,10 +5743,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1284",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["284"],
 			region: "South/Latin America",
-			flag: "🇻🇬"
+			flag: "🇻🇬",
+			countryCodeNumeric: "092",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Virgin Islands (U.S.)",
@@ -4425,10 +5765,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1340",
-			areaCodes: [],
+			countryCallingCode: "1",
+			areaCodes: ["340"],
 			region: "South/Latin America",
-			flag: "🇻🇮"
+			flag: "🇻🇮",
+			countryCodeNumeric: "850",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Vietnam",
@@ -4445,7 +5790,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "84",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇻🇳"
+			flag: "🇻🇳",
+			countryCodeNumeric: "704",
+			currencyNumeric: "704",
+			currencyDecimals: 0,
+			currencySymbol: "₫",
+			nationalNumberLengths: [9, 10]
 		},
 		{
 			countryNameEn: "Vanuatu",
@@ -4462,7 +5812,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "678",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇻🇺"
+			flag: "🇻🇺",
+			countryCodeNumeric: "548",
+			currencyNumeric: "548",
+			currencyDecimals: 0,
+			currencySymbol: "VUV",
+			nationalNumberLengths: [5, 7]
 		},
 		{
 			countryNameEn: "Wallis and Futuna",
@@ -4479,7 +5834,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "681",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇼🇫"
+			flag: "🇼🇫",
+			countryCodeNumeric: "876",
+			currencyNumeric: "953",
+			currencyDecimals: 0,
+			currencySymbol: "CFPF",
+			nationalNumberLengths: [6]
 		},
 		{
 			countryNameEn: "Samoa",
@@ -4496,7 +5856,17 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "685",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇼🇸"
+			flag: "🇼🇸",
+			countryCodeNumeric: "882",
+			currencyNumeric: "882",
+			currencyDecimals: 2,
+			currencySymbol: "WST",
+			nationalNumberLengths: [
+				5,
+				6,
+				7,
+				10
+			]
 		},
 		{
 			countryNameEn: "Yemen",
@@ -4513,7 +5883,16 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "967",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇾🇪"
+			flag: "🇾🇪",
+			countryCodeNumeric: "887",
+			currencyNumeric: "886",
+			currencyDecimals: 2,
+			currencySymbol: "YER",
+			nationalNumberLengths: [
+				7,
+				8,
+				9
+			]
 		},
 		{
 			countryNameEn: "Mayotte",
@@ -4530,7 +5909,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "262",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇾🇹"
+			flag: "🇾🇹",
+			countryCodeNumeric: "175",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "South Africa",
@@ -4547,7 +5931,18 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "27",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇿🇦"
+			flag: "🇿🇦",
+			countryCodeNumeric: "710",
+			currencyNumeric: "710",
+			currencyDecimals: 2,
+			currencySymbol: "R",
+			nationalNumberLengths: [
+				5,
+				6,
+				7,
+				8,
+				9
+			]
 		},
 		{
 			countryNameEn: "Zambia",
@@ -4564,15 +5959,20 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "260",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇿🇲"
+			flag: "🇿🇲",
+			countryCodeNumeric: "894",
+			currencyNumeric: "967",
+			currencyDecimals: 2,
+			currencySymbol: "ZK",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Zimbabwe",
 			countryNameLocal: "Zimbabwe",
 			countryCode: "ZW",
 			countryCodeAlpha3: "ZWE",
-			currencyCode: "ZWL",
-			currencyNameEn: "Zimbabwean dollar",
+			currencyCode: "ZWG",
+			currencyNameEn: "Zimbabwe Gold",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "en",
@@ -4581,11 +5981,23 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "263",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇿🇼"
+			flag: "🇿🇼",
+			countryCodeNumeric: "716",
+			currencyNumeric: "924",
+			currencyDecimals: 2,
+			currencySymbol: "ZWG",
+			nationalNumberLengths: [
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Eswatini",
-			countryNameLocal: "Swaziland",
+			countryNameLocal: "eSwatini",
 			countryCode: "SZ",
 			countryCodeAlpha3: "SWZ",
 			currencyCode: "SZL",
@@ -4598,7 +6010,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "268",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇸🇿"
+			flag: "🇸🇿",
+			countryCodeNumeric: "748",
+			currencyNumeric: "748",
+			currencyDecimals: 2,
+			currencySymbol: "SZL",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "North Macedonia",
@@ -4615,7 +6032,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "389",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇲🇰"
+			flag: "🇲🇰",
+			countryCodeNumeric: "807",
+			currencyNumeric: "807",
+			currencyDecimals: 2,
+			currencySymbol: "MKD",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Philippines",
@@ -4632,7 +6054,17 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "63",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇵🇭"
+			flag: "🇵🇭",
+			countryCodeNumeric: "608",
+			currencyNumeric: "608",
+			currencyDecimals: 2,
+			currencySymbol: "₱",
+			nationalNumberLengths: [
+				6,
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Netherlands",
@@ -4649,7 +6081,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "31",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇳🇱"
+			flag: "🇳🇱",
+			countryCodeNumeric: "528",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [9, 11]
 		},
 		{
 			countryNameEn: "United Arab Emirates",
@@ -4666,7 +6103,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "971",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇦🇪"
+			flag: "🇦🇪",
+			countryCodeNumeric: "784",
+			currencyNumeric: "784",
+			currencyDecimals: 2,
+			currencySymbol: "AED",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Republic of Moldova",
@@ -4683,7 +6125,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "373",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇲🇩"
+			flag: "🇲🇩",
+			countryCodeNumeric: "498",
+			currencyNumeric: "498",
+			currencyDecimals: 2,
+			currencySymbol: "MDL",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Gambia",
@@ -4700,7 +6147,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "220",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇬🇲"
+			flag: "🇬🇲",
+			countryCodeNumeric: "270",
+			currencyNumeric: "270",
+			currencyDecimals: 2,
+			currencySymbol: "GMD",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Dominican Republic",
@@ -4715,9 +6167,18 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageNameEn: "Spanish, Castilian",
 			officialLanguageNameLocal: "Español",
 			countryCallingCode: "1",
-			areaCodes: [],
+			areaCodes: [
+				"809",
+				"829",
+				"849"
+			],
 			region: "South/Latin America",
-			flag: "🇩🇴"
+			flag: "🇩🇴",
+			countryCodeNumeric: "214",
+			currencyNumeric: "214",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Sudan",
@@ -4734,7 +6195,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "249",
 			areaCodes: [],
 			region: "Arab States",
-			flag: "🇸🇩"
+			flag: "🇸🇩",
+			countryCodeNumeric: "729",
+			currencyNumeric: "938",
+			currencyDecimals: 2,
+			currencySymbol: "SDG",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Lao People's Democratic Republic",
@@ -4751,7 +6217,16 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "856",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇱🇦"
+			flag: "🇱🇦",
+			countryCodeNumeric: "418",
+			currencyNumeric: "418",
+			currencyDecimals: 2,
+			currencySymbol: "₭",
+			nationalNumberLengths: [
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Taiwan, Province of China",
@@ -4762,13 +6237,18 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			currencyNameEn: "New Taiwan dollar",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "zh-hant",
-			officialLanguageNameEn: "",
-			officialLanguageNameLocal: "",
+			officialLanguageCode: "zh",
+			officialLanguageNameEn: "Chinese",
+			officialLanguageNameLocal: "中文",
 			countryCallingCode: "886",
 			areaCodes: [],
 			region: "Asia & Pacific",
-			flag: "🇹🇼"
+			flag: "🇹🇼",
+			countryCodeNumeric: "158",
+			currencyNumeric: "901",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [8, 9]
 		},
 		{
 			countryNameEn: "Republic of the Congo",
@@ -4785,7 +6265,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "242",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇨🇬"
+			flag: "🇨🇬",
+			countryCodeNumeric: "178",
+			currencyNumeric: "950",
+			currencyDecimals: 0,
+			currencySymbol: "FCFA",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Czechia",
@@ -4802,13 +6287,19 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "420",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇨🇿"
+			flag: "🇨🇿",
+			countryCodeNumeric: "203",
+			currencyNumeric: "203",
+			currencyDecimals: 2,
+			currencySymbol: "Kč",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "United Kingdom",
-			countryNameLocal: "Great Britain",
+			countryNameLocal: "United Kingdom",
 			countryCode: "GB",
 			countryCodeAlpha3: "GBR",
+			altCodes: ["UK"],
 			currencyCode: "GBP",
 			currencyNameEn: "Pound sterling",
 			tinType: "VAT Reg No",
@@ -4819,7 +6310,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "44",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇬🇧"
+			flag: "🇬🇧",
+			countryCodeNumeric: "826",
+			currencyNumeric: "826",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: [9, 10]
 		},
 		{
 			countryNameEn: "Niger",
@@ -4830,13 +6326,18 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			currencyNameEn: "CFA franc BCEAO",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "fr",
-			officialLanguageNameEn: "French",
-			officialLanguageNameLocal: "Français",
+			officialLanguageCode: "ha",
+			officialLanguageNameEn: "Hausa",
+			officialLanguageNameLocal: "Harshen Hausa",
 			countryCallingCode: "227",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇳🇪"
+			flag: "🇳🇪",
+			countryCodeNumeric: "562",
+			currencyNumeric: "952",
+			currencyDecimals: 0,
+			currencySymbol: "F CFA",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Democratic Republic of the Congo",
@@ -4853,7 +6354,17 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "243",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇨🇩"
+			flag: "🇨🇩",
+			countryCodeNumeric: "180",
+			currencyNumeric: "976",
+			currencyDecimals: 2,
+			currencySymbol: "CDF",
+			nationalNumberLengths: [
+				7,
+				8,
+				9,
+				10
+			]
 		},
 		{
 			countryNameEn: "Commonwealth of The Bahamas",
@@ -4867,10 +6378,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1 242",
-			areaCodes: [],
-			region: "Caribbean",
-			flag: "🇧🇸"
+			countryCallingCode: "1",
+			areaCodes: ["242"],
+			region: "South/Latin America",
+			flag: "🇧🇸",
+			countryCodeNumeric: "044",
+			currencyNumeric: "044",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Cocos (Keeling) Islands",
@@ -4884,10 +6400,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "61 891",
-			areaCodes: [],
-			region: "Australia",
-			flag: "🇨🇨"
+			countryCallingCode: "61",
+			areaCodes: ["8"],
+			region: "Asia & Pacific",
+			flag: "🇨🇨",
+			countryCodeNumeric: "166",
+			currencyNumeric: "036",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [9]
 		},
 		{
 			countryNameEn: "Central African Republic",
@@ -4895,7 +6416,7 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCode: "CF",
 			countryCodeAlpha3: "CAF",
 			currencyCode: "XAF",
-			currencyNameEn: "Central African CFA",
+			currencyNameEn: "CFA franc BEAC",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "fr",
@@ -4904,7 +6425,12 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "236",
 			areaCodes: [],
 			region: "Africa",
-			flag: "🇨🇫"
+			flag: "🇨🇫",
+			countryCodeNumeric: "140",
+			currencyNumeric: "950",
+			currencyDecimals: 0,
+			currencySymbol: "FCFA",
+			nationalNumberLengths: [8]
 		},
 		{
 			countryNameEn: "Cook Islands",
@@ -4920,8 +6446,13 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageNameLocal: "English",
 			countryCallingCode: "682",
 			areaCodes: [],
-			region: "South Pacific Ocean",
-			flag: "🇨🇰"
+			region: "Asia & Pacific",
+			flag: "🇨🇰",
+			countryCodeNumeric: "184",
+			currencyNumeric: "554",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [5]
 		},
 		{
 			countryNameEn: "Falkland Islands",
@@ -4929,7 +6460,7 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCode: "FK",
 			countryCodeAlpha3: "FLK",
 			currencyCode: "FKP",
-			currencyNameEn: "Falklands pound",
+			currencyNameEn: "Falkland Islands pound",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "en",
@@ -4937,8 +6468,13 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageNameLocal: "English",
 			countryCallingCode: "500",
 			areaCodes: [],
-			region: "South Atlantic Ocean",
-			flag: "🇫🇰"
+			region: "South/Latin America",
+			flag: "🇫🇰",
+			countryCodeNumeric: "238",
+			currencyNumeric: "238",
+			currencyDecimals: 2,
+			currencySymbol: "£",
+			nationalNumberLengths: [5]
 		},
 		{
 			countryNameEn: "Faroe Islands",
@@ -4946,16 +6482,21 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCode: "FO",
 			countryCodeAlpha3: "FRO",
 			currencyCode: "DKK",
-			currencyNameEn: "Faroese króna",
+			currencyNameEn: "Danish krone",
 			tinType: "",
 			tinName: "",
-			officialLanguageCode: "da",
-			officialLanguageNameEn: "Danish",
-			officialLanguageNameLocal: "dansk",
+			officialLanguageCode: "fo",
+			officialLanguageNameEn: "Faroese",
+			officialLanguageNameLocal: "Føroyskt",
 			countryCallingCode: "298",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇫🇴"
+			flag: "🇫🇴",
+			countryCodeNumeric: "234",
+			currencyNumeric: "208",
+			currencyDecimals: 2,
+			currencySymbol: "kr",
+			nationalNumberLengths: [6]
 		},
 		{
 			countryNameEn: "Territory of Heard Island and McDonald Islands",
@@ -4971,8 +6512,13 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageNameLocal: "English",
 			countryCallingCode: "672",
 			areaCodes: [],
-			region: "Indian Ocean",
-			flag: "🇭🇲"
+			region: "Asia & Pacific",
+			flag: "🇭🇲",
+			countryCodeNumeric: "334",
+			currencyNumeric: "036",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: []
 		},
 		{
 			countryNameEn: "British Indian Ocean Territory",
@@ -4980,7 +6526,7 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCode: "IO",
 			countryCodeAlpha3: "IOT",
 			currencyCode: "USD",
-			currencyNameEn: "United States Dollar",
+			currencyNameEn: "United States dollar",
 			tinType: "",
 			tinName: "",
 			officialLanguageCode: "en",
@@ -4988,8 +6534,13 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageNameLocal: "English",
 			countryCallingCode: "246",
 			areaCodes: [],
-			region: "Indian Ocean",
-			flag: "🇮🇴"
+			region: "Asia & Pacific",
+			flag: "🇮🇴",
+			countryCodeNumeric: "086",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Comoros",
@@ -5005,8 +6556,13 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageNameLocal: "Français",
 			countryCallingCode: "269",
 			areaCodes: [],
-			region: "Indian Ocean",
-			flag: "🇰🇲"
+			region: "Arab States",
+			flag: "🇰🇲",
+			countryCodeNumeric: "174",
+			currencyNumeric: "174",
+			currencyDecimals: 0,
+			currencySymbol: "CF",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Cayman Islands",
@@ -5020,10 +6576,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1 345",
-			areaCodes: [],
-			region: "Caribbean Sea",
-			flag: "🇰🇾"
+			countryCallingCode: "1",
+			areaCodes: ["345"],
+			region: "South/Latin America",
+			flag: "🇰🇾",
+			countryCodeNumeric: "136",
+			currencyNumeric: "136",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Republic of the Marshall Islands",
@@ -5039,8 +6600,13 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageNameLocal: "English",
 			countryCallingCode: "692",
 			areaCodes: [],
-			region: "Pacific Ocean",
-			flag: "🇲🇭"
+			region: "Asia & Pacific",
+			flag: "🇲🇭",
+			countryCodeNumeric: "584",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [7]
 		},
 		{
 			countryNameEn: "Commonwealth of the Northern Mariana Islands",
@@ -5054,10 +6620,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1 670",
-			areaCodes: [],
-			region: "Pacific Ocean",
-			flag: "🇲🇵"
+			countryCallingCode: "1",
+			areaCodes: ["670"],
+			region: "Asia & Pacific",
+			flag: "🇲🇵",
+			countryCodeNumeric: "580",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "Turks and Caicos Islands",
@@ -5071,10 +6642,15 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageCode: "en",
 			officialLanguageNameEn: "English",
 			officialLanguageNameLocal: "English",
-			countryCallingCode: "1 649",
-			areaCodes: [],
-			region: "Atlantic Ocean",
-			flag: "🇹🇨"
+			countryCallingCode: "1",
+			areaCodes: ["649"],
+			region: "South/Latin America",
+			flag: "🇹🇨",
+			countryCodeNumeric: "796",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: [10]
 		},
 		{
 			countryNameEn: "French Southern and Antarctic Lands",
@@ -5090,8 +6666,13 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageNameLocal: "Français",
 			countryCallingCode: "672",
 			areaCodes: [],
-			region: "Indian Ocean",
-			flag: "🇹🇫"
+			region: "Asia & Pacific",
+			flag: "🇹🇫",
+			countryCodeNumeric: "260",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: []
 		},
 		{
 			countryNameEn: "United States Minor Outlying Islands",
@@ -5107,8 +6688,13 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageNameLocal: "English",
 			countryCallingCode: "1",
 			areaCodes: [],
-			region: "Pacific Ocean",
-			flag: "🇺🇲"
+			region: "Asia & Pacific",
+			flag: "🇺🇲",
+			countryCodeNumeric: "581",
+			currencyNumeric: "840",
+			currencyDecimals: 2,
+			currencySymbol: "$",
+			nationalNumberLengths: []
 		},
 		{
 			countryNameEn: "Holy See",
@@ -5125,7 +6711,19 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			countryCallingCode: "39",
 			areaCodes: [],
 			region: "Europe",
-			flag: "🇻🇦"
+			flag: "🇻🇦",
+			countryCodeNumeric: "336",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				6,
+				7,
+				8,
+				9,
+				10,
+				11
+			]
 		},
 		{
 			countryNameEn: "Republic of Kosovo",
@@ -5140,74 +6738,37 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			officialLanguageNameEn: "Albanian",
 			officialLanguageNameLocal: "Shqip",
 			countryCallingCode: "383",
+			areaCodes: [],
 			region: "Europe",
-			flag: "🇽🇰"
-		},
-		{
-			countryNameEn: "Netherlands Antilles",
-			countryNameLocal: "Nederlandse Antillen",
-			countryCode: "AN",
-			countryCodeAlpha3: "ANT",
-			currencyCode: "ANG",
-			currencyNameEn: "Netherlands Antillean guilder",
-			tinType: "",
-			tinName: "",
-			officialLanguageCode: "nl",
-			officialLanguageNameEn: "Dutch, Flemish",
-			officialLanguageNameLocal: "Nederlands, Vlaams",
-			countryCallingCode: "599",
-			region: "Europe",
-			flag: "🇧🇶"
+			flag: "🇽🇰",
+			countryCodeNumeric: "",
+			currencyNumeric: "978",
+			currencyDecimals: 2,
+			currencySymbol: "€",
+			nationalNumberLengths: [
+				8,
+				9,
+				10,
+				11,
+				12
+			]
 		}
 	];
-})), Jn = /* @__PURE__ */ ce((/* @__PURE__ */ I(((e) => {
+})), Nr = /* @__PURE__ */ le((/* @__PURE__ */ I(((e) => {
 	var t = e && e.__importDefault || function(e) {
 		return e && e.__esModule ? e : { default: e };
 	};
-	Object.defineProperty(e, "__esModule", { value: !0 }), e.customList = e.customArray = e.findOne = e.filter = e.all = e.utils = void 0;
-	var n = t(Gn()), r = t(Kn()), i = t(qn());
+	Object.defineProperty(e, "__esModule", { value: !0 }), e.utils = void 0, e.customList = a;
+	var n = t(Ar()), r = t(jr()), i = t(Mr());
 	e.utils = { groupBy: n.default };
-	function a() {
-		return i.default;
-	}
-	e.all = a;
-	function o(e, t) {
-		return i.default.filter((n) => n[e] === t);
-	}
-	e.filter = o;
-	function s(e, t) {
-		return i.default.find((n) => n[e] === t);
-	}
-	e.findOne = s;
-	function c(e = {
-		name: "{countryNameEn} ({countryCode})",
-		value: "{countryCode}"
-	}, { sortBy: t, sortDataBy: n, filter: a } = {}) {
-		let o = [], s = i.default;
-		if (typeof a == "function" && (s = s.filter(a)), n) {
-			let e = new Intl.Collator([], { sensitivity: "accent" });
-			s.sort((t, r) => e.compare(t[n], r[n]));
-		}
-		if (s.forEach((t) => {
-			let n = {};
-			for (let i in e) n[i] = (0, r.default)(e[i], t);
-			o.push(n);
-		}), t && e[t]) {
-			let e = new Intl.Collator([], { sensitivity: "accent" });
-			o.sort((n, r) => e.compare(n[t], r[t]));
-		}
-		return o;
-	}
-	e.customArray = c;
-	function l(e = "countryCode", t = "{countryNameEn} ({countryCode})", { filter: n } = {}) {
+	function a(e = "countryCode", t = "{countryNameEn} ({countryCode})", { filter: n } = {}) {
 		let a = {}, o = i.default;
 		return typeof n == "function" && (o = o.filter(n)), o.forEach((n) => {
 			let i = (0, r.default)(t, n);
 			a[String(n[e])] = i;
 		}), a;
 	}
-	e.customList = l;
-})))()), Yn = {
+})))()), Pr = {
 	props: { callingCode: {
 		type: String,
 		default: "1"
@@ -5230,7 +6791,7 @@ var Gn = /* @__PURE__ */ I(((e) => {
 		}
 	} },
 	mounted() {
-		let e = Jn.customList("countryCode", "{countryNameEn}|{countryCallingCode}");
+		let e = Nr.customList("countryCode", "{countryNameEn}|{countryCallingCode}");
 		this.countries = Object.entries(e).map(([e, t]) => {
 			let [n, r] = t.split("|"), i = r.split(" ")[0];
 			return i === "5997" ? i = "599" : /^\d{4}$/.test(i) && (i = i[0]), {
@@ -5242,7 +6803,7 @@ var Gn = /* @__PURE__ */ I(((e) => {
 	},
 	methods: {
 		flag(e) {
-			return Wn(e);
+			return Or(e);
 		},
 		selectCountry(e) {
 			this.selectedCountry = e, this.$emit("update:callingCode", e.callingCode);
@@ -5260,18 +6821,18 @@ var Gn = /* @__PURE__ */ I(((e) => {
 			t && (this.selectedCountry = t);
 		}
 	}
-}, Xn = {
+}, Fr = {
 	id: "countryDropdownMenuButton",
 	class: "btn btn-subdued-primary border-secondary dropdown-toggle border",
 	type: "button",
 	"data-bs-toggle": "dropdown",
 	"aria-expanded": "false"
-}, Zn = { class: "me-1" }, Qn = {
+}, Ir = { class: "me-1" }, Lr = {
 	class: "dropdown-menu",
 	"aria-labelledby": "countryDropdownMenuButton"
-}, $n = ["onClick"], er = { class: "text-secondary" };
-function tr(t, n, a, s, c, l) {
-	return v(), r(e, null, [i("button", Xn, [i("span", Zn, E(l.flag(c.selectedCountry.code)), 1)]), i("ul", Qn, [
+}, Rr = ["onClick"], zr = { class: "text-secondary" };
+function Br(t, n, a, s, c, l) {
+	return y(), r(e, null, [i("button", Fr, [i("span", Ir, E(l.flag(c.selectedCountry.code)), 1)]), i("ul", Lr, [
 		i("li", null, [i("button", {
 			type: "button",
 			class: "dropdown-item",
@@ -5282,14 +6843,23 @@ function tr(t, n, a, s, c, l) {
 			})
 		}, E(l.flag("US")) + " United States of America (+1) ", 1)]),
 		n[1] ||= i("li", null, [i("hr", { class: "dropdown-divider" })], -1),
-		(v(!0), r(e, null, x(c.countries, (e, t) => (v(), r("li", { key: t }, [i("button", {
+		(y(!0), r(e, null, x(c.countries, (e, t) => (y(), r("li", { key: t }, [i("button", {
 			type: "button",
 			class: "dropdown-item",
 			onClick: (t) => l.selectCountry(e)
-		}, [o(E(l.flag(e.code)) + " " + E(e.name) + " ", 1), i("span", er, "+" + E(e.callingCode), 1)], 8, $n)]))), 128))
+		}, [o(E(l.flag(e.code)) + " " + E(e.name) + " ", 1), i("span", zr, "+" + E(e.callingCode), 1)], 8, Rr)]))), 128))
 	])], 64);
 }
-var nr = /*#__PURE__*/ L(Yn, [["render", tr]]), $ = "data:image/png;base64,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", rr = {
+var Vr = /*#__PURE__*/ L(Pr, [["render", Br]]), Hr = "data:image/png;base64,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", Ur = {
+	setup() {
+		return {
+			colorMode: $({
+				emitAuto: !0,
+				attribute: "data-bs-theme"
+			}),
+			prefersDark: Z()
+		};
+	},
 	props: {
 		userNetid: {
 			type: String,
@@ -5302,65 +6872,82 @@ var nr = /*#__PURE__*/ L(Yn, [["render", tr]]), $ = "data:image/png;base64,iVBOR
 		photoUrl: {
 			type: String,
 			required: !1
+		},
+		mode: {
+			type: String,
+			required: !1,
+			default: "static",
+			validator: (e) => ["static", "dynamic"].includes(e)
+		}
+	},
+	computed: {
+		isLight() {
+			return this.colorMode === "light" || this.colorMode !== "dark" && !this.prefersDark;
+		},
+		borderClass() {
+			return this.mode === "dynamic" && this.isLight ? "border-black" : "border-white";
+		},
+		textColorClass() {
+			return this.mode === "dynamic" && this.isLight ? "text-body" : "text-white";
 		}
 	},
 	data() {
-		return {};
+		return { placeholderImg: Hr };
 	},
 	methods: {}
-}, ir = { class: "flex-fill" }, ar = ["src"], or = {
-	key: 1,
-	src: $,
-	class: "img-tiny rounded-circle me-2",
-	alt: "user avatar"
-}, sr = {
+}, Wr = { class: "flex-fill" }, Gr = ["src"], Kr = ["src"], qr = {
 	key: 2,
 	class: "d-none d-md-block me-2"
-}, cr = {
+}, Jr = {
 	key: 3,
 	class: "d-none d-md-block me-2"
-}, lr = {
+}, Yr = {
 	class: "dropdown-menu p-0",
 	"aria-labelledby": "dropdownMenuButton1",
 	style: { width: "280px" }
-}, ur = {
+}, Xr = {
 	key: 0,
 	class: "bg-danger-subtle text-danger-emphasis rounded-top small fw-bold px-3 py-2"
-}, dr = { class: "p-3" }, fr = { class: "d-flex justify-content-center" }, pr = ["src"], mr = {
-	key: 1,
-	src: $,
-	class: "img-profile rounded-circle",
-	alt: "user avatar"
-}, hr = { class: "mt-3" }, gr = { class: "border-top mt-3 pt-3" };
-function _r(e, t, a, s, c, l) {
-	return v(), r("div", { class: h(["d-flex align-items-center rounded-pill small border border-white p-0", { "bg-danger-subtle border-0": a.userOverride }]) }, [i("div", ir, [i("a", {
-		class: h(["d-flex text-decoration-none chevron p-1 text-white", a.userOverride ? "text-danger-emphasis" : "text-white"]),
+}, Zr = { class: "p-3" }, Qr = { class: "d-flex justify-content-center" }, $r = ["src"], ei = ["src"], ti = { class: "mt-3" }, ni = { class: "border-top mt-3 pt-3" };
+function ri(e, t, a, s, c, l) {
+	return y(), r("div", { class: h(["d-flex align-items-center rounded-pill small border p-0", [l.borderClass, { "bg-danger-subtle border-0": a.userOverride }]]) }, [i("div", Wr, [i("a", {
+		class: h(["d-flex text-decoration-none chevron p-1", a.userOverride ? "text-danger-emphasis" : l.textColorClass]),
 		href: "#",
 		role: "button",
 		id: "dropdownMenuButton1",
 		"data-bs-toggle": "dropdown",
 		"aria-expanded": "false"
 	}, [
-		a.photoUrl ? (v(), r("img", {
+		a.photoUrl ? (y(), r("img", {
 			key: 0,
 			src: a.photoUrl,
 			class: "img-tiny rounded-circle me-2",
 			alt: "user avatar"
-		}, null, 8, ar)) : (v(), r("img", or)),
-		a.userOverride ? (v(), r("span", sr, E(a.userOverride), 1)) : (v(), r("span", cr, E(a.userNetid), 1)),
+		}, null, 8, Gr)) : (y(), r("img", {
+			key: 1,
+			src: c.placeholderImg,
+			class: "img-tiny rounded-circle me-2",
+			alt: "user avatar"
+		}, null, 8, Kr)),
+		a.userOverride ? (y(), r("span", qr, E(a.userOverride), 1)) : (y(), r("span", Jr, E(a.userNetid), 1)),
 		t[0] ||= i("i", { class: "bi bi-chevron-down me-1" }, null, -1)
-	], 2), i("div", lr, [a.userOverride ? (v(), r("div", ur, " You are overriding as another user ")) : n("", !0), i("div", dr, [
-		i("div", fr, [a.photoUrl ? (v(), r("img", {
+	], 2), i("div", Yr, [a.userOverride ? (y(), r("div", Xr, " You are overriding as another user ")) : n("", !0), i("div", Zr, [
+		i("div", Qr, [a.photoUrl ? (y(), r("img", {
 			key: 0,
 			src: a.photoUrl,
 			class: "img-profile rounded-circle",
 			alt: "user avatar"
-		}, null, 8, pr)) : (v(), r("img", mr))]),
-		i("div", hr, [S(e.$slots, "default", {}, () => [t[1] ||= o(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium hendrerit dui, sit amet dapibus nulla condimentum id. Quisque pulvinar viverra eros, sit amet blandit tellus faucibus at. Maecenas a turpis sed quam vulputate placerat. Duis id eros sit amet turpis dignissim lacinia. Suspendisse molestie vel nisl sit amet convallis. ", -1)], !0)]),
-		i("div", gr, [S(e.$slots, "action", {}, () => [t[2] ||= o("action", -1)], !0)])
+		}, null, 8, $r)) : (y(), r("img", {
+			key: 1,
+			src: c.placeholderImg,
+			class: "img-profile rounded-circle",
+			alt: "user avatar"
+		}, null, 8, ei))]),
+		i("div", ti, [S(e.$slots, "default", {}, () => [t[1] ||= o(" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium hendrerit dui, sit amet dapibus nulla condimentum id. Quisque pulvinar viverra eros, sit amet blandit tellus faucibus at. Maecenas a turpis sed quam vulputate placerat. Duis id eros sit amet turpis dignissim lacinia. Suspendisse molestie vel nisl sit amet convallis. ", -1)], !0)]),
+		i("div", ni, [S(e.$slots, "action", {}, () => [t[2] ||= o("action", -1)], !0)])
 	])])])], 2);
 }
-var vr = /*#__PURE__*/ L(rr, [["render", _r], ["__scopeId", "data-v-6364356f"]]), yr = {
+var ii = /*#__PURE__*/ L(Ur, [["render", ri], ["__scopeId", "data-v-bb802b73"]]), ai = {
 	props: { level: {
 		type: String,
 		required: !0
@@ -5369,34 +6956,16 @@ var vr = /*#__PURE__*/ L(rr, [["render", _r], ["__scopeId", "data-v-6364356f"]])
 		return {};
 	}
 };
-function br(t, i, a, o, s, c) {
-	return v(), r(e, null, [
-		a.level === "1" ? (v(), r("h1", p({
-			key: 0,
-			class: "fw-bold ff-encode-sans"
-		}, t.$attrs), [S(t.$slots, "default")], 16)) : n("", !0),
-		a.level === "2" ? (v(), r("h2", p({
-			key: 1,
-			class: "fw-normal ff-open-sans"
-		}, t.$attrs), [S(t.$slots, "default")], 16)) : n("", !0),
-		a.level === "3" ? (v(), r("h3", p({
-			key: 2,
-			class: "fw-semibold ff-open-sans"
-		}, t.$attrs), [S(t.$slots, "default")], 16)) : n("", !0),
-		a.level === "4" ? (v(), r("h4", p({
-			key: 3,
-			class: "fw-bold ff-open-sans"
-		}, t.$attrs), [S(t.$slots, "default")], 16)) : n("", !0),
-		a.level === "5" ? (v(), r("h5", p({
-			key: 4,
-			class: "fw-bold ff-open-sans"
-		}, t.$attrs), [S(t.$slots, "default")], 16)) : n("", !0),
-		a.level === "6" ? (v(), r("h6", p({
-			key: 5,
-			class: "fw-bold ff-open-sans"
-		}, t.$attrs), [S(t.$slots, "default")], 16)) : n("", !0)
+function oi(t, i, a, o, s, c) {
+	return y(), r(e, null, [
+		a.level === "1" ? (y(), r("h1", g(p({ key: 0 }, t.$attrs)), [S(t.$slots, "default")], 16)) : n("", !0),
+		a.level === "2" ? (y(), r("h2", g(p({ key: 1 }, t.$attrs)), [S(t.$slots, "default")], 16)) : n("", !0),
+		a.level === "3" ? (y(), r("h3", g(p({ key: 2 }, t.$attrs)), [S(t.$slots, "default")], 16)) : n("", !0),
+		a.level === "4" ? (y(), r("h4", g(p({ key: 3 }, t.$attrs)), [S(t.$slots, "default")], 16)) : n("", !0),
+		a.level === "5" ? (y(), r("h5", g(p({ key: 4 }, t.$attrs)), [S(t.$slots, "default")], 16)) : n("", !0),
+		a.level === "6" ? (y(), r("h6", g(p({ key: 5 }, t.$attrs)), [S(t.$slots, "default")], 16)) : n("", !0)
 	], 64);
 }
-var xr = /*#__PURE__*/ L(yr, [["render", br]]);
+var si = /*#__PURE__*/ L(ai, [["render", oi]]);
 //#endregion
-export { Un as SColorMode, nr as SCountryCode, xr as SHeading, un as SProfile, Be as SSidebar, _e as STabsDisplay, Se as STabsItem, pe as STabsList, Ee as STabsPanel, ct as STopbar, Ht as STopbarNeo, vr as SUser };
+export { Dr as SColorMode, Vr as SCountryCode, si as SHeading, _r as SProfile, Ve as SSidebar, ve as STabsDisplay, Ce as STabsItem, me as STabsList, De as STabsPanel, lt as STopbar, mn as STopbarBlanco, Xn as STopbarNeo, ii as SUser };

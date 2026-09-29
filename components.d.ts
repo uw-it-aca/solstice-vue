@@ -33,6 +33,7 @@ declare module 'vue' {
     STabsList: typeof import('./src/components/tabs/STabsList.vue')['default']
     STabsPanel: typeof import('./src/components/tabs/STabsPanel.vue')['default']
     STopbar: typeof import('./src/components/layout/STopbar.vue')['default']
+    STopbarBlanco: typeof import('./src/components/layout/STopbarBlanco.vue')['default']
     STopbarNeo: typeof import('./src/components/layout/STopbarNeo.vue')['default']
     Tabs: typeof import('./src/components/card/tabs.vue')['default']
   }

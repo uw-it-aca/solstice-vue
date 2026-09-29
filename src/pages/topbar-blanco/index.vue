@@ -1,0 +1,199 @@
+<template>
+  <!-- layout.vue: this is where you override the layout -->
+  <STopbarBlanco
+    :app-name="appName"
+    :app-dept-name="deptName"
+    :app-root-url="appRootUrl"
+  >
+    <template #settings>
+      <div class="d-flex">
+        <SUser
+          :user-netid="userNetid"
+          :photo-url="'https://randomuser.me/api/portraits/men/66.jpg'"
+          :mode="'dynamic'"
+        >
+          <p>user information goes here</p>
+          <template #action>
+            <a :href="signoutUrl" class="link-quiet-danger"
+              ><i class="bi bi-x-circle me-1"></i>Sign out now</a
+            >
+          </template>
+        </SUser>
+        <!--
+        <SUser :user-netid="userNetid" :signout-url="'/signout'">
+          <p>additional user information goes here</p>
+          <template #action>
+            <a :href="signoutUrl" class="link-quiet-danger"
+              ><i class="bi bi-x-circle me-1"></i>Sign out</a
+            >
+          </template>
+        </SUser>
+        <SUser
+          :user-netid="userNetid"
+          :user-override="'billy'"
+          :photo-url="'https://randomuser.me/api/portraits/men/67.jpg'"
+
+        >
+          <p>user information goes here</p>
+          <template #action>
+            <a
+              v-if="true"
+              role="button"
+              class="link-quiet-danger"
+              @click="clearUserOverride()"
+              ><i class="bi bi-x-circle me-1"></i>Clear override</a
+            >
+
+            <a v-else :href="signoutUrl" class="link-quiet-danger"
+              ><i class="bi bi-x-circle me-1"></i>Sign out</a
+            >
+          </template>
+        </SUser>
+        <SUser
+          :user-netid="userNetid"
+          :user-override="'billy'"
+        >
+          <p>user information goes here</p>
+          <template #action>
+            <a
+              v-if="true"
+              role="button"
+              class="link-quiet-danger"
+              @click="clearUserOverride()"
+              ><i class="bi bi-x-circle me-1"></i>Clear override</a
+            >
+
+            <a v-else :href="signoutUrl" class="link-quiet-danger"
+              ><i class="bi bi-x-circle me-1"></i>Sign out</a
+            >
+          </template>
+        </SUser> -->
+        <SColorMode :color-class="'text-body'" class="ms-2" />
+      </div>
+    </template>
+
+    <template #navigation>
+      <!-- Bootstrap navbar-nav classes -->
+      <ul class="navbar-nav my-xl-0 my-2 me-auto">
+        <li class="nav-item me-5">
+          <a
+            class="nav-link active px-0"
+            aria-current="page"
+            href="#"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item me-5">
+          <a class="nav-link px-0" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown me-5">
+          <a
+            class="nav-link dropdown-toggle px-0"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#"
+                >Another <span>asdf</span>action</a
+              >
+            </li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="mb-xl-0 mb-3">
+        <form class="d-flex" role="search">
+          <input
+            class="form-control form-control-sm bg-opacity-25 me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-sm btn-primary" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </template>
+
+    <template #system>
+      <div class="row">
+        <div class="col">
+          <div class="text-info-emphasis small p-2 text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
+            nostrum iste! Commodi magni natus provident mollitia. Illum officiis
+            molestiae optio distinctio! Repellendus quod minima recusandae
+            suscipit, natus hic atque ipsa.
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template #main>
+      <!-- main section override -->
+      <slot name="content">
+        <KitchenSink />
+      </slot>
+    </template>
+
+    <!--<template #aside>
+      <div class="bg-secondary bg-opacity-10 p-3 border-0 small rounded-3">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex voluptates
+        molestias hic. Esse ab inventore rerum, ipsa cupiditate quo. Aliquid
+        optio, commodi sit fugit harum perspiciatis quia sunt fuga. Aliquam?
+      </div>
+    </template>-->
+
+    <template #footer>
+      <!-- insert custom footer override here -->
+    </template>
+  </STopbarBlanco>
+</template>
+
+<script>
+  import STopbarNeo from "@/components/layout/STopbarNeo.vue";
+  import SColorMode from "@/components/SColorMode.vue";
+  import SProfile from "@/components/SProfile.vue";
+  import SUser from "@/components/SUser.vue";
+
+  import KitchenSink from "@/content/kitchenSink.vue";
+
+  export default {
+    name: "DocsSandboxTopbarIndex",
+    components: { STopbarNeo, SColorMode, SProfile, SUser, KitchenSink },
+    data() {
+      return {
+        // layout component
+        appName: "MyApp SoCoooooooool",
+        deptName: "Dept of Coolness",
+        appRootUrl: "/",
+
+        // login component
+        signoutUrl: "/signout",
+        pageTitle: "Home",
+        userNetid: "javerage",
+        userOverride: "",
+        userOfficial: "MYOFFICAL NAME",
+        userPreferred: "Preferred Name",
+        currentYear: new Date().getFullYear(),
+      };
+    },
+    created: function () {
+      // constructs page title in the following format "Page Title - AppName"
+      document.title = this.pageTitle + " - " + this.appName;
+    },
+  };
+</script>

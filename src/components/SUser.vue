@@ -1,12 +1,12 @@
 <template>
   <div
-    class="d-flex align-items-center rounded-pill small border border-white p-0"
-    :class="{ 'bg-danger-subtle border-0': userOverride }"
+    class="d-flex align-items-center rounded-pill small border p-0"
+    :class="[borderClass, { 'bg-danger-subtle border-0': userOverride }]"
   >
     <div class="flex-fill">
       <a
-        class="d-flex text-decoration-none chevron p-1 text-white"
-        :class="userOverride ? 'text-danger-emphasis' : 'text-white'"
+        class="d-flex text-decoration-none chevron p-1"
+        :class="userOverride ? 'text-danger-emphasis' : textColorClass"
         href="#"
         role="button"
         id="dropdownMenuButton1"
@@ -21,7 +21,7 @@
         />
         <img
           v-else
-          src="/src/assets/images/placeholder.png"
+          :src="placeholderImg"
           class="img-tiny rounded-circle me-2"
           alt="user avatar"
         />
@@ -53,7 +53,7 @@
             />
             <img
               v-else
-              src="/src/assets/images/placeholder.png"
+              :src="placeholderImg"
               class="img-profile rounded-circle"
               alt="user avatar"
             />
@@ -79,7 +79,20 @@
 </template>
 
 <script>
+  import { useColorMode, usePreferredDark } from "@vueuse/core";
+  import placeholderImg from "@/assets/images/placeholder.png";
+
   export default {
+    setup() {
+      const colorMode = useColorMode({
+        emitAuto: true,
+        attribute: "data-bs-theme",
+      });
+      // Reactive OS-level preference; keeps "auto" mode in sync when the
+      // system theme changes at runtime.
+      const prefersDark = usePreferredDark();
+      return { colorMode, prefersDark };
+    },
     props: {
       userNetid: {
         type: String,
@@ -93,9 +106,47 @@
         type: String,
         required: false,
       },
+      mode: {
+        // "static": always border-white / text-white.
+        // "dynamic": follow the active color mode (light vs dark).
+        type: String,
+        required: false,
+        default: "static",
+        validator: (value) => ["static", "dynamic"].includes(value),
+      },
+    },
+    computed: {
+      isLight() {
+        // In "dynamic" mode we react to the active color mode. useColorMode
+        // exposes the user selection which may be "auto"; resolve that against
+        // the OS preference so the classes match what is actually rendered.
+        if (this.colorMode === "light") {
+          return true;
+        }
+        if (this.colorMode === "dark") {
+          return false;
+        }
+        // "auto": follow the reactive OS preference.
+        return !this.prefersDark;
+      },
+      borderClass() {
+        if (this.mode === "dynamic" && this.isLight) {
+          return "border-black";
+        }
+        return "border-white";
+      },
+      textColorClass() {
+        if (this.mode === "dynamic" && this.isLight) {
+          return "text-body";
+        }
+        return "text-white";
+      },
     },
     data() {
-      return {};
+      return {
+        // Bundled asset URL (imported so the library build emits it).
+        placeholderImg,
+      };
     },
     methods: {},
   };
